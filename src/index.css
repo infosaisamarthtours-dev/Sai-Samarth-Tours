@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #F59E0B;
+    --color-primary-container: #F59E0B;
+    --color-secondary: #114088;
+    --color-secondary-container: #114088;
+    --color-tertiary: #F59E0B;
+    --color-tertiary-container: #F59E0B;
+    --color-bg: #FBF9F5;
+    --color-surface: #FFFFFF;
+    --color-surface-lowest: #ffffff;
+    --color-surface-low: #FBF9F5;
+    --color-surface-container: #d8f2ff;
+    --color-surface-variant: #FBF9F5;
+    --color-on-background: #114088;
+    --color-on-surface-variant: #1C2B39;
+    --color-outline-variant: #EAE2D6;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-on-background);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-brand {
+    font-family: 'Noto Serif', serif;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom Shadow & Lift Utilities from User HTML */
+.ambient-shadow {
+  box-shadow: 0 10px 32px -4px rgba(255, 122, 0, 0.08);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -8px rgba(255, 122, 0, 0.12);
+}
+
+@keyframes routeTravel {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-route {
+  stroke-dasharray: 8 12;
+  animation: routeTravel 25s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: #F59E0B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D97706;
+}

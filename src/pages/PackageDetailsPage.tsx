@@ -1,0 +1,283 @@
+import React, { useState, useEffect } from 'react';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
+import { ALL_PACKAGES } from '../data/packages';
+import { EnquiryModal } from '../components/EnquiryModal';
+
+export function PackageDetailsPage() {
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState<'overview' | 'itinerary' | 'inclusions'>('overview');
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+
+  // Scroll to top on load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
+  const pkg = ALL_PACKAGES.find(p => p.id === id);
+
+  if (!pkg) {
+    return <Navigate to="/" />;
+  }
+
+  return (
+    <div className="flex-grow bg-[#FBF9F5]">
+      {/* Hero Image */}
+      <div className="relative h-[40vh] sm:h-[60vh] overflow-hidden">
+        <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#114088]/90 via-[#114088]/30 to-transparent" />
+        <div className="absolute top-6 left-6 z-10">
+          <button onClick={() => navigate(-1)} className="bg-white/20 backdrop-blur-md text-white p-2 rounded-full hover:bg-white/40 transition-colors flex items-center gap-2">
+            <span className="material-symbols-outlined">arrow_back</span>
+          </button>
+        </div>
+        <div className="absolute bottom-10 left-6 right-6 max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-end justify-between gap-6 px-4">
+          <div>
+            <span className="bg-[#F59E0B] text-[#ffffff] px-4 py-1.5 rounded-full text-xs uppercase font-bold tracking-widest mb-4 inline-block">
+              📍 {pkg.destination}
+            </span>
+            <h1 className="font-serif text-4xl sm:text-6xl font-bold text-[#ffffff] drop-shadow-lg">{pkg.title}</h1>
+          </div>
+          <div className="bg-[#ffffff] px-6 py-4 rounded-xl border border-[#EAE2D6] shadow-xl">
+            <span className="text-xs text-[#1C2B39] uppercase font-bold block mb-1">Starting From</span>
+            <span className="font-serif text-3xl font-bold text-[#F59E0B]">{pkg.price}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content & Sidebar Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 -mt-8 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          {/* Left Column - Main Details */}
+          <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col h-fit">
+            
+            {/* Specs Bar */}
+            <div className="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-wrap items-center justify-between gap-6">
+              <div className="flex items-center gap-6 text-[#114088]">
+                <span className="flex items-center gap-2 text-sm">
+                  <span className="material-symbols-outlined text-[#F59E0B]">schedule</span>
+                  Duration: <strong className="text-[#F59E0B]">{pkg.duration}</strong>
+                </span>
+                <span className="flex items-center gap-2 text-sm">
+                  <span className="material-symbols-outlined text-[#F59E0B]">group</span>
+                  Min Pax: <strong className="text-[#F59E0B]">0{pkg.minPax}</strong>
+                </span>
+              </div>
+            </div>
+
+            {/* Navigation Tabs */}
+            <div className="flex border-b border-gray-100 px-6 pt-6 bg-white overflow-x-auto hide-scrollbar">
+              <button
+                onClick={() => setActiveTab('overview')}
+                className={`px-4 sm:px-6 py-3 text-sm uppercase font-bold border-b-2 transition-all cursor-pointer whitespace-nowrap ${
+                  activeTab === 'overview'
+                    ? 'border-[#F59E0B] text-[#F59E0B]'
+                    : 'border-transparent text-gray-500 hover:text-[#114088]'
+                }`}
+              >
+                Overview
+              </button>
+              <button
+                onClick={() => setActiveTab('itinerary')}
+                className={`px-4 sm:px-6 py-3 text-sm uppercase font-bold border-b-2 transition-all cursor-pointer whitespace-nowrap ${
+                  activeTab === 'itinerary'
+                    ? 'border-[#F59E0B] text-[#F59E0B]'
+                    : 'border-transparent text-gray-500 hover:text-[#114088]'
+                }`}
+              >
+                Itinerary
+              </button>
+              <button
+                onClick={() => setActiveTab('inclusions')}
+                className={`px-4 sm:px-6 py-3 text-sm uppercase font-bold border-b-2 transition-all cursor-pointer whitespace-nowrap ${
+                  activeTab === 'inclusions'
+                    ? 'border-[#F59E0B] text-[#F59E0B]'
+                    : 'border-transparent text-gray-500 hover:text-[#114088]'
+                }`}
+              >
+                Inclusions
+              </button>
+            </div>
+
+            {/* Tab Content */}
+            <div className="p-6 md:p-8 min-h-[400px]">
+              {activeTab === 'overview' && (
+                <div className="space-y-10">
+                  <div>
+                    <h3 className="font-serif text-2xl font-bold text-[#114088] mb-4">Journey Overview</h3>
+                    <p className="text-base text-gray-600 leading-relaxed">{pkg.description}</p>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif text-2xl font-bold text-[#114088] mb-6">Key Highlights</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {pkg.highlights?.map((h, i) => (
+                        <div key={i} className="flex items-center gap-3 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                          <span className="material-symbols-outlined text-[#F59E0B] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                            stars
+                          </span>
+                          <span className="text-sm font-semibold text-[#114088]">{h}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'itinerary' && (
+                <div className="space-y-6">
+                  <h3 className="font-serif text-2xl font-bold text-[#114088] mb-8">Day-by-Day Timeline</h3>
+                  {(!pkg.sampleItinerary || pkg.sampleItinerary.length === 0) ? (
+                    <p className="text-gray-500 italic">Detailed itinerary will be provided upon enquiry.</p>
+                  ) : (
+                    <div className="space-y-6 border-l-2 border-[#F59E0B] pl-8 ml-4">
+                      {pkg.sampleItinerary.map((item, idx) => (
+                        <div key={idx} className="relative">
+                          <div className="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-[#F59E0B] border-4 border-white shadow-sm" />
+                          <div className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+                            <span className="text-xs font-mono font-bold tracking-widest text-[#F59E0B] block mb-2">
+                              {item.day}
+                            </span>
+                            <h4 className="font-serif text-xl font-bold text-[#114088] mb-3">{item.title}</h4>
+                            <p className="text-sm text-gray-600 leading-relaxed">{item.detail}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {activeTab === 'inclusions' && (
+                <div className="grid grid-cols-1 gap-8">
+                  <div className="bg-emerald-50/50 p-6 sm:p-8 rounded-2xl border border-emerald-100">
+                    <h4 className="font-serif text-xl text-emerald-800 font-bold mb-6 flex items-center gap-3">
+                      <span className="material-symbols-outlined text-emerald-600 text-2xl">check_circle</span>
+                      What Is Included
+                    </h4>
+                    {(!pkg.inclusions || pkg.inclusions.length === 0) ? (
+                      <p className="text-sm text-emerald-700 italic">Details provided upon enquiry.</p>
+                    ) : (
+                      <ul className="space-y-4 text-sm text-emerald-900">
+                        {pkg.inclusions.map((inc, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="text-emerald-600 font-bold mt-0.5">•</span>
+                            <span className="leading-relaxed">{inc}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+
+                  <div className="bg-rose-50/50 p-6 sm:p-8 rounded-2xl border border-rose-100">
+                    <h4 className="font-serif text-xl text-rose-800 font-bold mb-6 flex items-center gap-3">
+                      <span className="material-symbols-outlined text-rose-600 text-2xl">cancel</span>
+                      What Is Excluded
+                    </h4>
+                    {(!pkg.exclusions || pkg.exclusions.length === 0) ? (
+                      <p className="text-sm text-rose-700 italic">Details provided upon enquiry.</p>
+                    ) : (
+                      <ul className="space-y-4 text-sm text-rose-900">
+                        {pkg.exclusions.map((exc, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="text-rose-600 font-bold mt-0.5">•</span>
+                            <span className="leading-relaxed">{exc}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Right Column - Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-8">
+              
+              {/* Book Now / Enquire Card */}
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+              <h3 className="text-2xl font-serif-brand font-bold text-[#1C2B39] mb-2">Book Your Tour</h3>
+              <p className="text-gray-500 text-sm mb-6">Need help planning? Our experts are here for you.</p>
+              
+              <div className="space-y-4">
+                <button
+                  onClick={() => setIsEnquiryOpen(true)}
+                  className="w-full bg-[#F59E0B] text-white py-4 rounded-xl font-bold text-sm uppercase tracking-wider hover:bg-[#D97706] flex items-center justify-center gap-2 shadow-lg shadow-amber-500/30 transition-transform hover:-translate-y-0.5"
+                >
+                  <span className="material-symbols-outlined">edit_document</span>
+                  Enquire Now
+                </button>
+                
+                <a 
+                  href="https://wa.me/919483488258" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#25D366] text-white py-4 rounded-xl font-bold text-sm uppercase tracking-wider hover:bg-[#128C7E] flex items-center justify-center gap-2 shadow-lg shadow-green-500/30 transition-transform hover:-translate-y-0.5"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                  WhatsApp Us
+                </a>
+              </div>
+              
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-3">Call Us Directly</p>
+                <a href="tel:+919483488258" className="flex items-center gap-3 group">
+                  <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-[#114088] transition-colors">
+                    <span className="material-symbols-outlined text-[#114088] group-hover:text-white transition-colors">call</span>
+                  </div>
+                  <div>
+                    <span className="block text-sm font-bold text-[#1C2B39]">+91 9483488258</span>
+                    <span className="block text-xs text-gray-500">24/7 Support Available</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            {/* Related Packages */}
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+              <h3 className="text-xl font-serif-brand font-bold text-[#1C2B39] mb-4">Related Packages</h3>
+              <div className="space-y-4">
+                {ALL_PACKAGES
+                  .filter(p => p.category === pkg.category && p.id !== pkg.id)
+                  .slice(0, 4)
+                  .map(relatedPkg => (
+                    <div 
+                      key={relatedPkg.id} 
+                      onClick={() => navigate(`/package/${relatedPkg.id}`)}
+                      className="flex items-center gap-4 group cursor-pointer hover:bg-gray-50 p-2 -mx-2 rounded-xl transition-colors"
+                    >
+                      <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+                        <img 
+                          src={relatedPkg.image} 
+                          alt={relatedPkg.title} 
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-sm text-[#1C2B39] group-hover:text-[#114088] transition-colors line-clamp-2 mb-1">
+                          {relatedPkg.title}
+                        </h4>
+                        <p className="text-xs font-bold text-[#F59E0B]">{relatedPkg.price}</p>
+                      </div>
+                    </div>
+                ))}
+              </div>
+            </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <EnquiryModal
+        isOpen={isEnquiryOpen}
+        initialPackageTitle={pkg.title}
+        onClose={() => setIsEnquiryOpen(false)}
+      />
+    </div>
+  );
+}
