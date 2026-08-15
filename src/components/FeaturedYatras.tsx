@@ -8,7 +8,7 @@ interface FeaturedYatrasProps {
   onOpenEnquiry: (packageTitle?: string) => void;
 }
 
-export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage }) => {
+export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage, onOpenEnquiry }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   // Select the 8 specific priority packages for the home page feature
