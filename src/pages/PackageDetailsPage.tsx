@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
 import { EnquiryModal } from '../components/EnquiryModal';
-import { ChevronDown, ChevronUp, HelpCircle, BookOpen, CheckCircle, Sparkles, MapPin, Calendar, ShieldCheck } from 'lucide-react';
+import { ChevronDown, ChevronUp, HelpCircle, BookOpen, CheckCircle, Sparkles, MapPin, Calendar, ShieldCheck, UserCheck } from 'lucide-react';
 
 export function PackageDetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -101,7 +101,7 @@ export function PackageDetailsPage() {
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col h-fit">
               
               {/* Specs Bar */}
-              <div className="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-wrap items-center justify-between gap-6">
+              <div className="bg-gray-50 border-b border-gray-100 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-6 text-[#114088]">
                   <span className="flex items-center gap-2 text-sm">
                     <span className="material-symbols-outlined text-[#F59E0B]">schedule</span>
@@ -111,6 +111,11 @@ export function PackageDetailsPage() {
                     <span className="material-symbols-outlined text-[#F59E0B]">group</span>
                     Min Pax: <strong className="text-[#F59E0B]">0{pkg.minPax}</strong>
                   </span>
+                </div>
+
+                <div className="flex items-center gap-1.5 bg-amber-500/10 text-[#114088] px-3 py-1.5 rounded-full border border-amber-300 text-xs font-bold shadow-sm">
+                  <UserCheck className="w-4 h-4 text-[#F59E0B]" />
+                  <span>Tour Guide Available for All Packages</span>
                 </div>
               </div>
 
