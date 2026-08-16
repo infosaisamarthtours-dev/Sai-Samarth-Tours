@@ -9,22 +9,26 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Production stage using Nginx to serve static Vite build
+# Production stage
 FROM nginx:alpine
 
-# Copy static files from build step
+# Copy Vite build
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Configure Nginx for Single Page Application (SPA) routing
-RUN echo 'server { \
-    listen 80; \
-    location / { \
-        root /usr/share/nginx/html; \
-        index index.html index.htm; \
-        try_files $uri $uri/ /index.html; \
-    } \
-}' > /etc/nginx/conf.d/default.conf
+# Nginx configuration for Railway
+RUN printf 'server {\n\
+    listen 8080;\n\
+    listen [::]:8080;\n\
+    server_name _;\n\
+\n\
+    root /usr/share/nginx/html;\n\
+    index index.html;\n\
+\n\
+    location / {\n\
+        try_files $uri $uri/ /index.html;\n\
+    }\n\
+}\n' > /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
