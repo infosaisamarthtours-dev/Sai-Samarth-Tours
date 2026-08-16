@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { EnquiryModal } from './components/EnquiryModal';
+import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { PackageDetailsPage } from './pages/PackageDetailsPage';
@@ -36,6 +37,7 @@ export function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-[#FBF9F5] text-[#1C1C1C] flex flex-col font-sans selection:bg-[#A63A1E] selection:text-[#FFFFFF]">
         <Header onOpenEnquiry={handleOpenEnquiry} />
 
