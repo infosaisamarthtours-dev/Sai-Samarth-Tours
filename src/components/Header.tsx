@@ -13,10 +13,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   return (
     <header className="w-full flex flex-col z-50 sticky top-0 shadow-md">
       
-      {/* Main Header Tier (Image 4 Layout: Logo, Search, Social Icons, CTA) */}
-      <div className="bg-white w-full px-4 sm:px-8 py-3 flex justify-between items-center border-b border-gray-100">
+      {/* Main Header Tier (Image 2 Layout: Logo, Tour Guide Badge, Search, Social Icons, CTA) */}
+      <div className="bg-white w-full px-4 sm:px-8 py-2.5 flex justify-between items-center border-b border-gray-100 gap-4">
         {/* Left: Logo */}
-        <div className="flex-1 flex justify-start">
+        <div className="flex justify-start items-center">
           <Link to="/" className="flex-shrink-0 block">
             <img 
               src="/Sai samarth tours logo.jpeg" 
@@ -26,24 +26,29 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
           </Link>
         </div>
 
-        {/* Middle: Search Bar (Hidden on mobile) */}
-        <div className="hidden md:flex flex-1 justify-center relative">
-          <div className="w-full max-w-md relative">
-            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-gray-400" />
+        {/* Middle-Left: Tour Guide Badge in Header Row (Image 2 Placement) */}
+        <div className="hidden lg:flex items-center gap-2 bg-[#114088]/10 text-[#114088] px-4 py-2 rounded-full border border-[#114088]/25 shadow-sm font-bold text-xs whitespace-nowrap">
+          <UserCheck className="w-4 h-4 text-[#F59E0B] flex-shrink-0" />
+          <span>Tour Guide & Manager Available for All Packages</span>
+        </div>
+
+        {/* Middle-Right: Search Bar */}
+        <div className="hidden md:flex flex-1 max-w-sm justify-center relative">
+          <div className="w-full relative">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+              <Search className="h-4 w-4 text-gray-400" />
             </div>
             <input 
               type="text" 
               placeholder="Search Jyotirlinga Tours..." 
-              className="w-full pl-11 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#114088] focus:border-transparent text-sm transition-all shadow-sm"
+              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#114088] focus:border-transparent text-sm transition-all shadow-sm"
             />
           </div>
         </div>
 
-        {/* Right: Social Media Icons + Book Now CTA (Image 4) */}
-        <div className="flex-1 flex justify-end items-center gap-3 sm:gap-4">
-          {/* Social Media Icons (Image 4: FB, IG, WA) */}
-          <div className="hidden lg:flex items-center gap-2 mr-1">
+        {/* Right: Social Media Icons + Book Now CTA */}
+        <div className="flex justify-end items-center gap-3 sm:gap-4">
+          <div className="hidden xl:flex items-center gap-2 mr-1">
             <a 
               href="https://facebook.com" 
               target="_blank" 
@@ -90,9 +95,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
         </div>
       </div>
 
-      {/* Navigation Tier (Holds Links + Image 3 Tour Guide Human Icon Details) */}
+      {/* Navigation Tier (Image 1 Layout: Links + Rich Blue Tour Guide Badge) */}
       <nav className="bg-[#114088] w-full hidden md:block border-t border-blue-900/20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex justify-between items-center h-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 flex justify-center items-center h-12">
           {/* Main Navigation (Desktop) */}
           <ul className="flex items-center h-full gap-8">
             <li className="flex items-center h-full">
@@ -190,12 +195,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
             </li>
           </ul>
-
-          {/* Details from Image 3: Human Icon + Tour Guide Badge */}
-          <div className="flex items-center gap-1.5 bg-amber-500/20 text-[#F59E0B] px-3.5 py-1 rounded-full border border-amber-500/40 text-xs font-bold tracking-wide">
-            <UserCheck className="w-4 h-4 text-[#F59E0B]" />
-            <span>Tour Guide & Manager Available for All Packages</span>
-          </div>
         </div>
       </nav>
 
@@ -203,9 +202,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl z-40 flex flex-col p-6 animate-fadeIn border-t border-gray-100 max-h-[80vh] overflow-y-auto">
           {/* Mobile Tour Guide & Human Icon Badge */}
-          <div className="flex items-center gap-2 bg-amber-50 text-[#114088] p-3 rounded-xl border border-amber-200 mb-4">
+          <div className="flex items-center gap-2.5 bg-[#114088] text-white p-3 rounded-xl border border-blue-800 mb-4 shadow-sm">
             <UserCheck className="w-5 h-5 text-[#F59E0B] flex-shrink-0" />
-            <span className="text-xs font-bold leading-tight">Tour Guide & Manager Available for All Packages</span>
+            <span className="text-xs font-bold leading-tight text-[#F59E0B]">Tour Guide & Manager Available for All Packages</span>
           </div>
 
           {/* Mobile Search */}
@@ -240,7 +239,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             >
               Get Free Quote
             </button>
-            <a href="tel:+919483488258" className="flex justify-center items-center text-[#114088] font-bold text-lg pt-4 border-t border-gray-100">
+            <a href={`tel:+91${siteConfig.phoneTentative}`} className="flex justify-center items-center text-[#114088] font-bold text-lg pt-4 border-t border-gray-100">
               <Phone className="w-5 h-5 mr-2 text-[#2563EB]" />
               +91 {siteConfig.phoneTentative}
             </a>
