@@ -1,11 +1,12 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Compass, Shield, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { DOMESTIC_PACKAGES } from '../data/packages';
+import { FaqSection } from '../components/FaqSection';
 
 export function DomesticPackagesPage() {
   return (
-    <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+    <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -69,7 +70,60 @@ export function DomesticPackagesPage() {
           ))}
         </div>
       </div>
+
+      {/* Content Session */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12">
+          <div className="max-w-3xl mb-8">
+            <span className="text-xs uppercase font-bold tracking-widest text-[#F59E0B] bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              Domestic Holidays Content Guide
+            </span>
+            <h2 className="text-3xl font-serif font-bold text-[#114088] mt-3">
+              Incredible India Holidays Tailored for You
+            </h2>
+            <p className="text-gray-600 mt-2 leading-relaxed">
+              Whether you are looking for serene hill stations, pristine beaches, or royal heritage forts, Sai Samarth Tours delivers premium domestic travel packages from Bangalore with private transfers and top hospitality.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 bg-gradient-to-b from-blue-50/50 to-white rounded-xl border border-blue-100">
+              <div className="w-10 h-10 rounded-lg bg-[#114088] text-white flex items-center justify-center mb-4">
+                <Compass className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-[#114088] mb-2">Curated Itineraries</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Balanced travel schedules combining famous landmarks, scenic nature spots, and authentic local experiences.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-b from-amber-50/50 to-white rounded-xl border border-amber-100">
+              <div className="w-10 h-10 rounded-lg bg-[#F59E0B] text-white flex items-center justify-center mb-4">
+                <Shield className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-[#114088] mb-2">Private Vehicle Comfort</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Dedicated private cabs throughout your holiday with trusted local drivers and flexible sightseeing stops.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-b from-emerald-50/50 to-white rounded-xl border border-emerald-100">
+              <div className="w-10 h-10 rounded-lg bg-emerald-700 text-white flex items-center justify-center mb-4">
+                <Map className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-[#114088] mb-2">Complete Peace of Mind</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                24/7 helpline, verified 3-star and resort stays, and transparent pricing with no hidden charges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Session */}
+      <FaqSection />
       
     </div>
   );
 }
+

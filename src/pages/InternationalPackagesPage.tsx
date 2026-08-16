@@ -1,11 +1,12 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe, Award, HeartHandshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { INTERNATIONAL_PACKAGES } from '../data/packages';
+import { FaqSection } from '../components/FaqSection';
 
 export function InternationalPackagesPage() {
   return (
-    <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+    <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -79,6 +80,58 @@ export function InternationalPackagesPage() {
           ))}
         </div>
       </div>
+
+      {/* Content Session */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 sm:p-12">
+          <div className="max-w-3xl mb-8">
+            <span className="text-xs uppercase font-bold tracking-widest text-[#F59E0B] bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+              International Travel Guide
+            </span>
+            <h2 className="text-3xl font-serif font-bold text-[#114088] mt-3">
+              Explore the World with Complete Assistance
+            </h2>
+            <p className="text-gray-600 mt-2 leading-relaxed">
+              Sai Samarth Tours simplifies international travel. From Bhutan and Nepal to Malaysia and Europe, we handle visas, flights, foreign exchange guidance, and local transfers so your holiday is 100% stress-free.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 bg-gradient-to-b from-blue-50/50 to-white rounded-xl border border-blue-100">
+              <div className="w-10 h-10 rounded-lg bg-[#114088] text-white flex items-center justify-center mb-4">
+                <Globe className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-[#114088] mb-2">Visa & Flight Support</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Complete assistance for visa documentation, flight bookings from Kempegowda International Airport (BLR), and travel insurance.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-b from-amber-50/50 to-white rounded-xl border border-amber-100">
+              <div className="w-10 h-10 rounded-lg bg-[#F59E0B] text-white flex items-center justify-center mb-4">
+                <Award className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-[#114088] mb-2">Verified International Stays</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Handpicked 3-star, 4-star, and luxury beachfront resort stays with daily breakfast and optional Indian dining arrangements.
+              </p>
+            </div>
+
+            <div className="p-6 bg-gradient-to-b from-emerald-50/50 to-white rounded-xl border border-emerald-100">
+              <div className="w-10 h-10 rounded-lg bg-emerald-700 text-white flex items-center justify-center mb-4">
+                <HeartHandshake className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-[#114088] mb-2">24/7 International Helpdesk</h3>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Dedicated WhatsApp support throughout your journey abroad for any real-time assistance or itinerary changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Session */}
+      <FaqSection />
       
     </div>
   );

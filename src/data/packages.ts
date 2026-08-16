@@ -18,8 +18,44 @@ export const ALL_PACKAGES: Package[] = [
     inclusions: ['Flight / Rail assistance from Bengaluru', 'Hotel Accommodation (Twin Sharing)', 'All transfers & sightseeing by AC private vehicle', 'Guided assistance for temple visit'],
     exclusions: ['Personal expenses & shopping', 'Special pooja charges optional', 'Any item not mentioned in inclusions'],
     sampleItinerary: [
-      { day: 'Day 01', title: 'Arrival & Shirdi Darshan', detail: 'Warm welcome upon arrival, check-in to your hotel. Evening VIP Darshan at Sai Baba Samadhi Temple and participate in evening Aarti.' },
-      { day: 'Day 02', title: 'Dwarkamai, Chavadi & Departure', detail: 'Morning visit to Dwarkamai, Chavadi, Gurusthan and Lendi Baug. Afternoon transfer for return journey.' }
+      { day: 'Day 01', title: 'Arrival & Shirdi Darshan', detail: 'Warm welcome upon arrival, check-in to your hotel near Samadhi Mandir. Evening VIP Darshan at Sai Baba Samadhi Temple and participate in evening Aarti.' },
+      { day: 'Day 02', title: 'Dwarkamai, Chavadi & Departure', detail: 'Morning visit to Dwarkamai, Chavadi, Gurusthan and Lendi Baug. Afternoon transfer for return journey to Bangalore.' }
+    ],
+    detailedContent: {
+      overview: 'Experience the bliss and divine aura of Sadguru Sai Baba with our specialized Regular Shirdi Pilgrimage Package. Crafted for families and devotees seeking a hassle-free short weekend or weekday yatra, this tour covers all holy spots associated with Sai Baba\'s life in Shirdi with maximum comfort and zero stress.',
+      significance: 'Shirdi is the sacred land where Sai Baba spent over 60 years preaching love, compassion, unity, and tolerance. Millions of devotees flock to Shirdi to experience his eternal living presence at Samadhi Mandir and seek solutions to life\'s hardships.',
+      bestTimeToVisit: 'Shirdi welcomes devotees year-round. Monsoons (July to September) and Winters (October to March) offer pleasant temperatures for temple queues and walking tours.',
+      placesCovered: [
+        'Sai Baba Samadhi Mandir',
+        'Dwarkamai Mosque (Ever-burning Dhuni)',
+        'Chavadi & Gurusthan (Neem Tree)',
+        'Lendi Baug Garden',
+        'Khandoba Mandir & Dixit Wada Museum'
+      ],
+      travelTips: [
+        'Special VIP Pass pre-registration recommended for early Aarti or Kakad Aarti.',
+        'Electronics and mobile phones are strictly prohibited inside the main Samadhi Mandir complex.',
+        'Footwear counters are available at gate entrances.'
+      ],
+      whyChooseUs: [
+        'Hotels within walking distance to Gate 1 / Gate 2 of Samadhi Mandir',
+        'Pre-arranged VIP Darshan pass guidance',
+        'Dedicated vehicle pick-up from Shirdi Airport (SAG) / Shirdi Railway Station (SNSI) / Pune Airport'
+      ]
+    },
+    faqs: [
+      {
+        question: "How far is the hotel from Shirdi Samadhi Mandir?",
+        answer: "All our selected hotels are within 5 to 10 minutes walking distance or short transfer from the main Samadhi Mandir gates."
+      },
+      {
+        question: "How do we get VIP / Special Darshan passes?",
+        answer: "Our team will assist you in pre-booking online VIP Darshan slots well before your travel date so that your temple visit is smooth and fast."
+      },
+      {
+        question: "Are airport transfers included?",
+        answer: "Yes, private AC vehicle pick-up and drop from Shirdi Airport, Pune Airport, or Shirdi Railway Station are fully included."
+      }
     ],
     coordinates: { x: 38, y: 55 }
   },
@@ -39,9 +75,55 @@ export const ALL_PACKAGES: Package[] = [
     inclusions: ['AC Deluxe Accommodation', 'Daily Breakfast & Dinner', 'All Intercity Transfers', 'Sightseeing & Toll taxes'],
     exclusions: ['Pooja charges at Jyothirlingas', 'Lunch & beverages', 'Personal expenses'],
     sampleItinerary: [
-      { day: 'Day 01', title: 'Arrival & Trimbakeshwar to Shirdi', detail: 'Arrive and proceed to Trimbakeshwar Jyothirlinga. Later drive to Shirdi for evening Darshan.' },
-      { day: 'Day 02', title: 'Shirdi to Grishneshwar & Ellora', detail: 'Morning Shirdi prayers. Visit Grishneshwar Jyothirlinga and ancient Ellora heritage.' },
-      { day: 'Day 03', title: 'Bhimashankar & Departure', detail: 'Early departure for Bhimashankar Jyothirlinga surrounded by Sahyadri hills, followed by drop-off.' }
+      { day: 'Day 01', title: 'Arrival & Trimbakeshwar to Shirdi', detail: 'Arrive and proceed to Trimbakeshwar Jyothirlinga in Nashik, source of river Godavari. Later drive to Shirdi for evening Darshan at Sai Baba Samadhi Mandir.' },
+      { day: 'Day 02', title: 'Shirdi to Grishneshwar & Ellora', detail: 'Morning Kakad Aarti / Special Darshan in Shirdi. Visit Dwarkamai, Chavadi & Gurusthan. Proceed to Grishneshwar Jyothirlinga (12th Jyothirlinga) and ancient UNESCO Ellora Caves.' },
+      { day: 'Day 03', title: 'Bhimashankar & Departure', detail: 'Early departure for Bhimashankar Jyothirlinga situated amidst dense Sahyadri forests. Take blessings and proceed for return airport/station transfer.' }
+    ],
+    detailedContent: {
+      overview: 'The Shirdi with 3 Jyothirlinga tour is one of Maharashtra\'s most sacred spiritual circuits. Designed specifically for devotees seeking ultimate peace and blessings, this yatra covers the serene abode of Sadguru Sai Baba in Shirdi along with three venerable Jyothirlingas of Lord Shiva: Trimbakeshwar (Nashik), Grishneshwar (Ellora), and Bhimashankar (Sahyadri Mountains).',
+      significance: 'Visiting three Jyothirlingas along with Shirdi Sai Baba brings immense spiritual merit. Trimbakeshwar represents the divine Trinity (Brahma, Vishnu, Maheshwara), Grishneshwar is the 12th and last Jyothirlinga symbolizing devotion and humility, while Bhimashankar is a revered seat of Lord Shiva in its natural mountain glory. Paired with Sai Baba\'s message of Sabka Malik Ek, this pilgrimage fills every devotee\'s heart with solace.',
+      bestTimeToVisit: 'October to March is the ideal season when the weather across Maharashtra is pleasant and comfortable for temple visits, trekking near Bhimashankar, and road journeys.',
+      placesCovered: [
+        'Shirdi Sai Baba Samadhi Mandir, Dwarkamai & Chavadi',
+        'Trimbakeshwar Jyothirlinga (Nashik)',
+        'Grishneshwar Jyothirlinga (Verul / Ellora)',
+        'Bhimashankar Jyothirlinga (Sahyadri Hills)',
+        'Ellora Caves & Panchavati (Enroute)'
+      ],
+      travelTips: [
+        'Dress Code: Traditional modest attire is mandatory at all temples (Dhoti/Kurta for men, Saree/Chudidhar for women).',
+        'Senior Citizens: We arrange special wheelchairs and assistance for smooth Darshan at Shirdi and Jyothirlingas.',
+        'VIP Darshan Passes: Pre-booked pass guidance provided for Shirdi Samadhi Mandir to minimize waiting times.',
+        'Footwear: Carry comfortable slip-on footwear as shoes must be removed near temple premises.'
+      ],
+      whyChooseUs: [
+        'End-to-end AC private cab transfers with experienced local devotional drivers',
+        'Sanitised, premium hotels close to temple complexes',
+        'Personalized care and itinerary flexibility for families and senior travelers',
+        '24/7 dedicated support team on standby throughout your yatra'
+      ]
+    },
+    faqs: [
+      {
+        question: "How is Darshan arranged at Shirdi and the 3 Jyothirlingas?",
+        answer: "We provide guidance and pre-booking support for VIP / Special Darshan tickets at Shirdi Sai Baba Temple to save waiting time. For Trimbakeshwar, Grishneshwar, and Bhimashankar, our experienced drivers ensure seamless drop-off near VIP gates and guide you on priest services for Abhishek or Pooja."
+      },
+      {
+        question: "Is this package suitable for senior citizens?",
+        answer: "Yes, absolutely! Our Shirdi with 3 Jyothirlinga package is specially crafted with comfortable AC vehicles, minimal walking routes, and hotels close to temple gates. Wheelchair facilities can also be arranged upon request."
+      },
+      {
+        question: "Are flight or train tickets from Bangalore included?",
+        answer: "Flight/Train ticket booking assistance is included. We can add flight or train tickets from Bengaluru to Pune/Mumbai/Aurangabad directly to your package package price upon request."
+      },
+      {
+        question: "What type of accommodation and meals are included?",
+        answer: "You will stay in handpicked, hygienic 3-star deluxe hotels with modern amenities. Pure vegetarian breakfast and dinner are included daily in your package."
+      },
+      {
+        question: "Can we customize the itinerary to add Shanishingnapur or Ajanta?",
+        answer: "Yes! All our tour packages are 100% customizable. You can easily add Shanishingnapur, Muktidham, Panchavati, or Ajanta Caves by mentioning your preference in the enquiry form or calling us."
+      }
     ],
     coordinates: { x: 36, y: 58 }
   },

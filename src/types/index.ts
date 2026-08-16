@@ -17,7 +17,16 @@ export interface Package {
   inclusions: string[];
   exclusions: string[];
   sampleItinerary: { day: string; title: string; detail: string }[];
-  coordinates?: { x: number; y: number }; // For Interactive India Map positioning
+  detailedContent?: {
+    overview: string;
+    significance?: string;
+    bestTimeToVisit?: string;
+    placesCovered?: string[];
+    travelTips?: string[];
+    whyChooseUs?: string[];
+  };
+  faqs?: { question: string; answer: string }[];
+  coordinates?: { x: number; y: number };
 }
 
 export interface BusinessConfig {
