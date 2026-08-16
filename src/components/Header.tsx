@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
 
           <button
             onClick={() => onOpenEnquiry()}
-            className="bg-[#2563EB] text-white px-5 sm:px-7 py-2.5 rounded-full font-bold text-sm hover:bg-[#1D4ED8] hover:shadow-lg transform hover:-translate-y-0.5 transition-all hidden sm:block shadow-md"
+            className="bg-[#2563EB] text-white px-3.5 py-1.5 sm:px-7 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:bg-[#1D4ED8] hover:shadow-lg transform hover:-translate-y-0.5 transition-all shadow-md active:scale-95 whitespace-nowrap"
           >
             Book Now
           </button>

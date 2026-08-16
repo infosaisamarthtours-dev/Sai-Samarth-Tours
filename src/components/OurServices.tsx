@@ -69,22 +69,6 @@ export function OurServices() {
             </Link>
           </div>
 
-          {/* Left / Right Arrow Controls for Mobile */}
-          <button 
-            onClick={handlePrev}
-            aria-label="Previous service"
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md text-[#114088] flex items-center justify-center hover:bg-[#114088] hover:text-white transition-colors z-20 active:scale-95"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button 
-            onClick={handleNext}
-            aria-label="Next service"
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md text-[#114088] flex items-center justify-center hover:bg-[#114088] hover:text-white transition-colors z-20 active:scale-95"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
           {/* Active Slide Indicators */}
           <div className="flex items-center justify-center gap-2 mt-4">
             {services.map((s, idx) => (

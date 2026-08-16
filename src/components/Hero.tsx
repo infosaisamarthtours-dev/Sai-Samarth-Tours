@@ -98,20 +98,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
         </div>
       ))}
       
-      {/* Slider Controls */}
+      {/* Slider Controls (Desktop Only) */}
       <button 
         onClick={prevSlide}
         aria-label="Previous slide"
-        className="absolute left-1 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-1.5 sm:p-2.5 rounded-full bg-white/50 hover:bg-white/90 text-[#114088] shadow-md border border-white/60 transition-colors backdrop-blur-md"
+        className="hidden sm:flex absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/50 hover:bg-white/90 text-[#114088] shadow-md border border-white/60 transition-colors backdrop-blur-md items-center justify-center"
       >
-        <ChevronLeft className="w-4 h-4 sm:w-7 sm:h-7" />
+        <ChevronLeft className="w-7 h-7" />
       </button>
       <button 
         onClick={nextSlide}
         aria-label="Next slide"
-        className="absolute right-1 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-1.5 sm:p-2.5 rounded-full bg-white/50 hover:bg-white/90 text-[#114088] shadow-md border border-white/60 transition-colors backdrop-blur-md"
+        className="hidden sm:flex absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-2.5 rounded-full bg-white/50 hover:bg-white/90 text-[#114088] shadow-md border border-white/60 transition-colors backdrop-blur-md items-center justify-center"
       >
-        <ChevronRight className="w-4 h-4 sm:w-7 sm:h-7" />
+        <ChevronRight className="w-7 h-7" />
       </button>
       
       {/* Pagination Dots */}
