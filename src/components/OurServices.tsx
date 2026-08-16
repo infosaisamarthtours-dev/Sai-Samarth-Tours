@@ -46,14 +46,17 @@ export function OurServices() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-8">
+        <div className="text-center mb-10">
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#EA580C] bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/30 inline-block mb-3 shadow-xs">
+            ✦ Curated Journeys & Escapes ✦
+          </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#114088] font-serif">Our Services</h2>
-          <div className="w-16 h-1 bg-[#F59E0B] mx-auto mt-3 rounded-full"></div>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-[#F59E0B] to-[#EA580C] mx-auto mt-3 rounded-full"></div>
         </div>
 
         {/* MOBILE VIEW: 1 Big item on screen with 3s auto-scroll animation */}
         <div className="block md:hidden relative max-w-sm mx-auto px-6">
-          <div className="relative overflow-hidden rounded-2xl p-2 flex items-center justify-center min-h-[260px] sm:min-h-[300px]">
+          <div className="relative overflow-hidden rounded-3xl p-4 flex items-center justify-center min-h-[280px] bg-white/80 backdrop-blur-md border border-amber-500/20 shadow-lg">
             <Link 
               to={services[currentIndex].path} 
               className="w-full flex flex-col items-center group"
@@ -63,40 +66,40 @@ export function OurServices() {
                   key={currentIndex}
                   src={services[currentIndex].image} 
                   alt={services[currentIndex].title} 
-                  className="w-full h-full object-contain filter drop-shadow-md transition-all duration-700 ease-in-out animate-fadeIn"
+                  className="w-full h-full object-contain filter drop-shadow-lg transition-all duration-700 ease-in-out animate-fadeIn"
                 />
               </div>
             </Link>
           </div>
 
           {/* Active Slide Indicators */}
-          <div className="flex items-center justify-center gap-2 mt-4">
+          <div className="flex items-center justify-center gap-2 mt-5">
             {services.map((s, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to ${s.title}`}
                 className={`h-2.5 rounded-full transition-all duration-500 ${
-                  currentIndex === idx ? 'w-8 bg-[#F59E0B]' : 'w-2.5 bg-gray-300 hover:bg-gray-400'
+                  currentIndex === idx ? 'w-8 bg-gradient-to-r from-[#F59E0B] to-[#EA580C] shadow-sm' : 'w-2.5 bg-gray-300 hover:bg-gray-400'
                 }`}
               />
             ))}
           </div>
         </div>
 
-        {/* DESKTOP VIEW: Clean 4-column grid layout */}
+        {/* DESKTOP VIEW: Clean 4-column grid layout with glassmorphic cards */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-7xl mx-auto px-2">
           {services.map((service, idx) => (
             <Link 
               key={idx} 
               to={service.path} 
-              className="flex flex-col items-center group cursor-pointer w-full"
+              className="flex flex-col items-center group cursor-pointer w-full bg-white/80 backdrop-blur-md rounded-3xl p-4 border border-amber-500/15 hover:border-amber-500/40 shadow-sm hover:shadow-xl hover:shadow-[#F59E0B]/10 transition-all duration-500 transform hover:-translate-y-2"
             >
-              <div className="w-full h-64 lg:h-80 flex items-center justify-center transition-all duration-300 transform group-hover:-translate-y-2 group-hover:scale-105">
+              <div className="w-full h-64 lg:h-72 flex items-center justify-center transition-all duration-300 transform group-hover:scale-105">
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-contain drop-shadow-sm group-hover:drop-shadow-md transition-all"
+                  className="w-full h-full object-contain drop-shadow-md group-hover:drop-shadow-xl transition-all"
                 />
               </div>
             </Link>

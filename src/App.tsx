@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -16,6 +16,14 @@ import { ContactPage } from './pages/ContactPage';
 export function App() {
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [enquiryPackageTitle, setEnquiryPackageTitle] = useState('');
+
+  // Auto-show Enquiry Popup when visitor opens or refreshes website (after 2 seconds)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsEnquiryOpen(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleOpenEnquiry = (packageTitle?: string) => {
     if (packageTitle) {

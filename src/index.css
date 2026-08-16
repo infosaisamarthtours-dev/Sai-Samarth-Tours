@@ -24,6 +24,11 @@
     background-color: var(--color-bg);
     color: var(--color-on-background);
     overflow-x: hidden;
+    cursor: url('/diya-cursor.svg') 16 3, auto;
+  }
+
+  a, button, select, input, textarea, [role="button"], label {
+    cursor: url('/diya-cursor.svg') 16 3, pointer !important;
   }
 
   h1, h2, h3, h4, .font-serif-brand {
@@ -32,6 +37,10 @@
 
   .font-playfair {
     font-family: 'Playfair Display', serif;
+  }
+
+  .font-script {
+    font-family: 'Caveat', cursive;
   }
 }
 
@@ -75,4 +84,100 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #D97706;
+}
+
+/* Premium Styling & Shimmer Utilities */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.45); }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 3s infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.premium-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.premium-[#114088]-glass {
+  background: rgba(17, 64, 136, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.premium-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(17, 64, 136, 0.15);
+}
+
+/* Animated Search Bar Glow (Blue to Orange Gradient Glow on Hover/Focus) */
+@keyframes searchBlueOrangeGlow {
+  0% {
+    border-color: #2563EB;
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+  }
+  50% {
+    border-color: #F59E0B;
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.55);
+  }
+  100% {
+    border-color: #EA580C;
+    box-shadow: 0 0 14px rgba(234, 88, 12, 0.45);
+  }
+}
+
+.search-glow-animated {
+  transition: all 0.3s ease-in-out;
+}
+
+.search-glow-animated:hover,
+.search-glow-animated:focus,
+.group:hover .search-glow-animated {
+  animation: searchBlueOrangeGlow 2.5s infinite alternate ease-in-out;
 }

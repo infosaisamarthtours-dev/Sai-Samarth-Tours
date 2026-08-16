@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { siteConfig } from '../data/config';
 import { ALL_PACKAGES } from '../data/packages';
 import confetti from 'canvas-confetti';
+import { X, User, Phone, MapPin, MessageSquare, Send, ShieldCheck, HeartHandshake, Headphones, CheckCircle2 } from 'lucide-react';
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -13,12 +14,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
-    whatsappNumber: '',
-    email: '',
-    numberOfTravellers: '2',
-    preferredTravelDate: '',
     selectedPackage: initialPackageTitle || ALL_PACKAGES[0].title,
-    specialRequirements: '',
     message: '',
   });
 
@@ -33,167 +29,186 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
       particleCount: 80,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#F59E0B', '#F59E0B', '#114088'],
+      colors: ['#2563EB', '#F59E0B', '#114088'],
     });
   };
 
   const handleWhatsAppDirect = () => {
     const text = encodeURIComponent(
-      `Hello Sai Samarth Tours,\nMy Name: ${formData.fullName || 'Traveler'}\nPackage Interest: ${formData.selectedPackage}\nDate: ${formData.preferredTravelDate || 'TBD'}\nTravelers: ${formData.numberOfTravellers}\nMessage: ${formData.message || 'I would like to enquire about this package.'}`
+      `Hello Sai Samarth Tours,\nMy Name: ${formData.fullName || 'Traveler'}\nPhone: ${formData.phoneNumber}\nPackage Interest: ${formData.selectedPackage}\nMessage: ${formData.message || 'I would like to enquire about this package.'}`
     );
     window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${text}`, '_blank');
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#114088]/80 backdrop-blur-md animate-fadeIn overflow-y-auto">
-      <div className="bg-[#ffffff] text-[#114088] border border-[#EAE2D6] rounded-2xl w-full max-w-2xl max-h-[92vh] overflow-y-auto shadow-2xl relative p-6 sm:p-10 my-auto">
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-[#1C2B39] hover:text-[#F59E0B] cursor-pointer"
-        >
-          <span className="material-symbols-outlined text-2xl">close</span>
-        </button>
-
-        <div className="text-center mb-8">
-          <div className="w-12 h-12 rounded-full bg-[#F59E0B] text-[#ffffff] flex items-center justify-center mx-auto mb-3 shadow-md">
-            <span className="material-symbols-outlined text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-              temple_hindu
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-md animate-fadeIn overflow-y-auto">
+      
+      {/* Dual Pane Modal Card */}
+      <div className="bg-white text-gray-800 rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl relative my-auto border border-gray-100 flex flex-col md:flex-row max-h-[94vh]">
+        
+        {/* Left Pane Image (Visible on md+) */}
+        <div className="hidden md:block w-5/12 relative bg-cover bg-center shrink-0 min-h-[480px]" style={{ backgroundImage: `url('/Shridi-banner-image.png')` }}>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#114088]/90 via-[#114088]/40 to-transparent flex flex-col justify-end p-8 text-white">
+            <span className="bg-[#F59E0B] text-[#114088] px-3 py-1 rounded-full text-xs font-bold self-start mb-3 shadow-md">
+              ★ 4.9/5 Rated Agency
             </span>
+            <h3 className="font-serif text-2xl font-bold leading-snug">
+              Begin Your Divine Journey With Us
+            </h3>
+            <p className="text-xs text-blue-100 font-medium mt-2 leading-relaxed opacity-90">
+              Trusted by 10,000+ happy travelers from Bangalore for pilgrimage, domestic & international packages.
+            </p>
           </div>
-          <span className="text-[10px] uppercase font-bold tracking-widest text-[#F59E0B]">
-            {siteConfig.name}
-          </span>
-          <h2 className="font-serif text-3xl font-bold text-[#114088] mt-1">Plan Your Journey</h2>
         </div>
 
-        {submitted ? (
-          <div className="text-center py-12 space-y-6">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/10 border-2 border-emerald-600 flex items-center justify-center mx-auto">
-              <span className="material-symbols-outlined text-emerald-600 text-3xl">check_circle</span>
-            </div>
-            <h3 className="font-serif text-2xl font-bold text-[#114088]">Thank You!</h3>
-            <p className="text-sm text-[#1C2B39]">Thank you. Our travel team will contact you shortly.</p>
-            <button
-              onClick={handleWhatsAppDirect}
-              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase px-6 py-3 rounded-lg"
-            >
-              Connect On WhatsApp
-            </button>
+        {/* Right Pane Form */}
+        <div className="w-full md:w-7/12 p-6 sm:p-8 flex flex-col relative overflow-y-auto">
+          
+          {/* Close Button */}
+          <button
+            onClick={onClose}
+            aria-label="Close modal"
+            className="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-800 flex items-center justify-center transition-all cursor-pointer z-10"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Form Header */}
+          <div className="mb-6 pr-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#114088] font-sans tracking-tight">
+              Get a free quote
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-500 font-medium mt-1">
+              No spam. Just a quick call from a real travel expert.
+            </p>
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">Full Name *</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="Your Name"
-                  value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                />
-              </div>
 
-              <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">Phone Number *</label>
-                <input
-                  type="tel"
-                  required
-                  placeholder="Mobile Number"
-                  value={formData.phoneNumber}
-                  onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                />
+          {submitted ? (
+            <div className="text-center py-10 my-auto space-y-5">
+              <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200 shadow-sm">
+                <CheckCircle2 className="w-8 h-8 text-emerald-600" />
               </div>
+              <h3 className="font-serif text-2xl font-bold text-[#114088]">Enquiry Submitted!</h3>
+              <p className="text-xs sm:text-sm text-gray-600 max-w-sm mx-auto leading-relaxed">
+                Thank you, <span className="font-bold text-[#114088]">{formData.fullName || 'Traveler'}</span>. Our expert travel advisor will contact you within 15 minutes.
+              </p>
+              <button
+                onClick={handleWhatsAppDirect}
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 mx-auto"
+              >
+                <span>Instant Connect On WhatsApp</span>
+              </button>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4 text-xs my-auto">
+              
+              {/* Row 1: Name & Phone */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-[11px] font-extrabold uppercase tracking-wider text-gray-600 mb-1.5">
+                    YOUR NAME *
+                  </label>
+                  <div className="relative">
+                    <User className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                    <input
+                      type="text"
+                      required
+                      placeholder="Priya Sharma"
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                      className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 rounded-2xl pl-10 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 font-medium outline-none transition-all"
+                    />
+                  </div>
+                </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">WhatsApp Number</label>
-                <input
-                  type="tel"
-                  placeholder="WhatsApp Number"
-                  value={formData.whatsappNumber}
-                  onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                />
+                <div>
+                  <label className="block text-[11px] font-extrabold uppercase tracking-wider text-gray-600 mb-1.5">
+                    PHONE *
+                  </label>
+                  <div className="relative">
+                    <Phone className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                    <input
+                      type="tel"
+                      required
+                      placeholder="98765 43210"
+                      value={formData.phoneNumber}
+                      onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
+                      className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 rounded-2xl pl-10 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 font-medium outline-none transition-all"
+                    />
+                  </div>
+                </div>
               </div>
 
+              {/* Row 2: Destination */}
               <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">Email Address</label>
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">No. of Travellers</label>
-                <select
-                  value={formData.numberOfTravellers}
-                  onChange={(e) => setFormData({ ...formData, numberOfTravellers: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                >
-                  <option value="1">1 Person</option>
-                  <option value="2">2 Persons (Min Pax)</option>
-                  <option value="3-5">3 - 5 Persons</option>
-                  <option value="6+">6+ Family / Group</option>
-                </select>
+                <label className="block text-[11px] font-extrabold uppercase tracking-wider text-gray-600 mb-1.5">
+                  INTERESTED DESTINATION <span className="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <div className="relative">
+                  <MapPin className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  <select
+                    value={formData.selectedPackage}
+                    onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
+                    className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 rounded-2xl pl-10 pr-8 py-3 text-sm text-gray-800 font-medium outline-none transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="">— Choose a destination —</option>
+                    {ALL_PACKAGES.map((p) => (
+                      <option key={p.id} value={p.title}>
+                        {p.title} ({p.price})
+                      </option>
+                    ))}
+                  </select>
+                  <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400 text-xs">▼</div>
+                </div>
               </div>
 
+              {/* Row 3: Message */}
               <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">Preferred Date</label>
-                <input
-                  type="date"
-                  value={formData.preferredTravelDate}
-                  onChange={(e) => setFormData({ ...formData, preferredTravelDate: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                />
+                <label className="block text-[11px] font-extrabold uppercase tracking-wider text-gray-600 mb-1.5">
+                  MESSAGE <span className="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <div className="relative">
+                  <MessageSquare className="w-4 h-4 text-gray-400 absolute left-3.5 top-3.5" />
+                  <textarea
+                    rows={3}
+                    placeholder="Travel dates, group size, budget..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 rounded-2xl pl-10 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 font-medium outline-none transition-all resize-none"
+                  />
+                </div>
               </div>
 
-              <div>
-                <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">Select Package</label>
-                <select
-                  value={formData.selectedPackage}
-                  onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
-                  className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-                >
-                  {ALL_PACKAGES.map((p) => (
-                    <option key={p.id} value={p.title}>
-                      {p.title} ({p.price})
-                    </option>
-                  ))}
-                </select>
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full py-3.5 px-6 text-sm font-bold text-white bg-gradient-to-r from-[#2563EB] via-[#1D4ED8] to-[#F59E0B] hover:from-[#1D4ED8] hover:to-[#EA580C] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer transform active:scale-95 mt-2"
+              >
+                <Send className="w-4 h-4 text-white" />
+                <span>Submit Enquiry</span>
+              </button>
+
+              {/* Trust Badges */}
+              <div className="pt-3 border-t border-gray-100 flex flex-wrap items-center justify-around gap-2 text-[10px] text-gray-500 font-semibold">
+                <div className="flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-blue-500" />
+                  <span>No hidden charges</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <HeartHandshake className="w-3.5 h-3.5 text-amber-500" />
+                  <span>Free trip planning</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Headphones className="w-3.5 h-3.5 text-pink-500" />
+                  <span>24/7 travel support</span>
+                </div>
               </div>
-            </div>
 
-            <div>
-              <label className="block uppercase tracking-wider text-[#114088] mb-1 font-bold">Message &amp; Notes</label>
-              <textarea
-                rows={3}
-                placeholder="Senior citizen assistance, room preferences, etc."
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full py-4 text-xs uppercase tracking-[0.2em] font-bold text-[#ffffff] bg-[#F59E0B] hover:bg-[#D97706] rounded-lg transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
-            >
-              <span className="material-symbols-outlined text-base">send</span>
-              <span>Submit Journey Enquiry</span>
-            </button>
-          </form>
-        )}
+            </form>
+          )}
+        </div>
       </div>
     </div>
   );
 };
+

@@ -32,16 +32,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
           <span>Tour Guide & Manager Available for All Packages</span>
         </div>
 
-        {/* Middle-Right: Search Bar */}
-        <div className="hidden md:flex flex-1 max-w-sm justify-center relative">
+        {/* Middle-Right: Search Bar with Animated Blue & Orange Hover Glow */}
+        <div className="hidden md:flex flex-1 max-w-sm justify-center relative group">
           <div className="w-full relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-              <Search className="h-4 w-4 text-gray-400" />
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none z-10">
+              <Search className="h-4 w-4 text-gray-400 group-hover:text-[#F59E0B] transition-colors duration-300" />
             </div>
             <input 
               type="text" 
               placeholder="Search Jyotirlinga Tours..." 
-              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#114088] focus:border-transparent text-sm transition-all shadow-sm"
+              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none text-sm transition-all shadow-sm search-glow-animated"
             />
           </div>
         </div>

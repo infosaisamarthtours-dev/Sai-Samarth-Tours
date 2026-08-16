@@ -12,7 +12,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#0C1F41] text-gray-300 font-sans mt-auto border-t-4 border-[#F59E0B]">
+    <footer className="bg-gradient-to-b from-[#0C1F41] via-[#091833] to-[#061024] text-gray-300 font-sans mt-auto border-t-2 border-[#F59E0B]/30 relative overflow-hidden">
+      <div className="h-1.5 w-full bg-gradient-to-r from-[#F59E0B] via-[#F59E0B] to-[#EA580C]"></div>
       
       {/* 1. Top Contact & Social Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

@@ -8,33 +8,41 @@ interface HeroProps {
 const slides = [
   {
     id: 1,
-    title: 'Begin Your Spiritual Journey to Shirdi',
-    highlight: 'Shirdi',
-    desc: 'Experience the divine blessings of Sai Baba with comfortable and well-planned Shirdi tour packages.',
+    topBadge: "✦ BANGALORE'S TRUSTED TRAVEL PARTNER ✦",
+    scriptTitle: "We Plan. You Travel.",
+    mainTitle: "Begin Your Spiritual Journey to Shirdi",
+    subBadge: "Tour Packages From Bangalore",
+    desc: "Experience the divine blessings of Sai Baba with comfortable & thoughtfully planned Shirdi tour packages.",
     desktopImg: '/Shridi-banner-image.png',
     mobileImg: '/Shridi-mobile-view.png'
   },
   {
     id: 2,
-    title: 'Walk the Path of Faith & Devotion',
-    highlight: 'Faith & Devotion',
-    desc: 'Visit India’s sacred temples and spiritual destinations with thoughtfully planned pilgrimage tours for a peaceful journey.',
+    topBadge: "✦ SACRED TEMPLE EXPEDITIONS ✦",
+    scriptTitle: "Walk The Path Of Faith & Devotion",
+    mainTitle: "Shirdi, Varanasi & Kamakhya",
+    subBadge: "Guaranteed VIP Darshan & 3-Star Hotels",
+    desc: "Trusted pilgrimage travel company offering complete spiritual tour experiences with comfort and care.",
     desktopImg: '/pilgrimage-banner-image.png',
     mobileImg: '/pilgrimage-mobile-view.png'
   },
   {
     id: 3,
-    title: 'Explore the Beauty of India',
-    highlight: 'India',
-    desc: 'Discover incredible landscapes, vibrant cultures, and iconic destinations across India with our premium domestic tours.',
+    topBadge: "✦ INCREDIBLE DOMESTIC ESCAPES ✦",
+    scriptTitle: "A Beautiful Story",
+    mainTitle: "Every Journey Deserves",
+    subBadge: "Kashmir, Leh Ladakh & Kerala",
+    desc: "From Kashmir snows to Kerala backwaters, create unforgettable travel experiences from Bangalore.",
     desktopImg: '/Domastic-banner-image.png',
     mobileImg: '/Domastic-mobile-view.png'
   },
   {
     id: 4,
-    title: 'Explore the World, Create Memories',
-    highlight: 'Memories',
-    desc: 'Discover breathtaking international destinations, unique cultures, and unforgettable experiences with our curated tour packages.',
+    topBadge: "✦ GLOBAL HOLIDAY EXPERIENCES ✦",
+    scriptTitle: "Fly Beyond Borders",
+    mainTitle: "Explore The World In Style",
+    subBadge: "Malaysia, Maldives, Dubai & Europe",
+    desc: "Handcrafted international holiday packages from Bangalore with complete visa, flight, & luxury hotel arrangements.",
     desktopImg: '/international_tour_desktop_banner_1600x587.png',
     mobileImg: '/International-mobile-view.png'
   }
@@ -67,32 +75,64 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
           {/* Desktop Image */}
           <img 
             src={slide.desktopImg} 
-            alt={slide.title} 
+            alt={slide.mainTitle} 
             className="hidden sm:block w-full h-full object-contain"
           />
           {/* Mobile Image */}
           <img 
             src={slide.mobileImg} 
-            alt={slide.title} 
+            alt={slide.mainTitle} 
             className="block sm:hidden w-full h-full object-contain"
           />
           
-          <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto pl-10 sm:pl-16 md:pl-20 pr-4 sm:pr-12 flex flex-col justify-center items-start">
-            <div className={`w-[68%] sm:w-2/3 lg:w-1/2 space-y-2 sm:space-y-4 ${slide.id === 3 || slide.id === 4 ? 'lg:ml-[10%]' : 'lg:-ml-[5%]'} ${slide.id === 4 ? '-mt-[3%] sm:-mt-[8%]' : ''}`}>
-              <h1 className="font-serif text-[15px] xs:text-lg sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#114088] drop-shadow-sm sm:drop-shadow-md leading-tight sm:leading-tight">
-                {slide.title.split(slide.highlight)[0]}
-                <span className="text-[#F59E0B]">{slide.highlight}</span>
-                {slide.title.split(slide.highlight)[1]}
-              </h1>
-              <p className="hidden sm:block text-xs sm:text-sm md:text-base text-gray-900 font-medium max-w-md drop-shadow-sm bg-white/30 p-2 sm:p-0 sm:bg-transparent rounded-lg backdrop-blur-sm sm:backdrop-blur-none leading-snug">
+          <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto pl-4 xs:pl-6 sm:pl-16 md:pl-20 pr-2 sm:pr-12 flex flex-col justify-center items-start">
+            <div className={`w-[58%] xs:w-[60%] sm:w-2/3 lg:w-1/2 space-y-1.5 xs:space-y-2 sm:space-y-3.5 ${slide.id === 3 || slide.id === 4 ? 'lg:ml-[10%]' : 'lg:-ml-[4%]'} ${slide.id === 4 ? '-mt-[2%] sm:-mt-[8%]' : ''}`}>
+              
+              {/* Top Pill Badge */}
+              <div className="inline-flex items-center gap-1 bg-[#114088] text-white px-2 py-0.5 sm:px-4 sm:py-1.5 rounded-full text-[6.5px] xs:text-[8.5px] sm:text-xs font-extrabold tracking-wider uppercase shadow-md border border-blue-400/40 whitespace-nowrap">
+                {slide.topBadge}
+              </div>
+
+              {/* Headline with Mixed Script & Serif */}
+              <div className="flex flex-col gap-0.5 sm:gap-1 mb-0.5">
+                <span className="font-script text-[#EA580C] text-sm xs:text-base sm:text-5xl lg:text-6xl font-bold drop-shadow-xs leading-snug sm:leading-none sm:whitespace-nowrap">
+                  {slide.scriptTitle}
+                </span>
+                <h1 className="font-serif text-[11px] xs:text-xs sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#114088] drop-shadow-sm leading-tight tracking-tight">
+                  {slide.mainTitle}
+                </h1>
+              </div>
+
+              {/* Sub-Badge Pill */}
+              <div className="hidden sm:inline-block">
+                <span className="bg-[#114088] text-white px-3.5 py-1 sm:px-5 sm:py-1.5 rounded-full font-bold text-xs sm:text-sm shadow-md border border-blue-300/30">
+                  {slide.subBadge}
+                </span>
+              </div>
+
+              {/* Description - Pure Sentence Text (No Background Card) */}
+              <p className="hidden sm:block text-xs sm:text-sm text-[#114088] font-semibold max-w-md leading-relaxed drop-shadow-xs">
                 {slide.desc}
               </p>
-              <button 
-                onClick={onOpenEnquiry}
-                className="px-3.5 py-1.5 sm:px-6 sm:py-2.5 bg-[#114088] hover:bg-[#F59E0B] text-white font-semibold sm:font-bold text-xs sm:text-base rounded-lg shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95"
-              >
-                Enquire Now
-              </button>
+
+              {/* Diamond Divider */}
+              <div className="hidden sm:flex items-center gap-2.5 w-40 my-1 opacity-70">
+                <div className="h-[1px] bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent flex-1"></div>
+                <div className="w-1.5 h-1.5 rotate-45 bg-[#F59E0B]"></div>
+                <div className="h-[1px] bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent flex-1"></div>
+              </div>
+
+              {/* Golden Pill CTA Button */}
+              <div className="pt-1 sm:pt-2">
+                <button 
+                  onClick={onOpenEnquiry}
+                  className="px-3 py-1 sm:px-8 sm:py-3.5 bg-gradient-to-r from-[#F59E0B] via-[#F59E0B] to-[#EA580C] hover:from-[#EA580C] hover:to-[#F59E0B] text-[#114088] hover:text-white font-extrabold text-[9px] xs:text-[10px] sm:text-base rounded-full shadow-md hover:shadow-2xl hover:shadow-[#F59E0B]/40 transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 flex items-center gap-1 sm:gap-2 border border-amber-300/50"
+                >
+                  <span>Explore Packages</span>
+                  <span className="text-[10px] sm:text-lg">→</span>
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
