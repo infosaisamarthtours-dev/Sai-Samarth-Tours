@@ -47,7 +47,7 @@ export function QuoteSection() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/918951062993" 
+                href="https://wa.me/919187711649" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold transition-all hover:-translate-y-1 shadow-[0_4px_15px_rgba(37,211,102,0.3)]"
@@ -57,11 +57,11 @@ export function QuoteSection() {
               </a>
               
               <a 
-                href="tel:+918951062993"
+                href="tel:+919187711649"
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold backdrop-blur-md transition-all hover:-translate-y-1"
               >
                 <Phone className="w-5 h-5" />
-                +91 89510 62993
+                +91 91877 11649
               </a>
             </div>
           </div>

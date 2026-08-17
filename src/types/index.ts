@@ -16,7 +16,21 @@ export interface Package {
   highlights: string[];
   inclusions: string[];
   exclusions: string[];
-  sampleItinerary: { day: string; title: string; detail: string }[];
+  sampleItinerary: { day: string; title: string; detail: string; meals?: string }[];
+  tourIncludes?: {
+    hotels?: boolean;
+    transport?: boolean;
+    allMeals?: boolean;
+    flights?: boolean;
+    sightseeing?: boolean;
+  };
+  placesBadge?: string;
+  placesList?: { name: string; icon?: string }[];
+  cancellationPolicy?: {
+    table: { days: string; fee: string }[];
+    notes: string[];
+  };
+  remarks?: string[];
   detailedContent?: {
     overview: string;
     significance?: string;

@@ -45,8 +45,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Phone</h4>
-                    <p className="text-blue-100 text-sm hover:text-white transition-colors cursor-pointer">+91 9483488258</p>
-                    <p className="text-blue-100 text-sm hover:text-white transition-colors cursor-pointer">+91 9483488258</p>
+                    <a href="tel:+919187711649" className="text-blue-100 text-sm hover:text-white transition-colors block">+91 91877 11649</a>
                   </div>
                 </div>
 
@@ -56,7 +55,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Email</h4>
-                    <p className="text-blue-100 text-sm hover:text-white transition-colors cursor-pointer">saisamarthtours@gmail.com</p>
+                    <a href="mailto:info.saisamarthtours@gmail.com" className="text-blue-100 text-sm hover:text-white transition-colors block">info.saisamarthtours@gmail.com</a>
                   </div>
                 </div>
 
@@ -67,8 +66,9 @@ export function ContactPage() {
                   <div>
                     <h4 className="font-bold mb-1">Office Location</h4>
                     <p className="text-blue-100 text-sm leading-relaxed">
-                      Jayanagar 4th Block,<br />
-                      Bangalore - 560011,<br />
+                      Sai Samarth Tours,<br />
+                      NO : 2238, Second Floor, 16th ‘B’ Cross,<br />
+                      Yelahanka New Town, Bengaluru – 560064,<br />
                       Karnataka, India
                     </p>
                   </div>

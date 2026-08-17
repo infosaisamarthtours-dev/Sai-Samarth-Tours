@@ -175,12 +175,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                 International <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
               </Link>
               <div className="absolute left-0 top-full w-48 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden py-2">
+                <Link to="/package/bhutan" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Bhutan</Link>
+                <Link to="/package/nepal" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Nepal</Link>
                 <Link to="/package/malaysia" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Malaysia</Link>
                 <Link to="/package/maldives" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Maldives</Link>
-                <Link to="/package/europe" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Europe</Link>
+                <Link to="/package/europe" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Europe <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
                 <Link to="/package/dubai" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Dubai <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
-                <Link to="/package/singapore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Singapore <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
-                <Link to="/package/thailand" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Thailand <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
+                <Link to="/package/singapore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Singapore</Link>
+                <Link to="/package/thailand" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Thailand</Link>
               </div>
             </li>
             

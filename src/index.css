@@ -24,11 +24,6 @@
     background-color: var(--color-bg);
     color: var(--color-on-background);
     overflow-x: hidden;
-    cursor: url('/diya-cursor.svg') 16 3, auto;
-  }
-
-  a, button, select, input, textarea, [role="button"], label {
-    cursor: url('/diya-cursor.svg') 16 3, pointer !important;
   }
 
   h1, h2, h3, h4, .font-serif-brand {
