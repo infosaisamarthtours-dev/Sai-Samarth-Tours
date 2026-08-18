@@ -243,49 +243,49 @@ export function PackageDetailsPage() {
                 {activeTab === 'overview' && (
                   <div className="space-y-6 sm:space-y-10">
                     
-                    {/* Tour Includes Icons Bar - Reordered: Flights, Hotels, Transport, All Meals, Sightseeing */}
+                    {/* Tour Includes Icons Bar - Responsive balanced grid on mobile and flex on desktop */}
                     {effectiveTourIncludes && (
                       <div className="bg-gray-50/80 p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-gray-200/80">
                         <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Tour Includes</h4>
-                        <div className="flex flex-wrap gap-2.5 sm:gap-3 items-center">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap gap-2 sm:gap-3">
                           {effectiveTourIncludes.flights && (
-                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-indigo-500/40 transition-all">
+                            <div className="flex items-center gap-2 px-3 py-2.5 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-indigo-500/40 transition-all justify-start">
                               <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
                                 <Plane className="w-4 h-4" />
                               </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Flights</span>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088] truncate">Flights</span>
                             </div>
                           )}
                           {effectiveTourIncludes.hotels && (
-                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-[#2563EB]/40 transition-all">
+                            <div className="flex items-center gap-2 px-3 py-2.5 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-[#2563EB]/40 transition-all justify-start">
                               <div className="w-7 h-7 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center shrink-0">
                                 <Building2 className="w-4 h-4" />
                               </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Hotels</span>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088] truncate">Hotels</span>
                             </div>
                           )}
                           {effectiveTourIncludes.transport && (
-                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-[#F59E0B]/40 transition-all">
+                            <div className="flex items-center gap-2 px-3 py-2.5 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-[#F59E0B]/40 transition-all justify-start">
                               <div className="w-7 h-7 rounded-lg bg-amber-50 text-[#F59E0B] flex items-center justify-center shrink-0">
                                 <Bus className="w-4 h-4" />
                               </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Transportation</span>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088] truncate">Transportation</span>
                             </div>
                           )}
                           {effectiveTourIncludes.allMeals && (
-                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-emerald-500/40 transition-all">
+                            <div className="flex items-center gap-2 px-3 py-2.5 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-emerald-500/40 transition-all justify-start">
                               <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                                 <Utensils className="w-4 h-4" />
                               </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">All Meals</span>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088] truncate">All Meals</span>
                             </div>
                           )}
                           {effectiveTourIncludes.sightseeing && (
-                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-purple-500/40 transition-all">
+                            <div className="flex items-center gap-2 px-3 py-2.5 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-purple-500/40 transition-all justify-start col-span-2 sm:col-span-1">
                               <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
                                 <Camera className="w-4 h-4" />
                               </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Sightseeing</span>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088] truncate">Sightseeing</span>
                             </div>
                           )}
                         </div>
