@@ -1,45 +1,19 @@
 import React from 'react';
 import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck, HeartHandshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ALL_PACKAGES } from '../data/packages';
+import { Package } from '../types';
 import { FaqSection } from '../components/FaqSection';
 
-const destinations = [
-  {
-    id: 'shirdi-3-jyothirlinga',
-    title: 'Shirdi with 3 Jyothirlinga',
-    price: '₹23,999',
-    toursCount: 1,
-    image: '/Shirdi with 3 Jyothirlinga Priority Packages.png',
-  },
-  {
-    id: 'kholapur-pandarpur',
-    title: 'Kholapur and Pandarpur',
-    price: '₹23,999',
-    toursCount: 1,
-    image: 'https://images.unsplash.com/photo-1627894483216-2138af692e32?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    id: 'shirdi-regular',
-    title: 'Regular Shirdi',
-    price: '₹17,999',
-    toursCount: 1,
-    image: '/Priority-Packages-Regular Shirdi.png',
-  },
-  {
-    id: 'puri-jagannath',
-    title: 'Puri Jagannath',
-    price: '₹30,999',
-    toursCount: 2,
-    image: '/Puri Jagannath  Priority Packages.png',
-  },
-  {
-    id: 'kamakhya',
-    title: 'Kamakhya',
-    price: '₹27,999',
-    toursCount: 2,
-    image: '/Kamakhya Priority Packages.png',
-  }
+const shirdiIds = [
+  'shirdi-3-jyothirlinga',
+  'shirdi-2-jyothirlinga',
+  'shirdi-regular'
 ];
+
+const destinations = shirdiIds
+  .map(id => ALL_PACKAGES.find(p => p.id === id))
+  .filter((p): p is Package => p !== undefined);
 
 export function ShirdiPackagesPage() {
   return (
@@ -67,7 +41,7 @@ export function ShirdiPackagesPage() {
 
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations.map((dest) => (
             <Link 
               to={`/package/${dest.id}`} 
@@ -158,7 +132,32 @@ export function ShirdiPackagesPage() {
       </section>
 
       {/* FAQ Session */}
-      <FaqSection />
+      <FaqSection 
+        title="Frequently Asked Questions - Shirdi Tours"
+        subtitle="Common questions about our Bangalore to Shirdi & Jyothirlinga flight packages."
+        items={[
+          {
+            question: "How do we travel from Bangalore to Shirdi in these packages?",
+            answer: "We arrange round-trip economy flights departing early morning from Bangalore (BLR) to Pune or Shirdi airport. From there, you are transferred in a sanitized AC coach with an experienced Tour Manager handling all logistics."
+          },
+          {
+            question: "Is VIP Darshan included for Shirdi Sai Baba Samadhi Mandir?",
+            answer: "Yes! We assist with pre-booked VIP Darshan passes for Sai Baba Samadhi Mandir and Aarti sessions to minimize queue times, ensuring a seamless experience for senior citizens and families."
+          },
+          {
+            question: "Which Jyothirlingas are covered in the 2 and 3 Jyothirlinga packages?",
+            answer: "The 2 Jyothirlinga package (1N/2D) covers Bhimashankar and Grishneshwar (plus Ellora Caves & Shirdi). The 3 Jyothirlinga package (2N/3D) covers Bhimashankar, Trimbakeshwar (Nashik), and Grishneshwar (plus Shani Shingnapur & Shirdi)."
+          },
+          {
+            question: "Are pure vegetarian meals provided on all days?",
+            answer: "Yes, 100% pure vegetarian Breakfast, Lunch, and Dinner are provided on all tour days. We ensure clean, hygienic South and North Indian cuisines suited for pilgrims."
+          },
+          {
+            question: "Will a Tour Manager guide us throughout the entire trip?",
+            answer: "Yes, our experienced Tour Manager travels with the group from Bangalore, managing airport check-ins, vehicle transfers, hotel accommodations, and temple guidelines from start to finish."
+          }
+        ]}
+      />
       
     </div>
   );

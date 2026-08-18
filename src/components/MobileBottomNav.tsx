@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/config';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 interface MobileBottomNavProps {
   onOpenEnquiry: () => void;
@@ -17,7 +18,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenEnquiry 
       </a>
 
       <a
-        href={`https://wa.me/${siteConfig.whatsappNumber}`}
+        href={getWhatsAppUrl()}
         target="_blank"
         rel="noreferrer"
         className="flex flex-col items-center justify-center text-emerald-700 py-1 px-3"

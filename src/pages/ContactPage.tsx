@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { FaqSection } from '../components/FaqSection';
 
 export function ContactPage() {
   return (
@@ -167,7 +168,7 @@ export function ContactPage() {
 
               <button 
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 shadow-lg shadow-blue-500/30"
+                className="w-full sm:w-auto px-8 py-3.5 bg-[#2563EB] hover:bg-[#1D4ED8] text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-all transform hover:-translate-y-0.5 shadow-lg shadow-blue-500/30 cursor-pointer"
               >
                 Send Message
                 <Send className="w-4 h-4" />
@@ -176,6 +177,36 @@ export function ContactPage() {
           </div>
 
         </div>
+      </div>
+
+      {/* Contact & Support FAQs */}
+      <div className="mt-16">
+        <FaqSection 
+          title="Frequently Asked Questions - Contact & Support"
+          subtitle="Quick answers about contacting our travel advisors, booking confirmations, and office appointments."
+          items={[
+            {
+              question: "How fast will I receive a callback after submitting an enquiry?",
+              answer: "Our dedicated tour counselors will contact you within 15 to 30 minutes during business hours (9:00 AM - 8:00 PM IST) to share complete package quotes and date availability."
+            },
+            {
+              question: "Can I visit your office in Bangalore for in-person tour consultation?",
+              answer: "Yes, you are always welcome! You can visit our Bangalore office or schedule a prior appointment with our travel experts for detailed group planning."
+            },
+            {
+              question: "What payment methods do you accept for tour bookings?",
+              answer: "We accept all secure payment methods including UPI (Google Pay, PhonePe, Paytm), Net Banking (NEFT/RTGS/IMPS), Credit/Debit cards, and direct bank transfers."
+            },
+            {
+              question: "Do you provide emergency travel support during an active tour?",
+              answer: "Yes! Every guest is provided with a 24/7 direct helpline number and the personal contact number of the assigned Tour Manager for real-time support."
+            },
+            {
+              question: "How do I receive my flight tickets and hotel confirmation vouchers?",
+              answer: "All airline e-tickets, hotel booking confirmation vouchers, driver contact details, and tour itinerary guidelines are sent directly to your registered WhatsApp and email 48-72 hours before departure."
+            }
+          ]}
+        />
       </div>
 
     </div>

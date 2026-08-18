@@ -121,7 +121,32 @@ export function DomesticPackagesPage() {
       </section>
 
       {/* FAQ Session */}
-      <FaqSection />
+      <FaqSection 
+        title="Frequently Asked Questions - Domestic Tours"
+        subtitle="Helpful answers about customizing your holiday, vehicle transfers, and hotel inclusions."
+        items={[
+          {
+            question: "Can we customize our domestic holiday itinerary and hotel category?",
+            answer: "Yes, 100%! All our domestic holiday itineraries (Kashmir, Kerala, Leh Ladakh, Rajasthan, Himachal, Goa, Andaman) can be customized with 3-star, 4-star, or luxury heritage resort upgrades."
+          },
+          {
+            question: "Are flights from Bangalore included in these packages?",
+            answer: "Yes, our domestic packages from Bangalore include round-trip flights, airport transfers, hotel accommodations, and daily sightseeing."
+          },
+          {
+            question: "What type of private transport is provided for family tours?",
+            answer: "We provide dedicated private AC vehicles (Sedan for couples/small families, Innova Crysta for 4-6 pax, AC Tempo Traveller for larger groups) with experienced local drivers."
+          },
+          {
+            question: "When is the best time to visit Kashmir, Leh Ladakh, and Kerala?",
+            answer: "Kashmir is ideal from March to October (and Dec-Feb for snowfall); Leh Ladakh is best from May to September; Kerala and Rajasthan are best from September to March. Our travel team helps you pick the right dates."
+          },
+          {
+            question: "Are daily meals and sightseeing entrance fees included?",
+            answer: "Yes, wholesome daily breakfast and dinner (or all meals depending on selected package) are included along with complete sightseeing transfers as per the itinerary."
+          }
+        ]}
+      />
       
     </div>
   );

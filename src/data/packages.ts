@@ -250,6 +250,128 @@ export const ALL_PACKAGES: Package[] = [
     coordinates: { x: 36, y: 58 }
   },
   {
+    id: 'shirdi-2-jyothirlinga',
+    title: 'Shirdi with 2 Jyothirlinga Tour Package',
+    category: 'pilgrimage',
+    destination: 'Maharashtra (Pune, Bhimashankar, Shirdi, Grishneshwar)',
+    duration: '1N/2D',
+    price: '₹20,999/-',
+    numericPrice: 20999,
+    minPax: 2,
+    featured: true,
+    image: '/Shirdi with 3 Jyothirlinga Priority Packages.png',
+    description: 'Divine Maharashtra Pilgrimage Yatra (1N/2D): Visit 2 sacred Shiva Jyotirlingas (Bhimashankar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
+    highlights: [
+      'Bhimashankar Jyotirlinga',
+      'Grishneshwar Jyotirlinga',
+      'Sai Baba Temple',
+      'Ellora Caves'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: true,
+      sightseeing: true
+    },
+    placesBadge: '2 Days 2 Jyotirlingas Yatra',
+    placesList: [
+      { name: 'Bhimashankar Jyotirlinga' },
+      { name: 'Shirdi (Sai Baba VIP Darshan)' },
+      { name: 'Ghrishneshwar Jyotirlinga' },
+      { name: 'Ellora Caves, Bhadra Maruti & Shani Shingnapur' }
+    ],
+    inclusions: [
+      'To and from economy class air travel for \'Bangalore to Bangalore Tour\' guests as mentioned in the itinerary Airfare, Airport taxes and Visa Fees',
+      'Baggage Allowance as per the airline policy',
+      'Tour Manager Services throughout the tour',
+      'Entrance fees of all sightseeing places to be visited from inside',
+      'All Meals – Breakfast, Lunch, Dinner.',
+      'Cost of internal airfare as mentioned in the itinerary',
+      'Transfers and sightseeing\'s by A/C coach',
+      'Accommodation on Twin/Double sharing basis for 01 night',
+      'Govt Tax of 5% over and above the Tour Cost mentioned'
+    ],
+    exclusions: [
+      'Seat selection and meals are not included in the flight journey',
+      'Visa fees, Airport taxes, Govt Taxes, Fuel Surcharges and any applicability of new taxes from Govt',
+      'Any up gradation in Airline class or hotel room category',
+      'Cost of Air ticket deviation charges',
+      'Any Increase in the rate of exchange leading to an increase in all land arrangements which may come in to effect prior to departure',
+      'Cost of pre or post tour hotel accommodation',
+      'Any extra expense such as route change, Airline change, Date change, Accommodation facilities, etc incurred due to the unforeseen, unavoidable forced majeure circumstances during the tour',
+      'Porterage, laundry, telephone charges, shopping, wines & alcoholic beverages, items of personal nature and food or drink which is not part of a set group menu',
+      'Any extra cost incurred on behalf of an individual due to illness, accident, hospitalization, or any personal emergency',
+      'Any services or activity charges other than those included in the group tour itinerary',
+      'To and fro Air fare, Airport transfers, visa fees to Bangalore'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Day 1 | Bangalore- Pune-Bhimashankar',
+        detail: 'Bangalore to Pune Departure, On arrival at Pune airport, have Board the vehicle and proceed towards Bhimashankar, On arrival at Bhimashankar, get a good darshan in famous Bhimashankar Jyotirlinga (Bhimshankar is not just a pilgrimage site but also a heavenly escape into nature\'s paradise. The ancient Shiva temple is home to the sixth Shivlinga among the 12 self-emanated Jyotirlingas of Mahadev) then proceed towards Shirdi, Dinner and overnight stay at hotel in Shirdi.',
+        meals: 'Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Day 2 | Shirdi-Ellora (Ghrishneshwar)-Pune',
+        detail: 'Early in the morning (6am) move to Sai Mandir to have a Sai Baba Darshan (VIP), Gurusthan, Museum, Dwarakamai and Chawadi After breakfast, checkout and proceed to Ellora, Visit famous Ghrishneshwar Jyotirlinga, (This is one of the shrines dedicated to Lord Shiva that is referenced in the Shiva Purana. The word Ghrineshwara means "lord of compassion"). Then Visit Ellora caves, (Ellora is a UNESCO World Heritage Site., It is one of the largest rock-cut Hindu temple cave complexes in the world, featuring Buddhist and Jain monuments with art work dating from the period 600-1000 CE.) After Lunch transfer to Badra Maruti Temple after dharshan visit Shani Shingnapura then proceed to pune airport for your return journey to Bangalore with the blessings of Sai Baba.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: 'Days 0-15', fee: '100%' },
+        { days: '15 Days & Above', fee: '50%' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not refund any claims for delay or cancellation of flight, mechanical problems, strikes, bandhs, or weather changes.',
+        'Flight timings are subject to availability at the time of booking.',
+        'Seats in the flights will be auto assigned by respective airlines.'
+      ]
+    },
+    remarks: [
+      'All meals are provided by Sai Samarth Tours in case the flight reaches destination early morning or leaves late in the evening.',
+      'The tour price mentioned for this tour is for Indian nationals only. Rates vary for NRIs or foreign nationals.',
+      'NRIs & Foreign nationals must convey proper identity and submit passport copies to booking executive.',
+      'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
+    ],
+    detailedContent: {
+      overview: 'The Shirdi with 2 Jyothirlinga (1N/2D) tour offers a powerful compact spiritual pilgrimage covering Sadguru Sai Baba\'s abode in Shirdi along with 2 venerated Shiva Jyotirlingas: Bhimashankar (the 6th self-emanated shrine) and Grishneshwar (the 12th Jyotirlinga at Ellora). Enjoy seamless Bangalore-to-Pune flights, VIP Darshan, deluxe accommodation, and comfortable AC coach travel.',
+      significance: 'Bhimashankar is situated amidst the lush Sahyadri hills, enshrining one of the most revered self-manifested Shiva lingams. Grishneshwar represents the Lord of Compassion and is adjacent to the UNESCO World Heritage Ellora Caves. Together with Sai Baba Samadhi Mandir and Shani Shingnapur, this 2-day tour offers complete spiritual fulfillment.',
+      bestTimeToVisit: 'Year-round pilgrimage with pleasant weather especially between September and March.',
+      placesCovered: [
+        'Bhimashankar Jyotirlinga',
+        'Shirdi Sai Baba Samadhi Mandir (VIP Darshan)',
+        'Dwarkamai, Chavadi & Gurusthan',
+        'Ghrishneshwar Jyotirlinga',
+        'UNESCO World Heritage Ellora Caves',
+        'Bhadra Maruti Temple & Shani Shingnapur'
+      ],
+      travelTips: [
+        'Traditional modest attire is required for entering temple sanctums.',
+        'Pre-booked VIP passes are arranged for Shirdi Samadhi Mandir.',
+        'Comfortable walking footwear is recommended for temple visits.'
+      ],
+      whyChooseUs: [
+        'Direct flight connectivity with Bangalore pick-up & drop',
+        'VIP Darshan access for senior citizen comfort',
+        'Pure vegetarian meals and dedicated tour manager'
+      ]
+    },
+    faqs: [
+      {
+        question: "Which two Jyotirlingas are covered in this 1N/2D package?",
+        answer: "This package covers Bhimashankar Jyotirlinga and Grishneshwar Jyotirlinga, along with Shirdi Sai Baba Samadhi Mandir (VIP Darshan), Ellora Caves, and Shani Shingnapur."
+      },
+      {
+        question: "Are flight tickets and meals included in the price?",
+        answer: "Yes, Bangalore-to-Bangalore flights, AC coach transfers, 1 night deluxe accommodation, and all vegetarian meals (Breakfast, Lunch, Dinner) are included."
+      }
+    ],
+    coordinates: { x: 37, y: 57 }
+  },
+  {
     id: 'kholapur-pandarpur',
     title: 'Kolhapur & Pandharpur Tour Package',
     category: 'pilgrimage',

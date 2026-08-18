@@ -1,59 +1,26 @@
 import React from 'react';
 import { ArrowRight, Sparkles, ShieldCheck, HeartHandshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ALL_PACKAGES } from '../data/packages';
+import { Package } from '../types';
 import { FaqSection } from '../components/FaqSection';
 
-const destinations = [
-  {
-    id: 'kashi-ayodhya-prayagraj',
-    title: 'Kashi With Ayodhya & Prayagraj',
-    price: '₹34,999',
-    toursCount: 2,
-    image: '/Kashi with Ayodhya & Prayagraj Priority Packages.png',
-  },
-  {
-    id: 'kashi-ayodhya',
-    title: 'Kashi With Ayodhya',
-    price: '₹28,999',
-    toursCount: 2,
-    image: 'https://images.unsplash.com/photo-1571536802807-30451e3955d8?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    id: 'indore-ujjain',
-    title: 'Indore and Ujjain',
-    price: '₹18,999',
-    toursCount: 1,
-    image: '/Indore and Ujjain Priority Packages.png',
-  },
-  {
-    id: 'vaishnodevi',
-    title: 'Vaishnodevi',
-    price: '₹22,999',
-    toursCount: 2,
-    image: '/Vaishnodevi  Priority Packages.png',
-  },
-  {
-    id: 'baidyanath',
-    title: 'Baidyanath',
-    price: '₹24,999',
-    toursCount: 1,
-    image: '/baidyanath-tour-packages.webp',
-  },
-  {
-    id: 'rameshwaram',
-    title: 'Rameshwaram',
-    price: '₹28,999',
-    toursCount: 2,
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    id: 'gujarat',
-    title: 'Gujarat',
-    price: '₹31,999',
-    toursCount: 3,
-    image: '/Gujarat Priority Packages.png',
-  }
+const pilgrimageIds = [
+  'kholapur-pandarpur',
+  'puri-jagannath',
+  'kamakhya',
+  'kashi-ayodhya-prayagraj',
+  'kashi-ayodhya',
+  'indore-ujjain',
+  'vaishnodevi',
+  'baidyanath',
+  'rameshwaram',
+  'gujarat'
 ];
+
+const destinations = pilgrimageIds
+  .map(id => ALL_PACKAGES.find(p => p.id === id))
+  .filter((p): p is Package => p !== undefined);
 
 export function PilgrimagePackagesPage() {
   return (
@@ -172,7 +139,32 @@ export function PilgrimagePackagesPage() {
       </section>
 
       {/* FAQ Session */}
-      <FaqSection />
+      <FaqSection 
+        title="Frequently Asked Questions - Pilgrimage Yatras"
+        subtitle="Important information regarding sacred temple yatras, ritual darshans, and senior citizen assistance."
+        items={[
+          {
+            question: "How do you coordinate Darshan in high-rush shrines like Kashi, Ayodhya, or Vaishno Devi?",
+            answer: "Our local coordinators and tour managers assist with pre-booked online special darshan tickets, Aarti slot timings, and organized entry routes to minimize wait times and physical strain."
+          },
+          {
+            question: "Is this pilgrimage suitable for senior citizens requiring assistance?",
+            answer: "Yes! Over 60% of our pilgrims are senior citizens. We ensure ground-floor or elevator-accessible rooms, battery car and wheelchair arrangements wherever available, comfortable AC tempo travellers, and relaxed itinerary pacing."
+          },
+          {
+            question: "Are flights included from Bangalore for Kashi, Puri, and Kamakhya?",
+            answer: "Yes, our packages include return economy flights from Kempegowda International Airport (BLR) to the nearest airport (e.g. Varanasi, Bhubaneswar, Guwahati), complete with airport pickup and drop."
+          },
+          {
+            question: "Can we perform special Poojas, Tarpanam, or Abhishekams?",
+            answer: "Yes, we facilitate contact with trusted local Purohits at holy spots like Kashi Ganga Ghat, Triveni Sangam (Prayagraj), Gaya, and Rameswaram for personalized Vedic rituals and Abhishekams."
+          },
+          {
+            question: "What kind of food is provided during the yatra?",
+            answer: "We arrange 100% pure vegetarian Sattvic meals (Breakfast, Lunch, and Dinner) without onion/garlic on request, prepared under hygienic standards suitable for devotees of all ages."
+          }
+        ]}
+      />
       
     </div>
   );

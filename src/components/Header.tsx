@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ALL_PACKAGES } from '../data/packages';
 import { siteConfig } from '../data/config';
-import { Phone, Menu, X, Search, ChevronDown, UserCheck } from 'lucide-react';
+import { Phone, Menu, X, Search, ChevronDown, UserCheck, MapPin, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface HeaderProps {
   onOpenEnquiry: (packageTitle?: string) => void;
@@ -9,6 +10,65 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+  const mobileSearchRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+
+  // Close search dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        searchContainerRef.current && 
+        !searchContainerRef.current.contains(e.target as Node) &&
+        mobileSearchRef.current &&
+        !mobileSearchRef.current.contains(e.target as Node)
+      ) {
+        setIsSearchOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Filter and prioritize matches based on prefix
+  const searchResults = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return [];
+
+    return ALL_PACKAGES.filter((p) => {
+      const title = p.title.toLowerCase();
+      const dest = p.destination.toLowerCase();
+      const cat = p.category.toLowerCase();
+      const highlights = p.highlights ? p.highlights.join(' ').toLowerCase() : '';
+      return title.includes(q) || dest.includes(q) || cat.includes(q) || highlights.includes(q);
+    }).sort((a, b) => {
+      const aTitle = a.title.toLowerCase();
+      const bTitle = b.title.toLowerCase();
+      
+      // 1. Starts with query (e.g. "s" -> "Shirdi...", "Singapore", "Sri Lanka")
+      const aStarts = aTitle.startsWith(q);
+      const bStarts = bTitle.startsWith(q);
+      if (aStarts && !bStarts) return -1;
+      if (!aStarts && bStarts) return 1;
+
+      // 2. Any word starts with query
+      const aWordStarts = aTitle.split(' ').some(w => w.startsWith(q));
+      const bWordStarts = bTitle.split(' ').some(w => w.startsWith(q));
+      if (aWordStarts && !bWordStarts) return -1;
+      if (!aWordStarts && bWordStarts) return 1;
+
+      return 0;
+    });
+  }, [searchQuery]);
+
+  const handleSelectPackage = (pkgId: string) => {
+    setSearchQuery('');
+    setIsSearchOpen(false);
+    setMobileMenuOpen(false);
+    navigate(`/package/${pkgId}`);
+  };
 
   return (
     <header className="w-full flex flex-col z-50 sticky top-0 shadow-md">
@@ -26,24 +86,102 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
           </Link>
         </div>
 
-        {/* Middle-Left: Tour Guide Badge in Header Row (Image 2 Placement) */}
+        {/* Middle-Left: Tour Manager Badge in Header Row */}
         <div className="hidden lg:flex items-center gap-2 bg-[#114088]/10 text-[#114088] px-4 py-2 rounded-full border border-[#114088]/25 shadow-sm font-bold text-xs whitespace-nowrap">
           <UserCheck className="w-4 h-4 text-[#F59E0B] flex-shrink-0" />
-          <span>Tour Guide & Manager Available for All Packages</span>
+          <span>Tour Manager Available for All Packages</span>
         </div>
 
-        {/* Middle-Right: Search Bar with Animated Blue & Orange Hover Glow */}
-        <div className="hidden md:flex flex-1 max-w-sm justify-center relative group">
+        {/* Middle-Right: Search Bar with Animated Blue & Orange Hover Glow & Live Autocomplete */}
+        <div ref={searchContainerRef} className="hidden md:flex flex-1 max-w-sm justify-center relative group">
           <div className="w-full relative">
             <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none z-10">
               <Search className="h-4 w-4 text-gray-400 group-hover:text-[#F59E0B] transition-colors duration-300" />
             </div>
             <input 
               type="text" 
-              placeholder="Search Jyotirlinga Tours..." 
-              className="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none text-sm transition-all shadow-sm search-glow-animated"
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setIsSearchOpen(true);
+              }}
+              onFocus={() => {
+                if (searchQuery.trim().length > 0) setIsSearchOpen(true);
+              }}
+              placeholder="Search Jyotirlinga & Tour Packages..." 
+              className="w-full pl-10 pr-9 py-2 rounded-full border border-gray-300 focus:outline-none text-sm transition-all shadow-sm search-glow-animated"
             />
+            {searchQuery && (
+              <button 
+                onClick={() => {
+                  setSearchQuery('');
+                  setIsSearchOpen(false);
+                }}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
           </div>
+
+          {/* Premium Real-Time Search Results Dropdown */}
+          {isSearchOpen && searchQuery.trim().length > 0 && (
+            <div className="absolute left-0 right-0 top-full mt-2.5 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/80 overflow-hidden z-50 animate-fadeIn">
+              <div className="px-4 py-2.5 bg-gray-50/90 border-b border-gray-100 flex items-center justify-between text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+                <span>Matching Tours ({searchResults.length})</span>
+                <span className="text-[#F59E0B]">Instant Search</span>
+              </div>
+
+              <div className="max-h-[360px] overflow-y-auto divide-y divide-gray-100">
+                {searchResults.length > 0 ? (
+                  searchResults.map((pkg) => (
+                    <div 
+                      key={pkg.id} 
+                      onClick={() => handleSelectPackage(pkg.id)}
+                      className="p-3 hover:bg-blue-50/80 cursor-pointer flex items-center gap-3 transition-colors group/item"
+                    >
+                      <img 
+                        src={pkg.image} 
+                        alt={pkg.title} 
+                        className="w-12 h-12 rounded-xl object-cover border border-gray-200/80 shrink-0 group-hover/item:scale-105 transition-transform" 
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className="text-[9px] uppercase font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-800 border border-amber-200/60 shrink-0">
+                            {pkg.category}
+                          </span>
+                          <span className="text-[11px] font-semibold text-gray-400 shrink-0 flex items-center gap-0.5">
+                            <Clock className="w-3 h-3 text-[#F59E0B]" />
+                            {pkg.duration}
+                          </span>
+                        </div>
+                        <h4 className="text-xs font-bold text-[#114088] group-hover/item:text-[#2563EB] truncate">
+                          {pkg.title}
+                        </h4>
+                        <p className="text-[11px] text-gray-500 truncate flex items-center gap-1">
+                          <MapPin className="w-3 h-3 text-gray-400 shrink-0" />
+                          {pkg.destination}
+                        </p>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="block text-xs font-extrabold text-[#F59E0B]">
+                          {pkg.price}
+                        </span>
+                        <span className="text-[10px] text-[#2563EB] font-bold flex items-center justify-end gap-0.5 group-hover/item:translate-x-0.5 transition-transform">
+                          View <ArrowRight className="w-2.5 h-2.5" />
+                        </span>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="p-6 text-center text-xs text-gray-500">
+                    <p className="font-semibold text-gray-700 mb-1">No tours found for "{searchQuery}"</p>
+                    <p className="text-[11px] text-gray-400">Try searching for <span className="text-[#2563EB] font-medium">Shirdi</span>, <span className="text-[#2563EB] font-medium">Kashi</span>, <span className="text-[#2563EB] font-medium">Kashmir</span>, <span className="text-[#2563EB] font-medium">Singapore</span>...</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Right: Social Media Icons + Book Now CTA */}
@@ -68,7 +206,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
             <a 
-              href="https://wa.me/919483488258" 
+              href="https://wa.me/919187711649" 
               target="_blank" 
               rel="noopener noreferrer" 
               title="WhatsApp" 
@@ -114,10 +252,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               <div className="absolute left-0 top-full w-72 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="flex flex-col">
                   <Link to="/package/shirdi-3-jyothirlinga" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 3 Jyothirlinga</Link>
-                  <Link to="/package/kholapur-pandarpur" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kholapur and Pandrapur</Link>
+                  <Link to="/package/shirdi-2-jyothirlinga" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 2 Jyothirlinga</Link>
                   <Link to="/package/shirdi-regular" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Regular Shirdi</Link>
-                  <Link to="/package/puri-jagannath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Puri Jagannath</Link>
-                  <Link to="/package/kamakhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakya</Link>
                 </div>
               </div>
             </li>
@@ -128,7 +264,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                 Pilgrimage <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
               </Link>
               <div className="absolute left-0 top-full w-80 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
-                <div className="flex flex-col max-h-[250px] overflow-y-auto">
+                <div className="flex flex-col max-h-[280px] overflow-y-auto">
+                  <Link to="/package/kholapur-pandarpur" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kholapur and Pandrapur</Link>
+                  <Link to="/package/puri-jagannath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Puri Jagannath</Link>
+                  <Link to="/package/kamakhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakya</Link>
                   <Link to="/package/kashi-ayodhya-prayagraj" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya & Prayagraj</Link>
                   <Link to="/package/kashi-ayodhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya</Link>
                   <Link to="/package/indore-ujjain" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Indore and Ujjain</Link>
@@ -154,15 +293,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                       <li><Link to="/package/leh-ladakh" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Leh Ladakh</Link></li>
                       <li><Link to="/package/golden-triangle" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Golden Triangle</Link></li>
                       <li><Link to="/package/himachal" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Himachal Pradesh</Link></li>
+                      <li><Link to="/package/rajasthan" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Rajasthan</Link></li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">South & West India</h3>
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">South & Coastal India</h3>
                     <ul className="space-y-2">
                       <li><Link to="/package/kerala" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Kerala</Link></li>
                       <li><Link to="/package/andaman" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Andaman</Link></li>
                       <li><Link to="/package/goa" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Goa</Link></li>
-                      <li><Link to="/package/rajasthan" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Rajasthan</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -203,22 +342,81 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl z-40 flex flex-col p-6 animate-fadeIn border-t border-gray-100 max-h-[80vh] overflow-y-auto">
-          {/* Mobile Tour Guide & Human Icon Badge */}
+          {/* Mobile Tour Manager & Human Icon Badge */}
           <div className="flex items-center gap-2.5 bg-[#114088] text-white p-3 rounded-xl border border-blue-800 mb-4 shadow-sm">
             <UserCheck className="w-5 h-5 text-[#F59E0B] flex-shrink-0" />
-            <span className="text-xs font-bold leading-tight text-[#F59E0B]">Tour Guide & Manager Available for All Packages</span>
+            <span className="text-xs font-bold leading-tight text-[#F59E0B]">Tour Manager Available for All Packages</span>
           </div>
 
-          {/* Mobile Search */}
-          <div className="relative mb-6">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-gray-400" />
+          {/* Mobile Search with live autocomplete */}
+          <div ref={mobileSearchRef} className="relative mb-6">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                <Search className="h-4 w-4 text-gray-400" />
+              </div>
+              <input 
+                type="text" 
+                value={searchQuery}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setIsSearchOpen(true);
+                }}
+                onFocus={() => {
+                  if (searchQuery.trim().length > 0) setIsSearchOpen(true);
+                }}
+                placeholder="Search Jyotirlinga & Tour Packages..." 
+                className="w-full pl-10 pr-9 py-2.5 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#114088] text-sm"
+              />
+              {searchQuery && (
+                <button 
+                  onClick={() => {
+                    setSearchQuery('');
+                    setIsSearchOpen(false);
+                  }}
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
             </div>
-            <input 
-              type="text" 
-              placeholder="Search tours..." 
-              className="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#114088] text-sm"
-            />
+
+            {/* Mobile Dropdown */}
+            {isSearchOpen && searchQuery.trim().length > 0 && (
+              <div className="mt-2 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden z-50 animate-fadeIn max-h-[300px] overflow-y-auto divide-y divide-gray-100">
+                <div className="px-3.5 py-2 bg-gray-50 border-b border-gray-100 text-[10px] font-bold text-gray-500 uppercase tracking-wider flex justify-between">
+                  <span>Matching Tours ({searchResults.length})</span>
+                </div>
+                {searchResults.length > 0 ? (
+                  searchResults.map((pkg) => (
+                    <div 
+                      key={pkg.id} 
+                      onClick={() => handleSelectPackage(pkg.id)}
+                      className="p-2.5 hover:bg-blue-50 cursor-pointer flex items-center gap-2.5"
+                    >
+                      <img 
+                        src={pkg.image} 
+                        alt={pkg.title} 
+                        className="w-10 h-10 rounded-lg object-cover shrink-0" 
+                      />
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xs font-bold text-[#114088] truncate">{pkg.title}</h4>
+                        <div className="flex items-center gap-2 text-[10px] text-gray-500">
+                          <span>📍 {pkg.destination}</span>
+                          <span>⏱️ {pkg.duration}</span>
+                        </div>
+                      </div>
+                      <div className="text-right shrink-0">
+                        <span className="block text-xs font-bold text-[#F59E0B]">{pkg.price}</span>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="p-4 text-center text-xs text-gray-500">
+                    No tours found for "{searchQuery}"
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <nav className="flex flex-col space-y-2">

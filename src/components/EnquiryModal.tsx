@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { siteConfig } from '../data/config';
+import React, { useState, useEffect } from 'react';
 import { ALL_PACKAGES } from '../data/packages';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 import confetti from 'canvas-confetti';
-import { X, User, Phone, MapPin, MessageSquare, Send, ShieldCheck, HeartHandshake, Headphones, CheckCircle2 } from 'lucide-react';
+import { X, User, Phone, MapPin, MessageSquare, Send, ShieldCheck, HeartHandshake, CheckCircle2 } from 'lucide-react';
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -11,12 +11,63 @@ interface EnquiryModalProps {
 }
 
 export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPackageTitle = '', onClose }) => {
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '';
+  
+  const getRelevantPackages = () => {
+    if (initialPackageTitle) {
+      const directMatch = ALL_PACKAGES.find(
+        p => p.title.toLowerCase() === initialPackageTitle.toLowerCase() || p.id === initialPackageTitle
+      );
+      if (directMatch) {
+        return [directMatch];
+      }
+      if (initialPackageTitle.toLowerCase().includes('shirdi')) {
+        return ALL_PACKAGES.filter(p => p.id.includes('shirdi'));
+      }
+      if (initialPackageTitle.toLowerCase().includes('pilgrimage')) {
+        return ALL_PACKAGES.filter(p => p.category === 'pilgrimage');
+      }
+      if (initialPackageTitle.toLowerCase().includes('domestic')) {
+        return ALL_PACKAGES.filter(p => p.category === 'domestic');
+      }
+      if (initialPackageTitle.toLowerCase().includes('international')) {
+        return ALL_PACKAGES.filter(p => p.category === 'international');
+      }
+    }
+
+    if (currentPath.includes('shirdi')) {
+      return ALL_PACKAGES.filter(p => p.id.includes('shirdi'));
+    }
+    if (currentPath.includes('pilgrimage')) {
+      return ALL_PACKAGES.filter(p => p.category === 'pilgrimage');
+    }
+    if (currentPath.includes('domestic')) {
+      return ALL_PACKAGES.filter(p => p.category === 'domestic');
+    }
+    if (currentPath.includes('international')) {
+      return ALL_PACKAGES.filter(p => p.category === 'international');
+    }
+
+    return ALL_PACKAGES;
+  };
+
+  const packagesToShow = getRelevantPackages();
+
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
-    selectedPackage: initialPackageTitle || ALL_PACKAGES[0].title,
+    selectedPackage: initialPackageTitle || (packagesToShow.length > 0 ? packagesToShow[0].title : ''),
     message: '',
   });
+
+  useEffect(() => {
+    const list = getRelevantPackages();
+    if (initialPackageTitle) {
+      setFormData(prev => ({ ...prev, selectedPackage: initialPackageTitle }));
+    } else if (list.length > 0) {
+      setFormData(prev => ({ ...prev, selectedPackage: list[0].title }));
+    }
+  }, [initialPackageTitle, isOpen]);
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -34,10 +85,14 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
   };
 
   const handleWhatsAppDirect = () => {
-    const text = encodeURIComponent(
-      `Hello Sai Samarth Tours,\nMy Name: ${formData.fullName || 'Traveler'}\nPhone: ${formData.phoneNumber}\nPackage Interest: ${formData.selectedPackage}\nMessage: ${formData.message || 'I would like to enquire about this package.'}`
-    );
-    window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${text}`, '_blank');
+    const selectedPkg = ALL_PACKAGES.find(p => p.title === formData.selectedPackage);
+    const url = getWhatsAppUrl({
+      title: formData.selectedPackage,
+      duration: selectedPkg?.duration,
+      destination: selectedPkg?.destination,
+      pathname: currentPath
+    });
+    window.open(url, '_blank');
   };
 
   return (
@@ -94,7 +149,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
               </p>
               <button
                 onClick={handleWhatsAppDirect}
-                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 mx-auto"
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 mx-auto cursor-pointer"
               >
                 <span>Instant Connect On WhatsApp</span>
               </button>
@@ -151,10 +206,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
                     onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
                     className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 rounded-2xl pl-10 pr-8 py-3 text-sm text-gray-800 font-medium outline-none transition-all appearance-none cursor-pointer"
                   >
-                    <option value="">— Choose a destination —</option>
-                    {ALL_PACKAGES.map((p) => (
+                    {packagesToShow.map((p) => (
                       <option key={p.id} value={p.title}>
-                        {p.title} ({p.price})
+                        {p.title}
                       </option>
                     ))}
                   </select>
@@ -198,17 +252,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
                   <HeartHandshake className="w-3.5 h-3.5 text-amber-500" />
                   <span>Free trip planning</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <Headphones className="w-3.5 h-3.5 text-pink-500" />
-                  <span>24/7 travel support</span>
-                </div>
               </div>
-
             </form>
           )}
+
         </div>
       </div>
     </div>
   );
 };
-

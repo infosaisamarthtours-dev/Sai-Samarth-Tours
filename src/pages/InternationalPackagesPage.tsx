@@ -131,7 +131,32 @@ export function InternationalPackagesPage() {
       </section>
 
       {/* FAQ Session */}
-      <FaqSection />
+      <FaqSection 
+        title="Frequently Asked Questions - International Tours"
+        subtitle="Key information regarding international flights, visa assistance, forex, and Indian meals abroad."
+        items={[
+          {
+            question: "Do you provide visa application assistance for international tours?",
+            answer: "Yes, our dedicated visa team assists you with visa documentation, biometric slot scheduling, form submissions, and travel insurance for destinations including Malaysia, Singapore, Thailand, Dubai, Europe, and Bhutan."
+          },
+          {
+            question: "What is the passport validity required for international travel?",
+            answer: "Your passport must have a minimum validity of 6 months from your scheduled return date, along with at least two blank pages for entry/exit visa stamps."
+          },
+          {
+            question: "Are Indian vegetarian meals available during international holidays?",
+            answer: "Yes! We partner with trusted Indian restaurants in all our international destinations (Singapore, Malaysia, Thailand, Bali, Dubai, Europe) so you can enjoy authentic Indian vegetarian and Jain meals."
+          },
+          {
+            question: "Are flights departing directly from Bangalore?",
+            answer: "Yes, all our international packages feature convenient flights departing from Bangalore (BLR) with well-timed connections and airport transfers upon arrival."
+          },
+          {
+            question: "Do you help with Foreign Exchange (Forex) and International SIM cards?",
+            answer: "Yes, we connect you with authorized Forex partners for multi-currency travel cards and assist in arranging international e-SIMs or physical SIM cards prior to departure."
+          }
+        ]}
+      />
       
     </div>
   );

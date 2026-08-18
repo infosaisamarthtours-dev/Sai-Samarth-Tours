@@ -14,6 +14,9 @@ export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
 
   // The specific packages requested by the user
   const pilgrimageIds = [
+    'kholapur-pandarpur',
+    'puri-jagannath',
+    'kamakhya',
     'kashi-ayodhya-prayagraj',
     'kashi-ayodhya',
     'indore-ujjain',

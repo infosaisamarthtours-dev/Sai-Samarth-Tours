@@ -135,7 +135,7 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.premium-[#114088]-glass {
+.premium-blue-glass {
   background: rgba(17, 64, 136, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -167,12 +167,89 @@
   }
 }
 
-.search-glow-animated {
-  transition: all 0.3s ease-in-out;
-}
-
 .search-glow-animated:hover,
 .search-glow-animated:focus,
 .group:hover .search-glow-animated {
   animation: searchBlueOrangeGlow 2.5s infinite alternate ease-in-out;
 }
+
+/* Print optimization for PDF Brochure */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 6mm;
+  }
+  
+  html, body {
+    background: #FAF7F2 !important;
+    color: #114088 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    overflow: visible !important;
+    height: auto !important;
+    font-size: 11pt !important;
+  }
+
+  nav, 
+  header, 
+  footer, 
+  button, 
+  .no-print,
+  [class*="print:hidden"] {
+    display: none !important;
+  }
+
+  #brochure-modal-overlay {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    inset: auto !important;
+    backdrop-filter: none !important;
+  }
+
+  #brochure-modal-card {
+    position: static !important;
+    box-shadow: none !important;
+    border: none !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+  }
+
+  #printable-brochure {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  .brochure-section-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    margin-bottom: 16px !important;
+    border: 1.5px solid #F59E0B !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .brochure-page-break {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+}
+

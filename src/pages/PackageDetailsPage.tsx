@@ -23,11 +23,15 @@ import {
   Info
 } from 'lucide-react';
 
+import { getWhatsAppUrl } from '../utils/whatsapp';
+import { BrochureModal } from '../components/BrochureModal';
+
 export function PackageDetailsPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<'overview' | 'itinerary' | 'inclusions'>('overview');
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   // Scroll to top on load
@@ -41,31 +45,42 @@ export function PackageDetailsPage() {
     return <Navigate to="/" />;
   }
 
-  // Generic fallback FAQs if package doesn't define custom ones
+  // Tailored 5 FAQs for the package subpage
   const defaultFaqs = [
     {
-      question: `How do I book the ${pkg.title} tour package?`,
-      answer: `You can book by clicking on the 'Enquire Now' button or contacting us via WhatsApp (+91 9483488258). Our travel experts will assist you with dates, customized options, and confirmation.`
+      question: `How do I book the ${pkg.title} tour package from Bangalore?`,
+      answer: `You can book by clicking on the 'Enquire Now' button or contacting our travel experts on WhatsApp (+91 9187711649). We will assist you with departure dates, flight schedules, customized options, and instant confirmation.`
     },
     {
-      question: `Are flights or train tickets included in ${pkg.price}?`,
-      answer: `Our base package covers AC accommodation, private transfers, daily meals, and guided sightseeing. Flight or train ticket booking assistance from Bangalore or your origin city can be bundled directly into your package upon request.`
+      question: `Are round-trip flights, AC hotel stays, and all meals included in ${pkg.price}?`,
+      answer: `Yes! Our package includes round-trip economy flights from Bangalore, verified 3-star/4-star AC hotel accommodations, dedicated AC transfers, daily meals (Breakfast, Lunch & Dinner), and complete guided sightseeing as per the itinerary.`
     },
     {
-      question: `Is this ${pkg.category === 'pilgrimage' ? 'pilgrimage' : 'tour'} suitable for senior citizens and children?`,
-      answer: `Yes! All our tour itineraries are designed to be senior-citizen and family friendly. We ensure comfortable AC vehicles, minimal waiting time, accessible hotels, and dedicated support throughout the trip.`
+      question: `Is this ${pkg.category === 'pilgrimage' ? 'pilgrimage yatra' : 'tour'} suitable for senior citizens and families?`,
+      answer: `Yes! All our tour itineraries are designed to be senior-citizen and family friendly. We ensure comfortable AC vehicles, minimal waiting times, elevator-accessible hotels, pure vegetarian dining, and dedicated Tour Manager support throughout the trip.`
     },
     {
-      question: `Can this package be customized for private family groups?`,
-      answer: `Yes, 100%! We specialize in tailored itineraries for private families, corporate groups, and senior citizen yatras. Let us know your preferred travel dates and budget to customize this package.`
+      question: `Can this package be customized for private family or corporate groups?`,
+      answer: `Yes, 100%! We specialize in tailored itineraries for private families, corporate groups, and senior citizen yatras. Let us know your preferred travel dates, vehicle preference (Innova/Tempo Traveller), and budget to customize this package.`
     },
     {
       question: `What is the cancellation and refund policy?`,
-      answer: `Cancellation policies vary depending on hotel and transportation vendor terms. Detailed policy details will be provided along with your preliminary booking quote.`
+      answer: `We offer clear and transparent cancellation terms. Cancellations made 15 days or more prior to departure incur a nominal 50% charge, while flight tickets are subject to airline refund rules. Full policy details are provided in your booking quote.`
     }
   ];
 
-  const packageFaqs = (pkg.faqs && pkg.faqs.length > 0) ? pkg.faqs : defaultFaqs;
+  // Guarantee exactly 5 FAQs for every subpage
+  const packageFaqs = (() => {
+    if (!pkg.faqs || pkg.faqs.length === 0) return defaultFaqs;
+    const combined = [...pkg.faqs];
+    for (const df of defaultFaqs) {
+      if (combined.length >= 5) break;
+      if (!combined.some(f => f.question.toLowerCase().slice(0, 15) === df.question.toLowerCase().slice(0, 15))) {
+        combined.push(df);
+      }
+    }
+    return combined.slice(0, 5);
+  })();
 
   // Fallback detailed content
   const defaultOverview = pkg.detailedContent?.overview || pkg.description || `Embark on an unforgettable journey with our ${pkg.title} package. Carefully curated by Sai Samarth Tours, this experience ensures comfort, spiritual bliss, and memorable sightseeing.`;
@@ -105,10 +120,10 @@ export function PackageDetailsPage() {
   ];
 
   const effectiveTourIncludes = pkg.tourIncludes || {
+    flights: true,
     hotels: true,
     transport: true,
     allMeals: true,
-    flights: true,
     sightseeing: true
   };
 
@@ -184,7 +199,7 @@ export function PackageDetailsPage() {
 
                 <div className="flex items-center gap-1.5 bg-amber-500/10 text-[#114088] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-amber-300 text-[11px] sm:text-xs font-bold shadow-xs">
                   <UserCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
-                  <span>Tour Guide Available for All Packages</span>
+                  <span>Tour Manager Available for All Packages</span>
                 </div>
               </div>
 
@@ -228,11 +243,19 @@ export function PackageDetailsPage() {
                 {activeTab === 'overview' && (
                   <div className="space-y-6 sm:space-y-10">
                     
-                    {/* Tour Includes Icons Bar */}
+                    {/* Tour Includes Icons Bar - Reordered: Flights, Hotels, Transport, All Meals, Sightseeing */}
                     {effectiveTourIncludes && (
                       <div className="bg-gray-50/80 p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-gray-200/80">
                         <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Tour Includes</h4>
                         <div className="flex flex-wrap gap-2.5 sm:gap-3 items-center">
+                          {effectiveTourIncludes.flights && (
+                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-indigo-500/40 transition-all">
+                              <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+                                <Plane className="w-4 h-4" />
+                              </div>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Flights</span>
+                            </div>
+                          )}
                           {effectiveTourIncludes.hotels && (
                             <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-[#2563EB]/40 transition-all">
                               <div className="w-7 h-7 rounded-lg bg-blue-50 text-[#2563EB] flex items-center justify-center shrink-0">
@@ -246,7 +269,7 @@ export function PackageDetailsPage() {
                               <div className="w-7 h-7 rounded-lg bg-amber-50 text-[#F59E0B] flex items-center justify-center shrink-0">
                                 <Bus className="w-4 h-4" />
                               </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Transport</span>
+                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Transportation</span>
                             </div>
                           )}
                           {effectiveTourIncludes.allMeals && (
@@ -255,14 +278,6 @@ export function PackageDetailsPage() {
                                 <Utensils className="w-4 h-4" />
                               </div>
                               <span className="text-xs sm:text-sm font-bold text-[#114088]">All Meals</span>
-                            </div>
-                          )}
-                          {effectiveTourIncludes.flights && (
-                            <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-xl border border-gray-200/90 shadow-2xs hover:border-indigo-500/40 transition-all">
-                              <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
-                                <Plane className="w-4 h-4" />
-                              </div>
-                              <span className="text-xs sm:text-sm font-bold text-[#114088]">Flights</span>
                             </div>
                           )}
                           {effectiveTourIncludes.sightseeing && (
@@ -324,7 +339,19 @@ export function PackageDetailsPage() {
 
                 {activeTab === 'itinerary' && (
                   <div className="space-y-6">
-                    <h3 className="font-serif text-lg sm:text-2xl font-bold text-[#114088] mb-4 sm:mb-8">Day-by-Day Timeline</h3>
+                    <div className="flex flex-wrap items-center justify-between gap-3 mb-4 sm:mb-8 pb-3 border-b border-gray-100">
+                      <h3 className="font-serif text-lg sm:text-2xl font-bold text-[#114088]">
+                        Day-by-Day Timeline
+                      </h3>
+                      <button
+                        onClick={() => setIsBrochureOpen(true)}
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-[#114088] via-[#1D4ED8] to-[#F59E0B] hover:from-[#0B1E3F] hover:to-[#D97706] text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+                      >
+                        <FileText className="w-4 h-4 text-amber-300" />
+                        <span>Get Brochure</span>
+                      </button>
+                    </div>
+
                     {(!pkg.sampleItinerary || pkg.sampleItinerary.length === 0) ? (
                       <p className="text-gray-500 italic text-xs sm:text-sm">Detailed itinerary will be provided upon enquiry.</p>
                     ) : (
@@ -339,12 +366,10 @@ export function PackageDetailsPage() {
                               <h4 className="font-serif text-base sm:text-xl font-bold text-[#114088] mb-2 sm:mb-3">{item.title}</h4>
                               <p className="text-xs sm:text-base text-gray-700 leading-relaxed">{item.detail}</p>
                               
-                              {item.meals && (
-                                <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-gray-200/60 flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-gray-700">
-                                  <Utensils className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
-                                  <span>Meals Included: <strong>{item.meals}</strong></span>
-                                </div>
-                              )}
+                              <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-gray-200/60 flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-gray-700">
+                                <Utensils className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
+                                <span>Meals Included: <strong>Breakfast, Lunch, Dinner</strong></span>
+                              </div>
                             </div>
                           </div>
                         ))}
@@ -583,7 +608,7 @@ export function PackageDetailsPage() {
                   </button>
                   
                   <a 
-                    href="https://wa.me/919187711649" 
+                    href={getWhatsAppUrl({ title: pkg.title, duration: pkg.duration, destination: pkg.destination })} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-3.5 px-3 rounded-2xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all hover:-translate-y-0.5"
@@ -592,6 +617,14 @@ export function PackageDetailsPage() {
                     <span className="truncate">WhatsApp</span>
                   </a>
                 </div>
+
+                <button
+                  onClick={() => setIsBrochureOpen(true)}
+                  className="w-full mt-3 bg-gradient-to-r from-[#114088] via-[#1D4ED8] to-[#114088] hover:from-[#0B1E3F] hover:to-[#0B1E3F] text-white py-3.5 px-3 rounded-2xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all hover:-translate-y-0.5 border border-amber-400/30 cursor-pointer"
+                >
+                  <FileText className="w-4 h-4 text-amber-300" />
+                  <span className="truncate">Get Brochure (PDF)</span>
+                </button>
                 
                 <div className="mt-6 pt-6 border-t border-gray-100">
                   <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-3">Call Us Directly</p>
@@ -648,6 +681,12 @@ export function PackageDetailsPage() {
         isOpen={isEnquiryOpen}
         initialPackageTitle={pkg.title}
         onClose={() => setIsEnquiryOpen(false)}
+      />
+
+      <BrochureModal
+        isOpen={isBrochureOpen}
+        pkg={pkg}
+        onClose={() => setIsBrochureOpen(false)}
       />
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, Phone, Send } from 'lucide-react';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export function QuoteSection() {
   const [formData, setFormData] = useState({
@@ -47,7 +48,7 @@ export function QuoteSection() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/919187711649" 
+                href={getWhatsAppUrl()} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold transition-all hover:-translate-y-1 shadow-[0_4px_15px_rgba(37,211,102,0.3)]"

@@ -2,6 +2,7 @@ import React from 'react';
 import { AboutSection } from '../components/AboutSection';
 import { PromoAndReviews } from '../components/PromoAndReviews';
 import { JourneyProcess } from '../components/JourneyProcess';
+import { FaqSection } from '../components/FaqSection';
 
 export function AboutPage() {
   return (
@@ -29,6 +30,34 @@ export function AboutPage() {
 
       {/* 3. How It Works Section */}
       <JourneyProcess />
+
+      {/* 4. FAQ Section */}
+      <FaqSection 
+        title="Frequently Asked Questions - About Us"
+        subtitle="Learn more about our heritage, customer guarantees, and tour management philosophy."
+        items={[
+          {
+            question: "Where is Sai Samarth Tours based?",
+            answer: "We are headquartered in Bangalore, Karnataka, organizing customized domestic, international, and pilgrimage group tours departing directly from Bangalore."
+          },
+          {
+            question: "Why choose Sai Samarth Tours over other travel operators?",
+            answer: "We pride ourselves on transparent, all-inclusive pricing, accompanied Tour Managers for group tours, hygienic vegetarian meals, handpicked hotels, and specialized care for senior citizens."
+          },
+          {
+            question: "How much experience does Sai Samarth Tours have in organizing pilgrimages?",
+            answer: "With extensive experience in Shirdi, Jyothirlinga, and Chardham circuits, we have guided over 10,000+ devotees with seamless VIP Darshans and comfortable travel arrangements."
+          },
+          {
+            question: "Is it safe for solo elderly travelers or senior citizen couples to join your group tours?",
+            answer: "Absolutely. Our Tour Managers provide end-to-end guidance, airport boarding assistance, luggage handling, and medical attention coordination to ensure total safety."
+          },
+          {
+            question: "How do I request a tailored private family or corporate tour package?",
+            answer: "Simply connect with us via our website enquiry form, phone call (+91 9187711649), or WhatsApp. Our itinerary specialists will prepare a customized quote within a few hours."
+          }
+        ]}
+      />
     </div>
   );
 }

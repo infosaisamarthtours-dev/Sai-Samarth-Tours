@@ -15,10 +15,8 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
   // The specific packages requested by the user
   const shirdiIds = [
     'shirdi-3-jyothirlinga',
-    'kholapur-pandarpur',
-    'shirdi-regular',
-    'puri-jagannath',
-    'kamakhya'
+    'shirdi-2-jyothirlinga',
+    'shirdi-regular'
   ];
 
   const shirdiPackages = shirdiIds
