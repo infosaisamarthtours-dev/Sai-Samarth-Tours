@@ -21,7 +21,7 @@ const slides = [
     topBadge: "✦ SACRED TEMPLE EXPEDITIONS ✦",
     scriptTitle: "Walk The Path Of Faith & Devotion",
     mainTitle: "Shirdi, Varanasi & Kamakhya",
-    subBadge: "Guaranteed VIP Darshan & 3-Star Hotels",
+    subBadge: "VIP Darshan Included & 3-Star Hotels",
     desc: "Trusted pilgrimage travel company offering complete spiritual tour experiences with comfort and care.",
     desktopImg: '/pilgrimage-banner-image.png',
     mobileImg: '/pilgrimage-mobile-view.png'

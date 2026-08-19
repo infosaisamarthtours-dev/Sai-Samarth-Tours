@@ -567,7 +567,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
               <div className="max-w-md mx-auto bg-white/10 rounded-2xl p-5 border border-white/20 space-y-3 text-xs sm:text-sm">
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="w-4 h-4 text-[#F59E0B]" />
-                  <span>+91 91877 11649 / +91 94834 88258</span>
+                  <span>+91 91877 11649</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="w-4 h-4 text-[#F59E0B]" />

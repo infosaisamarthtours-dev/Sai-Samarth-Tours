@@ -6,20 +6,20 @@ export const ALL_PACKAGES: Package[] = [
     id: 'shirdi-regular',
     title: 'Regular Shirdi Flight Package',
     category: 'pilgrimage',
-    destination: 'Shirdi & Shani Shingnapur',
+    destination: 'Mumbai, Nasik (Trimbakeshwar), Shirdi, Shani Shingnapur & Pune',
     duration: '1N/2D',
     price: '₹17,999/-',
     numericPrice: 17999,
     minPax: 2,
     featured: true,
     image: '/Priority-Packages-Regular Shirdi.png',
-    description: 'Direct Flight Shirdi Yatra from Bangalore: 2x VIP Darshan at Sai Baba Samadhi Mandir, visit Dwarkamai, Chavadi, Gurusthan, Museum, and Shani Shingnapur temple with 3-star premium hotel accommodation.',
+    description: 'Direct Flight Shirdi Yatra from Bangalore to Mumbai & return from Pune: VIP Darshan at Sai Baba Samadhi Mandir, visit Siddhivinayak Temple, Mumbai Mahalakshmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur, and Ranjangaon Mahaganapati Temple.',
     highlights: [
-      'Direct flight from Bangalore',
-      '2x VIP Special Darshan Access',
-      'Sai Baba Samadhi Temple',
-      'Dwarkamai & Chavadi',
-      'Shani Shingnapur Visit'
+      'Bangalore to Mumbai & Pune to Bangalore Flights',
+      'VIP Darshan at Sai Baba Samadhi Mandir',
+      'Siddhivinayak Temple, Mumbai Mahalakshmi & Gateway of India',
+      'Trimbakeshwar Jyotirlinga Darshan (10th Jyotirlinga)',
+      'Shani Shingnapur & Ranjangaon Mahaganapathi Visit'
     ],
     tourIncludes: {
       hotels: true,
@@ -28,19 +28,19 @@ export const ALL_PACKAGES: Package[] = [
       flights: true,
       sightseeing: true
     },
-    placesBadge: '2 Days Direct Flight Yatra',
+    placesBadge: '2 Days Mumbai, Trimbakeshwar & Shirdi Flight Yatra',
     placesList: [
-      { name: 'Shirdi (Sai Baba Samadhi Mandir - 2x VIP Darshan)' },
-      { name: 'Shani Shingnapur (Lord Shani Temple)' },
-      { name: 'Dwarkamai, Chavadi & Gurusthan' },
-      { name: 'Sai Heritage Museum & Lendi Baug' }
+      { name: 'Mumbai (Siddhivinayak, Mahalakshmi & Gateway of India)' },
+      { name: 'Nasik (Trimbakeshwar Jyotirlinga)' },
+      { name: 'Shirdi (Sai Baba Samadhi Mandir - VIP Darshan)' },
+      { name: 'Shani Shingnapur & Ranjangaon Mahaganapathi' }
     ],
     inclusions: [
-      'Air fares (Both Onward & Return)',
+      'Air fares (Bangalore to Mumbai & Pune to Bangalore)',
       'Transfers and sightseeing\'s by A/c vehicle',
       '3-star Premium Accommodation on a Twin/Double sharing basis for 01 night',
-      'MAPAI (Breakfast and Dinner)',
-      'VIP Darshan in Shirdi Sai Baba temple (Two times)'
+      'Meals as per itinerary',
+      'VIP Darshan in Shirdi Sai Baba temple'
     ],
     exclusions: [
       'Seat selection and meals are not included in the flight journey',
@@ -52,15 +52,15 @@ export const ALL_PACKAGES: Package[] = [
     sampleItinerary: [
       {
         day: 'Day 1',
-        title: 'Bangalore – Shani Shingnapur – Shirdi',
-        detail: 'Bangalore to Shirdi Departure (By Flight). On arrival at Shirdi airport, board the vehicle and proceed towards Shani Shingnapura (Shani temple). Later return to Shirdi, check-in to hotel, fresh up. In the evening visit Sai Mandir to have Sai Baba Samadhi Mandir Darshan (VIP Darshan), Gurusthan, Museum, Dwarakamai, and Chavadi. Return back to hotel, dinner and overnight stay at hotel in Shirdi.',
+        title: 'Bangalore - Mumbai - Nasik (Triyambhakeshwar)',
+        detail: 'Depart from Bangalore to Mumbai. Upon arrival at Mumbai airport, board the vehicle and head to Siddivinayaka temple. Enroute, enjoy sightseeing at Bandra Bridge. After Siddivinayak darshan, visit Mumbai Mahalakshmi temple, Gateway of India. Later explore Trimbakeshwar Jyotirlinga (10th Jyotirlinga). Dinner and overnight stay at a hotel in Shirdi.',
         meals: 'Dinner'
       },
       {
         day: 'Day 2',
-        title: 'Shirdi (2nd VIP Darshan) – Bangalore',
-        detail: 'Morning after breakfast proceed to visit Sai Mandir for 2nd Sai Baba Samadhi Mandir Darshan (VIP Darshan). Return back to hotel and checkout with enroute lunch. Drop to Shirdi Airport for return flight to Bangalore with the blessings of Sai Baba.',
-        meals: 'Breakfast, Lunch'
+        title: 'Shirdi - Shanishinapur - Pune',
+        detail: 'After breakfast, proceed to Sai Mandir for a VIP darshan at Sai Baba Samadhi Mandir, Gurusthan, Museum, Dwarakamai, and Chawadi. Return to the hotel, have lunch, check out, and head to Shani Shingnapur. Visit Famous Mahaganapathi Temple in Ranjangaon if time permits. Enjoy dinner enroute and proceed to Pune airport for the return journey to Bangalore, cherishing the sweet memories of our tour.',
+        meals: 'Breakfast, Lunch, Dinner'
       }
     ],
     cancellationPolicy: {
@@ -81,35 +81,36 @@ export const ALL_PACKAGES: Package[] = [
       'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
     ],
     detailedContent: {
-      overview: 'Experience the bliss and divine aura of Sadguru Sai Baba with our specialized Regular Shirdi Flight Package from Bangalore. Enjoy direct flights, 2x VIP Darshan access at Samadhi Mandir, 3-star premium hotel stay, and visits to Shani Shingnapur, Dwarkamai, and Chavadi.',
-      significance: 'Shirdi is the sacred land where Sai Baba spent over 60 years preaching love, compassion, and unity. Millions of devotees flock to Shirdi to seek his blessings at Samadhi Mandir.',
-      bestTimeToVisit: 'Shirdi welcomes devotees year-round with comfortable weather throughout the year.',
+      overview: 'Experience the divine grace of Sadguru Sai Baba, Lord Ganesha, and Lord Shiva with our specialized Regular Shirdi Flight Package from Bangalore. Cover Mumbai Siddhivinayak, Gateway of India, Trimbakeshwar Jyotirlinga, Shirdi Sai Baba VIP Darshan, Shani Shingnapur, and Ranjangaon Mahaganapathi.',
+      significance: 'This sacred yatra covers the revered Siddhivinayak temple, the holy Trimbakeshwar Jyotirlinga, and the blessed abode of Sai Baba in Shirdi, offering a spiritually enriching pilgrimage.',
+      bestTimeToVisit: 'Shirdi and Maharashtra pilgrimage circuits welcome devotees year-round with comfortable weather throughout the year.',
       placesCovered: [
-        'Sai Baba Samadhi Mandir (2x VIP Darshan)',
-        'Shani Shingnapur Temple',
-        'Dwarkamai Mosque',
-        'Chavadi & Gurusthan',
-        'Dixit Wada Museum'
+        'Mumbai Siddhivinayak Temple & Gateway of India',
+        'Mumbai Mahalakshmi Temple & Bandra Bridge',
+        'Trimbakeshwar Jyotirlinga (10th Jyotirlinga)',
+        'Sai Baba Samadhi Mandir (VIP Darshan)',
+        'Dwarkamai, Chavadi, Gurusthan & Museum',
+        'Shani Shingnapur & Ranjangaon Mahaganapathi Temple'
       ],
       travelTips: [
-        'Pre-arranged 2x VIP passes provided for fast & comfortable Darshan.',
+        'Pre-arranged VIP Darshan passes provided for fast & comfortable Darshan in Shirdi.',
         'Mobiles and electronics are prohibited inside the main Samadhi Mandir.',
         'Footwear counters are available at temple gate entrances.'
       ],
       whyChooseUs: [
-        'Direct flights from Bangalore with seamless airport pick-up & drop',
-        '2x VIP Special Darshan Passes for minimal waiting time',
-        'Premium 3-star hotel stay close to Samadhi Mandir'
+        'Convenient flights (Bangalore to Mumbai & Pune to Bangalore) with dedicated vehicle transfers',
+        'VIP Special Darshan in Shirdi for minimal waiting time',
+        'Comfortable 3-star hotel stay close to temple'
       ]
     },
     faqs: [
       {
-        question: "How is 2x VIP Darshan arranged in Shirdi?",
-        answer: "We pre-book 2 VIP Darshan slots (Day 1 Evening and Day 2 Morning) for you, ensuring short queues and comfortable Darshan at Samadhi Mandir."
+        question: "How is VIP Darshan arranged in Shirdi?",
+        answer: "We arrange VIP Darshan for you at Sai Baba Samadhi Mandir, ensuring minimal waiting time and a comfortable Darshan experience."
       },
       {
-        question: "Are direct flights included in the package?",
-        answer: "Yes! Direct round-trip economy flights between Bangalore and Shirdi are included in the package."
+        question: "What is the flight route for this package?",
+        answer: "This tour departs from Bangalore to Mumbai by flight on Day 1, covers Mumbai, Nasik (Trimbakeshwar), Shirdi, Shani Shingnapur, and returns via Pune Airport to Bangalore on Day 2."
       }
     ],
     coordinates: { x: 38, y: 55 }
@@ -375,20 +376,21 @@ export const ALL_PACKAGES: Package[] = [
     id: 'kholapur-pandarpur',
     title: 'Kolhapur & Pandharpur Tour Package',
     category: 'pilgrimage',
-    destination: 'Maharashtra (Kolhapur, Pandharpur, Solapur, Tuljapur)',
+    destination: 'Maharashtra (Pune, Kolhapur, Tuljapur, Akkalkot, Pandharpur)',
     duration: '2N/3D',
     price: '₹23,999/-',
     numericPrice: 23999,
     minPax: 2,
     featured: true,
     image: 'https://images.unsplash.com/photo-1627894483216-2138af692e32?q=80&w=1200&auto=format&fit=crop',
-    description: 'Devotional Yatra to Shri Mahalakshmi (Ambabai) Temple in Kolhapur, Lord Vitthal-Rukmini Mandir & Chandrabhaga River in Pandharpur, Goddess Tulja Bhavani in Tuljapur, and Lord Siddheshwar in Solapur.',
+    description: 'Devotional Yatra from Bangalore to Pune, Kolhapur (Shri Mahalakshmi Temple & Chhatrapati Shahu Palace, Jyotiba Temple), Tuljapur (Tulja Bhavani Temple), Akkalkot (Swami Samarth Temple), and Pandharpur (Vitthal-Rukmini Mandir).',
     highlights: [
-      'Goddess Mahalaxmi (Ambabai) Temple Darshan (Shakti Peeth, Kolhapur)',
-      'Lord Vitthal & Rukmini Temple Darshan (Pandharpur)',
-      'Holy Dip at Chandrabhaga River (Bhima River)',
+      'Bangalore to Pune Flight with AC Vehicle Transfers',
+      'Shri Mahalakshmi (Ambabai) Temple Darshan (Kolhapur)',
+      'Chhatrapati Shahu Palace & Jyotiba Temple (Kolhapur)',
       'Goddess Tulja Bhavani Temple Visit (Tuljapur)',
-      'Shri Siddheshwar Temple & Solapur Fort'
+      'Shri Swami Samarth Temple Darshan (Akkalkot)',
+      'Lord Vitthal & Rukmini Temple Darshan (Pandharpur)'
     ],
     tourIncludes: {
       hotels: true,
@@ -397,20 +399,20 @@ export const ALL_PACKAGES: Package[] = [
       flights: true,
       sightseeing: true
     },
-    placesBadge: '3 Days Sacred Shakti & Vitthal Yatra',
+    placesBadge: '3 Days Pune, Kolhapur, Tuljapur, Akkalkot & Pandharpur Yatra',
     placesList: [
-      { name: 'Kolhapur (Mahalaxmi Ambabai Temple)' },
-      { name: 'Pandharpur (Vitthal Rukmini Temple & Chandrabhaga)' },
-      { name: 'Tuljapur (Tulja Bhavani Shakti Peeth)' },
-      { name: 'Solapur (Siddheshwar Temple)' }
+      { name: 'Kolhapur (Mahalaxmi Temple, Shahu Palace & Jyotiba Temple)' },
+      { name: 'Tuljapur (Tulja Bhavani Temple)' },
+      { name: 'Akkalkot (Swami Samarth Temple)' },
+      { name: 'Pandharpur (Vitthal & Rukmini Temple)' }
     ],
     inclusions: [
-      'To and from economy class air travel for Bangalore-to-Bangalore tour guests (Airfare, Airport taxes & Visa Fees)',
+      'To and from economy class air travel for Bangalore-to-Bangalore tour guests (Airfare & Airport taxes)',
       'Baggage Allowance as per airline policy',
       'Tour Manager Services throughout the tour',
       'Entrance fees of all sightseeing places visited from inside',
       'All Meals (Breakfast, Lunch & Dinner)',
-      'Transfers and sightseeing by A/C coach',
+      'Transfers and sightseeing by A/C coach / vehicle',
       'Accommodation on Twin/Double sharing basis for 02 nights',
       'Govt Tax of 5% over and above the Tour Cost mentioned'
     ],
@@ -428,20 +430,20 @@ export const ALL_PACKAGES: Package[] = [
     sampleItinerary: [
       {
         day: 'Day 1',
-        title: 'Bangalore – Goa / Belgaum / Pune – Kolhapur',
-        detail: 'Arrival at airport / railway station and transfer to Kolhapur. Check in to hotel, fresh up and proceed to visit sacred Goddess Mahalaxmi (Ambabai) Temple (one of the premier Shakti Peeths). Explore local temple bazaar, dinner and overnight stay at hotel in Kolhapur.',
+        title: 'Pune - Kolhapur',
+        detail: 'Bangalore to Pune departure, on arrival at Pune airport, We will proceed towards Kolhapur. Procced to visit Chatrapati shahu palace, Then visit Jyothibaa Temple Check in to hotel, Refresh and then proceed to visit Shri Maha Laxmi Temple, (The Kolhapur Mahalakshmi Temple was beautified in the 11th century by King Gandharaditya of the Silahara dynasty, he built a circumambulatory path to circumambulate Goddess Mahalakshmi. and return back to the hotel have dinner and overnight Stay',
         meals: 'Dinner'
       },
       {
         day: 'Day 2',
-        title: 'Kolhapur – Pandharpur – Tuljapur – Solapur',
-        detail: 'After breakfast, checkout and proceed to Pandharpur. Take holy dip in Chandrabhaga River and have divine Darshan of Lord Vitthal & Rukmini Temple. Later proceed to Tuljapur to visit sacred Goddess Tulja Bhavani Temple (Bhavani Mata Shakti Peeth). Transfer to Solapur, dinner and overnight stay at hotel in Solapur.',
+        title: 'Tuljapur - Akalkot- Pandrapur',
+        detail: 'After breakfast, Checkout and proceed towards Tuljapur (45Km from Solapur) to visit famous Tuljabhavani temple then proceed to Akkalkot to visit Swami Samarth Temple (Swami Samarth is famous for his spiritual teachings and miracles. He is believed to be an incarnation of Lord Dattatreya. Later proceed to Pandrapur. Hotel checkin . Have dinner and overnight stay',
         meals: 'Breakfast, Lunch, Dinner'
       },
       {
         day: 'Day 3',
-        title: 'Solapur – Siddheshwar Temple – Return Departure',
-        detail: 'After breakfast, visit Shri Siddheshwar Temple & Solapur Fort. Checkout from hotel and proceed to airport / railway station for your return journey to Bangalore carrying divine blessings and sweet memories of the tour.',
+        title: 'Pandrapur - Pune',
+        detail: 'Early in the morning proceed to visit The Vittal temple, Rukmini temple then proceed to Pune airport for your return journey with the blessings and sweet memories of the trip.',
         meals: 'Breakfast, Lunch'
       }
     ],
@@ -463,10 +465,10 @@ export const ALL_PACKAGES: Package[] = [
       'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
     ],
     detailedContent: {
-      overview: 'Experience ultimate devotional bliss with our Kolhapur & Pandharpur Pilgrimage Yatra. Visit the revered Shakti Peeth of Goddess Mahalaxmi in Kolhapur, the sacred seat of Lord Vitthal-Rukmini at Pandharpur on the banks of the Chandrabhaga River, and Goddess Tulja Bhavani in Tuljapur.',
-      significance: 'Kolhapur Mahalaxmi is one of the premier Shakti Peeths where Goddess Lakshmi resides in her glorious form. Pandharpur is the spiritual heartland of Maharashtra dedicated to Lord Vitthal.',
+      overview: 'Experience ultimate devotional bliss with our Kolhapur & Pandharpur Pilgrimage Yatra from Bangalore. Visit the revered Shakti Peeth of Goddess Mahalaxmi and Chhatrapati Shahu Palace in Kolhapur, Jyotiba Temple, Goddess Tulja Bhavani in Tuljapur, Shri Swami Samarth in Akkalkot, and Lord Vitthal-Rukmini at Pandharpur.',
+      significance: 'Kolhapur Mahalaxmi is one of the premier Shakti Peeths where Goddess Lakshmi resides in her glorious form. Pandharpur is the spiritual heartland of Maharashtra dedicated to Lord Vitthal, and Akkalkot is blessed by Swami Samarth Maharaj.',
       bestTimeToVisit: 'October to March is the best time for pleasant weather during temple visits and road travel.',
-      placesCovered: ['Kolhapur Mahalaxmi Temple', 'Pandharpur Vitthal Rukmini Mandir', 'Chandrabhaga River Ghats', 'Tuljapur Tulja Bhavani Temple', 'Solapur Siddheshwar Temple'],
+      placesCovered: ['Kolhapur Mahalaxmi Temple', 'Chhatrapati Shahu Palace', 'Jyotiba Temple', 'Tuljapur Tulja Bhavani Temple', 'Akkalkot Swami Samarth Temple', 'Pandharpur Vitthal & Rukmini Temple'],
       travelTips: [
         'Traditional modest attire is required for temple entries.',
         'Keep slip-on footwear handy for temple visits.',
@@ -2839,8 +2841,8 @@ export const ALL_PACKAGES: Package[] = [
     category: 'international',
     destination: 'Nepal (Kathmandu, Pokhara, Muktinath, Jomsom, Lumbini, Bhairahawa)',
     duration: '6N/7D',
-    price: '₹45,999/-',
-    numericPrice: 45999,
+    price: '₹75,999/-',
+    numericPrice: 75999,
     minPax: 2,
     featured: true,
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
