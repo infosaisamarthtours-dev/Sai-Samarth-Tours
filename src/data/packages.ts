@@ -924,20 +924,20 @@ export const ALL_PACKAGES: Package[] = [
     sampleItinerary: [
       {
         day: 'Day 1',
-        title: 'Bangalore – Varanasi (Arrival & Evening Ganga Aarti)',
-        detail: 'Bangalore to Varanasi departure (by flight). On arrival at Varanasi Airport, meet our representative and transfer to hotel. Check in and fresh up. In the evening proceed to Dashashwamedh Ghat for a private boat ride to witness the world-famous Evening Ganga Aarti. Dinner and overnight stay in Varanasi.',
-        meals: 'Lunch, Dinner'
+        title: 'Bangalore – Lucknow – Ayodhya',
+        detail: 'Departure from Bangalore International Airport to Lucknow airport by flight. Board vehicle and proceed towards Ayodhya, check in to the hotel and proceed to cover the sightseeing of Ayodhya city (birthplace of Lord Rama). Visit Ram Janmabhoomi, Hanuman Garhi, Ram Darbar Mandir (depicting Lord Sri Ram, Goddess Sita, Hanuman Ji, and Lord Lakshman, symbolizing the bond between family), Sarayu River, etc. Return back to hotel for overnight stay in Ayodhya.',
+        meals: 'Breakfast, Lunch & Dinner'
       },
       {
         day: 'Day 2',
-        title: 'Kashi Vishwanath Darshan – Ayodhya Excursion',
-        detail: 'Early morning holy dip in River Ganga. Divine Darshan at Kashi Vishwanath Temple Corridor, Annapurna Temple, and Vishalakshi Temple. After breakfast, proceed to Ayodhya (about 200 km). Visit Hanuman Garhi and Shri Ram Janmabhoomi Mandir for divine Ram Lalla Darshan. Visit Kanak Bhawan and attend evening Saryu Aarti at Ram Ki Paidi. Return to Varanasi / Ayodhya for dinner and overnight stay.',
-        meals: 'Breakfast, Lunch, Dinner'
+        title: 'Varanasi – Ayodhya',
+        detail: 'After breakfast, check out of the hotel and proceed towards Varanasi. Check-in to the hotel, fresh up, have lunch and in the evening get ready to experience one of the most memorable moments of your life at River Ganga. Enjoy Ganga Aarti (by boat). Return back to hotel for dinner & overnight stay at hotel in Varanasi.',
+        meals: 'Breakfast, Lunch & Dinner'
       },
       {
         day: 'Day 3',
-        title: 'Sarnath Excursion & Varanasi Departure',
-        detail: 'After breakfast and checkout, visit Sarnath (Dhamek Stupa & Deer Park where Lord Buddha preached his first sermon) and Banarasi Silk weaving center. Post lunch, transfer to Varanasi Airport for return flight to Bangalore carrying divine blessings.',
+        title: 'Varanasi – Bangalore',
+        detail: 'Early morning proceed to visit the most religious Kashi Vishwanath Temple (VIP Darshan), Annapurna Temple, Vishalakshi Temple, and Kalabhairava Temple. Return back to the hotel and have lunch, then check out and proceed towards Sarnath (where Gautama Buddha first taught the Dharma, & where the Buddhist Sangha came into existence through the enlightenment of Kondanna). Transfer to Varanasi airport for your return journey to Bangalore by flight with sweet memories of the tour.',
         meals: 'Breakfast, Lunch'
       }
     ],
