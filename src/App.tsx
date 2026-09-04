@@ -18,6 +18,7 @@ import { CancellationPolicyPage } from './pages/CancellationPolicyPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { BlogPage } from './pages/BlogPage';
+import { BlogDetailPage } from './pages/BlogDetailPage';
 
 import { useLocation } from 'react-router-dom';
 import { getWhatsAppUrl } from './utils/whatsapp';
@@ -78,7 +79,8 @@ export function App() {
           <Route path="/cancellation-policy" element={<CancellationPolicyPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-use" element={<TermsOfUsePage />} />
-          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog" element={<BlogPage onOpenEnquiry={handleOpenEnquiry} />} />
+          <Route path="/blog/:id" element={<BlogDetailPage onOpenEnquiry={handleOpenEnquiry} />} />
         </Routes>
 
         {/* Floating Action Buttons (Desktop Only - hidden on mobile view) */}

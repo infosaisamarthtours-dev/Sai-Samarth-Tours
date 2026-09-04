@@ -331,6 +331,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
             </li>
             <li className="flex items-center h-full">
+              <Link to="/blog" className="text-white text-sm font-semibold hover:text-[#F59E0B] transition-colors h-full flex items-center">
+                Blog
+              </Link>
+            </li>
+            <li className="flex items-center h-full">
               <Link to="/contact" className="text-white text-sm font-semibold hover:text-[#F59E0B] transition-colors h-full flex items-center">
                 Contact
               </Link>
@@ -426,6 +431,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             <Link to="/domestic-packages" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Domestic <ChevronDown className="w-5 h-5" /></Link>
             <Link to="/international-packages" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">International <ChevronDown className="w-5 h-5" /></Link>
             <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">About Us</Link>
+            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Blog</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Contact</Link>
           </nav>
           
