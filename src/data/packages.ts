@@ -12,7 +12,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 17999,
     minPax: 2,
     featured: true,
-    image: '/Priority-Packages-Regular Shirdi.png',
+    image: '/Regular Shirdi Flight Package.png',
     description: 'Direct Flight Shirdi Yatra from Bangalore to Mumbai & return from Pune: VIP Darshan at Sai Baba Samadhi Mandir, visit Siddhivinayak Temple, Mumbai Mahalakshmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur, and Ranjangaon Mahaganapati Temple.',
     highlights: [
       'Bangalore to Mumbai & Pune to Bangalore Flights',
@@ -125,7 +125,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 23999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi with 3 Jyothirlinga Priority Packages.png',
+    image: '/Shirdi with 3 Jyothirlinga Tour Package.png',
     description: 'Sacred Maharashtra Pilgrimage Yatra: Visit 3 revered Shiva Jyotirlingas (Bhimashankar, Trimbakeshwar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, Panchavati in Nashik, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
     highlights: [
       'Trimbakeshwar Jyotirlinga (Three-Faced Trinity Shivlinga)',
@@ -260,7 +260,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi with 3 Jyothirlinga Priority Packages.png',
+    image: '/Shirdi with 2 Jyothirlinga Tour Package.png',
     description: 'Divine Maharashtra Pilgrimage Yatra (1N/2D): Visit 2 sacred Shiva Jyotirlingas (Bhimashankar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
     highlights: [
       'Bhimashankar Jyotirlinga',
@@ -382,7 +382,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 23999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1627894483216-2138af692e32?q=80&w=1200&auto=format&fit=crop',
+    image: '/Kolhapur & Pandharpur Tour Package.png',
     description: 'Devotional Yatra from Bangalore to Pune, Kolhapur (Shri Mahalakshmi Temple & Chhatrapati Shahu Palace, Jyotiba Temple), Tuljapur (Tulja Bhavani Temple), Akkalkot (Swami Samarth Temple), and Pandharpur (Vitthal-Rukmini Mandir).',
     highlights: [
       'Bangalore to Pune Flight with AC Vehicle Transfers',
@@ -501,7 +501,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 30999,
     minPax: 2,
     featured: true,
-    image: '/Puri Jagannath  Priority Packages.png',
+    image: '/Puri Jagannath & Konark Tour Package.png',
     description: 'Sacred Odisha Pilgrimage Yatra: Visit Lord Jagannath Temple in Puri, Sakshi Gopal Temple, UNESCO World Heritage Konark Sun Temple, Dhauli Peace Pagoda, Lingaraj Temple, Kala Bhoomi Odisha Crafts Museum, and Udayagiri Jain Caves.',
     highlights: [
       'Jagannath Temple Puri (Lord Jagannath Evening Darshan)',
@@ -621,7 +621,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 27999,
     minPax: 2,
     featured: true,
-    image: '/Kamakhya Priority Packages.png',
+    image: '/Kamakhya Temple Tour Package.png',
     description: 'Sacred Assam Shakti Peeth Yatra: Direct flight from Bangalore to Guwahati, visit famous Maa Kamakhya Temple (revered Shakti Peeth), Vasistha Temple, Balaji Temple, Umananda Temple on Peacock Island in Brahmaputra River, and Navagraha Temple.',
     highlights: [
       'Maa Kamakhya Temple Darshan (Revered Shakti Peeth)',
@@ -736,7 +736,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 41999,
     minPax: 2,
     featured: true,
-    image: '/Kashi with Ayodhya & Prayagraj Priority Packages.png',
+    image: '/Kashi with Ayodhya & Prayagraj Yatra.png',
     description: 'Sacred Uttar Pradesh Tri-Tirth Yatra: Visit Kashi Vishwanath Corridor, Annapurna Temple, Vishalakshi Temple, Subah-e-Banaras & Evening Ganga Aarti boat ride in Varanasi, Sarnath Buddhist Heritage, Triveni Sangam holy dip & Hanuman Mandir in Prayagraj, and Shri Ram Janmabhoomi Mandir, Hanuman Garhi & Saryu River in Ayodhya.',
     highlights: [
       'Kashi Vishwanath Corridor & Evening Ganga Aarti Boat Ride',
@@ -875,7 +875,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 29999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1571536802807-30451e3955d8?q=80&w=1200&auto=format&fit=crop',
+    image: '/Kashi with Ayodhya Tour Package.png',
     description: 'Focused Sacred Pilgrimage: Visit Kashi Vishwanath Temple Corridor, Annapurna Temple, Evening Ganga Aarti boat ride in Varanasi, Sarnath Stupa, and divine Ram Lalla Darshan at Shri Ram Janmabhoomi Mandir & Hanuman Garhi in Ayodhya.',
     highlights: [
       'Kashi Vishwanath Corridor & Annapurna Temple Darshan',
@@ -1001,7 +1001,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 30999,
     minPax: 2,
     featured: true,
-    image: '/Indore and Ujjain Priority Packages.png',
+    image: '/Indore, Ujjain & Omkareshwar Tour Package.png',
     description: 'Sacred 2 Jyotirlingas Pilgrimage Yatra: Visit Mahakaleshwar Jyotirlinga (3rd Jyotirlinga) with Mahakal Corridor in Ujjain, Omkareshwara Jyotirlinga (4th Jyotirlinga) & Mamaleshwara on the Narmada river, Pitreshwar Hanuman Mandir, Khajrana Ganesh, Sandipani Ashram, and Gadh Kalika in Indore.',
     highlights: [
       'Shri Mahakaleshwar Jyotirlinga (3rd Jyotirlinga) & VIP Darshan',
@@ -1086,7 +1086,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 37999,
     minPax: 2,
     featured: true,
-    image: '/Vaishnodevi  Priority Packages.png',
+    image: '/Mata Vaishnodevi & Golden Temple Yatra.png',
     description: 'Sacred Pilgrimage Yatra: Ascend to Mata Vaishnodevi Temple in Katra, Bhairo Baba Temple via ropeway, Raghunath Ji Temple in Jammu, Golden Temple & Jallianwala Bagh in Amritsar, and Wagah Border Retreat Ceremony.',
     highlights: [
       'Famous Mata Vaishnodevi Holy Shrine Darshan (Katra)',
@@ -1183,7 +1183,7 @@ export const ALL_PACKAGES: Package[] = [
     price: '₹28,999/-',
     numericPrice: 28999,
     minPax: 2,
-    image: '/baidyanath-tour-packages.webp',
+    image: '/Baidyanath Dham.png',
     description: 'Visit Baba Baidyanath Dham (Baba Dham) in Deoghar, one of the 12 sacred Jyothirlingas known for granting divine health & fulfillment. Explore Basukinath, Thapovan, and Jayadurga Shakthipeeta.',
     highlights: ['Baba Baidyanath Jyothirlinga Darshan', 'Basukinath Temple Visit', 'Jayadurga Shakthipeeta', 'Thapovan Visit'],
     tourIncludes: {
@@ -1296,7 +1296,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 35999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=1200&auto=format&fit=crop',
+    image: '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra.png',
     description: 'Grand South India Temple Pilgrimage: Visit Brihadeeswara Temple in Thanjavur, Srirangam Ranganathaswamy Temple, Madurai Meenakshi Temple, Rameshwaram Ramanathaswamy Temple with 22 Holy Theertham Wells & Spatika Linga Darshan, Dhanushkodi, Thiruchendur Murugan Temple, Kanyakumari Vivekananda Rock & Sunset, Suchindram Temple, and Sree Padmanabhaswamy Temple in Thiruvananthapuram.',
     highlights: [
       'Srirangam Ranganathaswamy & UNESCO Brihadeeswara Temple',
@@ -1434,7 +1434,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 46999,
     minPax: 2,
     featured: true,
-    image: '/Gujarat Priority Packages.png',
+    image: '/Grand Gujarat Pilgrimage & Statue of Unity Yatra.png',
     description: 'Grand Gujarat Sacred & Heritage Yatra: Direct flight from Bangalore to Ahmedabad, Sabarmati Ashram, Adalaj Stepwell, Akshardham, Shree Dwarkadhish Temple (Char Dham), Bet Dwarka, Nageshwar Jyotirlinga, Rukmini Temple, Kirti Mandir & Sudama Mandir in Porbandar, Somnath Jyotirlinga & Light/Sound Show, Gir Forest National Park Safari, Nishkalank Mahadev Temple in sea, World\'s Tallest Statue of Unity (182m), Valley of Flowers, and Sardar Sarovar Dam.',
     highlights: [
       'Shree Dwarkadhish Temple (Holy Char Dham) & Bet Dwarka',
@@ -1587,7 +1587,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 44999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=1200&auto=format&fit=crop',
+    image: '/Andaman Islands Paradise Tour Package.png',
     description: 'Tropical Island Paradise: Direct round-trip flights from Bangalore to Port Blair, Corbyn\'s Cove Beach, historic Cellular Jail with Light & Sound Show, scenic cruise to Havelock Island, Radhanagar Beach (Asia\'s finest), Kalapathar Beach, Elephant Beach speed boat excursion, inter-island cruise ferry, and Ross Island (Netaji Subhash Chandra Bose Island).',
     highlights: [
       'Cellular Jail Visit & Captivating Light and Sound Show',
@@ -1726,7 +1726,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 51999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1200&auto=format&fit=crop',
+    image: '/Kashmir Paradise Tour Package.png',
     description: 'Paradise on Earth: Direct round-trip flight from Bangalore, 1 night in luxury Dal Lake Houseboat & 4 nights in 3-star premium hotels, Gulmarg Gondola Cable Car Ride to Khalinmarg, Sonamarg Meadow of Gold, Pahalgam Valley (Aru, Betaab & Chandanwari), Mughal Gardens, Hazratbal Shrine, Pari Mahal, Dal Lake Shikara Ride, and Shankaracharya Temple.',
     highlights: [
       'Dal Lake Houseboat Stay & Shikara Ride',
@@ -1870,7 +1870,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 60999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1200&auto=format&fit=crop',
+    image: '/Leh Ladakh High Altitude Expedition.png',
     description: 'The Land of High Passes: Direct round-trip flight to Leh, acclimatization stay, Hall of Fame, Gurudwara Pathar Sahib, Magnetic Hill, Indus-Zanskar Sangam, Alchi & Hemis Monasteries, Shanti Stupa, Leh Palace, Rancho School (3 Idiots), Khardung La Pass (highest motorable road), Nubra Valley, Turtuk Village (India-Pakistan border), and day trip to Pangong Lake via Chang La Pass.',
     highlights: [
       'Pangong Lake Day Trip via Chang La Pass',
@@ -2020,7 +2020,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 44999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop',
+    image: '/Golden Triangle Tour Package.png',
     description: 'Iconic Golden Triangle & Braj Bhoomi Circuit: Direct flight from Bangalore to Jaipur, Hawa Mahal, Jantar Mantar, City Palace, Amber Fort, Jaigarh Fort, Nahargarh Fort, World-famous Taj Mahal & Agra Fort, Shri Krishna Janmabhoomi in Mathura, Prem Mandir & Bankey Bihari in Vrindavan, Red Fort, Rajghat, India Gate, Rashtrapati Bhavan, Akshardham, Qutub Minar, and Lotus Temple in Delhi.',
     highlights: [
       'Jaipur Forts & Palaces (Amber Fort, Jaigarh, Nahargarh & City Palace)',
@@ -2167,7 +2167,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 60999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=1200&auto=format&fit=crop',
+    image: '/Grand Royal Rajasthan Tour Package.png',
     description: 'Grand Royal Odyssey of Rajasthan: Direct round-trip flights from Bangalore, Srinathji Temple & 369ft Statue of Belief in Nathdwara, City Palace & Fateh Sagar boat ride in Udaipur, Umaid Bhawan Palace & Mehrangarh Fort in Jodhpur, Sam Sand Dunes desert stay & Patwon Ki Haveli in Jaisalmer, sacred Brahma Temple & Lake in Pushkar, Jal Mahal, Hawa Mahal, Jantar Mantar, Jaigarh Fort & Amber Fort in Jaipur.',
     highlights: [
       'Nathdwara Shrinathji Temple & World\'s 369ft Tallest Shiva Statue (Statue of Belief)',
@@ -2330,7 +2330,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 34999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1200&auto=format&fit=crop',
+    image: "/God's Own Country Kerala Tour Package.png",
     description: 'God\'s Own Country Tour: Round-trip flights from Bangalore to Cochin, scenic drive to Munnar tea & spice plantations, Cheeyappara Waterfalls, Eravikulam National Park (Rajamalai), Mattupetty Dam, Echo Point, Periyar Wildlife Sanctuary Tiger Reserve & Lake boat cruise in Thekkady, and overnight luxury Alleppey Houseboat Backwater Cruise.',
     highlights: [
       'Munnar Tea Plantations, Tea Museum & Cheeyappara Waterfalls',
@@ -2462,7 +2462,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=1200&auto=format&fit=crop',
+    image: '/Goa Beach & Heritage Tour Package.png',
     description: 'Sun, Sand & Heritage Gateway: Round-trip flights from Bangalore, North Goa beaches (Calangute, Baga & Anjuna), historic Fort Aguada, South Goa heritage (UNESCO Basilica of Bom Jesus & Se Cathedral), authentic Goan cuisine, and vibrant seaside markets.',
     highlights: [
       'North Goa Famous Beaches (Calangute, Baga & Anjuna)',
@@ -2580,7 +2580,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 39999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3e99c0f2c?q=80&w=1200&auto=format&fit=crop',
+    image: '/Himachal Pradesh Tour Package.png',
     description: 'Majestic Himalayan Mountain Tour: Round-trip flights from Bangalore, colonial charm of Shimla & Kufri, scenic Pinjore Gardens, Kullu Valley rafting & shawl factories, snow-capped Solang Valley & Atal Tunnel in Manali, Hadimba Devi Temple, Vashisht Hot Springs, and Rock Garden in Chandigarh.',
     highlights: [
       'Shimla Mall Road, Ridge & Kufri Snow Point Sightseeing',
@@ -2734,7 +2734,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 65999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1578637387939-43c525550085?q=80&w=1200&auto=format&fit=crop',
+    image: '/Bhutan Tour Package.png',
     description: 'Land of the Thunder Dragon (Bhutan): Scenic road transfers from Bagdogra/Phuentsholing to Thimphu, Punakha Dzong, Dochu-La-Pass, Chhimi Lhakhang Fertility Temple, and the iconic Tiger\'s Nest (Paro Taktsang) hike.',
     highlights: [
       'Tiger\'s Nest Monastery (Paro Taktsang) Hike',
@@ -2845,7 +2845,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 75999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+    image: '/Nepal Muktinath & Pashupatinath Tour Package.png',
     description: 'Sacred Himalayan Pilgrimage: Pashupatinath Temple, Jalnarayan Temple, Muktinath Dham Pilgrimage, Manakamana Cable Car, Lumbini (Birthplace of Gautam Buddha), Fewa Lake boat ride, and Gorakhnath Temple via Gorakhpur.',
     highlights: [
       'Pashupatinath Temple & Guheshwori Shakti Peeth Darshan',
@@ -2961,7 +2961,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 0,
     minPax: 2,
     comingSoon: true,
-    image: 'https://images.unsplash.com/photo-1546708973-b339540b5162?q=80&w=1200&auto=format&fit=crop',
+    image: '/Sri Lanka.png',
     description: 'Ramayana Trail & Island Beauty: Ancient temples of Kandy, Sigiriya Rock Fortress, Ravana Falls, and golden beaches of Bentota.',
     highlights: ['Ramayana Heritage Trail Sites', 'Temple of Sacred Tooth Relic Kandy', 'Sigiriya Rock Fortress', 'Bentota Beach Resort'],
     inclusions: ['Curated Package Launching Soon'],
@@ -2978,7 +2978,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 0,
     minPax: 2,
     comingSoon: true,
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format&fit=crop',
+    image: '/Bali.png',
     description: 'Island of the Gods: Sacred Tanah Lot temple, Besakih Mother Temple, Ubud rice terraces, and cultural Balinese dance performances.',
     highlights: ['Tanah Lot Sea Temple Sunset', 'Besakih Mother Temple Tour', 'Ubud Art & Cultural Heart', 'Nusa Penida Island Excursion'],
     inclusions: ['Curated Package Launching Soon'],
@@ -2995,7 +2995,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 45999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1596422846543-75c6ff816766?q=80&w=1200&auto=format&fit=crop',
+    image: '/Malaysia Truly Asia Tour Package.png',
     description: 'Truly Asia Gateway: Stay at Verdant Hill / Similar Hotel, enroute Putrajaya City Tour & Pink Mosque, Aquaria KLCC Park, KL Tower & Petronas Twin Towers observation deck, Batu Caves Lord Murugan Shrine, and Genting Highlands Skyway Cable Car ride.',
     highlights: [
       'Petronas Twin Towers Observation Deck (Entrance Ticket Included)',
@@ -3124,7 +3124,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 85999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop',
+    image: '/Maldives Island Paradise Package.png',
     description: 'Tropical Paradise Gateway: 4 nights stay at Kaani Village & Spa in Deluxe Double Room with Pool View, Half-Board Dining (Breakfast + Lunch/Dinner), Shared Speedboat transfers across South Malé Atoll, free 30-day Visa on Arrival, IMUGA declaration assistance, and 24x7 WhatsApp support.',
     highlights: [
       'Four Nights Stay at Kaani Village & Spa (Deluxe Double Room with Pool View)',
@@ -3261,7 +3261,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 0,
     minPax: 2,
     comingSoon: true,
-    image: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop',
+    image: '/Europe.png',
     description: 'European Dream: Paris Eiffel Tower, Swiss Alps, romantic Venice, and historic Rome.',
     highlights: ['Paris City Tour & Seine Cruise', 'Mt. Titlis & Lucerne', 'Venice Gondola Ride', 'Rome Colosseum'],
     inclusions: ['Curated Package Launching Soon'],
@@ -3278,7 +3278,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 0,
     minPax: 2,
     comingSoon: true,
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop',
+    image: '/Dubai.png',
     description: 'City of Superlatives: Burj Khalifa, desert safaris, luxury shopping, and modern marvels in the UAE.',
     highlights: ['Burj Khalifa Observation Deck', 'Desert Safari with BBQ Dinner', 'Dubai Mall & Aquarium', 'Dhow Cruise Marina'],
     inclusions: ['Curated Package Launching Soon'],
@@ -3295,7 +3295,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 79999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=1200&auto=format&fit=crop',
+    image: '/Singapore & Malaysia Twin Country Tour Package.png',
     description: 'Ultimate South East Asia Twin Country Experience: 3 nights at Hotel Boss / Similar in Singapore & 3 nights at Verdant Hill / Similar in Kuala Lumpur, Temple of Tooth Relic, Night Safari with Indian dinner at Ulu Ulu Safari Restaurant, City Tour (Merlion Park, Marina Bay Sands, Gardens by the Bay domes & Light Show), full day Universal Studios, Sentosa Island (SEA Aquarium, Cable Car & Wings of Time), luxury coach transfer to KL, Batu Caves, Genting Highlands Cable Car, and Putrajaya Pink Mosque.',
     highlights: [
       'Night Safari Experience with Dinner at Ulu Ulu Safari Restaurant (Singapore)',
@@ -3453,7 +3453,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 42999,
     minPax: 2,
     featured: true,
-    image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1200&auto=format&fit=crop',
+    image: '/Thailand Delights Tour Package.png',
     description: 'Land of Smiles Gateway: 2 nights in Pattaya beach resort & 2 nights in Bangkok city hotel, Coral Island speed boat excursion with Indian lunch, Alcazar Cabaret Show, Golden Buddha (Wat Traimit) & Marble Temple (Wat Benchamabophit), Chao Phraya River Cruise & Gems Gallery.',
     highlights: [
       'Speedboat Tour to Coral Island (Koh Larn) with Indian Buffet Lunch',

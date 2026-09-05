@@ -97,7 +97,7 @@ export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
             {pilgrimagePackages.map((pkg) => (
               <div 
                 key={pkg.id} 
-                className="bg-white/95 backdrop-blur-md rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 hover:border-amber-500/40 overflow-hidden flex flex-col transition-all duration-500 transform hover:-translate-y-1.5 group h-full shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start"
+                className="bg-white/95 backdrop-blur-md rounded-2xl shadow-sm hover:shadow-2xl border border-gray-100 hover:border-amber-500/40 overflow-hidden flex flex-col transition-all duration-500 transform hover:-translate-y-1.5 group h-full shrink-0 w-[80vw] sm:w-[calc(47.5%-12px)] lg:w-[calc(31.666%-16px)] snap-start"
               >
                 {/* Image (Top) */}
                 <div className="relative h-48 w-full overflow-hidden shrink-0">
