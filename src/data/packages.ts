@@ -728,22 +728,22 @@ export const ALL_PACKAGES: Package[] = [
   },
   {
     id: 'kashi-ayodhya-prayagraj',
-    title: 'Kashi with Ayodhya & Prayagraj Yatra',
+    title: 'Kashi Ayodhya Prayagraj and Bodhgaya Tour Package',
     category: 'pilgrimage',
-    destination: 'Uttar Pradesh (Varanasi, Prayagraj, Ayodhya)',
+    destination: 'Bihar & Uttar Pradesh (Bodhgaya, Varanasi, Prayagraj, Ayodhya)',
     duration: '4N/5D',
     price: '₹41,999/-',
     numericPrice: 41999,
     minPax: 2,
     featured: true,
     image: '/Kashi with Ayodhya & Prayagraj Yatra.png',
-    description: 'Sacred Uttar Pradesh Tri-Tirth Yatra: Visit Kashi Vishwanath Corridor, Annapurna Temple, Vishalakshi Temple, Subah-e-Banaras & Evening Ganga Aarti boat ride in Varanasi, Sarnath Buddhist Heritage, Triveni Sangam holy dip & Hanuman Mandir in Prayagraj, and Shri Ram Janmabhoomi Mandir, Hanuman Garhi & Saryu River in Ayodhya.',
+    description: 'Sacred Bodhgaya, Kashi, Prayagraj & Ayodhya Pilgrimage Yatra: Visit Mahabodhi Temple, Bodhi Tree & Vishnupad Temple in Bodhgaya; Kashi Vishwanath Temple (VIP Darshan), Annapurna Temple, Vishalakshi Temple, Kalabhairava & Evening Ganga Aarti boat ride in Varanasi; Triveni Sangam holy dip & Bada Hanuman Mandir in Prayagraj; and Shri Ram Janmabhoomi, Hanuman Garhi & Sarayu River in Ayodhya.',
     highlights: [
-      'Kashi Vishwanath Corridor & Evening Ganga Aarti Boat Ride',
-      'Shri Ram Janmabhoomi Temple & Hanuman Garhi (Ayodhya)',
-      'Triveni Sangam Holy Dip (Ganga, Yamuna & Saraswati, Prayagraj)',
-      'Sarnath Buddhist Stupa & Archaeological Museum',
-      'Direct Round-Trip Flights from Bangalore'
+      'Mahabodhi Temple, Bodhi Tree & Vishnupad Temple (Bodhgaya)',
+      'Kashi Vishwanath VIP Darshan & Evening Ganga Aarti Boat Ride',
+      'Triveni Sangam Holy Dip & Boat Pooja (Prayagraj)',
+      'Shri Ram Janmabhoomi Mandir & Hanuman Garhi (Ayodhya)',
+      'Direct Bangalore Round-Trip Flights via Patna/Ranchi & Lucknow'
     ],
     tourIncludes: {
       hotels: true,
@@ -752,12 +752,12 @@ export const ALL_PACKAGES: Package[] = [
       flights: true,
       sightseeing: true
     },
-    placesBadge: '5 Days Sacred Uttar Pradesh Tri-Tirth Yatra',
+    placesBadge: '5 Days Bodhgaya, Kashi, Prayagraj & Ayodhya Yatra',
     placesList: [
-      { name: 'Varanasi (Kashi Vishwanath Corridor & Ganga Aarti)' },
-      { name: 'Sarnath (Dhamek Stupa & Buddha Temple)' },
-      { name: 'Prayagraj (Triveni Sangam & Bade Hanuman Mandir)' },
-      { name: 'Ayodhya (Shri Ram Janmabhoomi & Hanuman Garhi)' }
+      { name: 'Bodhgaya (Mahabodhi Temple, Bodhi Tree & Vishnupad Temple)' },
+      { name: 'Varanasi (Kashi Vishwanath VIP Darshan, Ghats & Ganga Aarti)' },
+      { name: 'Prayagraj (Triveni Sangam Boat Pooja & Bada Hanuman Mandir)' },
+      { name: 'Ayodhya (Ram Janmabhoomi, Hanuman Garhi & Sarayu River)' }
     ],
     inclusions: [
       'To and from economy class air travel for Bangalore-to-Bangalore tour guests (Airfare, Airport taxes & Visa Fees)',
@@ -767,7 +767,7 @@ export const ALL_PACKAGES: Package[] = [
       'All Meals (Breakfast, Lunch & Dinner)',
       'Transfers and sightseeing by A/C coach',
       'Accommodation on Twin/Double sharing basis for 04 nights',
-      'Private boat ride for Evening Ganga Aarti in Varanasi',
+      'Private boat ride for Evening Ganga Aarti & Sangam Pooja',
       'Govt Tax of 5% over and above the Tour Cost mentioned'
     ],
     exclusions: [
@@ -785,32 +785,32 @@ export const ALL_PACKAGES: Package[] = [
     sampleItinerary: [
       {
         day: 'Day 1',
-        title: 'Bangalore – Varanasi (Arrival & Evening Ganga Aarti)',
-        detail: 'Bangalore to Varanasi departure (by flight). Upon arrival at Varanasi Airport, meet our representative and transfer to hotel. Check-in and fresh up. In the evening, proceed to Dashashwamedh Ghat for a breathtaking private boat ride to witness the world-famous Evening Ganga Aarti. Dinner and overnight stay in Varanasi.',
+        title: 'Patna / Ranchi – Bodhgaya (200 Kms / 4 Hours)',
+        detail: 'Meet and greet at Bangalore International Airport with tour agency. Proceed to board the flight to Patna/Ranchi. Upon arrival, board the vehicle to Bodhgaya, with an en route lunch. Places to visit in Bodhgaya: Lord Buddha Temple (Mahabodhi Temple), Bodhi Tree, and Great Buddha Statue. Check in at the hotel and have dinner. Overnight stay at a hotel in Bodhgaya.',
         meals: 'Lunch, Dinner'
       },
       {
         day: 'Day 2',
-        title: 'Kashi Vishwanath Darshan & Sarnath Excursion',
-        detail: 'Early morning holy dip in River Ganga. Visit Kashi Vishwanath Temple Corridor, Maa Annapurna Temple, and Mata Vishalakshi Shakti Peeth. After breakfast, visit BHU Vishwanath Temple, Sankat Mochan Hanuman Temple, and Tulsi Manas Mandir. Post lunch, visit Sarnath (Dhamek Stupa, Chaukhandi Stupa & Deer Park where Lord Buddha preached his first sermon). Return to hotel for dinner and overnight stay in Varanasi.',
+        title: 'Bodhgaya – Varanasi (270 Kms / 6 Hours)',
+        detail: 'Visit the Vishnupad Temple (sacred among Hindus and dedicated to Lord Vishnu, housing the holy footprints of Lord Vishnu). Return to the hotel for breakfast. Checkout and proceed to Varanasi with an en route lunch. Check in at the hotel and have dinner. Overnight stay at a hotel in Varanasi.',
         meals: 'Breakfast, Lunch, Dinner'
       },
       {
         day: 'Day 3',
-        title: 'Varanasi – Prayagraj (Triveni Sangam & Temples)',
-        detail: 'After breakfast, checkout and proceed to Prayagraj (about 125 km). Visit the sacred Triveni Sangam (confluence of Rivers Ganga, Yamuna, and mythical Saraswati) for holy dip and boat ride. Visit Bade Hanuman Mandir (Leeta Hanuman), Anand Bhawan, and Alopi Devi Shakti Peeth. Dinner and overnight stay at hotel in Prayagraj.',
+        title: 'Varanasi (Kashi Vishwanath VIP Darshan & Ganga Aarti)',
+        detail: 'Early in the morning (5:30 AM), proceed to Ganga Ghat for a holy Ganga bath. See all the Ganga Ghats through a boat ride. Visit the most religious temples: Kashi Vishwanath Temple (VIP Darshan), Annapurna Temple, Vishalakshi Temple, and Kalabhairava Temple. Return to the hotel for afternoon lunch and rest for a while. In the afternoon, proceed to visit Sankat Mochan (Hanuman Temple) and Durga Devi Temple. In the evening, prepare for one of the most memorable moments of your life: enjoy Ganga Aarti at River Ganga (option to experience the Ganga Aarti by boat). Return to the hotel for dinner. Overnight stay at a hotel in Varanasi.',
         meals: 'Breakfast, Lunch, Dinner'
       },
       {
         day: 'Day 4',
-        title: 'Prayagraj – Ayodhya (Shri Ram Janmabhoomi)',
-        detail: 'After breakfast, checkout and drive to Ayodhya (about 170 km). Check in to hotel and proceed to visit Hanuman Garhi Temple. Have divine Darshan of Shri Ram Lalla Virajman at the grand Shri Ram Janmabhoomi Mandir. Visit Kanak Bhawan, Dashrath Mahal, and attend the evening Saryu River Aarti at Ram Ki Paidi. Dinner and overnight stay at hotel in Ayodhya.',
+        title: 'Varanasi – Prayagraj – Ayodhya (260 Kms / 3 Hours)',
+        detail: 'After breakfast, proceed to Prayagraj. Visit Triveni Sangam (meeting point of the three rivers - Ganga, Yamuna & Saraswati) overlooked by the eastern ramparts of the fort. Observe the point where the brown Ganges meets the greenish Yamuna and perform Pooja by traveling in a boat. Visit Bada Hanuman Temple and Alopi Devi Shakti Peeth. Proceed to Ayodhya. Enjoy dinner and overnight stay at a hotel in Ayodhya.',
         meals: 'Breakfast, Lunch, Dinner'
       },
       {
         day: 'Day 5',
-        title: 'Ayodhya Sightseeing – Varanasi / Lucknow Airport Departure',
-        detail: 'Morning walk along the peaceful Saryu Ghats. After breakfast and checkout, visit Lata Mangeshkar Chowk and local craft bazaars. Post lunch, transfer to Varanasi / Lucknow Airport for your return flight to Bangalore with divine blessings of Lord Shiva and Lord Rama.',
+        title: 'Ayodhya – Lucknow (135 Kms / 3.5 Hours) – Bangalore Departure',
+        detail: 'After breakfast, check out and proceed for sightseeing in Ayodhya. Visit notable sites in Ayodhya, believed to be the birthplace of Lord Rama: Ram Janmabhoomi, Hanuman Garhi, Rama Darbar Mandir, and Sarayu River. Have lunch. Drive to Lucknow. Fly from Lucknow to Bangalore, carrying sweet memories of the tour.',
         meals: 'Breakfast, Lunch'
       }
     ],
@@ -832,16 +832,17 @@ export const ALL_PACKAGES: Package[] = [
       'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
     ],
     detailedContent: {
-      overview: 'Embark on the ultimate North Indian pilgrimage covering three holiest cities: Kashi (Varanasi), Prayagraj, and Ayodhya. Experience Kashi Vishwanath Corridor, evening boat Aarti, holy dip at Triveni Sangam, and divine Darshan of Ram Lalla at Shri Ram Janmabhoomi Mandir in Ayodhya.',
-      significance: 'Varanasi is the Moksha Puri of Lord Shiva, Prayagraj is the Tirthraj of holy rivers, and Ayodhya is the sacred birthplace of Lord Shri Rama.',
+      overview: 'Embark on a sacred 4N/5D pilgrimage covering Bodhgaya, Kashi (Varanasi), Prayagraj, and Ayodhya. Experience the divine Mahabodhi Temple and Vishnupad Temple in Bodhgaya, VIP Darshan at Kashi Vishwanath, Ganga boat ride & Evening Aarti, holy dip & boat Pooja at Triveni Sangam in Prayagraj, and Lord Rama birthplace Darshan at Shri Ram Janmabhoomi in Ayodhya.',
+      significance: 'This grand yatra connects Bodhgaya (enlightenment land of Lord Buddha & holy footprint of Lord Vishnu), Varanasi (Lord Shiva\'s Moksha Puri), Prayagraj (Tirthraj confluence of holy rivers), and Ayodhya (sacred birthplace of Lord Rama).',
       bestTimeToVisit: 'October to March offers pleasant weather for temple visits, river ghat walks, and boat rides.',
       placesCovered: [
-        'Kashi Vishwanath Corridor & Annapurna Temple',
-        'Dashashwamedh Ghat Evening Ganga Aarti (Private Boat)',
-        'Sarnath Dhamek Stupa & Buddha Temple',
-        'Triveni Sangam & Bade Hanuman Mandir (Prayagraj)',
-        'Shri Ram Janmabhoomi Mandir & Hanuman Garhi (Ayodhya)',
-        'Saryu River Ghats & Ram Ki Paidi'
+        'Mahabodhi Temple, Bodhi Tree & Great Buddha Statue (Bodhgaya)',
+        'Vishnupad Temple (Bodhgaya)',
+        'Kashi Vishwanath Temple (VIP Darshan), Annapurna & Vishalakshi Temple',
+        'Ganga Ghat Bath, Boat Ride & Evening Ganga Aarti (Varanasi)',
+        'Sankat Mochan & Durga Devi Temple (Varanasi)',
+        'Triveni Sangam Boat Pooja, Bada Hanuman & Alopi Devi (Prayagraj)',
+        'Shri Ram Janmabhoomi, Hanuman Garhi, Rama Darbar & Sarayu River (Ayodhya)'
       ],
       travelTips: [
         'Mobile phones and electronic items are restricted inside Shri Ram Janmabhoomi & Kashi Vishwanath inner sanctums.',
@@ -850,7 +851,7 @@ export const ALL_PACKAGES: Package[] = [
       ],
       whyChooseUs: [
         'Round-trip flight transfers from Bangalore with dedicated tour manager',
-        'Hygienic 3-star deluxe hotel stays in Varanasi, Prayagraj & Ayodhya',
+        'Hygienic 3-star deluxe hotel stays in Bodhgaya, Varanasi & Ayodhya',
         'All meals included (Breakfast, Lunch, Dinner)'
       ]
     },
@@ -860,8 +861,12 @@ export const ALL_PACKAGES: Package[] = [
         answer: "Our team assists with queue management and pre-booking slots for smooth Darshan at both Kashi Vishwanath Corridor and Shri Ram Janmabhoomi Mandir."
       },
       {
-        question: "Is the Ganga Aarti boat ride included?",
-        answer: "Yes! A private boat ride to view the world-famous Evening Ganga Aarti at Dashashwamedh Ghat is included in the package."
+        question: "What places are visited in Bodhgaya?",
+        answer: "In Bodhgaya, you will visit the Lord Buddha Temple (Mahabodhi Temple), the sacred Bodhi Tree, the Great Buddha Statue, and the sacred Vishnupad Temple."
+      },
+      {
+        question: "Is the Ganga Aarti boat ride and Sangam boat Pooja included?",
+        answer: "Yes! Private boat ride to view the Evening Ganga Aarti in Varanasi and boat ride at Triveni Sangam in Prayagraj are included in the package."
       }
     ]
   },
