@@ -116,6 +116,122 @@ export const ALL_PACKAGES: Package[] = [
     coordinates: { x: 38, y: 55 }
   },
   {
+    id: 'shirdi-via-mumbai',
+    title: 'Shirdi Via Mumbai Flight Package',
+    category: 'pilgrimage',
+    destination: 'Mumbai, Trimbakeshwar, Shirdi, Shani Shingnapur, Ranjangaon & Pune',
+    duration: '1N/2D',
+    price: '₹19,999/-',
+    numericPrice: 19999,
+    minPax: 2,
+    featured: true,
+    image: '/Regular Shirdi Flight Package.png',
+    description: 'Special Bangalore to Shirdi Yatra via Mumbai: Visit Siddhivinayak Temple, Mahalaxmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Shirdi Sai Baba VIP Darshan, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur & Ranjangaon Mahaganapati.',
+    highlights: [
+      'Bangalore to Mumbai & Pune to Bangalore Flight Tickets',
+      'Siddivinayaka Temple & Mumbai Mahalaxmi Temple Darshan',
+      'Gateway Of India & Taj Hotel Sightseeing',
+      'Trimbakeshwar Jyothirlinga VIP Darshan',
+      'Shirdi Sai Baba Samadhi Mandir VIP Darshan',
+      'Dwarkamai, Chawadi, Gurusthan & Museum Visit',
+      'Shani Shingnapur & Ranjangaon Mahaganapathi Temple'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: true,
+      sightseeing: true
+    },
+    placesBadge: '2 Days Mumbai, Trimbakeshwar & Shirdi Flight Yatra',
+    placesList: [
+      { name: 'Mumbai (Siddhivinayak, Mahalaxmi, Gateway of India & Taj Hotel)' },
+      { name: 'Nasik (Trimbakeshwar Jyotirlinga - VIP Darshan)' },
+      { name: 'Shirdi (Sai Baba Samadhi Mandir, Dwarkamai, Chawadi, Gurusthan, Museum)' },
+      { name: 'Shani Shingnapur & Ranjangaon Mahaganapathi Temple' }
+    ],
+    inclusions: [
+      'Air fares (Bangalore to Mumbai & Pune to Bangalore)',
+      'Transfers and sightseeing by A/c vehicle',
+      '3-star Premium Accommodation on Twin/Double sharing basis for 01 night',
+      'All Meals as per itinerary (Breakfast, Lunch & Dinner)',
+      'VIP Darshan pass in Shirdi Sai Baba Temple & Trimbakeshwar',
+      'Tour Manager guidance throughout the yatra'
+    ],
+    exclusions: [
+      'Seat selection and meals in the flight journey',
+      'Mineral water, Coffee/Tea, personal shopping & laundry',
+      'Travel Insurance, tips, and personal expenses',
+      'Any medical or evacuation expenses',
+      'Anything not explicitly mentioned in inclusions'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bangalore - Mumbai - Trimbakeshwar - Shirdi',
+        detail: 'Arrive in Mumbai by flight from Bengaluru (BLR) and begin your pilgrimage with darshan at the Shri Siddhivinayak Temple, followed by a visit to the revered Mahalaxmi Temple. Later, enjoy a photo stop at the iconic Gateway of India before proceeding on a scenic drive to Trimbakeshwar, where you will have VIP Darshan at the sacred Trimbakeshwar Jyotirlinga. After completing the darshan, continue your drive to Shirdi, check in to your hotel, and stay overnight.',
+        meals: 'Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Shirdi - Pune - Bangalore',
+        detail: 'Begin the day with VIP Darshan at the Shri Sai Baba Temple in Shirdi. After darshan, enjoy some free time until the afternoon for shopping, exploring the local market, or relaxing at the hotel. Later, drive to the famous Shani Shingnapur Temple and seek the blessings of Lord Shani. Continue your journey to the Shri Kshetra Ranjangaon Mahaganpati Temple, one of the revered Ashtavinayak temples dedicated to Lord Ganesha. After darshan, proceed to Pune and board your return flight to Bengaluru (BLR), concluding your spiritual pilgrimage.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: 'Days 0-15', fee: '100%' },
+        { days: '15 Days & Above', fee: '50%' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not refund any claims for delay or cancellation of flight, mechanical problems, strikes, bandhs, or weather changes.',
+        'Flight timings are subject to availability at the time of booking.',
+        'Seats in the flights will be auto assigned by respective airlines.'
+      ]
+    },
+    remarks: [
+      'All meals are provided by Sai Samarth Tours in case the flight reaches destination early morning or leaves late in the evening.',
+      'The tour price mentioned for this tour is for Indian nationals only.',
+      'NRIs & Foreign nationals must convey proper identity and submit passport copies to booking executive.',
+      'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
+    ],
+    detailedContent: {
+      overview: 'Conclude a deeply divine pilgrimage from Bangalore covering Mumbai Siddhivinayak, Mahalaxmi, Gateway of India, Trimbakeshwar Jyotirlinga, Shirdi Sai Baba VIP Darshan, Shani Shingnapur, and Ranjangaon Mahaganapati with all-inclusive flights and AC transfers.',
+      significance: 'Experience the divine grace of Lord Ganesha at Siddhivinayak & Ranjangaon, Goddess Mahalaxmi, Lord Shiva at Trimbakeshwar Jyotirlinga, and Sadguru Sai Baba in Shirdi in a seamless 2-day yatra.',
+      bestTimeToVisit: 'Year-round comfortable pilgrimage weather across Maharashtra.',
+      placesCovered: [
+        'Siddhivinayak Temple & Mahalaxmi Temple (Mumbai)',
+        'Gateway of India & Taj Hotel Photo Stop',
+        'Trimbakeshwar Jyotirlinga (VIP Darshan)',
+        'Shirdi Sai Baba Samadhi Mandir (VIP Darshan)',
+        'Dwarkamai, Chawadi, Gurusthan & Museum',
+        'Shani Shingnapur Temple',
+        'Ranjangaon Ashtavinayak Mahaganapati Temple'
+      ],
+      travelTips: [
+        'Pre-arranged VIP Darshan passes provided in Shirdi & Trimbakeshwar.',
+        'Traditional modest attire required for all temple visits.'
+      ],
+      whyChooseUs: [
+        'Round-trip flights (Bangalore-Mumbai & Pune-Bangalore)',
+        'VIP Darshan in Shirdi with zero waiting hassle',
+        'Handpicked 3-star hotel accommodations'
+      ]
+    },
+    faqs: [
+      {
+        question: "What is covered in the Shirdi Via Mumbai package?",
+        answer: "This package covers Bangalore to Mumbai flight, Mumbai Siddhivinayak, Mahalaxmi, Gateway of India, Trimbakeshwar Jyotirlinga VIP Darshan, Shirdi Sai Baba VIP Darshan, Shani Shingnapur, Ranjangaon Mahaganapati, and return flight from Pune to Bangalore."
+      },
+      {
+        question: "Are VIP Darshan passes included?",
+        answer: "Yes, VIP Darshan passes for Sai Baba Samadhi Mandir in Shirdi and Trimbakeshwar Jyotirlinga are included."
+      }
+    ],
+    coordinates: { x: 38, y: 55 }
+  },
+  {
     id: 'shirdi-3-jyothirlinga',
     title: 'Shirdi with 3 Jyothirlinga Tour Package',
     category: 'pilgrimage',

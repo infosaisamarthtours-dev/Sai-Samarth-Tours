@@ -4,7 +4,6 @@ import { Package } from '../types';
 import { Hero } from '../components/Hero';
 import { FeaturedYatras } from '../components/FeaturedYatras';
 import { AboutSection } from '../components/AboutSection';
-import { OurServices } from '../components/OurServices';
 import { TrustStatistics } from '../components/TrustStatistics';
 import { ShirdiSpecial } from '../components/ShirdiSpecial';
 import { PilgrimageYatras } from '../components/PilgrimageYatras';
@@ -36,20 +35,17 @@ export function HomePage() {
 
   return (
     <div className="flex-grow">
-      {/* 2. Hero Section */}
+      {/* 2. Hero Banner Section */}
       <Hero onOpenEnquiry={() => handleOpenEnquiry()} />
 
-      {/* 2.5 Our Services */}
-      <OurServices />
+      {/* 3. About Us Section (Right after Hero banner) */}
+      <AboutSection />
 
-      {/* 2.7 Featured 4 Cards */}
+      {/* 4. Priority Packages (Featured Yatras) */}
       <FeaturedYatras
         onSelectPackage={handleSelectPackage}
         onOpenEnquiry={handleOpenEnquiry}
       />
-
-      {/* 3. About Section */}
-      <AboutSection />
 
       {/* 4. Shirdi Special */}
       <ShirdiSpecial 

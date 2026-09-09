@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Phone, Mail, 
+  Phone, Mail, MapPin, BookOpen,
   Compass, Building2, Map, Plane, ChevronRight, ArrowUp
 } from 'lucide-react';
 import { siteConfig } from '../data/config';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { BLOG_POSTS } from '../data/blogs';
 
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const recentBlogs = BLOG_POSTS.slice(0, 3);
 
   const socialLinks = [
     {
@@ -113,29 +116,53 @@ export function Footer() {
       </div>
 
       {/* 3. Main Body */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           
-          {/* Column 1: Logo & Info */}
-          <div className="lg:col-span-5 pr-4">
+          {/* Column 1: Logo, Info, Address & Phone (lg:col-span-4) */}
+          <div className="lg:col-span-4 space-y-4">
             <img 
               src="/Sai samarth tours logo.jpeg" 
               alt={siteConfig.name} 
-              className="h-16 w-auto object-contain bg-white rounded p-1 mb-6" 
+              className="h-16 w-auto object-contain bg-white rounded p-1 mb-4" 
             />
-            <p className="text-gray-300 text-sm leading-relaxed max-w-sm font-medium">
+            <p className="text-gray-300 text-xs leading-relaxed font-medium">
               Bangalore's trusted tour operator since 2013, Sai Samarth Tours provides domestic and international tour packages from Bangalore, including group tours, pilgrimages, honeymoons, family trips, and customized holiday packages.
             </p>
+            
+            {/* Address & Phone Details Block */}
+            <div className="pt-2 space-y-2.5 border-t border-white/10">
+              <div className="flex items-start gap-2.5 text-xs text-gray-300">
+                <MapPin className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                <span className="leading-relaxed">
+                  NO: 2238, 2nd Floor, 16th ‘B’ Cross, Yelahanka New Town, Bengaluru – 560064, Karnataka, India
+                </span>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-gray-300">
+                <Phone className="w-4 h-4 text-[#F59E0B] shrink-0" />
+                <a href={`tel:${siteConfig.phoneTentative}`} className="hover:text-white font-bold transition-colors">
+                  +91 {siteConfig.phoneTentative}
+                </a>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs text-gray-300">
+                <Mail className="w-4 h-4 text-[#F59E0B] shrink-0" />
+                <a href={`mailto:${siteConfig.emailTentative}`} className="hover:text-white transition-colors">
+                  {siteConfig.emailTentative}
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Column 2: Discover Us */}
-          <div className="lg:col-span-3 lg:col-start-7">
-            <h4 className="text-xs font-bold text-[#F59E0B] tracking-wider mb-6 uppercase">Discover Us</h4>
-            <ul className="space-y-4 text-sm font-medium">
+          {/* Column 2: Discover Us (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-bold text-[#F59E0B] tracking-wider mb-5 uppercase">Discover Us</h4>
+            <ul className="space-y-3 text-xs font-medium">
               {[
                 { label: 'About Us', to: '/about' },
                 { label: 'Blog', to: '/blog' },
-                { label: 'Contact Us', to: '/contact' }
+                { label: 'Contact Us', to: '/contact' },
+                { label: 'Shirdi Packages', to: '/shirdi-packages' },
+                { label: 'Pilgrimage Packages', to: '/pilgrimage-packages' }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link to={link.to} className="flex items-center gap-2 hover:text-white transition-colors group">
@@ -147,10 +174,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Support */}
-          <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold text-[#F59E0B] tracking-wider mb-6 uppercase">Support</h4>
-            <ul className="space-y-4 text-sm font-medium">
+          {/* Column 3: Support (lg:col-span-2) */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-bold text-[#F59E0B] tracking-wider mb-5 uppercase">Support</h4>
+            <ul className="space-y-3 text-xs font-medium">
               {[
                 { label: 'FAQ', to: '/faq' },
                 { label: 'Cancellation Policy', to: '/cancellation-policy' },
@@ -167,11 +194,42 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Column 4: Recently Added Blogs (3 with small image) (lg:col-span-4) */}
+          <div className="lg:col-span-4">
+            <h4 className="text-xs font-bold text-[#F59E0B] tracking-wider mb-5 uppercase flex items-center gap-2">
+              <BookOpen className="w-3.5 h-3.5" />
+              Recent Blogs
+            </h4>
+            <div className="space-y-3.5">
+              {recentBlogs.map((blog) => (
+                <Link 
+                  key={blog.id} 
+                  to={`/blog/${blog.slug}`}
+                  className="flex items-center gap-3 group hover:bg-white/5 p-1.5 rounded-xl transition-all duration-200"
+                >
+                  <img 
+                    src={blog.image} 
+                    alt={blog.title} 
+                    className="w-14 h-14 rounded-xl object-cover border border-amber-500/30 shrink-0 group-hover:scale-105 transition-transform" 
+                  />
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[10px] text-amber-400 font-semibold block mb-0.5">
+                      {blog.date}
+                    </span>
+                    <h5 className="text-xs font-bold text-gray-200 group-hover:text-amber-300 transition-colors line-clamp-2 leading-snug">
+                      {blog.title}
+                    </h5>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
 
       {/* 4. Bottom Bar */}
-      <div className="bg-[#08152B] py-6 text-xs text-gray-400 font-medium">
+      <div className="bg-[#08152B] py-5 text-xs text-gray-400 font-medium">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>

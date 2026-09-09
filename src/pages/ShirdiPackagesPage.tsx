@@ -6,6 +6,7 @@ import { Package } from '../types';
 import { FaqSection } from '../components/FaqSection';
 
 const shirdiIds = [
+  'shirdi-via-mumbai',
   'shirdi-3-jyothirlinga',
   'shirdi-2-jyothirlinga',
   'shirdi-regular'
