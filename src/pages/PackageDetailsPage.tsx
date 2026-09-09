@@ -723,7 +723,7 @@ export function PackageDetailsPage() {
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => setIsEnquiryOpen(true)}
-                    className="w-full bg-[#D97706] hover:bg-[#B45309] text-white py-3.5 px-3 rounded-2xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all hover:-translate-y-0.5"
+                    className="w-full bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white py-3.5 px-3 rounded-2xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all hover:-translate-y-0.5 cursor-pointer"
                   >
                     <span className="material-symbols-outlined text-base shrink-0">edit_document</span>
                     <span className="truncate">Enquire Now</span>

@@ -236,7 +236,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3.5 px-6 text-sm font-bold text-white bg-gradient-to-r from-[#2563EB] via-[#1D4ED8] to-[#F59E0B] hover:from-[#1D4ED8] hover:to-[#EA580C] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer transform active:scale-95 mt-2"
+                className="w-full py-3.5 px-6 text-sm font-bold text-white bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer transform active:scale-95 mt-2"
               >
                 <Send className="w-4 h-4 text-white" />
                 <span>Submit Enquiry</span>

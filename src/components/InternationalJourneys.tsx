@@ -140,14 +140,14 @@ export function InternationalJourneys({ onSelectPackage, onOpenEnquiry }: Props)
                   <div className="flex flex-row gap-1.5 w-full pt-0.5">
                     <button 
                       onClick={() => onOpenEnquiry(pkg.title)}
-                      className="flex-1 flex items-center justify-center gap-1 bg-white text-[#2563EB] border border-[#2563EB]/40 hover:bg-blue-50 hover:border-[#2563EB] px-1.5 py-2 rounded-lg font-bold text-[11px] transition-all"
+                      className="flex-1 flex items-center justify-center gap-1 bg-amber-50 text-[#EA580C] border border-[#EA580C]/40 hover:bg-[#EA580C] hover:text-white px-1.5 py-2 rounded-lg font-bold text-[11px] transition-all"
                     >
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                       Enquiry
                     </button>
                     <button 
                       onClick={() => onSelectPackage(pkg)}
-                      className="flex-1 flex items-center justify-center gap-1 bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] hover:from-[#F59E0B] hover:to-[#EA580C] text-white px-1.5 py-2 rounded-lg font-bold text-[11px] transition-all shadow-xs active:scale-95"
+                      className="flex-1 flex items-center justify-center gap-1 bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white px-1.5 py-2 rounded-lg font-bold text-[11px] transition-all shadow-xs active:scale-95"
                     >
                       View Details
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>

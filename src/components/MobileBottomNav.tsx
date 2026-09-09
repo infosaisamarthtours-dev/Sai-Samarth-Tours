@@ -29,7 +29,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenEnquiry 
 
       <button
         onClick={onOpenEnquiry}
-        className="flex items-center gap-1 px-5 py-2 bg-[#F59E0B] text-[#ffffff] font-bold text-xs uppercase tracking-wider rounded-lg shadow-md cursor-pointer"
+        className="flex items-center gap-1 px-5 py-2 bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-md cursor-pointer"
       >
         <span className="material-symbols-outlined text-sm">send</span>
         <span>Enquire</span>
