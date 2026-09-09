@@ -251,6 +251,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
               <div className="absolute left-0 top-full w-72 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="flex flex-col">
+                  <Link to="/package/shirdi-via-mumbai" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi Via Mumbai</Link>
                   <Link to="/package/shirdi-3-jyothirlinga" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 3 Jyothirlinga</Link>
                   <Link to="/package/shirdi-2-jyothirlinga" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 2 Jyothirlinga</Link>
                   <Link to="/package/shirdi-regular" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Regular Shirdi</Link>
