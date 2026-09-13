@@ -518,7 +518,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 23999,
     minPax: 2,
     featured: true,
-    image: '/Kolhapur & Pandharpur Tour Package.png',
+    image: '/Kolhapur & Pandharpur 1.png',
+    images: [
+      '/Kolhapur & Pandharpur 1.png',
+      '/Kolhapur & Pandharpur 2.png',
+      '/Kolhapur & Pandharpur 3.png'
+    ],
     description: 'Devotional Yatra from Bangalore to Pune, Kolhapur (Shri Mahalakshmi Temple & Chhatrapati Shahu Palace, Jyotiba Temple), Tuljapur (Tulja Bhavani Temple), Akkalkot (Swami Samarth Temple), and Pandharpur (Vitthal-Rukmini Mandir).',
     highlights: [
       'Bangalore to Pune Flight with AC Vehicle Transfers',
@@ -637,7 +642,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 30999,
     minPax: 2,
     featured: true,
-    image: '/Puri Jagannath & Konark Tour Package.png',
+    image: '/Puri Jagannath & Konark 1.png',
+    images: [
+      '/Puri Jagannath & Konark 1.png',
+      '/Puri Jagannath & Konark 2.png',
+      '/Puri Jagannath & Konark 3.png'
+    ],
     description: 'Sacred Odisha Pilgrimage Yatra: Visit Lord Jagannath Temple in Puri, Sakshi Gopal Temple, UNESCO World Heritage Konark Sun Temple, Dhauli Peace Pagoda, Lingaraj Temple, Kala Bhoomi Odisha Crafts Museum, and Udayagiri Jain Caves.',
     highlights: [
       'Jagannath Temple Puri (Lord Jagannath Evening Darshan)',
@@ -757,7 +767,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 27999,
     minPax: 2,
     featured: true,
-    image: '/Kamakhya Temple Tour Package.png',
+    image: '/Kamakhya Temple 1.png',
+    images: [
+      '/Kamakhya Temple 1.png',
+      '/Kamakhya Temple 2.png',
+      '/Kamakhya Temple 3.png'
+    ],
     description: 'Sacred Assam Shakti Peeth Yatra: Direct flight from Bangalore to Guwahati, visit famous Maa Kamakhya Temple (revered Shakti Peeth), Vasistha Temple, Balaji Temple, Umananda Temple on Peacock Island in Brahmaputra River, and Navagraha Temple.',
     highlights: [
       'Maa Kamakhya Temple Darshan (Revered Shakti Peeth)',
@@ -872,7 +887,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 41999,
     minPax: 2,
     featured: true,
-    image: '/Kashi with Ayodhya & Prayagraj Yatra.png',
+    image: '/Kashi Ayodhya Prayagraj and Bodhgaya 1.png',
+    images: [
+      '/Kashi Ayodhya Prayagraj and Bodhgaya 1.png',
+      '/Kashi Ayodhya Prayagraj and Bodhgaya 2.png',
+      '/Kashi Ayodhya Prayagraj and Bodhgaya 3.png'
+    ],
     description: 'Sacred Bodhgaya, Kashi, Prayagraj & Ayodhya Pilgrimage Yatra: Visit Mahabodhi Temple, Bodhi Tree & Vishnupad Temple in Bodhgaya; Kashi Vishwanath Temple (VIP Darshan), Annapurna Temple, Vishalakshi Temple, Kalabhairava & Evening Ganga Aarti boat ride in Varanasi; Triveni Sangam holy dip & Bada Hanuman Mandir in Prayagraj; and Shri Ram Janmabhoomi, Hanuman Garhi & Sarayu River in Ayodhya.',
     highlights: [
       'Mahabodhi Temple, Bodhi Tree & Vishnupad Temple (Bodhgaya)',
@@ -1016,7 +1036,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 29999,
     minPax: 2,
     featured: true,
-    image: '/Kashi with Ayodhya Tour Package.png',
+    image: '/Kashi with Ayodhya 1.png',
+    images: [
+      '/Kashi with Ayodhya 1.png',
+      '/Kashi with Ayodhya 2.png',
+      '/Kashi with Ayodhya 3.png'
+    ],
     description: 'Focused Sacred Pilgrimage: Visit Kashi Vishwanath Temple Corridor, Annapurna Temple, Evening Ganga Aarti boat ride in Varanasi, Sarnath Stupa, and divine Ram Lalla Darshan at Shri Ram Janmabhoomi Mandir & Hanuman Garhi in Ayodhya.',
     highlights: [
       'Kashi Vishwanath Corridor & Annapurna Temple Darshan',
@@ -1142,7 +1167,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 30999,
     minPax: 2,
     featured: true,
-    image: '/Indore, Ujjain & Omkareshwar Tour Package.png',
+    image: '/Indore, Ujjain & Omkareshwar 1.png',
+    images: [
+      '/Indore, Ujjain & Omkareshwar 1.png',
+      '/Indore, Ujjain & Omkareshwar 2.png',
+      '/Indore, Ujjain & Omkareshwar 3.png'
+    ],
     description: 'Sacred 2 Jyotirlingas Pilgrimage Yatra: Visit Mahakaleshwar Jyotirlinga (3rd Jyotirlinga) with Mahakal Corridor in Ujjain, Omkareshwara Jyotirlinga (4th Jyotirlinga) & Mamaleshwara on the Narmada river, Pitreshwar Hanuman Mandir, Khajrana Ganesh, Sandipani Ashram, and Gadh Kalika in Indore.',
     highlights: [
       'Shri Mahakaleshwar Jyotirlinga (3rd Jyotirlinga) & VIP Darshan',
@@ -1227,7 +1257,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 37999,
     minPax: 2,
     featured: true,
-    image: '/Mata Vaishnodevi & Golden Temple Yatra.png',
+    image: '/Mata Vaishnodevi & Golden Temple Yatra 1.png',
+    images: [
+      '/Mata Vaishnodevi & Golden Temple Yatra 1.png',
+      '/Mata Vaishnodevi & Golden Temple Yatra 2.png',
+      '/Mata Vaishnodevi & Golden Temple Yatra 3.png'
+    ],
     description: 'Sacred Pilgrimage Yatra: Ascend to Mata Vaishnodevi Temple in Katra, Bhairo Baba Temple via ropeway, Raghunath Ji Temple in Jammu, Golden Temple & Jallianwala Bagh in Amritsar, and Wagah Border Retreat Ceremony.',
     highlights: [
       'Famous Mata Vaishnodevi Holy Shrine Darshan (Katra)',
@@ -1324,7 +1359,12 @@ export const ALL_PACKAGES: Package[] = [
     price: '₹28,999/-',
     numericPrice: 28999,
     minPax: 2,
-    image: '/Baidyanath Dham.png',
+    image: '/Baidyanath Dham 1.png',
+    images: [
+      '/Baidyanath Dham 1.png',
+      '/Baidyanath Dham 2.png',
+      '/Baidyanath Dham 3.png'
+    ],
     description: 'Visit Baba Baidyanath Dham (Baba Dham) in Deoghar, one of the 12 sacred Jyothirlingas known for granting divine health & fulfillment. Explore Basukinath, Thapovan, and Jayadurga Shakthipeeta.',
     highlights: ['Baba Baidyanath Jyothirlinga Darshan', 'Basukinath Temple Visit', 'Jayadurga Shakthipeeta', 'Thapovan Visit'],
     tourIncludes: {
@@ -1437,7 +1477,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 35999,
     minPax: 2,
     featured: true,
-    image: '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra.png',
+    image: '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 1.png',
+    images: [
+      '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 1.png',
+      '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 2.png',
+      '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 3.png'
+    ],
     description: 'Grand South India Temple Pilgrimage: Visit Brihadeeswara Temple in Thanjavur, Srirangam Ranganathaswamy Temple, Madurai Meenakshi Temple, Rameshwaram Ramanathaswamy Temple with 22 Holy Theertham Wells & Spatika Linga Darshan, Dhanushkodi, Thiruchendur Murugan Temple, Kanyakumari Vivekananda Rock & Sunset, Suchindram Temple, and Sree Padmanabhaswamy Temple in Thiruvananthapuram.',
     highlights: [
       'Srirangam Ranganathaswamy & UNESCO Brihadeeswara Temple',
@@ -1575,7 +1620,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 46999,
     minPax: 2,
     featured: true,
-    image: '/Grand Gujarat Pilgrimage & Statue of Unity Yatra.png',
+    image: '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 1.png',
+    images: [
+      '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 1.png',
+      '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 2.png',
+      '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 3.png'
+    ],
     description: 'Grand Gujarat Sacred & Heritage Yatra: Direct flight from Bangalore to Ahmedabad, Sabarmati Ashram, Adalaj Stepwell, Akshardham, Shree Dwarkadhish Temple (Char Dham), Bet Dwarka, Nageshwar Jyotirlinga, Rukmini Temple, Kirti Mandir & Sudama Mandir in Porbandar, Somnath Jyotirlinga & Light/Sound Show, Gir Forest National Park Safari, Nishkalank Mahadev Temple in sea, World\'s Tallest Statue of Unity (182m), Valley of Flowers, and Sardar Sarovar Dam.',
     highlights: [
       'Shree Dwarkadhish Temple (Holy Char Dham) & Bet Dwarka',

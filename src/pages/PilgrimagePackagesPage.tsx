@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { FaqSection } from '../components/FaqSection';
+import { ImageSlider } from '../components/ImageSlider';
 
 const pilgrimageIds = [
   'kholapur-pandarpur',
@@ -57,11 +58,21 @@ export function PilgrimagePackagesPage() {
             >
               {/* Image Section (Top) */}
               <div className="relative h-56 overflow-hidden">
-                <img 
-                  src={dest.image} 
-                  alt={dest.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                {dest.images && dest.images.length > 1 ? (
+                  <ImageSlider
+                    images={dest.images}
+                    alt={dest.title}
+                    interval={3000}
+                    dotsPosition="bottom-right"
+                    className="w-full h-full absolute inset-0"
+                  />
+                ) : (
+                  <img 
+                    src={dest.image} 
+                    alt={dest.title} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                )}
               </div>
 
               {/* Content Section (Bottom) */}
