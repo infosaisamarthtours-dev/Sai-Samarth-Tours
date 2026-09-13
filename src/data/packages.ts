@@ -12,7 +12,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 17999,
     minPax: 2,
     featured: true,
-    image: '/Regular Shirdi Flight Package.png',
+    image: '/Regular Shirdi 1.png',
+    images: [
+      '/Regular Shirdi 1.png',
+      '/Regular Shirdi 2.png',
+      '/Regular Shirdi 3.png'
+    ],
     description: 'Direct Flight Shirdi Yatra from Bangalore to Mumbai & return from Pune: VIP Darshan at Sai Baba Samadhi Mandir, visit Siddhivinayak Temple, Mumbai Mahalakshmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur, and Ranjangaon Mahaganapati Temple.',
     highlights: [
       'Bangalore to Mumbai & Pune to Bangalore Flights',
@@ -125,7 +130,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: '/Regular Shirdi Flight Package.png',
+    image: '/Shirdi Via Mumbai 1.png',
+    images: [
+      '/Shirdi Via Mumbai 1.png',
+      '/Shirdi Via Mumbai 2.png',
+      '/Shirdi Via Mumbai 3.png'
+    ],
     description: 'Special Bangalore to Shirdi Yatra via Mumbai: Visit Siddhivinayak Temple, Mahalaxmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Shirdi Sai Baba VIP Darshan, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur & Ranjangaon Mahaganapati.',
     highlights: [
       'Bangalore to Mumbai & Pune to Bangalore Flight Tickets',
@@ -241,7 +251,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 23999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi with 3 Jyothirlinga Tour Package.png',
+    image: '/Shirdi with 3 Jyothirlinga 1.png',
+    images: [
+      '/Shirdi with 3 Jyothirlinga 1.png',
+      '/Shirdi with 3 Jyothirlinga 2.png',
+      '/Shirdi with 3 Jyothirlinga 3.png'
+    ],
     description: 'Sacred Maharashtra Pilgrimage Yatra: Visit 3 revered Shiva Jyotirlingas (Bhimashankar, Trimbakeshwar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, Panchavati in Nashik, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
     highlights: [
       'Trimbakeshwar Jyotirlinga (Three-Faced Trinity Shivlinga)',
@@ -376,7 +391,12 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi with 2 Jyothirlinga Tour Package.png',
+    image: '/Shirdi with 2 Jyothirlinga 1.png',
+    images: [
+      '/Shirdi with 2 Jyothirlinga 1.png',
+      '/Shirdi with 2 Jyothirlinga 2.png',
+      '/Shirdi with 2 Jyothirlinga 3.png'
+    ],
     description: 'Divine Maharashtra Pilgrimage Yatra (1N/2D): Visit 2 sacred Shiva Jyotirlingas (Bhimashankar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
     highlights: [
       'Bhimashankar Jyotirlinga',

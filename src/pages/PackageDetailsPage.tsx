@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
 import { EnquiryModal } from '../components/EnquiryModal';
+import { ImageSlider } from '../components/ImageSlider';
 import { 
   ChevronDown, 
   ChevronUp, 
@@ -265,11 +266,21 @@ export function PackageDetailsPage() {
             {/* Right Side: Image Card */}
             <div className="lg:col-span-5">
               <div className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl group bg-white/5 backdrop-blur-md">
-                <img 
-                  src={pkg.image} 
-                  alt={pkg.title} 
-                  className="w-full h-[300px] sm:h-[380px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                {pkg.images && pkg.images.length > 1 ? (
+                  <ImageSlider
+                    images={pkg.images}
+                    alt={pkg.title}
+                    interval={3000}
+                    dotsClassName="top-4 right-4"
+                    className="w-full h-[300px] sm:h-[380px]"
+                  />
+                ) : (
+                  <img 
+                    src={pkg.image} 
+                    alt={pkg.title} 
+                    className="w-full h-[300px] sm:h-[380px] object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                )}
                 
                 {/* Floating Rating Badge */}
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-amber-300 text-xs font-bold px-3 py-1 rounded-full border border-white/10 flex items-center gap-1.5 shadow-md">

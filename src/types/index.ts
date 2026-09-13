@@ -12,6 +12,7 @@ export interface Package {
   featured?: boolean;
   comingSoon?: boolean;
   image: string;
+  images?: string[];
   description: string;
   highlights: string[];
   inclusions: string[];

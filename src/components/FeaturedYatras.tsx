@@ -2,6 +2,7 @@ import React from 'react';
 import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { Plane, Bus, Clock, Building2 } from 'lucide-react';
+import { ImageSlider } from './ImageSlider';
 
 interface FeaturedYatrasProps {
   onSelectPackage: (pkg: Package) => void;
@@ -67,12 +68,22 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
             >
               {/* Image Header */}
               <div className="relative h-40 w-full overflow-hidden shrink-0">
-                <img
-                  src={pkg.image}
-                  alt={pkg.title}
-                  className={`w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 ${pkg.id === 'shirdi-regular' ? 'object-right' : 'object-center'}`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>
+                {pkg.images && pkg.images.length > 1 ? (
+                  <ImageSlider
+                    images={pkg.images}
+                    alt={pkg.title}
+                    interval={3000}
+                    dotsPosition="bottom-right"
+                    className="w-full h-full absolute inset-0"
+                  />
+                ) : (
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className={`w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 ${pkg.id === 'shirdi-regular' ? 'object-right' : 'object-center'}`}
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 pointer-events-none"></div>
 
                 {/* Top Badges */}
                 <div className="absolute top-2.5 left-2.5 bg-[#114088]/90 text-amber-300 backdrop-blur-md px-2 py-0.5 rounded-full text-[9px] font-bold shadow-xs flex items-center gap-1">
