@@ -7,6 +7,7 @@ import { FaqSection } from '../components/FaqSection';
 import { ImageSlider } from '../components/ImageSlider';
 
 const shirdiIds = [
+  'shirdi-via-pune',
   'shirdi-via-mumbai',
   'shirdi-3-jyothirlinga',
   'shirdi-2-jyothirlinga',

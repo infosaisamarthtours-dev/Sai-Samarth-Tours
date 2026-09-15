@@ -242,6 +242,140 @@ export const ALL_PACKAGES: Package[] = [
     coordinates: { x: 38, y: 55 }
   },
   {
+    id: 'shirdi-via-pune',
+    title: 'Shirdi Via Pune Flight Package',
+    category: 'pilgrimage',
+    destination: 'Pune, Prati Balaji, Shani Shingnapur & Shirdi',
+    duration: '1N/2D',
+    price: '₹16,999/-',
+    numericPrice: 16999,
+    minPax: 2,
+    featured: true,
+    image: '/Shirdi Via Pune 1.png',
+    images: [
+      '/Shirdi Via Pune 1.png',
+      '/Shirdi Via Pune 2.png',
+      '/Shirdi Via Pune 3.png'
+    ],
+    description: 'The Bangalore via Pune Shirdi Package is another popular pilgrimage option for devotees traveling from Bangalore to the holy shrine in Shirdi. Includes round-trip Bangalore-Pune flights, Prati Balaji Mandir Pune visit, Shani Shingnapur darshan, VIP Darshan at Shirdi Sai Baba Samadhi Mandir, 4-Star hotel stay with full board meals, and AC transfers.',
+    highlights: [
+      'Flights Bangalore–Pune & Pune–Bangalore',
+      '4-Star hotel stay with meals',
+      'Prati Balaji Mandir Pune visit',
+      'VIP Darshan at Shirdi Sai Baba Temple',
+      'Shani Shingnapur darshan',
+      'AC Bus/Car for transfers'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: true,
+      sightseeing: true
+    },
+    placesBadge: '2 Days Bangalore - Pune - Shirdi Flight Pilgrimage',
+    placesList: [
+      { name: 'Pune (Prati Balaji Mandir Ketkawale)' },
+      { name: 'Shani Shingnapur (Revered Open-Air Shani Temple)' },
+      { name: 'Shirdi (Sai Baba Samadhi Mandir - VIP Darshan)' },
+      { name: 'Dwarkamai, Chavadi, Gurusthan & Museum' }
+    ],
+    inclusions: [
+      'Flights & transfers (Round-trip Bangalore–Pune & Pune–Bangalore flight tickets)',
+      'A/C Vehicle to transfer throughout the tour itinerary',
+      '4 Star Accommodation on Twin/Double sharing basis for 01 Night in Shirdi',
+      'Full board meals (Breakfast, Lunch & Dinner as per itinerary)',
+      'Sightseeing’s as per itinerary (Prati Balaji, Shani Shingnapur & Shirdi)',
+      'VIP Darshan pass at Shirdi Sai Baba Temple',
+      'Dedicated Tour Manager guidance throughout the pilgrimage'
+    ],
+    exclusions: [
+      'Entry fee to any monument, park, etc.',
+      'Additional sightseeing not mentioned in the itinerary',
+      'Any sort of rickshaw / auto fare',
+      'Any personal expenses by own (laundry, telephone, shopping, porterage)',
+      'Services which are not mentioned in "Inclusions"',
+      'Airline seat selection & in-flight meals'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bangalore - Pune - Shirdi',
+        detail: '• Arrival in Pune: Board your morning flight and arrive in Pune. Visit the beautiful Prati Balaji Mandir to begin your spiritual journey.\n• Shani Shingnapur Darshan: Proceed towards Shirdi with an en-route visit to Shani Shingnapur. Offer your prayers at this unique open-air temple.\n• Arrival in Shirdi: Reach the holy town of Shirdi and check into your comfortable hotel. Rest and prepare for your VIP darshan the next morning.',
+        meals: 'Lunch, Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Shirdi - Pune - Bangalore',
+        detail: '• Morning VIP Darshan: Enjoy a peaceful and unhurried VIP Darshan at the Sai Baba Samadhi Mandir. Offer your prayers and seek divine blessings.\n• Return Journey: After checking out from your hotel, begin your comfortable return journey to Pune. Relish the scenic drive back.\n• Flight to Bangalore: Arrive at Pune airport to board your return flight. Head back to Bangalore carrying the peaceful blessings of Sai Baba.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: 'Days 0-15', fee: '100%' },
+        { days: '15 Days & Above', fee: '50%' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not refund any claims for delay or cancellation of flight, mechanical problems, strikes, bandhs, or weather changes.',
+        'Flight timings are subject to availability at the time of booking.',
+        'Seats in the flights will be auto assigned by respective airlines.'
+      ]
+    },
+    remarks: [
+      'All meals are provided by Sai Samarth Tours in case the flight reaches destination early morning or leaves late in the evening.',
+      'The tour price mentioned for this tour is for Indian nationals only.',
+      'NRIs & Foreign nationals must convey proper identity and submit passport copies to booking executive.',
+      'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
+    ],
+    detailedContent: {
+      overview: 'The Bangalore via Pune Shirdi Package is another popular pilgrimage option for devotees traveling from Bangalore to the holy shrine in Shirdi. The journey passes through Pune, offering convenient connectivity and a relaxed travel schedule for pilgrims. This Bangalore to Shirdi tour package via Pune is ideal for those who prefer a structured and comfortable pilgrimage route. With carefully arranged transportation and a well-planned itinerary, devotees can travel without stress and focus on their spiritual journey. Upon reaching Shirdi, pilgrims will visit the sacred temple of Sai Baba of Shirdi, where devotees gather from across the country to offer prayers. The temple complex is known for its peaceful atmosphere, devotional chants, and strong spiritual energy that leaves visitors feeling calm and blessed. Our package ensures that devotees receive proper assistance for temple darshan while also having enough time to experience the spiritual environment of Shirdi. Whether you are traveling with family or as part of a group pilgrimage, this tour provides a comfortable and meaningful experience. The Bangalore Pune Shirdi tour package is a perfect choice for devotees seeking a smooth travel route combined with a fulfilling spiritual visit.',
+      significance: 'Starting your pilgrimage with blessings at Prati Balaji Mandir (an authentic replica of Tirumala Venkateswara Temple), followed by Lord Shaneshwara at Shani Shingnapur, and culminating in the peaceful, miraculous presence of Sadguru Sai Baba at Shirdi brings deep spiritual fulfillment and divine protection.',
+      bestTimeToVisit: 'Accessible and pleasant throughout the year with swift morning and evening flights between Bangalore and Pune.',
+      placesCovered: [
+        'Prati Balaji Mandir (Ketkawale near Pune)',
+        'Shani Shingnapur Open-Air Holy Shrine',
+        'Shirdi Sai Baba Samadhi Mandir (VIP Darshan)',
+        'Dwarkamai, Chavadi, Gurusthan & Lendi Baug',
+        'Sai Baba Museum & Pune City'
+      ],
+      travelTips: [
+        'Pre-booked VIP Darshan passes provided in Shirdi for minimal queue waiting.',
+        'Devotees are requested to wear traditional modest attire for all temple visits.',
+        'Carry valid photo identification (Aadhaar / Voter ID / Passport) for flights and hotel check-in.'
+      ],
+      whyChooseUs: [
+        'Round-trip flights (Bangalore-Pune & Pune-Bangalore) with prompt transfers',
+        'Guaranteed VIP Darshan at Shirdi Sai Baba Samadhi Mandir with zero queue stress',
+        'Handpicked 4-Star hotel stay with full board delicious meals',
+        'Dedicated AC vehicle and personal Tour Manager guidance throughout the yatra'
+      ]
+    },
+    faqs: [
+      {
+        question: 'What is covered in the Bangalore to Shirdi via Pune tour package?',
+        answer: 'This package covers round-trip Bangalore-Pune flights, AC vehicle transfers, visit to Prati Balaji Mandir near Pune, Shani Shingnapur darshan, VIP Darshan at Shirdi Sai Baba Samadhi Mandir, 4-star hotel stay, and full board meals.'
+      },
+      {
+        question: 'Is VIP Darshan included at Shirdi Sai Baba Temple?',
+        answer: 'Yes, VIP Darshan pass at the holy Shirdi Sai Baba Samadhi Mandir is completely included in this package for a smooth and peaceful spiritual experience.'
+      },
+      {
+        question: 'What category of accommodation is provided in this package?',
+        answer: 'We provide premium 4-Star hotel accommodation in Shirdi with modern amenities, comfortable beds, elevator access, and pure vegetarian full board meals (Breakfast, Lunch & Dinner).'
+      },
+      {
+        question: 'Is this tour suitable for senior citizens and families?',
+        answer: 'Absolutely! The Shirdi via Pune route is one of the most relaxed and comfortable itineraries. With morning flights, sanitized AC vehicles, minimal walking, VIP darshan passes, and attentive tour manager support, it is ideally suited for senior citizens.'
+      },
+      {
+        question: 'What are the flight timings between Bangalore and Pune?',
+        answer: 'We schedule convenient morning flights from Bangalore to Pune on Day 1 and evening flights from Pune to Bangalore on Day 2, maximizing your darshan and rest time.'
+      }
+    ],
+    coordinates: { x: 39, y: 56 }
+  },
+  {
     id: 'shirdi-3-jyothirlinga',
     title: 'Shirdi with 3 Jyothirlinga Tour Package',
     category: 'pilgrimage',

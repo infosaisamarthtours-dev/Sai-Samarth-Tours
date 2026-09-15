@@ -13,6 +13,7 @@ interface Props {
 export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
   // The specific packages requested by the user
   const shirdiIds = [
+    'shirdi-via-pune',
     'shirdi-via-mumbai',
     'shirdi-3-jyothirlinga',
     'shirdi-2-jyothirlinga',
@@ -36,7 +37,7 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
             Shirdi Special Packages
           </h2>
           <p className="text-xs sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
-            Seamless Sai Baba Yatra from Bangalore with direct flights, VIP Darshan, 3-star hotels & dedicated tour managers.
+            Seamless Sai Baba Yatra from Bangalore with direct flights, VIP Darshan, 4-star/3-star hotels & dedicated tour managers.
           </p>
 
           {/* Related Topic Feature Badges */}
@@ -48,15 +49,15 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
               <span className="text-[#F59E0B]">✓</span> VIP Special Darshan Included
             </span>
             <span className="bg-white text-[#114088] text-xs font-bold px-3.5 py-1.5 rounded-full border border-blue-100 flex items-center gap-1.5 shadow-2xs">
-              <span className="text-[#F59E0B]">✓</span> Includes Shani Shingnapur & Trimbakeshwar
+              <span className="text-[#F59E0B]">✓</span> Includes Pune, Prati Balaji & Shani Shingnapur
             </span>
           </div>
 
           <div className="w-20 h-1 bg-gradient-to-r from-[#F59E0B] to-[#EA580C] mx-auto mt-5 rounded-full"></div>
         </div>
 
-        {/* 4 Cards per Row Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-4 lg:gap-5">
           {shirdiPackages.map((pkg) => (
             <div 
               key={pkg.id} 
