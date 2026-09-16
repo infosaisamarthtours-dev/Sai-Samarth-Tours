@@ -169,6 +169,12 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
               <img
                 src={post.image}
                 alt={post.title}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('Pilgrimage.png')) {
+                    target.src = '/Pilgrimage.png';
+                  }
+                }}
                 className="w-full h-full object-cover"
               />
             </div>

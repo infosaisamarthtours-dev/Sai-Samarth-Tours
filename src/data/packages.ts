@@ -4,12 +4,12 @@ export const ALL_PACKAGES: Package[] = [
   // ================= PILGRIMAGE PACKAGES =================
   {
     id: 'shirdi-regular',
-    title: 'Regular Shirdi Flight Package',
+    title: 'Direct Shirdi Flight Package',
     category: 'pilgrimage',
-    destination: 'Mumbai, Nasik (Trimbakeshwar), Shirdi, Shani Shingnapur & Pune',
+    destination: 'Shirdi & Shani Shingnapur',
     duration: '1N/2D',
-    price: '₹17,999/-',
-    numericPrice: 17999,
+    price: '₹19,999/-',
+    numericPrice: 19999,
     minPax: 2,
     featured: true,
     image: '/Regular Shirdi 1.png',
@@ -18,13 +18,14 @@ export const ALL_PACKAGES: Package[] = [
       '/Regular Shirdi 2.png',
       '/Regular Shirdi 3.png'
     ],
-    description: 'Direct Flight Shirdi Yatra from Bangalore to Mumbai & return from Pune: VIP Darshan at Sai Baba Samadhi Mandir, visit Siddhivinayak Temple, Mumbai Mahalakshmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur, and Ranjangaon Mahaganapati Temple.',
+    description: 'Direct Flight Shirdi Yatra from Bangalore to Shirdi Airport & return: Special Early Morning 5:00 AM Kakad Aarti at Baba Samadhi Mandir, VIP Darshan, Gurusthan, Museum, Dwarakamai, Chavadi, and holy visit to Shani Shingnapur.',
     highlights: [
-      'Bangalore to Mumbai & Pune to Bangalore Flights',
+      'Direct Flights: Bangalore to Shirdi Airport & Return to Bangalore',
+      'Special Early Morning Kakad Aarti (5:00 AM) at Sai Baba Samadhi Mandir',
       'VIP Darshan at Sai Baba Samadhi Mandir',
-      'Siddhivinayak Temple, Mumbai Mahalakshmi & Gateway of India',
-      'Trimbakeshwar Jyotirlinga Darshan (10th Jyotirlinga)',
-      'Shani Shingnapur & Ranjangaon Mahaganapathi Visit'
+      'Visit Gurusthan, Museum, Dwarakamai & Chavadi',
+      'Shani Shingnapur (Lord Shani Temple) Darshan',
+      'Dedicated AC Vehicle, 3-Star Hotel Stay & Pure Veg Meals'
     ],
     tourIncludes: {
       hotels: true,
@@ -33,19 +34,19 @@ export const ALL_PACKAGES: Package[] = [
       flights: true,
       sightseeing: true
     },
-    placesBadge: '2 Days Mumbai, Trimbakeshwar & Shirdi Flight Yatra',
+    placesBadge: '2 Days Direct Bangalore to Shirdi Flight Yatra',
     placesList: [
-      { name: 'Mumbai (Siddhivinayak, Mahalakshmi & Gateway of India)' },
-      { name: 'Nasik (Trimbakeshwar Jyotirlinga)' },
-      { name: 'Shirdi (Sai Baba Samadhi Mandir - VIP Darshan)' },
-      { name: 'Shani Shingnapur & Ranjangaon Mahaganapathi' }
+      { name: 'Shirdi (Sai Baba Samadhi Mandir - VIP Darshan & Kakad Aarti)' },
+      { name: 'Dwarakamai, Chavadi, Gurusthan & Museum' },
+      { name: 'Shani Shingnapur (Lord Shani Temple)' }
     ],
     inclusions: [
-      'Air fares (Bangalore to Mumbai & Pune to Bangalore)',
-      'Transfers and sightseeing\'s by A/c vehicle',
+      'Air fares (Bangalore to Shirdi & Shirdi to Bangalore Direct Flights)',
+      'Transfers and sightseeing by dedicated A/c vehicle',
       '3-star Premium Accommodation on a Twin/Double sharing basis for 01 night',
-      'Meals as per itinerary',
-      'VIP Darshan in Shirdi Sai Baba temple'
+      'Meals as per itinerary (Dinner on Day 1; Breakfast & Enroute Lunch on Day 2)',
+      'VIP Darshan in Shirdi Sai Baba Samadhi Mandir',
+      'Special Kakad Aarti darshan assistance at Baba Samadhi Mandir'
     ],
     exclusions: [
       'Seat selection and meals are not included in the flight journey',
@@ -57,15 +58,15 @@ export const ALL_PACKAGES: Package[] = [
     sampleItinerary: [
       {
         day: 'Day 1',
-        title: 'Bangalore - Mumbai - Nasik (Triyambhakeshwar)',
-        detail: 'Depart from Bangalore to Mumbai. Upon arrival at Mumbai airport, board the vehicle and head to Siddivinayaka temple. Enroute, enjoy sightseeing at Bandra Bridge. After Siddivinayak darshan, visit Mumbai Mahalakshmi temple, Gateway of India. Later explore Trimbakeshwar Jyotirlinga (10th Jyotirlinga). Dinner and overnight stay at a hotel in Shirdi.',
+        title: 'Bangalore - Shanisignapur-Shirdi',
+        detail: 'Bangalore to Shirdi Departure (By Flight), On arrival at Shirdi airport, Board the vehicle and proceed towards Shani Shingnapura (Shani temple). Later return to shirdi Check-in to the Hotel, Fresh up, In the evening you can visit Sai Mandir to have a Sai Baba samadhi mandir Darshan (VIP Darshan), Gurusthan, Museum, Dwarakamai, and Chawadi then return back to hotel, dinner and overnight stay at hotel in Shirdi.',
         meals: 'Dinner'
       },
       {
         day: 'Day 2',
-        title: 'Shirdi - Shanishinapur - Pune',
-        detail: 'After breakfast, proceed to Sai Mandir for a VIP darshan at Sai Baba Samadhi Mandir, Gurusthan, Museum, Dwarakamai, and Chawadi. Return to the hotel, have lunch, check out, and head to Shani Shingnapur. Visit Famous Mahaganapathi Temple in Ranjangaon if time permits. Enjoy dinner enroute and proceed to Pune airport for the return journey to Bangalore, cherishing the sweet memories of our tour.',
-        meals: 'Breakfast, Lunch, Dinner'
+        title: 'Shirdi - Bangalore',
+        detail: 'Early in the Morning *4:00 AM* proceed to BABA Samadhi Mandir for Special KAKAD AARTHI. Kakad Aarti is the first early-morning ritual performed at 5:00 AM to wake up Shri Sai Baba at the Shree Saibaba Sansthan Trust, Shirdi temple later return back to hotel have breakfast and checkout Enroute Lunch. Then Drop to Shirdi Airport and back to Bangalore With a Blessings of Sai Baba',
+        meals: 'Breakfast, Lunch'
       }
     ],
     cancellationPolicy: {
@@ -86,36 +87,39 @@ export const ALL_PACKAGES: Package[] = [
       'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
     ],
     detailedContent: {
-      overview: 'Experience the divine grace of Sadguru Sai Baba, Lord Ganesha, and Lord Shiva with our specialized Regular Shirdi Flight Package from Bangalore. Cover Mumbai Siddhivinayak, Gateway of India, Trimbakeshwar Jyotirlinga, Shirdi Sai Baba VIP Darshan, Shani Shingnapur, and Ranjangaon Mahaganapathi.',
-      significance: 'This sacred yatra covers the revered Siddhivinayak temple, the holy Trimbakeshwar Jyotirlinga, and the blessed abode of Sai Baba in Shirdi, offering a spiritually enriching pilgrimage.',
-      bestTimeToVisit: 'Shirdi and Maharashtra pilgrimage circuits welcome devotees year-round with comfortable weather throughout the year.',
+      overview: 'Experience the divine grace of Shri Sai Baba and Lord Shani Dev with our Direct Shirdi Flight Package from Bangalore. Enjoy direct flights landing right at Shirdi Airport, an unforgettable early-morning Kakad Aarti at 5:00 AM, pre-arranged VIP Darshan at Samadhi Mandir, Dwarakamai, and Chavadi, and a holy visit to Shani Shingnapur.',
+      significance: 'Direct flights directly to Shirdi Airport eliminate tedious multi-hour road journeys from Mumbai or Pune, offering the fastest and most peaceful pilgrimage specially suited for elderly devotees and families.',
+      bestTimeToVisit: 'Shirdi welcomes devotees year-round with divine peace and comfortable weather.',
       placesCovered: [
-        'Mumbai Siddhivinayak Temple & Gateway of India',
-        'Mumbai Mahalakshmi Temple & Bandra Bridge',
-        'Trimbakeshwar Jyotirlinga (10th Jyotirlinga)',
+        'Shirdi Airport Transfers',
+        'Shani Shingnapur (Lord Shani Temple)',
         'Sai Baba Samadhi Mandir (VIP Darshan)',
-        'Dwarkamai, Chavadi, Gurusthan & Museum',
-        'Shani Shingnapur & Ranjangaon Mahaganapathi Temple'
+        'Special 5:00 AM Kakad Aarti at Baba Samadhi Mandir',
+        'Dwarakamai, Chavadi, Gurusthan & Museum'
       ],
       travelTips: [
-        'Pre-arranged VIP Darshan passes provided for fast & comfortable Darshan in Shirdi.',
-        'Mobiles and electronics are prohibited inside the main Samadhi Mandir.',
-        'Footwear counters are available at temple gate entrances.'
+        'Pre-arranged VIP Darshan and Kakad Aarti passes provided for fast & comfortable Darshan.',
+        'Mobiles and electronics are strictly prohibited inside the main Samadhi Mandir.',
+        'Traditional attire is recommended: Kurta Pyjama for men and Saree/Salwar Kameez for women.'
       ],
       whyChooseUs: [
-        'Convenient flights (Bangalore to Mumbai & Pune to Bangalore) with dedicated vehicle transfers',
-        'VIP Special Darshan in Shirdi for minimal waiting time',
-        'Comfortable 3-star hotel stay close to temple'
+        'Direct flights from Bangalore to Shirdi Airport & return with zero long highway drives',
+        'Early morning 5:00 AM Kakad Aarti & VIP Darshan at Baba Samadhi Mandir',
+        'Comfortable 3-star hotel stay close to temple with all pure veg meals'
       ]
     },
     faqs: [
       {
-        question: "How is VIP Darshan arranged in Shirdi?",
-        answer: "We arrange VIP Darshan for you at Sai Baba Samadhi Mandir, ensuring minimal waiting time and a comfortable Darshan experience."
+        question: "What is the flight route for Direct Shirdi Package?",
+        answer: "This tour flies directly from Bangalore (BLR) to Shirdi Airport (SAG) on Day 1, and returns directly from Shirdi Airport (SAG) to Bangalore (BLR) on Day 2."
       },
       {
-        question: "What is the flight route for this package?",
-        answer: "This tour departs from Bangalore to Mumbai by flight on Day 1, covers Mumbai, Nasik (Trimbakeshwar), Shirdi, Shani Shingnapur, and returns via Pune Airport to Bangalore on Day 2."
+        question: "Is the early morning Kakad Aarti included?",
+        answer: "Yes, on Day 2 early morning at 4:00 AM, devotees proceed for the sacred 5:00 AM Kakad Aarti at Sai Baba Samadhi Mandir."
+      },
+      {
+        question: "How is VIP Darshan arranged in Shirdi?",
+        answer: "We arrange VIP Darshan for you at Sai Baba Samadhi Mandir, ensuring minimal waiting time and a comfortable Darshan experience."
       }
     ],
     coordinates: { x: 38, y: 55 }

@@ -29,7 +29,7 @@ export function PromoAndReviews() {
     {
       name: "Priya Sharma",
       location: "Bangalore",
-      packageTag: "Regular Shirdi Flight Yatra",
+      packageTag: "Direct Shirdi Flight Yatra",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
       text: "Amazing experience! The Shirdi flight package was perfectly organized from Bangalore. VIP Darshan at Sai Baba Samadhi Mandir was fast, and the tour manager took great care of my senior citizen parents.",
       rating: 5,

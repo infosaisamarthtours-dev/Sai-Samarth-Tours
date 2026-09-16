@@ -316,6 +316,12 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
                       <img
                         src={post.image}
                         alt={post.title}
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.src.includes('Pilgrimage.png')) {
+                            target.src = '/Pilgrimage.png';
+                          }
+                        }}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                         loading="lazy"
                       />
@@ -352,6 +358,9 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
                         <img
                           src={post.author.avatar}
                           alt={post.author.name}
+                          onError={(e) => {
+                            e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author.name)}&background=114088&color=fff`;
+                          }}
                           className="w-5 h-5 rounded-full object-cover"
                         />
                         <span className="font-semibold text-gray-700">{post.author.name}</span>

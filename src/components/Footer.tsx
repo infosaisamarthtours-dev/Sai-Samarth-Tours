@@ -88,10 +88,10 @@ export function Footer() {
       <div className="border-t border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-4 py-5 text-sm font-bold">
-            <a href="#" className="flex items-center gap-2 text-[#F59E0B]">
+            <Link to="/" className="flex items-center gap-2 text-[#F59E0B] hover:text-[#FBBF24] transition-colors">
               <Compass className="w-4 h-4" />
-              Explore Sai Shishir
-            </a>
+              Explore Sai Samarth Tours
+            </Link>
             <Link to="/pilgrimage-packages" className="flex items-center gap-2 hover:text-white transition-colors">
               <Building2 className="w-4 h-4 text-gray-400" />
               Pilgrimage Tour Packages
@@ -203,6 +203,12 @@ export function Footer() {
                   <img 
                     src={blog.image} 
                     alt={blog.title} 
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('Pilgrimage.png')) {
+                        target.src = '/Pilgrimage.png';
+                      }
+                    }}
                     className="w-14 h-14 rounded-xl object-cover border border-amber-500/30 shrink-0 group-hover:scale-105 transition-transform" 
                   />
                   <div className="flex-1 min-w-0">
