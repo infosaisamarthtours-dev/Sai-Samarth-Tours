@@ -49,7 +49,7 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
               <span className="text-[#F59E0B]">✓</span> VIP Special Darshan Included
             </span>
             <span className="bg-white text-[#114088] text-xs font-bold px-3.5 py-1.5 rounded-full border border-blue-100 flex items-center gap-1.5 shadow-2xs">
-              <span className="text-[#F59E0B]">✓</span> Includes Pune, Prati Balaji & Shani Shingnapur
+              <span className="text-[#F59E0B]">✓</span> Includes Pune, Grishneshwar & Shani Shingnapur
             </span>
           </div>
 
