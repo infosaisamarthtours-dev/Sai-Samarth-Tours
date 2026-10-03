@@ -1,6 +1,7 @@
 import React from 'react';
 import { siteConfig } from '../data/config';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { trackContact } from '../utils/pixel';
 
 interface MobileBottomNavProps {
   onOpenEnquiry: () => void;
@@ -11,6 +12,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenEnquiry 
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#ffffff]/95 backdrop-blur-lg border-t border-[#EAE2D6] px-4 py-2 flex items-center justify-around shadow-2xl">
       <a
         href={`tel:${siteConfig.phoneTentative}`}
+        onClick={() => trackContact({ content_name: 'Mobile Nav - Phone Call' })}
         className="flex flex-col items-center justify-center text-[#F59E0B] py-1 px-3"
       >
         <span className="material-symbols-outlined text-lg">call</span>
@@ -21,6 +23,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenEnquiry 
         href={getWhatsAppUrl()}
         target="_blank"
         rel="noreferrer"
+        onClick={() => trackContact({ content_name: 'Mobile Nav - WhatsApp' })}
         className="flex flex-col items-center justify-center text-emerald-700 py-1 px-3"
       >
         <span className="material-symbols-outlined text-lg text-emerald-600">chat</span>
