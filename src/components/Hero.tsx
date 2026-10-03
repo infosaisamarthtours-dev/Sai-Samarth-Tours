@@ -8,43 +8,47 @@ interface HeroProps {
 const slides = [
   {
     id: 1,
-    topBadge: "✦ BANGALORE'S TRUSTED TRAVEL PARTNER ✦",
-    scriptTitle: "We Plan. You Travel.",
-    mainTitle: "Begin Your Spiritual Journey to Shirdi",
-    subBadge: "Tour Packages From Bangalore",
-    desc: "Experience the divine blessings of Sai Baba with comfortable & thoughtfully planned Shirdi tour packages.",
-    desktopImg: '/Shridi-banner-image.png',
-    mobileImg: '/Shridi-mobile-view.png'
+    topBadge: "✦ TOP RATED TRAVEL AGENCY IN BANGALORE ✦",
+    scriptTitle: "Tour Packages From Bangalore",
+    mainTitle: "& Pilgrimage Tours",
+    subBadge: "Direct Flights • VIP Darshan • 3-Star Hotels",
+    desc: "Bangalore's leading tour operator for direct flight Shirdi tour packages from Bangalore with early morning Kakad Aarti, pure veg food, and senior citizen care.",
+    desktopImg: '/shirdi-tour-hero-banner-desktop.webp',
+    mobileImg: '/shirdi-tour-hero-banner-mobile.webp',
+    seoAlt: "Tour packages from Bangalore and pilgrimage tours - Sai Samarth Tours"
   },
   {
     id: 2,
-    topBadge: "✦ SACRED TEMPLE EXPEDITIONS ✦",
-    scriptTitle: "Walk The Path Of Faith & Devotion",
-    mainTitle: "Shirdi, Varanasi & Kamakhya",
-    subBadge: "VIP Darshan Included & 3-Star Hotels",
-    desc: "Trusted pilgrimage travel company offering complete spiritual tour experiences with comfort and care.",
-    desktopImg: '/pilgrimage-banner-image.png',
-    mobileImg: '/pilgrimage-mobile-view.png'
+    topBadge: "✦ PILGRIMAGE TOURS FROM BANGALORE ✦",
+    scriptTitle: "Sacred Temple Expeditions",
+    mainTitle: "Kashi Ayodhya & Jyotirlinga Tours",
+    subBadge: "Confirmed Darshan • Flights from BLR",
+    desc: "All-inclusive pilgrimage tours from Bangalore to Kashi Vishwanath, Ayodhya Ram Mandir, and 12 Jyotirlingas with dedicated tour manager assistance.",
+    desktopImg: '/pilgrimage-tours-hero-banner-desktop.webp',
+    mobileImg: '/pilgrimage-tours-hero-banner-mobile.webp',
+    seoAlt: "Kashi Ayodhya tour package from Bangalore with flights and VIP darshan - Sai Samarth Tours"
   },
   {
     id: 3,
-    topBadge: "✦ INCREDIBLE DOMESTIC ESCAPES ✦",
-    scriptTitle: "A Beautiful Story",
-    mainTitle: "Every Journey Deserves",
-    subBadge: "Kashmir, Leh Ladakh & Kerala",
-    desc: "From Kashmir snows to Kerala backwaters, create unforgettable travel experiences from Bangalore.",
-    desktopImg: '/Domastic-banner-image.png',
-    mobileImg: '/Domastic-mobile-view.png'
+    topBadge: "✦ DOMESTIC TOUR PACKAGES FROM BANGALORE ✦",
+    scriptTitle: "Curated Holiday Packages",
+    mainTitle: "Kashmir, Kerala & Leh Ladakh",
+    subBadge: "Private AC Vehicles & Verified Resorts",
+    desc: "Customized domestic holiday packages from Bangalore with flights, Dal Lake houseboats in Kashmir, Munnar tea hills in Kerala, and Rajasthan royal palaces.",
+    desktopImg: '/domestic-tours-hero-banner-desktop.webp',
+    mobileImg: '/domestic-tours-hero-banner-mobile.webp',
+    seoAlt: "Domestic tour packages from Bangalore to Kashmir, Kerala, and Ladakh - Sai Samarth Tours"
   },
   {
     id: 4,
-    topBadge: "✦ GLOBAL HOLIDAY EXPERIENCES ✦",
-    scriptTitle: "Fly Beyond Borders",
-    mainTitle: "Explore The World In Style",
-    subBadge: "Malaysia, Maldives, Dubai & Europe",
-    desc: "Handcrafted international holiday packages from Bangalore with complete visa, flight, & luxury hotel arrangements.",
-    desktopImg: '/international_tour_desktop_banner_1600x587.png',
-    mobileImg: '/International-mobile-view.png'
+    topBadge: "✦ INTERNATIONAL TOUR PACKAGES FROM BANGALORE ✦",
+    scriptTitle: "Global Family Vacations",
+    mainTitle: "Thailand, Bali, Dubai & Malaysia",
+    subBadge: "Complete Visa Assistance & Indian Meals",
+    desc: "Handcrafted international tour packages from Bangalore departing Kempegowda Airport with complete visa guidance, 4-star stays, and Indian dining.",
+    desktopImg: '/international-tours-hero-banner-desktop.webp',
+    mobileImg: '/international-tours-hero-banner-mobile.webp',
+    seoAlt: "International tour packages from Bangalore to Thailand, Dubai, Bali and Malaysia - Sai Samarth Tours"
   }
 ];
 
@@ -63,27 +67,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
 
   return (
     <section id="hero" className="relative w-full bg-[#FBF9F5] overflow-hidden">
-      {/* Invisible spacers to establish container height exactly to the image aspect ratio */}
-      <img src={slides[0].desktopImg} className="hidden sm:block w-full h-auto invisible pointer-events-none" aria-hidden="true" alt="" />
-      <img src={slides[0].mobileImg} className="block sm:hidden w-full h-auto invisible pointer-events-none" aria-hidden="true" alt="" />
-
-      {slides.map((slide, index) => (
-        <div 
-          key={slide.id}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-        >
-          {/* Desktop Image */}
-          <img 
-            src={slide.desktopImg} 
-            alt={slide.mainTitle} 
-            className="hidden sm:block w-full h-full object-contain"
-          />
-          {/* Mobile Image */}
-          <img 
-            src={slide.mobileImg} 
-            alt={slide.mainTitle} 
-            className="block sm:hidden w-full h-full object-contain"
-          />
+      {slides.map((slide, index) => {
+        const isFirst = index === 0;
+        return (
+          <div 
+            key={slide.id}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          >
+            {/* Unified Responsive Hero Image with WebP & priority loading */}
+            <picture className="w-full h-full block">
+              <source media="(min-width: 640px)" srcSet={slide.desktopImg} type="image/webp" width={1600} height={587} />
+              <source media="(max-width: 639px)" srcSet={slide.mobileImg} type="image/webp" width={750} height={950} />
+              <img 
+                src={slide.desktopImg} 
+                alt={slide.seoAlt}
+                width={1600}
+                height={587}
+                loading={isFirst ? "eager" : "lazy"}
+                fetchPriority={isFirst ? "high" : "low"}
+                decoding={isFirst ? "sync" : "async"}
+                className="w-full h-full object-contain"
+              />
+            </picture>
           
           <div className="absolute inset-0 w-full h-full max-w-7xl mx-auto pl-4 xs:pl-6 sm:pl-16 md:pl-20 pr-2 sm:pr-12 flex flex-col justify-center items-start">
             <div className={`w-[58%] xs:w-[60%] sm:w-2/3 lg:w-1/2 space-y-1.5 xs:space-y-2 sm:space-y-3.5 ${slide.id === 3 || slide.id === 4 ? 'lg:ml-[10%]' : 'lg:-ml-[4%]'} ${slide.id === 4 ? '-mt-[2%] sm:-mt-[8%]' : ''}`}>
@@ -95,12 +100,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
 
               {/* Headline with Mixed Script & Serif */}
               <div className="flex flex-col gap-0.5 sm:gap-1 mb-0.5">
-                <span className="font-script text-[#EA580C] text-sm xs:text-base sm:text-5xl lg:text-6xl font-bold drop-shadow-xs leading-snug sm:leading-none sm:whitespace-nowrap">
-                  {slide.scriptTitle}
-                </span>
-                <h1 className="font-serif text-[11px] xs:text-xs sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#114088] drop-shadow-sm leading-tight tracking-tight">
-                  {slide.mainTitle}
-                </h1>
+                {isFirst ? (
+                  <h1 className="font-serif text-[11px] xs:text-xs sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#114088] drop-shadow-sm leading-tight tracking-tight">
+                    <span className="block font-script text-[#EA580C] text-sm xs:text-base sm:text-5xl lg:text-6xl font-bold drop-shadow-xs leading-snug sm:leading-none sm:whitespace-nowrap">
+                      {slide.scriptTitle}
+                    </span>
+                    <span className="block">
+                      {slide.mainTitle}
+                    </span>
+                  </h1>
+                ) : (
+                  <div className="font-serif text-[11px] xs:text-xs sm:text-3xl lg:text-4xl xl:text-5xl font-black text-[#114088] drop-shadow-sm leading-tight tracking-tight">
+                    <span className="block font-script text-[#EA580C] text-sm xs:text-base sm:text-5xl lg:text-6xl font-bold drop-shadow-xs leading-snug sm:leading-none sm:whitespace-nowrap">
+                      {slide.scriptTitle}
+                    </span>
+                    <span className="block">
+                      {slide.mainTitle}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Sub-Badge Pill */}
@@ -136,7 +154,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
             </div>
           </div>
         </div>
-      ))}
+      ); })}
       
       {/* Slider Controls (Desktop Only) */}
       <button 

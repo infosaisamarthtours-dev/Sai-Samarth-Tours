@@ -3,19 +3,31 @@ import { ArrowRight, Compass, Shield, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { DOMESTIC_PACKAGES } from '../data/packages';
 import { FaqSection } from '../components/FaqSection';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 export function DomesticPackagesPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
+      <SEOHead
+        title="Domestic Holiday Tour Packages from Bangalore | Sai Samarth Tours"
+        description="Handcrafted India holiday packages from Bangalore: Kashmir, Kerala backwaters, Leh Ladakh, Rajasthan, Himachal Pradesh & Andaman. Includes flights, deluxe hotels & customized sightseeing."
+        canonical="https://saisamarthtours.com/domestic-packages"
+        ogImage="/domestic-packages-category-card.webp"
+      />
       
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-gray-200">Domestic Packages</span>
+          <div className="mb-6">
+            <Breadcrumbs 
+              items={[
+                { name: 'Tour Packages', url: '/tour-packages' },
+                { name: 'Domestic Tour Packages' }
+              ]} 
+              theme="dark" 
+            />
           </div>
 
           {/* Title & Description */}
@@ -41,7 +53,11 @@ export function DomesticPackagesPage() {
               <div className="relative h-56 overflow-hidden">
                 <img 
                   src={dest.image} 
-                  alt={dest.title} 
+                  alt={`${dest.title} holiday tour package from Bangalore`} 
+                  width={450}
+                  height={280}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>

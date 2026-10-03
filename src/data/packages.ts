@@ -12,11 +12,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: '/Regular Shirdi 1.png',
+    image: '/shirdi-flight-tour-package-from-bangalore-1.webp',
     images: [
-      '/Regular Shirdi 1.png',
-      '/Regular Shirdi 2.png',
-      '/Regular Shirdi 3.png'
+      '/shirdi-flight-tour-package-from-bangalore-1.webp',
+      '/shirdi-flight-tour-package-from-bangalore-2.webp',
+      '/shirdi-flight-tour-package-from-bangalore-3.webp'
     ],
     description: 'Direct Flight Shirdi Yatra from Bangalore to Shirdi Airport & return: Special Early Morning 5:00 AM Kakad Aarti at Baba Samadhi Mandir, VIP Darshan, Gurusthan, Museum, Dwarakamai, Chavadi, and holy visit to Shani Shingnapur.',
     highlights: [
@@ -134,11 +134,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 18999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi Via Mumbai 1.png',
+    image: '/shirdi-via-mumbai-tour-package-from-bangalore-1.webp',
     images: [
-      '/Shirdi Via Mumbai 1.png',
-      '/Shirdi Via Mumbai 2.png',
-      '/Shirdi Via Mumbai 3.png'
+      '/shirdi-via-mumbai-tour-package-from-bangalore-1.webp',
+      '/shirdi-via-mumbai-tour-package-from-bangalore-2.webp',
+      '/shirdi-via-mumbai-tour-package-from-bangalore-3.webp'
     ],
     description: 'Special Bangalore to Shirdi Yatra via Mumbai: Visit Siddhivinayak Temple, Mahalaxmi Temple, Gateway of India, Trimbakeshwar Jyotirlinga, Shirdi Sai Baba VIP Darshan, Dwarkamai, Chavadi, Gurusthan, Museum, Shani Shingnapur & Ranjangaon Mahaganapati.',
     highlights: [
@@ -255,11 +255,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 17999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi Via Pune 1.png',
+    image: '/shirdi-via-pune-tour-package-from-bangalore-1.webp',
     images: [
-      '/Shirdi Via Pune 1.png',
-      '/Shirdi Via Pune 2.png',
-      '/Shirdi Via Pune 3.png'
+      '/shirdi-via-pune-tour-package-from-bangalore-1.webp',
+      '/shirdi-via-pune-tour-package-from-bangalore-2.webp',
+      '/shirdi-via-pune-tour-package-from-bangalore-3.webp'
     ],
     description: 'The Shirdi Via Pune Flight Package from Bangalore offers a deeply divine spiritual journey across Maharashtra. Includes round-trip Bangalore-Pune flights, darshan at Wagaleshwar Shiva Temple, sacred Grishneshwar Jyotirlinga, UNESCO Ellora Caves, Bhadra Maruti Temple, VIP Darshan at Shri Sai Baba Temple in Shirdi, Shani Shingnapur, and Ranjangaon Mahaganpati Temple with hotel stay, pure veg meals, and AC transfers.',
     highlights: [
@@ -393,11 +393,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 23999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi with 3 Jyothirlinga 1.png',
+    image: '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-1.webp',
     images: [
-      '/Shirdi with 3 Jyothirlinga 1.png',
-      '/Shirdi with 3 Jyothirlinga 2.png',
-      '/Shirdi with 3 Jyothirlinga 3.png'
+      '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-1.webp',
+      '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-2.webp',
+      '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-3.webp'
     ],
     description: 'Sacred Maharashtra Pilgrimage Yatra: Visit 3 revered Shiva Jyotirlingas (Bhimashankar, Trimbakeshwar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, Panchavati in Nashik, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
     highlights: [
@@ -533,11 +533,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: '/Shirdi with 2 Jyothirlinga 1.png',
+    image: '/shirdi-with-2-jyotirlinga-tour-package-from-bangalore-1.webp',
     images: [
-      '/Shirdi with 2 Jyothirlinga 1.png',
-      '/Shirdi with 2 Jyothirlinga 2.png',
-      '/Shirdi with 2 Jyothirlinga 3.png'
+      '/shirdi-with-2-jyotirlinga-tour-package-from-bangalore-1.webp',
+      '/shirdi-with-2-jyotirlinga-tour-package-from-bangalore-2.webp',
+      '/shirdi-with-2-jyotirlinga-tour-package-from-bangalore-3.webp'
     ],
     description: 'Divine Maharashtra Pilgrimage Yatra (1N/2D): Visit 2 sacred Shiva Jyotirlingas (Bhimashankar & Ghrishneshwar), Shirdi Sai Baba VIP Darshan, UNESCO Ellora Caves, Bhadra Maruti Temple, and Shani Shingnapur.',
     highlights: [
@@ -660,11 +660,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 23999,
     minPax: 2,
     featured: true,
-    image: '/Kolhapur & Pandharpur 1.png',
+    image: '/kolhapur-pandharpur-tour-package-from-bangalore-1.webp',
     images: [
-      '/Kolhapur & Pandharpur 1.png',
-      '/Kolhapur & Pandharpur 2.png',
-      '/Kolhapur & Pandharpur 3.png'
+      '/kolhapur-pandharpur-tour-package-from-bangalore-1.webp',
+      '/kolhapur-pandharpur-tour-package-from-bangalore-2.webp',
+      '/kolhapur-pandharpur-tour-package-from-bangalore-3.webp'
     ],
     description: 'Devotional Yatra from Bangalore to Pune, Kolhapur (Shri Mahalakshmi Temple & Chhatrapati Shahu Palace, Jyotiba Temple), Tuljapur (Tulja Bhavani Temple), Akkalkot (Swami Samarth Temple), and Pandharpur (Vitthal-Rukmini Mandir).',
     highlights: [
@@ -784,11 +784,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 30999,
     minPax: 2,
     featured: true,
-    image: '/Puri Jagannath & Konark 1.png',
+    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
     images: [
-      '/Puri Jagannath & Konark 1.png',
-      '/Puri Jagannath & Konark 2.png',
-      '/Puri Jagannath & Konark 3.png'
+      '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
+      '/puri-jagannath-konark-tour-package-from-bangalore-2.webp',
+      '/puri-jagannath-konark-tour-package-from-bangalore-3.webp'
     ],
     description: 'Sacred Odisha Pilgrimage Yatra: Visit Lord Jagannath Temple in Puri, Sakshi Gopal Temple, UNESCO World Heritage Konark Sun Temple, Dhauli Peace Pagoda, Lingaraj Temple, Kala Bhoomi Odisha Crafts Museum, and Udayagiri Jain Caves.',
     highlights: [
@@ -909,11 +909,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 27999,
     minPax: 2,
     featured: true,
-    image: '/Kamakhya Temple 1.png',
+    image: '/kamakhya-temple-tour-package-from-bangalore-1.webp',
     images: [
-      '/Kamakhya Temple 1.png',
-      '/Kamakhya Temple 2.png',
-      '/Kamakhya Temple 3.png'
+      '/kamakhya-temple-tour-package-from-bangalore-1.webp',
+      '/kamakhya-temple-tour-package-from-bangalore-2.webp',
+      '/kamakhya-temple-tour-package-from-bangalore-3.webp'
     ],
     description: 'Sacred Assam Shakti Peeth Yatra: Direct flight from Bangalore to Guwahati, visit famous Maa Kamakhya Temple (revered Shakti Peeth), Vasistha Temple, Balaji Temple, Umananda Temple on Peacock Island in Brahmaputra River, and Navagraha Temple.',
     highlights: [
@@ -1029,11 +1029,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 41999,
     minPax: 2,
     featured: true,
-    image: '/Kashi Ayodhya Prayagraj and Bodhgaya 1.png',
+    image: '/kashi-ayodhya-prayagraj-bodhgaya-tour-package-from-bangalore-1.webp',
     images: [
-      '/Kashi Ayodhya Prayagraj and Bodhgaya 1.png',
-      '/Kashi Ayodhya Prayagraj and Bodhgaya 2.png',
-      '/Kashi Ayodhya Prayagraj and Bodhgaya 3.png'
+      '/kashi-ayodhya-prayagraj-bodhgaya-tour-package-from-bangalore-1.webp',
+      '/kashi-ayodhya-prayagraj-bodhgaya-tour-package-from-bangalore-2.webp',
+      '/kashi-ayodhya-prayagraj-bodhgaya-tour-package-from-bangalore-3.webp'
     ],
     description: 'Sacred Bodhgaya, Kashi, Prayagraj & Ayodhya Pilgrimage Yatra: Visit Mahabodhi Temple, Bodhi Tree & Vishnupad Temple in Bodhgaya; Kashi Vishwanath Temple (VIP Darshan), Annapurna Temple, Vishalakshi Temple, Kalabhairava & Evening Ganga Aarti boat ride in Varanasi; Triveni Sangam holy dip & Bada Hanuman Mandir in Prayagraj; and Shri Ram Janmabhoomi, Hanuman Garhi & Sarayu River in Ayodhya.',
     highlights: [
@@ -1178,11 +1178,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 29999,
     minPax: 2,
     featured: true,
-    image: '/Kashi with Ayodhya 1.png',
+    image: '/kashi-ayodhya-tour-package-from-bangalore-1.webp',
     images: [
-      '/Kashi with Ayodhya 1.png',
-      '/Kashi with Ayodhya 2.png',
-      '/Kashi with Ayodhya 3.png'
+      '/kashi-ayodhya-tour-package-from-bangalore-1.webp',
+      '/kashi-ayodhya-tour-package-from-bangalore-2.webp',
+      '/kashi-ayodhya-tour-package-from-bangalore-3.webp'
     ],
     description: 'Focused Sacred Pilgrimage: Visit Kashi Vishwanath Temple Corridor, Annapurna Temple, Evening Ganga Aarti boat ride in Varanasi, Sarnath Stupa, and divine Ram Lalla Darshan at Shri Ram Janmabhoomi Mandir & Hanuman Garhi in Ayodhya.',
     highlights: [
@@ -1309,11 +1309,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 30999,
     minPax: 2,
     featured: true,
-    image: '/Indore, Ujjain & Omkareshwar 1.png',
+    image: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp',
     images: [
-      '/Indore, Ujjain & Omkareshwar 1.png',
-      '/Indore, Ujjain & Omkareshwar 2.png',
-      '/Indore, Ujjain & Omkareshwar 3.png'
+      '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp',
+      '/indore-ujjain-omkareshwar-tour-package-from-bangalore-2.webp',
+      '/indore-ujjain-omkareshwar-tour-package-from-bangalore-3.webp'
     ],
     description: 'Sacred 2 Jyotirlingas Pilgrimage Yatra: Visit Mahakaleshwar Jyotirlinga (3rd Jyotirlinga) with Mahakal Corridor in Ujjain, Omkareshwara Jyotirlinga (4th Jyotirlinga) & Mamaleshwara on the Narmada river, Pitreshwar Hanuman Mandir, Khajrana Ganesh, Sandipani Ashram, and Gadh Kalika in Indore.',
     highlights: [
@@ -1399,11 +1399,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 37999,
     minPax: 2,
     featured: true,
-    image: '/Mata Vaishnodevi & Golden Temple Yatra 1.png',
+    image: '/mata-vaishnodevi-golden-temple-tour-package-from-bangalore-1.webp',
     images: [
-      '/Mata Vaishnodevi & Golden Temple Yatra 1.png',
-      '/Mata Vaishnodevi & Golden Temple Yatra 2.png',
-      '/Mata Vaishnodevi & Golden Temple Yatra 3.png'
+      '/mata-vaishnodevi-golden-temple-tour-package-from-bangalore-1.webp',
+      '/mata-vaishnodevi-golden-temple-tour-package-from-bangalore-2.webp',
+      '/mata-vaishnodevi-golden-temple-tour-package-from-bangalore-3.webp'
     ],
     description: 'Sacred Pilgrimage Yatra: Ascend to Mata Vaishnodevi Temple in Katra, Bhairo Baba Temple via ropeway, Raghunath Ji Temple in Jammu, Golden Temple & Jallianwala Bagh in Amritsar, and Wagah Border Retreat Ceremony.',
     highlights: [
@@ -1501,11 +1501,11 @@ export const ALL_PACKAGES: Package[] = [
     price: '₹28,999/-',
     numericPrice: 28999,
     minPax: 2,
-    image: '/Baidyanath Dham 1.png',
+    image: '/baidyanath-dham-tour-package-from-bangalore-1.webp',
     images: [
-      '/Baidyanath Dham 1.png',
-      '/Baidyanath Dham 2.png',
-      '/Baidyanath Dham 3.png'
+      '/baidyanath-dham-tour-package-from-bangalore-1.webp',
+      '/baidyanath-dham-tour-package-from-bangalore-2.webp',
+      '/baidyanath-dham-tour-package-from-bangalore-3.webp'
     ],
     description: 'Visit Baba Baidyanath Dham (Baba Dham) in Deoghar, one of the 12 sacred Jyothirlingas known for granting divine health & fulfillment. Explore Basukinath, Thapovan, and Jayadurga Shakthipeeta.',
     highlights: ['Baba Baidyanath Jyothirlinga Darshan', 'Basukinath Temple Visit', 'Jayadurga Shakthipeeta', 'Thapovan Visit'],
@@ -1619,11 +1619,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 35999,
     minPax: 2,
     featured: true,
-    image: '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 1.png',
+    image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
     images: [
-      '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 1.png',
-      '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 2.png',
-      '/Rameshwaram, Madurai, Kanyakumari & Trivandrum Yatra 3.png'
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-2.webp',
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-3.webp'
     ],
     description: 'Grand South India Temple Pilgrimage: Visit Brihadeeswara Temple in Thanjavur, Srirangam Ranganathaswamy Temple, Madurai Meenakshi Temple, Rameshwaram Ramanathaswamy Temple with 22 Holy Theertham Wells & Spatika Linga Darshan, Dhanushkodi, Thiruchendur Murugan Temple, Kanyakumari Vivekananda Rock & Sunset, Suchindram Temple, and Sree Padmanabhaswamy Temple in Thiruvananthapuram.',
     highlights: [
@@ -1762,11 +1762,11 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 46999,
     minPax: 2,
     featured: true,
-    image: '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 1.png',
+    image: '/grand-gujarat-statue-of-unity-tour-package-from-bangalore-1.webp',
     images: [
-      '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 1.png',
-      '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 2.png',
-      '/Grand Gujarat Pilgrimage & Statue of Unity Yatra 3.png'
+      '/grand-gujarat-statue-of-unity-tour-package-from-bangalore-1.webp',
+      '/grand-gujarat-statue-of-unity-tour-package-from-bangalore-2.webp',
+      '/grand-gujarat-statue-of-unity-tour-package-from-bangalore-3.webp'
     ],
     description: 'Grand Gujarat Sacred & Heritage Yatra: Direct flight from Bangalore to Ahmedabad, Sabarmati Ashram, Adalaj Stepwell, Akshardham, Shree Dwarkadhish Temple (Char Dham), Bet Dwarka, Nageshwar Jyotirlinga, Rukmini Temple, Kirti Mandir & Sudama Mandir in Porbandar, Somnath Jyotirlinga & Light/Sound Show, Gir Forest National Park Safari, Nishkalank Mahadev Temple in sea, World\'s Tallest Statue of Unity (182m), Valley of Flowers, and Sardar Sarovar Dam.',
     highlights: [
@@ -1920,7 +1920,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 44999,
     minPax: 2,
     featured: true,
-    image: '/Andaman Islands Paradise Tour Package.png',
+    image: '/andaman-islands-tour-package-from-bangalore.webp',
     description: 'Tropical Island Paradise: Direct round-trip flights from Bangalore to Port Blair, Corbyn\'s Cove Beach, historic Cellular Jail with Light & Sound Show, scenic cruise to Havelock Island, Radhanagar Beach (Asia\'s finest), Kalapathar Beach, Elephant Beach speed boat excursion, inter-island cruise ferry, and Ross Island (Netaji Subhash Chandra Bose Island).',
     highlights: [
       'Cellular Jail Visit & Captivating Light and Sound Show',
@@ -2059,7 +2059,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 51999,
     minPax: 2,
     featured: true,
-    image: '/Kashmir Paradise Tour Package.png',
+    image: '/kashmir-tour-package-from-bangalore.webp',
     description: 'Paradise on Earth: Direct round-trip flight from Bangalore, 1 night in luxury Dal Lake Houseboat & 4 nights in 3-star premium hotels, Gulmarg Gondola Cable Car Ride to Khalinmarg, Sonamarg Meadow of Gold, Pahalgam Valley (Aru, Betaab & Chandanwari), Mughal Gardens, Hazratbal Shrine, Pari Mahal, Dal Lake Shikara Ride, and Shankaracharya Temple.',
     highlights: [
       'Dal Lake Houseboat Stay & Shikara Ride',
@@ -2203,7 +2203,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 60999,
     minPax: 2,
     featured: true,
-    image: '/Leh Ladakh High Altitude Expedition.png',
+    image: '/leh-ladakh-tour-package-from-bangalore.webp',
     description: 'The Land of High Passes: Direct round-trip flight to Leh, acclimatization stay, Hall of Fame, Gurudwara Pathar Sahib, Magnetic Hill, Indus-Zanskar Sangam, Alchi & Hemis Monasteries, Shanti Stupa, Leh Palace, Rancho School (3 Idiots), Khardung La Pass (highest motorable road), Nubra Valley, Turtuk Village (India-Pakistan border), and day trip to Pangong Lake via Chang La Pass.',
     highlights: [
       'Pangong Lake Day Trip via Chang La Pass',
@@ -2353,7 +2353,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 44999,
     minPax: 2,
     featured: true,
-    image: '/Golden Triangle Tour Package.png',
+    image: '/golden-triangle-tour-package-from-bangalore.webp',
     description: 'Iconic Golden Triangle & Braj Bhoomi Circuit: Direct flight from Bangalore to Jaipur, Hawa Mahal, Jantar Mantar, City Palace, Amber Fort, Jaigarh Fort, Nahargarh Fort, World-famous Taj Mahal & Agra Fort, Shri Krishna Janmabhoomi in Mathura, Prem Mandir & Bankey Bihari in Vrindavan, Red Fort, Rajghat, India Gate, Rashtrapati Bhavan, Akshardham, Qutub Minar, and Lotus Temple in Delhi.',
     highlights: [
       'Jaipur Forts & Palaces (Amber Fort, Jaigarh, Nahargarh & City Palace)',
@@ -2500,7 +2500,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 60999,
     minPax: 2,
     featured: true,
-    image: '/Grand Royal Rajasthan Tour Package.png',
+    image: '/rajasthan-tour-package-from-bangalore.webp',
     description: 'Grand Royal Odyssey of Rajasthan: Direct round-trip flights from Bangalore, Srinathji Temple & 369ft Statue of Belief in Nathdwara, City Palace & Fateh Sagar boat ride in Udaipur, Umaid Bhawan Palace & Mehrangarh Fort in Jodhpur, Sam Sand Dunes desert stay & Patwon Ki Haveli in Jaisalmer, sacred Brahma Temple & Lake in Pushkar, Jal Mahal, Hawa Mahal, Jantar Mantar, Jaigarh Fort & Amber Fort in Jaipur.',
     highlights: [
       'Nathdwara Shrinathji Temple & World\'s 369ft Tallest Shiva Statue (Statue of Belief)',
@@ -2663,7 +2663,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 34999,
     minPax: 2,
     featured: true,
-    image: "/God's Own Country Kerala Tour Package.png",
+    image: "/kerala-tour-package-from-bangalore.webp",
     description: 'God\'s Own Country Tour: Round-trip flights from Bangalore to Cochin, scenic drive to Munnar tea & spice plantations, Cheeyappara Waterfalls, Eravikulam National Park (Rajamalai), Mattupetty Dam, Echo Point, Periyar Wildlife Sanctuary Tiger Reserve & Lake boat cruise in Thekkady, and overnight luxury Alleppey Houseboat Backwater Cruise.',
     highlights: [
       'Munnar Tea Plantations, Tea Museum & Cheeyappara Waterfalls',
@@ -2795,7 +2795,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 19999,
     minPax: 2,
     featured: true,
-    image: '/Goa Beach & Heritage Tour Package.png',
+    image: '/goa-beach-tour-package-from-bangalore.webp',
     description: 'Sun, Sand & Heritage Gateway: Round-trip flights from Bangalore, North Goa beaches (Calangute, Baga & Anjuna), historic Fort Aguada, South Goa heritage (UNESCO Basilica of Bom Jesus & Se Cathedral), authentic Goan cuisine, and vibrant seaside markets.',
     highlights: [
       'North Goa Famous Beaches (Calangute, Baga & Anjuna)',
@@ -2913,7 +2913,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 39999,
     minPax: 2,
     featured: true,
-    image: '/Himachal Pradesh Tour Package.png',
+    image: '/himachal-pradesh-tour-package-from-bangalore.webp',
     description: 'Majestic Himalayan Mountain Tour: Round-trip flights from Bangalore, colonial charm of Shimla & Kufri, scenic Pinjore Gardens, Kullu Valley rafting & shawl factories, snow-capped Solang Valley & Atal Tunnel in Manali, Hadimba Devi Temple, Vashisht Hot Springs, and Rock Garden in Chandigarh.',
     highlights: [
       'Shimla Mall Road, Ridge & Kufri Snow Point Sightseeing',
@@ -3067,7 +3067,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 65999,
     minPax: 2,
     featured: true,
-    image: '/Bhutan Tour Package.png',
+    image: '/bhutan-tour-package-from-bangalore.webp',
     description: 'Land of the Thunder Dragon (Bhutan): Scenic road transfers from Bagdogra/Phuentsholing to Thimphu, Punakha Dzong, Dochu-La-Pass, Chhimi Lhakhang Fertility Temple, and the iconic Tiger\'s Nest (Paro Taktsang) hike.',
     highlights: [
       'Tiger\'s Nest Monastery (Paro Taktsang) Hike',
@@ -3178,7 +3178,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 75999,
     minPax: 2,
     featured: true,
-    image: '/Nepal Muktinath & Pashupatinath Tour Package.png',
+    image: '/nepal-muktinath-pashupatinath-tour-package-from-bangalore.webp',
     description: 'Sacred Himalayan Pilgrimage: Pashupatinath Temple, Jalnarayan Temple, Muktinath Dham Pilgrimage, Manakamana Cable Car, Lumbini (Birthplace of Gautam Buddha), Fewa Lake boat ride, and Gorakhnath Temple via Gorakhpur.',
     highlights: [
       'Pashupatinath Temple & Guheshwori Shakti Peeth Darshan',
@@ -3286,37 +3286,133 @@ export const ALL_PACKAGES: Package[] = [
   },
   {
     id: 'sri-lanka',
-    title: 'Sri Lanka',
+    title: 'Sri Lanka Ramayana Trail & Scenic Heritage Tour Package from Bangalore',
     category: 'international',
-    destination: 'Sri Lanka',
-    duration: 'TBA',
-    price: 'Coming Soon',
-    numericPrice: 0,
+    destination: 'Sri Lanka (Colombo, Kandy, Nuwara Eliya & Bentota)',
+    duration: '5N/6D',
+    price: '₹48,999/-',
+    numericPrice: 48999,
     minPax: 2,
-    comingSoon: true,
-    image: '/Sri Lanka.png',
-    description: 'Ramayana Trail & Island Beauty: Ancient temples of Kandy, Sigiriya Rock Fortress, Ravana Falls, and golden beaches of Bentota.',
-    highlights: ['Ramayana Heritage Trail Sites', 'Temple of Sacred Tooth Relic Kandy', 'Sigiriya Rock Fortress', 'Bentota Beach Resort'],
-    inclusions: ['Curated Package Launching Soon'],
-    exclusions: ['To be updated upon launch'],
-    sampleItinerary: []
+    image: '/sri-lanka-tour-package-from-bangalore.webp',
+    description: 'Walk the sacred footsteps of the Ramayana and discover emerald tea plantations, ancient Buddhist temples, and pristine golden beaches in Sri Lanka from Bangalore.',
+    highlights: [
+      'Sacred Ramayana Trail Sites (Seetha Amman Temple & Ashok Vatika)',
+      'Temple of the Sacred Tooth Relic in Kandy',
+      'Scenic Nuwara Eliya Tea Gardens & Ramboda Falls',
+      'Madu River Mangrove Boat Safari & Bentota Beach Stay',
+      'Colombo City Heritage Tour & Gangaramaya Temple'
+    ],
+    inclusions: [
+      'Round-trip economy flights from Bangalore (BLR to CMB to BLR)',
+      '5 Nights Deluxe AC Accommodation in 3-Star/4-Star Hotels',
+      'Daily Buffet Breakfast and Indian Vegetarian Dinners',
+      'All Sightseeing and intercity transfers by Private AC Coach',
+      'English/Hindi speaking professional tour guide throughout',
+      'Entry tickets to Kandy Tooth Relic Temple and Pinnawala Elephant Sanctuary'
+    ],
+    exclusions: [
+      'Sri Lanka ETA Tourist Visa fee',
+      'Any personal expenses, laundry, tips or beverages',
+      'Lunches and items not specified in inclusions',
+      'Travel insurance and excess baggage charges'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrival in Colombo – Pinnawala Elephant Orphanage – Transfer to Kandy',
+        desc: 'Board your morning flight from Bangalore to Colombo Bandaranaike International Airport. Meet our Sai Samarth tour manager upon arrival and proceed towards Kandy. En route visit Pinnawala Elephant Orphanage to observe elephants bathing and feeding. Check into your deluxe hotel in Kandy. Enjoy an evening cultural dance show and a peaceful dinner.'
+      },
+      {
+        day: 'Day 2',
+        title: 'Kandy Temple of the Tooth Relic – Nuwara Eliya & Seetha Amman Temple',
+        desc: 'Visit the revered Sri Dalada Maligawa (Temple of the Sacred Tooth Relic) in Kandy. Drive up through misty hills to Nuwara Eliya (Little England). Visit a world-famous Ceylon tea factory and tea gardens. Stop at Seetha Amman Temple in Seetha Eliya, believed to be the exact location where Goddess Sita was held captive in Lanka. Overnight stay in Nuwara Eliya.'
+      },
+      {
+        day: 'Day 3',
+        title: 'Ashok Vatika (Hakgala Gardens) – Divurumpola – Ravana Falls & Ella',
+        desc: 'After breakfast, visit Hakgala Botanical Garden, identified as part of the legendary Ashok Vatika where Lord Hanuman first met Sita Devi. Proceed to Divurumpola, the revered site of Sita Agni Pariksha. View the dramatic Ravana Falls and Ravana Caves. Enjoy authentic Indian dinner and rest.'
+      },
+      {
+        day: 'Day 4',
+        title: 'Nuwara Eliya to Bentota – Coastal Beach Relaxation & Turtle Hatchery',
+        desc: 'Descend from the central highlands towards the tropical coastal paradise of Bentota. Visit the Kosgoda Sea Turtle Conservation project on the way. Check in to your beach resort in Bentota. Spend a leisurely evening walking on golden sand beaches watching the Indian Ocean sunset.'
+      },
+      {
+        day: 'Day 5',
+        title: 'Madu River Mangrove Safari – Water Sports – Transfer to Colombo',
+        desc: 'Experience a scenic motorboat safari along the tranquil Madu River through ancient mangrove tunnels, visiting Cinnamon Island. Optional water sports at Bentota lagoon. In the afternoon, drive to Colombo. Embark on a panoramic city orientation tour covering Galle Face Green, Independence Square, Gangaramaya Temple, and Pettah bazaar. Overnight in Colombo.'
+      },
+      {
+        day: 'Day 6',
+        title: 'Colombo Souvenir Shopping – Departure to Bangalore',
+        desc: 'Enjoy a relaxed breakfast. Visit Odel or House of Fashions for authentic Ceylon tea, spices, and handcrafted souvenirs. Transfer to Colombo International Airport for your return flight to Bangalore with divine Ramayana memories and photographic treasures.'
+      }
+    ]
   },
   {
     id: 'bali',
-    title: 'Bali',
+    title: 'Enchanting Bali Island & Cultural Paradise Tour Package from Bangalore',
     category: 'international',
-    destination: 'Indonesia',
-    duration: 'TBA',
-    price: 'Coming Soon',
-    numericPrice: 0,
+    destination: 'Indonesia (Kuta, Ubud, Nusa Penida & Tanah Lot)',
+    duration: '5N/6D',
+    price: '₹54,999/-',
+    numericPrice: 54999,
     minPax: 2,
-    comingSoon: true,
-    image: '/Bali.png',
-    description: 'Island of the Gods: Sacred Tanah Lot temple, Besakih Mother Temple, Ubud rice terraces, and cultural Balinese dance performances.',
-    highlights: ['Tanah Lot Sea Temple Sunset', 'Besakih Mother Temple Tour', 'Ubud Art & Cultural Heart', 'Nusa Penida Island Excursion'],
-    inclusions: ['Curated Package Launching Soon'],
-    exclusions: ['To be updated upon launch'],
-    sampleItinerary: []
+    image: '/bali-tour-package-from-bangalore.webp',
+    description: 'Immerse yourself in Bali’s ancient Hindu temples, terraced emerald rice fields, breathtaking cliffside sunsets, and turquoise island waters directly from Bangalore.',
+    highlights: [
+      'Iconic Sunset at Tanah Lot Sea Temple & Uluwatu Cliff Temple',
+      'Spectacular Full-Day Nusa Penida Island Speedboat Excursion',
+      'Ubud Sacred Monkey Forest & Tegalalang Emerald Rice Terraces',
+      'Exciting Bali Jungle Swing & Kintamani Batur Volcano Panorama',
+      'Water sports at Tanjung Benoa (Banana Boat & Parasailing)'
+    ],
+    inclusions: [
+      'Round-trip international flights from Bangalore to Denpasar (DPS)',
+      '5 Nights Accommodation in 4-Star Resort with Daily Breakfast',
+      'Roundtrip Speedboat transfers and Private Tour in Nusa Penida',
+      'Tanjung Benoa Watersports Package with safety equipment',
+      'All Temple Entry tickets, Sarong rentals, and AC transfers',
+      'English-speaking local guide and dedicated tour assistance'
+    ],
+    exclusions: [
+      'Indonesia Visa on Arrival (approx $35 USD payable at airport)',
+      'Bali Tourist Levy ($10 USD)',
+      'Lunches, personal beverages, spa packages',
+      'Tipping for drivers and guides'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrival in Denpasar, Bali – Traditional Welcome – Kuta Check-in',
+        desc: 'Fly from Kempegowda International Airport Bangalore to Ngurah Rai International Airport, Denpasar. Enjoy a warm Balinese flower garland welcome by our local representative. Transfer to your deluxe resort in Kuta/Seminyak. Rest and enjoy free time exploring bustling local markets and beachfront cafes.'
+      },
+      {
+        day: 'Day 2',
+        title: 'Tanjung Benoa Watersports – Uluwatu Temple & Sunset Kecak Dance',
+        desc: 'Head to Tanjung Benoa beach for thrilling water activities including Banana Boat ride and parasailing. In the afternoon, visit the magnificent Uluwatu Temple perched 70 meters above roaring Indian Ocean waves on a steep cliff. Witness the world-renowned traditional Kecak fire dance performance against a glowing sunset backdrop.'
+      },
+      {
+        day: 'Day 3',
+        title: 'Full Day West Nusa Penida Island Tour by Speedboat',
+        desc: 'Board a scenic morning speedboat from Sanur Harbour to the exotic Nusa Penida Island. Visit the awe-inspiring Kelingking T-Rex cliff viewpoint, natural limestone infinity pool at Angel’s Billabong, and the natural rock arch of Broken Beach. Enjoy an island lunch before cruising back to mainland Bali.'
+      },
+      {
+        day: 'Day 4',
+        title: 'Ubud Cultural Exploration – Tegalalang Rice Terraces, Bali Swing & Kintamani',
+        desc: 'Journey to the cultural heartland of Ubud. Walk through the Sacred Monkey Forest Sanctuary. Marvel at the cascading green Tegalalang Rice Terraces and take iconic photos on the famous Bali Jungle Swing. Continue to Kintamani to admire panoramic vistas of Mount Batur active volcano and Lake Batur.'
+      },
+      {
+        day: 'Day 5',
+        title: 'Ulun Danu Beratan Lake Temple – Handara Gate – Tanah Lot Sunset',
+        desc: 'Visit the postcard-perfect Pura Ulun Danu Beratan water temple on Lake Bratan in the misty Bedugul highlands. Snap memorable photos at the famous Bali Handara Gate. End the afternoon at the world-famous Tanah Lot Temple, dramatically situated on an offshore rock formation amidst crashing ocean tides.'
+      },
+      {
+        day: 'Day 6',
+        title: 'Relaxing Balinese Massage – Souvenir Shopping – Flight to Bangalore',
+        desc: 'Indulge in an optional authentic Balinese herbal spa massage. Shop for Balinese batik, coffee, silver jewelry, and wooden handicrafts at Krishna Souvenir Center. Transfer to Denpasar airport for your return flight to Bangalore.'
+      }
+    ]
   },
   {
     id: 'malaysia',
@@ -3328,7 +3424,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 45999,
     minPax: 2,
     featured: true,
-    image: '/Malaysia Truly Asia Tour Package.png',
+    image: '/malaysia-tour-package-from-bangalore.webp',
     description: 'Truly Asia Gateway: Stay at Verdant Hill / Similar Hotel, enroute Putrajaya City Tour & Pink Mosque, Aquaria KLCC Park, KL Tower & Petronas Twin Towers observation deck, Batu Caves Lord Murugan Shrine, and Genting Highlands Skyway Cable Car ride.',
     highlights: [
       'Petronas Twin Towers Observation Deck (Entrance Ticket Included)',
@@ -3457,7 +3553,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 85999,
     minPax: 2,
     featured: true,
-    image: '/Maldives Island Paradise Package.png',
+    image: '/maldives-tour-package-from-bangalore.webp',
     description: 'Tropical Paradise Gateway: 4 nights stay at Kaani Village & Spa in Deluxe Double Room with Pool View, Half-Board Dining (Breakfast + Lunch/Dinner), Shared Speedboat transfers across South Malé Atoll, free 30-day Visa on Arrival, IMUGA declaration assistance, and 24x7 WhatsApp support.',
     highlights: [
       'Four Nights Stay at Kaani Village & Spa (Deluxe Double Room with Pool View)',
@@ -3585,38 +3681,136 @@ export const ALL_PACKAGES: Package[] = [
     ]
   },
   {
-    id: 'europe',
-    title: 'Europe',
+    id: 'dubai',
+    title: 'Dazzling Dubai & Abu Dhabi Marvels Tour Package from Bangalore',
     category: 'international',
-    destination: 'Europe',
-    duration: 'TBA',
-    price: 'Coming Soon',
-    numericPrice: 0,
+    destination: 'UAE (Dubai & Abu Dhabi)',
+    duration: '4N/5D',
+    price: '₹49,999/-',
+    numericPrice: 49999,
     minPax: 2,
-    comingSoon: true,
-    image: '/Europe.png',
-    description: 'European Dream: Paris Eiffel Tower, Swiss Alps, romantic Venice, and historic Rome.',
-    highlights: ['Paris City Tour & Seine Cruise', 'Mt. Titlis & Lucerne', 'Venice Gondola Ride', 'Rome Colosseum'],
-    inclusions: ['Curated Package Launching Soon'],
-    exclusions: ['To be updated upon launch'],
-    sampleItinerary: []
+    image: '/dubai-tour-package-from-bangalore.webp',
+    description: 'Experience futuristic luxury, majestic golden desert dunes, the world’s tallest tower Burj Khalifa, and the serene Sheikh Zayed Grand Mosque with curated flights from Bangalore.',
+    highlights: [
+      'Burj Khalifa 124th Floor Observation Deck & Dubai Fountain Show',
+      'Thrilling Red Dunes Desert Safari with BBQ Dinner & Tanoura Show',
+      'Marina Dhow Cruise with International Buffet Dinner',
+      'Day Excursion to Abu Dhabi with Sheikh Zayed Grand Mosque & BAPS Hindu Mandir',
+      'Dubai Gold Souk, Spice Souk & Dubai Mall Shopping Extravaganza'
+    ],
+    inclusions: [
+      'Round-trip international flights from Bangalore to Dubai (DXB)',
+      '4 Nights Deluxe Accommodation in 4-Star City Hotel (Bur Dubai / Deira)',
+      'Daily Buffet Breakfast and Indian Dinners as per itinerary',
+      'UAE 30-Day Single Entry Tourist Visa with COVID-19 Insurance',
+      'Burj Khalifa 124th Floor Off-Peak Entry Ticket',
+      '4x4 Desert Safari with Dune Bashing, Camel Ride, Henna & BBQ Dinner',
+      'Full Day Abu Dhabi City Tour with BAPS Mandir & Grand Mosque entry',
+      'All inter-city transfers and airport pick-up & drop by AC coach'
+    ],
+    exclusions: [
+      'Dubai Tourism Dirham Fee (approx 15 AED per room per night at hotel)',
+      'Personal expenses, shopping, laundry, porterage',
+      'Lunches and optional excursions (e.g. Museum of the Future / Atlantis Aquaventure)'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrival in Dubai – Check-in – Luxury Marina Dhow Cruise Dinner',
+        desc: 'Depart Bangalore on your flight to Dubai International Airport. Meet our representative for private transfer to your 4-star hotel. Relax during the afternoon. In the evening, board a luxury illuminated traditional wooden Dhow cruise along Dubai Marina. Enjoy an international buffet dinner while admiring glittering skyscrapers and soft Arabic music.'
+      },
+      {
+        day: 'Day 2',
+        title: 'Half-Day Dubai City Tour – Dubai Mall, Burj Khalifa & Dancing Fountains',
+        desc: 'Begin with a guided panoramic tour of Dubai: photo stops at Burj Al Arab, Jumeirah Mosque, Dubai Frame, and Palm Jumeirah Atlantis. In the afternoon, visit the iconic Dubai Mall. Ascend to the 124th floor observation deck of Burj Khalifa, the tallest building on earth, for breathtaking 360-degree city views. Watch the mesmerizing Dubai Fountain music & light show.'
+      },
+      {
+        day: 'Day 3',
+        title: 'Morning at Leisure / Gold Souk – Thrilling Desert Safari with BBQ Dinner',
+        desc: 'Spend the morning exploring Dubai’s traditional Gold Souk and aromatic Spice Souk in Deira. In the afternoon, embark on an exhilarating 4x4 Land Cruiser Desert Safari. Experience roller-coaster dune bashing on crimson sand dunes, enjoy camel riding, sunset photography, sandboarding, and relax at a bedouin-style camp with live Belly Dance, Tanoura fire show, and a lavish BBQ dinner.'
+      },
+      {
+        day: 'Day 4',
+        title: 'Full Day Abu Dhabi Tour – Sheikh Zayed Grand Mosque & BAPS Hindu Mandir',
+        desc: 'Travel to the UAE capital, Abu Dhabi. Visit the architectural masterpiece Sheikh Zayed Grand Mosque with its 82 white marble domes and world’s largest hand-knotted carpet. Visit the newly inaugurated BAPS Hindu Mandir, a magnificent hand-carved stone temple. Drive past Abu Dhabi Corniche and Emirates Palace before returning to Dubai.'
+      },
+      {
+        day: 'Day 5',
+        title: 'Last-minute Souvenir Shopping – Departure to Bangalore',
+        desc: 'Enjoy your final buffet breakfast. Check out of the hotel and enjoy last-minute shopping at Meena Bazaar or Mall of the Emirates. Transfer to Dubai International Airport for your direct return flight to Bangalore with wonderful Arabian memories.'
+      }
+    ]
   },
   {
-    id: 'dubai',
-    title: 'Dubai',
+    id: 'europe',
+    title: 'Glimpse of Europe: Paris & Swiss Alps Tour Package from Bangalore',
     category: 'international',
-    destination: 'UAE',
-    duration: 'TBA',
-    price: 'Coming Soon',
-    numericPrice: 0,
+    destination: 'Europe (Paris & Switzerland - Zurich, Lucerne, Interlaken)',
+    duration: '6N/7D',
+    price: '₹1,45,999/-',
+    numericPrice: 145999,
     minPax: 2,
-    comingSoon: true,
-    image: '/Dubai.png',
-    description: 'City of Superlatives: Burj Khalifa, desert safaris, luxury shopping, and modern marvels in the UAE.',
-    highlights: ['Burj Khalifa Observation Deck', 'Desert Safari with BBQ Dinner', 'Dubai Mall & Aquarium', 'Dhow Cruise Marina'],
-    inclusions: ['Curated Package Launching Soon'],
-    exclusions: ['To be updated upon launch'],
-    sampleItinerary: []
+    image: '/europe-tour-package-from-bangalore.webp',
+    description: 'The romantic charm of Paris combined with the snow-capped majesty of the Swiss Alps in one seamless, curated journey departing directly from Bangalore.',
+    highlights: [
+      'Eiffel Tower 2nd Level Access & Romantic Seine River Cruise in Paris',
+      'Panoramic Paris City Tour: Arc de Triomphe, Champs-Élysées & Louvre exterior',
+      'Scenic High-Speed TGV Train Journey across French-Swiss countryside',
+      'Mount Titlis Rotair 360° Revolving Cable Car, Ice Flyer & Glacier Cave',
+      'Lucerne Chapel Bridge, Lion Monument & Lake Lucerne views',
+      'Spectacular Rhine Falls Boat Ride & Zurich City Orientation'
+    ],
+    inclusions: [
+      'Round-trip international flights from Bangalore to Paris / Zurich to Bangalore',
+      '6 Nights Deluxe Accommodation (2N Paris, 4N Switzerland)',
+      'Daily Continental Breakfast and Indian Vegetarian/Jain Dinners',
+      'High-Speed TGV Lyria Train Ticket from Paris to Switzerland',
+      'Eiffel Tower 2nd Level Ticket & 1-Hour River Seine Sightseeing Cruise',
+      'Mount Titlis Excursion Ticket with Rotair Cable Car & Ice Flyer',
+      'All coach transfers, professional tour manager, and sightseeing fees'
+    ],
+    exclusions: [
+      'Schengen Visa processing fee and travel insurance',
+      'City taxes payable directly at hotels (approx €3-€5 per night)',
+      'Lunches and optional excursions (e.g. Jungfraujoch Top of Europe / Disneyland Paris)'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Arrival in Paris (CDG) – Check-in – Romantic Seine River Cruise',
+        desc: 'Depart Bangalore on your flight to Paris Charles de Gaulle Airport. Meet your Sai Samarth European tour manager upon arrival and transfer to your hotel. In the evening, enjoy a relaxing 1-hour cruise on the River Seine, admiring illuminated Parisian landmarks such as Notre-Dame Cathedral and the Pont des Arts. Enjoy an authentic Indian dinner.'
+      },
+      {
+        day: 'Day 2',
+        title: 'Paris City Highlights & Eiffel Tower 2nd Level Ascent',
+        desc: 'Embark on a guided city tour covering Arc de Triomphe, Champs-Élysées, Place de la Concorde, Opera Garnier, and photo stop at the Louvre Pyramid. In the afternoon, ascend to the 2nd level of the iconic Eiffel Tower for panoramic views over Paris. Spend the evening exploring Montmartre or shopping at Galeries Lafayette.'
+      },
+      {
+        day: 'Day 3',
+        title: 'High-Speed TGV Train Paris to Switzerland (Zurich / Lucerne)',
+        desc: 'Board the ultra-modern TGV Lyria high-speed train, gliding through scenic French vineyards into the picturesque Swiss countryside. Arrive in central Switzerland and check into your Alpine hotel. Enjoy an evening walk through cobblestone streets alongside crystal-clear Swiss lakes.'
+      },
+      {
+        day: 'Day 4',
+        title: 'Mount Titlis Eternal Snow Experience & Historic Lucerne Tour',
+        desc: 'Ascend Mount Titlis aboard the world’s first revolving cable car, Titlis Rotair. Experience the Glacier Cave, walk the Titlis Cliff Walk (Europe’s highest suspension bridge), and ride the Ice Flyer chairlift over glacial crevices. In the afternoon, explore historic Lucerne: cross the 14th-century wooden Chapel Bridge and pay homage at the Lion Monument.'
+      },
+      {
+        day: 'Day 5',
+        title: 'Interlaken Alpine Gateway & Optional Jungfraujoch Excursion',
+        desc: 'Travel to Interlaken, nestled between Lake Thun and Lake Brienz with magnificent vistas of the Eiger, Mönch, and Jungfrau peaks. Choose an optional journey on the cogwheel railway to Jungfraujoch – The Top of Europe (3,454m), or explore Interlaken town for Swiss watches and chocolates.'
+      },
+      {
+        day: 'Day 6',
+        title: 'Roaring Rhine Falls Boat Ride & Zurich City Orientation',
+        desc: 'Visit Europe’s largest plain waterfall, the Rhine Falls at Schaffhausen. Take an exciting boat ride close to the roaring central rock. In the afternoon, tour Zurich: Bahnhofstrasse luxury shopping boulevard, Lake Zurich promenade, and Grossmünster cathedral. Festive farewell Indian dinner.'
+      },
+      {
+        day: 'Day 7',
+        title: 'Swiss Chocolate Shopping – Return Flight to Bangalore',
+        desc: 'Enjoy breakfast with Swiss Alpine views. Final stop at Lindt Home of Chocolate or duty-free shop. Transfer to Zurich International Airport (ZRH) for your return flight to Bangalore, carrying lifetime memories of Europe.'
+      }
+    ]
   },
   {
     id: 'singapore',
@@ -3628,7 +3822,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 79999,
     minPax: 2,
     featured: true,
-    image: '/Singapore & Malaysia Twin Country Tour Package.png',
+    image: '/singapore-malaysia-tour-package-from-bangalore.webp',
     description: 'Ultimate South East Asia Twin Country Experience: 3 nights at Hotel Boss / Similar in Singapore & 3 nights at Verdant Hill / Similar in Kuala Lumpur, Temple of Tooth Relic, Night Safari with Indian dinner at Ulu Ulu Safari Restaurant, City Tour (Merlion Park, Marina Bay Sands, Gardens by the Bay domes & Light Show), full day Universal Studios, Sentosa Island (SEA Aquarium, Cable Car & Wings of Time), luxury coach transfer to KL, Batu Caves, Genting Highlands Cable Car, and Putrajaya Pink Mosque.',
     highlights: [
       'Night Safari Experience with Dinner at Ulu Ulu Safari Restaurant (Singapore)',
@@ -3786,7 +3980,7 @@ export const ALL_PACKAGES: Package[] = [
     numericPrice: 42999,
     minPax: 2,
     featured: true,
-    image: '/Thailand Delights Tour Package.png',
+    image: '/thailand-tour-package-from-bangalore.webp',
     description: 'Land of Smiles Gateway: 2 nights in Pattaya beach resort & 2 nights in Bangkok city hotel, Coral Island speed boat excursion with Indian lunch, Alcazar Cabaret Show, Golden Buddha (Wat Traimit) & Marble Temple (Wat Benchamabophit), Chao Phraya River Cruise & Gems Gallery.',
     highlights: [
       'Speedboat Tour to Coral Island (Koh Larn) with Indian Buffet Lunch',

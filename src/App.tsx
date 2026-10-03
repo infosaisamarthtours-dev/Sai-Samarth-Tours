@@ -1,24 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MobileBottomNav } from './components/MobileBottomNav';
-import { EnquiryModal } from './components/EnquiryModal';
 import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { PackageDetailsPage } from './pages/PackageDetailsPage';
-import { PilgrimagePackagesPage } from './pages/PilgrimagePackagesPage';
-import { ShirdiPackagesPage } from './pages/ShirdiPackagesPage';
-import { DomesticPackagesPage } from './pages/DomesticPackagesPage';
-import { InternationalPackagesPage } from './pages/InternationalPackagesPage';
-import { ContactPage } from './pages/ContactPage';
-import { FaqPage } from './pages/FaqPage';
-import { CancellationPolicyPage } from './pages/CancellationPolicyPage';
-import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
-import { TermsOfUsePage } from './pages/TermsOfUsePage';
-import { BlogPage } from './pages/BlogPage';
-import { BlogDetailPage } from './pages/BlogDetailPage';
+
+// Route-level code splitting for Core Web Vitals optimization
+const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const PackageDetailsPage = lazy(() => import('./pages/PackageDetailsPage').then(m => ({ default: m.PackageDetailsPage })));
+const PilgrimagePackagesPage = lazy(() => import('./pages/PilgrimagePackagesPage').then(m => ({ default: m.PilgrimagePackagesPage })));
+const ShirdiPackagesPage = lazy(() => import('./pages/ShirdiPackagesPage').then(m => ({ default: m.ShirdiPackagesPage })));
+const DomesticPackagesPage = lazy(() => import('./pages/DomesticPackagesPage').then(m => ({ default: m.DomesticPackagesPage })));
+const InternationalPackagesPage = lazy(() => import('./pages/InternationalPackagesPage').then(m => ({ default: m.InternationalPackagesPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const FaqPage = lazy(() => import('./pages/FaqPage').then(m => ({ default: m.FaqPage })));
+const CancellationPolicyPage = lazy(() => import('./pages/CancellationPolicyPage').then(m => ({ default: m.CancellationPolicyPage })));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage').then(m => ({ default: m.PrivacyPolicyPage })));
+const TermsOfUsePage = lazy(() => import('./pages/TermsOfUsePage').then(m => ({ default: m.TermsOfUsePage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage').then(m => ({ default: m.BlogDetailPage })));
+const AllPackagesPage = lazy(() => import('./pages/AllPackagesPage').then(m => ({ default: m.AllPackagesPage })));
+const DestinationPage = lazy(() => import('./pages/DestinationPage').then(m => ({ default: m.DestinationPage })));
+const SeniorCitizenPackagesPage = lazy(() => import('./pages/SeniorCitizenPackagesPage').then(m => ({ default: m.SeniorCitizenPackagesPage })));
+const FamilyPackagesPage = lazy(() => import('./pages/FamilyPackagesPage').then(m => ({ default: m.FamilyPackagesPage })));
+const GroupPackagesPage = lazy(() => import('./pages/GroupPackagesPage').then(m => ({ default: m.GroupPackagesPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
+
+// Lazy-load modal to avoid blocking initial render with confetti library
+const EnquiryModal = lazy(() => import('./components/EnquiryModal').then(m => ({ default: m.EnquiryModal })));
 
 import { useLocation } from 'react-router-dom';
 import { getWhatsAppUrl } from './utils/whatsapp';
@@ -79,34 +89,91 @@ export function App() {
       <div className="min-h-screen bg-[#FBF9F5] text-[#1C1C1C] flex flex-col font-sans selection:bg-[#A63A1E] selection:text-[#FFFFFF]">
         <Header onOpenEnquiry={handleOpenEnquiry} />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/package/:id" element={<PackageDetailsPage />} />
-          <Route path="/pilgrimage-packages" element={<PilgrimagePackagesPage />} />
-          <Route path="/shirdi-packages" element={<ShirdiPackagesPage />} />
-          <Route path="/domestic-packages" element={<DomesticPackagesPage />} />
-          <Route path="/international-packages" element={<InternationalPackagesPage />} />
-          <Route path="/faq" element={<FaqPage />} />
-          <Route path="/cancellation-policy" element={<CancellationPolicyPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-of-use" element={<TermsOfUsePage />} />
-          <Route path="/blog" element={<BlogPage onOpenEnquiry={handleOpenEnquiry} />} />
-          <Route path="/blog/:id" element={<BlogDetailPage onOpenEnquiry={handleOpenEnquiry} />} />
-        </Routes>
+        <Suspense fallback={<div className="min-h-[60vh] flex items-center justify-center"><div className="w-8 h-8 border-3 border-[#114088] border-t-transparent rounded-full animate-spin"></div></div>}>
+          <Routes>
+            {/* Core Pages */}
+            <Route path="/" element={<HomePage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+
+            {/* Tour Packages Hub & SEO Landing Pages */}
+            <Route path="/tour-packages" element={<AllPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/tour-packages-from-bangalore" element={<AllPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+
+            {/* Category Landing Pages */}
+            <Route path="/pilgrimage-packages" element={<PilgrimagePackagesPage />} />
+            <Route path="/pilgrimage-tour-packages" element={<PilgrimagePackagesPage />} />
+            <Route path="/pilgrimage-tours-from-bangalore" element={<PilgrimagePackagesPage />} />
+            <Route path="/shirdi-packages" element={<ShirdiPackagesPage />} />
+            <Route path="/shirdi-tour-packages" element={<ShirdiPackagesPage />} />
+            <Route path="/shirdi-tour-packages-from-bangalore" element={<ShirdiPackagesPage />} />
+            <Route path="/domestic-packages" element={<DomesticPackagesPage />} />
+            <Route path="/domestic-tour-packages" element={<DomesticPackagesPage />} />
+            <Route path="/domestic-tour-packages-from-bangalore" element={<DomesticPackagesPage />} />
+            <Route path="/international-packages" element={<InternationalPackagesPage />} />
+            <Route path="/international-tour-packages" element={<InternationalPackagesPage />} />
+            <Route path="/international-tour-packages-from-bangalore" element={<InternationalPackagesPage />} />
+
+            {/* Dedicated High-Demand Audience Landing Pages */}
+            <Route path="/senior-citizen-tour-packages" element={<SeniorCitizenPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/senior-citizen-tour-packages-from-bangalore" element={<SeniorCitizenPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/family-tour-packages-from-bangalore" element={<FamilyPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/group-tour-packages-from-bangalore" element={<GroupPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/customized-tour-packages-from-bangalore" element={<GroupPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+
+            {/* Direct Top-Level Keyword Destination Shortcuts */}
+            <Route path="/shirdi-tour-package-from-bangalore" element={<Navigate to="/package/shirdi-tour-package-from-bangalore" replace />} />
+            <Route path="/kashi-tour-package-from-bangalore" element={<Navigate to="/destinations/kashi" replace />} />
+            <Route path="/ayodhya-tour-package-from-bangalore" element={<Navigate to="/destinations/ayodhya" replace />} />
+            <Route path="/kashmir-tour-package-from-bangalore" element={<Navigate to="/package/kashmir-tour-package-from-bangalore" replace />} />
+            <Route path="/kerala-tour-package-from-bangalore" element={<Navigate to="/package/kerala-tour-package-from-bangalore" replace />} />
+            <Route path="/goa-tour-package-from-bangalore" element={<Navigate to="/package/goa-beach-tour-package-from-bangalore" replace />} />
+            <Route path="/ladakh-tour-package-from-bangalore" element={<Navigate to="/package/leh-ladakh-tour-package-from-bangalore" replace />} />
+            <Route path="/andaman-tour-package-from-bangalore" element={<Navigate to="/package/andaman-islands-tour-package-from-bangalore" replace />} />
+            <Route path="/maldives-tour-package-from-bangalore" element={<Navigate to="/package/maldives-tour-package-from-bangalore" replace />} />
+            <Route path="/thailand-tour-package-from-bangalore" element={<Navigate to="/package/thailand-tour-package-from-bangalore" replace />} />
+            <Route path="/malaysia-tour-package-from-bangalore" element={<Navigate to="/package/malaysia-tour-package-from-bangalore" replace />} />
+            <Route path="/dubai-tour-package-from-bangalore" element={<Navigate to="/package/dubai-tour-package-from-bangalore" replace />} />
+            <Route path="/chardham-yatra-from-bangalore" element={<Navigate to="/destinations/chardham" replace />} />
+            <Route path="/tirupati-tour-package-from-bangalore" element={<Navigate to="/destinations/tirupati" replace />} />
+
+            {/* Destination Landing Pages */}
+            <Route path="/destinations/:slug" element={<DestinationPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/destinations" element={<Navigate to="/tour-packages" replace />} />
+
+            {/* Package Detail Pages (Resolves short IDs & -tour-package-from-bangalore slugs) */}
+            <Route path="/package/:id" element={<PackageDetailsPage />} />
+
+            {/* Policy & Info Pages */}
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/cancellation-policy" element={<CancellationPolicyPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-use" element={<TermsOfUsePage />} />
+
+            {/* Blog Pages */}
+            <Route path="/blog" element={<BlogPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/blog/:id" element={<BlogDetailPage onOpenEnquiry={handleOpenEnquiry} />} />
+
+            {/* 404 Not Found Page */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
 
         {/* Floating Action Buttons (Desktop Only - hidden on mobile view) */}
         <FloatingButtons />
 
         <Footer />
 
-        {/* Global Enquiry Booking Modal */}
-        <EnquiryModal
-          isOpen={isEnquiryOpen}
-          initialPackageTitle={enquiryPackageTitle}
-          onClose={() => setIsEnquiryOpen(false)}
-        />
+        {/* Global Enquiry Booking Modal (Only loaded when open) */}
+        {isEnquiryOpen && (
+          <Suspense fallback={null}>
+            <EnquiryModal
+              isOpen={isEnquiryOpen}
+              initialPackageTitle={enquiryPackageTitle}
+              onClose={() => setIsEnquiryOpen(false)}
+            />
+          </Suspense>
+        )}
 
         <MobileBottomNav onOpenEnquiry={() => handleOpenEnquiry()} />
       </div>

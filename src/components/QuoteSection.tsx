@@ -22,8 +22,12 @@ export function QuoteSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80" 
-          alt="Travel Landscape" 
+          src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=75" 
+          alt="Custom pilgrimage and holiday tour planning from Bangalore - Sai Samarth Tours" 
+          width={1920}
+          height={800}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#0a1930]/90 mix-blend-multiply"></div>
@@ -42,8 +46,8 @@ export function QuoteSection() {
               Plan Your Trip <br />
               <span className="text-[#F59E0B]">With Our Experts</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-10 leading-relaxed max-w-lg">
-              Sai Samarth Tours is a trusted tour operator, offering tailored domestic and international packages with flights, hotels, meals, sightseeing, and complete itinerary planning.
+            <p className="text-gray-300 text-base md:text-lg mb-10 leading-relaxed max-w-lg">
+              Connect with our Bangalore travel advisors to receive custom day-by-day itineraries, flight ticket schedules, verified 3-star AC hotel bookings, and VIP darshan passes tailored for your family.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

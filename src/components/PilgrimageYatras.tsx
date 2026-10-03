@@ -48,10 +48,10 @@ export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
             🙏 Sacred Temple Expeditions & Yatras
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-[#114088] mb-2 sm:mb-4">
-            Popular Pilgrimage Yatras
+            Pilgrimage Tour Packages
           </h2>
           <p className="text-xs sm:text-base text-gray-600 max-w-3xl mx-auto leading-normal sm:leading-relaxed px-2">
-            Sacred journeys across Kashi, Ayodhya, Prayagraj, Ujjain, Baidyanath & Rameshwaram with flight itineraries & dedicated guidance.
+            Sacred pilgrimage tours from Bangalore with direct flights. Special darshan coordination for Kashi, Ayodhya Ram Mandir, Jyotirlinga packages, Char Dham Yatra, and Rameshwaram.
           </p>
 
           {/* Related Topic Badges */}
@@ -82,7 +82,10 @@ export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
                 {pkg.images && pkg.images.length > 1 ? (
                   <ImageSlider
                     images={pkg.images}
-                    alt={pkg.title}
+                    alt={`${pkg.title} tour package from Bangalore`}
+                    width={400}
+                    height={260}
+                    loading="lazy"
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -90,7 +93,11 @@ export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
                 ) : (
                   <img 
                     src={pkg.image} 
-                    alt={pkg.title} 
+                    alt={`${pkg.title} tour package from Bangalore`} 
+                    width={400}
+                    height={260}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 ${pkg.id === 'shirdi-regular' ? 'object-right' : 'object-center'}`}
                   />
                 )}

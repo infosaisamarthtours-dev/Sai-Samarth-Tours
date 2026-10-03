@@ -1,13 +1,13 @@
 import React from 'react';
 
 export function GallerySection() {
-  const images = [
-    'https://images.unsplash.com/photo-1590050752117-238cb122a275?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1623854767648-e7bf80040fb5?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80'
+  const galleryItems = [
+    { src: 'https://images.unsplash.com/photo-1590050752117-238cb122a275?auto=format&fit=crop&q=80', alt: 'Shirdi Sai Baba and Maharashtra temple pilgrimage yatra' },
+    { src: 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80', alt: 'Holy Varanasi Kashi Vishwanath Ganga Aarti ceremony' },
+    { src: 'https://images.unsplash.com/photo-1623854767648-e7bf80040fb5?auto=format&fit=crop&q=80', alt: 'Golden Temple Amritsar spiritual pilgrimage tour from Bangalore' },
+    { src: 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80', alt: 'Taj Mahal Agra and Golden Triangle holiday tour package' },
+    { src: 'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&q=80', alt: 'Goa beach holiday and scenic coastal tour package' },
+    { src: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&q=80', alt: 'Bali and international holiday tour with Sai Samarth Tours' }
   ];
 
   return (
@@ -24,11 +24,15 @@ export function GallerySection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((src, idx) => (
+          {galleryItems.map((item, idx) => (
             <div key={idx} className="relative h-48 md:h-64 overflow-hidden rounded-xl group">
               <img 
-                src={src} 
-                alt={`Gallery ${idx + 1}`} 
+                src={item.src} 
+                alt={item.alt} 
+                width={400}
+                height={256}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
             </div>

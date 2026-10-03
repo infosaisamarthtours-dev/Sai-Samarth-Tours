@@ -51,8 +51,8 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
         {/* Header */}
         <div className="flex justify-between items-end mb-8">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#114088] mb-2 font-serif">Priority Packages</h2>
-            <p className="text-sm text-gray-600">Handcrafted, highly-rated spiritual yatras and tour packages</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#114088] mb-2 font-serif">Featured Tour Packages from Bangalore</h2>
+            <p className="text-sm text-gray-600">Handcrafted, highly-rated spiritual yatras and family holiday packages departing from Bangalore</p>
           </div>
           <a href="#pilgrimage" className="hidden sm:inline-flex text-[#2563EB] font-bold text-sm items-center hover:text-[#114088] transition-colors">
             View All Tours &rarr;
@@ -71,7 +71,10 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
                 {pkg.images && pkg.images.length > 1 ? (
                   <ImageSlider
                     images={pkg.images}
-                    alt={pkg.title}
+                    alt={`${pkg.title} tour package from Bangalore`}
+                    width={400}
+                    height={260}
+                    loading="lazy"
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -79,7 +82,11 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
                 ) : (
                   <img
                     src={pkg.image}
-                    alt={pkg.title}
+                    alt={`${pkg.title} tour package from Bangalore`}
+                    width={400}
+                    height={260}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 ${pkg.id === 'shirdi-regular' ? 'object-right' : 'object-center'}`}
                   />
                 )}

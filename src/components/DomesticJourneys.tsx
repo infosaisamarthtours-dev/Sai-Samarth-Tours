@@ -45,10 +45,10 @@ export function DomesticJourneys({ onSelectPackage, onOpenEnquiry }: Props) {
             🏔️ Scenic & Cultural Domestic Getaways
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-[#114088] mb-2 sm:mb-4">
-            Incredible India
+            Domestic Tour Packages
           </h2>
           <p className="text-xs sm:text-base text-gray-600 max-w-3xl mx-auto leading-normal sm:leading-relaxed px-2">
-            Explore Kashmir, Leh Ladakh, Kerala backwaters, Himachal & Rajasthan with all-inclusive flight packages.
+            Top-rated domestic holiday packages from Bangalore with flights. Discover Kashmir, Kerala, Goa, Rajasthan, Ladakh, and Andaman with verified deluxe hotels & private AC transfers.
           </p>
 
           {/* Related Topic Badges */}
@@ -78,7 +78,11 @@ export function DomesticJourneys({ onSelectPackage, onOpenEnquiry }: Props) {
               <div className="relative h-40 w-full overflow-hidden shrink-0">
                 <img 
                   src={pkg.image} 
-                  alt={pkg.title} 
+                  alt={`${pkg.title} holiday tour package from Bangalore`} 
+                  width={400}
+                  height={260}
+                  loading="lazy"
+                  decoding="async"
                   className={`w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 ${pkg.id === 'shirdi-regular' ? 'object-right' : 'object-center'}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>

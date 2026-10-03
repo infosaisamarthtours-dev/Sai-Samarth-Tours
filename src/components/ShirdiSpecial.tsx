@@ -34,10 +34,10 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
             ✨ Devotional Pilgrimage Journeys
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#114088] mb-3">
-            Shirdi Special Packages
+            Shirdi Tour Packages from Bangalore
           </h2>
           <p className="text-xs sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed px-2">
-            Seamless Sai Baba Yatra from Bangalore with direct flights, VIP Darshan, 4-star/3-star hotels & dedicated tour managers.
+            Bangalore’s premier Shirdi tour operator. Direct flights from Bangalore (BLR), confirmed VIP Darshan at Sai Baba Samadhi Mandir, 3-star AC hotels, pure veg meals & dedicated tour managers.
           </p>
 
           {/* Related Topic Feature Badges */}
@@ -68,7 +68,10 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
                 {pkg.images && pkg.images.length > 1 ? (
                   <ImageSlider
                     images={pkg.images}
-                    alt={pkg.title}
+                    alt={`${pkg.title} tour package from Bangalore`}
+                    width={400}
+                    height={260}
+                    loading="lazy"
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -76,7 +79,11 @@ export function ShirdiSpecial({ onSelectPackage, onOpenEnquiry }: Props) {
                 ) : (
                   <img 
                     src={pkg.image} 
-                    alt={pkg.title} 
+                    alt={`${pkg.title} tour package from Bangalore`} 
+                    width={400}
+                    height={260}
+                    loading="lazy"
+                    decoding="async"
                     className={`w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 ${pkg.id === 'shirdi-regular' ? 'object-right' : 'object-center'}`}
                   />
                 )}

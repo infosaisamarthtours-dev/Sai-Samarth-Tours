@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AlertCircle, Clock, CheckCircle2, Phone } from 'lucide-react';
 import { siteConfig } from '../data/config';
+import { SEOHead } from '../components/SEOHead';
 
 export function CancellationPolicyPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+      <SEOHead
+        title="Cancellation & Refund Policy | Sai Samarth Tours Bangalore"
+        description="Official cancellation, refund, and tour rescheduling policies for pilgrimage and holiday packages by Sai Samarth Tours Bangalore."
+        canonical="https://saisamarthtours.com/cancellation-policy"
+      />
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

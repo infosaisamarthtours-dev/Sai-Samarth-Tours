@@ -194,7 +194,11 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
             <div className="flex items-center gap-4 bg-blue-50/60 p-4 rounded-2xl border border-blue-100 mb-6">
               <img 
                 src={pkg.image} 
-                alt={pkg.title} 
+                alt={`${pkg.title} tour package from Bangalore`} 
+                width={64}
+                height={64}
+                loading="lazy"
+                decoding="async"
                 className="w-16 h-16 rounded-xl object-cover border border-blue-200 shrink-0" 
               />
               <div className="min-w-0">
@@ -279,7 +283,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
               {/* Company Logo Header */}
               <div className="flex items-center justify-between pb-5 mb-5 border-b border-gray-200 gap-4">
                 <div className="flex items-center gap-3">
-                  <img src="/Sai samarth tours logo.jpeg" alt={siteConfig.name} className="h-14 w-auto object-contain rounded p-1 bg-white" />
+                  <img src="/sai-samarth-tours-logo.webp" alt="Sai Samarth Tours - Bangalore Pilgrimage Agency" width={180} height={56} loading="lazy" decoding="async" className="h-14 w-auto object-contain rounded p-1 bg-white" />
                   <div>
                     <h2 className="font-serif font-bold text-xl text-[#114088]">{siteConfig.name}</h2>
                     <p className="text-xs text-gray-500 font-semibold tracking-wider">Every journey deserves a beautiful story.</p>
@@ -304,9 +308,9 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
                     {pkg.category === 'pilgrimage' ? 'PILGRIMAGE YATRA' : 'SPECIAL TOUR PACKAGE'}
                   </span>
                   
-                  <h1 className="font-serif text-2xl sm:text-4xl font-bold leading-tight text-white mb-3">
+                  <h2 className="font-serif text-2xl sm:text-4xl font-bold leading-tight text-white mb-3">
                     {pkg.title}
-                  </h1>
+                  </h2>
 
                   <div className="flex flex-wrap items-center gap-3 mt-2 text-xs">
                     <span className="bg-white/20 border border-white/30 px-3 py-1 rounded-full font-bold text-white">
@@ -415,7 +419,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
                           <h4 className="font-serif font-bold text-[#114088] text-sm sm:text-base leading-snug">{item.title}</h4>
                         </div>
                       </div>
-                      <p className="text-xs sm:text-sm text-gray-700 pl-10 leading-relaxed mb-3">{item.detail}</p>
+                      <p className="text-xs sm:text-sm text-gray-700 pl-10 leading-relaxed mb-3">{item.detail || item.desc}</p>
                       <div className="pl-10 pt-2 border-t border-gray-200 flex items-center gap-2 text-xs font-semibold text-gray-700">
                         <Utensils className="w-3.5 h-3.5 text-[#D97706]" />
                         <span>Meals Included: <strong>Breakfast, Lunch, Dinner</strong></span>
@@ -558,7 +562,7 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
               className="brochure-card text-white rounded-2xl p-6 sm:p-10 shadow-lg text-center space-y-6"
               style={{ backgroundColor: '#0B1E3F', backgroundImage: 'linear-gradient(180deg, #0B1E3F 0%, #061024 100%)' }}
             >
-              <img src="/Sai samarth tours logo.jpeg" alt={siteConfig.name} className="h-16 w-auto object-contain mx-auto bg-white rounded p-1" />
+              <img src="/sai-samarth-tours-logo.webp" alt="Sai Samarth Tours - Bangalore Pilgrimage Agency" width={200} height={64} loading="lazy" decoding="async" className="h-16 w-auto object-contain mx-auto bg-white rounded p-1" />
               <div>
                 <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#F59E0B]">{siteConfig.name}</h3>
                 <p className="text-xs text-blue-200 mt-1">Bangalore's Trusted Pilgrimage & Holiday Specialist</p>

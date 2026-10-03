@@ -26,6 +26,10 @@ import {
 
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { BrochureModal } from '../components/BrochureModal';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { findPackageBySlugOrId, getPackageSlug } from '../utils/slugs';
+import { getPackageBreadcrumbHierarchy } from '../utils/breadcrumbs';
 
 export function PackageDetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -40,47 +44,143 @@ export function PackageDetailsPage() {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const pkg = ALL_PACKAGES.find(p => p.id === id);
+  const pkg = findPackageBySlugOrId(ALL_PACKAGES, id);
 
   if (!pkg) {
     return <Navigate to="/" />;
   }
 
-  // Tailored 5 FAQs for the package subpage
-  const defaultFaqs = [
-    {
-      question: `How do I book the ${pkg.title} tour package from Bangalore?`,
-      answer: `You can book by clicking on the 'Enquire Now' button or contacting our travel experts on WhatsApp (+91 9187711649). We will assist you with departure dates, flight schedules, customized options, and instant confirmation.`
-    },
-    {
-      question: `Are round-trip flights, AC hotel stays, and all meals included in ${pkg.price}?`,
-      answer: `Yes! Our package includes round-trip economy flights from Bangalore, verified 3-star/4-star AC hotel accommodations, dedicated AC transfers, daily meals (Breakfast, Lunch & Dinner), and complete guided sightseeing as per the itinerary.`
-    },
-    {
-      question: `Is this ${pkg.category === 'pilgrimage' ? 'pilgrimage yatra' : 'tour'} suitable for senior citizens and families?`,
-      answer: `Yes! All our tour itineraries are designed to be senior-citizen and family friendly. We ensure comfortable AC vehicles, minimal waiting times, elevator-accessible hotels, pure vegetarian dining, and dedicated Tour Manager support throughout the trip.`
-    },
-    {
-      question: `Can this package be customized for private family or corporate groups?`,
-      answer: `Yes, 100%! We specialize in tailored itineraries for private families, corporate groups, and senior citizen yatras. Let us know your preferred travel dates, vehicle preference (Innova/Tempo Traveller), and budget to customize this package.`
-    },
-    {
-      question: `What is the cancellation and refund policy?`,
-      answer: `We offer clear and transparent cancellation terms. Cancellations made 15 days or more prior to departure incur a nominal 50% charge, while flight tickets are subject to airline refund rules. Full policy details are provided in your booking quote.`
-    }
-  ];
-
-  // Guarantee exactly 5 FAQs for every subpage
+  // Context-aware dynamic FAQs based on package category, destination, and itinerary
   const packageFaqs = (() => {
-    if (!pkg.faqs || pkg.faqs.length === 0) return defaultFaqs;
-    const combined = [...pkg.faqs];
-    for (const df of defaultFaqs) {
-      if (combined.length >= 5) break;
-      if (!combined.some(f => f.question.toLowerCase().slice(0, 15) === df.question.toLowerCase().slice(0, 15))) {
-        combined.push(df);
-      }
+    if (pkg.faqs && pkg.faqs.length > 0) return pkg.faqs;
+
+    const id = pkg.id.toLowerCase();
+    const dest = pkg.destination || pkg.title;
+    const cat = pkg.category;
+
+    if (id.includes('shirdi')) {
+      return [
+        {
+          question: `How is VIP Darshan and Kakad Aarti organized in the ${pkg.title}?`,
+          answer: `Our direct flight package includes pre-booked VIP Darshan passes for Sai Baba Samadhi Mandir directly coordinated with the temple trust. An experienced Tour Manager accompanies your group to assist senior citizens and family members for timely, hassle-free darshan and Aarti entry.`
+        },
+        {
+          question: `What are the flight timings and airport transfers from Bangalore?`,
+          answer: `We arrange early morning flights departing from Bangalore (BLR) to Shirdi or Pune airport. Upon arrival, a dedicated sanitized AC coach or vehicle transfers you directly to your hotel with all luggage and logistics managed by our coordinator.`
+        },
+        {
+          question: `Are pure vegetarian meals and 3-star AC hotel accommodations included?`,
+          answer: `Yes, 100%! All tour meals (breakfast, lunch, and dinner) are pure vegetarian, fresh, and hygienic with South and North Indian choices. You will stay in verified 3-star AC hotels situated close to the Shirdi temple complex.`
+        },
+        {
+          question: `Is this Shirdi tour senior-citizen friendly with wheelchair support?`,
+          answer: `Over 60% of our Shirdi travelers are elderly devotees. We prioritize ground-floor or elevator-accessible rooms, arrange battery car or wheelchair assistance inside the temple premises, and pace the itinerary gently.`
+        },
+        {
+          question: `Can we customize or extend this package to visit Shani Shingnapur or Jyothirlingas?`,
+          answer: `Yes! We offer 1N/2D and 2N/3D variations covering Shani Shingnapur, Trimbakeshwar, and Grishneshwar. We can also arrange private customized departures for your family with dedicated Innova Crysta or Tempo Traveller vehicles.`
+        }
+      ];
     }
-    return combined.slice(0, 5);
+
+    if (id.includes('kashi') || id.includes('ayodhya') || dest.toLowerCase().includes('kashi') || dest.toLowerCase().includes('varanasi')) {
+      return [
+        {
+          question: `How are Kashi Vishwanath Darshan and Varanasi Ganga Aarti coordinated?`,
+          answer: `We assist with pre-booked Darshan passes at Sri Kashi Vishwanath Jyotirlinga and reserve special boat seating for the grand evening Dashashwamedh Ghat Ganga Aarti, ensuring an intimate and memorable spiritual experience without excessive crowd strain.`
+        },
+        {
+          question: `Can we perform holy rituals like Pind Daan, Tarpanam, or Triveni Sangam Snan?`,
+          answer: `Yes! Our local coordinators facilitate trusted Vedic Purohits at Triveni Sangam (Prayagraj) and holy Varanasi Ghats for personalized rituals, Tarpanam, and sacred Abhishekams according to your family traditions.`
+        },
+        {
+          question: `Are return flights from Bangalore directly to Varanasi included?`,
+          answer: `Yes, the package includes round-trip economy flights from Kempegowda International Airport (BLR) to Varanasi (VNS) along with complete AC vehicle transfers covering Varanasi, Ayodhya, and Prayagraj.`
+        },
+        {
+          question: `What hotel accommodations and pure vegetarian meals are provided?`,
+          answer: `We provide verified 3-star AC hotel stays with modern amenities, elevator access, and hygienic pure vegetarian breakfast, lunch, and dinner daily suited for pilgrims.`
+        },
+        {
+          question: `How is the tour paced for senior citizens visiting multiple holy cities?`,
+          answer: `The itinerary is structured with minimal fatigue in mind. We utilize e-rickshaws in pedestrian temple zones where large vehicles cannot enter and maintain relaxed schedules guided by a dedicated Tour Manager.`
+        }
+      ];
+    }
+
+    if (cat === 'pilgrimage') {
+      return [
+        {
+          question: `How is Darshan and temple entry organized at ${dest}?`,
+          answer: `Our tour manager coordinates with local temple authorities and online booking portals for special Darshan slots and Aarti timings, minimizing physical fatigue and queue waiting times for your family.`
+        },
+        {
+          question: `What flight and road transportation is included from Bangalore?`,
+          answer: `The package includes return flights from Bangalore (BLR) to the nearest airport, paired with dedicated private AC coaches or tempo travellers for all intercity transfers and shrine visits.`
+        },
+        {
+          question: `Are pure vegetarian South and North Indian meals provided throughout?`,
+          answer: `Yes, wholesome pure vegetarian breakfast, lunch, and dinner are provided on all tour days, prepared hygienically to suit spiritual travel requirements.`
+        },
+        {
+          question: `What special assistance is provided for elderly pilgrims on this yatra?`,
+          answer: `We ensure elevator-equipped 3-star hotel rooms, accessible vehicle boarding, porter support, and assist with wheelchair or battery car arrangements wherever permitted by temple trusts.`
+        },
+        {
+          question: `Can this pilgrimage itinerary be customized for private family groups?`,
+          answer: `Yes, 100%! We can customize travel dates, add special Vedic Abhishekams, upgrade hotels, or arrange private vehicles (Innova / Tempo Traveller) tailored to your family's preferences.`
+        }
+      ];
+    }
+
+    if (cat === 'international') {
+      return [
+        {
+          question: `What visa assistance and entry documentation do you provide for ${dest}?`,
+          answer: `Our dedicated Bangalore international travel desk provides complete visa consultation, form filling, document verification, biometric appointment booking, and overseas travel insurance assistance.`
+        },
+        {
+          question: `Are international flights departing directly from Bangalore included?`,
+          answer: `Yes, the package features round-trip flights departing from Kempegowda International Airport (BLR) to ${dest} with convenient departure timings and airport transfers upon arrival.`
+        },
+        {
+          question: `Are authentic Indian vegetarian meals available during the tour?`,
+          answer: `Yes! We partner with verified Indian restaurants at every destination so you can enjoy authentic Indian vegetarian, Jain, and non-vegetarian meals as per your preference.`
+        },
+        {
+          question: `What hotel accommodations and private sightseeing are included?`,
+          answer: `You will stay in verified 3-star or 4-star international hotels with daily breakfast, private AC coaches for all city tours, and pre-booked tickets for all major attractions mentioned in the itinerary.`
+        },
+        {
+          question: `Do you assist with Foreign Exchange (Forex) and international SIM cards?`,
+          answer: `Yes, we guide you through authorized Forex multi-currency cards, currency notes exchange, and help activate international e-SIMs or roaming packs before departure.`
+        }
+      ];
+    }
+
+    // Default Domestic Holiday Packages
+    return [
+      {
+        question: `What private vehicle and local sightseeing transfers are included for ${pkg.title}?`,
+        answer: `You will enjoy dedicated private AC transport (Sedan for couples, Innova Crysta for families, or AC Tempo Traveller for larger groups) with experienced local chauffeurs for all airport transfers and sightseeing stops.`
+      },
+      {
+        question: `Are round-trip flights from Bangalore and airport pickups included?`,
+        answer: `Yes, our packages feature round-trip flights from Bangalore (BLR) with dedicated airport meet-and-greet and transfers directly to your hotel or resort.`
+      },
+      {
+        question: `What hotel categories and meal plans are provided across ${dest}?`,
+        answer: `We handpick verified 3-star/4-star AC hotels and scenic heritage resorts with daily wholesome breakfast and dinner included, alongside options for pure vegetarian dining.`
+      },
+      {
+        question: `What is the best season to visit ${dest}, and what packing advice do you recommend?`,
+        answer: `Our travel advisors provide season-specific guidance upon booking, including recommendations on seasonal apparel, weather forecasts, and essential packing checklists.`
+      },
+      {
+        question: `Can we customize hotel categories, add extra days, or include special activities?`,
+        answer: `Yes, 100%! All our domestic holiday itineraries are fully customizable. We can adjust trip duration, upgrade to premium luxury resorts, or add adventure and sightseeing activities upon request.`
+      }
+    ];
   })();
 
   // Fallback detailed content
@@ -150,8 +250,68 @@ export function PackageDetailsPage() {
     'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM respectively.'
   ];
 
+  const categoryUrlMap: Record<string, { name: string; url: string }> = {
+    shirdi: { name: 'Shirdi Packages', url: '/shirdi-packages' },
+    pilgrimage: { name: 'Pilgrimage Packages', url: '/pilgrimage-packages' },
+    domestic: { name: 'Domestic Packages', url: '/domestic-packages' },
+    international: { name: 'International Packages', url: '/international-packages' }
+  };
+
+  const categoryMeta = categoryUrlMap[pkg.category] || { name: 'Tour Packages', url: '/pilgrimage-packages' };
+
+  const packageJsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      'name': `${pkg.title} from Bangalore`,
+      'description': pkg.description || `${pkg.title} tour package from Bangalore with flights and hotel stay.`,
+      'touristType': ['Pilgrims', 'Families', 'Senior Citizens'],
+      'offers': {
+        '@type': 'Offer',
+        'price': pkg.numericPrice || 17999,
+        'priceCurrency': 'INR',
+        'availability': 'https://schema.org/InStock',
+        'validFrom': '2026-01-01',
+        'url': `https://saisamarthtours.com/package/${pkg.id}`
+      },
+      'provider': {
+        '@type': 'TravelAgency',
+        'name': 'Sai Samarth Tours',
+        'telephone': '+916361181869',
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Bengaluru',
+          'addressRegion': 'Karnataka',
+          'postalCode': '560064',
+          'streetAddress': 'No. 2238, Second Floor, 16th ‘B’ Cross, Yelahanka New Town'
+        }
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': packageFaqs.map(f => ({
+        '@type': 'Question',
+        'name': f.question,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': f.answer
+        }
+      }))
+    }
+  ];
+
   return (
     <div className="flex-grow bg-[#FBF9F5]">
+      <SEOHead
+        title={`${pkg.title} from Bangalore | Sai Samarth Tours`}
+        description={pkg.description ? `${pkg.description} Starting from ${pkg.price}. Book with return flights & 3-star hotel.` : `Book ${pkg.title} from Bangalore. Includes return flights, deluxe hotel accommodation, meals, AC transfers, and VIP darshan passes. Starting at ${pkg.price}.`}
+        canonical={`https://saisamarthtours.com/package/${getPackageSlug(pkg)}`}
+        ogImage={pkg.image}
+        ogType="product"
+        jsonLd={packageJsonLd}
+      />
+
       {/* Premium Split Hero Section */}
       <div className="bg-[#0B1E3F] text-white pt-24 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Subtle background glow effect */}
@@ -160,6 +320,23 @@ export function PackageDetailsPage() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           
+          {/* Breadcrumbs Navigation */}
+          {(() => {
+            const hierarchy = getPackageBreadcrumbHierarchy(pkg);
+            return (
+              <div className="mb-4">
+                <Breadcrumbs
+                  items={[
+                    { name: hierarchy.category.name, url: hierarchy.category.url },
+                    ...(hierarchy.region.name ? [{ name: hierarchy.region.name, url: hierarchy.region.url }] : []),
+                    { name: pkg.title }
+                  ]}
+                  theme="dark"
+                />
+              </div>
+            );
+          })()}
+
           {/* Top Bar with Back Button & Category / Destination Badge */}
           <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
             <button 
@@ -269,7 +446,11 @@ export function PackageDetailsPage() {
                 {pkg.images && pkg.images.length > 1 ? (
                   <ImageSlider
                     images={pkg.images}
-                    alt={pkg.title}
+                    alt={`${pkg.title} tour package from Bangalore`}
+                    width={700}
+                    height={450}
+                    loading="eager"
+                    fetchPriority="high"
                     interval={3000}
                     dotsClassName="top-4 right-4"
                     className="w-full h-[300px] sm:h-[380px]"
@@ -277,7 +458,12 @@ export function PackageDetailsPage() {
                 ) : (
                   <img 
                     src={pkg.image} 
-                    alt={pkg.title} 
+                    alt={`${pkg.title} tour package from Bangalore`} 
+                    width={700}
+                    height={450}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                     className="w-full h-[300px] sm:h-[380px] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 )}
@@ -497,7 +683,7 @@ export function PackageDetailsPage() {
                                 {item.day}
                               </span>
                               <h4 className="font-serif text-base sm:text-xl font-bold text-[#114088] mb-2 sm:mb-3">{item.title}</h4>
-                              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">{item.detail}</p>
+                              <p className="text-xs sm:text-base text-gray-700 leading-relaxed">{item.detail || item.desc}</p>
                               
                               <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-gray-200/60 flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-gray-700">
                                 <Utensils className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
@@ -789,7 +975,11 @@ export function PackageDetailsPage() {
                         <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
                           <img 
                             src={relatedPkg.image} 
-                            alt={relatedPkg.title} 
+                            alt={`${relatedPkg.title} tour package from Bangalore`} 
+                            width={80}
+                            height={80}
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                           />
                         </div>

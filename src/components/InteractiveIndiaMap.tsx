@@ -162,7 +162,15 @@ export const InteractiveIndiaMap: React.FC<InteractiveIndiaMapProps> = ({ onSele
                 </div>
 
                 <div className="h-44 rounded-lg overflow-hidden border border-[#EAE2D6] relative">
-                  <img src={selectedPkg.image} alt={selectedPkg.title} className="w-full h-full object-cover" />
+                  <img 
+                    src={selectedPkg.image} 
+                    alt={`${selectedPkg.title} tour package from Bangalore`} 
+                    width={320}
+                    height={176}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover" 
+                  />
                   <div className="absolute bottom-2 right-2 bg-[#F59E0B] text-[#ffffff] px-3 py-1 rounded text-xs font-serif font-bold">
                     {selectedPkg.price}
                   </div>

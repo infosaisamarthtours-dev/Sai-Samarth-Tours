@@ -109,7 +109,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
       <div className="bg-white text-gray-800 rounded-3xl w-full max-w-4xl overflow-hidden shadow-2xl relative my-auto border border-gray-100 flex flex-col md:flex-row max-h-[94vh]">
         
         {/* Left Pane Image (Visible on md+) */}
-        <div className="hidden md:block w-5/12 relative bg-cover bg-center shrink-0 min-h-[480px]" style={{ backgroundImage: `url('/Shridi-banner-image.png')` }}>
+        <div className="hidden md:block w-5/12 relative bg-cover bg-center shrink-0 min-h-[480px]" style={{ backgroundImage: `url('/shirdi-tour-hero-banner-desktop.webp')` }}>
           <div className="absolute inset-0 bg-gradient-to-t from-[#114088]/90 via-[#114088]/40 to-transparent flex flex-col justify-end p-8 text-white">
             <span className="bg-[#F59E0B] text-[#114088] px-3 py-1 rounded-full text-xs font-bold self-start mb-3 shadow-md">
               ★ 4.9/5 Rated Agency

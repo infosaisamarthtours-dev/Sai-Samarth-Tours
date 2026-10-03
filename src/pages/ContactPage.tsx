@@ -2,26 +2,34 @@ import React from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FaqSection } from '../components/FaqSection';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { localBusinessSchema } from '../utils/schema';
 
 export function ContactPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+      <SEOHead
+        title="Contact Sai Samarth Tours | Bangalore Tour Agency Office & Helpline"
+        description="Get in touch with Sai Samarth Tours. Visit our Yelahanka New Town office in Bengaluru or call +91 91877 11649 for instant pilgrimage and holiday tour enquiries."
+        canonical="https://saisamarthtours.com/contact"
+        ogImage="/sai-samarth-tours-logo.webp"
+        jsonLd={localBusinessSchema}
+      />
       
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           {/* Breadcrumbs */}
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-gray-200">Contact Us</span>
+          <div className="mb-6">
+            <Breadcrumbs items={[{ name: 'Contact Us' }]} className="text-gray-300 justify-center" />
           </div>
 
           <h1 className="text-4xl md:text-5xl font-extrabold font-serif-brand mb-4">
             Get in Touch
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Whether you have a question about our packages, need assistance planning your journey, or just want to say hello, our team is ready to answer all your questions.
+            Connect with our dedicated travel experts. Visit our Yelahanka travel agency office or call +91 91877 11649 for handcrafted tour packages from Bangalore.
           </p>
         </div>
       </div>
@@ -191,7 +199,7 @@ export function ContactPage() {
             },
             {
               question: "Can I visit your office in Bangalore for in-person tour consultation?",
-              answer: "Yes, you are always welcome! You can visit our Bangalore office or schedule a prior appointment with our travel experts for detailed group planning."
+              answer: "Yes, you are always welcome! As an established Yelahanka travel agency and registered tour operator in Bangalore, you can visit our office at Yelahanka New Town or book a prior consultation for group yatras and customized holidays."
             },
             {
               question: "What payment methods do you accept for tour bookings?",

@@ -11,8 +11,12 @@ export function AboutSection() {
           <div className="hidden lg:block w-full lg:w-1/2 relative shrink-0">
             <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3] group">
               <img 
-                src="/About session.png" 
-                alt="About Sai Samarth Tours" 
+                src="/about-sai-samarth-tours-agency.webp" 
+                alt="About Sai Samarth Tours - Leading pilgrimage tour operator in Bangalore" 
+                width={800}
+                height={600}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#114088]/80 to-transparent"></div>
@@ -38,11 +42,11 @@ export function AboutSection() {
             </div>
             
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#114088] mb-3 font-serif leading-tight">
-              Your Trusted Partner for Divine Journeys
+              Leading Travel Agency & Tour Operator in Bangalore
             </h2>
             
             <p className="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">
-              Welcome to <strong>Sai Samarth Tours</strong>, where faith meets comfort. With over a decade of experience, we specialize in curating seamless and deeply spiritual pilgrimage experiences to India's most revered shrines. From flights and 3-star accommodations to VIP Darshan access, over <strong>5,000+ happy travellers</strong> trust us for their sacred journeys.
+              Welcome to <strong>Sai Samarth Tours</strong>, a premier <strong>pilgrimage tour operator in Bangalore</strong> and trusted <strong>travel agency in Bangalore</strong> for sacred yatras and family vacations. Operational from our <strong>Yelahanka travel agency</strong> office with over 12+ years of expertise, we curate all-inclusive <strong>tour packages from Bangalore</strong> departing Kempegowda Airport (BLR). From signature Shirdi packages with VIP Darshan to Kashi Ayodhya, Kashmir, and overseas holidays, over <strong>20,000+ happy travelers</strong> trust our personalized care and dedicated tour managers.
             </p>
             
             {/* Features List */}

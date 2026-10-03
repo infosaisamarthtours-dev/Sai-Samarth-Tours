@@ -40,7 +40,11 @@ export const SacredJourneys: React.FC<SacredJourneysProps> = ({ onSelectPackage,
               <div className="relative h-64 w-full">
                 <img
                   src={pkg.image}
-                  alt={pkg.title}
+                  alt={`${pkg.title} pilgrimage tour package from Bangalore`}
+                  width={500}
+                  height={256}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover w-full h-full"
                 />
                 <div className="absolute top-4 right-4 bg-[#ffffff] px-3 py-1 rounded-full text-xs font-semibold text-[#114088] shadow-xs flex items-center gap-1">

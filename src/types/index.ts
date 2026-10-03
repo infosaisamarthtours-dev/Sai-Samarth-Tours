@@ -2,6 +2,7 @@ export type CategoryType = 'pilgrimage' | 'domestic' | 'international';
 
 export interface Package {
   id: string;
+  slug?: string;
   title: string;
   category: CategoryType;
   destination: string;
@@ -17,7 +18,7 @@ export interface Package {
   highlights: string[];
   inclusions: string[];
   exclusions: string[];
-  sampleItinerary: { day: string; title: string; detail: string; meals?: string }[];
+  sampleItinerary: { day: string; title: string; detail?: string; desc?: string; meals?: string }[];
   tourIncludes?: {
     hotels?: boolean;
     transport?: boolean;

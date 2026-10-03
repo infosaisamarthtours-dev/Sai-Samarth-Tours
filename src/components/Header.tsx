@@ -79,8 +79,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
         <div className="flex justify-start items-center">
           <Link to="/" className="flex-shrink-0 block">
             <img 
-              src="/Sai samarth tours logo.jpeg" 
-              alt={siteConfig.name} 
+              src="/sai-samarth-tours-logo.webp" 
+              alt="Sai Samarth Tours - Pilgrimage Travel Agency Bengaluru" 
+              width={180}
+              height={56}
+              loading="eager"
+              decoding="sync"
               className="h-12 sm:h-14 w-auto object-contain hover:scale-105 transition-transform" 
             />
           </Link>
@@ -142,7 +146,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     >
                       <img 
                         src={pkg.image} 
-                        alt={pkg.title} 
+                        alt={`${pkg.title} tour package from Bangalore`} 
+                        width={48}
+                        height={48}
+                        loading="lazy"
+                        decoding="async"
                         className="w-12 h-12 rounded-xl object-cover border border-gray-200/80 shrink-0 group-hover/item:scale-105 transition-transform" 
                       />
                       <div className="flex-1 min-w-0">
@@ -411,7 +419,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     >
                       <img 
                         src={pkg.image} 
-                        alt={pkg.title} 
+                        alt={`${pkg.title} tour package from Bangalore`} 
+                        width={40}
+                        height={40}
+                        loading="lazy"
+                        decoding="async"
                         className="w-10 h-10 rounded-lg object-cover shrink-0" 
                       />
                       <div className="flex-1 min-w-0">

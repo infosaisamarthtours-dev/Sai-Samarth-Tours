@@ -5,6 +5,8 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { FaqSection } from '../components/FaqSection';
 import { ImageSlider } from '../components/ImageSlider';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const shirdiIds = [
   'shirdi-via-pune',
@@ -21,15 +23,25 @@ const destinations = shirdiIds
 export function ShirdiPackagesPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
+      <SEOHead
+        title="Shirdi Tour Packages from Bangalore | Flights, VIP Darshan & 3-Star Hotels"
+        description="Book direct flight Shirdi tour packages from Bangalore with Sai Samarth Tours. Includes VIP darshan passes, Shani Shingnapur, Trimbakeshwar, Bhimashankar Jyotirlingas, and 3-star AC accommodation."
+        canonical="https://saisamarthtours.com/shirdi-packages"
+        ogImage="/shirdi-packages-category-card.webp"
+      />
       
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-gray-200">Shirdi Packages</span>
+          <div className="mb-6">
+            <Breadcrumbs 
+              items={[
+                { name: 'Pilgrimage Tours', url: '/pilgrimage-tour-packages' },
+                { name: 'Shirdi Tour Packages' }
+              ]} 
+              theme="dark" 
+            />
           </div>
 
           {/* Title & Description */}
@@ -56,7 +68,10 @@ export function ShirdiPackagesPage() {
                 {dest.images && dest.images.length > 1 ? (
                   <ImageSlider
                     images={dest.images}
-                    alt={dest.title}
+                    alt={`${dest.title} tour package from Bangalore`}
+                    width={450}
+                    height={280}
+                    loading="lazy"
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -64,7 +79,11 @@ export function ShirdiPackagesPage() {
                 ) : (
                   <img 
                     src={dest.image} 
-                    alt={dest.title} 
+                    alt={`${dest.title} tour package from Bangalore`} 
+                    width={450}
+                    height={280}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 )}

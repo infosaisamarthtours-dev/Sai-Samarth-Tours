@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, Scale, UserCheck, ShieldAlert } from 'lucide-react';
 import { siteConfig } from '../data/config';
+import { SEOHead } from '../components/SEOHead';
 
 export function TermsOfUsePage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+      <SEOHead
+        title="Terms of Use | Sai Samarth Tours Bangalore"
+        description="Official Terms of Use and website booking agreements for Sai Samarth Tours Bangalore."
+        canonical="https://saisamarthtours.com/terms-of-use"
+      />
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

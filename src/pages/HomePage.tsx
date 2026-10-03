@@ -4,7 +4,6 @@ import { Package } from '../types';
 import { Hero } from '../components/Hero';
 import { FeaturedYatras } from '../components/FeaturedYatras';
 import { AboutSection } from '../components/AboutSection';
-import { TrustStatistics } from '../components/TrustStatistics';
 import { ShirdiSpecial } from '../components/ShirdiSpecial';
 import { PilgrimageYatras } from '../components/PilgrimageYatras';
 import { DomesticJourneys } from '../components/DomesticJourneys';
@@ -13,20 +12,20 @@ import { PromoAndReviews } from '../components/PromoAndReviews';
 import { JourneyProcess } from '../components/JourneyProcess';
 import { QuoteSection } from '../components/QuoteSection';
 import { FaqSection } from '../components/FaqSection';
-import { EnquiryModal } from '../components/EnquiryModal';
+import { SEOHead } from '../components/SEOHead';
+import { localBusinessSchema } from '../utils/schema';
 
-export function HomePage() {
+interface HomePageProps {
+  onOpenEnquiry?: (packageTitle?: string) => void;
+}
+
+export function HomePage({ onOpenEnquiry }: HomePageProps) {
   const navigate = useNavigate();
-  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
-  const [enquiryPackageTitle, setEnquiryPackageTitle] = useState('');
 
   const handleOpenEnquiry = (packageTitle?: string) => {
-    if (packageTitle) {
-      setEnquiryPackageTitle(packageTitle);
-    } else {
-      setEnquiryPackageTitle('');
+    if (onOpenEnquiry) {
+      onOpenEnquiry(packageTitle);
     }
-    setIsEnquiryOpen(true);
   };
 
   const handleSelectPackage = (pkg: Package) => {
@@ -35,6 +34,14 @@ export function HomePage() {
 
   return (
     <div className="flex-grow">
+      <SEOHead
+        title="Tour Packages from Bangalore | Sai Samarth Tours"
+        description="Explore pilgrimage, domestic and international tour packages from Bangalore with Sai Samarth Tours. Shirdi, Kashi, Kashmir, Kerala, Maldives, Thailand and more."
+        canonical="https://saisamarthtours.com/"
+        ogImage="/shirdi-tour-hero-banner-desktop.webp"
+        ogType="website"
+        jsonLd={localBusinessSchema}
+      />
       {/* 2. Hero Banner Section */}
       <Hero onOpenEnquiry={() => handleOpenEnquiry()} />
 
@@ -82,13 +89,6 @@ export function HomePage() {
 
       {/* 12. FAQ Section */}
       <FaqSection />
-
-      {/* Enquiry Booking Modal */}
-      <EnquiryModal
-        isOpen={isEnquiryOpen}
-        initialPackageTitle={enquiryPackageTitle}
-        onClose={() => setIsEnquiryOpen(false)}
-      />
     </div>
   );
 }

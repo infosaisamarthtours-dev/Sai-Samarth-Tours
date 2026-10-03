@@ -18,7 +18,11 @@ export const TravelWithPurpose: React.FC = () => {
               <div className="col-span-8 overflow-hidden shadow-2xl border-2 border-[#C89B3C]/40 group">
                 <img
                   src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=1000&auto=format&fit=crop"
-                  alt="Varanasi Ghats at Dawn"
+                  alt="Varanasi Ghats spiritual pilgrimage yatra by Sai Samarth Tours Bangalore"
+                  width={800}
+                  height={480}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-95"
                 />
               </div>
@@ -28,7 +32,11 @@ export const TravelWithPurpose: React.FC = () => {
                 <div className="overflow-hidden shadow-xl border-2 border-[#C89B3C]/40 group h-[180px] sm:h-[230px]">
                   <img
                     src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=600&auto=format&fit=crop"
-                    alt="Temple Heritage Sculpture"
+                    alt="Sacred Hindu temple heritage sculpture - India pilgrimage tours"
+                    width={600}
+                    height={230}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-95"
                   />
                 </div>
@@ -36,7 +44,11 @@ export const TravelWithPurpose: React.FC = () => {
                 <div className="overflow-hidden shadow-xl border-2 border-[#C89B3C]/40 group h-[180px] sm:h-[230px] relative -ml-8 sm:-ml-12 z-20">
                   <img
                     src="https://images.unsplash.com/photo-1609946782701-79010375a2d8?q=80&w=600&auto=format&fit=crop"
-                    alt="Spiritual Lamp Lighting"
+                    alt="Holy Ganga Aarti spiritual lamp lighting ritual - Sai Samarth Tours"
+                    width={600}
+                    height={230}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-95"
                   />
                 </div>

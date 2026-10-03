@@ -65,10 +65,10 @@ export function PromoAndReviews() {
             ⭐ Why Choose Sai Samarth Tours
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[#114088] mb-3">
-            Your Trusted Spiritual Travel Partner
+            Why Choose Sai Samarth Tours?
           </h2>
           <p className="text-xs sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Delivering seamless pilgrimages, VIP Darshan passes, pre-booked flights & 3-star accommodations for over 10 years.
+            From seamless VIP temple darshan to pre-booked flights, pure vegetarian meals, and 3-star accommodations, here is why over 20,000+ devotees choose us.
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-[#F59E0B] to-[#EA580C] mx-auto mt-5 rounded-full"></div>
         </div>
@@ -79,8 +79,12 @@ export function PromoAndReviews() {
           {/* Promo Card (Left 5 cols) */}
           <div className="lg:col-span-5 rounded-3xl overflow-hidden relative shadow-xl min-h-[300px] lg:min-h-[340px] group flex flex-col justify-between p-8 text-white">
             <img 
-              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80" 
-              alt="Special Devotional Offer" 
+              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=75" 
+              alt="Special pilgrimage tour discount packages from Bangalore - Sai Samarth Tours" 
+              width={600}
+              height={340}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0F2A4A] via-[#0F2A4A]/80 to-transparent"></div>
@@ -145,9 +149,9 @@ export function PromoAndReviews() {
               <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-[#EA580C] bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200/80 inline-block mb-3 shadow-2xs">
                 💬 Pilgrim Testimonials & Reviews
               </span>
-              <h3 className="text-3xl sm:text-4xl font-serif font-bold text-[#114088]">
-                What Our Travelers Say
-              </h3>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#114088]">
+                Customer Reviews
+              </h2>
               <p className="text-xs sm:text-sm text-gray-600 mt-1">
                 Real feedback from devotees who experienced seamless yatras with us.
               </p>
@@ -206,7 +210,11 @@ export function PromoAndReviews() {
                   <div className="flex items-center gap-3">
                     <img 
                       src={test.avatar} 
-                      alt={test.name} 
+                      alt={`${test.name} - Happy Traveler Review for Sai Samarth Tours`} 
+                      width={40}
+                      height={40}
+                      loading="lazy"
+                      decoding="async"
                       className="w-10 h-10 rounded-full object-cover border-2 border-amber-400/80 shadow-xs" 
                     />
                     <div>
@@ -227,6 +235,38 @@ export function PromoAndReviews() {
 
               </div>
             ))}
+          </div>
+
+          {/* Google Business Profile / Verified Reviews Trust Banner */}
+          <div className="mt-12 bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4 text-center sm:text-left">
+              <div className="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center shrink-0">
+                <Star className="w-7 h-7 text-[#F59E0B] fill-[#F59E0B]" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 justify-center sm:justify-start">
+                  <span className="text-xl font-bold font-serif text-[#114088]">4.9 out of 5 Stars</span>
+                  <span className="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">
+                    Verified On Google
+                  </span>
+                </div>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  Over 500+ happy travelers from Bangalore rated our pilgrimage & holiday services.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 shrink-0">
+              <a
+                href="https://maps.google.com/?q=Sai+Samarth+Tours+Yelahanka+New+Town+Bangalore"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#114088] hover:bg-[#0B1E3F] text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+              >
+                <span>Read All Google Reviews</span>
+                <span>↗</span>
+              </a>
+            </div>
           </div>
 
         </div>

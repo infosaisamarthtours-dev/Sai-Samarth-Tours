@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Lock, Eye, Database } from 'lucide-react';
 import { siteConfig } from '../data/config';
+import { SEOHead } from '../components/SEOHead';
 
 export function PrivacyPolicyPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+      <SEOHead
+        title="Privacy Policy | Sai Samarth Tours Bangalore"
+        description="Learn how Sai Samarth Tours protects your personal information, travel bookings, and privacy compliance."
+        canonical="https://saisamarthtours.com/privacy-policy"
+      />
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

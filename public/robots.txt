@@ -1,0 +1,44 @@
+# Robots.txt for Sai Samarth Tours
+# Domain: https://saisamarthtours.com
+# Purpose: Guide search crawlers and ensure full access to critical render assets
+
+User-agent: *
+Allow: /
+
+# Explicitly allow all critical rendering resources (CSS, JS, Fonts, Images)
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.woff2$
+Allow: /*.woff$
+Allow: /*.ttf$
+
+# Explicitly ensure all important pages and categories are crawlable
+Allow: /about
+Allow: /contact
+Allow: /package/
+Allow: /blog/
+Allow: /destinations/
+Allow: /tour-packages
+Allow: /pilgrimage-tour-packages
+Allow: /domestic-tour-packages
+Allow: /international-tour-packages
+Allow: /privacy-policy
+Allow: /terms-conditions
+Allow: /cancellation-policy
+
+# Disallow sensitive, internal or temporary system directories
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
+
+# Official XML Sitemap location
+Sitemap: https://saisamarthtours.com/sitemap.xml

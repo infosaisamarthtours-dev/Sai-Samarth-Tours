@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, ClipboardList, TicketCheck, Luggage, Camera } from 'lucide-react';
+import { Compass, ClipboardList, TicketCheck, Luggage, Camera, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function JourneyProcess() {
   const steps = [
@@ -7,132 +7,128 @@ export function JourneyProcess() {
       num: '01',
       icon: Compass,
       title: 'Tell Us Your Plan',
-      desc: 'Share your destination, dates, and preferences.',
-      pos: { left: '50%', top: '0%' }
+      desc: 'Share your preferred pilgrimage or holiday destination, travel dates, family size, and preferences.',
+      badge: 'Step 1'
     },
     {
       num: '02',
       icon: ClipboardList,
-      title: 'Get Your Package',
-      desc: 'Receive a customized itinerary and quote.',
-      pos: { left: '85.35%', top: '14.65%' }
+      title: 'Get Custom Itinerary',
+      desc: 'Receive a transparent day-wise travel plan, confirmed airline timings, and all-inclusive pricing quote.',
+      badge: 'Step 2'
     },
     {
       num: '03',
       icon: TicketCheck,
-      title: 'Confirm Your Trip',
-      desc: 'Finalize your booking securely.',
-      pos: { left: '100%', top: '50%' }
+      title: 'Confirm Your Booking',
+      desc: 'Finalize your dates with secure advance booking, flight reservation, and hotel room allocation.',
+      badge: 'Step 3'
     },
     {
       num: '04',
       icon: Luggage,
-      title: 'Travel With Confidence',
-      desc: 'Enjoy a seamless journey with 24/7 support.',
-      pos: { left: '85.35%', top: '85.35%' }
+      title: 'Travel With Ease',
+      desc: 'Enjoy verified 3-star AC hotels, VIP temple darshan entry, and dedicated Tour Manager guidance.',
+      badge: 'Step 4'
     },
     {
       num: '05',
       icon: Camera,
-      title: 'Share Memories',
-      desc: 'Capture and share your unforgettable moments.',
-      pos: { left: '50%', top: '100%' }
+      title: 'Cherish Memories',
+      desc: 'Return home spiritually fulfilled with unforgettable memories, blessings, and lifelong stories.',
+      badge: 'Step 5'
     }
   ];
 
   return (
-    <section className="py-20 bg-[#FAFAFA] relative overflow-hidden font-sans">
+    <section className="py-16 md:py-24 bg-[#FAFAFA] relative overflow-hidden font-sans border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Desktop Layout */}
-        <div className="hidden lg:flex flex-row items-center min-h-[600px]">
-          
-          {/* Left Side: Title & Description */}
-          <div className="w-5/12 flex flex-col justify-center relative z-20 pr-8">
-            <div className="text-left relative z-10">
-              <h2 className="text-5xl font-bold text-[#114088] mb-4 leading-tight font-serif-brand">
-                How It <br/><span className="text-[#2563EB]">Works</span>
-              </h2>
-              <p className="text-lg text-gray-500 font-medium max-w-[280px]">
-                Your dream vacation is just five simple steps away.
+        {/* Section Header (Single H2 in DOM) */}
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-[#EA580C] bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200 inline-block mb-3">
+            Simple 5-Step Process
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#114088] font-serif-brand mb-3">
+            How It <span className="text-[#2563EB]">Works</span>
+          </h2>
+          <p className="text-sm sm:text-base text-gray-600 font-medium max-w-2xl mx-auto">
+            From your first enquiry to returning home with sacred blessings, here is how we ensure a seamless, worry-free journey.
+          </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#F59E0B] to-[#EA580C] mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        {/* Unified Responsive Steps Container (Rendered exactly ONCE in DOM) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+          {steps.map((step, idx) => {
+            const Icon = step.icon;
+            return (
+              <div 
+                key={step.num}
+                className="relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-amber-400/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                {/* Top Badge & Number */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#114088] group-hover:bg-[#114088] group-hover:text-amber-400 flex items-center justify-center transition-colors shadow-2xs">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <span className="text-3xl font-extrabold font-serif text-gray-200 group-hover:text-[#F59E0B] transition-colors">
+                    {step.num}
+                  </span>
+                </div>
+
+                {/* Step Content */}
+                <div className="flex-1">
+                  <span className="text-[10px] uppercase font-extrabold tracking-wider text-[#EA580C] bg-amber-50 px-2 py-0.5 rounded border border-amber-200/60 inline-block mb-2">
+                    {step.badge}
+                  </span>
+                  <h3 className="text-lg font-bold font-serif-brand text-[#114088] group-hover:text-[#2563EB] transition-colors mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+
+                {/* Bottom Status / Arrow */}
+                <div className="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between text-gray-400">
+                  <span className="text-[11px] font-semibold text-gray-500 flex items-center gap-1">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                    Verified Service
+                  </span>
+                  {idx < steps.length - 1 && (
+                    <span className="hidden lg:block text-[#F59E0B] font-bold text-sm">
+                      →
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Bottom Trust Highlight Banner */}
+        <div className="mt-12 bg-gradient-to-r from-[#0B1E3F] via-[#114088] to-[#0B1E3F] rounded-2xl p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="flex items-center gap-4 text-center md:text-left">
+            <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center shrink-0">
+              <Compass className="w-7 h-7 text-[#F59E0B]" />
+            </div>
+            <div>
+              <h4 className="text-lg sm:text-xl font-bold font-serif">
+                Need Help Selecting the Right Package or Dates?
+              </h4>
+              <p className="text-xs sm:text-sm text-gray-300 mt-1">
+                Our Bangalore travel coordinators are ready to craft a personalized tour plan for your family.
               </p>
             </div>
           </div>
-
-          {/* Right Side: The Arc & Center Image */}
-          <div className="w-7/12 relative h-[500px] flex items-center justify-start">
-            
-            {/* Center Image (Inside the arc) */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-[300px] h-[300px] rounded-full overflow-hidden shadow-2xl border-4 border-white z-10">
-              <img 
-                src="/How It works.png" 
-                alt="Travel Journey" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-[#114088]/10 mix-blend-overlay"></div>
-            </div>
-
-            {/* The structural circle (Arc) */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-[450px] h-[450px] rounded-full border border-gray-300 z-0"></div>
-
-            {/* The Steps on the Arc */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-[450px] h-[450px] z-20">
-              {steps.map((step, idx) => (
-                <div 
-                  key={idx} 
-                  className="absolute flex items-center justify-center group"
-                  style={{ left: step.pos.left, top: step.pos.top, transform: 'translate(-50%, -50%)' }}
-                >
-                  {/* The Node */}
-                  <div className="relative w-14 h-14 bg-white rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] border border-gray-100 flex items-center justify-center z-10 group-hover:scale-110 group-hover:shadow-[0_8px_25px_rgba(37,99,235,0.2)] transition-all duration-300 cursor-pointer">
-                    <span className="text-2xl font-extrabold text-[#114088] group-hover:text-[#F59E0B] transition-colors">{step.num}</span>
-                  </div>
-
-                  {/* The Text (placed to the right of the node) */}
-                  <div className="absolute left-full ml-4 w-56 opacity-90 group-hover:opacity-100 transition-opacity">
-                    <h3 className="text-lg font-bold font-serif-brand text-[#114088] mb-1.5 leading-tight group-hover:text-[#2563EB] transition-colors">{step.title}</h3>
-                    <p className="text-xs text-gray-600 font-medium leading-snug">{step.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Layout (Vertical Timeline) */}
-        <div className="lg:hidden flex flex-col">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#114088] mb-4 font-serif-brand">
-              How It Works
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Your dream vacation is just five simple steps away.
-            </p>
-          </div>
-
-          <div className="flex justify-center mb-12">
-            <div className="w-[200px] h-[200px] rounded-full overflow-hidden shadow-lg border-4 border-white">
-              <img 
-                src="/How It works.png" 
-                alt="Travel Journey" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="relative border-l-2 border-gray-200 ml-8 md:ml-12 space-y-12">
-            {steps.map((step, idx) => (
-              <div key={idx} className="relative pl-8">
-                <div className="absolute -left-[25px] top-0 w-12 h-12 bg-white rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] border border-gray-100 flex items-center justify-center z-10">
-                  <span className="text-lg font-bold text-[#2563EB]">{step.num}</span>
-                </div>
-                <div className="pt-1">
-                  <h3 className="text-lg font-bold text-[#114088] mb-1">{step.title}</h3>
-                  <p className="text-xs text-gray-600">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <a
+            href="#quote"
+            className="inline-flex items-center gap-2 bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-md shrink-0 hover:scale-105 active:scale-95"
+          >
+            <span>Plan Your Journey</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
 
       </div>

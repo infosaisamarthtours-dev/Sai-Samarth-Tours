@@ -39,6 +39,17 @@
   }
 }
 
+/* Hero section aspect ratio for 0 Cumulative Layout Shift (CLS) */
+#hero {
+  aspect-ratio: 750 / 950;
+  width: 100%;
+}
+@media (min-width: 640px) {
+  #hero {
+    aspect-ratio: 1600 / 587;
+  }
+}
+
 /* Custom Shadow & Lift Utilities from User HTML */
 .ambient-shadow {
   box-shadow: 0 10px 32px -4px rgba(255, 122, 0, 0.08);

@@ -9,6 +9,7 @@ import { BLOG_POSTS, BlogPost } from '../data/blogs';
 import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { SEOHead } from '../components/SEOHead';
 
 interface BlogPageProps {
   onOpenEnquiry?: (packageTitle?: string) => void;
@@ -86,6 +87,12 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
 
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-20 selection:bg-[#F59E0B] selection:text-white">
+      <SEOHead
+        title="Travel Guides & Pilgrimage Yatra Blog | Sai Samarth Tours Bangalore"
+        description="Expert spiritual travel advice, Shirdi VIP darshan passes guide, Jyotirlinga circuit tips, and domestic & international holiday guides from Bangalore."
+        canonical="https://saisamarthtours.com/blog"
+        ogImage="/shirdi-tour-hero-banner-desktop.webp"
+      />
       {/* ================= HERO & SEARCH BANNER ================= */}
       <div className="relative bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-xl">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
@@ -186,7 +193,11 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
               <div className="lg:col-span-7 relative h-72 lg:h-auto overflow-hidden min-h-[320px]">
                 <img
                   src={featuredPost.image}
-                  alt={featuredPost.title}
+                  alt={`${featuredPost.title} - Sai Samarth Tours Travel Guide`}
+                  width={700}
+                  height={400}
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent lg:hidden" />
@@ -315,15 +326,18 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
                     <div className="relative h-56 overflow-hidden bg-gray-100">
                       <img
                         src={post.image}
-                        alt={post.title}
+                        alt={`${post.title} - Sai Samarth Tours Travel Guide`}
+                        width={400}
+                        height={224}
+                        loading="lazy"
+                        decoding="async"
                         onError={(e) => {
                           const target = e.currentTarget;
-                          if (!target.src.includes('Pilgrimage.png')) {
-                            target.src = '/Pilgrimage.png';
+                          if (!target.src.includes('pilgrimage-packages-category-card.webp')) {
+                            target.src = '/pilgrimage-packages-category-card.webp';
                           }
                         }}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
@@ -358,6 +372,10 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
                         <img
                           src={post.author.avatar}
                           alt={post.author.name}
+                          width={20}
+                          height={20}
+                          loading="lazy"
+                          decoding="async"
                           onError={(e) => {
                             e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(post.author.name)}&background=114088&color=fff`;
                           }}
@@ -436,7 +454,11 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
                 <div className="relative h-44 overflow-hidden">
                   <img
                     src={pkg.image}
-                    alt={pkg.title}
+                    alt={`${pkg.title} tour package from Bangalore`}
+                    width={300}
+                    height={176}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-3 left-3 bg-[#0B1E3F] text-[#F59E0B] text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md shadow-md">

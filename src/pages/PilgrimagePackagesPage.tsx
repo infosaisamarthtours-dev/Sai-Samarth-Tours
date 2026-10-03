@@ -5,6 +5,8 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { FaqSection } from '../components/FaqSection';
 import { ImageSlider } from '../components/ImageSlider';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const pilgrimageIds = [
   'kholapur-pandarpur',
@@ -26,15 +28,25 @@ const destinations = pilgrimageIds
 export function PilgrimagePackagesPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
+      <SEOHead
+        title="Pilgrimage Tour Packages from Bangalore | Sai Samarth Tours"
+        description="Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes flights, VIP darshan & 3-star AC hotels."
+        canonical="https://saisamarthtours.com/pilgrimage-packages"
+        ogImage="/pilgrimage-packages-category-card.webp"
+      />
       
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-gray-200">Pilgrimage Packages</span>
+          <div className="mb-6">
+            <Breadcrumbs 
+              items={[
+                { name: 'Tour Packages', url: '/tour-packages' },
+                { name: 'Pilgrimage Tour Packages' }
+              ]} 
+              theme="dark" 
+            />
           </div>
 
           {/* Title & Description */}
@@ -61,7 +73,10 @@ export function PilgrimagePackagesPage() {
                 {dest.images && dest.images.length > 1 ? (
                   <ImageSlider
                     images={dest.images}
-                    alt={dest.title}
+                    alt={`${dest.title} tour package from Bangalore`}
+                    width={450}
+                    height={280}
+                    loading="lazy"
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -69,7 +84,11 @@ export function PilgrimagePackagesPage() {
                 ) : (
                   <img 
                     src={dest.image} 
-                    alt={dest.title} 
+                    alt={`${dest.title} tour package from Bangalore`} 
+                    width={450}
+                    height={280}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 )}

@@ -115,12 +115,16 @@ export function Footer() {
           {/* Column 1: Logo, Info, Address & Phone (lg:col-span-4) */}
           <div className="lg:col-span-4 space-y-4">
             <img 
-              src="/Sai samarth tours logo.jpeg" 
-              alt={siteConfig.name} 
+              src="/sai-samarth-tours-logo.webp" 
+              alt="Sai Samarth Tours - Bangalore's Trusted Pilgrimage & Holiday Agency" 
+              width={200}
+              height={64}
+              loading="lazy"
+              decoding="async"
               className="h-16 w-auto object-contain bg-white rounded p-1 mb-4" 
             />
             <p className="text-gray-300 text-xs leading-relaxed font-medium">
-              Bangalore's trusted tour operator since 2013, Sai Samarth Tours provides domestic and international tour packages from Bangalore, including group tours, pilgrimages, honeymoons, family trips, and customized holiday packages.
+              Leading pilgrimage tour operator in Bangalore and verified Yelahanka travel agency (Govt Reg MSME). Curating seamless flight yatras and bespoke domestic & international tour packages from Bangalore with dedicated tour managers.
             </p>
             
             {/* Address & Phone Details Block */}
@@ -202,11 +206,15 @@ export function Footer() {
                 >
                   <img 
                     src={blog.image} 
-                    alt={blog.title} 
+                    alt={`${blog.title} - Sai Samarth Tours Travel Guide`} 
+                    width={56}
+                    height={56}
+                    loading="lazy"
+                    decoding="async"
                     onError={(e) => {
                       const target = e.currentTarget;
-                      if (!target.src.includes('Pilgrimage.png')) {
-                        target.src = '/Pilgrimage.png';
+                      if (!target.src.includes('pilgrimage-packages-category-card.webp')) {
+                        target.src = '/pilgrimage-packages-category-card.webp';
                       }
                     }}
                     className="w-14 h-14 rounded-xl object-cover border border-amber-500/30 shrink-0 group-hover:scale-105 transition-transform" 
@@ -224,6 +232,240 @@ export function Footer() {
             </div>
           </div>
 
+        </div>
+
+        {/* 3b. Deliberate Bangalore Travel SEO Directory & Internal Links */}
+        <div className="mt-12 pt-10 border-t border-white/10">
+          <div className="mb-6">
+            <h4 className="text-xs font-bold text-[#F59E0B] uppercase tracking-widest flex items-center gap-2">
+              <Compass className="w-3.5 h-3.5 text-[#F59E0B]" />
+              Popular Tour Packages from Bangalore — Quick Directory
+            </h4>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-xs">
+            {/* Column 1: Pilgrimage Tours from Bangalore */}
+            <div className="space-y-2.5">
+              <span className="font-bold text-white text-xs block mb-2 border-b border-white/10 pb-1">
+                Pilgrimage Tours from Bangalore
+              </span>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <Link to="/package/shirdi-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Shirdi Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/shirdi" className="hover:text-[#F59E0B] transition-colors">
+                    Shirdi Flight Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/shirdi-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Shirdi VIP Darshan Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/kashi" className="hover:text-[#F59E0B] transition-colors">
+                    Kashi Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/ayodhya" className="hover:text-[#F59E0B] transition-colors">
+                    Ayodhya Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Kashi Ayodhya Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/jyotirlinga" className="hover:text-[#F59E0B] transition-colors">
+                    Jyotirlinga Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/chardham" className="hover:text-[#F59E0B] transition-colors">
+                    Char Dham Yatra from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/tirupati" className="hover:text-[#F59E0B] transition-colors">
+                    Tirupati Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/rameshwaram" className="hover:text-[#F59E0B] transition-colors">
+                    Rameshwaram Tour Package from Bangalore
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2: Domestic Holidays from Bangalore */}
+            <div className="space-y-2.5">
+              <span className="font-bold text-white text-xs block mb-2 border-b border-white/10 pb-1">
+                Domestic Tour Packages from Bangalore
+              </span>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <Link to="/destinations/kashmir" className="hover:text-[#F59E0B] transition-colors">
+                    Kashmir Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/kerala" className="hover:text-[#F59E0B] transition-colors">
+                    Kerala Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/goa" className="hover:text-[#F59E0B] transition-colors">
+                    Goa Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/rajasthan" className="hover:text-[#F59E0B] transition-colors">
+                    Rajasthan Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/ladakh" className="hover:text-[#F59E0B] transition-colors">
+                    Ladakh Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/andaman" className="hover:text-[#F59E0B] transition-colors">
+                    Andaman Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/himachal-pradesh-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Himachal Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Golden Triangle Tour from Bangalore
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3: International Tours from Bangalore */}
+            <div className="space-y-2.5">
+              <span className="font-bold text-white text-xs block mb-2 border-b border-white/10 pb-1">
+                International Tour Packages from Bangalore
+              </span>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <Link to="/destinations/thailand" className="hover:text-[#F59E0B] transition-colors">
+                    Thailand Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/dubai" className="hover:text-[#F59E0B] transition-colors">
+                    Dubai Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/malaysia" className="hover:text-[#F59E0B] transition-colors">
+                    Malaysia Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/maldives" className="hover:text-[#F59E0B] transition-colors">
+                    Maldives Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/bali-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Bali Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/singapore-malaysia-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Singapore Malaysia Tour from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/europe-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Europe Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/bhutan-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Bhutan Tour Package from Bangalore
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4: Primary Bangalore Travel Agency Keywords */}
+            <div className="space-y-2.5">
+              <span className="font-bold text-white text-xs block mb-2 border-b border-white/10 pb-1">
+                Bangalore Travel Services
+              </span>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <Link to="/tour-packages" className="hover:text-[#F59E0B] transition-colors">
+                    Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about" className="hover:text-[#F59E0B] transition-colors">
+                    Travel Agency in Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="hover:text-[#F59E0B] transition-colors">
+                    Tour Operator in Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/pilgrimage-tour-packages" className="hover:text-[#F59E0B] transition-colors">
+                    Pilgrimage Tours from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/shirdi-tour-packages" className="hover:text-[#F59E0B] transition-colors">
+                    Shirdi Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/domestic-tour-packages" className="hover:text-[#F59E0B] transition-colors">
+                    Domestic Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/international-tour-packages" className="hover:text-[#F59E0B] transition-colors">
+                    International Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/senior-citizen-tour-packages" className="hover:text-[#F59E0B] transition-colors">
+                    Senior Citizen Tour Packages
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/family-tour-packages-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Family Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/group-tour-packages-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Group Tour Packages from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/customized-tour-packages-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Customized Tour Packages from Bangalore
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div>
 

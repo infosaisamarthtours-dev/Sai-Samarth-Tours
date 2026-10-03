@@ -11,7 +11,11 @@ export function FinalCta({ onOpenEnquiry }: Props) {
       <div className="absolute inset-0 z-0 opacity-20">
         <img 
           src="https://images.unsplash.com/photo-1590050752117-238cb122a275?auto=format&fit=crop&q=80" 
-          alt="Background" 
+          alt="Pilgrimage and vacation journeys with Sai Samarth Tours Bangalore" 
+          width={1920}
+          height={600}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#114088] via-[#114088]/90 to-transparent"></div>

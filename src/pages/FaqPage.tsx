@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HelpCircle, ChevronDown, Phone, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../data/config';
+import { SEOHead } from '../components/SEOHead';
 
 export function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -32,16 +33,16 @@ export function FaqPage() {
       category: "Booking & Payments",
       faqs: [
         {
-          question: "How do I book a tour package with Sai Samarth Tours?",
-          answer: "You can book directly by clicking 'Enquire Now' on any package page, filling our contact form, or reaching out to us via WhatsApp at +91 91877 11649. Our travel experts will assist you with dates, customized options, and confirmation."
+          question: "What is the advance booking and seat reservation procedure?",
+          answer: "To reserve your tour package, submit an enquiry or connect with our Bangalore advisors on WhatsApp (+91 9187711649). We provide a date-locked itinerary and require a nominal booking advance to confirm your airline tickets and hotel vouchers immediately."
         },
         {
-          question: "What payment methods are accepted?",
-          answer: "We accept UPI payments (GPay, PhonePe, Paytm), Net Banking, NEFT/RTGS bank transfers, Credit/Debit cards, and direct office payments."
+          question: "What payment options, GST invoices, and receipt confirmations are provided?",
+          answer: "We accept UPI (Google Pay, PhonePe, Paytm), Net Banking, NEFT/RTGS bank transfers, and all major debit/credit cards. Every booking receives an official GST invoice, payment receipt, and formal booking voucher from Sai Samarth Tours."
         },
         {
-          question: "Are custom family packages available?",
-          answer: "Yes, 100%! We specialize in custom private tours for families, corporate groups, and senior citizen groups. We can tailor travel dates, vehicle types, hotel categories, and meal preferences."
+          question: "How are private family customizations and date modifications handled?",
+          answer: "For private departures, we offer 100% flexibility on travel dates, vehicle upgrades (such as dedicated Innova Crysta or Tempo Traveller), and optional stay extensions. Date modifications are accommodated smoothly based on airline fare rules and hotel room availability."
         }
       ]
     },
@@ -64,6 +65,11 @@ export function FaqPage() {
 
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
+      <SEOHead
+        title="Frequently Asked Questions (FAQ) | Sai Samarth Tours Bangalore"
+        description="Find answers to common questions about Sai Samarth Tours pilgrimage packages, flight bookings, VIP Darshan, meals, and senior citizen assistance from Bangalore."
+        canonical="https://saisamarthtours.com/faq"
+      />
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

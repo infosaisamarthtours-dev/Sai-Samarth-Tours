@@ -45,10 +45,10 @@ export function InternationalJourneys({ onSelectPackage, onOpenEnquiry }: Props)
             ✈️ Worldwide Odysseys & Escapes
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-[#114088] mb-2 sm:mb-4">
-            International Tours
+            International Tour Packages
           </h2>
           <p className="text-xs sm:text-base text-gray-600 max-w-3xl mx-auto leading-normal sm:leading-relaxed px-2">
-            Fly to Malaysia, Maldives, Europe, Dubai, Singapore & Thailand with end-to-end visa & flight assistance.
+            Top international tour packages from Bangalore. Direct flights to Thailand, Dubai, Malaysia, Maldives, Singapore, Bali & Europe with hassle-free visa processing & 4-star hotels.
           </p>
 
           {/* Related Topic Badges */}
@@ -78,7 +78,11 @@ export function InternationalJourneys({ onSelectPackage, onOpenEnquiry }: Props)
               <div className="relative h-40 w-full overflow-hidden shrink-0">
                 <img 
                   src={pkg.image} 
-                  alt={pkg.title} 
+                  alt={`${pkg.title} international holiday package from Bangalore`} 
+                  width={400}
+                  height={260}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500 object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70"></div>

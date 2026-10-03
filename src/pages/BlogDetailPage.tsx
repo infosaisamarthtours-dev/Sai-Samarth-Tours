@@ -8,6 +8,8 @@ import {
 import { BLOG_POSTS, BlogPost } from '../data/blogs';
 import { ALL_PACKAGES } from '../data/packages';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 interface BlogDetailPageProps {
   onOpenEnquiry?: (packageTitle?: string) => void;
@@ -64,6 +66,28 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
     );
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': post.title,
+    'description': post.excerpt,
+    'image': post.image.startsWith('http') ? post.image : `https://saisamarthtours.com${post.image}`,
+    'author': {
+      '@type': 'Person',
+      'name': post.author.name
+    },
+    'publisher': {
+      '@type': 'TravelAgency',
+      'name': 'Sai Samarth Tours',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp'
+      }
+    },
+    'datePublished': post.date,
+    'mainEntityOfPage': `https://saisamarthtours.com/blog/${post.slug}`
+  };
+
   const handleShare = () => {
     navigator.clipboard.writeText(window.location.href);
     setCopiedLink(true);
@@ -82,18 +106,27 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
 
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24 selection:bg-[#F59E0B] selection:text-white">
+      <SEOHead
+        title={`${post.title} | Sai Samarth Tours Travel Blog`}
+        description={post.excerpt}
+        canonical={`https://saisamarthtours.com/blog/${post.slug}`}
+        ogImage={post.image}
+        ogType="article"
+        jsonLd={articleJsonLd}
+      />
+
       {/* ================= HERO HEADER (70%+ SCREEN COVERAGE) ================= */}
       <div className="bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-28 pb-16 px-4 sm:px-6 lg:px-8 relative shadow-lg">
         <div className="max-w-7xl mx-auto">
-          {/* Breadcrumbs & Back Navigation */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-6 text-xs sm:text-sm text-gray-300 font-medium">
-            <div className="flex items-center gap-2 flex-wrap">
-              <Link to="/" className="hover:text-[#F59E0B] transition-colors">Home</Link>
-              <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <Link to="/blog" className="hover:text-[#F59E0B] transition-colors">Blog</Link>
-              <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <span className="text-[#F59E0B] font-semibold truncate max-w-[250px] sm:max-w-md">{post.title}</span>
-            </div>
+          {/* Breadcrumbs Navigation */}
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <Breadcrumbs
+              items={[
+                { name: 'Travel Guides & Blog', url: '/blog' },
+                { name: post.title }
+              ]}
+              theme="dark"
+            />
 
             <Link
               to="/blog"
@@ -126,6 +159,10 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
               <img
                 src={post.author.avatar}
                 alt={post.author.name}
+                width={44}
+                height={44}
+                loading="eager"
+                decoding="sync"
                 className="w-11 h-11 rounded-full object-cover border-2 border-[#F59E0B]"
               />
               <div>
@@ -168,11 +205,15 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
             <div className="rounded-2xl overflow-hidden shadow-lg mb-8 h-72 sm:h-[450px]">
               <img
                 src={post.image}
-                alt={post.title}
+                alt={`${post.title} - Sai Samarth Tours Pilgrimage Guide`}
+                width={800}
+                height={450}
+                loading="eager"
+                decoding="sync"
                 onError={(e) => {
                   const target = e.currentTarget;
-                  if (!target.src.includes('Pilgrimage.png')) {
-                    target.src = '/Pilgrimage.png';
+                  if (!target.src.includes('pilgrimage-packages-category-card.webp')) {
+                    target.src = '/pilgrimage-packages-category-card.webp';
                   }
                 }}
                 className="w-full h-full object-cover"
@@ -313,6 +354,10 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
               <img
                 src={post.author.avatar}
                 alt={post.author.name}
+                width={80}
+                height={80}
+                loading="lazy"
+                decoding="async"
                 className="w-20 h-20 rounded-full object-cover mx-auto mb-4 border-4 border-amber-500/20 shadow-md"
               />
               <h3 className="text-base font-bold font-serif-brand text-[#0B1E3F] mb-1">
@@ -378,7 +423,11 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
                   >
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`${item.title} - Travel Guide`}
+                      width={64}
+                      height={64}
+                      loading="lazy"
+                      decoding="async"
                       className="w-16 h-16 rounded-xl object-cover shrink-0 group-hover:scale-105 transition-transform"
                     />
                     <div>

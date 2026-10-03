@@ -1,13 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export function OurServices() {
   const services = [
-    { title: 'Shirdi', image: '/Shridi-Package.png', path: '/shirdi-packages' },
-    { title: 'Pilgrimage', image: '/Pilgrimage.png', path: '/pilgrimage-packages' },
-    { title: 'Domestic', image: '/Domastic-Tours.png', path: '/domestic-packages' },
-    { title: 'International', image: '/International-tour.png', path: '/international-packages' }
+    { 
+      title: 'Shirdi', 
+      image: '/shirdi-packages-category-card.webp', 
+      alt: 'Shirdi Sai Baba flight tour packages from Bangalore',
+      path: '/shirdi-packages' 
+    },
+    { 
+      title: 'Pilgrimage', 
+      image: '/pilgrimage-packages-category-card.webp', 
+      alt: 'Sacred temple pilgrimage yatra packages from Bangalore',
+      path: '/pilgrimage-packages' 
+    },
+    { 
+      title: 'Domestic', 
+      image: '/domestic-packages-category-card.webp', 
+      alt: 'Incredible India domestic holiday tour packages from Bangalore',
+      path: '/domestic-packages' 
+    },
+    { 
+      title: 'International', 
+      image: '/international-packages-category-card.webp', 
+      alt: 'International tour holiday packages from Bangalore with flights and visa',
+      path: '/international-packages' 
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,26 +40,26 @@ export function OurServices() {
     return () => clearInterval(timer);
   }, [services.length]);
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? services.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % services.length);
-  };
-
   return (
     <section className="pt-12 pb-8 bg-[#FBF9F5] relative overflow-hidden">
       {/* Devotional Bells Decoration */}
       <img 
-        src="/temple-bell.jpg" 
-        alt="" 
+        src="/temple-bell-sacred-yatra.webp" 
+        alt="Sacred temple bell decoration - Sai Samarth Tours" 
+        width={256}
+        height={256}
+        loading="lazy"
+        decoding="async"
         className="absolute top-0 -left-10 sm:-left-16 md:-left-20 w-32 sm:w-40 md:w-56 xl:w-64 mix-blend-multiply pointer-events-none z-0"
         aria-hidden="true"
       />
       <img 
-        src="/temple-bell.jpg" 
-        alt="" 
+        src="/temple-bell-sacred-yatra.webp" 
+        alt="Sacred temple bell decoration - Sai Samarth Tours" 
+        width={256}
+        height={256}
+        loading="lazy"
+        decoding="async"
         className="absolute top-0 -right-10 sm:-right-16 md:-right-20 w-32 sm:w-40 md:w-56 xl:w-64 mix-blend-multiply pointer-events-none z-0"
         aria-hidden="true"
       />
@@ -65,7 +84,11 @@ export function OurServices() {
                 <img 
                   key={currentIndex}
                   src={services[currentIndex].image} 
-                  alt={services[currentIndex].title} 
+                  alt={services[currentIndex].alt} 
+                  width={280}
+                  height={280}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain filter drop-shadow-lg transition-all duration-700 ease-in-out animate-fadeIn"
                 />
               </div>
@@ -79,7 +102,7 @@ export function OurServices() {
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to ${s.title}`}
-                className={`h-2.5 rounded-full transition-all duration-500 ${
+                className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${
                   currentIndex === idx ? 'w-8 bg-gradient-to-r from-[#F59E0B] to-[#EA580C] shadow-sm' : 'w-2.5 bg-gray-300 hover:bg-gray-400'
                 }`}
               />
@@ -98,7 +121,11 @@ export function OurServices() {
               <div className="w-full h-64 lg:h-72 flex items-center justify-center transition-all duration-300 transform group-hover:scale-105">
                 <img 
                   src={service.image} 
-                  alt={service.title} 
+                  alt={service.alt} 
+                  width={280}
+                  height={280}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain drop-shadow-md group-hover:drop-shadow-xl transition-all"
                 />
               </div>
@@ -109,4 +136,3 @@ export function OurServices() {
     </section>
   );
 }
-
