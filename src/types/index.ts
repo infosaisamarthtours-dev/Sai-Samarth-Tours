@@ -4,6 +4,8 @@ export interface Package {
   id: string;
   slug?: string;
   title: string;
+  seoH1?: string;
+  shortTitle?: string;
   category: CategoryType;
   destination: string;
   duration: string;

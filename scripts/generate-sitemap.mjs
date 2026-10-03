@@ -48,15 +48,21 @@ const packageSlugsMap = {
 
 // Import packages and blogs
 const packagesFile = fs.readFileSync(path.join(rootDir, 'src/data/packages.ts'), 'utf8');
-const blogsFile = fs.readFileSync(path.join(rootDir, 'src/data/blogs.ts'), 'utf8');
 
 // Extract package IDs from packages.ts
 const packageIdMatches = [...packagesFile.matchAll(/id:\s*['"]([a-zA-Z0-9_-]+)['"]/g)];
 const uniquePackageIds = Array.from(new Set(packageIdMatches.map(m => m[1])));
 
-// Extract blog slugs from blogs.ts
-const blogSlugMatches = [...blogsFile.matchAll(/slug:\s*['"]([a-zA-Z0-9_-]+)['"]/g)];
-const uniqueBlogSlugs = Array.from(new Set(blogSlugMatches.map(m => m[1])));
+// Extract blog slugs from src/data/blogs directory
+const blogsDir = path.join(rootDir, 'src/data/blogs');
+const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith('.ts') && f !== 'types.ts');
+let blogSlugMatches = [];
+for (const file of blogFiles) {
+  const content = fs.readFileSync(path.join(blogsDir, file), 'utf8');
+  const matches = [...content.matchAll(/slug:\s*['"]([a-zA-Z0-9_-]+)['"]/g)];
+  blogSlugMatches.push(...matches.map(m => m[1]));
+}
+const uniqueBlogSlugs = Array.from(new Set(blogSlugMatches));
 
 console.log(`Found ${uniquePackageIds.length} packages and ${uniqueBlogSlugs.length} blog posts.`);
 

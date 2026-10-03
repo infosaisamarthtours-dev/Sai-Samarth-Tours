@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { MessageCircle, Phone, Send } from 'lucide-react';
+import { MessageCircle, Phone, Send, CheckCircle2 } from 'lucide-react';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { siteConfig } from '../data/config';
+import confetti from 'canvas-confetti';
 
 export function QuoteSection() {
   const [formData, setFormData] = useState({
@@ -8,12 +10,36 @@ export function QuoteSection() {
     mobile: '',
     destination: ''
   });
+  const [submitted, setSubmitted] = useState(false);
+
+  const getCallbackWhatsAppUrl = () => {
+    const dest = formData.destination ? `\n📍 *Destination:* ${formData.destination}` : '';
+    const text = encodeURIComponent(
+      `Namaste Sai Samarth Tours 🙏\n\n*Callback Request from Website:*\n👤 *Name:* ${formData.name.trim() || 'Traveler'}\n📞 *Phone:* ${formData.mobile.trim()}${dest}\n✈️ *Departure:* Bangalore\n\nPlease call me back with the best tour quotes and itinerary options. Thank you!`
+    );
+    return `https://wa.me/${siteConfig.whatsappNumber || '919187711649'}?text=${text}`;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    alert('Thank you! Our experts will contact you soon.');
+    setSubmitted(true);
+    confetti({
+      particleCount: 70,
+      spread: 60,
+      origin: { y: 0.6 },
+      colors: ['#F59E0B', '#2563EB', '#114088'],
+    });
+
+    const waUrl = getCallbackWhatsAppUrl();
+    try {
+      window.open(waUrl, '_blank');
+    } catch (err) {
+      console.error('Failed to open WhatsApp window', err);
+    }
+  };
+
+  const handleReset = () => {
+    setSubmitted(false);
     setFormData({ name: '', mobile: '', destination: '' });
   };
 
@@ -86,63 +112,95 @@ export function QuoteSection() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <input 
-                    type="text" 
-                    required
-                    placeholder="Your Name *"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:border-[#F59E0B] transition-colors"
-                  />
+              {submitted ? (
+                <div className="py-6 text-center space-y-5 animate-fadeIn">
+                  <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-200">
+                    <CheckCircle2 className="w-8 h-8 text-emerald-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-[#114088]">Enquiry Sent to WhatsApp!</h4>
+                    <p className="text-xs text-gray-600 mt-1">
+                      Thank you, <span className="font-bold text-[#114088]">{formData.name}</span>. Our expert will call you shortly.
+                    </p>
+                  </div>
+                  <div className="space-y-2 pt-2">
+                    <a
+                      href={getCallbackWhatsAppUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer transition-all"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Open in WhatsApp</span>
+                    </a>
+                    <button
+                      type="button"
+                      onClick={handleReset}
+                      className="w-full py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold text-xs rounded-xl transition-all cursor-pointer"
+                    >
+                      Submit Another Query
+                    </button>
+                  </div>
                 </div>
-                
-                <div>
-                  <input 
-                    type="tel" 
-                    required
-                    placeholder="Mobile Number *"
-                    value={formData.mobile}
-                    onChange={(e) => setFormData({...formData, mobile: e.target.value})}
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:border-[#F59E0B] transition-colors"
-                  />
-                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <input 
+                      type="text" 
+                      required
+                      placeholder="Your Name *"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:border-[#F59E0B] transition-colors"
+                    />
+                  </div>
+                  
+                  <div>
+                    <input 
+                      type="tel" 
+                      required
+                      placeholder="Mobile Number *"
+                      value={formData.mobile}
+                      onChange={(e) => setFormData({...formData, mobile: e.target.value})}
+                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:border-[#F59E0B] transition-colors"
+                    />
+                  </div>
 
-                <div>
-                  <select 
-                    value={formData.destination}
-                    onChange={(e) => setFormData({...formData, destination: e.target.value})}
-                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:border-[#F59E0B] transition-colors text-gray-600"
+                  <div>
+                    <select 
+                      value={formData.destination}
+                      onChange={(e) => setFormData({...formData, destination: e.target.value})}
+                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#F59E0B]/50 focus:border-[#F59E0B] transition-colors text-gray-600"
+                    >
+                      <option value="">Where do you want to go? (Optional)</option>
+                      <optgroup label="Domestic">
+                        <option value="Shirdi">Shirdi</option>
+                        <option value="Kashmir">Kashmir</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Goa">Goa</option>
+                      </optgroup>
+                      <optgroup label="International">
+                        <option value="Dubai">Dubai</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Europe">Europe</option>
+                      </optgroup>
+                    </select>
+                  </div>
+
+                  <button 
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-6 py-4 rounded-xl font-bold transition-colors shadow-lg shadow-blue-500/30 mt-2 cursor-pointer"
                   >
-                    <option value="" disabled>Where do you want to go? (Optional)</option>
-                    <optgroup label="Domestic">
-                      <option value="Shirdi">Shirdi</option>
-                      <option value="Kashmir">Kashmir</option>
-                      <option value="Kerala">Kerala</option>
-                      <option value="Goa">Goa</option>
-                    </optgroup>
-                    <optgroup label="International">
-                      <option value="Dubai">Dubai</option>
-                      <option value="Thailand">Thailand</option>
-                      <option value="Bali">Bali</option>
-                      <option value="Europe">Europe</option>
-                    </optgroup>
-                  </select>
-                </div>
+                    <Send className="w-5 h-5" />
+                    Submit Enquiry
+                  </button>
 
-                <button 
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-6 py-4 rounded-xl font-bold transition-colors shadow-lg shadow-blue-500/30 mt-2"
-                >
-                  <Send className="w-5 h-5" />
-                  Submit Enquiry
-                </button>
-
-                <p className="text-center text-[11px] text-gray-400 mt-4">
-                  No spam. We respect your privacy.
-                </p>
-              </form>
+                  <p className="text-center text-[11px] text-gray-400 mt-4">
+                    No spam. We respect your privacy.
+                  </p>
+                </form>
+              )}
             </div>
           </div>
 

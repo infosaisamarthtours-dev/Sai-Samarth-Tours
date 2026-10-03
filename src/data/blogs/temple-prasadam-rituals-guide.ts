@@ -8,47 +8,66 @@ export const templePrasadamRitualsGuidePost: BlogPost = {
   seoDescription: 'Discover the spiritual secrets of Tirupati Srivari Laddoo, Puri Jagannath Mahaprasad 56 Bhog, and Shirdi Sai Prasadalaya. Pilgrimage tour guide from Bangalore.',
   excerpt: 'From Tirupati Srivari Laddoo and Puri Mahaprasad to Shirdi Sai Sansthan Prasadalaya: Uncover the sacred culinary secrets, Vedic rituals, and spiritual significance of India’s most revered temple prasadam.',
   content: {
-    intro: 'In Sanatana Dharma, Temple Prasadam is not merely food—it is the direct divine blessing (Anugraha) of the supreme deity. Cooked in sacred hearths adhering to ancient Agamic scriptures, the aroma and purity of holy offerings carry divine healing and spiritual merit for millions of devotees visiting from across India.',
+    intro: 'In Sanatana Dharma, Temple Prasadam is not merely food—it is the direct divine blessing (Anugraha) of the supreme deity. Cooked in sacred hearths adhering to ancient Agamic scriptures, the aroma and purity of holy offerings carry divine healing and spiritual merit for millions of devotees visiting from across India. When you travel on our curated pilgrimage tours, such as our [Puri Jagannath tour package from Bangalore](/package/puri-jagannath-konark-tour-package-from-bangalore) or our flight-based [Shirdi tour package from Bangalore](/package/shirdi-tour-package-from-bangalore), experiencing these holy offerings forms the spiritual pinnacle of your journey.',
     sections: [
       {
         heading: '1. Puri Jagannath Mahaprasad: The Miraculous Clay Pots of Ananda Bazar',
+        subheading: 'Ancient Agamic Firewood Hearths & The Sacred 56 Bhog Offering',
         body: 'At the 12th-century Jagannath Temple in Puri, Odisha, Mahaprasad is prepared inside the world’s largest traditional kitchen (Roshaghara), where 240 firewood hearths feed over 50,000 pilgrims daily.',
+        image: '/puri-jagannath-konark-tour-package-from-bangalore.webp',
+        imageCaption: 'Devotees gather inside Puri Jagannath Temple premises to receive blessed Mahaprasad at Ananda Bazar.',
         bulletPoints: [
-          'The Seven Earthen Pots Miracle: Temple cooks (Suaras) stack seven clay pots on top of each other over a single wood fire. Mystically, the food in the topmost pot is believed to cook first, while the bottom pot cooks last.',
-          '56 Bhog (Chappan Bhog): A divine feast consisting of spiced lentils, rice, plantain curry, saag, sweet cakes (Khaja), and puddings offered first to Lord Jagannath and subsequently to Maa Bimala, transforming it into Mahaprasad.',
-          'Ananda Bazar: The sacred temple square where devotees of every caste, race, and background sit together on the ground to eat from the same banana leaf—symbolizing universal equality before God.'
+          '**The Seven Earthen Pots Miracle:** Temple cooks (Suaras) stack seven clay pots on top of each other over a single wood fire. Mystically, the food in the topmost pot is believed to cook first, while the bottom pot cooks last.',
+          '**56 Bhog (Chappan Bhog):** A divine feast consisting of spiced lentils, rice, plantain curry, saag, sweet cakes (Khaja), and puddings offered first to Lord Jagannath and subsequently to Maa Bimala, transforming it into Mahaprasad.',
+          '**Ananda Bazar Fellowship:** The sacred temple square where devotees of every caste, race, and background sit together on the ground to eat from the same banana leaf—symbolizing universal equality before God.'
         ],
         tips: 'Temple Tip: Carry dry Khaja sweet packets packed in traditional palm-leaf boxes (Peti) back home to Bangalore, as it retains freshness for up to 15 days.'
       },
       {
         heading: '2. Tirupati Balaji Srivari Laddoo: The GI-Tagged Golden Offering',
+        subheading: 'The World-Renowned Heritage Sweet Crafted in Tirumala’s Potu',
         body: 'Standing as one of the world’s most famous temple sweets, the Tirupati Srivari Laddoo has been prepared in the holy Potu (temple kitchen) of Tirumala for over 300 years.',
         bulletPoints: [
-          'Geographical Indication (GI) Status: Bestowed with GI patent protection, the laddoo is crafted with strict traditional ratios of gram flour (besan), pure cow ghee, sugar syrup, cashew nuts, raisins, cardamom, and edible camphor (Pachcha Karpooram).',
-          'Three Divine Variations: Asthanam Laddoo (served during high festivals), Kalyanotsavam Laddoo (larger variant given to couples participating in marriage seva), and the standard Proktham Laddoo given to all visiting pilgrims.',
-          'Pavitra Prasadam Distribution: Pre-booked Tirupati tour packages from Bangalore include authorized TTD laddoo tokens alongside special entry darshan passes.'
+          '**Geographical Indication (GI) Status:** Bestowed with GI patent protection, the laddoo is crafted with strict traditional ratios of gram flour (besan), pure cow ghee, sugar syrup, cashew nuts, raisins, cardamom, and edible camphor (Pachcha Karpooram).',
+          '**Three Divine Variations:** Asthanam Laddoo (served during high festivals), Kalyanotsavam Laddoo (larger variant given to couples participating in marriage seva), and the standard Proktham Laddoo given to all visiting pilgrims.',
+          '**Pavitra Prasadam Distribution:** Pre-booked [Tirupati tour packages from Bangalore](/packages) include authorized TTD laddoo tokens alongside special entry darshan passes.'
         ]
       },
       {
         heading: '3. Shirdi Sai Baba Sansthan: Asia’s Largest Solar-Powered Prasadalaya',
-        body: 'Sri Sai Baba’s central tenet was Annadana (food charity)—feeding every living creature without distinction. Honoring Baba’s tradition, the Shirdi Sansthan maintains a world-renowned mega-kitchen facility.',
+        subheading: 'Feeding 50,000 Devotees Daily through Green Solar Energy',
+        body: 'Sri Sai Baba’s central tenet was Annadana (food charity)—feeding every living creature without distinction. Honoring Baba’s tradition, our guided [Shirdi VIP Darshan package](/package/shirdi-tour-package-from-bangalore) includes a visit to the world-renowned mega-kitchen facility.',
+        image: '/shirdi-tour-package-from-bangalore.webp',
+        imageCaption: 'The sacred Samadhi Mandir at Shirdi where millions partake in Baba’s divine Prasadalaya Annadanam.',
         bulletPoints: [
-          'Solar Steam Cooking: 73 parabolic solar concentrators generate high-pressure steam that cooks over 3,000 kg of rice, vegetables, and dal in under an hour.',
-          'Zero Cost & Subsidized Dining: Devotees receive piping hot, nutritious vegetarian meals (chapatis, rice, dal, vegetable curry, and sweet sheera) in an ultra-hygienic dining hall seating 5,000 pilgrims simultaneously.',
-          'Sai Baba Samadhi Udi: The sacred ash from Baba’s eternal fire (Dhuni) in Dwarkamai, carried by devotees across the world for spiritual protection.'
-        ]
+          '**Solar Steam Cooking:** 73 parabolic solar concentrators generate high-pressure steam that cooks over 3,000 kg of rice, vegetables, and dal in under an hour.',
+          '**Zero Cost & Subsidized Dining:** Devotees receive piping hot, nutritious vegetarian meals (chapatis, rice, dal, vegetable curry, and sweet sheera) in an ultra-hygienic dining hall seating 5,000 pilgrims simultaneously.',
+          '**Sai Baba Samadhi Udi:** The sacred ash from Baba’s eternal fire (Dhuni) in Dwarkamai, carried by devotees across the world for spiritual protection.'
+        ],
+        tips: 'Prasadalaya Timing: The dining hall functions continuously from 10:00 AM to 10:00 PM every day without any entry charge or prior appointment.'
       },
       {
         heading: '4. Sacred Ritual Rules & Darshan Etiquette for Devotees',
+        subheading: 'Vedic Protocols for Receiving Temple Blessings',
         body: 'When partaking in temple offerings and rituals across India’s major shrines, observe these traditional protocols:',
         bulletPoints: [
-          'Right Hand Receiving: Always receive Holy Theertham (holy water) and Prasadam with your right hand, cupped and supported by the left hand beneath.',
-          'Respecting Sanctum Sanctity: Consume prasadam respectfully without wasting a single grain, as every morsel is sanctified by the deity’s grace.',
-          'Fasting Before Abhishekam: For early morning Rudrabhishek in Kashi or Kakad Aarti in Shirdi, observe mild morning fasting until the rituals conclude.'
+          '**Right Hand Receiving:** Always receive Holy Theertham (holy water) and Prasadam with your right hand, cupped and supported by the left hand beneath.',
+          '**Respecting Sanctum Sanctity:** Consume prasadam respectfully without wasting a single grain, as every morsel is sanctified by the deity’s grace.',
+          '**Fasting Before Abhishekam:** For early morning Rudrabhishek in Kashi or Kakad Aarti in Shirdi, observe mild morning fasting until the rituals conclude.'
         ]
       }
     ],
-    conclusion: 'Embarking on pilgrimage tours from Bangalore allows you and your family to witness these timeless temple rituals and taste sanctified Prasadam firsthand. With seamless travel logistics, comfortable stays, and temple assistance, your spiritual journey is peaceful and profound.',
+    summaryTable: {
+      title: 'Iconic Temple Prasadam Comparison Guide Across India',
+      headers: ['Temple & Location', 'Signature Prasadam', 'Unique Preparation Method', 'Spiritual Significance'],
+      rows: [
+        ['Puri Jagannath (Odisha)', 'Mahaprasad (56 Bhog & Khaja)', 'Cooked in 7 stacked clay pots over sacred firewood hearths', 'Sanctified first by Lord Jagannath, then blessed by Maa Bimala'],
+        ['Tirumala Balaji (Andhra)', 'Srivari Laddoo (GI Tagged)', 'Pure cow ghee, cashews, raisins, Pachcha Karpooram in Potu', 'World-famous divine offering with 300+ years of uninterrupted tradition'],
+        ['Shirdi Sai Mandir (Maharashtra)', 'Prasadalaya Annadanam & Udi', 'Asia’s largest solar parabolic steam system feeding 50,000 daily', 'Symbolizes Baba’s philosophy of universal charity & hunger eradication'],
+        ['Kashi Vishwanath (Varanasi)', 'Peda, Panchamrit & Anna Prasad', 'Offered after Jyotirlinga Gangajal Abhishekam & Aarti', 'Divine nectar bestowing inner peace and liberation (Moksha)']
+      ]
+    },
+    conclusion: 'Embarking on pilgrimage tours from Bangalore allows you and your family to witness these timeless temple rituals and taste sanctified Prasadam firsthand. With seamless travel logistics, comfortable stays, and temple assistance, your spiritual journey is peaceful and profound. [Contact our Bangalore team](/contact) to plan your sacred yatra today.',
     keyTakeaways: [
       'Puri Jagannath Mahaprasad is cooked using centuries-old clay pot woodfire techniques.',
       'Tirupati Srivari Laddoo is protected by a prestigious Geographical Indication (GI) tag.',

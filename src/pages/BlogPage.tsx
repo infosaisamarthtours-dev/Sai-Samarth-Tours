@@ -94,27 +94,27 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
         ogImage="/shirdi-tour-hero-banner-desktop.webp"
       />
       {/* ================= HERO & SEARCH BANNER ================= */}
-      <div className="relative bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-xl">
+      <div className="relative bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-6 sm:pt-14 lg:pt-20 pb-8 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-xl">
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute top-1/2 -right-24 w-96 h-96 bg-[#2563EB]/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
-          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-300 mb-4 font-medium">
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-gray-300 mb-2 sm:mb-4 font-medium">
             <Link to="/" className="hover:text-[#F59E0B] transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-[#F59E0B] font-semibold">Travel Blog & Yatra Guides</span>
           </div>
 
-          <div className="inline-flex items-center gap-2 text-xs uppercase font-bold tracking-widest text-[#F59E0B] bg-amber-500/10 px-4 py-1.5 rounded-full border border-amber-500/30 mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 text-xs uppercase font-bold tracking-widest text-[#F59E0B] bg-amber-500/10 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full border border-amber-500/30 mb-3 sm:mb-5 shadow-sm">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Sai Samarth Travel Journal</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-serif-brand mb-4 text-white tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold font-serif-brand mb-3 sm:mb-4 text-white tracking-tight leading-tight">
             Spiritual Yatras & International Holiday Guides
           </h1>
 
-          <p className="text-sm sm:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed mb-8 font-normal">
+          <p className="text-xs sm:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed mb-5 sm:mb-8 font-normal">
             Discover expert travel tips, VIP temple darshan walkthroughs, heritage stories, and complete flight itinerary guides curated by Sai Samarth travel specialists.
           </p>
 

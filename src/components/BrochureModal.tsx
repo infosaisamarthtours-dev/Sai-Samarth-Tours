@@ -33,6 +33,14 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
       colors: ['#2563EB', '#F59E0B', '#114088'],
     });
 
+    const msg = `Namaste Sai Samarth Tours 🙏\n\n*New Brochure Request from Website:*\n👤 *Name:* ${fullName.trim()}\n📞 *Phone:* ${phoneNumber.trim()}\n📍 *Package:* ${pkg.title}\n✈️ *Departure:* Bangalore\n\nPlease share the official day-wise PDF itinerary and departure dates with me. Thank you!`;
+    const waUrl = `https://wa.me/${siteConfig.whatsappNumber || '919187711649'}?text=${encodeURIComponent(msg)}`;
+    try {
+      window.open(waUrl, '_blank');
+    } catch (err) {
+      console.error('Failed to open WhatsApp window', err);
+    }
+
     setStep('pdf');
   };
 

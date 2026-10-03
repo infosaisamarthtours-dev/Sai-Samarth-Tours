@@ -36,7 +36,7 @@ export function HomePage({ onOpenEnquiry }: HomePageProps) {
     <div className="flex-grow">
       <SEOHead
         title="Tour Packages from Bangalore | Sai Samarth Tours"
-        description="Explore pilgrimage, domestic and international tour packages from Bangalore with Sai Samarth Tours. Shirdi, Kashi, Kashmir, Kerala, Maldives, Thailand and more."
+        description="Book top tour packages from Bangalore with Sai Samarth Tours. Shirdi, Kashi, Kashmir, Kerala and international yatras with flights and 3-star hotels."
         canonical="https://saisamarthtours.com/"
         ogImage="/shirdi-tour-hero-banner-desktop.webp"
         ogType="website"

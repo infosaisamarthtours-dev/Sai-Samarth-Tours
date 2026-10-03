@@ -8,49 +8,67 @@ export const singaporeMalaysiaFamilyGuidePost: BlogPost = {
   seoDescription: 'Complete travel guide for Singapore & Malaysia twin-country family tours from Bangalore. Covers Universal Studios, Batu Caves, Genting, visa procedures, and Indian veg food.',
   excerpt: 'Planning your family’s first international holiday from Bangalore? Discover everything about flying to Malaysia and Singapore: visa guidelines, Universal Studios theme park tips, Batu Caves, and authentic Indian vegetarian dining.',
   content: {
-    intro: 'Combining Malaysia and Singapore in a single international holiday is the premier choice for Indian families, couples, and multi-generational travelers. With regular non-stop flights departing from Kempegowda International Airport (BLR), friendly visa policies, English-speaking infrastructure, and an abundance of pure vegetarian Indian dining, this Southeast Asian twin-country tour offers unbeatable comfort and excitement.',
+    intro: 'Combining Malaysia and Singapore in a single international holiday is the premier choice for Indian families, couples, and multi-generational travelers. With regular non-stop flights departing from Kempegowda International Airport (BLR), friendly visa policies, English-speaking infrastructure, and an abundance of pure vegetarian Indian dining, our [Singapore & Malaysia tour package from Bangalore](/package/singapore-malaysia-tour-package-from-bangalore) offers unbeatable comfort, thrills, and luxury.',
     sections: [
       {
         heading: '1. Kuala Lumpur & Genting Highlands: Cultural Wonder & Mountain Thrills',
+        subheading: 'Twin Towers, Batu Caves & High Altitude Cable Cars',
         body: 'Your journey typically begins in Kuala Lumpur, Malaysia’s vibrant cosmopolitan capital. Marvel at the gleaming Petronas Twin Towers, delve into rich heritage at Independence Square, and embark on a day trip to the cool misty heights of Genting.',
+        image: '/bangalore-to-malaysia-tour-package.webp',
+        imageCaption: 'The majestic Golden Lord Murugan statue and 272 vibrant rainbow steps at Batu Caves near Kuala Lumpur.',
         bulletPoints: [
-          'Batu Caves & Golden Murugan: Climb the iconic 272 rainbow-colored steps into sacred limestone caverns guarding the world’s tallest statue of Lord Murugan (140 feet tall). Experience daily poojas and wild macaques along the cliffside.',
-          'Awana SkyWay Gondola to Genting Highlands: Float high above ancient rainforests in glass-bottom cable cars up to 6,000 feet. Enjoy Genting SkyWorlds outdoor theme park, indoor Ripley’s attractions, and duty-free shopping.',
-          'Putrajaya Administrative Capital: Admire the rose-tinted granite Putra Mosque standing proudly on Putrajaya Lake and the magnificent Prime Minister’s Office.',
-          'Visa Ease for Indians: Indian passport holders enjoy hassle-free electronic visa processing or visa exemption schemes, making travel documentation straightforward.'
+          '**Batu Caves & Golden Murugan:** Climb the iconic 272 rainbow-colored steps into sacred limestone caverns guarding the world’s tallest statue of Lord Murugan (140 feet tall). Experience daily poojas and friendly macaques along the cliffside.',
+          '**Awana SkyWay Gondola to Genting Highlands:** Float high above ancient rainforests in glass-bottom cable cars up to 6,000 feet. Enjoy Genting SkyWorlds outdoor theme park, indoor Ripley’s attractions, and duty-free shopping.',
+          '**Putrajaya Administrative Capital:** Admire the rose-tinted granite Putra Mosque standing proudly on Putrajaya Lake and the magnificent Prime Minister’s Office.',
+          '**Visa Ease for Indians:** Indian passport holders enjoy hassle-free electronic visa processing or visa exemption schemes, making travel documentation straightforward.'
         ],
-        tips: 'Family Tip: Keep light jackets handy for Genting Highlands, as evening temperatures drop considerably compared to downtown Kuala Lumpur.'
+        tips: 'Family Climate Tip: Keep light jackets handy for Genting Highlands, as evening temperatures drop considerably compared to downtown Kuala Lumpur.'
       },
       {
         heading: '2. Singapore: Futurist Gardens, Sentosa Island & Universal Studios',
+        subheading: 'Hollywood Theme Parks & High-Tech Nature Domes',
         body: 'Crossing seamlessly from Malaysia into the "Lion City" via scenic luxury AC coach through the Johor Causeway or via a quick 50-minute domestic flight, Singapore welcomes you with gleaming futuristic architecture and lush botanical gardens.',
+        image: '/singapore-malaysia-tour-package-from-bangalore.webp',
+        imageCaption: 'The illuminated Supertree Grove and futuristic domes at Gardens by the Bay, Singapore.',
         bulletPoints: [
-          'Universal Studios Sentosa Island: A world-class Hollywood theme park boasting the adrenaline-pumping Battlestar Galactica dueling coasters, Transformers The Ride: The Ultimate 3D Battle, Jurassic Park Rapids, and Mummy’s Revenge.',
-          'Gardens by the Bay: Stroll beneath the colossal 50-meter Supertree Grove, wander through the misty tropical Cloud Forest featuring a 35-meter indoor waterfall, and enjoy the Garden Rhapsody light and sound show every evening at 7:45 PM.',
-          'Wings of Time: Marvel at Singapore’s award-winning multi-sensory night show on Siloso Beach, combining water fountains, lasers, fire bursts, and orchestral music.',
-          'Singapore River Cruise & Merlion Park: Take timeless family photos with the iconic water-spouting Merlion statue framed by Marina Bay Sands and the Singapore Flyer.'
+          '**Universal Studios Sentosa Island:** A world-class Hollywood theme park boasting the adrenaline-pumping Battlestar Galactica dueling coasters, Transformers The Ride: The Ultimate 3D Battle, Jurassic Park Rapids, and Mummy’s Revenge.',
+          '**Gardens by the Bay:** Stroll beneath the colossal 50-meter Supertree Grove, wander through the misty tropical Cloud Forest featuring a 35-meter indoor waterfall, and enjoy the Garden Rhapsody light and sound show every evening at 7:45 PM.',
+          '**Wings of Time Multi-Sensory Show:** Marvel at Singapore’s award-winning night show on Siloso Beach, combining water fountains, lasers, fire bursts, and orchestral music.',
+          '**Singapore River Cruise & Merlion Park:** Take timeless family photos with the iconic water-spouting Merlion statue framed by Marina Bay Sands and the Singapore Flyer.'
         ]
       },
       {
         heading: '3. Indian Vegetarian Dining & Family Comfort',
+        subheading: 'Authentic South Indian Filter Coffee, Dosas & Jain Meals Overseas',
         body: 'One of the greatest anxieties for Indian travelers abroad is food. Fortunately, both Kuala Lumpur and Singapore have rich, thriving Indian communities where finding authentic pure vegetarian, South Indian, and Jain meals is effortless.',
         bulletPoints: [
-          'Little India Brickfields (Kuala Lumpur): Renowned for authentic banana leaf meals, hot filter coffee, crispy dosas, and fresh North Indian rotis.',
-          'Little India Serangoon Road (Singapore): Lined with iconic vegetarian establishments like Saravanaa Bhavan, Ananda Bhavan, and Kailash Parbat, alongside 24-hour Mustafa Centre for shopping.',
-          'Tour Group Catering: Booking an organized international tour package from Bangalore ensures dedicated Indian buffet dinners arranged daily at verified hygiene-certified restaurants.'
+          '**Little India Brickfields (Kuala Lumpur):** Renowned for authentic banana leaf meals, hot filter coffee, crispy dosas, and fresh North Indian rotis.',
+          '**Little India Serangoon Road (Singapore):** Lined with iconic vegetarian establishments like Saravanaa Bhavan, Ananda Bhavan, and Kailash Parbat, alongside 24-hour Mustafa Centre for shopping.',
+          '**Tour Group Catering:** Booking our [Singapore & Malaysia tour package from Bangalore](/package/singapore-malaysia-tour-package-from-bangalore) ensures dedicated Indian buffet dinners arranged daily at verified hygiene-certified restaurants.'
         ]
       },
       {
         heading: '4. Essential Travel Checklist for Bangalore Families',
+        subheading: 'Smart Preparation Before Departure from Kempegowda Airport (BLR)',
         body: 'To ensure a hassle-free trip, follow these simple preparation steps prior to boarding at Kempegowda Airport:',
         bulletPoints: [
-          'Passport Validity: Ensure all family members have at least 6 months validity on their passports from the return date.',
-          'Currency / Forex: Carry a preloaded multi-currency Forex card for card payments and a small amount of local currency (Malaysian Ringgit & Singapore Dollars) for street stalls and snacks.',
-          'Singapore Arrival Card (SGAC): Complete the mandatory online health declaration within 3 days prior to arriving in Singapore.'
+          '**Passport Validity:** Ensure all family members have at least 6 months validity on their passports from the scheduled return date.',
+          '**Currency / Forex:** Carry a preloaded multi-currency Forex card for retail shopping and a small amount of local currency (MYR & SGD) for street stalls and snacks.',
+          '**Singapore Arrival Card (SGAC):** Complete the mandatory online health declaration within 3 days prior to landing in Singapore.'
         ]
       }
     ],
-    conclusion: 'A 6-Night / 7-Day Malaysia & Singapore twin-country holiday strikes the perfect balance between cultural discovery and world-class family leisure. With return flights from Bangalore, 4-star city accommodations, all-inclusive entry tickets, and guided private coach transfers, your family creates lifelong memories.',
+    summaryTable: {
+      title: 'Malaysia vs Singapore Family Holiday Comparison',
+      headers: ['Feature / Attribute', 'Malaysia (Kuala Lumpur & Genting)', 'Singapore (Sentosa & City)', 'Traveler Advice'],
+      rows: [
+        ['Primary Attractions', 'Petronas Towers, Batu Caves, Genting SkyWorlds', 'Universal Studios, Gardens by the Bay, Sentosa Island', 'Combine both for cultural depth and high-tech amusement'],
+        ['Typical Stay Duration', '3 Nights / 4 Days', '3 Nights / 4 Days', '6 Nights / 7 Days total itinerary provides ideal pace'],
+        ['Currency & Cards', 'Malaysian Ringgit (MYR) - Highly economical', 'Singapore Dollar (SGD) - High standard of living', 'Forex cards work seamlessly across both destinations'],
+        ['Indian Pure Veg Food', 'Abundant in Little India Brickfields & malls', 'Abundant in Little India Serangoon & Marina Bay', 'Both destinations offer world-class vegetarian dining']
+      ]
+    },
+    conclusion: 'A 6-Night / 7-Day Malaysia & Singapore twin-country holiday strikes the perfect balance between cultural discovery and world-class family leisure. With return flights from Bangalore, 4-star city accommodations, all-inclusive entry tickets, and guided private coach transfers, your family creates lifelong memories. [Contact our Bangalore team](/contact) to check departures.',
     keyTakeaways: [
       'Kempegowda Airport (BLR) offers direct non-stop flights to Kuala Lumpur and Singapore.',
       'Universal Studios Sentosa and Batu Caves are top must-visit attractions for all ages.',

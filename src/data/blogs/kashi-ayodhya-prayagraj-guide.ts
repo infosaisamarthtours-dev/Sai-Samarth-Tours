@@ -8,49 +8,76 @@ export const kashiAyodhyaPrayagrajGuidePost: BlogPost = {
   seoDescription: 'Complete spiritual guide for Kashi Vishwanath, Ayodhya Ram Mandir, and Triveni Sangam Prayagraj pilgrimage from Bangalore. Includes flight schedules, boat tips, and temple rituals.',
   excerpt: 'Embark on the eternal spiritual circuit of Uttar Pradesh: Kashi Vishwanath Jyotirlinga, Dashashwamedh Ghat Ganga Aarti, Shri Ram Janmabhoomi in Ayodhya, and the sacred Triveni Sangam in Prayagraj.',
   content: {
-    intro: 'The holy triad of Uttar Pradesh—Kashi (Varanasi), Ayodhya, and Prayagraj—represents the philosophical and spiritual heartbeat of Sanatana Dharma. For devotees traveling from Bangalore, a sacred yatra connecting the eternal city of Mahadev, the divine birthplace of Maryada Purushottam Shri Ram, and the holy confluence of Ganga, Yamuna, and Saraswati is the ultimate soul-cleansing expedition.',
+    intro: 'The holy triad of Uttar Pradesh—Kashi (Varanasi), Ayodhya, and Prayagraj—represents the philosophical and spiritual heartbeat of Sanatana Dharma. For devotees traveling from Bangalore, booking our all-inclusive [Kashi Ayodhya Prayagraj Tour Package from Bangalore](/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore) or discovering sacred [Pilgrimage Tour Packages from Bangalore](/pilgrimage-tour-packages) connects the eternal city of Mahadev with the divine birthplace of Shri Ram.',
     sections: [
       {
         heading: '1. Kashi Vishwanath Corridor & The Divine Ghats of Varanasi',
-        body: 'The revamped Shri Kashi Vishwanath Dham Corridor connects the holy Jyotirlinga sanctum directly to Lalita Ghat on the sacred river Ganga. Walking through its grand stone archways has eliminated the chaotic old lanes, making the darshan experience deeply serene and accessible even for senior citizens.',
+        subheading: 'Seamless Darshan through the Grand Riverfront Corridor',
+        body: 'The revamped Shri Kashi Vishwanath Dham Corridor connects the holy Jyotirlinga sanctum directly to Lalita Ghat on the sacred river Ganga. Walking through its grand stone archways has eliminated chaotic narrow lanes, making the darshan experience deeply serene and accessible even for elders. Learn more on our [Kashi Tour Packages Destination Hub](/destinations/kashi).',
+        image: '/kashi-ayodhya-tour-package-from-bangalore-1.webp',
+        imageCaption: 'Devotees offering evening prayers during the world-famous Ganga Aarti at Dashashwamedh Ghat in Varanasi',
         bulletPoints: [
-          'Sparsh Darshan & Mangala Aarti: Early morning Mangala Aarti (3:00 AM - 4:00 AM) requires pre-booking online or through your tour manager. Special Sugam Darshan tickets provide direct elevator access avoiding street lines.',
-          'Subah-e-Banaras at Assi Ghat: Witness sunrise Vedic chants, classical music recitals, and collective yoga at dawn on the riverbank.',
-          'Dashashwamedh Ghat Evening Ganga Aarti: Rent a private wooden hand-rowed or motor boat at sunset to view the synchronized brass lamp Aarti from the river for an unobstructed, breathtaking experience.',
-          'Shakti Peeths: Visit Maa Annapurna Mandir (who blesses pilgrims with eternal food) and Maa Vishalakshi Shakti Peeth located within walking distance of Vishwanath temple.'
+          '**Sparsh Darshan & Mangala Aarti:** Early morning Mangala Aarti (3:00 AM - 4:00 AM) requires pre-booking. Special Sugam Darshan tickets provide direct elevator access avoiding street lines.',
+          '**Subah-e-Banaras at Assi Ghat:** Witness sunrise Vedic chants, classical shehnai recitals, and collective yoga at dawn on the riverbank.',
+          '**Dashashwamedh Ghat Evening Ganga Aarti:** Rent a private wooden boat at sunset to view the synchronized brass lamp Aarti from the river for an unobstructed view.',
+          '**Sacred Shakti Peeths:** Visit Maa Annapurna Mandir and Maa Vishalakshi Shakti Peeth located within easy walking distance of Vishwanath temple.'
         ],
-        tips: 'Pilgrim Note: Electronic items, smartwatches, and leather goods are strictly prohibited inside the inner security zone. Use official temple lockers outside Gate No. 4.'
+        tips: '💡 Pilgrim Note: Electronic items, smartwatches, and leather goods are strictly prohibited inside the inner security zone. Use official temple lockers outside Gate No. 4.'
       },
       {
         heading: '2. Shri Ram Janmabhoomi Mandir & Sacred Landmarks of Ayodhya',
-        body: 'The magnificent newly consecrated Shri Ram Janmabhoomi Mandir has placed Ayodhya firmly on the global pilgrimage map. Standing on the banks of the holy Saryu river, Ayodhya resonates with hymns of the Ramayana.',
+        subheading: 'Darshan of Ram Lalla Balak Roop in the Sacred Nagara Temple',
+        body: 'The newly consecrated Shri Ram Janmabhoomi Mandir has placed Ayodhya firmly on the global pilgrimage map. Standing on the banks of the holy Saryu river, Ayodhya resonates with hymns of the Ramayana. Plan your trip with our specialized [Ayodhya Tour Packages](/destinations/ayodhya).',
+        image: '/kashi-ayodhya-tour-package-from-bangalore-2.webp',
+        imageCaption: 'The majestic pink sandstone pillars of Shri Ram Janmabhoomi Mandir in Ayodhya',
         bulletPoints: [
-          'Ram Lalla Balak Roop Darshan: Experience the mesmerizing 51-inch black granite idol of Lord Ram adorned in regal silk pitambari and gold jewelry. The temple features a 3-tiered Nagara architectural grandeur built with pink Bansi Paharpur stone without using any iron or steel.',
-          'Hanuman Garhi: According to local custom, pilgrims must visit the fortress temple of Lord Hanuman first to seek his permission before proceeding to Ram Janmabhoomi.',
-          'Kanak Bhawan: The exquisite golden palace gifted to Mata Sita by Queen Kaikeyi, housing beautiful idols of Ram and Sita crowned in solid gold.',
-          'Ram Ki Paidi & Evening Saryu Aarti: A tranquil riverfront where thousands gather at dusk for Aarti followed by grand laser light shows depicting episodes from the Ramayana.'
-        ]
+          '**Ram Lalla Balak Roop Darshan:** Experience the mesmerizing 51-inch black granite idol of Lord Ram adorned in regal silk pitambari and gold jewelry in a 3-tiered pink stone Nagara sanctuary.',
+          '**Hanuman Garhi:** According to tradition, pilgrims visit the hill fortress temple of Lord Hanuman first to seek his permission before entering Ram Janmabhoomi.',
+          '**Kanak Bhawan:** The exquisite golden palace gifted to Mata Sita by Queen Kaikeyi, housing sacred idols crowned in solid gold.',
+          '**Ram Ki Paidi & Evening Saryu Aarti:** A serene riverfront where thousands gather at dusk for Aarti followed by grand laser light shows depicting episodes from the Ramayana.'
+        ],
+        tips: '🛺 Local Transport Tip: Battery e-rickshaws are available throughout Ayodhya Dharma Path for senior citizens to reach Hanuman Garhi and Kanak Bhawan without walking fatigue.'
       },
       {
         heading: '3. Triveni Sangam & Sacred Rituals at Prayagraj',
-        body: 'Located just 120 km from Varanasi, Prayagraj (ancient Teerthraj) is where the brown waters of the Ganges meet the greenish-blue waters of the Yamuna alongside the invisible subterranean Saraswati river.',
+        subheading: 'Holy Bath & Ancestral Rites at the Confluence of Sacred Rivers',
+        body: 'Located 120 km from Varanasi, Prayagraj is where the holy waters of the Ganges meet the Yamuna alongside the subterranean Saraswati river. Our tour packages provide certified boats and purohits for sacred snans.',
+        image: '/kashi-ayodhya-tour-package-from-bangalore-3.webp',
+        imageCaption: 'Boats gliding towards Triveni Sangam for holy snan and ancestral Tarpanam rituals in Prayagraj',
         bulletPoints: [
-          'Holy Sangam Snan: Take a wooden motorboat to the middle of the river where bamboo platforms allow safe holy dips with life jackets provided.',
-          'Pind Daan & Pitru Tarpan: Prayagraj is revered for conducting ancestral rites and Tarpanam under the guidance of licensed Vedic Purohits.',
-          'Bade Hanuman Mandir: Visit the rare 20-foot reclining idol of Lord Hanuman located underground near Allahabad Fort, traditionally submerged by Ganga floods during monsoon.'
+          '**Holy Sangam Snan:** Take a motorized wooden boat to the central floating bamboo platforms for a safe holy dip with life jackets provided.',
+          '**Pind Daan & Pitru Tarpan:** Prayagraj is deeply auspicious for performing ancestral rites and Tarpanam under the guidance of licensed Vedic Purohits.',
+          '**Bade Hanuman Mandir:** Revere the rare 20-foot reclining idol of Lord Hanuman located near Allahabad Fort.'
         ]
       },
       {
         heading: '4. Flight Logistics, Hotel Comfort & Pure Veg Dining from Bangalore',
-        body: 'Departing Kempegowda International Airport (BLR), direct flights to Lal Bahadur Shastri Airport in Varanasi (VNS) take just 2 hours and 30 minutes. Booking an all-inclusive Kashi Ayodhya tour package from Bangalore ensures dedicated air-conditioned coach transportation, verified 3-star hotels with elevator access, and 100% pure vegetarian meals without onion and garlic if requested.',
+        subheading: 'Hassle-Free Travel for Extended Families and Senior Pilgrims',
+        body: 'Departing Kempegowda International Airport (BLR), direct flights to Lal Bahadur Shastri Airport in Varanasi (VNS) take just 2 hours and 30 minutes. Booking an all-inclusive [Kashi Ayodhya Tour Package from Bangalore](/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore) ensures dedicated AC coach transportation, verified 3-star hotels, and pure vegetarian meals.',
         bulletPoints: [
-          'Choose hotels situated along Cantonment or Mall Road in Varanasi for quiet nights and modern amenities.',
-          'Ensure local transport includes battery e-rickshaws for narrow ghat lanes where large buses cannot enter.',
-          'Carry light woolens if traveling between November and February when north Indian mornings are crisp and misty.'
+          '**Verified 3-Star AC Accommodations:** Selected hotels on Cantonment or Mall Road in Varanasi for quiet nights and modern elevator amenities.',
+          '**Dedicated AC Highway Vehicles:** Comfortable sanitized private Tempo Travellers or Innovas for the smooth 4-lane highway drive between Varanasi, Ayodhya, and Prayagraj.',
+          '**Pure Vegetarian Dining:** South Indian and North Indian pure veg meals arranged at verified hygienic restaurants.'
         ]
       }
     ],
-    conclusion: 'Visiting Kashi, Ayodhya, and Prayagraj in a single spiritual circuit fulfills one of life’s most auspicious devotions. Guided by experienced tour managers, elderly devotees and families can experience confirmed temple darshans and holy snans without stress.',
+    summaryTable: {
+      title: 'Complete 4-Day Kashi, Ayodhya & Prayagraj Yatra Itinerary Summary',
+      headers: ['Day & Phase', 'Sacred Landmark & Ritual', 'Transit & Logistics', 'Darshan Pass & Special Notes'],
+      rows: [
+        ['Day 1: Morning', 'Bangalore to Varanasi (VNS) Flight', 'Direct BLR ➔ VNS Flight (2h 25m)', 'Airport pickup by AC vehicle'],
+        ['Day 1: Evening', 'Dashashwamedh Ghat Ganga Aarti', 'Private sunset boat on holy Ganges', 'Unobstructed view of synchronized brass Aarti'],
+        ['Day 2: Dawn', 'Kashi Vishwanath Jyotirlinga Darshan', 'Morning temple visit with guide', 'Sugam Darshan pass avoids street queues'],
+        ['Day 2: Morning', 'Annapurna & Vishalakshi Shakti Peeth', 'Walking within temple corridor', 'Sankalpa and holy teertham prasadam'],
+        ['Day 2: Afternoon', 'Drive from Varanasi to Ayodhya', '190 km 4-lane national highway', 'Check-in to verified 3-star AC hotel'],
+        ['Day 3: Morning', 'Shri Ram Janmabhoomi & Hanuman Garhi', 'Morning VIP entry line at Ram Mandir', 'Locker storage for mobile phones outside Gate 4'],
+        ['Day 3: Evening', 'Saryu River Aarti & Ram Ki Paidi', 'Scenic riverfront walk at sunset', 'Grand musical laser show on Ramayana'],
+        ['Day 4: Morning', 'Drive to Prayagraj Triveni Sangam', '160 km drive via Sultanpur road', 'Motorboat to Sangam point for holy Snan'],
+        ['Day 4: Afternoon', 'Bade Hanuman Mandir & Alopi Devi', 'Underground reclining Hanuman darshan', 'Ancestral Pind Daan rituals with Vedic Purohit'],
+        ['Day 4: Night', 'Varanasi Airport to Bangalore Flight', 'Return flight BLR from Varanasi Airport', 'Arrive safely in Bangalore with holy Ganga Jal']
+      ]
+    },
+    conclusion: 'Visiting Kashi, Ayodhya, and Prayagraj in a single spiritual circuit fulfills one of life’s most auspicious devotions. Guided by experienced tour managers, elderly devotees and families can experience confirmed temple darshans and holy snans without stress. Connect with [Sai Samarth Tours Bangalore](/contact) to reserve your departure dates.',
     keyTakeaways: [
       'Direct flights from Bangalore to Varanasi reduce journey time to just 2.5 hours.',
       'Sugam Darshan and early Aarti booking provide seamless Kashi Vishwanath temple entry.',
@@ -60,11 +87,11 @@ export const kashiAyodhyaPrayagrajGuidePost: BlogPost = {
     faqs: [
       {
         question: 'Are there direct flights from Bangalore to Varanasi (Kashi)?',
-        answer: 'Yes! Multiple direct and one-stop flights operate daily between Bangalore Kempegowda Airport (BLR) and Varanasi (VNS) with non-stop flights taking approximately 2 hours 25 minutes.'
+        answer: 'Yes! Multiple direct flights operate daily between Bangalore Kempegowda Airport (BLR) and Varanasi (VNS) taking approximately 2 hours 25 minutes. Explore our [Kashi Ayodhya flight tour packages](/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore).'
       },
       {
         question: 'How do senior citizens travel between Kashi, Ayodhya, and Prayagraj?',
-        answer: 'Our packages utilize comfortable, air-conditioned luxury Tempo Travellers or Innova Crystas on four-lane national highways. The drive from Varanasi to Ayodhya takes about 4 hours, and Ayodhya to Prayagraj takes approximately 3.5 hours.'
+        answer: 'Our packages utilize comfortable, air-conditioned luxury Tempo Travellers or Innova Crystas on four-lane national highways with minimal walking distance.'
       },
       {
         question: 'Can we perform Pind Daan and ancestral rites during this tour?',
@@ -72,7 +99,7 @@ export const kashiAyodhyaPrayagrajGuidePost: BlogPost = {
       },
       {
         question: 'Is wheelchair assistance available for elderly pilgrims at Ram Mandir Ayodhya?',
-        answer: 'Yes, the Shri Ram Janmabhoomi Teerth Kshetra provides complimentary wheelchair services, battery buggies, and ramp walkways for senior citizens and differently-abled pilgrims.'
+        answer: 'Yes, the Shri Ram Janmabhoomi Teerth Kshetra provides complimentary wheelchair services, battery buggies, and ramp walkways for senior citizens.'
       }
     ]
   },

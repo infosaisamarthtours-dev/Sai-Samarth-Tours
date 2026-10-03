@@ -257,14 +257,17 @@ export function PackageDetailsPage() {
     international: { name: 'International Packages', url: '/international-packages' }
   };
 
-  const categoryMeta = categoryUrlMap[pkg.category] || { name: 'Tour Packages', url: '/pilgrimage-packages' };
+  const displayH1 = pkg.seoH1 || pkg.title;
+  const seoPageTitle = pkg.seoH1 
+    ? `${pkg.seoH1} | Sai Samarth Tours` 
+    : (pkg.title.includes('from Bangalore') ? `${pkg.title} | Sai Samarth Tours` : `${pkg.title} from Bangalore | Sai Samarth Tours`);
 
   const packageJsonLd = [
     {
       '@context': 'https://schema.org',
       '@type': 'TouristTrip',
-      'name': `${pkg.title} from Bangalore`,
-      'description': pkg.description || `${pkg.title} tour package from Bangalore with flights and hotel stay.`,
+      'name': displayH1,
+      'description': pkg.description || `${displayH1} with flights and hotel stay.`,
       'touristType': ['Pilgrims', 'Families', 'Senior Citizens'],
       'offers': {
         '@type': 'Offer',
@@ -304,8 +307,8 @@ export function PackageDetailsPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5]">
       <SEOHead
-        title={`${pkg.title} from Bangalore | Sai Samarth Tours`}
-        description={pkg.description ? `${pkg.description} Starting from ${pkg.price}. Book with return flights & 3-star hotel.` : `Book ${pkg.title} from Bangalore. Includes return flights, deluxe hotel accommodation, meals, AC transfers, and VIP darshan passes. Starting at ${pkg.price}.`}
+        title={seoPageTitle}
+        description={pkg.description ? `${pkg.description} Starting from ${pkg.price}. Book with return flights & 3-star hotel.` : `Book ${displayH1}. Includes return flights, deluxe hotel accommodation, meals, AC transfers, and VIP darshan passes. Starting at ${pkg.price}.`}
         canonical={`https://saisamarthtours.com/package/${getPackageSlug(pkg)}`}
         ogImage={pkg.image}
         ogType="product"
@@ -329,7 +332,7 @@ export function PackageDetailsPage() {
                   items={[
                     { name: hierarchy.category.name, url: hierarchy.category.url },
                     ...(hierarchy.region.name ? [{ name: hierarchy.region.name, url: hierarchy.region.url }] : []),
-                    { name: pkg.title }
+                    { name: pkg.shortTitle || pkg.title }
                   ]}
                   theme="dark"
                 />
@@ -358,9 +361,9 @@ export function PackageDetailsPage() {
             {/* Left Side: Heading, Paragraph, Price List */}
             <div className="lg:col-span-7 space-y-6">
               
-              {/* Title */}
+              {/* Title / H1 Heading with Search Intent */}
               <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight drop-shadow-sm">
-                {pkg.title}
+                {displayH1}
               </h1>
 
               {/* Description Paragraph */}

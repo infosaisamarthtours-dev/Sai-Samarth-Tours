@@ -22,6 +22,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackageTi
 
   const [submitted, setSubmitted] = useState(false);
 
+  const handleWhatsAppRedirect = () => {
+    const text = encodeURIComponent(
+      `Namaste Sai Samarth Tours 🙏\n\n*New Tour Enquiry:*\n👤 *Name:* ${formData.fullName || 'Traveler'}\n📞 *Phone:* ${formData.phoneNumber || 'Not specified'}\n📍 *Package:* ${formData.selectedPackage}\n📅 *Travel Date:* ${formData.preferredTravelDate || 'Flexible'}\n👥 *Travelers:* ${formData.numberOfTravellers}\n💬 *Message:* ${formData.message || 'I would like to enquire about this package.'}\n✈️ *Departure:* Bangalore\n\nPlease share the available departure dates and best pricing. Thank you!`
+    );
+    try {
+      window.open(`https://wa.me/${siteConfig.whatsappNumber || '919187711649'}?text=${text}`, '_blank');
+    } catch (err) {
+      console.error('Failed to open WhatsApp window', err);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -31,13 +42,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackageTi
       origin: { y: 0.7 },
       colors: ['#F59E0B', '#F59E0B', '#ffffff'],
     });
-  };
-
-  const handleWhatsAppRedirect = () => {
-    const text = encodeURIComponent(
-      `Hello Sai Samarth Tours,\nMy Name: ${formData.fullName || 'Traveler'}\nPackage Interest: ${formData.selectedPackage}\nDate: ${formData.preferredTravelDate || 'TBD'}\nTravelers: ${formData.numberOfTravellers}\nMessage: ${formData.message || 'I would like to enquire about this package.'}`
-    );
-    window.open(`https://wa.me/${siteConfig.whatsappNumber}?text=${text}`, '_blank');
+    handleWhatsAppRedirect();
   };
 
   return (

@@ -3,11 +3,20 @@ export interface BlogFaq {
   answer: string;
 }
 
+export interface BlogTableData {
+  title?: string;
+  headers: string[];
+  rows: string[][];
+}
+
 export interface BlogSection {
   heading: string;
+  subheading?: string;
   body: string;
   bulletPoints?: string[];
   tips?: string;
+  image?: string;
+  imageCaption?: string;
 }
 
 export interface BlogPost {
@@ -22,6 +31,7 @@ export interface BlogPost {
     sections: BlogSection[];
     conclusion: string;
     keyTakeaways: string[];
+    summaryTable?: BlogTableData;
     faqs?: BlogFaq[];
   };
   author: {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ALL_PACKAGES } from '../data/packages';
-import { getWhatsAppUrl } from '../utils/whatsapp';
+import { getWhatsAppUrl, getEnquiryWhatsAppUrl } from '../utils/whatsapp';
 import { trackLead, trackContact } from '../utils/pixel';
 import confetti from 'canvas-confetti';
 import { X, User, Phone, MapPin, MessageSquare, Send, ShieldCheck, HeartHandshake, CheckCircle2 } from 'lucide-react';
@@ -86,19 +86,21 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
       origin: { y: 0.6 },
       colors: ['#2563EB', '#F59E0B', '#114088'],
     });
+
+    // Automatically format and send enquiry message through WhatsApp
+    const waUrl = getEnquiryWhatsAppUrl(formData);
+    try {
+      window.open(waUrl, '_blank');
+    } catch (err) {
+      console.error('Failed to open WhatsApp window', err);
+    }
   };
 
   const handleWhatsAppDirect = () => {
     trackContact({
       content_name: `WhatsApp Enquiry - ${formData.selectedPackage || 'General'}`
     });
-    const selectedPkg = ALL_PACKAGES.find(p => p.title === formData.selectedPackage);
-    const url = getWhatsAppUrl({
-      title: formData.selectedPackage,
-      duration: selectedPkg?.duration,
-      destination: selectedPkg?.destination,
-      pathname: currentPath
-    });
+    const url = getEnquiryWhatsAppUrl(formData);
     window.open(url, '_blank');
   };
 
