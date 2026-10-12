@@ -634,6 +634,22 @@ pages.forEach(p => {
 // 4. Prerender Blog Articles
 const blogArticles = [
   {
+    slug: 'kashi-ayodhya-tour-package-from-bangalore',
+    title: 'Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary, Cost & Travel Tips',
+    desc: 'Complete guide for Kashi Ayodhya tour package from Bangalore: Major temples, 5-day itinerary, package price, VIP darshan passes, flights, pure veg food, and senior tips.',
+    image: '/kashi-ayodhya-tour-package-from-bangalore.webp',
+    h1: 'Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary, Cost & Travel Tips',
+    intro: 'The holy triad of Uttar Pradesh—Kashi, Ayodhya, and Prayagraj—represents the supreme spiritual heartbeat of Sanatana Dharma. Discover complete cost breakdowns, direct flight options, VIP darshan booking rules, and an expert 5-day family itinerary.'
+  },
+  {
+    slug: 'shirdi-tour-package-from-bangalore-guide',
+    title: 'Shirdi Tour Package from Bangalore: Complete Travel Guide, Darshan & Itinerary',
+    desc: 'Complete guide for Shirdi tour package from Bangalore: Best time to visit, direct flights, VIP Darshan, Kakad Aarti booking, Shani Shingnapur, pure veg food, and 2-day itinerary.',
+    image: '/shirdi-tour-hero-banner-mobile.webp',
+    h1: 'Shirdi Tour Package from Bangalore: Complete Travel Guide, Darshan & Itinerary',
+    intro: 'Seeking the divine grace of Sri Sai Baba is a cherished spiritual aspiration for lakhs of devotees across Karnataka. Discover direct flights from Bangalore, VIP Darshan passes, Kakad Aarti, Shani Shingnapur, pure veg meals, and an effortless 2-day itinerary.'
+  },
+  {
     slug: 'shirdi-vip-darshan-guide-2026',
     title: 'Shirdi VIP Darshan Online Booking, Aarti Timings & Flight Guide from Bangalore (2026)',
     desc: 'Complete guide for Bangalore devotees visiting Shirdi: VIP darshan passes, Aarti schedule, Dress code, and Direct Flights from Kempegowda Airport.',

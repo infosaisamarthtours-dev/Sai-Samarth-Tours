@@ -1,4 +1,6 @@
 import { BlogPost } from './types';
+import { shirdiTourPackageFromBangaloreGuidePost } from './shirdi-tour-package-from-bangalore-guide';
+import { kashiAyodhyaTourPackageFromBangalorePost } from './kashi-ayodhya-tour-package-from-bangalore';
 import { shirdiVipDarshanGuidePost } from './shirdi-vip-darshan-guide';
 import { kashiAyodhyaPrayagrajGuidePost } from './kashi-ayodhya-prayagraj-guide';
 import { singaporeMalaysiaFamilyGuidePost } from './singapore-malaysia-family-guide';
@@ -7,6 +9,8 @@ import { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 import { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export * from './types';
+export { shirdiTourPackageFromBangaloreGuidePost } from './shirdi-tour-package-from-bangalore-guide';
+export { kashiAyodhyaTourPackageFromBangalorePost } from './kashi-ayodhya-tour-package-from-bangalore';
 export { shirdiVipDarshanGuidePost } from './shirdi-vip-darshan-guide';
 export { kashiAyodhyaPrayagrajGuidePost } from './kashi-ayodhya-prayagraj-guide';
 export { singaporeMalaysiaFamilyGuidePost } from './singapore-malaysia-family-guide';
@@ -15,6 +19,8 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  shirdiTourPackageFromBangaloreGuidePost,
+  kashiAyodhyaTourPackageFromBangalorePost,
   shirdiVipDarshanGuidePost,
   kashiAyodhyaPrayagrajGuidePost,
   singaporeMalaysiaFamilyGuidePost,
