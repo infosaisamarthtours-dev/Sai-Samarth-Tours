@@ -39,14 +39,14 @@
   }
 }
 
-/* Hero section aspect ratio for 0 Cumulative Layout Shift (CLS) */
+/* Hero section aspect ratio for 0 Cumulative Layout Shift (CLS) & tight zero-gap mobile fit */
 #hero {
-  aspect-ratio: 750 / 950;
+  aspect-ratio: 1466 / 1074;
   width: 100%;
 }
 @media (min-width: 640px) {
   #hero {
-    aspect-ratio: 1600 / 587;
+    aspect-ratio: 1920 / 705;
   }
 }
 

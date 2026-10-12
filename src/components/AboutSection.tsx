@@ -3,7 +3,7 @@ import { ShieldCheck, HeartHandshake, Map, Headset } from 'lucide-react';
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-12 md:py-16 bg-white border-b border-gray-100">
+    <section id="about" className="pt-6 pb-12 sm:py-12 md:py-16 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           

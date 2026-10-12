@@ -76,17 +76,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
           >
             {/* Unified Responsive Hero Image with WebP & priority loading */}
             <picture className="w-full h-full block">
-              <source media="(min-width: 640px)" srcSet={slide.desktopImg} type="image/webp" width={1600} height={587} />
-              <source media="(max-width: 639px)" srcSet={slide.mobileImg} type="image/webp" width={750} height={950} />
+              <source media="(min-width: 640px)" srcSet={slide.desktopImg} type="image/webp" width={1920} height={705} />
+              <source media="(max-width: 639px)" srcSet={slide.mobileImg} type="image/webp" width={1466} height={1074} />
               <img 
                 src={slide.desktopImg} 
                 alt={slide.seoAlt}
-                width={1600}
-                height={587}
+                width={1920}
+                height={705}
                 loading={isFirst ? "eager" : "lazy"}
                 fetchPriority={isFirst ? "high" : "low"}
                 decoding={isFirst ? "sync" : "async"}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </picture>
           
