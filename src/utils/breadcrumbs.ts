@@ -28,6 +28,7 @@ const REGION_MAP: Record<string, { region: string; regionUrl?: string }> = {
   'rameshwaram-madurai': { region: 'Tamil Nadu', regionUrl: '/destinations/rameshwaram' },
   'tirupati': { region: 'Andhra Pradesh', regionUrl: '/destinations/tirupati' },
   'nepal': { region: 'Nepal', regionUrl: '/destinations/nepal' },
+  'panch-bootha-balaji-bus-tour': { region: 'Tamil Nadu & Andhra Pradesh', regionUrl: '/bus-packages' },
 
   // Domestic Holiday Packages
   'kashmir': { region: 'Kashmir', regionUrl: '/destinations/kashmir' },
@@ -57,7 +58,9 @@ export function getPackageBreadcrumbHierarchy(pkg: Package): BreadcrumbHierarchy
   const cat = pkg.category;
   let category = { name: 'Tour Packages', url: '/tour-packages' };
 
-  if (cat === 'pilgrimage') {
+  if (cat === 'bus' || pkg.id.includes('bus')) {
+    category = { name: 'Bus Tour Packages', url: '/bus-packages' };
+  } else if (cat === 'pilgrimage') {
     category = { name: 'Pilgrimage Tours', url: '/pilgrimage-tour-packages' };
   } else if (cat === 'domestic') {
     category = { name: 'Domestic Tours', url: '/domestic-tour-packages' };

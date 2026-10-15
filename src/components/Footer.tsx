@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Phone, Mail, MapPin, BookOpen,
-  Compass, Building2, Map, Plane, ChevronRight, ArrowUp
+  Compass, Building2, Map, Plane, ChevronRight, ArrowUp, Bus
 } from 'lucide-react';
 import { siteConfig } from '../data/config';
 import { getWhatsAppUrl } from '../utils/whatsapp';
@@ -96,6 +96,10 @@ export function Footer() {
               <Building2 className="w-4 h-4 text-gray-400" />
               Pilgrimage Tour Packages
             </Link>
+            <Link to="/bus-packages" className="flex items-center gap-2 hover:text-white transition-colors">
+              <Bus className="w-4 h-4 text-[#F59E0B]" />
+              Bus Tour Packages
+            </Link>
             <Link to="/domestic-packages" className="flex items-center gap-2 hover:text-white transition-colors">
               <Map className="w-4 h-4 text-gray-400" />
               Domestic Tour Packages
@@ -158,6 +162,7 @@ export function Footer() {
                 { label: 'About Us', to: '/about' },
                 { label: 'Blog', to: '/blog' },
                 { label: 'Contact Us', to: '/contact' },
+                { label: 'Bus Tour Packages', to: '/bus-packages' },
                 { label: 'Shirdi Packages', to: '/shirdi-packages' },
                 { label: 'Pilgrimage Packages', to: '/pilgrimage-packages' }
               ].map((link, idx) => (

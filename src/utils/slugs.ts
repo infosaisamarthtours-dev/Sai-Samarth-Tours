@@ -24,6 +24,7 @@ export const PACKAGE_SLUG_MAP: Record<string, string> = {
   'rameshwaram': 'rameshwaram-madurai-kanyakumari-tour-package-from-bangalore',
   'gujarat': 'grand-gujarat-somnath-dwarka-tour-package-from-bangalore',
   'nepal': 'nepal-muktinath-pashupatinath-tour-package-from-bangalore',
+  'panch-bootha-balaji-bus-tour': 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
 
   // Domestic Packages
   'kashmir': 'kashmir-tour-package-from-bangalore',

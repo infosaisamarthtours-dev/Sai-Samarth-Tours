@@ -33,6 +33,7 @@ const packageSlugsMap = {
   'rameshwaram': 'rameshwaram-madurai-kanyakumari-tour-package-from-bangalore',
   'gujarat': 'grand-gujarat-somnath-dwarka-tour-package-from-bangalore',
   'nepal': 'nepal-muktinath-pashupatinath-tour-package-from-bangalore',
+  'panch-bootha-balaji-bus-tour': 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
   'kashmir': 'kashmir-tour-package-from-bangalore',
   'kerala': 'kerala-tour-package-from-bangalore',
   'leh-ladakh': 'leh-ladakh-tour-package-from-bangalore',
@@ -531,6 +532,18 @@ const pages = [
     title: 'Pilgrimage Tour Packages from Bangalore | Sai Samarth Tours',
     desc: 'Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes flights, VIP darshan & 3-star AC hotels.',
     image: '/pilgrimage-packages-category-card.webp'
+  },
+  {
+    path: 'bus-packages',
+    title: 'Bus Tour Packages from Bangalore | Panch Bootha Yatra & Tirumala Balaji | Sai Samarth Tours',
+    desc: 'Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Flagship Panch Bootha Yatra & Tirumala Balaji 4N/5D for ₹16,999/- with Tour Manager, 3-Star AC hotels & all pure veg meals.',
+    image: '/panch-bootha-bus-yatra-1.webp'
+  },
+  {
+    path: 'bus-tour-packages',
+    title: 'Deluxe Bus Tour Packages from Bangalore | Pushback AC Coaches | Sai Samarth Tours',
+    desc: 'Handcrafted luxury bus pilgrimages and family yatras departing from Bangalore. Paced for senior citizens with tour manager on board, all meals & 3-star stays.',
+    image: '/panch-bootha-bus-yatra-1.webp'
   },
   {
     path: 'shirdi-tour-packages',

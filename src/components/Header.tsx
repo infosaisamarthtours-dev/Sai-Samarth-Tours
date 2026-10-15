@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
 import { siteConfig } from '../data/config';
-import { Phone, Menu, X, Search, ChevronDown, UserCheck, MapPin, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Phone, Menu, X, Search, ChevronDown, UserCheck, MapPin, Clock, ArrowRight, Tag, Bus } from 'lucide-react';
 
 interface HeaderProps {
   onOpenEnquiry: (packageTitle?: string) => void;
@@ -10,11 +10,21 @@ interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const mobileSearchRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  const toggleMobileDropdown = (category: string) => {
+    setOpenMobileDropdown(prev => prev === category ? null : category);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setOpenMobileDropdown(null);
+  };
 
   // Close search dropdown on click outside
   useEffect(() => {
@@ -66,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   const handleSelectPackage = (pkgId: string) => {
     setSearchQuery('');
     setIsSearchOpen(false);
-    setMobileMenuOpen(false);
+    closeMobileMenu();
     navigate(`/package/${pkgId}`);
   };
 
@@ -298,6 +308,38 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </div>
             </li>
 
+            {/* Bus Tours Dropdown */}
+            <li className="relative group flex items-center h-full">
+              <Link to="/bus-packages" className="text-white text-sm font-semibold hover:text-[#F59E0B] transition-colors flex items-center h-full gap-1.5">
+                <Bus className="w-4 h-4 text-[#F59E0B]" />
+                <span>Bus Tours</span>
+                <span className="text-[9px] bg-gradient-to-r from-[#F97316] to-[#EA580C] text-white px-1.5 py-0.5 rounded-full font-bold uppercase tracking-wider">New</span>
+                <ChevronDown className="w-4 h-4 ml-0.5 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
+              </Link>
+              <div className="absolute left-0 top-full w-84 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
+                <div className="px-4 py-3 bg-gradient-to-r from-amber-50 to-blue-50 border-b border-gray-100">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-extrabold text-[#114088] uppercase tracking-wider">A/C Pushback Bus Yatras</span>
+                    <span className="text-[10px] bg-green-100 text-green-800 font-bold px-1.5 py-0.5 rounded">All Meals Included</span>
+                  </div>
+                  <p className="text-[11px] text-gray-500 mt-0.5">Deluxe 2+2 sanitized pushback coaches with Tour Manager</p>
+                </div>
+                <div className="flex flex-col">
+                  <Link to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-blue-50/50 border-b border-gray-100 transition-colors block">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-[#114088]">Panch Bootha & Balaji Yatra</span>
+                      <span className="text-xs font-black text-[#EA580C]">₹16,999/-</span>
+                    </div>
+                    <p className="text-[11px] text-gray-500 mt-0.5">4N/5D • All 5 Shiva Elements + Tirumala Balaji</p>
+                  </Link>
+                  <Link to="/bus-packages" className="px-5 py-3 text-xs font-bold text-[#114088] hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex items-center justify-between">
+                    <span>Explore All Bus Trips & Group Charters</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </li>
+
             {/* Domestic Dropdown */}
             <li className="relative group flex items-center h-full">
               <Link to="/domestic-packages" className="text-white text-sm font-semibold hover:text-[#F59E0B] transition-colors flex items-center h-full">
@@ -447,15 +489,226 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             )}
           </div>
 
-          <nav className="flex flex-col space-y-2">
-            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Home</Link>
-            <Link to="/shirdi-packages" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Shirdi <ChevronDown className="w-5 h-5" /></Link>
-            <Link to="/pilgrimage-packages" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Pilgrimage <ChevronDown className="w-5 h-5" /></Link>
-            <Link to="/domestic-packages" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Domestic <ChevronDown className="w-5 h-5" /></Link>
-            <Link to="/international-packages" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">International <ChevronDown className="w-5 h-5" /></Link>
-            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">About Us</Link>
-            <Link to="/blog" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Blog</Link>
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-[#114088] font-bold text-lg py-3 border-b border-gray-100 flex justify-between">Contact</Link>
+          <nav className="flex flex-col">
+            {/* Home */}
+            <Link 
+              to="/" 
+              onClick={closeMobileMenu} 
+              className="text-[#114088] font-bold text-base py-3 border-b border-gray-100 hover:text-[#2563EB] transition-colors flex items-center justify-between"
+            >
+              <span>Home</span>
+            </Link>
+
+            {/* Shirdi Dropdown */}
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => toggleMobileDropdown('shirdi')}
+                className="w-full flex items-center justify-between py-3 text-[#114088] font-bold text-base hover:text-[#2563EB] transition-colors cursor-pointer text-left"
+              >
+                <span>Shirdi</span>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-200 ${
+                    openMobileDropdown === 'shirdi' ? 'rotate-180 text-[#F59E0B]' : 'text-gray-400'
+                  }`} 
+                />
+              </button>
+
+              {openMobileDropdown === 'shirdi' && (
+                <div className="bg-blue-50/50 rounded-xl p-3 mb-2 space-y-1 border border-blue-100/70 animate-fadeIn">
+                  <Link
+                    to="/shirdi-packages"
+                    onClick={closeMobileMenu}
+                    className="block px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-[#EA580C] bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors flex items-center justify-between border border-amber-200/60"
+                  >
+                    <span>Explore All Shirdi Packages</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link to="/package/shirdi-via-pune" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi Via Pune</Link>
+                  <Link to="/package/shirdi-via-mumbai" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi Via Mumbai</Link>
+                  <Link to="/package/shirdi-3-jyothirlinga" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi with 3 Jyothirlinga</Link>
+                  <Link to="/package/shirdi-2-jyothirlinga" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi with 2 Jyothirlinga</Link>
+                  <Link to="/package/shirdi-regular" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Direct Shirdi Flight Yatra</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Pilgrimage Dropdown */}
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => toggleMobileDropdown('pilgrimage')}
+                className="w-full flex items-center justify-between py-3 text-[#114088] font-bold text-base hover:text-[#2563EB] transition-colors cursor-pointer text-left"
+              >
+                <span>Pilgrimage</span>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-200 ${
+                    openMobileDropdown === 'pilgrimage' ? 'rotate-180 text-[#F59E0B]' : 'text-gray-400'
+                  }`} 
+                />
+              </button>
+
+              {openMobileDropdown === 'pilgrimage' && (
+                <div className="bg-blue-50/50 rounded-xl p-3 mb-2 space-y-1 border border-blue-100/70 animate-fadeIn max-h-[300px] overflow-y-auto">
+                  <Link
+                    to="/pilgrimage-packages"
+                    onClick={closeMobileMenu}
+                    className="block px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-[#EA580C] bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors flex items-center justify-between border border-amber-200/60 sticky top-0 z-10"
+                  >
+                    <span>Explore All Pilgrimage Packages</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <Link to="/package/kholapur-pandarpur" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kolhapur and Pandharpur</Link>
+                  <Link to="/package/puri-jagannath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Puri Jagannath</Link>
+                  <Link to="/package/kamakhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya</Link>
+                  <Link to="/package/kashi-ayodhya-prayagraj" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
+                  <Link to="/package/kashi-ayodhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi With Ayodhya</Link>
+                  <Link to="/package/indore-ujjain" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Indore and Ujjain</Link>
+                  <Link to="/package/vaishnodevi" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Vaishnodevi</Link>
+                  <Link to="/package/baidyanath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Baidyanath</Link>
+                  <Link to="/package/rameshwaram" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rameshwaram</Link>
+                  <Link to="/package/gujarat" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Gujarat</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Bus Tours Dropdown (Unique & Highlights Panch Bootha) */}
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => toggleMobileDropdown('bus')}
+                className="w-full flex items-center justify-between py-3 text-[#114088] font-bold text-base hover:text-[#2563EB] transition-colors cursor-pointer text-left"
+              >
+                <div className="flex items-center gap-2">
+                  <Bus className="w-5 h-5 text-[#EA580C]" />
+                  <span>Bus Tours</span>
+                  <span className="text-[10px] bg-gradient-to-r from-[#F97316] to-[#EA580C] text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">New</span>
+                </div>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-200 ${
+                    openMobileDropdown === 'bus' ? 'rotate-180 text-[#F59E0B]' : 'text-gray-400'
+                  }`} 
+                />
+              </button>
+
+              {openMobileDropdown === 'bus' && (
+                <div className="bg-gradient-to-br from-amber-50/70 to-blue-50/60 rounded-xl p-3 mb-2 space-y-2 border border-amber-200/60 animate-fadeIn">
+                  <Link
+                    to="/bus-packages"
+                    onClick={closeMobileMenu}
+                    className="block px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-[#114088] bg-white rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-between shadow-xs border border-blue-100"
+                  >
+                    <span>Explore All Bus Trips & Charters</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#EA580C]" />
+                  </Link>
+
+                  {/* Flagship Panch Bootha Tour Highlight Card */}
+                  <Link 
+                    to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" 
+                    onClick={closeMobileMenu} 
+                    className="block p-3 bg-white rounded-xl hover:bg-amber-50/50 transition-colors border border-amber-200 shadow-xs"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-black text-[#114088]">Panch Bootha & Balaji Yatra</span>
+                      <span className="text-xs font-black text-[#EA580C] bg-amber-50 px-2 py-0.5 rounded">₹16,999/-</span>
+                    </div>
+                    <p className="text-[11px] text-gray-500 leading-tight">
+                      4N/5D • A/C Pushback Bus • 5 Shiva Elements + Tirumala (All Meals Included)
+                    </p>
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Domestic Dropdown */}
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => toggleMobileDropdown('domestic')}
+                className="w-full flex items-center justify-between py-3 text-[#114088] font-bold text-base hover:text-[#2563EB] transition-colors cursor-pointer text-left"
+              >
+                <span>Domestic</span>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-200 ${
+                    openMobileDropdown === 'domestic' ? 'rotate-180 text-[#F59E0B]' : 'text-gray-400'
+                  }`} 
+                />
+              </button>
+
+              {openMobileDropdown === 'domestic' && (
+                <div className="bg-blue-50/50 rounded-xl p-3 mb-2 space-y-1 border border-blue-100/70 animate-fadeIn max-h-[300px] overflow-y-auto">
+                  <Link
+                    to="/domestic-packages"
+                    onClick={closeMobileMenu}
+                    className="block px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-[#EA580C] bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors flex items-center justify-between border border-amber-200/60 sticky top-0 z-10"
+                  >
+                    <span>Explore All Domestic Packages</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+
+                  <div className="pt-2 text-[10px] uppercase font-bold text-gray-400 px-3 tracking-wider">North India</div>
+                  <Link to="/package/kashmir" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashmir</Link>
+                  <Link to="/package/leh-ladakh" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Leh Ladakh</Link>
+                  <Link to="/package/golden-triangle" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Golden Triangle</Link>
+                  <Link to="/package/himachal" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Himachal Pradesh</Link>
+                  <Link to="/package/rajasthan" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rajasthan</Link>
+
+                  <div className="pt-2 text-[10px] uppercase font-bold text-gray-400 px-3 tracking-wider">South & Coastal India</div>
+                  <Link to="/package/kerala" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kerala</Link>
+                  <Link to="/package/andaman" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Andaman</Link>
+                  <Link to="/package/goa" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Goa</Link>
+                </div>
+              )}
+            </div>
+
+            {/* International Dropdown */}
+            <div className="border-b border-gray-100">
+              <button
+                type="button"
+                onClick={() => toggleMobileDropdown('international')}
+                className="w-full flex items-center justify-between py-3 text-[#114088] font-bold text-base hover:text-[#2563EB] transition-colors cursor-pointer text-left"
+              >
+                <span>International</span>
+                <ChevronDown 
+                  className={`w-5 h-5 transition-transform duration-200 ${
+                    openMobileDropdown === 'international' ? 'rotate-180 text-[#F59E0B]' : 'text-gray-400'
+                  }`} 
+                />
+              </button>
+
+              {openMobileDropdown === 'international' && (
+                <div className="bg-blue-50/50 rounded-xl p-3 mb-2 space-y-1 border border-blue-100/70 animate-fadeIn max-h-[300px] overflow-y-auto">
+                  <Link
+                    to="/international-packages"
+                    onClick={closeMobileMenu}
+                    className="block px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-[#EA580C] bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors flex items-center justify-between border border-amber-200/60 sticky top-0 z-10"
+                  >
+                    <span>Explore All International Packages</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+
+                  <Link to="/package/bhutan" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Bhutan</Link>
+                  <Link to="/package/nepal" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Nepal</Link>
+                  <Link to="/package/malaysia" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Malaysia</Link>
+                  <Link to="/package/maldives" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Maldives</Link>
+                  <Link to="/package/singapore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Singapore</Link>
+                  <Link to="/package/thailand" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Thailand</Link>
+                  <div className="px-3 py-1.5 text-xs text-gray-400 flex justify-between items-center font-medium">
+                    <span>Dubai & UAE</span>
+                    <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span>
+                  </div>
+                  <div className="px-3 py-1.5 text-xs text-gray-400 flex justify-between items-center font-medium">
+                    <span>Europe</span>
+                    <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Direct Links */}
+            <Link to="/about" onClick={closeMobileMenu} className="text-[#114088] font-bold text-base py-3 border-b border-gray-100 hover:text-[#2563EB] transition-colors flex justify-between">About Us</Link>
+            <Link to="/blog" onClick={closeMobileMenu} className="text-[#114088] font-bold text-base py-3 border-b border-gray-100 hover:text-[#2563EB] transition-colors flex justify-between">Blog</Link>
+            <Link to="/contact" onClick={closeMobileMenu} className="text-[#114088] font-bold text-base py-3 border-b border-gray-100 hover:text-[#2563EB] transition-colors flex justify-between">Contact</Link>
           </nav>
           
           <div className="mt-8 space-y-4">

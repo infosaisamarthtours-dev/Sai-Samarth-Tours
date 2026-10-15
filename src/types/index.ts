@@ -1,4 +1,4 @@
-export type CategoryType = 'pilgrimage' | 'domestic' | 'international';
+export type CategoryType = 'pilgrimage' | 'domestic' | 'international' | 'bus';
 
 export interface Package {
   id: string;

@@ -64,10 +64,10 @@ export function ContactPage() {
       />
       
       {/* Hero Banner */}
-      <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           {/* Breadcrumbs */}
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <Breadcrumbs items={[{ name: 'Contact Us' }]} className="text-gray-300 justify-center" />
           </div>
 

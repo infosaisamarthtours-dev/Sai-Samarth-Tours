@@ -13,9 +13,9 @@ export function TermsOfUsePage() {
         canonical="https://saisamarthtours.com/terms-of-use"
       />
       {/* Hero Banner */}
-      <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-6">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4 sm:mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-gray-200">Terms of Use</span>

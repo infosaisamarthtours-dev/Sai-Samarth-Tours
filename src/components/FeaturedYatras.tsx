@@ -1,7 +1,7 @@
 import React from 'react';
 import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
-import { Plane, Bus, Clock, Building2 } from 'lucide-react';
+import { Plane, Bus, Clock, Building2, Utensils } from 'lucide-react';
 import { ImageSlider } from './ImageSlider';
 
 interface FeaturedYatrasProps {
@@ -12,6 +12,7 @@ interface FeaturedYatrasProps {
 export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage, onOpenEnquiry }) => {
   // Select priority package IDs for the 4-column x 3-row grid (12 cards total)
   const preferredIds = [
+    'panch-bootha-balaji-bus-tour',
     'shirdi-regular',
     'shirdi-3-jyothirlinga',
     'shirdi-2-jyothirlinga',
@@ -22,8 +23,7 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
     'indore-ujjain',
     'kashi-ayodhya-prayagraj',
     'kashi-ayodhya',
-    'rameshwaram-madurai',
-    'baidyanath'
+    'rameshwaram-madurai'
   ];
 
   let featuredPackages = preferredIds
@@ -121,8 +121,17 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
                     <span className="text-[8px] sm:text-[9px] font-bold text-gray-700 whitespace-nowrap">{pkg.duration.split(' ')[0]}</span>
                   </div>
                   <div className="flex flex-col items-center justify-center gap-0.5 bg-slate-50 py-1.5 rounded-lg border border-slate-100">
-                    <Plane className="w-3.5 h-3.5 text-sky-500" />
-                    <span className="text-[8px] sm:text-[9px] font-bold text-gray-700 whitespace-nowrap">Flight</span>
+                    {pkg.tourIncludes?.flights !== false ? (
+                      <>
+                        <Plane className="w-3.5 h-3.5 text-sky-500" />
+                        <span className="text-[8px] sm:text-[9px] font-bold text-gray-700 whitespace-nowrap">Flight</span>
+                      </>
+                    ) : (
+                      <>
+                        <Utensils className="w-3.5 h-3.5 text-orange-500" />
+                        <span className="text-[8px] sm:text-[9px] font-bold text-gray-700 whitespace-nowrap">All Meals</span>
+                      </>
+                    )}
                   </div>
                   <div className="flex flex-col items-center justify-center gap-0.5 bg-slate-50 py-1.5 rounded-lg border border-slate-100">
                     <Bus className="w-3.5 h-3.5 text-emerald-500" />

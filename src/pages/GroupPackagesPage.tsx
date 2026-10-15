@@ -136,7 +136,7 @@ export function GroupPackagesPage({ onOpenEnquiry }: Props) {
       />
 
       {/* Hero Banner Section */}
-      <div className="bg-[#0B1E3F] text-white pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src="/shirdi-tour-hero-banner-desktop.webp" 
@@ -148,7 +148,7 @@ export function GroupPackagesPage({ onOpenEnquiry }: Props) {
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Breadcrumbs */}
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <Breadcrumbs 
               items={[
                 { name: 'Tour Packages', url: '/tour-packages' },
@@ -170,22 +170,22 @@ export function GroupPackagesPage({ onOpenEnquiry }: Props) {
               Organizing travel for 10, 25, or 50+ members? Sai Samarth Tours specializes in seamless group travel departing from Bangalore. Private luxury AC Volvo buses, doorstep pickup, bulk airline savings, pure veg dining, and dedicated tour escorts.
             </p>
 
-            <div className="flex flex-wrap gap-4 items-center">
+            <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4 items-center">
               <button
                 onClick={() => handleEnquire()}
-                className="bg-gradient-to-r from-[#EA580C] to-[#C2410C] hover:from-[#D84E07] hover:to-[#B43807] text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-sm sm:text-base flex items-center gap-2"
+                className="bg-gradient-to-r from-[#EA580C] to-[#C2410C] hover:from-[#D84E07] hover:to-[#B43807] text-white font-bold px-2.5 sm:px-7 py-3 sm:py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 text-xs sm:text-base flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap"
               >
-                Request Custom Group Quote
-                <ChevronRight className="w-4 h-4" />
+                <span>Enquire Now</span>
+                <ChevronRight className="w-4 h-4 shrink-0 hidden sm:inline" />
               </button>
               <a
                 href={getWhatsAppUrl({ title: 'Group Tour Packages from Bangalore' })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#1ebd59] text-white font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-sm sm:text-base flex items-center gap-2"
+                className="bg-[#25D366] hover:bg-[#1ebd59] text-white font-bold px-2.5 sm:px-6 py-3 sm:py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all text-xs sm:text-base flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap"
               >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp Group Desk
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>WhatsApp Us</span>
               </a>
             </div>
           </div>
@@ -343,19 +343,19 @@ export function GroupPackagesPage({ onOpenEnquiry }: Props) {
             <p className="text-sm sm:text-base text-gray-300 mb-8 leading-relaxed">
               Share your approximate group count and desired travel dates. We will provide a complete customized proposal with bus options, flight blocks, and hotel accommodations within 24 hours.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:justify-center sm:gap-4">
               <button
                 onClick={() => handleEnquire()}
-                className="bg-[#EA580C] hover:bg-[#D84E07] text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all text-sm sm:text-base"
+                className="bg-[#EA580C] hover:bg-[#D84E07] text-white font-bold px-2.5 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-lg transition-all text-xs sm:text-base text-center flex items-center justify-center whitespace-nowrap"
               >
-                Get Custom Group Proposal
+                Request Quote
               </button>
               <a
                 href="tel:+919187711649"
-                className="bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold px-7 py-4 rounded-xl transition-all text-sm sm:text-base flex items-center gap-2"
+                className="bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold px-2.5 sm:px-7 py-3.5 sm:py-4 rounded-xl transition-all text-xs sm:text-base flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap"
               >
-                <Phone className="w-4 h-4 text-[#F59E0B]" />
-                Call Group Desk: +91 9187711649
+                <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
+                <span>Call Us Now</span>
               </a>
             </div>
           </div>

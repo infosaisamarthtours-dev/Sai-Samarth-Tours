@@ -85,7 +85,7 @@ export function DestinationPage({ onOpenEnquiry }: DestinationPageProps) {
       />
 
       {/* Hero Banner Section */}
-      <div className="bg-[#0B1E3F] text-white pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <img 
             src={dest.heroImage} 
@@ -104,7 +104,7 @@ export function DestinationPage({ onOpenEnquiry }: DestinationPageProps) {
               ? { name: 'International Tours', url: '/international-tour-packages' }
               : { name: 'Domestic Tours', url: '/domestic-tour-packages' };
             return (
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <Breadcrumbs 
                   items={[
                     { name: catMeta.name, url: catMeta.url },
@@ -127,22 +127,22 @@ export function DestinationPage({ onOpenEnquiry }: DestinationPageProps) {
               {dest.tagline}. Pre-booked flights from Kempegowda International Airport (BLR), 3-star AC accommodations, pure vegetarian meals, and dedicated tour manager guidance.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4">
               <a
                 href="#packages"
-                className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-2"
+                className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-2.5 sm:px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap"
               >
-                <span>View {dest.name} Packages</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>View Packages</span>
+                <ChevronRight className="w-4 h-4 shrink-0 hidden sm:inline" />
               </a>
               <a
                 href={getWhatsAppUrl({ title: `${dest.name} Tour Inquiry` })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-2"
+                className="bg-[#25D366] hover:bg-[#128C7E] text-white px-2.5 sm:px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center gap-1.5 sm:gap-2 text-center whitespace-nowrap"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Chat with Tour Expert</span>
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>WhatsApp Us</span>
               </a>
             </div>
           </div>

@@ -28,6 +28,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
       if (initialPackageTitle.toLowerCase().includes('pilgrimage')) {
         return ALL_PACKAGES.filter(p => p.category === 'pilgrimage');
       }
+      if (initialPackageTitle.toLowerCase().includes('bus')) {
+        return ALL_PACKAGES.filter(p => p.category === 'bus' || p.id.includes('bus'));
+      }
       if (initialPackageTitle.toLowerCase().includes('domestic')) {
         return ALL_PACKAGES.filter(p => p.category === 'domestic');
       }
@@ -36,6 +39,9 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
       }
     }
 
+    if (currentPath.includes('bus')) {
+      return ALL_PACKAGES.filter(p => p.category === 'bus' || p.id.includes('bus'));
+    }
     if (currentPath.includes('shirdi')) {
       return ALL_PACKAGES.filter(p => p.id.includes('shirdi'));
     }

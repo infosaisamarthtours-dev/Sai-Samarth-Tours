@@ -94,12 +94,12 @@ export function AboutPage() {
       />
       
       {/* 1. Hero Banner */}
-      <div className="bg-[#0B1E3F] text-white pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-14 sm:pb-20 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <Breadcrumbs items={[{ name: 'About Us' }]} className="text-gray-300 justify-center" />
           </div>
 
@@ -470,22 +470,22 @@ export function AboutPage() {
             Connect with our tour advisors in Bangalore for instant itinerary recommendations, custom family packages, and flight bookings.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row items-center justify-center sm:gap-4">
             <a 
               href="tel:+919187711649" 
-              className="w-full sm:w-auto bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all transform hover:-translate-y-0.5"
+              className="w-full sm:w-auto bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-2.5 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 sm:gap-2 shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
             >
-              <Phone className="w-4 h-4" />
-              <span>Call +91 91877 11649</span>
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span>Call Us Now</span>
             </a>
             <a 
               href={getWhatsAppUrl({ title: 'About Us Consultation' })} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-all transform hover:-translate-y-0.5"
+              className="w-full sm:w-auto bg-[#25D366] hover:bg-[#128C7E] text-white px-2.5 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 sm:gap-2 shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Chat on WhatsApp</span>
+              <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span>WhatsApp Us</span>
             </a>
           </div>
         </div>

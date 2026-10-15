@@ -10,6 +10,7 @@ import { HomePage } from './pages/HomePage';
 const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
 const PackageDetailsPage = lazy(() => import('./pages/PackageDetailsPage').then(m => ({ default: m.PackageDetailsPage })));
 const PilgrimagePackagesPage = lazy(() => import('./pages/PilgrimagePackagesPage').then(m => ({ default: m.PilgrimagePackagesPage })));
+const BusPackagesPage = lazy(() => import('./pages/BusPackagesPage').then(m => ({ default: m.BusPackagesPage })));
 const ShirdiPackagesPage = lazy(() => import('./pages/ShirdiPackagesPage').then(m => ({ default: m.ShirdiPackagesPage })));
 const DomesticPackagesPage = lazy(() => import('./pages/DomesticPackagesPage').then(m => ({ default: m.DomesticPackagesPage })));
 const InternationalPackagesPage = lazy(() => import('./pages/InternationalPackagesPage').then(m => ({ default: m.InternationalPackagesPage })));
@@ -104,6 +105,13 @@ export function App() {
             <Route path="/pilgrimage-packages" element={<PilgrimagePackagesPage />} />
             <Route path="/pilgrimage-tour-packages" element={<PilgrimagePackagesPage />} />
             <Route path="/pilgrimage-tours-from-bangalore" element={<PilgrimagePackagesPage />} />
+            
+            {/* Dedicated Bus Tours Hub */}
+            <Route path="/bus-packages" element={<BusPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/bus-tour-packages" element={<BusPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/bus-trips" element={<BusPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/bus-tours-from-bangalore" element={<BusPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+
             <Route path="/shirdi-packages" element={<ShirdiPackagesPage />} />
             <Route path="/shirdi-tour-packages" element={<ShirdiPackagesPage />} />
             <Route path="/shirdi-tour-packages-from-bangalore" element={<ShirdiPackagesPage />} />
@@ -136,6 +144,8 @@ export function App() {
             <Route path="/dubai-tour-package-from-bangalore" element={<Navigate to="/package/dubai-tour-package-from-bangalore" replace />} />
             <Route path="/chardham-yatra-from-bangalore" element={<Navigate to="/destinations/chardham" replace />} />
             <Route path="/tirupati-tour-package-from-bangalore" element={<Navigate to="/destinations/tirupati" replace />} />
+            <Route path="/panch-bootha-tour-package-from-bangalore" element={<Navigate to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" replace />} />
+            <Route path="/panch-bootha-yatra" element={<Navigate to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" replace />} />
 
             {/* Destination Landing Pages */}
             <Route path="/destinations/:slug" element={<DestinationPage onOpenEnquiry={handleOpenEnquiry} />} />

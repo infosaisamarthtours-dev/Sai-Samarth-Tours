@@ -76,23 +76,23 @@ export function QuoteSection() {
               Connect with our Bangalore travel advisors to receive custom day-by-day itineraries, flight ticket schedules, verified 3-star AC hotel bookings, and VIP darshan passes tailored for your family.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4">
               <a 
                 href={getWhatsAppUrl()} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold transition-all hover:-translate-y-1 shadow-[0_4px_15px_rgba(37,211,102,0.3)]"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-2.5 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-xs sm:text-base transition-all hover:-translate-y-1 shadow-[0_4px_15px_rgba(37,211,102,0.3)] whitespace-nowrap"
               >
-                <MessageCircle className="w-5 h-5" />
-                Chat on WhatsApp
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                <span>WhatsApp Us</span>
               </a>
               
               <a 
                 href="tel:+919187711649"
-                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-xl font-bold backdrop-blur-md transition-all hover:-translate-y-1"
+                className="flex items-center justify-center gap-1.5 sm:gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-2.5 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-xs sm:text-base backdrop-blur-md transition-all hover:-translate-y-1 whitespace-nowrap"
               >
-                <Phone className="w-5 h-5" />
-                +91 91877 11649
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                <span>Call Us Now</span>
               </a>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { siteConfig } from '../data/config';
 
 export interface WhatsAppContext {
   title?: string;
+  packageTitle?: string;
   duration?: string;
   destination?: string;
   pathname?: string;
@@ -9,15 +10,21 @@ export interface WhatsAppContext {
 
 export function getWhatsAppUrl(context?: WhatsAppContext): string {
   const number = siteConfig.whatsappNumber || '919187711649';
+  const title = context?.title || context?.packageTitle;
 
-  if (context?.title) {
-    const dur = context.duration ? ` (${context.duration})` : '';
-    const dest = context.destination ? `\n📍 Destination: ${context.destination}` : '';
-    const msg = `Namaste Sai Samarth Tours 🙏\n\nI am interested in booking the *${context.title}*${dur}.${dest}\n✈️ Departure: Bangalore\n\nPlease share the available departure dates, full day-wise itinerary brochure, and the best quote.\n\nThank you!`;
+  if (title) {
+    const dur = context?.duration ? ` (${context.duration})` : '';
+    const dest = context?.destination ? `\n📍 Destination: ${context.destination}` : '';
+    const msg = `Namaste Sai Samarth Tours 🙏\n\nI am interested in booking the *${title}*${dur}.${dest}\n✈️ Departure: Bangalore\n\nPlease share the available departure dates, full day-wise itinerary brochure, and the best quote.\n\nThank you!`;
     return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
   }
 
   const path = context?.pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
+
+  if (path.includes('bus')) {
+    const msg = `Namaste Sai Samarth Tours 🙏\n\nI am looking for *Deluxe Bus Tour Packages* from Bangalore (Panch Bootha Yatra & Tirumala Balaji 4N/5D with A/C Pushback Coach, All Meals & Tour Manager).\n\nPlease share upcoming departure dates, seat availability, and booking details.\n\nThank you!`;
+    return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
+  }
 
   if (path.includes('shirdi')) {
     const msg = `Namaste Sai Samarth Tours 🙏\n\nI am looking for *Shirdi Tour Packages* from Bangalore (with Direct Flights & VIP Darshan).\n\nPlease share available departure dates, package options, and booking details.\n\nThank you!`;

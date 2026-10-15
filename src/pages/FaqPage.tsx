@@ -71,9 +71,9 @@ export function FaqPage() {
         canonical="https://saisamarthtours.com/faq"
       />
       {/* Hero Banner */}
-      <div className="bg-[#0B1E3F] text-white pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-6">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4 sm:mb-6">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-gray-200">FAQ</span>
@@ -129,12 +129,12 @@ export function FaqPage() {
             <h3 className="text-xl font-bold font-serif-brand mb-2">Still Have Questions?</h3>
             <p className="text-blue-100 text-sm">Our travel experts are available 24/7 to assist you with your booking.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <a href={`tel:+91${siteConfig.phoneTentative}`} className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
-              <Phone className="w-4 h-4" /> Call +91 {siteConfig.phoneTentative}
+          <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-3 w-full sm:w-auto">
+            <a href={`tel:+91${siteConfig.phoneTentative}`} className="bg-[#F59E0B] hover:bg-[#D97706] text-white font-bold px-2.5 sm:px-6 py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 sm:gap-2 transition-colors whitespace-nowrap">
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> <span>Call Us Now</span>
             </a>
-            <a href={`https://wa.me/${siteConfig.whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors">
-              <MessageCircle className="w-4 h-4" /> WhatsApp Us
+            <a href={`https://wa.me/${siteConfig.whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#128C7E] text-white font-bold px-2.5 sm:px-6 py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 sm:gap-2 transition-colors whitespace-nowrap">
+              <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" /> <span>WhatsApp Us</span>
             </a>
           </div>
         </div>

@@ -1,6 +1,175 @@
 import { Package } from '../types';
 
 export const ALL_PACKAGES: Package[] = [
+  // ================= BUS TOUR PACKAGES =================
+  {
+    id: 'panch-bootha-balaji-bus-tour',
+    slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
+    title: 'Panch Bootha Yatra & Tirumala Balaji – 4N/5D A/C Pushback Bus Tour',
+    shortTitle: 'Panch Bootha & Balaji Bus Yatra',
+    seoH1: 'Panch Bootha Yatra & Tirumala Balaji Bus Tour Package from Bangalore – 16,999/-',
+    category: 'bus',
+    destination: 'Thiruvannamalai, Tiruchirappalli, Srirangam, Thanjavur, Chidambaram, Kanchipuram, Sri Kalahasthi & Tirupati Balaji',
+    duration: '4N/5D',
+    price: '₹16,999/-',
+    numericPrice: 16999,
+    minPax: 1,
+    featured: true,
+    image: '/panch-bootha-bus-yatra-1.webp',
+    images: [
+      '/panch-bootha-bus-yatra-1.webp',
+      '/panch-bootha-bus-yatra-2.webp',
+      '/panch-bootha-bus-yatra-3.webp',
+      '/tirupati-balaji-tour-package-from-bangalore.webp'
+    ],
+    description: 'Exclusive 4 Nights / 5 Days all-inclusive Deluxe A/C Pushback Bus Tour from Bangalore covering all 5 Sacred Pancha Bhootha Shiva Sthalams (Fire, Water, Space, Earth, Air), Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman, and Lord Venkateshwara Swamy Darshan at Tirumala Balaji.',
+    highlights: [
+      'Travel in sanitized Deluxe A/C Pushback Coach Bus from Bangalore & Return',
+      'All 5 Pancha Bhootha Shiva Sthalams: Fire (Arunachaleswarar), Water (Jambukeswarar), Space (Thillai Nataraja), Earth (Ekambareswarar) & Air (Sri Kalahasthi)',
+      'Special Darshan at Sri Ranganathaswamy (Srirangam) & Brihadeeswarar Temple (Thanjavur)',
+      'Holy Darshan of Lord Venkateshwara Balaji & Sri Padmavathi Ammavari in Tirupati',
+      'Dedicated Experienced Tour Manager Services throughout the 5 days',
+      'Comfortable 3-Star AC Hotel Stays on Twin/Double Sharing Basis for 4 Nights',
+      'Wholesome All Meals Included: Daily Breakfast, Lunch & Dinner',
+      'All Sightseeing Entrance Fees & 5% Govt Tax Included in package'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: false,
+      sightseeing: true
+    },
+    placesBadge: '4N/5D Pancha Bootha & Tirumala Balaji Bus Yatra',
+    placesList: [
+      { name: 'Thiruvannamalai (Arunachaleeswarar Temple - Fire / Agni Sthalam)' },
+      { name: 'Tiruchirappalli (Arulmigu Jambukeswarar Temple - Water / Appu Sthalam)' },
+      { name: 'Srirangam (Sri Ranganathaswamy Temple - 108 Divya Desam)' },
+      { name: 'Thanjavur (Brihadeeswarar Big Temple - UNESCO World Heritage)' },
+      { name: 'Chidambaram (Thillai Nataraja Temple - Space / Akasa Sthalam)' },
+      { name: 'Kanchipuram (Kanchi Kamakshi Amman & Ekambareswarar Temple - Earth / Prithvi Sthalam)' },
+      { name: 'Sri Kalahasthi (Sri Kalahastheeswara Temple - Air / Vayu Sthalam)' },
+      { name: 'Tirumala & Tirupati (Sri Balaji Venkateshwara Swamy & Padmavathi Ammavari Temple)' }
+    ],
+    inclusions: [
+      'A/C PUSHPACK BUS: Sanitized 2+2 pushback coach for all travel and intercity transfers from Bangalore',
+      'Tour Manager Services throughout the tour for assistance and personalized care',
+      'Accommodation on twin/double sharing basis for 4 nights in verified 3-Star hotels',
+      'All Meals – Wholesome, hygienic Breakfast, Lunch, and Dinner throughout the journey',
+      'Entrance fees of all sightseeing places to be visited from inside',
+      'Govt Tax of 5% over and above the Tour Cost mentioned'
+    ],
+    exclusions: [
+      'Travel insurance, tips, laundry, etc.',
+      'Any extra cost incurred on behalf of an individual due to illness, accident, hospitalization, or any personal emergency',
+      'Visa fees, Airport taxes, Govt Taxes, Fuel Surcharges and any applicability of new taxes from Govt',
+      'Any increase in the rate of exchange leading to an increase in all land arrangements which may come into effect prior to departure',
+      'Any other thing which is not mentioned in above itinerary'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bangalore – Thiruvannamalai – Tiruchirappalli',
+        detail: 'Bangalore to Thiruvannamalai Departure at Night 10:00 PM. On early morning arrival at Thiruvannamalai freshen up and proceed to Arunachaleeswarar temple (Fire / Agni) darshan. After darshan have breakfast and later proceed to Tiruchirappalli. On arrival have lunch and later proceed to Arulmigu Jambukeswarar Temple (Water / Appu), Thiruvanaikoil. Have good darshan at Jambukeswarar Temple, proceed to Tiruchirappalli. Hotel check IN, have dinner and overnight stay in the hotel.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Tiruchirappalli – Srirangam – Thanjavur – Chidambaram',
+        detail: 'Early in the morning (5:00 AM) proceed to Sri Ranganathaswamy Temple, Srirangam. Have good darshan, return to hotel, have breakfast, check out rooms and proceed to Brihadeeswarar Temple, Thanjavur. After exploring the temple proceed to Chidambaram hotel check-in and later proceed to Thillai Nataraja Temple (Space / Akasa) have good darshan. Return back to hotel, have dinner and overnight stay.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 3',
+        title: 'Chidambaram – Kanchipuram',
+        detail: 'Check out rooms after having breakfast and proceed to Kanchipuram. Hotel check IN, have lunch and proceed to Kanchi Kamakshi Amman Temple. After darshan proceed to Ekambareswarar Temple (Earth / Prithvi). Later in the evening if time permits shopping for authentic silk sarees. Return back to hotel, have dinner and overnight stay.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 4',
+        title: 'Kanchipuram – Sri Kalahasthi – Tirupati / Tirumala',
+        detail: 'Check out rooms after having breakfast and proceed to Sri Kalahasthi Temple (Air / Vayu). After darshan have lunch, later proceed to Tirumala. Hotel check IN, Dinner and Overnight stay in Tirumala.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 5',
+        title: 'Tirupati – Tirumala – Bangalore',
+        detail: 'Early in the morning proceed to Tirumala for Sri Balaji Venkateshwara Temple. If time permits will visit Sri Padmavathi Ammavari Temple. Later with good darshan return back to Bangalore with blessings and beautiful memories.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: '0 – 15 days before departure', fee: '100% on Net tour price' },
+        { days: 'More than 15 days before departure', fee: '50% on Net tour price' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not be responsible for, or liable to refund claims arising from, flight delays or cancellations, mechanical issues, strikes/bandhs, or changes in weather conditions.',
+        'Payment Policy: Package below ₹25,000 – full payment at the time of booking.',
+        'Package below ₹50,000 – ₹25,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Package above ₹50,000 – ₹50,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Last-minute bookings (received within 45 days of departure) – full payment at the time of booking.'
+      ]
+    },
+    remarks: [
+      'Travel with Faith. Journey with Comfort.',
+      'Personalized Service: Thoughtful planning with attention to customer comfort.',
+      'Spiritual Journeys: Pilgrimage and temple tours across sacred destinations.',
+      'Travel Coordination: Experienced tour coordination throughout the journey.',
+      'Comfort & Clarity: Carefully planned stays, transport, meals and darshan arrangements.'
+    ],
+    detailedContent: {
+      overview: 'Experience the quintessential spiritual pilgrimage of South India with Sai Samarth Tours. Our all-inclusive 4 Nights / 5 Days Panch Bootha Yatra & Tirumala Balaji Bus Tour departs directly from Bangalore in a sanitized, luxury A/C Pushback tourist coach. This pilgrimage covers all five cosmic elemental manifestations of Lord Shiva (Fire at Thiruvannamalai, Water at Thiruvanaikaval, Space at Chidambaram, Earth at Kanchipuram, and Air at Srikalahasti), along with the magnificent Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman Shakti Peetham, and the blissful darshan of Lord Sri Venkateshwara Balaji at Tirumala.',
+      significance: 'The Pancha Bhootha Sthalams represent the five primordial elements of nature: Agni (Fire), Appu (Water), Akasa (Space), Prithvi (Earth), and Vayu (Air). Completing this circuit brings profound spiritual cleansing and divine grace, complemented by the supreme blessings of Sri Balaji at Tirumala.',
+      bestTimeToVisit: 'Departures operate regularly throughout the year from Bangalore, ideally timed for pleasant morning temple visits and seamless highway transit.',
+      placesCovered: [
+        'Arunachaleeswarar Temple, Thiruvannamalai (Agni / Fire Lingam)',
+        'Arulmigu Jambukeswarar Temple, Thiruvanaikoil (Appu / Water Lingam)',
+        'Sri Ranganathaswamy Temple, Srirangam',
+        'Brihadeeswarar Temple, Thanjavur (Big Temple)',
+        'Thillai Nataraja Temple, Chidambaram (Akasa / Space Lingam)',
+        'Sri Kanchi Kamakshi Amman Temple, Kanchipuram',
+        'Ekambareswarar Temple, Kanchipuram (Prithvi / Earth Lingam)',
+        'Sri Kalahasthi Temple, Srikalahasti (Vayu / Air Lingam)',
+        'Sri Balaji Venkateshwara Temple, Tirumala',
+        'Sri Padmavathi Ammavari Temple, Tiruchanur'
+      ],
+      travelTips: [
+        'A/C Pushback bus features reclining comfortable seating, ideal for relaxing during highway stretches.',
+        'Traditional temple dress code is required: Dhoti/Kurta for men and Saree/Churidar with Dupatta for women.',
+        'All three meals (Breakfast, Lunch, Dinner) are provided in hygienic restaurants, strictly pure vegetarian.',
+        'Carry a valid Govt Photo ID card (Aadhaar Card) mandatory for Tirumala Balaji temple entry.'
+      ],
+      whyChooseUs: [
+        'Complete circuit of all 5 Pancha Bhootha Temples plus Tirumala Balaji in one seamless 5-day tour',
+        'Deluxe A/C Pushback Bus with dedicated Tour Manager on board assisting every step',
+        'Verified 3-Star Hotel AC Accommodations (4 Nights) and All Meals Included for just ₹16,999/-'
+      ]
+    },
+    faqs: [
+      {
+        question: 'What is the boarding point and departure time in Bangalore?',
+        answer: 'The A/C Pushback bus departs from Bangalore at Night 10:00 PM on Day 1. Convenient boarding points across Bangalore include Yelahanka, Majestic / Anand Rao Circle, and Electronic City / Silk Board.'
+      },
+      {
+        question: 'Are all meals included in the ₹16,999/- package price?',
+        answer: 'Yes! All pure vegetarian meals (Breakfast, Lunch, and Dinner) are included throughout the 5 days, starting from Day 1 morning freshen-up and breakfast until Day 5 lunch en route to Bangalore.'
+      },
+      {
+        question: 'What kind of bus vehicle is provided for this yatra?',
+        answer: 'You will travel in a sanitized, air-conditioned 2+2 Pushback tourist coach with high back reclining seats, ample legroom, air-suspension comfort, and large panoramic windows, accompanied by an experienced tour manager and professional drivers.'
+      },
+      {
+        question: 'What are the 5 Pancha Bhootha temples covered in this itinerary?',
+        answer: '1. Arunachaleeswarar (Thiruvannamalai) - Fire (Agni), 2. Jambukeswarar (Thiruvanaikaval) - Water (Appu), 3. Thillai Nataraja (Chidambaram) - Space (Akasa), 4. Ekambareswarar (Kanchipuram) - Earth (Prithvi), and 5. Sri Kalahasthi - Air (Vayu).'
+      },
+      {
+        question: 'How is Tirumala Balaji darshan arranged on Day 5?',
+        answer: 'On Day 4 evening, the group reaches Tirumala for hotel check-in and overnight stay. Early morning on Day 5, devotees proceed for Sri Balaji Venkateshwara Swamy Darshan with tour manager guidance, followed by Padmavathi Ammavari temple visit before returning to Bangalore.'
+      }
+    ],
+    coordinates: { x: 49, y: 76 }
+  },
   // ================= PILGRIMAGE PACKAGES =================
   {
     id: 'shirdi-regular',

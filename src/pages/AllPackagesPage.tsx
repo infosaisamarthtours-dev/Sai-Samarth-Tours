@@ -17,11 +17,14 @@ interface AllPackagesPageProps {
 
 export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'pilgrimage' | 'domestic' | 'international'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'bus' | 'pilgrimage' | 'domestic' | 'international'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredPackages = ALL_PACKAGES.filter((pkg) => {
-    const matchesCategory = selectedCategory === 'all' || pkg.category === selectedCategory;
+    const matchesCategory = 
+      selectedCategory === 'all' || 
+      pkg.category === selectedCategory || 
+      (selectedCategory === 'bus' && (pkg.category === 'bus' || pkg.id.includes('bus')));
     const matchesSearch = 
       pkg.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       pkg.destination.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -31,6 +34,7 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
 
   const categories = [
     { id: 'all', label: 'All Packages', count: ALL_PACKAGES.length },
+    { id: 'bus', label: 'Bus Tours', count: ALL_PACKAGES.filter(p => p.category === 'bus' || p.id.includes('bus')).length },
     { id: 'pilgrimage', label: 'Pilgrimage Yatras', count: ALL_PACKAGES.filter(p => p.category === 'pilgrimage').length },
     { id: 'domestic', label: 'Domestic Holidays', count: ALL_PACKAGES.filter(p => p.category === 'domestic').length },
     { id: 'international', label: 'International Tours', count: ALL_PACKAGES.filter(p => p.category === 'international').length }
@@ -47,9 +51,9 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
       />
 
       {/* Hero Banner */}
-      <div className="bg-[#0B1E3F] text-white pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="mb-6">
+          <div className="mb-4 sm:mb-6">
             <Breadcrumbs items={[{ name: 'Tour Packages' }]} className="text-gray-300" />
           </div>
 
@@ -233,22 +237,22 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row sm:gap-4 shrink-0">
             <a
               href="tel:+919187711649"
-              className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0B1E3F] px-2.5 sm:px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 sm:gap-2 shadow-lg whitespace-nowrap"
             >
-              <Phone className="w-4 h-4" />
-              <span>Call +91 91877 11649</span>
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span>Call Us Now</span>
             </a>
             <a
               href={getWhatsAppUrl({ title: 'Tour Packages Consultation' })}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white px-2.5 sm:px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 sm:gap-2 shadow-lg whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Chat on WhatsApp</span>
+              <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <span>WhatsApp Us</span>
             </a>
           </div>
         </div>

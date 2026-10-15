@@ -547,28 +547,30 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
               </p>
 
               <div className="space-y-2.5">
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => onOpenEnquiry && onOpenEnquiry(post.title)}
+                    className="w-full bg-[#EA580C] hover:bg-[#cd4700] text-white text-xs font-bold py-3 px-2 rounded-xl transition-colors cursor-pointer text-center flex items-center justify-center whitespace-nowrap"
+                  >
+                    Enquire Now
+                  </button>
+                  <a
+                    href={getWhatsAppUrl({ pathname: `/blog/${post.slug}` })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-bold py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm text-center whitespace-nowrap"
+                  >
+                    <MessageCircle className="w-3.5 h-3.5 fill-current shrink-0" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
                 <a
                   href="tel:+919187711649"
-                  className="w-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors border border-white/10"
+                  className="w-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors border border-white/10"
                 >
                   <Phone className="w-4 h-4 text-[#F59E0B]" />
                   <span>Call: +91 91877 11649</span>
                 </a>
-                <a
-                  href={getWhatsAppUrl({ pathname: `/blog/${post.slug}` })}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white text-xs font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-sm"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>WhatsApp Yatra Expert</span>
-                </a>
-                <button
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(post.title)}
-                  className="w-full bg-[#EA580C] hover:bg-[#cd4700] text-white text-xs font-bold py-3 px-4 rounded-xl transition-colors cursor-pointer text-center"
-                >
-                  Request Instant Quote
-                </button>
               </div>
             </div>
 
