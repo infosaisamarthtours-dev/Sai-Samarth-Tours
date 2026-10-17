@@ -316,7 +316,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                 <span className="text-[9px] bg-gradient-to-r from-[#F97316] to-[#EA580C] text-white px-1.5 py-0.5 rounded-full font-bold uppercase tracking-wider">New</span>
                 <ChevronDown className="w-4 h-4 ml-0.5 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
               </Link>
-              <div className="absolute left-0 top-full w-84 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
+              <div className="absolute left-0 top-full w-96 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="px-4 py-3 bg-gradient-to-r from-amber-50 to-blue-50 border-b border-gray-100">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-extrabold text-[#114088] uppercase tracking-wider">A/C Pushback Bus Yatras</span>
@@ -324,17 +324,26 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   </div>
                   <p className="text-[11px] text-gray-500 mt-0.5">Deluxe 2+2 sanitized pushback coaches with Tour Manager</p>
                 </div>
-                <div className="flex flex-col">
-                  <Link to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-blue-50/50 border-b border-gray-100 transition-colors block">
+                <div className="flex flex-col divide-y divide-gray-100">
+                  <Link to="/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-amber-50/40 transition-colors block group/item">
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-[#114088]">Panch Bootha & Balaji Yatra</span>
+                      <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">Shirdi – Saptha Shrungi – Kolhapur</span>
+                      <span className="text-xs font-black text-[#EA580C]">₹14,999/-</span>
+                    </div>
+                    <p className="text-[11px] text-gray-500 mt-0.5">4N/5D • Ganagapur, Pandharpur, Mumbai, Pune & Savadatti</p>
+                  </Link>
+
+                  <Link to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-blue-50/50 transition-colors block group/item">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">Panch Bootha & Balaji Yatra</span>
                       <span className="text-xs font-black text-[#EA580C]">₹16,999/-</span>
                     </div>
                     <p className="text-[11px] text-gray-500 mt-0.5">4N/5D • All 5 Shiva Elements + Tirumala Balaji</p>
                   </Link>
+
                   <Link to="/bus-packages" className="px-5 py-3 text-xs font-bold text-[#114088] hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex items-center justify-between">
                     <span>Explore All Bus Trips & Group Charters</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#EA580C]" />
                   </Link>
                 </div>
               </div>
@@ -600,6 +609,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   >
                     <span>Explore All Bus Trips & Charters</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#EA580C]" />
+                  </Link>
+
+                  {/* Shirdi - Kolhapur Bus Tour Card */}
+                  <Link 
+                    to="/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" 
+                    onClick={closeMobileMenu} 
+                    className="block p-3 bg-white rounded-xl hover:bg-amber-50/50 transition-colors border border-amber-200 shadow-xs"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-black text-[#114088]">Shirdi – Saptha Shrungi – Kolhapur</span>
+                      <span className="text-xs font-black text-[#EA580C] bg-amber-50 px-2 py-0.5 rounded">₹14,999/-</span>
+                    </div>
+                    <p className="text-[11px] text-gray-500 leading-tight">
+                      4N/5D • A/C Pushback Bus • Ganagapur, Pandharpur, Mumbai & Savadatti
+                    </p>
                   </Link>
 
                   {/* Flagship Panch Bootha Tour Highlight Card */}

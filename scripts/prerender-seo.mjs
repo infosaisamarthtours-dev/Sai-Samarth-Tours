@@ -34,6 +34,7 @@ const packageSlugsMap = {
   'gujarat': 'grand-gujarat-somnath-dwarka-tour-package-from-bangalore',
   'nepal': 'nepal-muktinath-pashupatinath-tour-package-from-bangalore',
   'panch-bootha-balaji-bus-tour': 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
+  'shirdi-saptashrungi-kolhapur-bus-tour': 'shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore',
   'kashmir': 'kashmir-tour-package-from-bangalore',
   'kerala': 'kerala-tour-package-from-bangalore',
   'leh-ladakh': 'leh-ladakh-tour-package-from-bangalore',
@@ -646,6 +647,14 @@ pages.forEach(p => {
 
 // 4. Prerender Blog Articles
 const blogArticles = [
+  {
+    slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore',
+    title: 'Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore',
+    desc: 'Book the Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore for ₹16,999. Explore sacred temples with Sai Samarth Tours.',
+    image: '/panch-bootha-bus-yatra-1.webp',
+    h1: 'Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore – 16,999/-',
+    intro: 'Embark on the sacred Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore with Sai Samarth Tours. Discover all 5 Shiva elemental temples, Srirangam, Thanjavur, and Lord Balaji in a 4N/5D deluxe A/C pushback coach for ₹16,999/- with 3-star AC stays, all meals, and tour manager.'
+  },
   {
     slug: 'kashi-ayodhya-tour-package-from-bangalore',
     title: 'Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary, Cost & Travel Tips',

@@ -22,6 +22,12 @@ export const ALL_PACKAGES: Package[] = [
       '/panch-bootha-bus-yatra-3.webp',
       '/tirupati-balaji-tour-package-from-bangalore.webp'
     ],
+    brochureImages: [
+      '/panch-bootha-brochure-1.png',
+      '/panch-bootha-brochure-2.png',
+      '/panch-bootha-brochure-3.png',
+      '/panch-bootha-brochure-4.png'
+    ],
     description: 'Exclusive 4 Nights / 5 Days all-inclusive Deluxe A/C Pushback Bus Tour from Bangalore covering all 5 Sacred Pancha Bhootha Shiva Sthalams (Fire, Water, Space, Earth, Air), Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman, and Lord Venkateshwara Swamy Darshan at Tirumala Balaji.',
     highlights: [
       'Travel in sanitized Deluxe A/C Pushback Coach Bus from Bangalore & Return',
@@ -169,6 +175,193 @@ export const ALL_PACKAGES: Package[] = [
       }
     ],
     coordinates: { x: 49, y: 76 }
+  },
+  {
+    id: 'shirdi-saptashrungi-kolhapur-bus-tour',
+    slug: 'shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore',
+    title: 'Shirdi – Saptha Shrungi – Kolhapur – 4N/5D A/C Pushback Bus Tour',
+    shortTitle: 'Shirdi, Saptashrungi & Kolhapur Bus Tour',
+    seoH1: 'Shirdi – Saptha Shrungi – Kolhapur Bus Tour Package from Bangalore – 14,999/-',
+    category: 'bus',
+    destination: 'Ganagapur, Akkalkot, Tuljapur, Pandharpur, Shani Shingnapur, Shirdi, Saptashrungi, Nashik, Mumbai, Pune & Kolhapur',
+    duration: '4N/5D',
+    price: '₹14,999/-',
+    numericPrice: 14999,
+    minPax: 1,
+    featured: true,
+    image: '/shirdi-flight-tour-package-from-bangalore-1.webp',
+    images: [
+      '/shirdi-flight-tour-package-from-bangalore-1.webp',
+      '/kolhapur-pandharpur-tour-package-from-bangalore-1.webp',
+      '/kolhapur-pandharpur-tour-package-from-bangalore-2.webp',
+      '/shirdi-via-mumbai-tour-package-from-bangalore-1.webp',
+      '/kolhapur-pandharpur-tour-package-from-bangalore-3.webp'
+    ],
+    brochureImages: [
+      '/shirdi-kolhapur-bus-brochure-1.png',
+      '/shirdi-kolhapur-bus-brochure-2.png',
+      '/shirdi-kolhapur-bus-brochure-3.png',
+      '/shirdi-kolhapur-bus-brochure-4.png'
+    ],
+    description: 'Exclusive 4 Nights / 5 Days all-inclusive Deluxe A/C Pushback Bus Tour from Bangalore covering Ganagapur Dattatreya Nirgun Math, Akkalkot Swami Samarth Maharaj, Tuljapur Bhavani Devi, Pandharpur Vitthal Rukmini, Shani Shingnapur, Shirdi Sai Baba Samadhi Mandir, Saptashrungi Nivasini Devi (Vani), Nashik Panchavati, Mumbai Siddhivinayak & Mahalakshmi, Pune Balaji, Kolhapur Ambabai Mahalakshmi & Savadatti Renuka Yellamma.',
+    highlights: [
+      'Travel in sanitized Deluxe 2+2 A/C Pushback Coach Bus from Bangalore & Return',
+      'Cover 12+ sacred shrines across Karnataka & Maharashtra in one seamless yatra',
+      'Ganagapura Dattatreya Temple (Nirgun Math) & Shri Swami Samarth Maharaj Akkalkot',
+      'Holy Shakti Peeth Darshan at Tuljapur Bhavani Mata & Kolhapur Ambabai Mahalakshmi',
+      'Pandharpur Shri Vitthal Rukmini Temple & Holy Shani Shingnapur Devasthan',
+      'Early morning Shirdi Sai Baba Samadhi Mandir Darshan, Dwarakamai, Chavadi & Gurusthan',
+      'Shri Saptashrungi Nivasini Devi Temple (Vani) & Nashik Panchavati (Kalaram, Sita Gufa)',
+      'Mumbai Sightseeing: Shree Siddhivinayak, Mahalakshmi Temple & Gateway of India, plus Pune Balaji',
+      'Shri Renuka Yellamma Devi Temple, Savadatti with divine return to Bangalore',
+      'Dedicated Experienced Tour Manager Services throughout the 5 days',
+      'Comfortable 3-Star AC Hotel Accommodations on Twin/Double Sharing Basis for 4 Nights',
+      'Wholesome All Meals Included: Daily pure vegetarian Breakfast, Lunch & Dinner',
+      'All Sightseeing Entrance Fees & 5% Govt Tax Included in ₹14,999/- tour price'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: false,
+      sightseeing: true
+    },
+    placesBadge: '4N/5D Shirdi, Saptashrungi, Kolhapur & Pandharpur Bus Yatra',
+    placesList: [
+      { name: 'Ganagapur (Sri Kshetra Dattatreya Nirgun Math)' },
+      { name: 'Akkalkot (Shri Swami Samarth Maharaj Temple)' },
+      { name: 'Tuljapur (Shri Tulja Bhavani Mata Temple - Shakti Peeth)' },
+      { name: 'Pandharpur (Shri Vitthal Rukmini Temple)' },
+      { name: 'Shani Shingnapur (Shri Shaneshwar Devasthan)' },
+      { name: 'Shirdi (Shri Sai Samadhi Mandir, Dwarakamai, Chavadi & Gurusthan)' },
+      { name: 'Saptashrungi (Shri Saptashrungi Nivasini Devi Temple - Vani)' },
+      { name: 'Nashik Panchavati (Kalaram, Goraram, Sita Gufa & Triveni Sangam)' },
+      { name: 'Mumbai (Shri Siddhivinayak, Mahalakshmi Temple & Gateway of India)' },
+      { name: 'Pune (Prati Balaji Temple, Ketkawale)' },
+      { name: 'Kolhapur (Shri Mahalakshmi Ambabai Temple - Shakti Peeth)' },
+      { name: 'Savadatti (Shri Renuka Yellamma Devi Temple)' }
+    ],
+    inclusions: [
+      'A/C PUSHPACK BUS: Sanitized 2+2 pushback coach for all travel and intercity transfers from Bangalore & return',
+      'Tour Manager Services throughout the tour for assistance and personalized care',
+      'Accommodation on twin/double sharing basis for 4 nights in verified 3-Star hotels',
+      'All Meals – Wholesome, hygienic Breakfast, Lunch, and Dinner throughout the journey',
+      'Entrance fees of all sightseeing places to be visited from inside',
+      'Govt Tax of 5% over and above the Tour Cost mentioned'
+    ],
+    exclusions: [
+      'Travel insurance, tips, laundry, etc.',
+      'Any extra cost incurred on behalf of an individual due to illness, accident, hospitalization, or any personal emergency',
+      'Visa fees, Airport taxes, Govt Taxes, Fuel Surcharges and any applicability of new taxes from Govt',
+      'Any Increase in the rate of exchange leading to an increase in all land arrangements which may come in to effect prior to departure',
+      'Any other thing which is not mentioned in above itinerary'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bangalore – Ganagapur – Akkolkot – Tuljapur – Pandrapura',
+        detail: 'Leave Bangalore, Overnight journey towards Ganagapur freshen up and proceed to visit Sri Kshetra Ganagapura Dattatreya Temple (Nirgun Math). Return to hotel have breakfast and proceed to Shri Swami Samarth Maharaj Temple, Akkalkot. After lunch proceed to Shri Tulja Bhavani Temple, Tuljapur. After darshan proceed to Pandrapur. Hotel check In, Have dinner and overnight stay in Pandrapur.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Pandrapur – Shani Shingnapur – Shirdi',
+        detail: 'Early in the morning (5:00 AM) proceed to visit Shri Vitthal Rukmini Temple, Pandharpur, After darshan return back to hotel have breakfast check out rooms and proceed to Shani Shingnapur Temple, Enroute Lunch. After darshan proceed to Shirdi. Hotel check In. Free time in Shirdi for shopping. Have dinner and overnight stay.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 3',
+        title: 'Shirdi – Saptha Shrungi – Nasik',
+        detail: 'Early in the morning (5:00 AM) proceed to visit Shri Sai Samadi Mandir, and also visit Dwarakamai, Chawadi, Gurusthan and return back to hotel have breakfast and check out rooms. Later proceed to Shri Saptashrungi Nivasini Devi Temple. Return back to Nasik proceed to visit Panchavati (Kalaram, Goreram, Sita Gufa and Triveni Sangam). Return to hotel check IN. have dinner and overnight stay in Nasik.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 4',
+        title: 'Nasik – Mumbai – Pune – Kholapur',
+        detail: 'Early in the Morning before breakfast proceed to Mumbai sightseeing Enroute Breakfast. Visit the famous siddhivinayak, Mahalakshmi Temple and Gateway of India and proceed to visit Pune Balaji Temple. After visiting proceed to kholapur hotel chekin. Have dinner and Overnight stay in Kholapur.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 5',
+        title: 'Kholapur – Savadatti Yallamma – Bangalore',
+        detail: 'Early in the morning proceed to visit Shri Mahalakshmi (Ambabai) Temple, Kolhapur. Return back to hotel have breakfast and check out rooms. Later proceed to visit Shri Renuka Yellamma Temple, Savadatti after darshan return back to Bengaluru with blessings and beautiful memories.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: '0 – 15 days before departure', fee: '100% on Net tour price' },
+        { days: 'More than 15 days before departure', fee: '50% on Net tour price' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not be responsible for, or liable to refund claims arising from, flight delays or cancellations, mechanical issues, strikes/bandhs, or changes in weather conditions.',
+        'Payment Policy: Package below ₹25,000 – full payment at the time of booking.',
+        'Package below ₹50,000 – ₹25,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Package above ₹50,000 – ₹50,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Last-minute bookings (received within 45 days of departure) – full payment at the time of booking.'
+      ]
+    },
+    remarks: [
+      'Travel with Faith. Journey with Comfort.',
+      'Personalized Service: Thoughtful planning with attention to customer comfort.',
+      'Spiritual Journeys: Pilgrimage and temple tours across sacred destinations.',
+      'Travel Coordination: Experienced tour coordination throughout the journey.',
+      'Comfort & Clarity: Carefully planned stays, transport, meals and darshan arrangements.'
+    ],
+    detailedContent: {
+      overview: 'Embark on an all-inclusive 4 Nights / 5 Days spiritual yatra through Karnataka and Maharashtra with Sai Samarth Tours. Traveling from Bangalore in a sanitized, luxury A/C Pushback coach, devotees visit Ganagapur Dattatreya, Akkalkot Swami Samarth Maharaj, Tuljapur Bhavani Mata, Pandharpur Vitthal Rukmini, Shani Shingnapur, Shirdi Sai Baba Samadhi Mandir, Saptashrungi Nivasini Devi, Nashik Panchavati, Mumbai Siddhivinayak & Mahalakshmi, Pune Prati Balaji, Kolhapur Mahalakshmi Ambabai, and Savadatti Renuka Yellamma.',
+      significance: 'This grand circuit combines the divine grace of Shri Sai Baba and Shri Swami Samarth Maharaj with holy Shakti Peethams (Tuljapur, Kolhapur, Saptashrungi, Savadatti) and the revered Lord Vitthal of Pandharpur, bringing supreme peace and prosperity.',
+      bestTimeToVisit: 'Operates on scheduled weekly and weekend departures throughout the year directly from Bangalore.',
+      placesCovered: [
+        'Sri Kshetra Ganagapura Dattatreya Temple (Nirgun Math)',
+        'Shri Swami Samarth Maharaj Temple, Akkalkot',
+        'Shri Tulja Bhavani Temple, Tuljapur (Shakti Peeth)',
+        'Shri Vitthal Rukmini Temple, Pandharpur',
+        'Shri Shani Shingnapur Temple',
+        'Shri Sai Baba Samadhi Mandir, Dwarakamai & Chavadi, Shirdi',
+        'Shri Saptashrungi Nivasini Devi Temple, Vani',
+        'Panchavati (Kalaram, Goraram, Sita Gufa & Triveni Sangam), Nashik',
+        'Shree Siddhivinayak & Mahalakshmi Temple, Mumbai',
+        'Gateway of India, Mumbai',
+        'Pune Prati Balaji Temple, Ketkawale',
+        'Shri Mahalakshmi (Ambabai) Temple, Kolhapur (Shakti Peeth)',
+        'Shri Renuka Yellamma Devi Temple, Savadatti'
+      ],
+      travelTips: [
+        'Sanitized 2+2 A/C Pushback coach with reclining seats ensures relaxing highway transit.',
+        'Pure vegetarian wholesome Breakfast, Lunch, and Dinner provided daily throughout the tour.',
+        'Traditional dress code is required for temple darshan (Dhoti/Kurta for men and Saree/Salwar for women).',
+        'Experienced Tour Manager accompanies the group from Bangalore for queue coordination and hotel arrangements.'
+      ],
+      whyChooseUs: [
+        'Complete 12+ sacred temple circuit across Maharashtra & North Karnataka in 5 well-paced days',
+        'Verified 3-Star AC Accommodations (4 Nights) and Wholesome All Meals Included for ₹14,999/-',
+        'Dedicated on-board Tour Manager and comfortable A/C Pushback bus from Bangalore'
+      ]
+    },
+    faqs: [
+      {
+        question: 'What is the boarding point and departure time in Bangalore?',
+        answer: 'The A/C Pushback coach departs Bangalore in the evening for an overnight journey to Ganagapur. Boarding points include Yelahanka, Majestic / Anand Rao Circle, Yeshwanthpur, and Nelamangala toll gate. Departure details are confirmed prior to trip.'
+      },
+      {
+        question: 'Are all meals included in the ₹14,999/- package price?',
+        answer: 'Yes! 100% of your meals (pure vegetarian Breakfast, Lunch, and Dinner) are included throughout the 5 days, starting with freshen-up and breakfast on Day 1 morning until Day 5 lunch en route to Bangalore.'
+      },
+      {
+        question: 'Which cities do we stay overnight in during the 4 nights?',
+        answer: 'The 4 nights hotel stays are in verified 3-Star AC hotels: Night 1 in Pandharpur, Night 2 in Shirdi, Night 3 in Nashik, and Night 4 in Kolhapur on twin/double sharing basis.'
+      },
+      {
+        question: 'What is the payment and cancellation policy?',
+        answer: 'Full payment is required at the time of booking for packages under ₹25,000. Cancellations received more than 15 days before departure attract a 50% cancellation fee on the net tour price, while cancellations within 0–15 days are subject to a 100% cancellation fee.'
+      },
+      {
+        question: 'Is this tour senior-citizen and family friendly?',
+        answer: 'Yes! Over 60% of our pilgrims are families and senior citizens. The coach has reclining pushback seating with air-suspension comfort, regular highway rest stops, and a dedicated tour manager assisting at every temple.'
+      }
+    ],
+    coordinates: { x: 38, y: 55 }
   },
   // ================= PILGRIMAGE PACKAGES =================
   {

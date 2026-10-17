@@ -16,6 +16,7 @@ export interface Package {
   comingSoon?: boolean;
   image: string;
   images?: string[];
+  brochureImages?: string[];
   description: string;
   highlights: string[];
   inclusions: string[];

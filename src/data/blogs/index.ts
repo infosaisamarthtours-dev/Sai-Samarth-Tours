@@ -7,8 +7,10 @@ import { singaporeMalaysiaFamilyGuidePost } from './singapore-malaysia-family-gu
 import { chardhamYatraGuidePost } from './chardham-yatra-guide';
 import { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guide';
 import { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
+import { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
 
 export * from './types';
+export { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
 export { shirdiTourPackageFromBangaloreGuidePost } from './shirdi-tour-package-from-bangalore-guide';
 export { kashiAyodhyaTourPackageFromBangalorePost } from './kashi-ayodhya-tour-package-from-bangalore';
 export { shirdiVipDarshanGuidePost } from './shirdi-vip-darshan-guide';
@@ -19,6 +21,7 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  panchBoothaYatraTirumalaBalajiGuidePost,
   shirdiTourPackageFromBangaloreGuidePost,
   kashiAyodhyaTourPackageFromBangalorePost,
   shirdiVipDarshanGuidePost,

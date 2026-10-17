@@ -12,7 +12,7 @@ import {
   Building2, MapPin, Clock, Calendar, ArrowRight, Sparkles, 
   FileText, Phone, MessageCircle, ChevronDown, ChevronUp, 
   Flame, Droplets, Wind, Mountain, Globe, Eye, X, Award,
-  Check, HeartHandshake, Compass
+  Check, HeartHandshake, Compass, Star
 } from 'lucide-react';
 
 interface BusPackagesPageProps {
@@ -20,22 +20,115 @@ interface BusPackagesPageProps {
 }
 
 export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
+  // All bus packages from packages data
+  const busPackages = ALL_PACKAGES.filter(p => p.category === 'bus' || p.id.includes('bus'));
+
+  // Default active package: Shirdi - Saptha Shrungi - Kolhapur
+  const [selectedPackageId, setSelectedPackageId] = useState<string>('shirdi-saptashrungi-kolhapur-bus-tour');
   const [activeDay, setActiveDay] = useState<number>(1);
   const [isBrochureModalOpen, setIsBrochureModalOpen] = useState(false);
+  const [modalBrochurePackageId, setModalBrochurePackageId] = useState<string>('shirdi-saptashrungi-kolhapur-bus-tour');
   const [brochurePage, setBrochurePage] = useState(1);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
-  // Panch Bootha flagship bus package
-  const flagshipBusPackage = ALL_PACKAGES.find(p => p.id === 'panch-bootha-balaji-bus-tour') || ALL_PACKAGES[0];
+  const activePackage = busPackages.find(p => p.id === selectedPackageId) || busPackages[0] || ALL_PACKAGES[0];
+  const modalPackage = busPackages.find(p => p.id === modalBrochurePackageId) || activePackage;
 
-  const brochureImages = [
-    '/panch-bootha-brochure-1.png',
-    '/panch-bootha-brochure-2.png',
-    '/panch-bootha-brochure-3.png',
-    '/panch-bootha-brochure-4.png'
+  // Brochure images map
+  const brochureImagesMap: Record<string, string[]> = {
+    'shirdi-saptashrungi-kolhapur-bus-tour': [
+      '/shirdi-kolhapur-bus-brochure-1.png',
+      '/shirdi-kolhapur-bus-brochure-2.png',
+      '/shirdi-kolhapur-bus-brochure-3.png',
+      '/shirdi-kolhapur-bus-brochure-4.png'
+    ],
+    'panch-bootha-balaji-bus-tour': [
+      '/panch-bootha-brochure-1.png',
+      '/panch-bootha-brochure-2.png',
+      '/panch-bootha-brochure-3.png',
+      '/panch-bootha-brochure-4.png'
+    ]
+  };
+
+  const activeBrochureImages = brochureImagesMap[modalBrochurePackageId] || brochureImagesMap['shirdi-saptashrungi-kolhapur-bus-tour'];
+
+  const handleSelectPackage = (pkgId: string) => {
+    setSelectedPackageId(pkgId);
+    setActiveDay(1);
+  };
+
+  const handleOpenBrochure = (pkgId: string) => {
+    setModalBrochurePackageId(pkgId);
+    setBrochurePage(1);
+    setIsBrochureModalOpen(true);
+  };
+
+  // Highlights for Shirdi - Kolhapur Circuit
+  const shirdiKolhapurHighlights = [
+    {
+      title: 'Ganagapur & Akkalkot',
+      subtitle: 'Divine Guru Lineage',
+      location: 'Ganagapur & Akkalkot, MH',
+      icon: Sparkles,
+      color: 'from-amber-500 to-orange-600',
+      textColor: 'text-amber-700',
+      bgLight: 'bg-amber-50',
+      description: 'Visit sacred Sri Kshetra Ganagapura Dattatreya Nirgun Math followed by Shri Swami Samarth Maharaj Temple at Akkalkot for profound spiritual peace.'
+    },
+    {
+      title: 'Tuljapur Bhavani Mata',
+      subtitle: 'Shakti Peeth Darshan',
+      location: 'Tuljapur, Maharashtra',
+      icon: Flame,
+      color: 'from-red-500 to-rose-600',
+      textColor: 'text-red-700',
+      bgLight: 'bg-red-50',
+      description: 'Seek the blessings of Chhatrapati Shivaji Maharaj\'s kuldevi, Shri Tulja Bhavani Mata, one of the 51 revered Shakti Peethams.'
+    },
+    {
+      title: 'Pandharpur Vitthal Rukmini',
+      subtitle: 'Bhakti Teertha Kshetra',
+      location: 'Pandharpur, Maharashtra',
+      icon: HeartHandshake,
+      color: 'from-blue-500 to-indigo-600',
+      textColor: 'text-blue-700',
+      bgLight: 'bg-blue-50',
+      description: 'Early morning darshan of Lord Vitthal and Goddess Rukmini on the banks of Chandrabhaga River, followed by visit to Shani Shingnapur.'
+    },
+    {
+      title: 'Shirdi Sai Baba Samadhi',
+      subtitle: 'Early Darshan & Kakad Aarti',
+      location: 'Shirdi, Maharashtra',
+      icon: Star,
+      color: 'from-yellow-500 to-amber-600',
+      textColor: 'text-amber-800',
+      bgLight: 'bg-amber-50',
+      description: 'Morning darshan at Shri Sai Baba Samadhi Mandir, Dwarakamai, Chavadi, and Gurusthan with free evening time for shopping.'
+    },
+    {
+      title: 'Saptashrungi Devi & Nashik',
+      subtitle: 'Half Shakti Peeth & Panchavati',
+      location: 'Vani & Nashik, Maharashtra',
+      icon: Mountain,
+      color: 'from-purple-500 to-pink-600',
+      textColor: 'text-purple-700',
+      bgLight: 'bg-purple-50',
+      description: 'Shri Saptashrungi Nivasini Devi Temple on the 7 hills of Vani, followed by sacred Panchavati (Kalaram, Sita Gufa & Triveni Sangam) in Nashik.'
+    },
+    {
+      title: 'Mumbai, Pune & Kolhapur',
+      subtitle: 'Siddhivinayak & Ambabai Peeth',
+      location: 'Mumbai, Pune, Kolhapur & Savadatti',
+      icon: Building2,
+      color: 'from-emerald-600 to-teal-700',
+      textColor: 'text-emerald-700',
+      bgLight: 'bg-emerald-50',
+      description: 'Sightseeing of Mumbai Siddhivinayak & Gateway, Pune Balaji, Kolhapur Mahalakshmi Ambabai Temple, and Savadatti Renuka Yellamma.'
+    }
   ];
 
-  const elementsData = [
+  // Panch Bootha Elements
+  const panchBoothaElements = [
     {
       element: 'Agni (Fire)',
       temple: 'Arunachaleeswarar Temple',
@@ -84,7 +177,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
       color: 'from-sky-500 to-teal-600',
       textColor: 'text-sky-600',
       bgLight: 'bg-sky-50',
-      description: 'The flame of the lamp inside the windowless sanctum constantly flickers without any breeze, signifying Lord Shiva as Vayu Lingam (the breath of life). World-renowned for Rahu-Ketu parihara.'
+      description: 'The flame of the lamp inside the windowless sanctum constantly flickers without any breeze, signifying Lord Shiva as Vayu Lingam (the breath of life).'
     },
     {
       element: 'Supreme Blessings',
@@ -126,45 +219,45 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
     },
     {
       title: 'Bangalore Boarding Points',
-      desc: 'Convenient pickups across Bangalore including Yelahanka, Majestic / Anand Rao Circle, and Electronic City / Silk Board.',
+      desc: 'Convenient pickups across Bangalore including Yelahanka, Majestic / Anand Rao Circle, and Yeshwanthpur.',
       icon: MapPin
     }
   ];
 
   const busFaqs = [
     {
-      question: 'What is the boarding point and departure time in Bangalore?',
-      answer: 'The Panch Bootha Yatra bus departs from Bangalore at Night 10:00 PM on Day 1. Convenient boarding points across Bangalore include Yelahanka (Sai Samarth Tours Office), Anand Rao Circle / Majestic, and Silk Board / Electronic City toll gate. Our tour coordinator will call and confirm your boarding details prior to departure.'
+      question: 'What bus tour packages are currently offered from Bangalore?',
+      answer: 'Sai Samarth Tours operates two premier 4 Nights / 5 Days all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) Shirdi – Saptha Shrungi – Kolhapur – Mumbai – Pandharpur (₹14,999/-), and 2) Panch Bootha Yatra & Tirumala Balaji (₹16,999/-). Both packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
     },
     {
-      question: 'What are the vehicle specifications for this bus trip?',
-      answer: 'We deploy deluxe, sanitized 2+2 A/C Pushback tourist coaches equipped with air suspension for smooth travel, high-comfort reclining seats, generous legroom, clean curtains, overhead reading lights, mobile charging points, and spacious luggage compartments underneath.'
+      question: 'What is the boarding point and departure schedule in Bangalore?',
+      answer: 'Our deluxe A/C Pushback coaches depart from Bangalore on convenient evening schedules. Boarding points include Yelahanka (Sai Samarth Tours Office), Anand Rao Circle / Majestic, Yeshwanthpur, and Electronic City / Silk Board depending on the tour direction. Departure timing is confirmed with you 24 hours prior.'
     },
     {
-      question: 'Are all meals included in the ₹16,999/- tour price?',
-      answer: 'Yes! 100% of your meals (Breakfast, Lunch, and Dinner) are included in the package price. We serve freshly prepared, wholesome pure vegetarian meals suited for pilgrims and families. Morning tea/coffee during breakfast is also provided.'
+      question: 'What are the vehicle specifications for these bus tours?',
+      answer: 'We deploy sanitized, air-conditioned 2+2 Pushback tourist coaches equipped with air suspension for maximum road comfort, high-back reclining seats, generous legroom, overhead reading lamps, charging sockets, and ample luggage boot space.'
     },
     {
-      question: 'What hotels are provided during the 4 nights?',
-      answer: 'You will stay in verified 3-Star AC hotels on twin/double sharing basis in Tiruchirappalli (Day 1), Chidambaram (Day 2), Kanchipuram (Day 3), and Tirumala Hills (Day 4). Single occupancy can be arranged upon request with a nominal supplement.'
+      question: 'Are all meals (Breakfast, Lunch, and Dinner) included in the price?',
+      answer: 'Yes, 100%! All daily pure vegetarian meals (Breakfast, Lunch, and Dinner) are fully included in the package price. We serve freshly prepared, hygienic meals at reputable, verified family restaurants along the route.'
     },
     {
-      question: 'How is darshan coordinated at Tirumala Balaji and Pancha Bhootha temples?',
-      answer: 'Our experienced tour manager oversees temple timings, guides you regarding traditional dress codes (Dhoti/Kurta for men and Saree/Churidar for women), and assists senior citizens with queue lines. Entrance fees for all scheduled sightseeing attractions are included.'
+      question: 'What hotel accommodations are provided during the 4 nights?',
+      answer: 'Devotees stay in verified 3-Star AC hotels on twin/double sharing basis throughout the 4 nights. Rooms feature clean linens, modern attached bathrooms, hot water, and elevator access. Single occupancy is available on request with a nominal supplement.'
     },
     {
-      question: 'What is the payment and cancellation policy for this bus tour?',
-      answer: 'Full payment is required at the time of booking for packages under ₹25,000. Cancellations received more than 15 days before departure attract a 50% cancellation fee on the net tour price, while cancellations received within 0–15 days are subject to a 100% cancellation fee as per company policy.'
+      question: 'What is the payment and cancellation policy?',
+      answer: 'For packages under ₹25,000, 100% payment is required at the time of booking. Cancellations received more than 15 days before departure attract a 50% cancellation fee on the net tour price, while cancellations within 0–15 days are subject to a 100% cancellation fee.'
     }
   ];
 
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-20">
       <SEOHead
-        title="Bus Tour Packages from Bangalore | Panch Bootha Yatra & Tirumala Balaji | Sai Samarth Tours"
-        description="Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Flagship Panch Bootha Yatra & Tirumala Balaji 4N/5D for ₹16,999/- with Tour Manager, 3-Star AC hotels & all pure veg meals."
+        title="Bus Tour Packages from Bangalore | Shirdi Kolhapur & Panch Bootha Yatras | Sai Samarth Tours"
+        description="Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Shirdi - Saptha Shrungi - Kolhapur 4N/5D for ₹14,999/- & Panch Bootha Balaji 4N/5D for ₹16,999/-. Includes 3-Star AC stays, all meals & Tour Manager."
         canonical="https://saisamarthtours.com/bus-packages"
-        ogImage="/panch-bootha-bus-yatra-1.webp"
+        ogImage="/shirdi-flight-tour-package-from-bangalore-1.webp"
         ogType="website"
       />
 
@@ -190,7 +283,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-[#F59E0B]/40 text-[#F59E0B] text-xs font-bold tracking-wide uppercase shadow-sm">
                 <Bus className="w-4 h-4 text-[#EA580C]" />
-                <span>Premier Deluxe Bus Pilgrimage & Yatras from Bangalore</span>
+                <span>Premier Deluxe Bus Pilgrimages from Bangalore</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-serif-brand leading-tight text-white">
@@ -205,8 +298,32 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                 <strong className="text-white font-semibold"> 2+2 A/C Pushback tourist coaches</strong> departing right from Bangalore, featuring verified 3-Star AC accommodations, pure vegetarian meals (Breakfast, Lunch & Dinner), and dedicated on-board tour managers for effortless temple yatras.
               </p>
 
+              {/* Package Selector Switcher */}
+              <div className="bg-white/10 backdrop-blur-md p-1.5 rounded-2xl border border-white/20 inline-flex flex-wrap gap-2 w-full sm:w-auto">
+                {busPackages.map((pkg) => {
+                  const isSelected = pkg.id === selectedPackageId;
+                  return (
+                    <button
+                      key={pkg.id}
+                      onClick={() => handleSelectPackage(pkg.id)}
+                      className={`flex-1 sm:flex-initial px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                        isSelected
+                          ? 'bg-gradient-to-r from-[#EA580C] to-[#F97316] text-white shadow-lg'
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
+                      <span>{pkg.shortTitle || pkg.title.split('–')[0]}</span>
+                      <span className="bg-black/30 text-amber-300 px-2 py-0.5 rounded text-[11px] font-black">
+                        {pkg.price}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
               {/* Quick Spec Strip */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
                 <div className="bg-white/10 backdrop-blur-md rounded-xl p-2.5 sm:p-3 border border-white/10 text-center">
                   <Bus className="w-5 h-5 mx-auto text-[#F59E0B] mb-1" />
                   <div className="text-[10px] uppercase font-bold text-gray-300">Vehicle</div>
@@ -232,16 +349,16 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <button
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(flagshipBusPackage.title)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(activePackage.title)}
                   className="w-full sm:w-auto px-7 py-3.5 bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-0.5 transition-all cursor-pointer flex items-center justify-center gap-2"
                 >
-                  <span>Book Bus Tour Now</span>
+                  <span>Book {activePackage.price} Package</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
                 <div className="flex items-center gap-2.5 w-full sm:w-auto">
                   <button
-                    onClick={() => setIsBrochureModalOpen(true)}
+                    onClick={() => handleOpenBrochure(activePackage.id)}
                     className="flex-1 sm:flex-initial px-5 py-3.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-xs sm:text-sm rounded-full backdrop-blur-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <FileText className="w-4 h-4 text-[#F59E0B]" />
@@ -265,8 +382,8 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               <div className="relative group bg-white/5 backdrop-blur-md rounded-3xl p-3 border border-white/20 shadow-2xl overflow-hidden">
                 <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden">
                   <img
-                    src="/panch-bootha-bus-yatra-1.webp"
-                    alt="Panch Bootha Yatra and Tirumala Balaji A/C Pushback Bus Tour"
+                    src={activePackage.image}
+                    alt={activePackage.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>
@@ -275,24 +392,24 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between gap-2 z-10">
                     <div className="bg-[#114088]/90 text-[#F59E0B] px-2.5 py-1 rounded-full text-[11px] font-bold backdrop-blur-md border border-white/10 flex items-center gap-1.5 shrink-0">
                       <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-                      <span>Flagship Bus Yatra</span>
+                      <span>{activePackage.duration} Bus Tour</span>
                     </div>
 
                     <div className="bg-gradient-to-r from-[#EA580C] to-[#C2410C] text-white px-3 py-1 rounded-full shadow-lg font-black text-xs sm:text-sm tracking-wide border border-white/20 shrink-0">
-                      ₹16,999/- All-Inclusive
+                      {activePackage.price} All-Inclusive
                     </div>
                   </div>
 
                   {/* Bottom details */}
                   <div className="absolute bottom-3 inset-x-3 text-white">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#F59E0B] block mb-1">
-                      4 Nights / 5 Days • Bangalore Departure
+                      {activePackage.duration} • Bangalore Departure • Pushback AC
                     </span>
                     <h3 className="text-lg sm:text-xl font-bold font-serif-brand leading-snug">
-                      Panch Bootha Yatra & Tirumala Balaji
+                      {activePackage.title}
                     </h3>
                     <p className="text-[11px] sm:text-xs text-gray-300 mt-1 line-clamp-2">
-                      Covering Thiruvannamalai, Srirangam, Thanjavur, Chidambaram, Kanchipuram, Sri Kalahasthi & Tirumala Balaji.
+                      {activePackage.destination}
                     </p>
                   </div>
                 </div>
@@ -300,10 +417,10 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                 <div className="p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-300 font-medium">
                   <span className="flex items-center gap-1.5 text-[#F59E0B]">
                     <CheckCircle2 className="w-4 h-4 text-[#F59E0B] shrink-0" />
-                    All 5 Cosmic Shiva Elements & Balaji
+                    All Meals, Stay & Tour Manager Included
                   </span>
                   <Link
-                    to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore"
+                    to={`/package/${activePackage.slug || activePackage.id}`}
                     className="text-white hover:text-[#F59E0B] font-bold flex items-center gap-1 transition-colors self-end sm:self-auto"
                   >
                     View Tour Details <ArrowRight className="w-3.5 h-3.5" />
@@ -315,24 +432,149 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Section 1: The 5 Sacred Elements (Pancha Bhootha) & Balaji Explorer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 -mt-6 sm:-mt-8 relative z-20">
+      {/* Section 1: Both Bus Tour Packages Side-by-Side Cards */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 -mt-6 sm:-mt-8 relative z-20">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider mb-2.5 sm:mb-3">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-            <span>Spiritual Significance of the Circuit</span>
+            <span>Select Your Sacred Bus Circuit</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-serif-brand text-[#114088] leading-tight">
-            The 5 Sacred Cosmic Elements of Lord Shiva
+            Our All-Inclusive Bus Tour Packages
           </h2>
           <p className="text-gray-600 text-xs sm:text-base mt-2 sm:mt-3 leading-relaxed">
-            In Hindu Sanatana Dharma, Lord Shiva manifests in the five natural elements (Pancha Bhootha). 
-            Completing all five sthalams in a single devoted yatra harmonizes the inner self with universal cosmic energy.
+            Travel from Bangalore in sanitized 2+2 A/C Pushback coaches. Accompanied by experienced tour coordinators with pure vegetarian dining & 3-Star AC stays throughout.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          {busPackages.map((pkg) => {
+            const isSelected = pkg.id === selectedPackageId;
+            return (
+              <div 
+                key={pkg.id}
+                className={`bg-white rounded-3xl p-5 sm:p-7 border transition-all duration-300 flex flex-col justify-between ${
+                  isSelected
+                    ? 'border-[#EA580C] shadow-2xl ring-2 ring-[#EA580C]/20'
+                    : 'border-gray-200 shadow-md hover:shadow-xl'
+                }`}
+              >
+                <div>
+                  <div className="relative h-60 rounded-2xl overflow-hidden mb-5">
+                    <img 
+                      src={pkg.image} 
+                      alt={pkg.title}
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    
+                    <div className="absolute top-3 left-3 bg-[#114088]/90 text-amber-300 px-3 py-1 rounded-full text-xs font-extrabold backdrop-blur-md flex items-center gap-1.5">
+                      <Bus className="w-3.5 h-3.5 text-[#F59E0B]" />
+                      <span>{pkg.duration} Bus Tour</span>
+                    </div>
+
+                    <div className="absolute top-3 right-3 bg-gradient-to-r from-[#EA580C] to-[#C2410C] text-white px-3.5 py-1 rounded-full text-xs font-black shadow-lg">
+                      {pkg.price} All-Inclusive
+                    </div>
+
+                    <div className="absolute bottom-3 inset-x-3 text-white">
+                      <h3 className="text-lg sm:text-xl font-bold font-serif-brand leading-snug">
+                        {pkg.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">
+                    {pkg.description}
+                  </p>
+
+                  {/* Highlights Grid */}
+                  <div className="grid grid-cols-2 gap-2 text-xs text-gray-700 font-medium mb-5 bg-gray-50 p-3 rounded-xl border border-gray-100">
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-4 h-4 text-green-600 shrink-0" />
+                      <span>A/C Pushback Coach</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-4 h-4 text-green-600 shrink-0" />
+                      <span>4 Nights 3-Star AC Stay</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-4 h-4 text-green-600 shrink-0" />
+                      <span>All Meals (B, L, D)</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-4 h-4 text-green-600 shrink-0" />
+                      <span>Dedicated Tour Manager</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-3 pt-3 border-t border-gray-100">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <button
+                      onClick={() => handleSelectPackage(pkg.id)}
+                      className={`flex-1 py-2.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                        isSelected
+                          ? 'bg-[#114088] text-white shadow-md'
+                          : 'bg-gray-100 hover:bg-gray-200 text-gray-800'
+                      }`}
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
+                      <span>{isSelected ? 'Viewing Itinerary' : 'Explore Itinerary'}</span>
+                    </button>
+
+                    <button
+                      onClick={() => handleOpenBrochure(pkg.id)}
+                      className="py-2.5 px-4 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 rounded-xl font-bold text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-amber-600" />
+                      <span>Brochure</span>
+                    </button>
+
+                    <Link
+                      to={`/package/${pkg.slug || pkg.id}`}
+                      className="py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5"
+                    >
+                      <span>Full Details</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+
+                  <button
+                    onClick={() => onOpenEnquiry && onOpenEnquiry(pkg.title)}
+                    className="w-full py-3 bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    <span>Book {pkg.shortTitle || pkg.title.split('–')[0]} for {pkg.price}</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Section 2: Spiritual Circuit Highlights of Active Package */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider mb-2.5 sm:mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <span>Spiritual Circuit Highlights</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl font-extrabold font-serif-brand text-[#114088] leading-tight">
+            {selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour' 
+              ? 'Sacred Pilgrimage Shrines of Maharashtra & Karnataka' 
+              : 'The 5 Sacred Cosmic Elements of Lord Shiva & Balaji'}
+          </h2>
+          <p className="text-gray-600 text-xs sm:text-base mt-2 sm:mt-3 leading-relaxed">
+            {selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour'
+              ? 'Experience the supreme grace of Shri Sai Baba, Shri Swami Samarth, Lord Vitthal, and divine Devi Shakti Peethams in one seamless 5-day yatra.'
+              : 'In Hindu Sanatana Dharma, Lord Shiva manifests in the five natural elements (Pancha Bhootha). Completing this circuit brings profound spiritual peace.'}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {elementsData.map((item, idx) => {
+          {(selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour' ? shirdiKolhapurHighlights : panchBoothaElements).map((item: any, idx: number) => {
             const Icon = item.icon;
             return (
               <div 
@@ -342,7 +584,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                 <div>
                   <div className="flex items-center justify-between mb-3.5 sm:mb-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider ${item.bgLight} ${item.textColor}`}>
-                      {item.element}
+                      {item.subtitle || item.element}
                     </span>
                     <div className={`w-10 h-10 rounded-xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md`}>
                       <Icon className="w-5 h-5" />
@@ -350,7 +592,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                   </div>
 
                   <h3 className="text-base sm:text-lg font-bold text-[#114088] font-serif-brand mb-1">
-                    {item.temple}
+                    {item.title || item.temple}
                   </h3>
                   <p className="text-xs font-semibold text-gray-500 mb-2.5 sm:mb-3 flex items-center gap-1">
                     <MapPin className="w-3 h-3 text-gray-400" />
@@ -373,7 +615,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Section 2: Detailed Day-by-Day Itinerary of Panch Bootha Yatra */}
+      {/* Section 3: Interactive Day-by-Day Itinerary */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden">
           
@@ -393,10 +635,10 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                   </span>
                 </div>
                 <h2 className="text-xl sm:text-3xl font-extrabold font-serif-brand">
-                  Panch Bootha Yatra & Tirumala Balaji
+                  {activePackage.title}
                 </h2>
-                <p className="text-xs sm:text-sm text-gray-300 mt-1">
-                  Thoughtfully paced spiritual journey from Bangalore with verified 3-Star AC stays & experienced tour coordinator.
+                <p className="text-xs sm:text-sm text-gray-300 mt-1 max-w-2xl">
+                  {activePackage.destination}
                 </p>
               </div>
 
@@ -405,13 +647,13 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                 <div className="text-left md:text-right">
                   <span className="text-[10px] text-gray-300 uppercase font-bold tracking-wider block">Tour Fare Per Person</span>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl sm:text-3xl font-black text-[#F59E0B]">₹16,999/-</span>
-                    <span className="text-[10px] text-gray-300 md:hidden">(incl. tax)</span>
+                    <span className="text-2xl sm:text-3xl font-black text-[#F59E0B]">{activePackage.price}</span>
+                    <span className="text-[10px] text-gray-300 md:hidden">(all-incl.)</span>
                   </div>
                   <span className="text-[10px] text-gray-300 hidden md:block">Inclusive of 5% Govt Tax</span>
                 </div>
                 <button
-                  onClick={() => onOpenEnquiry && onOpenEnquiry(flagshipBusPackage.title)}
+                  onClick={() => onOpenEnquiry && onOpenEnquiry(activePackage.title)}
                   className="px-5 py-2.5 bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md cursor-pointer transition-all active:scale-95 shrink-0"
                 >
                   Book Now
@@ -422,11 +664,14 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
 
           {/* Interactive Day Tabs */}
           <div className="border-b border-gray-200 bg-gray-50/80 px-3 sm:px-8 py-2.5 sm:py-3 flex gap-1.5 sm:gap-2 overflow-x-auto scrollbar-none">
-            {flagshipBusPackage.sampleItinerary.map((itinerary, idx) => {
+            {activePackage.sampleItinerary.map((itinerary, idx) => {
               const dayNum = idx + 1;
               const isSelected = activeDay === dayNum;
-              const dayNames = ["Trichy", "Chidambaram", "Kanchipuram", "Kalahasthi", "Tirumala"];
-              const shortLoc = dayNames[idx] || `Day ${dayNum}`;
+              
+              const shortNames = selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour'
+                ? ["Ganagapur", "Shirdi", "Saptashrungi", "Mumbai & Pune", "Kolhapur"]
+                : ["Trichy", "Chidambaram", "Kanchipuram", "Kalahasthi", "Tirumala"];
+              const shortLoc = shortNames[idx] || `Day ${dayNum}`;
 
               return (
                 <button
@@ -452,7 +697,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
 
           {/* Active Day Detail Card */}
           <div className="p-4 sm:p-10">
-            {flagshipBusPackage.sampleItinerary.map((itinerary, idx) => {
+            {activePackage.sampleItinerary.map((itinerary, idx) => {
               const dayNum = idx + 1;
               if (activeDay !== dayNum) return null;
 
@@ -481,94 +726,6 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                       {itinerary.detail}
                     </p>
                   </div>
-
-                  {/* Day specific highlights */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4 pt-1 sm:pt-2">
-                    {dayNum === 1 && (
-                      <>
-                        <div className="p-3 bg-red-50/70 border border-red-100 rounded-xl text-xs text-red-900 font-semibold flex items-center gap-2">
-                          <Flame className="w-4 h-4 text-red-600 shrink-0" />
-                          <span>Arunachaleeswarar Temple (Fire Element)</span>
-                        </div>
-                        <div className="p-3 bg-blue-50/70 border border-blue-100 rounded-xl text-xs text-blue-900 font-semibold flex items-center gap-2">
-                          <Droplets className="w-4 h-4 text-blue-600 shrink-0" />
-                          <span>Jambukeswarar Temple (Water Element)</span>
-                        </div>
-                        <div className="p-3 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 font-semibold flex items-center gap-2">
-                          <Building2 className="w-4 h-4 text-[#114088] shrink-0" />
-                          <span>Overnight stay at Tiruchirappalli (3-Star)</span>
-                        </div>
-                      </>
-                    )}
-
-                    {dayNum === 2 && (
-                      <>
-                        <div className="p-3 bg-amber-50/70 border border-amber-100 rounded-xl text-xs text-amber-900 font-semibold flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
-                          <span>Sri Ranganathaswamy Temple, Srirangam</span>
-                        </div>
-                        <div className="p-3 bg-purple-50/70 border border-purple-100 rounded-xl text-xs text-purple-900 font-semibold flex items-center gap-2">
-                          <Globe className="w-4 h-4 text-purple-600 shrink-0" />
-                          <span>Thillai Nataraja Temple (Space Element)</span>
-                        </div>
-                        <div className="p-3 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 font-semibold flex items-center gap-2">
-                          <Building2 className="w-4 h-4 text-[#114088] shrink-0" />
-                          <span>Overnight stay at Chidambaram (3-Star)</span>
-                        </div>
-                      </>
-                    )}
-
-                    {dayNum === 3 && (
-                      <>
-                        <div className="p-3 bg-emerald-50/70 border border-emerald-100 rounded-xl text-xs text-emerald-900 font-semibold flex items-center gap-2">
-                          <Mountain className="w-4 h-4 text-emerald-600 shrink-0" />
-                          <span>Ekambareswarar Temple (Earth Element)</span>
-                        </div>
-                        <div className="p-3 bg-pink-50/70 border border-pink-100 rounded-xl text-xs text-pink-900 font-semibold flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-pink-600 shrink-0" />
-                          <span>Kanchi Kamakshi Amman Temple & Silk Shopping</span>
-                        </div>
-                        <div className="p-3 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 font-semibold flex items-center gap-2">
-                          <Building2 className="w-4 h-4 text-[#114088] shrink-0" />
-                          <span>Overnight stay at Kanchipuram (3-Star)</span>
-                        </div>
-                      </>
-                    )}
-
-                    {dayNum === 4 && (
-                      <>
-                        <div className="p-3 bg-sky-50/70 border border-sky-100 rounded-xl text-xs text-sky-900 font-semibold flex items-center gap-2">
-                          <Wind className="w-4 h-4 text-sky-600 shrink-0" />
-                          <span>Sri Kalahasthi Temple (Air Element)</span>
-                        </div>
-                        <div className="p-3 bg-amber-50/70 border border-amber-100 rounded-xl text-xs text-amber-900 font-semibold flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
-                          <span>Scenic Ghat Road Ascent to Holy Tirumala</span>
-                        </div>
-                        <div className="p-3 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 font-semibold flex items-center gap-2">
-                          <Building2 className="w-4 h-4 text-[#114088] shrink-0" />
-                          <span>Overnight stay in Tirumala Hills</span>
-                        </div>
-                      </>
-                    )}
-
-                    {dayNum === 5 && (
-                      <>
-                        <div className="p-3 bg-yellow-50/70 border border-yellow-200 rounded-xl text-xs text-yellow-950 font-semibold flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-yellow-600 shrink-0" />
-                          <span>Sri Balaji Venkateshwara Swamy Darshan</span>
-                        </div>
-                        <div className="p-3 bg-orange-50/70 border border-orange-100 rounded-xl text-xs text-orange-900 font-semibold flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-orange-600 shrink-0" />
-                          <span>Sri Padmavathi Ammavari Temple, Tiruchanur</span>
-                        </div>
-                        <div className="p-3 bg-green-50/70 border border-green-100 rounded-xl text-xs text-green-900 font-semibold flex items-center gap-2">
-                          <Bus className="w-4 h-4 text-green-700 shrink-0" />
-                          <span>Return to Bangalore with Divine Blessings</span>
-                        </div>
-                      </>
-                    )}
-                  </div>
                 </div>
               );
             })}
@@ -584,11 +741,11 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               ← Previous Day
             </button>
             <span className="text-xs font-semibold text-gray-500">
-              Day {activeDay} of 5
+              Day {activeDay} of {activePackage.sampleItinerary.length}
             </span>
             <button
-              onClick={() => setActiveDay(prev => Math.min(5, prev + 1))}
-              disabled={activeDay === 5}
+              onClick={() => setActiveDay(prev => Math.min(activePackage.sampleItinerary.length, prev + 1))}
+              disabled={activeDay === activePackage.sampleItinerary.length}
               className="text-xs font-bold text-[#114088] disabled:opacity-30 disabled:cursor-not-allowed hover:underline"
             >
               Next Day →
@@ -597,7 +754,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Section 3: Package Details - Inclusions, Exclusions, Payment & Refund Policy */}
+      {/* Section 4: Package Details - Inclusions, Exclusions, Payment & Refund Policy */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
@@ -607,12 +764,12 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               <div className="flex items-center gap-2 mb-5 sm:mb-6">
                 <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 shrink-0" />
                 <h3 className="text-lg sm:text-xl font-bold font-serif-brand text-[#114088]">
-                  What's Included in ₹16,999/-
+                  What's Included in {activePackage.price}
                 </h3>
               </div>
 
               <ul className="space-y-3">
-                {flagshipBusPackage.inclusions.map((inc, i) => (
+                {activePackage.inclusions.map((inc, i) => (
                   <li key={i} className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm text-gray-700">
                     <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                       ✓
@@ -632,7 +789,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               </div>
 
               <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-gray-600">
-                {flagshipBusPackage.exclusions.map((exc, i) => (
+                {activePackage.exclusions.map((exc, i) => (
                   <li key={i} className="flex items-start gap-2.5 sm:gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0 mt-2"></span>
                     <span className="leading-relaxed">{exc}</span>
@@ -706,7 +863,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                   <span className="text-[11px] text-gray-500">View complete scanned itinerary & policies</span>
                 </div>
                 <button
-                  onClick={() => setIsBrochureModalOpen(true)}
+                  onClick={() => handleOpenBrochure(activePackage.id)}
                   className="w-full sm:w-auto px-4 py-2 bg-[#114088] hover:bg-[#0C1F41] text-white text-xs font-bold rounded-lg shadow-sm flex items-center justify-center gap-1.5 transition-colors cursor-pointer shrink-0"
                 >
                   <Eye className="w-3.5 h-3.5 text-[#F59E0B]" />
@@ -718,7 +875,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Section 4: Why Travel by Bus with Sai Samarth Tours */}
+      {/* Section 5: Why Travel by Bus with Sai Samarth Tours */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         <div className="bg-gradient-to-br from-[#114088] to-[#0B1E3F] rounded-3xl p-5 sm:p-10 text-white relative overflow-hidden shadow-2xl">
           <div className="absolute right-0 top-0 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -757,14 +914,14 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
             })}
           </div>
 
-          {/* Core Values Strip from user brochure image 4 */}
+          {/* Core Values Strip from brochure */}
           <div className="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/15 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 text-left sm:text-center">
             <div className="p-2.5 sm:p-3 bg-white/5 rounded-xl border border-white/10">
               <span className="text-[11px] sm:text-xs font-bold text-[#F59E0B] uppercase block">Personalized Care</span>
               <p className="text-[10px] sm:text-[11px] text-gray-300 mt-0.5">Thoughtful planning with attention to devotee comfort.</p>
             </div>
             <div className="p-2.5 sm:p-3 bg-white/5 rounded-xl border border-white/10">
-              <span className="text-[11px] sm:text-xs font-bold text-[#F59E0B] uppercase block">Spiritual Circuit</span>
+              <span className="text-[11px] sm:text-xs font-bold text-[#F59E0B] uppercase block">Spiritual Circuits</span>
               <p className="text-[10px] sm:text-[11px] text-gray-300 mt-0.5">Sacred temple circuits with verified pure veg food.</p>
             </div>
             <div className="p-2.5 sm:p-3 bg-white/5 rounded-xl border border-white/10">
@@ -772,14 +929,14 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               <p className="text-[10px] sm:text-[11px] text-gray-300 mt-0.5">Dedicated tour manager accompanying the entire trip.</p>
             </div>
             <div className="p-2.5 sm:p-3 bg-white/5 rounded-xl border border-white/10">
-              <span className="text-[11px] sm:text-xs font-bold text-[#F59E0B] uppercase block">Transparent Fare</span>
-              <p className="text-[10px] sm:text-[11px] text-gray-300 mt-0.5">Includes hotel stays, bus transit, meals & tax.</p>
+              <span className="text-[11px] sm:text-xs font-bold text-[#F59E0B] uppercase block">Transparent Fares</span>
+              <p className="text-[10px] sm:text-[11px] text-gray-300 mt-0.5">Includes hotel stays, bus transit, all meals & tax.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Section 5: Customized Group Bus Charters */}
+      {/* Section 6: Customized Group Bus Charters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
@@ -804,7 +961,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Section 6: FAQ Section */}
+      {/* Section 7: FAQ Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
         <div className="text-center mb-8 sm:mb-10">
           <span className="text-xs font-extrabold uppercase tracking-widest text-[#EA580C] block mb-2">
@@ -848,7 +1005,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Section 7: Final CTA Strip */}
+      {/* Section 8: Final CTA Strip */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="bg-gradient-to-r from-[#EA580C] to-[#C2410C] rounded-3xl p-6 sm:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-2 text-center md:text-left">
@@ -856,22 +1013,22 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               Limited Seats Available Per Departure
             </span>
             <h2 className="text-xl sm:text-3xl font-extrabold font-serif-brand">
-              Reserve Your Seat on the Panch Bootha Bus Yatra
+              Reserve Your Seat on our Deluxe Bus Tours
             </h2>
             <p className="text-xs sm:text-sm text-orange-100 max-w-xl">
-              Experience the divine grace of all 5 Shiva Elements and Lord Tirumala Balaji. Call or WhatsApp our Bangalore team for instant booking confirmation.
+              Experience the divine grace of Shirdi – Kolhapur or Pancha Bhootha Shiva Temples. Call or WhatsApp our Bangalore team for instant booking confirmation.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-2.5 sm:flex sm:flex-row items-center sm:gap-3 w-full md:w-auto shrink-0">
             <button
-              onClick={() => onOpenEnquiry && onOpenEnquiry(flagshipBusPackage.title)}
+              onClick={() => onOpenEnquiry && onOpenEnquiry(activePackage.title)}
               className="w-full sm:w-auto px-2.5 sm:px-6 py-3 bg-white text-[#EA580C] hover:bg-gray-100 font-bold text-xs uppercase tracking-wider rounded-full shadow-lg transition-all cursor-pointer text-center justify-center flex items-center whitespace-nowrap"
             >
               Enquire Now
             </button>
             <a
-              href={getWhatsAppUrl({ packageTitle: flagshipBusPackage.title })}
+              href={getWhatsAppUrl({ packageTitle: activePackage.title })}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackContact({ content_name: 'Bus Page WhatsApp CTA' })}
@@ -884,7 +1041,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         </div>
       </div>
 
-      {/* Official Brochure Carousel Modal */}
+      {/* Official Scanned Brochure Modal */}
       {isBrochureModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 animate-fadeIn">
           <div className="relative bg-white rounded-2xl sm:rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl">
@@ -893,7 +1050,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               <div className="flex items-center gap-2 min-w-0">
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-[#F59E0B] shrink-0" />
                 <span className="font-bold text-xs sm:text-base truncate">
-                  Official Brochure (Page {brochurePage} of 4)
+                  {modalPackage.shortTitle || modalPackage.title.split('–')[0]} Official Brochure (Page {brochurePage} of {activeBrochureImages.length})
                 </span>
               </div>
               <button
@@ -907,8 +1064,8 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
             {/* Modal Body: Active Brochure Page Image */}
             <div className="flex-1 overflow-y-auto p-2 sm:p-4 flex items-center justify-center bg-gray-100">
               <img
-                src={brochureImages[brochurePage - 1]}
-                alt={`Panch Bootha Yatra Official Brochure Page ${brochurePage}`}
+                src={activeBrochureImages[brochurePage - 1]}
+                alt={`${modalPackage.title} Official Brochure Page ${brochurePage}`}
                 className="max-h-[58vh] sm:max-h-[65vh] w-auto object-contain rounded-lg shadow-md border border-gray-300"
               />
             </div>
@@ -916,26 +1073,29 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
             {/* Modal Footer: Controls */}
             <div className="p-3 sm:p-4 bg-white border-t border-gray-200 flex items-center justify-between gap-3">
               <div className="flex items-center gap-1.5 sm:gap-2">
-                {[1, 2, 3, 4].map((page) => (
-                  <button
-                    key={page}
-                    onClick={() => setBrochurePage(page)}
-                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg font-bold text-xs transition-colors cursor-pointer flex items-center justify-center ${
-                      brochurePage === page
-                        ? 'bg-[#114088] text-white shadow-sm'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                ))}
+                {activeBrochureImages.map((_, pIdx) => {
+                  const pNum = pIdx + 1;
+                  return (
+                    <button
+                      key={pNum}
+                      onClick={() => setBrochurePage(pNum)}
+                      className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg font-bold text-xs transition-colors cursor-pointer flex items-center justify-center ${
+                        brochurePage === pNum
+                          ? 'bg-[#114088] text-white shadow-sm'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {pNum}
+                    </button>
+                  );
+                })}
               </div>
 
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => {
                     setIsBrochureModalOpen(false);
-                    onOpenEnquiry && onOpenEnquiry(flagshipBusPackage.title);
+                    onOpenEnquiry && onOpenEnquiry(modalPackage.title);
                   }}
                   className="px-4 sm:px-5 py-2 bg-gradient-to-r from-[#F97316] to-[#EA580C] text-white text-xs font-bold uppercase rounded-xl shadow-md cursor-pointer hover:shadow-lg transition-all"
                 >

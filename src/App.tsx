@@ -146,6 +146,8 @@ export function App() {
             <Route path="/tirupati-tour-package-from-bangalore" element={<Navigate to="/destinations/tirupati" replace />} />
             <Route path="/panch-bootha-tour-package-from-bangalore" element={<Navigate to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" replace />} />
             <Route path="/panch-bootha-yatra" element={<Navigate to="/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore" replace />} />
+            <Route path="/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" element={<Navigate to="/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" replace />} />
+            <Route path="/shirdi-kolhapur-bus-tour" element={<Navigate to="/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" replace />} />
 
             {/* Destination Landing Pages */}
             <Route path="/destinations/:slug" element={<DestinationPage onOpenEnquiry={handleOpenEnquiry} />} />
