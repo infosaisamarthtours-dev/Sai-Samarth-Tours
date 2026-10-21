@@ -325,6 +325,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   <p className="text-[11px] text-gray-500 mt-0.5">Deluxe 2+2 sanitized pushback coaches with Tour Manager</p>
                 </div>
                 <div className="flex flex-col divide-y divide-gray-100">
+                  <Link to="/package/south-india-yatra-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-orange-50/40 transition-colors block group/item">
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">South India Yatra</span>
+                      <span className="text-xs font-black text-[#EA580C]">₹21,999/-</span>
+                    </div>
+                    <p className="text-[11px] text-gray-500 mt-0.5">5N/6D • Madurai, Rameshwaram, Kanyakumari, Alleppey & Guruvayoor</p>
+                  </Link>
+
                   <Link to="/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-amber-50/40 transition-colors block group/item">
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">Shirdi – Saptha Shrungi – Kolhapur</span>
@@ -609,6 +617,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   >
                     <span>Explore All Bus Trips & Charters</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#EA580C]" />
+                  </Link>
+
+                  {/* South India Yatra Bus Tour Card */}
+                  <Link 
+                    to="/package/south-india-yatra-bus-tour-from-bangalore" 
+                    onClick={closeMobileMenu} 
+                    className="block p-3 bg-white rounded-xl hover:bg-orange-50/50 transition-colors border border-orange-200 shadow-xs"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-black text-[#114088]">South India Yatra</span>
+                      <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded">₹21,999/-</span>
+                    </div>
+                    <p className="text-[11px] text-gray-500 leading-tight">
+                      5N/6D • A/C Pushback Bus • Madurai, Rameshwaram, Kanyakumari, Alleppey & Guruvayoor
+                    </p>
                   </Link>
 
                   {/* Shirdi - Kolhapur Bus Tour Card */}

@@ -35,6 +35,7 @@ const packageSlugsMap = {
   'nepal': 'nepal-muktinath-pashupatinath-tour-package-from-bangalore',
   'panch-bootha-balaji-bus-tour': 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
   'shirdi-saptashrungi-kolhapur-bus-tour': 'shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore',
+  'south-india-yatra-bus-tour': 'south-india-yatra-bus-tour-from-bangalore',
   'kashmir': 'kashmir-tour-package-from-bangalore',
   'kerala': 'kerala-tour-package-from-bangalore',
   'leh-ladakh': 'leh-ladakh-tour-package-from-bangalore',
@@ -647,6 +648,22 @@ pages.forEach(p => {
 
 // 4. Prerender Blog Articles
 const blogArticles = [
+  {
+    slug: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
+    title: 'Kamakhya Temple Guwahati Tour Package from Bangalore | Flight & VIP Darshan',
+    desc: 'Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. 2 Days / 1 Night yatra with 3-star AC stay, pure veg meals & temple transfers.',
+    image: '/kamakhya-temple-tour-package-from-bangalore-1.webp',
+    h1: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
+    intro: 'Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. Experience divine blessings at Maa Kamakhya Shakti Peeth on Nilachal Hill, Umananda Shiva Temple, Vasistha Ashram & Balaji Temple with Sai Samarth Tours.'
+  },
+  {
+    slug: 'south-india-tour-package-from-bangalore',
+    title: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
+    desc: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹21,999.',
+    image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
+    h1: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
+    intro: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹21,999.'
+  },
   {
     slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore',
     title: 'Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore',

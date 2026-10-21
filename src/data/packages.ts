@@ -363,6 +363,204 @@ export const ALL_PACKAGES: Package[] = [
     ],
     coordinates: { x: 38, y: 55 }
   },
+  {
+    id: 'south-india-yatra-bus-tour',
+    slug: 'south-india-yatra-bus-tour-from-bangalore',
+    title: 'South India Yatra – 5N/6D A/C Pushback Bus Tour',
+    shortTitle: 'South India Bus Yatra',
+    seoH1: 'South India Yatra Bus Tour Package from Bangalore – 21,999/-',
+    category: 'bus',
+    destination: 'Thiruvannamalai, Tiruchirappalli, Madurai, Rameshwaram, Kanyakumari, Thiruvananthapuram, Alleppey & Guruvayoor',
+    duration: '5N/6D',
+    price: '₹21,999/-',
+    numericPrice: 21999,
+    minPax: 1,
+    featured: true,
+    image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
+    images: [
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-2.webp',
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-3.webp',
+      '/kerala-tour-package-from-bangalore.webp',
+      '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore.webp'
+    ],
+    brochureImages: [
+      '/south-india-yatra-bus-brochure-1.png',
+      '/south-india-yatra-bus-brochure-2.png',
+      '/south-india-yatra-bus-brochure-3.png',
+      '/south-india-yatra-bus-brochure-4.png'
+    ],
+    description: 'Exclusive 5 Nights / 6 Days all-inclusive Deluxe A/C Pushback Bus Tour from Bangalore covering Thiruvannamalai Arunachaleeswarar (Fire Lingam), Thanjavur Brihadeeswara Temple, Srirangam Ranganathaswamy, Madurai Meenakshi Amman, Rameshwaram Ramanathaswamy (22 Theerthams bath & Spatika Linga), Dhanushkodi, Thiruchendur Murugan, Kanyakumari Amman & Vivekananda Rock, Suchindram, Thiruvananthapuram Sree Padmanabhaswamy, Jatayu Earth Center, Alleppey Backwaters & Guruvayur Sri Krishna Temple.',
+    highlights: [
+      'Travel in sanitized Deluxe 2+2 A/C Pushback Coach Bus from Bangalore & Return',
+      'Arunachaleeswarar Temple (Agni / Fire Lingam) at Thiruvannamalai & Thanjavur Brihadeeswara Temple',
+      'Sri Ranganathaswamy Temple (Srirangam) & World-Renowned Madurai Meenakshi Amman Temple',
+      'Rameshwaram: Spatika Linga Darshan, 22 Sacred Wells Snan & Dhanushkodi Sightseeing',
+      'Thiruchendur Murugan Sea-Shore Temple & Kanyakumari Vivekananda Rock Memorial Center & Sunset',
+      'Suchindram Thanumalayan Temple & Nagercoil Nagaraja Temple',
+      'Sree Anantha Padmanabhaswamy Temple in Thiruvananthapuram & Jatayu Earth Center',
+      'Alleppey Backwaters Boat House Experience & Chottanikkara Bhagavathy Temple',
+      'Divine Darshan of Lord Guruvayurappan at Sri Krishna Temple, Guruvayoor',
+      'Dedicated Experienced Tour Manager Services throughout the 6 days',
+      'Comfortable 3-Star AC Hotel Accommodations on Twin/Double Sharing Basis for 5 Nights',
+      'Wholesome All Meals Included: Daily Pure Vegetarian Breakfast, Lunch & Dinner',
+      '1 Litre Water Bottle Daily, Sightseeing Entry Fees & 5% Govt Tax Included'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: false,
+      sightseeing: true
+    },
+    placesBadge: '5N/6D Grand South India Bus Yatra',
+    placesList: [
+      { name: 'Thiruvannamalai (Arunachaleeswarar Temple - Agni / Fire Lingam)' },
+      { name: 'Thanjavur (Brihadeeswara Big Temple - UNESCO Heritage)' },
+      { name: 'Tiruchirappalli (Sri Ranganathaswamy Temple, Srirangam)' },
+      { name: 'Madurai (Sri Meenakshi Amman & Sundareswarar Temple)' },
+      { name: 'Rameshwaram (Spatika Linga, 22 Theerthams & Ramanathaswamy Temple)' },
+      { name: 'Dhanushkodi (Former Indo-Ceylon Border & Kodanda Rama Temple)' },
+      { name: 'Thiruchendur (Subramanya Swamy Seashore Temple)' },
+      { name: 'Kanyakumari (Kanyakumari Amman Temple & Vivekananda Rock Memorial)' },
+      { name: 'Suchindram & Nagercoil (Thanumalayan Temple & Nagaraja Temple)' },
+      { name: 'Thiruvananthapuram (Sree Anantha Padmanabha Swamy Temple)' },
+      { name: 'Jatayu Earth Center (World’s Largest Bird Sculpture)' },
+      { name: 'Alleppey (Backwaters Boat House Experience)' },
+      { name: 'Chottanikkara (Bhagavathy Amman Temple)' },
+      { name: 'Guruvayoor (Sri Krishna Temple Darshan)' }
+    ],
+    inclusions: [
+      'A/C PUSHPACK BUS: Sanitized 2+2 pushback coach for all travel and intercity transfers from Bangalore & return',
+      'Tour Manager Services throughout the tour for assistance and personalized care',
+      'Accommodation on twin/double sharing basis for 5 nights in verified 3-Star hotels',
+      'All Meals (Pure Veg) – Wholesome, hygienic Breakfast, Lunch, and Dinner throughout the journey',
+      'Entrance fees of all sightseeing places except Alleppey and Guruvayoor',
+      'Govt Tax of 5% over and above the Tour Cost mentioned',
+      '1 litre water bottle per person daily'
+    ],
+    exclusions: [
+      'VIP Darshan at Guruvayoor',
+      'House Boat ride at Alleppey (At Own Cost)',
+      'Any extra cost incurred on behalf of an individual due to illness, accident, hospitalization, or any personal emergency',
+      'Visa fees, Airport taxes, Govt Taxes, Fuel Surcharges and any applicability of new taxes from Govt',
+      'Any increase in the rate of exchange leading to an increase in all land arrangements which may come into effect prior to departure',
+      'Any other thing which is not mentioned in above itinerary'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bangalore – Thiruvannamalai – Tiruchirappalli – Madurai',
+        detail: 'Bangalore to Thiruvannamalai Departure at Night 10:00 PM. On early morning arrival at Thiruvannamalai freshen up and proceed to Arunachaleeswarar temple (Fire / Agni) darshan. After darshan have breakfast and later proceed to Brihadeeswara Temple (Thanjavur). After darshan have lunch, later proceed to visit Sri Ranganathaswamy Temple (Srirangam). After darshan later proceed to Madurai. Hotel check In. Have dinner and overnight stay in Madurai.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Madurai – Rameshwaram',
+        detail: 'Early in the morning visit Madurai Meenakshi Temple. After darshan, proceed towards Rameshwaram. Upon arrival proceed to visit Rameshwaram local sightseeing like Dhanushkodi, Kodanda Rama Temple, and other sacred temples. Return back to hotel stay in Rameshwaram. Dinner and overnight stay.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 3',
+        title: 'Rameshwaram – Kanyakumari',
+        detail: 'Early in the morning visit Spatika Linga Darshan and take holy bath in 22 sacred Theerth Wells, followed by Ramanathaswamy Darshan. Post breakfast proceed towards visiting Thiruchendur Murugan Temple. Proceed towards Kanyakumari. Upon arrival visit Vivekananda Rock Memorial Center. Evening visit Sunset view point. Dinner and overnight stay in Kanyakumari.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 4',
+        title: 'Kanyakumari – Thiruvananthapuram',
+        detail: 'Early morning visit sunrise and Kanyakumari Temple. After breakfast check out of the hotel and proceed towards Suchindram Temple & Nagercoil Nagaraja Temple. Proceed to Thiruvananthapuram. Have dinner and overnight stay in Thiruvananthapuram.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 5',
+        title: 'Thiruvananthapuram – Jatayu – Alleppey',
+        detail: 'Before breakfast proceed towards Thiruvananthapuram Sree Anantha Padmanabha Swamy Temple. After darshan return back to hotel, have breakfast and check out rooms. Proceed to visit Jatayu Earth Center. Later proceed to the world-famous Alleppey. Enjoy the boat house ride (at own cost). Return back to hotel, have dinner and overnight stay.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 6',
+        title: 'Alleppey – Guruvayoor – Bangalore',
+        detail: 'Morning after breakfast proceed towards Chottanikkara Bhagavathy Temple. After darshan proceed to Guruvayur Sri Krishna Temple (VIP darshan at own cost). After having darshan, later proceed back to Bangalore with beautiful memories and divine blessings.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: '0 – 15 days before departure', fee: '100% on Net tour price' },
+        { days: 'More than 15 days before departure', fee: '50% on Net tour price' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not be responsible for, or liable to refund claims arising from, flight delays or cancellations, mechanical issues, strikes/bandhs, or changes in weather conditions.',
+        'Payment Policy: Package below ₹25,000 – full payment at the time of booking.',
+        'Package below ₹50,000 – ₹25,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Package above ₹50,000 – ₹50,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Last-minute bookings (received within 45 days of departure) – full payment at the time of booking.'
+      ]
+    },
+    remarks: [
+      'Travel with Faith. Journey with Comfort.',
+      'Personalized Service: Thoughtful planning with attention to customer comfort.',
+      'Spiritual Journeys: Pilgrimage and temple tours across sacred destinations.',
+      'Travel Coordination: Experienced tour coordination throughout the journey.',
+      'Comfort & Clarity: Carefully planned stays, transport, meals and darshan arrangements.'
+    ],
+    detailedContent: {
+      overview: 'Embark on the ultimate spiritual circuit of South India with Sai Samarth Tours. Our all-inclusive 5 Nights / 6 Days South India Yatra Deluxe Bus Tour departs directly from Bangalore in a sanitized, luxury 2+2 A/C Pushback coach. Covering Tamil Nadu and Kerala’s most renowned sacred shrines—Thiruvannamalai Arunachaleeswarar (Agni Sthalam), Brihadeeswara Temple, Srirangam Ranganathaswamy, Madurai Meenakshi, Rameshwaram Ramanathaswamy (22 Theerthams bath & Spatika Linga), Dhanushkodi, Thiruchendur Murugan, Kanyakumari Amman & Vivekananda Rock, Suchindram, Thiruvananthapuram Sree Padmanabhaswamy, Jatayu Nature Park, Alleppey backwaters, Chottanikkara Bhagavathy, and Guruvayur Sri Krishna Temple.',
+      significance: 'This grand yatra synthesizes Shaivite, Vaishnavite, and Shakta traditions across Tamil Nadu and Kerala. From the fire element at Arunachala to the holy island of Rameshwaram, the land’s end at Kanyakumari, and the cosmic wealth of Lord Padmanabha and Guruvayurappan, pilgrims receive complete spiritual fulfilment.',
+      bestTimeToVisit: 'Departures operate regularly throughout the year from Bangalore, ideally timed for early morning temple darshans and comfortable scenic highway journeys.',
+      placesCovered: [
+        'Arunachaleeswarar Temple, Thiruvannamalai (Agni / Fire Lingam)',
+        'Brihadeeswara Temple, Thanjavur (Big Temple - UNESCO World Heritage)',
+        'Sri Ranganathaswamy Temple, Srirangam (108 Divya Desam)',
+        'Sri Meenakshi Amman Temple, Madurai',
+        'Ramanathaswamy Jyotirlinga & 22 Sacred Wells, Rameshwaram',
+        'Dhanushkodi Border & Kodanda Rama Temple',
+        'Subramanya Swamy Seashore Temple, Thiruchendur',
+        'Kanyakumari Amman Temple & Vivekananda Rock Memorial',
+        'Thanumalayan Temple, Suchindram & Nagaraja Temple, Nagercoil',
+        'Sree Anantha Padmanabha Swamy Temple, Thiruvananthapuram',
+        'Jatayu Earth Center, Chadayamangalam',
+        'Alleppey Backwaters & Boat House',
+        'Chottanikkara Bhagavathy Temple',
+        'Guruvayur Sri Krishna Temple'
+      ],
+      travelTips: [
+        'Sanitized 2+2 A/C Pushback coach features high-back reclining seats and ample legroom for relaxed highway transit.',
+        'Traditional temple dress code is required: Dhoti/Kurta for men and Saree/Salwar for women (Kerala temples like Padmanabhaswamy require traditional Mundu/Dhoti for men).',
+        'All three meals (Breakfast, Lunch, Dinner) are provided in hygienic restaurants, strictly pure vegetarian.',
+        '1 Litre packaged drinking water bottle provided daily per person.'
+      ],
+      whyChooseUs: [
+        'Grand 6-Day circuit covering 14+ legendary shrines across Tamil Nadu and Kerala from Bangalore',
+        'Sanitized Deluxe A/C Pushback Bus with dedicated Tour Manager on board assisting every step',
+        'Verified 3-Star AC Accommodations (5 Nights) and Wholesome All Meals Included for ₹21,999/-'
+      ]
+    },
+    faqs: [
+      {
+        question: 'What is the boarding point and departure time in Bangalore?',
+        answer: 'The A/C Pushback bus departs from Bangalore at Night 10:00 PM on Day 1. Convenient boarding points across Bangalore include Yelahanka, Majestic / Anand Rao Circle, and Electronic City / Silk Board.'
+      },
+      {
+        question: 'Are all meals included in the ₹21,999/- package price?',
+        answer: 'Yes! All pure vegetarian meals (Breakfast, Lunch, and Dinner) are included throughout the tour, starting from Day 1 morning freshen-up and breakfast until Day 6 return transit.'
+      },
+      {
+        question: 'What is the dress code for Padmanabhaswamy and Guruvayoor temples?',
+        answer: 'For Sree Padmanabhaswamy Temple and Guruvayur Temple, men must wear a traditional Dhoti (Mundu) around the waist without shirts/vests, while women wear Sarees, Set Mundu, or traditional long skirts with blouses.'
+      },
+      {
+        question: 'Is the 22 Theertham bathing in Rameshwaram assisted by the tour manager?',
+        answer: 'Yes! Our tour manager assists the group with the 22 holy wells (Theerthams) snanam and Spatika Linga morning darshan at Ramanathaswamy Temple.'
+      },
+      {
+        question: 'What is the payment and cancellation policy?',
+        answer: 'For packages below ₹25,000, 100% full payment is required at the time of booking. Cancellations received more than 15 days before departure attract a 50% fee on net tour price; cancellations within 0–15 days attract a 100% cancellation fee.'
+      }
+    ],
+    coordinates: { x: 50, y: 88 }
+  },
   // ================= PILGRIMAGE PACKAGES =================
   {
     id: 'shirdi-regular',

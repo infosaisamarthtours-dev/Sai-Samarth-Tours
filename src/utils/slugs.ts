@@ -26,6 +26,7 @@ export const PACKAGE_SLUG_MAP: Record<string, string> = {
   'nepal': 'nepal-muktinath-pashupatinath-tour-package-from-bangalore',
   'panch-bootha-balaji-bus-tour': 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
   'shirdi-saptashrungi-kolhapur-bus-tour': 'shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore',
+  'south-india-yatra-bus-tour': 'south-india-yatra-bus-tour-from-bangalore',
 
   // Domestic Packages
   'kashmir': 'kashmir-tour-package-from-bangalore',

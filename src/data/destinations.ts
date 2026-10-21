@@ -169,7 +169,7 @@ export const DESTINATIONS: Record<string, DestinationData> = {
     seoDescription: 'All-inclusive Rameshwaram tour package from Bangalore with flights. Covers Ramanathaswamy Temple, 22 Holy Theerthams, Madurai Meenakshi Amman & Kanyakumari sunrise.',
     heroImage: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
     tagline: 'Sacred Ramanathaswamy Jyotirlinga, 22 Theerthams & Southern Shores',
-    packageIds: ['rameshwaram'],
+    packageIds: ['rameshwaram', 'south-india-yatra-bus-tour'],
     highlights: [
       'Flights from Bangalore (BLR) to Madurai (IXM) & return',
       'Sacred Snan at 22 Holy Theerthams & Ramanathaswamy Darshan',

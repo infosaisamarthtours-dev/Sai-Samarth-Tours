@@ -12,6 +12,7 @@ interface FeaturedYatrasProps {
 export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage, onOpenEnquiry }) => {
   // Select priority package IDs for the 4-column x 3-row grid (12 cards total)
   const preferredIds = [
+    'south-india-yatra-bus-tour',
     'panch-bootha-balaji-bus-tour',
     'shirdi-regular',
     'shirdi-3-jyothirlinga',

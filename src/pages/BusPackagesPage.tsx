@@ -36,6 +36,12 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
 
   // Brochure images map
   const brochureImagesMap: Record<string, string[]> = {
+    'south-india-yatra-bus-tour': [
+      '/south-india-yatra-bus-brochure-1.png',
+      '/south-india-yatra-bus-brochure-2.png',
+      '/south-india-yatra-bus-brochure-3.png',
+      '/south-india-yatra-bus-brochure-4.png'
+    ],
     'shirdi-saptashrungi-kolhapur-bus-tour': [
       '/shirdi-kolhapur-bus-brochure-1.png',
       '/shirdi-kolhapur-bus-brochure-2.png',
@@ -62,6 +68,70 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
     setBrochurePage(1);
     setIsBrochureModalOpen(true);
   };
+
+  // Highlights for South India Yatra Circuit
+  const southIndiaHighlights = [
+    {
+      title: 'Arunachaleswarar & Brihadeeswara',
+      subtitle: 'Agni Sthalam & UNESCO Heritage',
+      location: 'Thiruvannamalai & Thanjavur, TN',
+      icon: Flame,
+      color: 'from-amber-500 to-orange-600',
+      textColor: 'text-amber-700',
+      bgLight: 'bg-amber-50',
+      description: 'Darshan of Lord Shiva as Agni Lingam at holy Arunachala hill, followed by the architectural wonder of Brihadeeswara Big Temple and Sri Ranganathaswamy at Srirangam.'
+    },
+    {
+      title: 'Madurai Meenakshi Amman',
+      subtitle: 'Sacred Shakti Temple',
+      location: 'Madurai, Tamil Nadu',
+      icon: Sparkles,
+      color: 'from-rose-500 to-pink-600',
+      textColor: 'text-rose-700',
+      bgLight: 'bg-rose-50',
+      description: 'Early morning darshan of Goddess Meenakshi Amman and Lord Sundareswarar with exquisite Dravidian gopurams and sacred golden lotus tank.'
+    },
+    {
+      title: 'Rameshwaram & Dhanushkodi',
+      subtitle: 'Char Dham & 22 Theerthams',
+      location: 'Rameshwaram Island, Tamil Nadu',
+      icon: Droplets,
+      color: 'from-blue-500 to-cyan-600',
+      textColor: 'text-blue-700',
+      bgLight: 'bg-blue-50',
+      description: 'Morning Spatika Linga darshan, holy bath in 22 sacred Theerth Wells, Ramanathaswamy Jyotirlinga, Kodanda Rama Temple, and legendary Dhanushkodi seaside.'
+    },
+    {
+      title: 'Thiruchendur & Kanyakumari',
+      subtitle: 'Murugan Arupadaiveedu & Sunset',
+      location: 'Thiruchendur & Kanyakumari',
+      icon: Mountain,
+      color: 'from-purple-500 to-indigo-600',
+      textColor: 'text-purple-700',
+      bgLight: 'bg-purple-50',
+      description: 'Darshan at seaside Thiruchendur Murugan Temple, Kanyakumari Amman Temple, Vivekananda Rock Memorial Center, and breathtaking Triveni Sangam sunset.'
+    },
+    {
+      title: 'Sree Padmanabhaswamy & Suchindram',
+      subtitle: 'Holy Anantha Shayana',
+      location: 'Suchindram & Thiruvananthapuram',
+      icon: Star,
+      color: 'from-yellow-500 to-amber-600',
+      textColor: 'text-amber-800',
+      bgLight: 'bg-amber-50',
+      description: 'Seek blessings at Suchindram Thanumalayan Temple and Lord Sree Padmanabhaswamy Temple in Thiruvananthapuram, followed by Jatayu Earth Center.'
+    },
+    {
+      title: 'Alleppey & Guruvayur Sri Krishna',
+      subtitle: 'Backwaters & Divine Blessings',
+      location: 'Alleppey & Guruvayur, Kerala',
+      icon: Globe,
+      color: 'from-emerald-500 to-teal-600',
+      textColor: 'text-emerald-700',
+      bgLight: 'bg-emerald-50',
+      description: 'Enjoy famous Alleppey backwater boat house cruise, darshan at Chottanikkara Bhagavathy Temple, and holy Guruvayur Sri Krishna Temple before returning to Bangalore.'
+    }
+  ];
 
   // Highlights for Shirdi - Kolhapur Circuit
   const shirdiKolhapurHighlights = [
@@ -227,7 +297,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
   const busFaqs = [
     {
       question: 'What bus tour packages are currently offered from Bangalore?',
-      answer: 'Sai Samarth Tours operates two premier 4 Nights / 5 Days all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) Shirdi – Saptha Shrungi – Kolhapur – Mumbai – Pandharpur (₹14,999/-), and 2) Panch Bootha Yatra & Tirumala Balaji (₹16,999/-). Both packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
+      answer: 'Sai Samarth Tours operates three premier all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) South India Yatra (5N/6D – ₹21,999/-), 2) Shirdi – Saptha Shrungi – Kolhapur – Mumbai – Pandharpur (4N/5D – ₹14,999/-), and 3) Panch Bootha Yatra & Tirumala Balaji (4N/5D – ₹16,999/-). All packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
     },
     {
       question: 'What is the boarding point and departure schedule in Bangalore?',
@@ -242,8 +312,8 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
       answer: 'Yes, 100%! All daily pure vegetarian meals (Breakfast, Lunch, and Dinner) are fully included in the package price. We serve freshly prepared, hygienic meals at reputable, verified family restaurants along the route.'
     },
     {
-      question: 'What hotel accommodations are provided during the 4 nights?',
-      answer: 'Devotees stay in verified 3-Star AC hotels on twin/double sharing basis throughout the 4 nights. Rooms feature clean linens, modern attached bathrooms, hot water, and elevator access. Single occupancy is available on request with a nominal supplement.'
+      question: 'What hotel accommodations are provided during the tour nights?',
+      answer: 'Devotees stay in verified 3-Star AC hotels on twin/double sharing basis throughout the 4 to 5 nights. Rooms feature clean linens, modern attached bathrooms, hot water, and elevator access. Single occupancy is available on request with a nominal supplement.'
     },
     {
       question: 'What is the payment and cancellation policy?',
@@ -447,7 +517,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {busPackages.map((pkg) => {
             const isSelected = pkg.id === selectedPackageId;
             return (
@@ -496,7 +566,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Check className="w-4 h-4 text-green-600 shrink-0" />
-                      <span>4 Nights 3-Star AC Stay</span>
+                      <span>{pkg.duration.includes('5N') || pkg.duration.includes('6D') ? '5 Nights 3-Star AC Stay' : '4 Nights 3-Star AC Stay'}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Check className="w-4 h-4 text-green-600 shrink-0" />
@@ -562,19 +632,27 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
             <span>Spiritual Circuit Highlights</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-serif-brand text-[#114088] leading-tight">
-            {selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour' 
+            {selectedPackageId === 'south-india-yatra-bus-tour'
+              ? 'Sacred Temples & Scenic Marvels of Tamil Nadu & Kerala'
+              : selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour' 
               ? 'Sacred Pilgrimage Shrines of Maharashtra & Karnataka' 
               : 'The 5 Sacred Cosmic Elements of Lord Shiva & Balaji'}
           </h2>
           <p className="text-gray-600 text-xs sm:text-base mt-2 sm:mt-3 leading-relaxed">
-            {selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour'
+            {selectedPackageId === 'south-india-yatra-bus-tour'
+              ? 'Embark on a grand 6-day spiritual circuit covering Thiruvannamalai, Madurai Meenakshi, Rameshwaram Jyotirlinga, Kanyakumari, Padmanabhaswamy, Alleppey backwaters, and Guruvayur Krishna.'
+              : selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour'
               ? 'Experience the supreme grace of Shri Sai Baba, Shri Swami Samarth, Lord Vitthal, and divine Devi Shakti Peethams in one seamless 5-day yatra.'
               : 'In Hindu Sanatana Dharma, Lord Shiva manifests in the five natural elements (Pancha Bhootha). Completing this circuit brings profound spiritual peace.'}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {(selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour' ? shirdiKolhapurHighlights : panchBoothaElements).map((item: any, idx: number) => {
+          {(selectedPackageId === 'south-india-yatra-bus-tour' 
+            ? southIndiaHighlights 
+            : selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour' 
+            ? shirdiKolhapurHighlights 
+            : panchBoothaElements).map((item: any, idx: number) => {
             const Icon = item.icon;
             return (
               <div 
@@ -625,7 +703,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               <div>
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
                   <span className="bg-[#F59E0B] text-[#114088] font-black text-[11px] sm:text-xs uppercase px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full">
-                    Complete 4N/5D Travel Itinerary
+                    Complete {activePackage.duration} Travel Itinerary
                   </span>
                   <span className="text-[11px] sm:text-xs bg-white/20 text-white px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full font-bold">
                     Vehicle: Deluxe A/C Pushback Bus
@@ -668,7 +746,9 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               const dayNum = idx + 1;
               const isSelected = activeDay === dayNum;
               
-              const shortNames = selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour'
+              const shortNames = selectedPackageId === 'south-india-yatra-bus-tour'
+                ? ["Thiruvannamalai", "Madurai", "Rameshwaram", "Kanyakumari", "Alleppey", "Guruvayoor"]
+                : selectedPackageId === 'shirdi-saptashrungi-kolhapur-bus-tour'
                 ? ["Ganagapur", "Shirdi", "Saptashrungi", "Mumbai & Pune", "Kolhapur"]
                 : ["Trichy", "Chidambaram", "Kanchipuram", "Kalahasthi", "Tirumala"];
               const shortLoc = shortNames[idx] || `Day ${dayNum}`;
@@ -1016,7 +1096,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
               Reserve Your Seat on our Deluxe Bus Tours
             </h2>
             <p className="text-xs sm:text-sm text-orange-100 max-w-xl">
-              Experience the divine grace of Shirdi – Kolhapur or Pancha Bhootha Shiva Temples. Call or WhatsApp our Bangalore team for instant booking confirmation.
+              Experience the divine grace of South India Yatra, Shirdi – Kolhapur, or Pancha Bhootha Shiva Temples. Call or WhatsApp our Bangalore team for instant booking confirmation.
             </p>
           </div>
 

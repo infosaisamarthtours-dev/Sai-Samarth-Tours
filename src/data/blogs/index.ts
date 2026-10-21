@@ -8,8 +8,12 @@ import { chardhamYatraGuidePost } from './chardham-yatra-guide';
 import { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guide';
 import { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 import { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
+import { southIndiaTourPackageFromBangalorePost } from './south-india-tour-package-from-bangalore-guide';
+import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
+export { southIndiaTourPackageFromBangalorePost } from './south-india-tour-package-from-bangalore-guide';
 export { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
 export { shirdiTourPackageFromBangaloreGuidePost } from './shirdi-tour-package-from-bangalore-guide';
 export { kashiAyodhyaTourPackageFromBangalorePost } from './kashi-ayodhya-tour-package-from-bangalore';
@@ -21,6 +25,8 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  kamakhyaTempleTourPackageFromBangalorePost,
+  southIndiaTourPackageFromBangalorePost,
   panchBoothaYatraTirumalaBalajiGuidePost,
   shirdiTourPackageFromBangaloreGuidePost,
   kashiAyodhyaTourPackageFromBangalorePost,

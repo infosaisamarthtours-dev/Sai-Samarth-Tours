@@ -29,6 +29,8 @@ const REGION_MAP: Record<string, { region: string; regionUrl?: string }> = {
   'tirupati': { region: 'Andhra Pradesh', regionUrl: '/destinations/tirupati' },
   'nepal': { region: 'Nepal', regionUrl: '/destinations/nepal' },
   'panch-bootha-balaji-bus-tour': { region: 'Tamil Nadu & Andhra Pradesh', regionUrl: '/bus-packages' },
+  'shirdi-saptashrungi-kolhapur-bus-tour': { region: 'Maharashtra', regionUrl: '/bus-packages' },
+  'south-india-yatra-bus-tour': { region: 'Tamil Nadu & Kerala', regionUrl: '/bus-packages' },
 
   // Domestic Holiday Packages
   'kashmir': { region: 'Kashmir', regionUrl: '/destinations/kashmir' },
