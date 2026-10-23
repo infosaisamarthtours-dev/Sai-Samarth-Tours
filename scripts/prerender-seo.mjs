@@ -649,6 +649,14 @@ pages.forEach(p => {
 // 4. Prerender Blog Articles
 const blogArticles = [
   {
+    slug: 'shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide',
+    title: 'Shirdi with 3 Jyotirlinga Tour Package from Bangalore | Flight & VIP Darshan',
+    desc: 'Book Shirdi with 3 Jyotirlinga tour package from Bangalore with flights & VIP Darshan. Visit Bhimashankar, Trimbakeshwar, Grishneshwar, Ellora & Shani Shingnapur.',
+    image: '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-1.webp',
+    h1: 'Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flight & VIP Darshan Guide',
+    intro: 'Embark on the sacred Shirdi with 3 Jyotirlinga Tour Package from Bangalore by flight. Experience divine blessings at Bhimashankar, Trimbakeshwar, Grishneshwar Jyotirlingas, Shirdi Sai Baba VIP Darshan, Nashik Panchavati, UNESCO Ellora Caves, Bhadra Maruti, and Shani Shingnapur with Sai Samarth Tours.'
+  },
+  {
     slug: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
     title: 'Kamakhya Temple Guwahati Tour Package from Bangalore | Flight & VIP Darshan',
     desc: 'Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. 2 Days / 1 Night yatra with 3-star AC stay, pure veg meals & temple transfers.',

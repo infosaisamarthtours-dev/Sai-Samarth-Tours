@@ -10,8 +10,10 @@ import { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide'
 import { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
 import { southIndiaTourPackageFromBangalorePost } from './south-india-tour-package-from-bangalore-guide';
 import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
+import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 export { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
 export { southIndiaTourPackageFromBangalorePost } from './south-india-tour-package-from-bangalore-guide';
 export { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
@@ -25,6 +27,7 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  shirdiWith3JyotirlingaTourPackageFromBangalorePost,
   kamakhyaTempleTourPackageFromBangalorePost,
   southIndiaTourPackageFromBangalorePost,
   panchBoothaYatraTirumalaBalajiGuidePost,
