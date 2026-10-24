@@ -667,10 +667,10 @@ const blogArticles = [
   {
     slug: 'south-india-tour-package-from-bangalore',
     title: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
-    desc: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹21,999.',
+    desc: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹25,999.',
     image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
     h1: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
-    intro: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹21,999.'
+    intro: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹25,999.'
   },
   {
     slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore',
@@ -687,6 +687,14 @@ const blogArticles = [
     image: '/kashi-ayodhya-tour-package-from-bangalore.webp',
     h1: 'Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary, Cost & Travel Tips',
     intro: 'The holy triad of Uttar Pradesh—Kashi, Ayodhya, and Prayagraj—represents the supreme spiritual heartbeat of Sanatana Dharma. Discover complete cost breakdowns, direct flight options, VIP darshan booking rules, and an expert 5-day family itinerary.'
+  },
+  {
+    slug: 'shirdi-tour-package-from-bangalore-direct-flight-vip-darshan',
+    title: 'Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan',
+    desc: 'Book all-inclusive Shirdi tour package from Bangalore with direct flights to Shirdi Airport, confirmed VIP Darshan, 5 AM Kakad Aarti, Shani Shingnapur & 3-star AC stay.',
+    image: '/shirdi-flight-tour-package-from-bangalore-1.webp',
+    h1: 'Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan',
+    intro: 'Experience a blissful 2-day pilgrimage with our Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan. Land at Shirdi Airport in 90 minutes, bypass 6-hour general queues with pre-arranged Gate 3 VIP passes, attend 5:00 AM Kakad Aarti, visit Shani Shingnapur, and enjoy verified 3-star AC stays with pure veg South Indian meals.'
   },
   {
     slug: 'shirdi-tour-package-from-bangalore-guide',

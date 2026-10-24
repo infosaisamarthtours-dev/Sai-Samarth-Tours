@@ -179,14 +179,14 @@ export const ALL_PACKAGES: Package[] = [
   {
     id: 'shirdi-saptashrungi-kolhapur-bus-tour',
     slug: 'shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore',
-    title: 'Shirdi – Saptha Shrungi – Kolhapur – 4N/5D A/C Pushback Bus Tour',
-    shortTitle: 'Shirdi, Saptashrungi & Kolhapur Bus Tour',
-    seoH1: 'Shirdi – Saptha Shrungi – Kolhapur Bus Tour Package from Bangalore – 14,999/-',
+    title: 'Shirdi – Saptha Shrungi – Triyambhakeshwar – 4N/5D A/C Pushback Bus Tour',
+    shortTitle: 'Shirdi, Saptashrungi & Triyambhakeshwar Bus Tour',
+    seoH1: 'Shirdi – Saptha Shrungi – Triyambhakeshwar Bus Tour Package from Bangalore – 15,999/-',
     category: 'bus',
-    destination: 'Ganagapur, Akkalkot, Tuljapur, Pandharpur, Shani Shingnapur, Shirdi, Saptashrungi, Nashik, Mumbai, Pune & Kolhapur',
+    destination: 'Ganagapur, Akkalkot, Tuljapur, Pandharpur, Shani Shingnapur, Shirdi, Saptashrungi, Triyambhakeshwar, Nashik, Mumbai, Pune & Kolhapur',
     duration: '4N/5D',
-    price: '₹14,999/-',
-    numericPrice: 14999,
+    price: '₹15,999/-',
+    numericPrice: 15999,
     minPax: 1,
     featured: true,
     image: '/shirdi-flight-tour-package-from-bangalore-1.webp',
@@ -217,7 +217,7 @@ export const ALL_PACKAGES: Package[] = [
       'Dedicated Experienced Tour Manager Services throughout the 5 days',
       'Comfortable 3-Star AC Hotel Accommodations on Twin/Double Sharing Basis for 4 Nights',
       'Wholesome All Meals Included: Daily pure vegetarian Breakfast, Lunch & Dinner',
-      'All Sightseeing Entrance Fees & 5% Govt Tax Included in ₹14,999/- tour price'
+      'All Sightseeing Entrance Fees & 5% Govt Tax Included in ₹15,999/- tour price'
     ],
     tourIncludes: {
       hotels: true,
@@ -271,8 +271,8 @@ export const ALL_PACKAGES: Package[] = [
       },
       {
         day: 'Day 3',
-        title: 'Shirdi – Saptha Shrungi – Nasik',
-        detail: 'Early in the morning (5:00 AM) proceed to visit Shri Sai Samadi Mandir, and also visit Dwarakamai, Chawadi, Gurusthan and return back to hotel have breakfast and check out rooms. Later proceed to Shri Saptashrungi Nivasini Devi Temple. Return back to Nasik proceed to visit Panchavati (Kalaram, Goreram, Sita Gufa and Triveni Sangam). Return to hotel check IN. have dinner and overnight stay in Nasik.',
+        title: 'Shirdi – Saptha Shrungi – Triyambhakeshwar – Nasik',
+        detail: 'Early in the morning (5:00 AM) proceed to visit Shri Sai Samadi Mandir, and also visit Dwarakamai, Chawadi, Gurusthan and return back to hotel have breakfast and check out rooms. Later proceed to Shri Saptashrungi Nivasini Devi Temple. Return back to Nasik to visit sacred Triyambhakeshwar (Trimbakeshwar) Jyotirlinga and Panchavati (Kalaram, Goreram, Sita Gufa and Triveni Sangam). Return to hotel check IN. Have dinner and overnight stay in Nasik.',
         meals: 'Breakfast, Lunch, Dinner'
       },
       {
@@ -335,7 +335,7 @@ export const ALL_PACKAGES: Package[] = [
       ],
       whyChooseUs: [
         'Complete 12+ sacred temple circuit across Maharashtra & North Karnataka in 5 well-paced days',
-        'Verified 3-Star AC Accommodations (4 Nights) and Wholesome All Meals Included for ₹14,999/-',
+        'Verified 3-Star AC Accommodations (4 Nights) and Wholesome All Meals Included for ₹15,999/-',
         'Dedicated on-board Tour Manager and comfortable A/C Pushback bus from Bangalore'
       ]
     },
@@ -345,7 +345,7 @@ export const ALL_PACKAGES: Package[] = [
         answer: 'The A/C Pushback coach departs Bangalore in the evening for an overnight journey to Ganagapur. Boarding points include Yelahanka, Majestic / Anand Rao Circle, Yeshwanthpur, and Nelamangala toll gate. Departure details are confirmed prior to trip.'
       },
       {
-        question: 'Are all meals included in the ₹14,999/- package price?',
+        question: 'Are all meals included in the ₹15,999/- package price?',
         answer: 'Yes! 100% of your meals (pure vegetarian Breakfast, Lunch, and Dinner) are included throughout the 5 days, starting with freshen-up and breakfast on Day 1 morning until Day 5 lunch en route to Bangalore.'
       },
       {
@@ -368,12 +368,12 @@ export const ALL_PACKAGES: Package[] = [
     slug: 'south-india-yatra-bus-tour-from-bangalore',
     title: 'South India Yatra – 5N/6D A/C Pushback Bus Tour',
     shortTitle: 'South India Bus Yatra',
-    seoH1: 'South India Yatra Bus Tour Package from Bangalore – 21,999/-',
+    seoH1: 'South India Yatra Bus Tour Package from Bangalore – 25,999/-',
     category: 'bus',
     destination: 'Thiruvannamalai, Tiruchirappalli, Madurai, Rameshwaram, Kanyakumari, Thiruvananthapuram, Alleppey & Guruvayoor',
     duration: '5N/6D',
-    price: '₹21,999/-',
-    numericPrice: 21999,
+    price: '₹25,999/-',
+    numericPrice: 25999,
     minPax: 1,
     featured: true,
     image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
@@ -534,7 +534,7 @@ export const ALL_PACKAGES: Package[] = [
       whyChooseUs: [
         'Grand 6-Day circuit covering 14+ legendary shrines across Tamil Nadu and Kerala from Bangalore',
         'Sanitized Deluxe A/C Pushback Bus with dedicated Tour Manager on board assisting every step',
-        'Verified 3-Star AC Accommodations (5 Nights) and Wholesome All Meals Included for ₹21,999/-'
+        'Verified 3-Star AC Accommodations (5 Nights) and Wholesome All Meals Included for ₹25,999/-'
       ]
     },
     faqs: [
@@ -543,7 +543,7 @@ export const ALL_PACKAGES: Package[] = [
         answer: 'The A/C Pushback bus departs from Bangalore at Night 10:00 PM on Day 1. Convenient boarding points across Bangalore include Yelahanka, Majestic / Anand Rao Circle, and Electronic City / Silk Board.'
       },
       {
-        question: 'Are all meals included in the ₹21,999/- package price?',
+        question: 'Are all meals included in the ₹25,999/- package price?',
         answer: 'Yes! All pure vegetarian meals (Breakfast, Lunch, and Dinner) are included throughout the tour, starting from Day 1 morning freshen-up and breakfast until Day 6 return transit.'
       },
       {

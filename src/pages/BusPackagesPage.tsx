@@ -297,7 +297,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
   const busFaqs = [
     {
       question: 'What bus tour packages are currently offered from Bangalore?',
-      answer: 'Sai Samarth Tours operates three premier all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) South India Yatra (5N/6D – ₹21,999/-), 2) Shirdi – Saptha Shrungi – Kolhapur – Mumbai – Pandharpur (4N/5D – ₹14,999/-), and 3) Panch Bootha Yatra & Tirumala Balaji (4N/5D – ₹16,999/-). All packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
+      answer: 'Sai Samarth Tours operates three premier all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) South India Yatra (5N/6D – ₹25,999/-), 2) Shirdi – Saptha Shrungi – Triyambhakeshwar – Kolhapur – Mumbai – Pandharpur (4N/5D – ₹15,999/-), and 3) Panch Bootha Yatra & Tirumala Balaji (4N/5D – ₹16,999/-). All packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
     },
     {
       question: 'What is the boarding point and departure schedule in Bangalore?',
@@ -325,7 +325,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-20">
       <SEOHead
         title="Bus Tour Packages from Bangalore | Shirdi Kolhapur & Panch Bootha Yatras | Sai Samarth Tours"
-        description="Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Shirdi - Saptha Shrungi - Kolhapur 4N/5D for ₹14,999/- & Panch Bootha Balaji 4N/5D for ₹16,999/-. Includes 3-Star AC stays, all meals & Tour Manager."
+        description="Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Shirdi - Saptha Shrungi - Triyambhakeshwar 4N/5D for ₹15,999/- & South India Yatra 5N/6D for ₹25,999/-. Includes 3-Star AC stays, all meals & Tour Manager."
         canonical="https://saisamarthtours.com/bus-packages"
         ogImage="/shirdi-flight-tour-package-from-bangalore-1.webp"
         ogType="website"

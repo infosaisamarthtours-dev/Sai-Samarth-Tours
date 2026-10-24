@@ -5,10 +5,10 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
   title: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
   slug: 'south-india-tour-package-from-bangalore',
   seoTitle: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
-  seoDescription: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹21,999.',
+  seoDescription: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹25,999.',
   excerpt: 'Complete guide to the 6 Days / 5 Nights South India tour package from Bangalore with Sai Samarth Tours. Discover sacred temples across Tamil Nadu & Kerala including Thiruvannamalai, Madurai Meenakshi, Rameshwaram, Kanyakumari, Trivandrum Padmanabhaswamy, Alleppey backwaters & Guruvayur Krishna in a deluxe A/C pushback bus with 3-star AC stay and all pure veg meals.',
   content: {
-    intro: 'Looking for the ultimate **South India tour package from Bangalore** that combines sacred temple darshans with scenic backwater tranquility? Sai Samarth Tours proudly presents our flagship [South India Yatra package](/package/south-india-yatra-bus-tour-from-bangalore)—an all-inclusive, expertly curated 6 Days / 5 Nights spiritual circuit departing directly from Bengaluru in a sanitized deluxe A/C Pushback coach. Covering the most sacred shrines of Tamil Nadu and Kerala—from the fire element at Thiruvannamalai and the architectural marvels of Thanjavur & Srirangam to the world-renowned Madurai Meenakshi Amman, the Char Dham Jyotirlinga at Rameshwaram, the land’s end at Kanyakumari, the cosmic majesty of Sree Padmanabhaswamy, the tranquil Alleppey backwaters, and the divine blessings of Guruvayur Sri Krishna. At an affordable **South India Yatra package price of ₹21,999** (with 5% government tax applicable), this pilgrimage provides verified 3-Star AC hotel stays on twin/double sharing, 100% wholesome pure vegetarian meals (Breakfast, Lunch & Dinner), daily packaged drinking water, and experienced on-board tour manager coordination throughout.',
+    intro: 'Looking for the ultimate **South India tour package from Bangalore** that combines sacred temple darshans with scenic backwater tranquility? Sai Samarth Tours proudly presents our flagship [South India Yatra package](/package/south-india-yatra-bus-tour-from-bangalore)—an all-inclusive, expertly curated 6 Days / 5 Nights spiritual circuit departing directly from Bengaluru in a sanitized deluxe A/C Pushback coach. Covering the most sacred shrines of Tamil Nadu and Kerala—from the fire element at Thiruvannamalai and the architectural marvels of Thanjavur & Srirangam to the world-renowned Madurai Meenakshi Amman, the Char Dham Jyotirlinga at Rameshwaram, the land’s end at Kanyakumari, the cosmic majesty of Sree Padmanabhaswamy, the tranquil Alleppey backwaters, and the divine blessings of Guruvayur Sri Krishna. At an affordable **South India Yatra package price of ₹25,999** (with 5% government tax applicable), this pilgrimage provides verified 3-Star AC hotel stays on twin/double sharing, 100% wholesome pure vegetarian meals (Breakfast, Lunch & Dinner), daily packaged drinking water, and experienced on-board tour manager coordination throughout.',
     sections: [
       {
         heading: '1. Why This South India Tour Package from Bangalore is the Ultimate Spiritual Journey',
@@ -45,9 +45,9 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
         tips: '🚌 Boarding Convenience: Boarding points across Bangalore include Yelahanka New Town, Anand Rao Circle / Majestic, and Silk Board / Electronic City for effortless transit.'
       },
       {
-        heading: '3. What’s Included in the ₹21,999 South India Yatra Package Price',
+        heading: '3. What’s Included in the ₹25,999 South India Yatra Package Price',
         subheading: 'South India Bus Tour with Hotel Stay and All Meals — Transparent & Honest Pilgrimage Fares',
-        body: 'At Sai Samarth Tours, we believe every devotee deserves complete clarity. The **South India Yatra package price ₹21,999** is an honest, all-inclusive fare providing maximum comfort and peace of mind with no hidden surprises. Please confirm departure dates with our team, as the brochure confirms that 5% government tax is applicable over the base package cost.',
+        body: 'At Sai Samarth Tours, we believe every devotee deserves complete clarity. The **South India Yatra package price ₹25,999** is an honest, all-inclusive fare providing maximum comfort and peace of mind with no hidden surprises. Please confirm departure dates with our team, as the brochure confirms that 5% government tax is applicable over the base package cost.',
         bulletPoints: [
           '**A/C Pushback Bus Transportation:** Travel comfortably in a sanitized 2+2 luxury pushback coach with air suspension, high-back reclining seats, panoramic windows, and ample luggage boot space throughout the entire 6 days.',
           '**Dedicated Tour Manager Support:** An experienced Sai Samarth tour manager accompanies the bus coach from Bangalore to Bangalore, assisting senior citizens, coordinating room allotments, guiding temple rituals, and managing meal schedules.',
@@ -57,7 +57,7 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
           '**Sightseeing Entry Passes:** Entrance fees for all scheduled sightseeing temples and monuments (except Alleppey houseboat and Guruvayoor VIP entry, which are at own cost).',
           '**Transparent Payment Terms:** For packages below ₹25,000, 100% full payment is accepted at the time of booking via online UPI, Net Banking, or offline visit to our Bangalore office.'
         ],
-        tips: '🏷️ Price Notice: 5% Government GST is levied additionally over the published ₹21,999 tour cost as per statutory tourism norms.'
+        tips: '🏷️ Price Notice: 5% Government GST is levied additionally over the published ₹25,999 tour cost as per statutory tourism norms.'
       },
       {
         heading: '4. Highlights of the Legendary Shrines & Attractions Covered',
@@ -90,7 +90,7 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
           '**Temple Protocol & Queuing Knowledge:** Navigating queue systems, special entry tokens, and dress codes across 14 ancient temples requires local operational expertise. Our accompanying tour manager guides your family at every step.',
           '**Group Devotion & Senior Comfort:** Traveling with fellow devotees in a spacious pushback coach creates an uplifting devotional atmosphere, with frequent rest stops and senior-friendly pacing.'
         ],
-        tips: '💰 Value Comparison: While a self-planned trip easily crosses ₹35,000 per person, Sai Samarth Tours delivers an all-inclusive 6-day experience for just ₹21,999/-.'
+        tips: '💰 Value Comparison: While a self-planned trip easily crosses ₹35,000 per person, Sai Samarth Tours delivers an all-inclusive 6-day experience for just ₹25,999/-.'
       },
       {
         heading: '6. Essential Travel Tips: Dress Codes, Boarding & Senior Devotee Care',
@@ -121,7 +121,7 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
     },
     keyTakeaways: [
       'Comprehensive 6 Days / 5 Nights South India tour package from Bangalore covering 14+ legendary shrines across Tamil Nadu and Kerala.',
-      'All-inclusive tour fare of ₹21,999/- per person (5% Govt GST additional) covering A/C Pushback bus, 5 nights 3-star AC hotels, all meals, and water bottle.',
+      'All-inclusive tour fare of ₹25,999/- per person (5% Govt GST additional) covering A/C Pushback bus, 5 nights 3-star AC hotels, all meals, and water bottle.',
       'Highlights include Thiruvannamalai Arunachaleswarar, Thanjavur Brihadeeswara, Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari Vivekananda Rock.',
       'Kerala highlights include world-famous Sree Anantha Padmanabhaswamy Temple, Jatayu Earth Center, Alleppey backwaters, and Guruvayur Sri Krishna Temple.',
       'Dedicated experienced Tour Manager accompanies your family from Bangalore to Bangalore for stress-free darshan queues and seamless hotel stays.',
@@ -135,7 +135,7 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
       },
       {
         question: 'What is the price of the South India Yatra package and what does it include?',
-        answer: 'The package is priced at ₹21,999 per person (with 5% Government tax applicable). It includes round-trip travel by deluxe 2+2 A/C Pushback bus, 5 nights of verified 3-Star AC hotel accommodation on twin/double sharing basis, all daily pure vegetarian meals (Breakfast, Lunch, and Dinner), dedicated tour manager guidance, 1L packaged drinking water daily, and scheduled temple entrance fees.'
+        answer: 'The package is priced at ₹25,999 per person (with 5% Government tax applicable). It includes round-trip travel by deluxe 2+2 A/C Pushback bus, 5 nights of verified 3-Star AC hotel accommodation on twin/double sharing basis, all daily pure vegetarian meals (Breakfast, Lunch, and Dinner), dedicated tour manager guidance, 1L packaged drinking water daily, and scheduled temple entrance fees.'
       },
       {
         question: 'What are the main temples covered in this 6-day South India tour package?',
@@ -158,7 +158,7 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
         answer: 'You can book your seats directly online through saisamarthtours.com/bus-packages, visit our registered office at Yelahanka New Town in Bangalore, or call/WhatsApp our dedicated pilgrimage booking team at +91 91877 11649 / 50 / 51 for instant departure confirmations.'
       }
     ],
-    conclusion: 'The [South India Tour Package from Bangalore – 6 Days / 5 Nights](/package/south-india-yatra-bus-tour-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary opportunity to experience the profound spiritual heritage and architectural grandeur of Tamil Nadu and Kerala. With sanitized deluxe A/C Pushback bus transport, verified 3-Star AC hotel stays for 5 nights, all daily wholesome pure vegetarian meals, and caring tour manager assistance for an affordable ₹21,999 (plus 5% govt tax), this pilgrimage brings peace of mind and divine grace to every traveler. Explore our complete range of [bus tour packages from Bangalore](/bus-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra departure!'
+    conclusion: 'The [South India Tour Package from Bangalore – 6 Days / 5 Nights](/package/south-india-yatra-bus-tour-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary opportunity to experience the profound spiritual heritage and architectural grandeur of Tamil Nadu and Kerala. With sanitized deluxe A/C Pushback bus transport, verified 3-Star AC hotel stays for 5 nights, all daily wholesome pure vegetarian meals, and caring tour manager assistance for an affordable ₹25,999 (plus 5% govt tax), this pilgrimage brings peace of mind and divine grace to every traveler. Explore our complete range of [bus tour packages from Bangalore](/bus-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra departure!'
   },
   author: {
     name: 'Sai Samarth Tours Editorial Desk',

@@ -243,6 +243,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             </a>
           </div>
 
+          {/* Bus Tour Button */}
+          <Link
+            to="/bus-packages"
+            className="bg-gradient-to-r from-[#114088] to-[#1E3A8A] hover:from-[#0C1F41] hover:to-[#114088] text-white px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:shadow-lg transform hover:-translate-y-0.5 transition-all shadow-md active:scale-95 whitespace-nowrap flex items-center gap-1.5 border border-amber-400/40"
+          >
+            <Bus className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B]" />
+            <span>Bus Tour</span>
+          </Link>
+
           <button
             onClick={() => onOpenEnquiry()}
             className="bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white px-3.5 py-1.5 sm:px-7 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:shadow-lg transform hover:-translate-y-0.5 transition-all shadow-md active:scale-95 whitespace-nowrap"
@@ -328,15 +337,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   <Link to="/package/south-india-yatra-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-orange-50/40 transition-colors block group/item">
                     <div className="flex items-center justify-between">
                       <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">South India Yatra</span>
-                      <span className="text-xs font-black text-[#EA580C]">₹21,999/-</span>
+                      <span className="text-xs font-black text-[#EA580C]">₹25,999/-</span>
                     </div>
                     <p className="text-[11px] text-gray-500 mt-0.5">5N/6D • Madurai, Rameshwaram, Kanyakumari, Alleppey & Guruvayoor</p>
                   </Link>
 
                   <Link to="/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore" className="px-5 py-3.5 text-sm text-gray-800 hover:text-[#2563EB] hover:bg-amber-50/40 transition-colors block group/item">
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">Shirdi – Saptha Shrungi – Kolhapur</span>
-                      <span className="text-xs font-black text-[#EA580C]">₹14,999/-</span>
+                      <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">Shirdi – Saptha Shrungi – Triyambhakeshwar</span>
+                      <span className="text-xs font-black text-[#EA580C]">₹15,999/-</span>
                     </div>
                     <p className="text-[11px] text-gray-500 mt-0.5">4N/5D • Ganagapur, Pandharpur, Mumbai, Pune & Savadatti</p>
                   </Link>
@@ -627,7 +636,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-black text-[#114088]">South India Yatra</span>
-                      <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded">₹21,999/-</span>
+                      <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded">₹25,999/-</span>
                     </div>
                     <p className="text-[11px] text-gray-500 leading-tight">
                       5N/6D • A/C Pushback Bus • Madurai, Rameshwaram, Kanyakumari, Alleppey & Guruvayoor
@@ -641,8 +650,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     className="block p-3 bg-white rounded-xl hover:bg-amber-50/50 transition-colors border border-amber-200 shadow-xs"
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-black text-[#114088]">Shirdi – Saptha Shrungi – Kolhapur</span>
-                      <span className="text-xs font-black text-[#EA580C] bg-amber-50 px-2 py-0.5 rounded">₹14,999/-</span>
+                      <span className="text-xs font-black text-[#114088]">Shirdi – Saptha Shrungi – Triyambhakeshwar</span>
+                      <span className="text-xs font-black text-[#EA580C] bg-amber-50 px-2 py-0.5 rounded">₹15,999/-</span>
                     </div>
                     <p className="text-[11px] text-gray-500 leading-tight">
                       4N/5D • A/C Pushback Bus • Ganagapur, Pandharpur, Mumbai & Savadatti
