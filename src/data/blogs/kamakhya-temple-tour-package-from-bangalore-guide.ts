@@ -38,9 +38,9 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
         tips: '✈️ Flight Convenience: Direct round-trip flights between BLR and GAU take just ~3 hours each way, eliminating the need for exhausting train journeys.'
       },
       {
-        heading: '3. What’s Included in the Kamakhya Temple Tour Package Price (₹30,999/-)',
+        heading: '3. What’s Included in the Kamakhya Temple Tour Package Price (₹29,999/-)',
         subheading: 'All-Inclusive Transparency: Airfares, 3-Star AC Hotel, Pure Veg Meals & Boat Transfers',
-        body: 'Unlike unverified local operators who levy hidden charges for boats, entry permits, and airport parking, Sai Samarth Tours ensures that the **Kamakhya Temple tour cost from Bangalore** (₹30,999/- per person on twin/double sharing) covers every essential element of your pilgrimage.',
+        body: 'Unlike unverified local operators who levy hidden charges for boats, entry permits, and airport parking, Sai Samarth Tours ensures that the **Kamakhya Temple tour cost from Bangalore** (₹29,999/- per person on twin/double sharing) covers every essential element of your pilgrimage.',
         bulletPoints: [
           '**Direct Round-Trip Flights:** Confirmed economy class flight tickets from Kempegowda International Airport (BLR) to Guwahati (GAU) and return with standard 15 kg check-in baggage and 7 kg cabin baggage allowance.',
           '**Verified 3-Star AC Hotel Stay:** 1 Night comfortable accommodation in verified 3-star AC hotel in Guwahati featuring elevator access, clean linens, and modern attached bathrooms with hot water.',
@@ -106,7 +106,7 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
       'Verified 3-Star AC hotel stay in Guwahati with all pure vegetarian meals (Breakfast, Lunch & Dinner) included.',
       'Motorized boat transfer across the scenic Brahmaputra River to Peacock Island included in the package.',
       'Convenient weekend schedule ideal for IT professionals, working families, and senior citizens departing from Kempegowda Airport.',
-      'Transparent all-inclusive tour fare of ₹30,999/- per person on twin/double sharing with zero hidden charges.'
+      'Transparent all-inclusive tour fare of ₹29,999/- per person on twin/double sharing with zero hidden charges.'
     ],
     faqs: [
       {
@@ -142,7 +142,7 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
         answer: 'You can reserve your seats online at saisamarthtours.com, visit our registered Bangalore office at Yelahanka New Town, or call/WhatsApp our dedicated pilgrimage booking desk directly at +91 91877 11649 / 50 / 51 for instant booking assistance and confirmed departure dates.'
       }
     ],
-    conclusion: 'The [Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan](/package/kamakhya-temple-tour-package-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary spiritual weekend in Assam. Experience the immense, primordial creative energy of Maa Kamakhya, the serene island abodes of Lord Shiva, and the ancient wisdom of the Brahmaputra valley. With direct flights, 3-star AC accommodations, all pure vegetarian dining, and devoted tour coordinator care for an all-inclusive ₹30,999/-, this sacred Shakti Peeth yatra is smooth, fulfilling, and unforgettable. Browse our complete [pilgrimage tour packages from Bangalore](/pilgrimage-tour-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra!'
+    conclusion: 'The [Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan](/package/kamakhya-temple-tour-package-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary spiritual weekend in Assam. Experience the immense, primordial creative energy of Maa Kamakhya, the serene island abodes of Lord Shiva, and the ancient wisdom of the Brahmaputra valley. With direct flights, 3-star AC accommodations, all pure vegetarian dining, and devoted tour coordinator care for an all-inclusive ₹29,999/-, this sacred Shakti Peeth yatra is smooth, fulfilling, and unforgettable. Browse our complete [pilgrimage tour packages from Bangalore](/pilgrimage-tour-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra!'
   },
   author: {
     name: 'Sai Samarth Tours Editorial Desk',
