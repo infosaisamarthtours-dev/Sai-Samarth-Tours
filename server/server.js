@@ -106,7 +106,8 @@ const handleLeadSubmission = async (req, res) => {
 app.post("/api/telecrm/leads", handleLeadSubmission);
 app.post("/api/leads", handleLeadSubmission);
 
-const port = process.env.PORT || 5000;
+// In Railway production, Nginx listens on PORT (8080) and proxies /api to port 5000
+const port = process.env.SERVER_PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Backend running on port ${port}`);
