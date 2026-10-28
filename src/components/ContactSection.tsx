@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { siteConfig, getFullAddress } from '../data/config';
 import { ALL_PACKAGES } from '../data/packages';
 import confetti from 'canvas-confetti';
+import { sendLeadToTeleCRM } from '../api/telecrm.js';
 
 interface ContactSectionProps {
   initialPackageTitle?: string;
@@ -33,9 +34,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackageTi
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    try {
+      await sendLeadToTeleCRM({
+        name: formData.fullName || 'Traveler',
+        phone: formData.phoneNumber || formData.whatsappNumber,
+        email: formData.email,
+        message: `Package: ${formData.selectedPackage} | Date: ${formData.preferredTravelDate || 'Flexible'} | Travelers: ${formData.numberOfTravellers}${formData.message ? ` | Note: ${formData.message}` : ''}`
+      });
+    } catch (err: any) {
+      console.warn('TeleCRM lead submission warning:', err.message);
+    }
+
     confetti({
       particleCount: 70,
       spread: 60,

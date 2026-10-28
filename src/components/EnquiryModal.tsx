@@ -4,6 +4,7 @@ import { getWhatsAppUrl, getEnquiryWhatsAppUrl } from '../utils/whatsapp';
 import { trackLead, trackContact } from '../utils/pixel';
 import confetti from 'canvas-confetti';
 import { X, User, Phone, MapPin, MessageSquare, Send, ShieldCheck, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { sendLeadToTeleCRM } from '../api/telecrm.js';
 
 interface EnquiryModalProps {
   isOpen: boolean;
@@ -80,9 +81,20 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    try {
+      await sendLeadToTeleCRM({
+        name: formData.fullName || 'Traveler',
+        phone: formData.phoneNumber,
+        message: `Package: ${formData.selectedPackage || 'General Enquiry'}${formData.message ? ` | Note: ${formData.message}` : ''}`
+      });
+    } catch (err: any) {
+      console.warn('TeleCRM lead submission warning:', err.message);
+    }
+
     trackLead({
       content_name: formData.selectedPackage || 'General Enquiry'
     });

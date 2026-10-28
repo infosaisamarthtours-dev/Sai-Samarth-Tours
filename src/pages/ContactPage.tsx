@@ -8,6 +8,7 @@ import { localBusinessSchema } from '../utils/schema';
 import { getContactMessageWhatsAppUrl } from '../utils/whatsapp';
 import { trackContact } from '../utils/pixel';
 import confetti from 'canvas-confetti';
+import { sendLeadToTeleCRM } from '../api/telecrm.js';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,9 +21,22 @@ export function ContactPage() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim() || 'Traveler';
+    try {
+      await sendLeadToTeleCRM({
+        name: fullName,
+        phone: formData.phone,
+        email: formData.email,
+        message: `Subject: ${formData.subject || 'None'}${formData.message ? ` | Message: ${formData.message}` : ''}`
+      });
+    } catch (err: any) {
+      console.warn('TeleCRM lead submission warning:', err.message);
+    }
+
     trackContact({
       content_name: formData.subject || 'Contact Page Message'
     });

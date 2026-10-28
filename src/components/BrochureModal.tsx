@@ -3,6 +3,7 @@ import { Package } from '../types';
 import { siteConfig } from '../data/config';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import confetti from 'canvas-confetti';
+import { sendLeadToTeleCRM } from '../api/telecrm.js';
 import { 
   X, User, Phone, FileText, Printer, 
   Utensils, Building2, Bus, Plane, 
@@ -22,9 +23,19 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, pkg, onClo
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !phoneNumber.trim()) return;
+
+    try {
+      await sendLeadToTeleCRM({
+        name: fullName.trim(),
+        phone: phoneNumber.trim(),
+        message: `Requested itinerary PDF for package: ${pkg.title}`
+      });
+    } catch (err: any) {
+      console.warn('TeleCRM lead submission warning:', err.message);
+    }
 
     confetti({
       particleCount: 70,

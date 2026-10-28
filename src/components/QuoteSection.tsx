@@ -3,6 +3,7 @@ import { MessageCircle, Phone, Send, CheckCircle2 } from 'lucide-react';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { siteConfig } from '../data/config';
 import confetti from 'canvas-confetti';
+import { sendLeadToTeleCRM } from '../api/telecrm.js';
 
 export function QuoteSection() {
   const [formData, setFormData] = useState({
@@ -20,9 +21,20 @@ export function QuoteSection() {
     return `https://wa.me/${siteConfig.whatsappNumber || '919187711649'}?text=${text}`;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    try {
+      await sendLeadToTeleCRM({
+        name: formData.name.trim() || 'Traveler',
+        phone: formData.mobile.trim(),
+        message: `Destination interested: ${formData.destination || 'Flexible / Any'}`
+      });
+    } catch (err: any) {
+      console.warn('TeleCRM lead submission warning:', err.message);
+    }
+
     confetti({
       particleCount: 70,
       spread: 60,
