@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "node server/server.js",
     "build": "tsc && vite build && node scripts/generate-sitemap.mjs && node scripts/prerender-seo.mjs",
     "preview": "vite preview",
     "start": "vite preview --host --port 8080"
