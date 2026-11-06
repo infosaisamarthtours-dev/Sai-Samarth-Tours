@@ -649,6 +649,38 @@ pages.forEach(p => {
 // 4. Prerender Blog Articles
 const blogArticles = [
   {
+    slug: 'best-south-india-temple-tour-from-bangalore-guide',
+    title: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
+    desc: 'Complete 2026 travel guide for the best South India temple tour from Bangalore covering Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari. Itinerary, flights, trains, and VIP darshan.',
+    image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
+    h1: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
+    intro: 'The sacred southern triangle of Tamil Nadu—Madurai, Rameshwaram, and Kanyakumari—represents the spiritual soul of South India. Connecting Goddess Meenakshi, the Char Dham Jyotirlinga at Rameshwaram with 22 Theerthams bath, and Kanyakumari where three oceans converge.'
+  },
+  {
+    slug: 'ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide',
+    title: 'Ujjain Mahakaleshwar Bhasma Aarti: Booking, Darshan Rules & Travel Guide',
+    desc: 'Definitive guide to Ujjain Mahakaleshwar Bhasma Aarti: Step-by-step online booking procedure, dress code, VIP darshan rules, Mahakal Lok corridor, and flights from Bangalore.',
+    image: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp',
+    h1: 'Ujjain Mahakaleshwar Bhasma Aarti: Booking, Darshan Rules & Travel Guide',
+    intro: 'Shri Mahakaleshwar in Ujjain, Madhya Pradesh is the only Dakshinabhimukhi (south-facing) Jyotirlinga, master of time and mortality. Discover complete online booking procedures, strict dress codes, and flight itineraries from Bangalore for the pre-dawn Bhasma Aarti.'
+  },
+  {
+    slug: '12-jyotirlinga-temples-in-india-travel-guide',
+    title: '12 Jyotirlinga Temples in India: Names, Locations, Best Routes & Travel Guide',
+    desc: 'Complete travel guide to the 12 Jyotirlinga temples in India. Discover temple names, state locations, best circuit routes from Bangalore, VIP darshan rules, Bhasma Aarti tips, and package details.',
+    image: '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-1.webp',
+    h1: '12 Jyotirlinga Temples in India: Names, Locations, Best Routes & Travel Guide',
+    intro: 'In Sanatana Dharma, the 12 Jyotirlingas represent the supreme, radiant manifestations of Lord Shiva—the endless pillar of cosmic light (Jyoti) that transcends physical birth and decay. Devotees believe that visiting these twelve divine shrines bestows liberation from the karmic cycle of rebirth.'
+  },
+  {
+    slug: 'kashi-ayodhya-prayagraj-tour-from-bangalore-complete-guide',
+    title: 'Kashi Ayodhya Prayagraj Tour from Bangalore: Complete Pilgrimage Travel Guide',
+    desc: 'Complete 2026 travel guide for Kashi Ayodhya Prayagraj tour from Bangalore. Direct flights, Kashi Vishwanath VIP pass, Ram Lalla darshan, Triveni Sangam snan, 5-day itinerary, and senior citizen tips.',
+    image: '/kashi-ayodhya-prayagraj-tour-package-from-bangalore.webp',
+    h1: 'Kashi Ayodhya Prayagraj Tour from Bangalore: Complete Pilgrimage Travel Guide',
+    intro: 'The holy triad of Uttar Pradesh—Kashi (Varanasi), Ayodhya, and Prayagraj—constitutes the supreme spiritual pilgrimage in Sanatana Dharma. For devotees departing from Karnataka, this sacred circuit offers the extraordinary grace of seeking liberation at Kashi Vishwanath, revering Balak Ram Lalla, and taking the holy Triveni Sangam Snan.'
+  },
+  {
     slug: 'shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide',
     title: 'Shirdi with 3 Jyotirlinga Tour Package from Bangalore | Flight & VIP Darshan',
     desc: 'Book Shirdi with 3 Jyotirlinga tour package from Bangalore with flights & VIP Darshan. Visit Bhimashankar, Trimbakeshwar, Grishneshwar, Ellora & Shani Shingnapur.',

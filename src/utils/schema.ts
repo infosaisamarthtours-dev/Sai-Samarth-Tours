@@ -78,7 +78,8 @@ export const localBusinessSchema = {
   ],
   'sameAs': [
     'https://www.facebook.com/saisamarthtours',
-    'https://www.instagram.com/saisamarthtours',
+    'https://www.instagram.com/sai.samarth.tours',
+    'https://www.youtube.com/@SAISAMARTHTOURS',
     'https://maps.google.com/?q=No.+2238,+Second+Floor,+16th+B+Cross,+Yelahanka+New+Town,+Bengaluru,+Karnataka+560064'
   ],
   'founders': siteConfig.founders.map(name => ({

@@ -1,4 +1,8 @@
 import { BlogPost } from './types';
+import { bestSouthIndiaTempleTourFromBangaloreGuidePost } from './best-south-india-temple-tour-from-bangalore-guide';
+import { ujjainMahakaleshwarBhasmaAartiGuidePost } from './ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide';
+import { twelveJyotirlingaTemplesInIndiaGuidePost } from './twelve-jyotirlinga-temples-in-india-travel-guide';
+import { kashiAyodhyaPrayagrajTourFromBangaloreCompleteGuidePost } from './kashi-ayodhya-prayagraj-tour-from-bangalore-complete-guide';
 import { shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost } from './shirdi-tour-package-from-bangalore-direct-flight-vip-darshan';
 import { shirdiTourPackageFromBangaloreGuidePost } from './shirdi-tour-package-from-bangalore-guide';
 import { kashiAyodhyaTourPackageFromBangalorePost } from './kashi-ayodhya-tour-package-from-bangalore';
@@ -14,6 +18,10 @@ import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-to
 import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { bestSouthIndiaTempleTourFromBangaloreGuidePost } from './best-south-india-temple-tour-from-bangalore-guide';
+export { ujjainMahakaleshwarBhasmaAartiGuidePost } from './ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide';
+export { twelveJyotirlingaTemplesInIndiaGuidePost } from './twelve-jyotirlinga-temples-in-india-travel-guide';
+export { kashiAyodhyaPrayagrajTourFromBangaloreCompleteGuidePost } from './kashi-ayodhya-prayagraj-tour-from-bangalore-complete-guide';
 export { shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost } from './shirdi-tour-package-from-bangalore-direct-flight-vip-darshan';
 export { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 export { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
@@ -29,6 +37,10 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  bestSouthIndiaTempleTourFromBangaloreGuidePost,
+  ujjainMahakaleshwarBhasmaAartiGuidePost,
+  twelveJyotirlingaTemplesInIndiaGuidePost,
+  kashiAyodhyaPrayagrajTourFromBangaloreCompleteGuidePost,
   shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost,
   shirdiWith3JyotirlingaTourPackageFromBangalorePost,
   kamakhyaTempleTourPackageFromBangalorePost,
