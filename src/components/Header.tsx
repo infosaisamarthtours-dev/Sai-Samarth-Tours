@@ -260,7 +260,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
           </div>
 
           {/* Top Priority Yatras Button & Dropdown */}
-          <div ref={topYatrasRef} className="relative sm:group">
+          <div ref={topYatrasRef} className="relative sm:group shrink-0 flex items-center">
             <button
               type="button"
               onClick={() => {
@@ -287,7 +287,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
 
             {/* Priority Yatras Dropdown Menu (Mobile Popover & Desktop Dropdown) */}
             <div 
-              className={`fixed left-3 right-3 max-w-[340px] mx-auto top-[68px] sm:static sm:max-w-none sm:mx-0 sm:absolute sm:top-full sm:left-auto sm:right-0 sm:mt-2.5 sm:w-84 bg-white shadow-2xl border border-gray-100 rounded-2xl z-50 overflow-hidden divide-y divide-gray-100 transition-all duration-200 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:translate-y-0 sm:group-hover:pointer-events-auto ${
+              className={`fixed sm:absolute left-3 right-3 sm:left-auto sm:right-0 max-w-[340px] sm:max-w-none mx-auto sm:mx-0 top-[68px] sm:top-full sm:mt-2.5 sm:w-84 bg-white shadow-2xl border border-gray-100 rounded-2xl z-50 overflow-hidden divide-y divide-gray-100 transition-all duration-200 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:translate-y-0 sm:group-hover:pointer-events-auto ${
                 isTopYatrasOpen 
                   ? 'opacity-100 visible translate-y-0 pointer-events-auto' 
                   : 'opacity-0 invisible -translate-y-2 pointer-events-none'
