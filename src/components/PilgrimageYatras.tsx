@@ -11,16 +11,16 @@ interface Props {
 }
 
 export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
-  // Specific pilgrimage package IDs
+  // Specific pilgrimage package IDs (Puri, Kamakhya & Indore-Ujjain are top priority)
   const pilgrimageIds = [
-    'kholapur-pandarpur',
-    'puri-jagannath',
     'kamakhya',
-    'kashi-ayodhya-prayagraj',
-    'kashi-ayodhya',
+    'puri-jagannath',
     'indore-ujjain',
-    'vaishnodevi',
+    'kashi-ayodhya',
+    'kashi-ayodhya-prayagraj',
     'baidyanath',
+    'kholapur-pandarpur',
+    'vaishnodevi',
     'rameshwaram',
     'gujarat'
   ];

@@ -104,7 +104,7 @@ export function PromoAndReviews() {
             <div className="relative z-10 pt-6 border-t border-white/20 flex items-center justify-between">
               <div>
                 <span className="text-[10px] text-amber-300 font-semibold block uppercase">All-Inclusive Flight Yatras</span>
-                <span className="text-lg font-bold text-white">Starting from ₹17,999/-</span>
+                <span className="text-lg font-bold text-white">Starting from ₹18,999/-</span>
               </div>
               <a 
                 href="#featured" 

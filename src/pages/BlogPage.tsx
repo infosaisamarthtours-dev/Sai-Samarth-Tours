@@ -54,11 +54,13 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
     return BLOG_POSTS.find(p => p.featured) || BLOG_POSTS[0];
   }, []);
 
-  // Top tour packages to display as cards
+  // Top tour packages to display as cards (Main priority packages)
   const featuredPackages: Package[] = useMemo(() => {
-    const targetIds = ['shirdi-3-jyotirlinga', 'kashi-ayodhya-prayagraj', 'singapore-malaysia', 'kashmir-paradise'];
-    const matched = ALL_PACKAGES.filter(p => targetIds.includes(p.id));
-    return matched.length >= 4 ? matched.slice(0, 4) : ALL_PACKAGES.slice(0, 4);
+    const targetIds = ['shirdi-3-jyothirlinga', 'kamakhya', 'puri-jagannath', 'indore-ujjain'];
+    const matched = targetIds
+      .map(id => ALL_PACKAGES.find(p => p.id === id))
+      .filter((p): p is Package => p !== undefined);
+    return matched.length >= 4 ? matched : ALL_PACKAGES.slice(0, 4);
   }, []);
 
   const toggleBookmark = (id: string, e: React.MouseEvent) => {

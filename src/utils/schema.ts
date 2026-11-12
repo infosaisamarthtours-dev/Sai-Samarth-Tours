@@ -20,7 +20,7 @@ export const localBusinessSchema = {
   'description': 'Leading travel agency and pilgrimage tour operator in Bangalore offering all-inclusive Shirdi flight packages, Kashi Ayodhya yatras, Jyotirlinga tours, domestic and international vacations with 3-star AC hotels and tour manager assistance.',
   'telephone': '+919187711649',
   'email': 'info.saisamarthtours@gmail.com',
-  'priceRange': '₹17,999 - ₹75,999',
+  'priceRange': '₹15,999 - ₹75,999',
   'currenciesAccepted': 'INR',
   'paymentAccepted': 'Cash, Credit Card, Debit Card, UPI, Net Banking',
   'address': {

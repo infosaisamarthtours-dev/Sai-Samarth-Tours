@@ -11,19 +11,19 @@ interface FeaturedYatrasProps {
 
 export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage, onOpenEnquiry }) => {
   // Select priority package IDs for the 4-column x 3-row grid (12 cards total)
+  // Shirdi, Kamakhya, Puri Jagannath & Indore-Ujjain are the main top priority packages
   const preferredIds = [
-    'south-india-yatra-bus-tour',
-    'panch-bootha-balaji-bus-tour',
-    'shirdi-regular',
-    'shirdi-3-jyothirlinga',
-    'shirdi-2-jyothirlinga',
+    'shirdi-via-pune',
     'kamakhya',
     'puri-jagannath',
-    'vaishnodevi',
-    'gujarat',
     'indore-ujjain',
-    'kashi-ayodhya-prayagraj',
+    'shirdi-3-jyothirlinga',
     'kashi-ayodhya',
+    'baidyanath',
+    'south-india-yatra-bus-tour',
+    'panch-bootha-balaji-bus-tour',
+    'vaishnodevi',
+    'shirdi-via-mumbai',
     'rameshwaram-madurai'
   ];
 
@@ -62,7 +62,7 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
 
         {/* 4 Cards per Row x 3 Rows (12 cards total) - No horizontal scrolling */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
-          {featuredPackages.map((pkg) => (
+          {featuredPackages.map((pkg, index) => (
             <div
               key={pkg.id}
               className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xs hover:shadow-xl border border-gray-100 hover:border-amber-500/40 overflow-hidden flex flex-col transition-all duration-300 transform hover:-translate-y-1 group h-full w-full"
@@ -94,9 +94,15 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 pointer-events-none"></div>
 
                 {/* Top Badges */}
-                <div className="absolute top-2.5 left-2.5 bg-[#114088]/90 text-amber-300 backdrop-blur-md px-2 py-0.5 rounded-full text-[9px] font-bold shadow-xs flex items-center gap-1">
+                <div className={`absolute top-2.5 left-2.5 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[9px] font-bold shadow-xs flex items-center gap-1 ${
+                  index < 4 
+                    ? 'bg-[#114088] text-amber-300 border border-amber-400/50' 
+                    : 'bg-[#114088]/90 text-amber-300'
+                }`}>
                   <span>★ 4.9</span>
-                  <span className="text-white/80 font-normal">| Priority</span>
+                  <span className={index < 4 ? 'text-amber-200 font-semibold' : 'text-white/80 font-normal'}>
+                    {index < 4 ? '| Top Priority' : '| Priority'}
+                  </span>
                 </div>
 
                 <div className="absolute top-2.5 right-2.5 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-bold text-[#114088] shadow-xs">

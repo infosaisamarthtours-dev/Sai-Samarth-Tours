@@ -649,6 +649,22 @@ pages.forEach(p => {
 // 4. Prerender Blog Articles
 const blogArticles = [
   {
+    slug: 'kamakhya-temple-guwahati-travel-guide-darshan-tips',
+    title: 'Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to Visit & Trip Planning',
+    desc: 'Complete 2026 travel guide for Maa Kamakhya Temple in Guwahati, Assam: VIP darshan passes, Garbhagriha spring water rituals, best season, Ambubachi Mela, and trip planning from Bangalore.',
+    image: '/kamakhya-temple-tour-package-from-bangalore-2.webp',
+    h1: 'Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to Visit & Trip Planning',
+    intro: 'Perched high atop Nilachal Hill overlooking the mighty Brahmaputra River in Guwahati, Assam, Maa Kamakhya Temple is the supreme epicenter of Tantric Shakti worship in Sanatana Dharma. Discover complete VIP darshan rules, sacred rituals, and flight itineraries from Bangalore.'
+  },
+  {
+    slug: 'puri-jagannath-konark-sun-temple-tour-complete-odisha-travel-guide',
+    title: 'Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Travel Guide',
+    desc: 'Complete 2026 Odisha pilgrimage travel guide covering Puri Jagannath Temple, UNESCO Konark Sun Temple, Bhubaneswar Lingaraj, and Dhauli. Flights from Bangalore, darshan rules, and 3-day itinerary.',
+    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
+    h1: 'Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Travel Guide',
+    intro: 'Revered as the holy land of Lord Jagannath (Purusottama Kshetra), Odisha forms a glorious Golden Triangle combining supreme devotion at the Char Dham Puri, Kalinga architectural brilliance at the UNESCO Konark Sun Temple, and ancient stone temples in Bhubaneswar.'
+  },
+  {
     slug: 'best-south-india-temple-tour-from-bangalore-guide',
     title: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
     desc: 'Complete 2026 travel guide for the best South India temple tour from Bangalore covering Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari. Itinerary, flights, trains, and VIP darshan.',

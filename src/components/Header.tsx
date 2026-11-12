@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
 import { siteConfig } from '../data/config';
-import { Phone, Menu, X, Search, ChevronDown, UserCheck, MapPin, Clock, ArrowRight, Tag, Bus } from 'lucide-react';
+import { Phone, Menu, X, Search, ChevronDown, UserCheck, MapPin, Clock, ArrowRight, Tag, Bus, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
   onOpenEnquiry: (packageTitle?: string) => void;
@@ -11,11 +11,14 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
+  const [isTopYatrasOpen, setIsTopYatrasOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const mobileSearchRef = useRef<HTMLDivElement>(null);
+  const topYatrasRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMobileDropdown = (category: string) => {
     setOpenMobileDropdown(prev => prev === category ? null : category);
@@ -26,9 +29,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
     setOpenMobileDropdown(null);
   };
 
-  // Close search dropdown on click outside
+  // Close search & top yatras dropdowns on click/touch outside
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
+    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
       if (
         searchContainerRef.current && 
         !searchContainerRef.current.contains(e.target as Node) &&
@@ -37,10 +40,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
       ) {
         setIsSearchOpen(false);
       }
+      if (topYatrasRef.current && !topYatrasRef.current.contains(e.target as Node)) {
+        setIsTopYatrasOpen(false);
+      }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
   }, []);
+
+  // Close dropdowns on route changes
+  useEffect(() => {
+    setIsTopYatrasOpen(false);
+    setMobileMenuOpen(false);
+  }, [location.pathname, location.hash]);
 
   // Filter and prioritize matches based on prefix
   const searchResults = useMemo(() => {
@@ -243,17 +259,140 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             </a>
           </div>
 
-          {/* Bus Tour Button */}
-          <Link
-            to="/bus-packages"
-            className="bg-gradient-to-r from-[#114088] to-[#1E3A8A] hover:from-[#0C1F41] hover:to-[#114088] text-white px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:shadow-lg transform hover:-translate-y-0.5 transition-all shadow-md active:scale-95 whitespace-nowrap flex items-center gap-1.5 border border-amber-400/40"
-          >
-            <Bus className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B]" />
-            <span>Bus Tour</span>
-          </Link>
+          {/* Top Priority Yatras Button & Dropdown */}
+          <div ref={topYatrasRef} className="relative sm:group">
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setIsTopYatrasOpen(prev => !prev);
+              }}
+              className="bg-gradient-to-r from-[#114088] to-[#1E3A8A] hover:from-[#0C1F41] hover:to-[#114088] text-white px-2.5 py-1.5 sm:px-4 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:shadow-lg transform hover:-translate-y-0.5 transition-all shadow-md active:scale-95 whitespace-nowrap flex items-center gap-1 sm:gap-1.5 border border-amber-400/40 cursor-pointer"
+              aria-expanded={isTopYatrasOpen}
+              aria-label="Top Priority Yatras Dropdown"
+              title="Top Priority Pilgrimage Yatras"
+            >
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B]" />
+              <span>Top Yatras</span>
+              <ChevronDown className={`w-3.5 h-3.5 text-amber-300 transition-transform duration-200 ${isTopYatrasOpen ? 'rotate-180' : 'sm:group-hover:rotate-180'}`} />
+            </button>
+
+            {/* Mobile Backdrop Overlay */}
+            {isTopYatrasOpen && (
+              <div 
+                className="fixed inset-0 z-40 bg-black/25 backdrop-blur-[2px] sm:hidden" 
+                onClick={() => setIsTopYatrasOpen(false)} 
+              />
+            )}
+
+            {/* Priority Yatras Dropdown Menu (Mobile Popover & Desktop Dropdown) */}
+            <div 
+              className={`fixed left-3 right-3 max-w-[340px] mx-auto top-[68px] sm:static sm:max-w-none sm:mx-0 sm:absolute sm:top-full sm:left-auto sm:right-0 sm:mt-2.5 sm:w-84 bg-white shadow-2xl border border-gray-100 rounded-2xl z-50 overflow-hidden divide-y divide-gray-100 transition-all duration-200 sm:group-hover:opacity-100 sm:group-hover:visible sm:group-hover:translate-y-0 sm:group-hover:pointer-events-auto ${
+                isTopYatrasOpen 
+                  ? 'opacity-100 visible translate-y-0 pointer-events-auto' 
+                  : 'opacity-0 invisible -translate-y-2 pointer-events-none'
+              }`}
+            >
+              <div className="px-4 py-2.5 bg-gradient-to-r from-amber-50 to-blue-50/70 border-b border-amber-100/70 flex items-center justify-between">
+                <span className="text-[10px] font-black uppercase tracking-wider text-[#114088] flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 text-[#EA580C]" /> Priority Yatras
+                </span>
+                <span className="text-[9px] bg-amber-400/20 text-[#EA580C] font-black px-2 py-0.5 rounded-full uppercase">
+                  Best Sellers
+                </span>
+              </div>
+
+              <div className="p-1.5 divide-y divide-gray-50 max-h-[60vh] overflow-y-auto">
+                {/* 1. Shirdi */}
+                <Link
+                  to="/shirdi-packages"
+                  onClick={() => setIsTopYatrasOpen(false)}
+                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
+                >
+                  <div>
+                    <div className="text-xs font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">
+                      Shirdi Tour Packages
+                    </div>
+                    <p className="text-[11px] text-gray-500">Direct Flights, VIP Darshan & 3★ Hotels</p>
+                  </div>
+                  <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded-md shrink-0">
+                    From ₹18,999
+                  </span>
+                </Link>
+
+                {/* 2. Kamakhya */}
+                <Link
+                  to="/package/kamakhya"
+                  onClick={() => setIsTopYatrasOpen(false)}
+                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
+                >
+                  <div>
+                    <div className="text-xs font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">
+                      Kamakhya Temple Guwahati
+                    </div>
+                    <p className="text-[11px] text-gray-500">2N/3D • Sacred Shaktipeeth & Brahmaputra</p>
+                  </div>
+                  <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded-md shrink-0">
+                    ₹31,999
+                  </span>
+                </Link>
+
+                {/* 3. Puri Jagannath */}
+                <Link
+                  to="/package/puri-jagannath"
+                  onClick={() => setIsTopYatrasOpen(false)}
+                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
+                >
+                  <div>
+                    <div className="text-xs font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">
+                      Puri Jagannath & Konark
+                    </div>
+                    <p className="text-[11px] text-gray-500">3N/4D • Jagannath Dham & Sun Temple</p>
+                  </div>
+                  <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded-md shrink-0">
+                    ₹31,999
+                  </span>
+                </Link>
+
+                {/* 4. Indore & Ujjain */}
+                <Link
+                  to="/package/indore-ujjain"
+                  onClick={() => setIsTopYatrasOpen(false)}
+                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
+                >
+                  <div>
+                    <div className="text-xs font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">
+                      Indore & Ujjain Mahakal
+                    </div>
+                    <p className="text-[11px] text-gray-500">2N/3D • Mahakaleshwar & Omkareshwar</p>
+                  </div>
+                  <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded-md shrink-0">
+                    ₹32,999
+                  </span>
+                </Link>
+              </div>
+
+              <Link
+                to="/#featured"
+                onClick={(e) => {
+                  setIsTopYatrasOpen(false);
+                  if (window.location.pathname === '/') {
+                    e.preventDefault();
+                    document.getElementById('featured')?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="block text-center py-2.5 text-xs font-bold text-[#114088] hover:text-[#EA580C] bg-slate-50 hover:bg-amber-50/50 transition-colors border-t border-gray-100"
+              >
+                View All Priority Yatras &rarr;
+              </Link>
+            </div>
+          </div>
 
           <button
-            onClick={() => onOpenEnquiry()}
+            onClick={() => {
+              setIsTopYatrasOpen(false);
+              onOpenEnquiry();
+            }}
             className="bg-gradient-to-r from-[#F97316] to-[#EA580C] hover:from-[#EA580C] hover:to-[#C2410C] text-white px-3.5 py-1.5 sm:px-7 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm hover:shadow-lg transform hover:-translate-y-0.5 transition-all shadow-md active:scale-95 whitespace-nowrap"
           >
             Book Now
@@ -261,7 +400,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
 
           {/* Mobile Menu Toggle */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => {
+              setIsTopYatrasOpen(false);
+              setMobileMenuOpen(!mobileMenuOpen);
+            }}
             className="md:hidden text-[#114088] p-2 hover:bg-gray-100 rounded-full transition-all duration-200"
           >
             {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -303,14 +445,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
               <div className="absolute left-0 top-full w-80 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="flex flex-col max-h-[280px] overflow-y-auto">
-                  <Link to="/package/kholapur-pandarpur" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kholapur and Pandrapur</Link>
                   <Link to="/package/puri-jagannath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Puri Jagannath</Link>
-                  <Link to="/package/kamakhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakya</Link>
-                  <Link to="/package/kashi-ayodhya-prayagraj" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
-                  <Link to="/package/kashi-ayodhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya</Link>
+                  <Link to="/package/kamakhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakhya</Link>
                   <Link to="/package/indore-ujjain" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Indore and Ujjain</Link>
-                  <Link to="/package/vaishnodevi" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Vaishnodevi</Link>
+                  <Link to="/package/kashi-ayodhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya</Link>
+                  <Link to="/package/kashi-ayodhya-prayagraj" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
                   <Link to="/package/baidyanath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Baidyanath</Link>
+                  <Link to="/package/kholapur-pandarpur" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kolhapur and Pandharpur</Link>
+                  <Link to="/package/vaishnodevi" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Vaishnodevi</Link>
                   <Link to="/package/rameshwaram" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Rameshwaram</Link>
                   <Link to="/package/gujarat" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Gujarat</Link>
                 </div>
@@ -525,6 +667,32 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               <span>Home</span>
             </Link>
 
+            {/* Top Priority Yatras (Mobile Highlight) */}
+            <div className="py-2.5 border-b border-gray-100">
+              <Link
+                to="/#featured"
+                onClick={(e) => {
+                  closeMobileMenu();
+                  if (window.location.pathname === '/') {
+                    e.preventDefault();
+                    document.getElementById('featured')?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="w-full bg-gradient-to-r from-amber-50 to-blue-50/70 border border-amber-200/80 rounded-xl p-2.5 flex items-center justify-between group hover:border-amber-400 transition-all shadow-xs"
+              >
+                <div className="flex items-center gap-2.5">
+                  <span className="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-500 to-orange-500 text-white flex items-center justify-center shrink-0 shadow-xs">
+                    <Sparkles className="w-3.5 h-3.5" />
+                  </span>
+                  <div>
+                    <div className="text-xs font-black text-[#114088] uppercase tracking-wider">Top Priority Yatras</div>
+                    <div className="text-[10px] text-gray-500 font-medium">Shirdi • Kamakhya • Puri • Indore Ujjain</div>
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-[#EA580C] group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+
             {/* Shirdi Dropdown */}
             <div className="border-b border-gray-100">
               <button
@@ -584,14 +752,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     <span>Explore All Pilgrimage Packages</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
-                  <Link to="/package/kholapur-pandarpur" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kolhapur and Pandharpur</Link>
                   <Link to="/package/puri-jagannath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Puri Jagannath</Link>
                   <Link to="/package/kamakhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya</Link>
-                  <Link to="/package/kashi-ayodhya-prayagraj" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
-                  <Link to="/package/kashi-ayodhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi With Ayodhya</Link>
                   <Link to="/package/indore-ujjain" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Indore and Ujjain</Link>
-                  <Link to="/package/vaishnodevi" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Vaishnodevi</Link>
+                  <Link to="/package/kashi-ayodhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi With Ayodhya</Link>
+                  <Link to="/package/kashi-ayodhya-prayagraj" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
                   <Link to="/package/baidyanath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Baidyanath</Link>
+                  <Link to="/package/kholapur-pandarpur" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kolhapur and Pandharpur</Link>
+                  <Link to="/package/vaishnodevi" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Vaishnodevi</Link>
                   <Link to="/package/rameshwaram" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rameshwaram</Link>
                   <Link to="/package/gujarat" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Gujarat</Link>
                 </div>

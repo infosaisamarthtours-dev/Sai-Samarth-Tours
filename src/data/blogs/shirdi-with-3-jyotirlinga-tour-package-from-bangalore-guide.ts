@@ -8,7 +8,7 @@ export const shirdiWith3JyotirlingaTourPackageFromBangalorePost: BlogPost = {
   seoDescription: 'Book Shirdi with 3 Jyotirlinga tour package from Bangalore with flights & VIP Darshan. Visit Bhimashankar, Trimbakeshwar, Grishneshwar, Ellora & Shani Shingnapur.',
   excerpt: 'Complete pilgrimage travel guide for the Shirdi with 3 Jyotirlinga tour package from Bangalore by flight. Experience divine blessings at Bhimashankar, Trimbakeshwar, and Grishneshwar Jyotirlingas, Shirdi Sai Baba VIP Darshan, Nashik Panchavati, UNESCO Ellora Caves, Bhadra Maruti, and Shani Shingnapur in a seamless 3-day all-inclusive flight yatra.',
   content: {
-    intro: 'Embarking on the sacred **Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flight & VIP Darshan** is widely regarded as one of the most auspicious and merit-bestowing pilgrimages in Sanatana Dharma. Maharashtra is blessed to house five of the twelve sacred Swayambhu Jyotirlingas of Lord Shiva. This flagship [Maharashtra pilgrimage tour package](/pilgrimage-tour-packages) seamlessly unifies three of these revered Jyotirlinga shrines—**Bhimashankar** (the 6th Jyotirlinga nestled in the Sahyadri ranges), **Trimbakeshwar** (the unique three-faced Trinity Linga in Nashik), and **Grishneshwar** (the compassionate 12th Jyotirlinga near Ellora)—with the supreme peace and divine blessings of Sadguru Shri Sai Baba at Shirdi. Thoughtfully curated by Sai Samarth Tours, Bangalore’s trusted pilgrimage specialist, our [Shirdi with 3 Jyotirlinga flight tour package from Bangalore](/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore) takes complete care of round-trip Bangalore-Pune flight tickets, sanitized dedicated A/C coach transportation, verified 3-star AC hotel accommodations in Shirdi, wholesome pure vegetarian meals, pre-arranged VIP Darshan passes, and attentive tour manager coordination for an all-inclusive price of ₹23,999/- per person.',
+    intro: 'Embarking on the sacred **Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flight & VIP Darshan** is widely regarded as one of the most auspicious and merit-bestowing pilgrimages in Sanatana Dharma. Maharashtra is blessed to house five of the twelve sacred Swayambhu Jyotirlingas of Lord Shiva. This flagship [Maharashtra pilgrimage tour package](/pilgrimage-tour-packages) seamlessly unifies three of these revered Jyotirlinga shrines—**Bhimashankar** (the 6th Jyotirlinga nestled in the Sahyadri ranges), **Trimbakeshwar** (the unique three-faced Trinity Linga in Nashik), and **Grishneshwar** (the compassionate 12th Jyotirlinga near Ellora)—with the supreme peace and divine blessings of Sadguru Shri Sai Baba at Shirdi. Thoughtfully curated by Sai Samarth Tours, Bangalore’s trusted pilgrimage specialist, our [Shirdi with 3 Jyotirlinga flight tour package from Bangalore](/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore) takes complete care of round-trip Bangalore-Pune flight tickets, sanitized dedicated A/C coach transportation, verified 3-star AC hotel accommodations in Shirdi, wholesome pure vegetarian meals, pre-arranged VIP Darshan passes, and attentive tour manager coordination for an all-inclusive price of ₹24,999/- per person.',
     sections: [
       {
         heading: '1. Spiritual Significance of the 3 Jyotirlingas & Shirdi Sai Baba Circuit',
@@ -38,7 +38,7 @@ export const shirdiWith3JyotirlingaTourPackageFromBangalorePost: BlogPost = {
         tips: '✈️ Travel Advantage: Flying into and out of Pune provides the most balanced geographical hub to cover all 3 Jyotirlingas and Shirdi without backtrack journeys.'
       },
       {
-        heading: '3. What’s Included in the ₹23,999/- Shirdi with 3 Jyotirlinga Package',
+        heading: '3. What’s Included in the ₹24,999/- Shirdi with 3 Jyotirlinga Package',
         subheading: 'Transparent All-Inclusive Value with Zero Hidden Surcharges',
         body: 'When booking a sacred pilgrimage for your elderly parents and family members, total clarity on inclusions is essential. Sai Samarth Tours ensures that every vital service—from flights to meals and VIP darshan—is pre-arranged.',
         bulletPoints: [
@@ -98,7 +98,7 @@ export const shirdiWith3JyotirlingaTourPackageFromBangalorePost: BlogPost = {
         ['Circuit Covered', 'Pune – Bhimashankar – Shirdi – Trimbakeshwar – Nashik – Grishneshwar – Ellora – Shani Shingnapur'],
         ['Duration', '2 Nights / 3 Days'],
         ['Starting Point', 'Kempegowda International Airport (BLR), Bangalore'],
-        ['Tour Price', '₹23,999/- per person (All-Inclusive on Twin/Double Sharing)'],
+        ['Tour Price', '₹24,999/- per person (All-Inclusive on Twin/Double Sharing)'],
         ['Mode of Transport', 'Direct Round-Trip Flights (BLR–PNQ–BLR) + Dedicated Sanitized A/C Coach'],
         ['Accommodation', '2 Nights in verified 3-Star AC Deluxe Hotel in Shirdi'],
         ['Meals Included', 'All Meals: Daily Pure Vegetarian Breakfast, Lunch, and Dinner'],
@@ -111,7 +111,7 @@ export const shirdiWith3JyotirlingaTourPackageFromBangalorePost: BlogPost = {
       'Includes confirmed round-trip Bangalore-Pune flight tickets, saving 30+ hours compared to train travel.',
       'Features pre-booked VIP Darshan passes at Shirdi Sai Baba Mandir to eliminate exhausting queue fatigue for senior citizens and families.',
       'Covers major cultural highlights including UNESCO Ellora Caves, Nashik Panchavati, Bhadra Maruti, and Shani Shingnapur.',
-      '100% all-inclusive pricing of ₹23,999/- covers flights, 3-star AC hotel stays, pure veg meals, AC vehicle transfers, sightseeing tickets, and 5% GST.'
+      '100% all-inclusive pricing of ₹24,999/- covers flights, 3-star AC hotel stays, pure veg meals, AC vehicle transfers, sightseeing tickets, and 5% GST.'
     ],
     faqs: [
       {

@@ -9,14 +9,14 @@ import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const pilgrimageIds = [
-  'kholapur-pandarpur',
   'puri-jagannath',
   'kamakhya',
-  'kashi-ayodhya-prayagraj',
-  'kashi-ayodhya',
   'indore-ujjain',
-  'vaishnodevi',
+  'kashi-ayodhya',
+  'kashi-ayodhya-prayagraj',
   'baidyanath',
+  'kholapur-pandarpur',
+  'vaishnodevi',
   'rameshwaram',
   'gujarat'
 ];

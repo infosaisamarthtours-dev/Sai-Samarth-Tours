@@ -271,7 +271,7 @@ export function PackageDetailsPage() {
       'touristType': ['Pilgrims', 'Families', 'Senior Citizens'],
       'offers': {
         '@type': 'Offer',
-        'price': pkg.numericPrice || 17999,
+        'price': pkg.numericPrice || 18999,
         'priceCurrency': 'INR',
         'availability': 'https://schema.org/InStock',
         'validFrom': '2026-01-01',

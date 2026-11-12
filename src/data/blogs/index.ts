@@ -1,4 +1,6 @@
 import { BlogPost } from './types';
+import { kamakhyaTempleGuwahatiTravelGuidePost } from './kamakhya-temple-guwahati-travel-guide';
+import { puriJagannathKonarkSunTempleTourGuidePost } from './puri-jagannath-konark-sun-temple-tour-guide';
 import { bestSouthIndiaTempleTourFromBangaloreGuidePost } from './best-south-india-temple-tour-from-bangalore-guide';
 import { ujjainMahakaleshwarBhasmaAartiGuidePost } from './ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide';
 import { twelveJyotirlingaTemplesInIndiaGuidePost } from './twelve-jyotirlinga-temples-in-india-travel-guide';
@@ -18,6 +20,8 @@ import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-to
 import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { kamakhyaTempleGuwahatiTravelGuidePost } from './kamakhya-temple-guwahati-travel-guide';
+export { puriJagannathKonarkSunTempleTourGuidePost } from './puri-jagannath-konark-sun-temple-tour-guide';
 export { bestSouthIndiaTempleTourFromBangaloreGuidePost } from './best-south-india-temple-tour-from-bangalore-guide';
 export { ujjainMahakaleshwarBhasmaAartiGuidePost } from './ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide';
 export { twelveJyotirlingaTemplesInIndiaGuidePost } from './twelve-jyotirlinga-temples-in-india-travel-guide';
@@ -37,6 +41,8 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  kamakhyaTempleGuwahatiTravelGuidePost,
+  puriJagannathKonarkSunTempleTourGuidePost,
   bestSouthIndiaTempleTourFromBangaloreGuidePost,
   ujjainMahakaleshwarBhasmaAartiGuidePost,
   twelveJyotirlingaTemplesInIndiaGuidePost,
