@@ -39,6 +39,7 @@ export const PACKAGE_SLUG_MAP: Record<string, string> = {
   'golden-triangle': 'golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore',
 
   // International Packages
+  'thailand': 'thailand-tour-package-from-bangalore',
   'thailand-regular': 'thailand-tour-package-from-bangalore',
   'singapore-malaysia': 'singapore-malaysia-tour-package-from-bangalore',
   'malaysia-regular': 'malaysia-tour-package-from-bangalore',

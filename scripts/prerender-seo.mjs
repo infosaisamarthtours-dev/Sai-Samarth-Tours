@@ -649,6 +649,38 @@ pages.forEach(p => {
 // 4. Prerender Blog Articles
 const blogArticles = [
   {
+    slug: 'kashmir-tour-from-bangalore-best-time-budget-itinerary',
+    title: 'Kashmir Tour from Bangalore: Best Time to Visit, Budget & 6-Day Itinerary',
+    desc: 'Complete 2026 guide for Kashmir tour from Bangalore: Best seasons, travel budget, flights from BLR, luxury Dal Lake houseboat, Gulmarg Gondola booking & 6-day itinerary.',
+    image: '/kashmir-tour-package-from-bangalore.webp',
+    h1: 'Kashmir Tour from Bangalore: Best Time to Visit, Budget & 6-Day Itinerary',
+    intro: 'Revered across centuries as Jannat-e-Firdous (Paradise on Earth), Kashmir is one of the most breathtaking holiday destinations for travelers from Bangalore. Discover flight booking, seasons, Dal Lake houseboats, and a 6-day itinerary.'
+  },
+  {
+    slug: 'kerala-tour-package-from-bangalore-munnar-alleppey-guide',
+    title: 'Kerala Tour Package from Bangalore: Munnar, Alleppey & Best Places to Visit',
+    desc: 'Complete 2026 Kerala travel guide from Bangalore: Munnar tea hills, Alleppey backwater houseboats, Thekkady wildlife, flight booking from BLR & 5-day itinerary.',
+    image: '/kerala-tour-package-from-bangalore.webp',
+    h1: 'Kerala Tour Package from Bangalore: Munnar, Alleppey & Best Places to Visit',
+    intro: 'Known worldwide as God’s Own Country, Kerala is an idyllic paradise lying just a short 1-hour flight away from Bangalore. Explore Munnar tea gardens, Periyar wildlife sanctuary, and luxury Alleppey houseboat cruises.'
+  },
+  {
+    slug: 'thailand-tour-package-from-bangalore-budget-visa-itinerary',
+    title: 'Thailand Tour Package from Bangalore: Budget, Visa, Flights & 5-Day Itinerary',
+    desc: 'Complete 2026 guide for Thailand tour from Bangalore: Visa-free entry for Indians, direct flights from BLR, Bangkok & Pattaya budget, Coral Island & 5-day itinerary.',
+    image: '/thailand-tour-package-from-bangalore.webp',
+    h1: 'Thailand Tour Package from Bangalore: Budget, Visa, Flights & 5-Day Itinerary',
+    intro: 'Renowned globally as the Land of Smiles, Thailand is the #1 international holiday destination for Bangalore travelers. Discover permanent visa-free entry, direct BLR flights, Pattaya beaches, and Bangkok shopping.'
+  },
+  {
+    slug: 'bali-tour-from-bangalore-best-places-budget-visa-itinerary',
+    title: 'Bali Tour from Bangalore: Best Places, Travel Budget, Visa & Itinerary',
+    desc: 'Complete 2026 Bali travel guide from Bangalore: Visa on Arrival (e-VoA), flights from BLR, Ubud rice terraces, Nusa Penida island, travel budget & 6-day itinerary.',
+    image: '/bali-tour-package-from-bangalore.webp',
+    h1: 'Bali Tour from Bangalore: Best Places, Travel Budget, Visa & Itinerary',
+    intro: 'Affectionately known as the Island of the Gods, Bali is a tropical haven holding a deep cultural bond with Indian travelers. Explore e-VoA guidelines, Ubud jungle swings, Nusa Penida speedboats, and clifftop sunsets.'
+  },
+  {
     slug: 'kamakhya-temple-guwahati-travel-guide-darshan-tips',
     title: 'Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to Visit & Trip Planning',
     desc: 'Complete 2026 travel guide for Maa Kamakhya Temple in Guwahati, Assam: VIP darshan passes, Garbhagriha spring water rituals, best season, Ambubachi Mela, and trip planning from Bangalore.',

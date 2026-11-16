@@ -1,4 +1,8 @@
 import { BlogPost } from './types';
+import { kashmirTourFromBangaloreGuidePost } from './kashmir-tour-from-bangalore-guide';
+import { keralaTourPackageFromBangaloreGuidePost } from './kerala-tour-package-from-bangalore-guide';
+import { thailandTourPackageFromBangaloreGuidePost } from './thailand-tour-package-from-bangalore-guide';
+import { baliTourFromBangaloreGuidePost } from './bali-tour-from-bangalore-guide';
 import { kamakhyaTempleGuwahatiTravelGuidePost } from './kamakhya-temple-guwahati-travel-guide';
 import { puriJagannathKonarkSunTempleTourGuidePost } from './puri-jagannath-konark-sun-temple-tour-guide';
 import { bestSouthIndiaTempleTourFromBangaloreGuidePost } from './best-south-india-temple-tour-from-bangalore-guide';
@@ -20,6 +24,10 @@ import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-to
 import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { kashmirTourFromBangaloreGuidePost } from './kashmir-tour-from-bangalore-guide';
+export { keralaTourPackageFromBangaloreGuidePost } from './kerala-tour-package-from-bangalore-guide';
+export { thailandTourPackageFromBangaloreGuidePost } from './thailand-tour-package-from-bangalore-guide';
+export { baliTourFromBangaloreGuidePost } from './bali-tour-from-bangalore-guide';
 export { kamakhyaTempleGuwahatiTravelGuidePost } from './kamakhya-temple-guwahati-travel-guide';
 export { puriJagannathKonarkSunTempleTourGuidePost } from './puri-jagannath-konark-sun-temple-tour-guide';
 export { bestSouthIndiaTempleTourFromBangaloreGuidePost } from './best-south-india-temple-tour-from-bangalore-guide';
@@ -41,6 +49,10 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  kashmirTourFromBangaloreGuidePost,
+  keralaTourPackageFromBangaloreGuidePost,
+  thailandTourPackageFromBangaloreGuidePost,
+  baliTourFromBangaloreGuidePost,
   kamakhyaTempleGuwahatiTravelGuidePost,
   puriJagannathKonarkSunTempleTourGuidePost,
   bestSouthIndiaTempleTourFromBangaloreGuidePost,
