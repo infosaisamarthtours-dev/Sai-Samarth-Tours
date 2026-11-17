@@ -21,7 +21,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
         p => p.title.toLowerCase() === initialPackageTitle.toLowerCase() || p.id === initialPackageTitle
       );
       if (directMatch) {
-        return [directMatch];
+        return [directMatch, ...ALL_PACKAGES.filter(p => p.id !== directMatch.id)];
       }
       if (initialPackageTitle.toLowerCase().includes('shirdi')) {
         return ALL_PACKAGES.filter(p => p.id.includes('shirdi'));
@@ -64,16 +64,15 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
   const [formData, setFormData] = useState({
     fullName: '',
     phoneNumber: '',
-    selectedPackage: initialPackageTitle || (packagesToShow.length > 0 ? packagesToShow[0].title : ''),
+    selectedPackage: initialPackageTitle || '',
     message: '',
   });
 
   useEffect(() => {
-    const list = getRelevantPackages();
     if (initialPackageTitle) {
       setFormData(prev => ({ ...prev, selectedPackage: initialPackageTitle }));
-    } else if (list.length > 0) {
-      setFormData(prev => ({ ...prev, selectedPackage: list[0].title }));
+    } else {
+      setFormData(prev => ({ ...prev, selectedPackage: '' }));
     }
   }, [initialPackageTitle, isOpen]);
 
@@ -233,6 +232,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialPacka
                     onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
                     className="w-full bg-gray-50 border border-gray-200 focus:bg-white focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 rounded-2xl pl-10 pr-8 py-3 text-sm text-gray-800 font-medium outline-none transition-all appearance-none cursor-pointer"
                   >
+                    <option value="">Select Destination / Tour (Optional)</option>
                     {packagesToShow.map((p) => (
                       <option key={p.id} value={p.title}>
                         {p.title}

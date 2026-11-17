@@ -16,7 +16,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackageTi
     email: '',
     numberOfTravellers: '2',
     preferredTravelDate: '',
-    selectedPackage: initialPackageTitle || ALL_PACKAGES[0].title,
+    selectedPackage: initialPackageTitle || '',
     specialRequirements: '',
     message: '',
   });
@@ -24,8 +24,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackageTi
   const [submitted, setSubmitted] = useState(false);
 
   const handleWhatsAppRedirect = () => {
+    const pkgText = formData.selectedPackage ? `\n📍 *Package:* ${formData.selectedPackage}` : '';
     const text = encodeURIComponent(
-      `Namaste Sai Samarth Tours 🙏\n\n*New Tour Enquiry:*\n👤 *Name:* ${formData.fullName || 'Traveler'}\n📞 *Phone:* ${formData.phoneNumber || 'Not specified'}\n📍 *Package:* ${formData.selectedPackage}\n📅 *Travel Date:* ${formData.preferredTravelDate || 'Flexible'}\n👥 *Travelers:* ${formData.numberOfTravellers}\n💬 *Message:* ${formData.message || 'I would like to enquire about this package.'}\n✈️ *Departure:* Bangalore\n\nPlease share the available departure dates and best pricing. Thank you!`
+      `Namaste Sai Samarth Tours 🙏\n\n*New Tour Enquiry:*\n👤 *Name:* ${formData.fullName || 'Traveler'}\n📞 *Phone:* ${formData.phoneNumber || 'Not specified'}${pkgText}\n📅 *Travel Date:* ${formData.preferredTravelDate || 'Flexible'}\n👥 *Travelers:* ${formData.numberOfTravellers}\n💬 *Message:* ${formData.message || 'I would like to enquire about this package.'}\n✈️ *Departure:* Bangalore\n\nPlease share the available departure dates and best pricing. Thank you!`
     );
     try {
       window.open(`https://wa.me/${siteConfig.whatsappNumber || '919187711649'}?text=${text}`, '_blank');
@@ -255,6 +256,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackageTi
                       onChange={(e) => setFormData({ ...formData, selectedPackage: e.target.value })}
                       className="w-full bg-[#FFFFFF] border border-[#EAE2D6] focus:border-[#F59E0B] text-sm text-[#114088] p-3 rounded-lg outline-none"
                     >
+                      <option value="">Select Package (Optional)</option>
                       {ALL_PACKAGES.map((p) => (
                         <option key={p.id} value={p.title}>
                           {p.title} ({p.price})
