@@ -1,0 +1,1578 @@
+{
+  "summary": {
+    "totalHtmlFiles": 141,
+    "indexableRoutes": 99,
+    "redirectRoutes": 42,
+    "missingTitles": 0,
+    "missingCanonicals": 0,
+    "duplicateDescriptions": 0,
+    "multipleH1s": 0,
+    "missingH1s": 0,
+    "missingAlts": 0,
+    "brokenLinks": 0
+  },
+  "duplicateDescriptions": [],
+  "brokenLinks": [],
+  "routes": [
+    {
+      "route": "/about",
+      "title": "About Sai Samarth Tours | Bangalore’s Leading Pilgrimage & Holiday Agency",
+      "description": "Serving over 20,000+ devotees since 2013 with dedicated tour managers, flight tickets, VIP darshan, and verified 3-star accommodations.",
+      "canonical": "https://saisamarthtours.com/about",
+      "h1": "About Sai Samarth Tours | Bangalore’s Leading Pilgrimage & H",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/12-jyotirlinga-temples-in-india-travel-guide",
+      "title": "12 Jyotirlinga Temples in India: Names, Locations, Routes & Travel Guide",
+      "description": "Complete travel guide to the 12 Jyotirlinga temples in India. Discover temple names, state locations, best circuit routes from Bangalore, VIP darshan rules",
+      "canonical": "https://saisamarthtours.com/blog/12-jyotirlinga-temples-in-india-travel-guide",
+      "h1": "12 Jyotirlinga Temples in India: Names, Locations, Best Rout",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/bali-tour-from-bangalore-best-places-budget-visa-itinerary",
+      "title": "Bali Tour from Bangalore: Best Places, Budget, Visa & Itinerary (2026)",
+      "description": "Complete 2026 Bali travel guide from Bangalore: Visa on Arrival (e-VoA), flights from BLR, Ubud rice terraces, Nusa Penida island, travel budget & 6-day it",
+      "canonical": "https://saisamarthtours.com/blog/bali-tour-from-bangalore-best-places-budget-visa-itinerary",
+      "h1": "Bali Tour from Bangalore: Best Places, Travel Budget, Visa &",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/best-south-india-temple-tour-from-bangalore-guide",
+      "title": "Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari",
+      "description": "Complete 2026 travel guide for the best South India temple tour from Bangalore covering Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari. Itin",
+      "canonical": "https://saisamarthtours.com/blog/best-south-india-temple-tour-from-bangalore-guide",
+      "h1": "Best South India Temple Tour from Bangalore: Rameshwaram, Ma",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/chardham-yatra-preparation-guide",
+      "title": "Char Dham Yatra 2026 Preparation & Flight Guide from Bangalore",
+      "description": "Complete preparation guide for Char Dham Yatra (Yamunotri, Gangotri, Kedarnath, Badrinath) from Bangalore. Includes biometric pass, helicopter booking, fit",
+      "canonical": "https://saisamarthtours.com/blog/chardham-yatra-preparation-guide",
+      "h1": "Char Dham Yatra 2026: Comprehensive Preparation, Medical & F",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog",
+      "title": "Travel Blog & Pilgrimage Guides | Sai Samarth Tours",
+      "description": "Read authentic travel guides, temple timings, darshan rules, and itinerary tips for Shirdi, Kashi, Ayodhya, Kashmir, and overseas tours from Bangalore.",
+      "canonical": "https://saisamarthtours.com/blog",
+      "h1": "Travel Blog & Pilgrimage Guides | Sai Samarth Tours",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kamakhya-temple-guwahati-tour-package-from-bangalore",
+      "title": "Kamakhya Temple Guwahati Tour Package from Bangalore | Flight & VIP Darshan",
+      "description": "Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. 2 Days / 1 Night yatra with 3-star AC stay, pure veg meals & temple t",
+      "canonical": "https://saisamarthtours.com/blog/kamakhya-temple-guwahati-tour-package-from-bangalore",
+      "h1": "Kamakhya Temple Guwahati Tour Package from Bangalore – Fligh",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kamakhya-temple-guwahati-travel-guide-darshan-tips",
+      "title": "Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time & Planning (2026)",
+      "description": "Complete 2026 travel guide for Maa Kamakhya Temple in Guwahati, Assam: VIP darshan passes, Garbhagriha spring water rituals, best season, Ambubachi Mela, a",
+      "canonical": "https://saisamarthtours.com/blog/kamakhya-temple-guwahati-travel-guide-darshan-tips",
+      "h1": "Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kashi-ayodhya-prayagraj-heritage-guide",
+      "title": "Kashi Ayodhya Prayagraj Tour Guide from Bangalore | Flights & Darshan",
+      "description": "Complete spiritual guide for Kashi Vishwanath, Ayodhya Ram Mandir, and Triveni Sangam Prayagraj pilgrimage from Bangalore. Includes flight schedules, boat",
+      "canonical": "https://saisamarthtours.com/blog/kashi-ayodhya-prayagraj-heritage-guide",
+      "h1": "Kashi, Ayodhya & Prayagraj Sangam: The Complete Pilgrimage G",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kashi-ayodhya-prayagraj-tour-from-bangalore-complete-guide",
+      "title": "Kashi Ayodhya Prayagraj Tour from Bangalore: Complete Travel Guide",
+      "description": "Complete 2026 travel guide for Kashi Ayodhya Prayagraj tour from Bangalore. Direct flights, Kashi Vishwanath VIP pass, Ram Lalla darshan, Triveni Sangam sn",
+      "canonical": "https://saisamarthtours.com/blog/kashi-ayodhya-prayagraj-tour-from-bangalore-complete-guide",
+      "h1": "Kashi Ayodhya Prayagraj Tour from Bangalore: Complete Pilgri",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kashi-ayodhya-tour-package-from-bangalore",
+      "title": "Kashi, Ayodhya & Prayagraj Tour from Bangalore: Itinerary, Cost & Tips",
+      "description": "Complete guide for Kashi Ayodhya tour package from Bangalore: Major temples, 5-day itinerary, package price, VIP darshan passes, flights, pure veg food, an",
+      "canonical": "https://saisamarthtours.com/blog/kashi-ayodhya-tour-package-from-bangalore",
+      "h1": "Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary,",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kashmir-paradise-seasons-guide",
+      "title": "Kashmir Tour Guide from Bangalore | Seasons, Houseboats & Gondola",
+      "description": "Complete travel guide for Kashmir holidays from Bangalore. Includes Srinagar Dal Lake houseboat booking, Gulmarg gondola Phase 2 secrets, Pahalgam valleys,",
+      "canonical": "https://saisamarthtours.com/blog/kashmir-paradise-seasons-guide",
+      "h1": "Kashmir Paradise Tour: Best Seasons, Houseboats & Snow Point",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kashmir-tour-from-bangalore-best-time-budget-itinerary",
+      "title": "Kashmir Tour from Bangalore: Best Time, Budget & 6-Day Itinerary (2026)",
+      "description": "Complete 2026 guide for Kashmir tour from Bangalore: Best seasons, travel budget, flights from BLR, luxury Dal Lake houseboat, Gulmarg Gondola booking & 6-",
+      "canonical": "https://saisamarthtours.com/blog/kashmir-tour-from-bangalore-best-time-budget-itinerary",
+      "h1": "Kashmir Tour from Bangalore: Best Time to Visit, Budget & 6-",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kerala-tour-package-from-bangalore-munnar-alleppey-guide",
+      "title": "Kerala Tour Package from Bangalore: Munnar, Alleppey & Top Places (2026)",
+      "description": "Complete 2026 Kerala travel guide from Bangalore: Munnar tea hills, Alleppey backwater houseboats, Thekkady wildlife, flight booking from BLR & 5-day itine",
+      "canonical": "https://saisamarthtours.com/blog/kerala-tour-package-from-bangalore-munnar-alleppey-guide",
+      "h1": "Kerala Tour Package from Bangalore: Munnar, Alleppey & Best ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore",
+      "title": "Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore",
+      "description": "Book the Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore for ₹16,999. Explore sacred temples with Sai Samarth Tours.",
+      "canonical": "https://saisamarthtours.com/blog/panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore",
+      "h1": "Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/prasadam-and-temple-rituals-india",
+      "title": "Sacred Temple Prasadam & Ritual Practices Guide | Sai Samarth Tours",
+      "description": "Discover the spiritual secrets of Tirupati Srivari Laddoo, Puri Jagannath Mahaprasad 56 Bhog, and Shirdi Sai Prasadalaya. Pilgrimage tour guide from Bangal",
+      "canonical": "https://saisamarthtours.com/blog/prasadam-and-temple-rituals-india",
+      "h1": "Sacred Temple Prasadam & Ritual Practices Across Holy Shrine",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/puri-jagannath-konark-sun-temple-tour-complete-odisha-travel-guide",
+      "title": "Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Travel Guide (2026)",
+      "description": "Complete 2026 Odisha pilgrimage travel guide covering Puri Jagannath Temple, UNESCO Konark Sun Temple, Bhubaneswar Lingaraj, and Dhauli. Flights from Banga",
+      "canonical": "https://saisamarthtours.com/blog/puri-jagannath-konark-sun-temple-tour-complete-odisha-travel-guide",
+      "h1": "Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Tra",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/shirdi-tour-package-from-bangalore-direct-flight-vip-darshan",
+      "title": "Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan",
+      "description": "Book all-inclusive Shirdi tour package from Bangalore with direct flights, confirmed VIP Darshan passes, 5 AM Kakad Aarti, Shani Shingnapur, 3-star AC stay",
+      "canonical": "https://saisamarthtours.com/blog/shirdi-tour-package-from-bangalore-direct-flight-vip-darshan",
+      "h1": "Shirdi Tour Package from Bangalore – Direct Flight & VIP Dar",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/shirdi-tour-package-from-bangalore-guide",
+      "title": "Shirdi Tour Package from Bangalore: Complete Guide, Darshan & Itinerary",
+      "description": "Complete guide for Shirdi tour package from Bangalore: Best time to visit, direct flights, VIP Darshan, Kakad Aarti booking, Shani Shingnapur, pure veg foo",
+      "canonical": "https://saisamarthtours.com/blog/shirdi-tour-package-from-bangalore-guide",
+      "h1": "Shirdi Tour Package from Bangalore: Complete Travel Guide, D",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/shirdi-vip-darshan-guide-2026",
+      "title": "Shirdi VIP Darshan Guide 2026 & 3 Jyotirlinga Tour from Bangalore",
+      "description": "Comprehensive guide to Shirdi Sai Baba VIP darshan passes, Kakad Aarti booking, and 3 Jyotirlingas yatra (Trimbakeshwar, Bhimashankar, Grishneshwar) with d",
+      "canonical": "https://saisamarthtours.com/blog/shirdi-vip-darshan-guide-2026",
+      "h1": "Ultimate Guide to Shirdi Sai Baba VIP Darshan & 3 Jyotirling",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide",
+      "title": "Shirdi with 3 Jyotirlinga Tour Package from Bangalore | Flight & VIP Darshan",
+      "description": "Book Shirdi with 3 Jyotirlinga tour package from Bangalore with flights & VIP Darshan. Visit Bhimashankar, Trimbakeshwar, Grishneshwar, Ellora & Shani Shin",
+      "canonical": "https://saisamarthtours.com/blog/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide",
+      "h1": "Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flig",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/singapore-malaysia-family-guide-2026",
+      "title": "Singapore Malaysia Tour Guide for Indian Families from Bangalore",
+      "description": "Complete travel guide for Singapore & Malaysia twin-country family tours from Bangalore. Covers Universal Studios, Batu Caves, Genting, visa procedures, an",
+      "canonical": "https://saisamarthtours.com/blog/singapore-malaysia-family-guide-2026",
+      "h1": "Malaysia & Singapore Twin Country Tour Guide for Indian Fami",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/south-india-tour-package-from-bangalore",
+      "title": "South India Tour Package from Bangalore – 6 Days / 5 Nights",
+      "description": "Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting",
+      "canonical": "https://saisamarthtours.com/blog/south-india-tour-package-from-bangalore",
+      "h1": "South India Tour Package from Bangalore – 6 Days / 5 Nights",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/thailand-tour-package-from-bangalore-budget-visa-itinerary",
+      "title": "Thailand Tour Package from Bangalore: Budget, Visa, Flights & Itinerary (2026)",
+      "description": "Complete 2026 guide for Thailand tour from Bangalore: Visa-free entry for Indians, direct flights from BLR, Bangkok & Pattaya budget, Coral Island & 5-day",
+      "canonical": "https://saisamarthtours.com/blog/thailand-tour-package-from-bangalore-budget-visa-itinerary",
+      "h1": "Thailand Tour Package from Bangalore: Budget, Visa, Flights ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide",
+      "title": "Ujjain Mahakaleshwar Bhasma Aarti: Booking, Rules & Travel Guide (2026)",
+      "description": "Definitive guide to Ujjain Mahakaleshwar Bhasma Aarti: Step-by-step online booking procedure, dress code, VIP darshan rules, Mahakal Lok corridor, and flig",
+      "canonical": "https://saisamarthtours.com/blog/ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide",
+      "h1": "Ujjain Mahakaleshwar Bhasma Aarti: Booking, Darshan Rules & ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/bus-packages",
+      "title": "Bus Tour Packages from Bangalore | Panch Bootha Yatra & Tirumala Balaji | Sai Samarth Tours",
+      "description": "Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Flagship Panch Bootha Yatra & Tirumala Balaji 4N/5D for ₹16,999/- with Tour Manage",
+      "canonical": "https://saisamarthtours.com/bus-packages",
+      "h1": "Bus Tour Packages from Bangalore | Panch Bootha Yatra & Tiru",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/bus-tour-packages",
+      "title": "Deluxe Bus Tour Packages from Bangalore | Pushback AC Coaches | Sai Samarth Tours",
+      "description": "Handcrafted luxury bus pilgrimages and family yatras departing from Bangalore. Paced for senior citizens with tour manager on board, all meals & 3-star sta",
+      "canonical": "https://saisamarthtours.com/bus-tour-packages",
+      "h1": "Deluxe Bus Tour Packages from Bangalore | Pushback AC Coache",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/cancellation-policy",
+      "title": "Cancellation & Refund Policy | Sai Samarth Tours Bangalore",
+      "description": "Official cancellation, refund, and tour rescheduling policies for pilgrimage and holiday packages by Sai Samarth Tours Bangalore.",
+      "canonical": "https://saisamarthtours.com/cancellation-policy",
+      "h1": "Cancellation & Refund Policy | Sai Samarth Tours Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/contact",
+      "title": "Contact Us | Sai Samarth Tours Bangalore Office & Consultation",
+      "description": "Get in touch with Sai Samarth Tours in Yelahanka New Town, Bangalore. Speak with our tour advisors for flight bookings, customized packages, and instant qu",
+      "canonical": "https://saisamarthtours.com/contact",
+      "h1": "Contact Us | Sai Samarth Tours Bangalore Office & Consultati",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/andaman",
+      "title": "Andaman Tour Package from Bangalore | Havelock Island & Scuba | Sai Samarth Tours",
+      "description": "Exotic Andaman tour packages from Bangalore with direct flights. Radhanagar Beach in Havelock, Neil Island coral reefs, Cellular Jail light show & cruise t",
+      "canonical": "https://saisamarthtours.com/destinations/andaman",
+      "h1": "Andaman Tour Package from Bangalore | Havelock Island & Scub",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/ayodhya",
+      "title": "Ayodhya Ram Mandir Tour Packages from Bangalore | Sai Samarth Tours",
+      "description": "Direct flight yatra packages from Bangalore to Ayodhya Ram Janmabhoomi Mandir. Includes VIP Darshan, Hanuman Garhi, Sarayu Aarti, 3-star AC hotels & pure v",
+      "canonical": "https://saisamarthtours.com/destinations/ayodhya",
+      "h1": "Ayodhya Ram Mandir Tour Packages from Bangalore | Sai Samart",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/chardham",
+      "title": "Char Dham Yatra from Bangalore | Kedarnath & Badrinath Flight Tour | Sai Samarth Tours",
+      "description": "Complete Char Dham Yatra from Bangalore with flights to Dehradun. Covers Yamunotri, Gangotri, Kedarnath & Badrinath with helicopter shuttle, VIP darshan, 3",
+      "canonical": "https://saisamarthtours.com/destinations/chardham",
+      "h1": "Char Dham Yatra from Bangalore | Kedarnath & Badrinath Fligh",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/dubai",
+      "title": "Dubai Tour Package from Bangalore | Burj Khalifa & Desert Safari | Sai Samarth Tours",
+      "description": "Luxury Dubai tour packages from Bangalore. Includes direct flights, Burj Khalifa 124th floor, Desert Safari with BBQ dinner, Marina Dhow cruise & Dubai Mal",
+      "canonical": "https://saisamarthtours.com/destinations/dubai",
+      "h1": "Dubai Tour Package from Bangalore | Burj Khalifa & Desert Sa",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/goa",
+      "title": "Goa Tour Package from Bangalore | Beach Holidays & Resorts | Sai Samarth Tours",
+      "description": "All-inclusive Goa tour packages from Bangalore with direct flights. Luxury 4-star beach resort stays, North & South Goa sightseeing, cruise dinner & airpor",
+      "canonical": "https://saisamarthtours.com/destinations/goa",
+      "h1": "Goa Tour Package from Bangalore | Beach Holidays & Resorts |",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/jyotirlinga",
+      "title": "Jyotirlinga Tour Packages from Bangalore | 2, 3 & 5 Jyotirlinga Yatras | Sai Samarth Tours",
+      "description": "Sacred Jyotirlinga tour packages from Bangalore with flights. Visit Trimbakeshwar, Bhimashankar, Grishneshwar, Mahakaleshwar, Omkareshwar, Somnath, Baidyan",
+      "canonical": "https://saisamarthtours.com/destinations/jyotirlinga",
+      "h1": "Jyotirlinga Tour Packages from Bangalore | 2, 3 & 5 Jyotirli",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/kashi",
+      "title": "Kashi Ayodhya Tour Packages from Bangalore | Flights & VIP Darshan | Sai Samarth Tours",
+      "description": "Complete Kashi, Ayodhya, Prayagraj & Bodh Gaya tour packages from Bangalore. Includes return flights, special Kashi Vishwanath Darshan, Ganga Aarti boat ri",
+      "canonical": "https://saisamarthtours.com/destinations/kashi",
+      "h1": "Kashi Ayodhya Tour Packages from Bangalore | Flights & VIP D",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/kashmir",
+      "title": "Kashmir Tour Packages from Bangalore | Flights, Houseboat & Gulmarg | Sai Samarth Tours",
+      "description": "Experience paradise on earth with our Kashmir holiday packages from Bangalore. Includes return flights, luxury Dal Lake houseboat, Gulmarg gondola, Pahalga",
+      "canonical": "https://saisamarthtours.com/destinations/kashmir",
+      "h1": "Kashmir Tour Packages from Bangalore | Flights, Houseboat & ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/kerala",
+      "title": "Kerala Tour Packages from Bangalore | Munnar, Alleppey & Thekkady | Sai Samarth Tours",
+      "description": "Book all-inclusive Kerala holiday packages from Bangalore. Explore Munnar tea plantations, Thekkady spice gardens, Alleppey backwater houseboats & Kochi he",
+      "canonical": "https://saisamarthtours.com/destinations/kerala",
+      "h1": "Kerala Tour Packages from Bangalore | Munnar, Alleppey & The",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/ladakh",
+      "title": "Ladakh Tour Package from Bangalore | Pangong Lake & Khardung La | Sai Samarth Tours",
+      "description": "Breathtaking Leh Ladakh tour packages from Bangalore with flights. Explore Pangong Tso Lake, Nubra Valley, Khardung La pass & ancient Buddhist monasteries.",
+      "canonical": "https://saisamarthtours.com/destinations/ladakh",
+      "h1": "Ladakh Tour Package from Bangalore | Pangong Lake & Khardung",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/malaysia",
+      "title": "Malaysia Tour Package from Bangalore | Kuala Lumpur & Genting | Sai Samarth Tours",
+      "description": "All-inclusive Malaysia tour packages from Bangalore. Visit Petronas Twin Towers, Genting Highlands cable car, Batu Caves temple & Sunway Lagoon with flight",
+      "canonical": "https://saisamarthtours.com/destinations/malaysia",
+      "h1": "Malaysia Tour Package from Bangalore | Kuala Lumpur & Gentin",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/maldives",
+      "title": "Maldives Tour Package from Bangalore | Luxury Water Villa Resorts | Sai Samarth Tours",
+      "description": "Direct flight Maldives holiday packages from Bangalore. Stay in luxury overwater villas, private speedboat transfers, all-inclusive dining & coral reef exc",
+      "canonical": "https://saisamarthtours.com/destinations/maldives",
+      "h1": "Maldives Tour Package from Bangalore | Luxury Water Villa Re",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/rajasthan",
+      "title": "Rajasthan Tour Package from Bangalore | Royal Forts & Palaces | Sai Samarth Tours",
+      "description": "Grand Rajasthan tour packages from Bangalore. Explore Jaipur Pink City, Jodhpur Blue City, Udaipur Lake Palace & Jaisalmer Thar desert safari with flights",
+      "canonical": "https://saisamarthtours.com/destinations/rajasthan",
+      "h1": "Rajasthan Tour Package from Bangalore | Royal Forts & Palace",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/rameshwaram",
+      "title": "Rameshwaram Tour Package from Bangalore | Madurai & Kanyakumari | Sai Samarth Tours",
+      "description": "All-inclusive Rameshwaram tour package from Bangalore with flights. Covers Ramanathaswamy Temple, 22 Holy Theerthams, Madurai Meenakshi Amman & Kanyakumari",
+      "canonical": "https://saisamarthtours.com/destinations/rameshwaram",
+      "h1": "Rameshwaram Tour Package from Bangalore | Madurai & Kanyakum",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/shirdi",
+      "title": "Shirdi Tour Packages from Bangalore | VIP Darshan Flights | Sai Samarth Tours",
+      "description": "Book direct flight Shirdi tour packages from Bangalore. Includes VIP Darshan at Sai Baba Samadhi Mandir, Kakad Aarti, 3-star AC hotels, pure veg meals, and",
+      "canonical": "https://saisamarthtours.com/destinations/shirdi",
+      "h1": "Shirdi Tour Packages from Bangalore | VIP Darshan Flights | ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/thailand",
+      "title": "Thailand Tour Package from Bangalore | Bangkok & Pattaya | Sai Samarth Tours",
+      "description": "All-inclusive Thailand tour packages from Bangalore with flights. Explore Coral Island speedboat tour, Alcazar show, Bangkok temple tour, Safari World & In",
+      "canonical": "https://saisamarthtours.com/destinations/thailand",
+      "h1": "Thailand Tour Package from Bangalore | Bangkok & Pattaya | S",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/tirupati",
+      "title": "Tirupati Tour Package from Bangalore | VIP Special Entry Darshan | Sai Samarth Tours",
+      "description": "Book 1-day or 2-day Tirupati tour package from Bangalore with confirmed ₹300 Special Entry VIP Darshan at Lord Venkateswara Swamy Temple Tirumala, Padmavat",
+      "canonical": "https://saisamarthtours.com/destinations/tirupati",
+      "h1": "Tirupati Tour Package from Bangalore | VIP Special Entry Dar",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/domestic-tour-packages",
+      "title": "Domestic Holiday Packages from Bangalore | Sai Samarth Tours",
+      "description": "Explore incredible India with curated domestic tour packages from Bangalore covering Kashmir, Kerala, Ladakh, Rajasthan, Himachal, Goa, and Andaman with fl",
+      "canonical": "https://saisamarthtours.com/domestic-tour-packages",
+      "h1": "Domestic Holiday Packages from Bangalore | Sai Samarth Tours",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/domestic-tour-packages-from-bangalore",
+      "title": "Domestic Tour Packages from Bangalore | Incredible India Holidays | Sai Samarth Tours",
+      "description": "Handcrafted India holiday packages from Bangalore: Kashmir, Kerala backwaters, Leh Ladakh, Rajasthan, Himachal Pradesh & Andaman. Includes flights, deluxe",
+      "canonical": "https://saisamarthtours.com/domestic-tour-packages-from-bangalore",
+      "h1": "Domestic Tour Packages from Bangalore | Incredible India Hol",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/family-tour-packages-from-bangalore",
+      "title": "Family Tour Packages from Bangalore | Domestic & International Holidays | Sai Samarth Tours",
+      "description": "Book best family tour packages from Bangalore with flights. Handcrafted vacations to Kashmir, Kerala, Goa, Andaman, Thailand, Dubai & Bali with kid-friendl",
+      "canonical": "https://saisamarthtours.com/family-tour-packages-from-bangalore",
+      "h1": "Family Tour Packages from Bangalore | Domestic & Internation",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/faq",
+      "title": "Frequently Asked Questions (FAQ) | Sai Samarth Tours Bangalore",
+      "description": "Find answers to common questions about Sai Samarth Tours pilgrimage packages, flight bookings, VIP Darshan, meals, and senior citizen assistance from Banga",
+      "canonical": "https://saisamarthtours.com/faq",
+      "h1": "Frequently Asked Questions (FAQ) | Sai Samarth Tours Bangalo",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/group-tour-packages-from-bangalore",
+      "title": "Group Tour Packages from Bangalore | Custom Community & Corporate Yatras | Sai Samarth Tours",
+      "description": "All-inclusive group tour packages from Bangalore for extended families, apartment associations, senior citizen forums & corporate offsites. Dedicated luxur",
+      "canonical": "https://saisamarthtours.com/group-tour-packages-from-bangalore",
+      "h1": "Group Tour Packages from Bangalore | Custom Community & Corp",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/",
+      "title": "Tour Packages from Bangalore | Sai Samarth Tours",
+      "description": "Book top tour packages from Bangalore with Sai Samarth Tours. Shirdi, Kashi, Kashmir, Kerala and international yatras with flights and 3-star hotels.",
+      "canonical": "https://saisamarthtours.com/",
+      "h1": "Tour Packages from Bangalore | Sai Samarth Tours",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite"
+      ]
+    },
+    {
+      "route": "/international-tour-packages",
+      "title": "International Tour Packages from Bangalore | Sai Samarth Tours",
+      "description": "Discover world destinations with international tour packages from Bangalore. Complete visa guidance, direct flights, 4-star stays, and Indian meals for Tha",
+      "canonical": "https://saisamarthtours.com/international-tour-packages",
+      "h1": "International Tour Packages from Bangalore | Sai Samarth Tou",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/international-tour-packages-from-bangalore",
+      "title": "International Tour Packages from Bangalore | World Vacations | Sai Samarth Tours",
+      "description": "Premium international holiday packages from Bangalore: Singapore, Malaysia, Thailand, Bali, Dubai, Sri Lanka, Nepal & Europe. Complete visa assistance, fli",
+      "canonical": "https://saisamarthtours.com/international-tour-packages-from-bangalore",
+      "h1": "International Tour Packages from Bangalore | World Vacations",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/andaman-islands-tour-package-from-bangalore",
+      "title": "Andaman Tour Package from Bangalore – Havelock Island, Radhanagar Beach & Flights | Sai Samarth Tours",
+      "description": "Book Andaman Tour Package from Bangalore – Havelock Island, Radhanagar Beach & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals &",
+      "canonical": "https://saisamarthtours.com/package/andaman-islands-tour-package-from-bangalore",
+      "h1": "Andaman Tour Package from Bangalore – Havelock Island, Radha",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/baidyanath-dham-tour-package-from-bangalore",
+      "title": "Baidyanath Dham Deoghar Tour Package from Bangalore – Jyotirlinga Flight Yatra | Sai Samarth Tours",
+      "description": "Book Baidyanath Dham Deoghar Tour Package from Bangalore – Jyotirlinga Flight Yatra. Includes return flights, verified 3-star AC hotel, pure veg meals & VI",
+      "canonical": "https://saisamarthtours.com/package/baidyanath-dham-tour-package-from-bangalore",
+      "h1": "Baidyanath Dham Deoghar Tour Package from Bangalore – Jyotir",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/bali-tour-package-from-bangalore",
+      "title": "Bali Tour Package from Bangalore – Ubud, Kuta Beaches, Waterfalls & Flights | Sai Samarth Tours",
+      "description": "Book Bali Tour Package from Bangalore – Ubud, Kuta Beaches, Waterfalls & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP d",
+      "canonical": "https://saisamarthtours.com/package/bali-tour-package-from-bangalore",
+      "h1": "Bali Tour Package from Bangalore – Ubud, Kuta Beaches, Water",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/bhutan-tour-package-from-bangalore",
+      "title": "Bhutan Tour Package from Bangalore – Thimphu, Paro Tiger’s Nest & Flights | Sai Samarth Tours",
+      "description": "Book Bhutan Tour Package from Bangalore – Thimphu, Paro Tiger’s Nest & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP dar",
+      "canonical": "https://saisamarthtours.com/package/bhutan-tour-package-from-bangalore",
+      "h1": "Bhutan Tour Package from Bangalore – Thimphu, Paro Tiger’s N",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/dubai-tour-package-from-bangalore",
+      "title": "Dubai Tour Package from Bangalore – Burj Khalifa, Desert Safari & Flights | Sai Samarth Tours",
+      "description": "Book Dubai Tour Package from Bangalore – Burj Khalifa, Desert Safari & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP dar",
+      "canonical": "https://saisamarthtours.com/package/dubai-tour-package-from-bangalore",
+      "h1": "Dubai Tour Package from Bangalore – Burj Khalifa, Desert Saf",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/europe-tour-package-from-bangalore",
+      "title": "Europe Tour Package from Bangalore – Paris Eiffel Tower, Swiss Alps & Flights | Sai Samarth Tours",
+      "description": "Book Europe Tour Package from Bangalore – Paris Eiffel Tower, Swiss Alps & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/europe-tour-package-from-bangalore",
+      "h1": "Europe Tour Package from Bangalore – Paris Eiffel Tower, Swi",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/goa-beach-tour-package-from-bangalore",
+      "title": "Goa Tour Package from Bangalore – North & South Goa Beaches, Resort & Flights | Sai Samarth Tours",
+      "description": "Book Goa Tour Package from Bangalore – North & South Goa Beaches, Resort & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/goa-beach-tour-package-from-bangalore",
+      "h1": "Goa Tour Package from Bangalore – North & South Goa Beaches,",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore",
+      "title": "Golden Triangle Tour Package from Bangalore – Delhi, Agra Taj Mahal, Jaipur & Flights | Sai Samarth Tours",
+      "description": "Book Golden Triangle Tour Package from Bangalore – Delhi, Agra Taj Mahal, Jaipur & Flights. Includes return flights, verified 3-star AC hotel, pure veg mea",
+      "canonical": "https://saisamarthtours.com/package/golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore",
+      "h1": "Golden Triangle Tour Package from Bangalore – Delhi, Agra Ta",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/grand-gujarat-somnath-dwarka-tour-package-from-bangalore",
+      "title": "Gujarat Somnath Dwarka Tour Package from Bangalore – Flight & Statue of Unity | Sai Samarth Tours",
+      "description": "Book Gujarat Somnath Dwarka Tour Package from Bangalore – Flight & Statue of Unity. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/grand-gujarat-somnath-dwarka-tour-package-from-bangalore",
+      "h1": "Gujarat Somnath Dwarka Tour Package from Bangalore – Flight ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/himachal-pradesh-tour-package-from-bangalore",
+      "title": "Himachal Pradesh Tour Package from Bangalore – Shimla, Manali, Rohtang & Flights | Sai Samarth Tours",
+      "description": "Book Himachal Pradesh Tour Package from Bangalore – Shimla, Manali, Rohtang & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals &",
+      "canonical": "https://saisamarthtours.com/package/himachal-pradesh-tour-package-from-bangalore",
+      "h1": "Himachal Pradesh Tour Package from Bangalore – Shimla, Manal",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/indore-ujjain-omkareshwar-tour-package-from-bangalore",
+      "title": "Ujjain Omkareshwar Mahakaleshwar Tour Package from Bangalore – Bhasma Aarti & Flight | Sai Samarth Tours",
+      "description": "Book Ujjain Omkareshwar Mahakaleshwar Tour Package from Bangalore – Bhasma Aarti & Flight. Includes return flights, verified 3-star AC hotel, pure veg meal",
+      "canonical": "https://saisamarthtours.com/package/indore-ujjain-omkareshwar-tour-package-from-bangalore",
+      "h1": "Ujjain Omkareshwar Mahakaleshwar Tour Package from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kamakhya-temple-tour-package-from-bangalore",
+      "title": "Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals &",
+      "canonical": "https://saisamarthtours.com/package/kamakhya-temple-tour-package-from-bangalore",
+      "h1": "Kamakhya Temple Guwahati Tour Package from Bangalore – Fligh",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore",
+      "title": "Kashi Ayodhya Prayagraj Tour Package from Bangalore – Direct Flight & Ganga Aarti | Sai Samarth Tours",
+      "description": "Book Kashi Ayodhya Prayagraj Tour Package from Bangalore – Direct Flight & Ganga Aarti. Includes return flights, verified 3-star AC hotel, pure veg meals &",
+      "canonical": "https://saisamarthtours.com/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore",
+      "h1": "Kashi Ayodhya Prayagraj Tour Package from Bangalore – Direct",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kashi-ayodhya-tour-package-from-bangalore",
+      "title": "Kashi with Ayodhya Tour Package from Bangalore – Ram Mandir & Kashi Vishwanath Flight Yatra | Sai Samarth Tours",
+      "description": "Book Kashi with Ayodhya Tour Package from Bangalore – Ram Mandir & Kashi Vishwanath Flight Yatra. Includes return flights, verified 3-star AC hotel, pure v",
+      "canonical": "https://saisamarthtours.com/package/kashi-ayodhya-tour-package-from-bangalore",
+      "h1": "Kashi with Ayodhya Tour Package from Bangalore – Ram Mandir ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kashmir-tour-package-from-bangalore",
+      "title": "Kashmir Tour Package from Bangalore – Srinagar Houseboat, Gulmarg Gondola & Flights | Sai Samarth Tours",
+      "description": "Book Kashmir Tour Package from Bangalore – Srinagar Houseboat, Gulmarg Gondola & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals",
+      "canonical": "https://saisamarthtours.com/package/kashmir-tour-package-from-bangalore",
+      "h1": "Kashmir Tour Package from Bangalore – Srinagar Houseboat, Gu",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kerala-tour-package-from-bangalore",
+      "title": "Kerala Tour Package from Bangalore – Munnar, Alleppey Houseboat & Flights | Sai Samarth Tours",
+      "description": "Book Kerala Tour Package from Bangalore – Munnar, Alleppey Houseboat & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP dar",
+      "canonical": "https://saisamarthtours.com/package/kerala-tour-package-from-bangalore",
+      "h1": "Kerala Tour Package from Bangalore – Munnar, Alleppey Houseb",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kolhapur-pandharpur-tour-package-from-bangalore",
+      "title": "Kolhapur & Pandharpur Tour Package from Bangalore – Mahalaxmi & Vitthal Darshan | Sai Samarth Tours",
+      "description": "Book Kolhapur & Pandharpur Tour Package from Bangalore – Mahalaxmi & Vitthal Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals & V",
+      "canonical": "https://saisamarthtours.com/package/kolhapur-pandharpur-tour-package-from-bangalore",
+      "h1": "Kolhapur & Pandharpur Tour Package from Bangalore – Mahalaxm",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/leh-ladakh-tour-package-from-bangalore",
+      "title": "Leh Ladakh Tour Package from Bangalore – Pangong Lake, Nubra Valley & Flights | Sai Samarth Tours",
+      "description": "Book Leh Ladakh Tour Package from Bangalore – Pangong Lake, Nubra Valley & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/leh-ladakh-tour-package-from-bangalore",
+      "h1": "Leh Ladakh Tour Package from Bangalore – Pangong Lake, Nubra",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/malaysia-tour-package-from-bangalore",
+      "title": "Malaysia Tour Package from Bangalore – Kuala Lumpur, Batu Caves, Genting & Flights | Sai Samarth Tours",
+      "description": "Book Malaysia Tour Package from Bangalore – Kuala Lumpur, Batu Caves, Genting & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals",
+      "canonical": "https://saisamarthtours.com/package/malaysia-tour-package-from-bangalore",
+      "h1": "Malaysia Tour Package from Bangalore – Kuala Lumpur, Batu Ca",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/maldives-tour-package-from-bangalore",
+      "title": "Maldives Tour Package from Bangalore – Kaani Beach Resort & Flights | Sai Samarth Tours",
+      "description": "Book Maldives Tour Package from Bangalore – Kaani Beach Resort & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP darshan.",
+      "canonical": "https://saisamarthtours.com/package/maldives-tour-package-from-bangalore",
+      "h1": "Maldives Tour Package from Bangalore – Kaani Beach Resort & ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/nepal-muktinath-pashupatinath-tour-package-from-bangalore",
+      "title": "Nepal Tour Package from Bangalore – Pashupatinath, Muktinath Temple & Flights | Sai Samarth Tours",
+      "description": "Book Nepal Tour Package from Bangalore – Pashupatinath, Muktinath Temple & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/nepal-muktinath-pashupatinath-tour-package-from-bangalore",
+      "h1": "Nepal Tour Package from Bangalore – Pashupatinath, Muktinath",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore",
+      "title": "Panch Bootha Yatra & Tirumala Balaji Bus Tour Package from Bangalore – 16,999/- | Sai Samarth Tours",
+      "description": "Book Panch Bootha Yatra & Tirumala Balaji Bus Tour Package from Bangalore – 16,999/-. Includes return flights, verified 3-star AC hotel, pure veg meals & V",
+      "canonical": "https://saisamarthtours.com/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore",
+      "h1": "Panch Bootha Yatra & Tirumala Balaji Bus Tour Package from B",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/puri-jagannath-konark-tour-package-from-bangalore",
+      "title": "Puri Jagannath Konark Tour Package from Bangalore – Direct Flight & Temple Darshan | Sai Samarth Tours",
+      "description": "Book Puri Jagannath Konark Tour Package from Bangalore – Direct Flight & Temple Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals",
+      "canonical": "https://saisamarthtours.com/package/puri-jagannath-konark-tour-package-from-bangalore",
+      "h1": "Puri Jagannath Konark Tour Package from Bangalore – Direct F",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/rajasthan-tour-package-from-bangalore",
+      "title": "Rajasthan Tour Package from Bangalore – Royal Forts, Desert Safari & Flights | Sai Samarth Tours",
+      "description": "Book Rajasthan Tour Package from Bangalore – Royal Forts, Desert Safari & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/rajasthan-tour-package-from-bangalore",
+      "h1": "Rajasthan Tour Package from Bangalore – Royal Forts, Desert ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore",
+      "title": "Rameshwaram Madurai Kanyakumari Tour Package from Bangalore – Flight Yatra | Sai Samarth Tours",
+      "description": "Book Rameshwaram Madurai Kanyakumari Tour Package from Bangalore – Flight Yatra. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP da",
+      "canonical": "https://saisamarthtours.com/package/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore",
+      "h1": "Rameshwaram Madurai Kanyakumari Tour Package from Bangalore ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore",
+      "title": "Shirdi – Saptha Shrungi – Triyambhakeshwar Bus Tour Package from Bangalore – 15,999/- | Sai Samarth Tours",
+      "description": "Book Shirdi – Saptha Shrungi – Triyambhakeshwar Bus Tour Package from Bangalore – 15,999/-. Includes return flights, verified 3-star AC hotel, pure veg mea",
+      "canonical": "https://saisamarthtours.com/package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore",
+      "h1": "Shirdi – Saptha Shrungi – Triyambhakeshwar Bus Tour Package ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/shirdi-tour-package-from-bangalore",
+      "title": "Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP darshan. Pri",
+      "canonical": "https://saisamarthtours.com/package/shirdi-tour-package-from-bangalore",
+      "h1": "Shirdi Tour Package from Bangalore – Direct Flight & VIP Dar",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/shirdi-via-mumbai-tour-package-from-bangalore",
+      "title": "Shirdi Tour Package from Bangalore via Mumbai – Siddhivinayak, Mahalakshmi & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Shirdi Tour Package from Bangalore via Mumbai – Siddhivinayak, Mahalakshmi & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg",
+      "canonical": "https://saisamarthtours.com/package/shirdi-via-mumbai-tour-package-from-bangalore",
+      "h1": "Shirdi Tour Package from Bangalore via Mumbai – Siddhivinaya",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/shirdi-via-pune-tour-package-from-bangalore",
+      "title": "Shirdi Tour Package from Bangalore via Pune – Flight, Shani Shingnapur & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Shirdi Tour Package from Bangalore via Pune – Flight, Shani Shingnapur & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg meal",
+      "canonical": "https://saisamarthtours.com/package/shirdi-via-pune-tour-package-from-bangalore",
+      "h1": "Shirdi Tour Package from Bangalore via Pune – Flight, Shani ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/shirdi-with-2-jyotirlinga-tour-package-from-bangalore",
+      "title": "Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Bhimashankar & Grishneshwar Flight Yatra | Sai Samarth Tours",
+      "description": "Book Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Bhimashankar & Grishneshwar Flight Yatra. Includes return flights, verified 3-star AC hotel, p",
+      "canonical": "https://saisamarthtours.com/package/shirdi-with-2-jyotirlinga-tour-package-from-bangalore",
+      "h1": "Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Bhim",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore",
+      "title": "Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flight & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flight & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore",
+      "h1": "Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flig",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/singapore-tour-package-from-bangalore",
+      "title": "Singapore Malaysia Tour Package from Bangalore – Universal Studios & Flights | Sai Samarth Tours",
+      "description": "Book Singapore Malaysia Tour Package from Bangalore – Universal Studios & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP",
+      "canonical": "https://saisamarthtours.com/package/singapore-tour-package-from-bangalore",
+      "h1": "Singapore Malaysia Tour Package from Bangalore – Universal S",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/south-india-yatra-bus-tour-from-bangalore",
+      "title": "South India Yatra Bus Tour Package from Bangalore – 25,999/- | Sai Samarth Tours",
+      "description": "Book South India Yatra Bus Tour Package from Bangalore – 25,999/-. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP darshan. Price:",
+      "canonical": "https://saisamarthtours.com/package/south-india-yatra-bus-tour-from-bangalore",
+      "h1": "South India Yatra Bus Tour Package from Bangalore – 25,999/-",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/sri-lanka-tour-package-from-bangalore",
+      "title": "Sri Lanka Tour Package from Bangalore – Ramayana Trail, Colombo, Kandy & Flights | Sai Samarth Tours",
+      "description": "Book Sri Lanka Tour Package from Bangalore – Ramayana Trail, Colombo, Kandy & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals &",
+      "canonical": "https://saisamarthtours.com/package/sri-lanka-tour-package-from-bangalore",
+      "h1": "Sri Lanka Tour Package from Bangalore – Ramayana Trail, Colo",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/thailand-tour-package-from-bangalore",
+      "title": "Thailand Tour Package from Bangalore – Bangkok, Pattaya Coral Island & Flights | Sai Samarth Tours",
+      "description": "Book Thailand Tour Package from Bangalore – Bangkok, Pattaya Coral Island & Flights. Includes return flights, verified 3-star AC hotel, pure veg meals & VI",
+      "canonical": "https://saisamarthtours.com/package/thailand-tour-package-from-bangalore",
+      "h1": "Thailand Tour Package from Bangalore – Bangkok, Pattaya Cora",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/vaishnodevi-golden-temple-tour-package-from-bangalore",
+      "title": "Vaishno Devi & Golden Temple Tour Package from Bangalore – Flight & Yatra Pass | Sai Samarth Tours",
+      "description": "Book Vaishno Devi & Golden Temple Tour Package from Bangalore – Flight & Yatra Pass. Includes return flights, verified 3-star AC hotel, pure veg meals & VI",
+      "canonical": "https://saisamarthtours.com/package/vaishnodevi-golden-temple-tour-package-from-bangalore",
+      "h1": "Vaishno Devi & Golden Temple Tour Package from Bangalore – F",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/pilgrimage-tour-packages",
+      "title": "Pilgrimage Tour Packages from Bangalore | Sai Samarth Tours",
+      "description": "Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes fligh",
+      "canonical": "https://saisamarthtours.com/pilgrimage-tour-packages",
+      "h1": "Pilgrimage Tour Packages from Bangalore | Sai Samarth Tours",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/pilgrimage-tours-from-bangalore",
+      "title": "Pilgrimage Tours Departing from Bangalore | Guided Spiritual Yatras | Sai Samarth Tours",
+      "description": "Embark on sacred spiritual yatras departing from Bangalore. Handcrafted temple itineraries with confirmed VIP darshan, senior citizen care, and round-trip",
+      "canonical": "https://saisamarthtours.com/pilgrimage-tours-from-bangalore",
+      "h1": "Pilgrimage Tours Departing from Bangalore | Guided Spiritual",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/privacy-policy",
+      "title": "Privacy Policy | Sai Samarth Tours Bangalore",
+      "description": "Learn how Sai Samarth Tours protects your personal information, travel bookings, and privacy compliance.",
+      "canonical": "https://saisamarthtours.com/privacy-policy",
+      "h1": "Privacy Policy | Sai Samarth Tours Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/senior-citizen-tour-packages",
+      "title": "Senior Citizen Tour Packages from Bangalore | Safe & Assisted Pilgrimages | Sai Samarth Tours",
+      "description": "Assisted senior citizen tour packages from Bangalore. Comfortable pilgrimage tours to Shirdi, Kashi, Tirupati, Char Dham & Rameshwaram with wheelchair assi",
+      "canonical": "https://saisamarthtours.com/senior-citizen-tour-packages",
+      "h1": "Senior Citizen Tour Packages from Bangalore | Safe & Assiste",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/shirdi-tour-packages",
+      "title": "Bangalore to Shirdi Tour Packages | Flights & VIP Darshan | Sai Samarth Tours",
+      "description": "Book direct flights from Bangalore to Shirdi with confirmed VIP Darshan, Kakad Aarti assistance, 3-star hotel stay, and pure vegetarian meals.",
+      "canonical": "https://saisamarthtours.com/shirdi-tour-packages",
+      "h1": "Bangalore to Shirdi Tour Packages | Flights & VIP Darshan | ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/shirdi-tour-packages-from-bangalore",
+      "title": "Shirdi Tour Packages from Bangalore | Flights, VIP Darshan & 3-Star Hotels | Sai Samarth Tours",
+      "description": "Book direct flight Shirdi tour packages from Bangalore with Sai Samarth Tours. Includes VIP darshan passes, Shani Shingnapur, Trimbakeshwar, Bhimashankar J",
+      "canonical": "https://saisamarthtours.com/shirdi-tour-packages-from-bangalore",
+      "h1": "Shirdi Tour Packages from Bangalore | Flights, VIP Darshan &",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/terms-of-use",
+      "title": "Terms of Use | Sai Samarth Tours Bangalore",
+      "description": "Official Terms of Use and website booking agreements for Sai Samarth Tours Bangalore.",
+      "canonical": "https://saisamarthtours.com/terms-of-use",
+      "h1": "Terms of Use | Sai Samarth Tours Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/tour-packages",
+      "title": "Tour Packages from Bangalore | Pilgrimage & Holiday Yatras | Sai Samarth Tours",
+      "description": "Browse 30+ all-inclusive tour packages from Bangalore. Curated Shirdi flight yatras, Kashi Ayodhya, Jyotirlingas, Kashmir, Kerala, and international vacati",
+      "canonical": "https://saisamarthtours.com/tour-packages",
+      "h1": "Tour Packages from Bangalore | Pilgrimage & Holiday Yatras |",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/tour-packages-from-bangalore",
+      "title": "All Tour Packages from Bangalore | Flights, Hotels & Meals Included | Sai Samarth Tours",
+      "description": "Complete directory of holiday and pilgrimage tour packages departing directly from Bangalore. Enjoy verified 3-star AC hotels, pure veg food & professional",
+      "canonical": "https://saisamarthtours.com/tour-packages-from-bangalore",
+      "h1": "All Tour Packages from Bangalore | Flights, Hotels & Meals I",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    }
+  ]
+}

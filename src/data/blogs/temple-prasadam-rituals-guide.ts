@@ -30,7 +30,7 @@ export const templePrasadamRitualsGuidePost: BlogPost = {
         bulletPoints: [
           '**Geographical Indication (GI) Status:** Bestowed with GI patent protection, the laddoo is crafted with strict traditional ratios of gram flour (besan), pure cow ghee, sugar syrup, cashew nuts, raisins, cardamom, and edible camphor (Pachcha Karpooram).',
           '**Three Divine Variations:** Asthanam Laddoo (served during high festivals), Kalyanotsavam Laddoo (larger variant given to couples participating in marriage seva), and the standard Proktham Laddoo given to all visiting pilgrims.',
-          '**Pavitra Prasadam Distribution:** Pre-booked [Tirupati tour packages from Bangalore](/packages) include authorized TTD laddoo tokens alongside special entry darshan passes.'
+          '**Pavitra Prasadam Distribution:** Pre-booked [Tirupati tour packages from Bangalore](/destinations/tirupati) include authorized TTD laddoo tokens alongside special entry darshan passes.'
         ]
       },
       {

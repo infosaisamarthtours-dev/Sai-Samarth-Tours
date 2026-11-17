@@ -54,7 +54,7 @@ export const shirdiTourPackageFromBangaloreGuidePost: BlogPost = {
           '**Dwarkamai:** The beloved dilapidated mosque where Baba spent six decades. Here burns the eternal Dhuni (sacred fire), whose divine ash (Udi) has healed countless ailments. Devotees can view Baba’s grinding stone (Chakki) and the sacred stone bench (Shila).',
           '**Chavadi:** The tranquil shrine where Baba stayed on alternate nights. It features two chambers housing his life-sized portrait, wooden cot, and the ceremonial silver palanquin (Palki).',
           '**Gurusthan:** The sacred neem tree under which Sai Baba was first beheld as a youthful 16-year-old ascetic absorbed in deep meditation. Worshipping here brings immense spiritual peace.',
-          '**Lendi Baug & Sai Museum:** The lush garden lovingly cultivated by Baba sheltering the eternal oil lamp (Nanda Deep), alongside the Sansthan Museum displaying Baba’s authentic robes, chillum, copper utensils, and historical photographs. Read our [sacred temple rituals and prasadam guide](/blog/temple-prasadam-rituals-guide) for deeper historical context.'
+          '**Lendi Baug & Sai Museum:** The lush garden lovingly cultivated by Baba sheltering the eternal oil lamp (Nanda Deep), alongside the Sansthan Museum displaying Baba’s authentic robes, chillum, copper utensils, and historical photographs. Read our [sacred temple rituals and prasadam guide](/blog/prasadam-and-temple-rituals-india) for deeper historical context.'
         ]
       },
       {
@@ -86,7 +86,7 @@ export const shirdiTourPackageFromBangaloreGuidePost: BlogPost = {
       {
         heading: '6. Accommodations, Senior Care & Pure Vegetarian Dining',
         subheading: 'Comfortable 3-Star Stays & Wholesome Mahaprasad for South Indian Pilgrims',
-        body: 'A spiritually fulfilling pilgrimage depends on good rest and clean, hygienic food. Pilgrims traveling on our [family pilgrimage tour packages](/family-tour-packages) from Bangalore often worry about elderly comfort and pure vegetarian dining options.',
+        body: 'A spiritually fulfilling pilgrimage depends on good rest and clean, hygienic food. Pilgrims traveling on our [family pilgrimage tour packages](/family-tour-packages-from-bangalore) from Bangalore often worry about elderly comfort and pure vegetarian dining options.',
         bulletPoints: [
           '**Verified 3-Star AC Hotel Stays:** All Sai Samarth Tours packages feature handpicked 3-star AC hotels situated within a 5 to 10-minute walk from Temple Gate No. 1 and Gate No. 3. Rooms include 24/7 hot running water, clean linen, working lifts, and 100% power backup.',
           '**Senior Citizen Accessibility:** Ground-floor rooms or rooms right adjacent to elevators are guaranteed for elderly guests. Wheelchairs and battery-operated car buggies inside the temple precinct can be arranged upon prior notice.',

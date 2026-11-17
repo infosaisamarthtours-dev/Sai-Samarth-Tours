@@ -235,6 +235,22 @@ function writePage(subPath, html) {
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
 }
 
+function generateRedirectHtml(targetUrl) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=${targetUrl}">
+  <link rel="canonical" href="https://saisamarthtours.com${targetUrl}">
+  <meta name="robots" content="noindex, follow">
+  <title>Redirecting to Sai Samarth Tours...</title>
+</head>
+<body>
+  <p>Redirecting to <a href="${targetUrl}">https://saisamarthtours.com${targetUrl}</a>...</p>
+</body>
+</html>`;
+}
+
 // 1. Prerender Packages
 const packagesFile = fs.readFileSync(path.join(rootDir, 'src/data/packages.ts'), 'utf8');
 const packageBlocks = packagesFile.split(/\n\s*\{\s*\n\s*id:\s*['"]/g).slice(1);
@@ -318,9 +334,11 @@ packageBlocks.forEach((block) => {
     jsonLd
   });
 
-  // Write both to slug path and short id path
+  // Write canonical page to slug path; if short id is different, write clean redirect
   writePage(`package/${slug}`, html);
-  writePage(`package/${id}`, html);
+  if (id !== slug) {
+    writePage(`package/${id}`, generateRedirectHtml(`/package/${slug}`));
+  }
 });
 
 // 2. Prerender Destination Hubs
@@ -652,14 +670,14 @@ const pages = [
   },
   {
     path: 'tour-packages-from-bangalore',
-    title: 'Tour Packages from Bangalore | Pilgrimage & Holiday Yatras | Sai Samarth Tours',
-    desc: 'Browse 30+ all-inclusive tour packages from Bangalore. Curated Shirdi flight yatras, Kashi Ayodhya, Jyotirlingas, Kashmir, Kerala, and international vacations with 3-star AC hotels & pure veg meals.',
+    title: 'All Tour Packages from Bangalore | Flights, Hotels & Meals Included | Sai Samarth Tours',
+    desc: 'Complete directory of holiday and pilgrimage tour packages departing directly from Bangalore. Enjoy verified 3-star AC hotels, pure veg food & professional tour guides.',
     image: '/shirdi-tour-hero-banner-desktop.webp'
   },
   {
     path: 'pilgrimage-tours-from-bangalore',
-    title: 'Pilgrimage Tours from Bangalore | Sacred Yatras with Flights | Sai Samarth Tours',
-    desc: 'Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas with flights, VIP darshan & 3-star AC hotels.',
+    title: 'Pilgrimage Tours Departing from Bangalore | Guided Spiritual Yatras | Sai Samarth Tours',
+    desc: 'Embark on sacred spiritual yatras departing from Bangalore. Handcrafted temple itineraries with confirmed VIP darshan, senior citizen care, and round-trip flights.',
     image: '/pilgrimage-packages-category-card.webp'
   },
   {
@@ -873,7 +891,9 @@ blogArticles.forEach(blog => {
   });
 
   writePage(`blog/${blog.slug}`, html);
-  writePage(`blog/${blog.id}`, html);
+  if (blog.id !== blog.slug) {
+    writePage(`blog/${blog.id}`, generateRedirectHtml(`/blog/${blog.slug}`));
+  }
 });
 
 console.log('Successfully prerendered Open Graph social previews and crawlable HTML for all packages, destinations, blogs, and category pages!');

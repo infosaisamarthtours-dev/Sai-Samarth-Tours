@@ -139,9 +139,14 @@ export function App() {
             {/* Dedicated High-Demand Audience Landing Pages */}
             <Route path="/senior-citizen-tour-packages" element={<SeniorCitizenPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/senior-citizen-tour-packages-from-bangalore" element={<SeniorCitizenPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+            <Route path="/family-tour-packages" element={<Navigate to="/family-tour-packages-from-bangalore" replace />} />
             <Route path="/family-tour-packages-from-bangalore" element={<FamilyPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/group-tour-packages-from-bangalore" element={<GroupPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/customized-tour-packages-from-bangalore" element={<GroupPackagesPage onOpenEnquiry={handleOpenEnquiry} />} />
+
+            {/* SEO Route Aliases & Redirects */}
+            <Route path="/packages" element={<Navigate to="/tour-packages" replace />} />
+            <Route path="/blog/temple-prasadam-rituals-guide" element={<Navigate to="/blog/prasadam-and-temple-rituals-india" replace />} />
 
             {/* Direct Top-Level Keyword Destination Shortcuts */}
             <Route path="/shirdi-tour-package-from-bangalore" element={<Navigate to="/package/shirdi-tour-package-from-bangalore" replace />} />

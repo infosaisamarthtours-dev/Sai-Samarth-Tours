@@ -42,7 +42,7 @@ export const shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost: BlogPost 
       {
         heading: '3. The Sacred 5:00 AM Kakad Aarti: Witnessing Baba’s Divine Awakening',
         subheading: 'The Most Emotionally Moving and Spiritually Potent Ritual in Shirdi',
-        body: 'Of all four daily Aartis conducted at the Samadhi Mandir (Kakad, Madhyan, Dhoop, and Shej), the dawn Kakad Aarti at 5:00 AM is universally regarded by Sai devotees as the most blessed spiritual event of a lifetime. To understand the profound scriptural significance of temple offerings and aradhana, read our guide on **[sacred temple rituals and prasadam](/blog/temple-prasadam-rituals-guide)**.',
+        body: 'Of all four daily Aartis conducted at the Samadhi Mandir (Kakad, Madhyan, Dhoop, and Shej), the dawn Kakad Aarti at 5:00 AM is universally regarded by Sai devotees as the most blessed spiritual event of a lifetime. To understand the profound scriptural significance of temple offerings and aradhana, read our guide on **[sacred temple rituals and prasadam](/blog/prasadam-and-temple-rituals-india)**.',
         bulletPoints: [
           '**The Awakening Ritual:** The priests gently awaken Sri Sai Baba with melodious morning chants, remove the mosquito net and velvet evening robes, perform the holy Snanam (bath) with warm scented water and rose milk, and adorn Baba in fresh royal silk attire with gold jewelry.',
           '**Chanting That Touches the Soul:** Listening to the sacred verses of *Joduniya Kar Charani Thevila Matha* and *Utha Panduranga Aata Prabhat Samayo Patala* inside the quiet morning sanctum evokes profound devotional tears and peace.',
@@ -97,7 +97,7 @@ export const shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost: BlogPost 
       {
         heading: '7. Senior Citizen & Family Hospitality: Caring Touches That Matter',
         subheading: 'Thoughtfully Designed for Elderly Parents and Multi-Generational Families',
-        body: 'Over 65% of devotees traveling with us are senior citizens fulfilling long-held spiritual dreams. We ensure every operational touchpoint is tailored for elderly comfort, gentle mobility, and familiar dietary needs through our specialized **[senior citizen tour packages](/senior-citizen-tour-packages)** and comprehensive **[family pilgrimage packages](/family-tour-packages)**.',
+        body: 'Over 65% of devotees traveling with us are senior citizens fulfilling long-held spiritual dreams. We ensure every operational touchpoint is tailored for elderly comfort, gentle mobility, and familiar dietary needs through our specialized **[senior citizen tour packages](/senior-citizen-tour-packages)** and comprehensive **[family pilgrimage packages](/family-tour-packages-from-bangalore)**.',
         bulletPoints: [
           '**Ground Floor & Elevator Rooms:** We pre-allocate hotel rooms on the ground floor or immediately adjacent to elevators, equipped with western commodes and continuous hot water.',
           '**Sansthan Wheelchair & Buggy Access:** For devotees with knee pain or mobility challenges, wheelchairs and battery-operated carts inside the Sansthan complex are coordinated in advance.',

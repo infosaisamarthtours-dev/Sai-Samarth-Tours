@@ -64,6 +64,18 @@ export const localBusinessSchema = {
   ],
   'areaServed': [
     {
+      '@type': 'AdministrativeArea',
+      'name': 'Yelahanka'
+    },
+    {
+      '@type': 'AdministrativeArea',
+      'name': 'Yelahanka New Town'
+    },
+    {
+      '@type': 'City',
+      'name': 'Bengaluru'
+    },
+    {
       '@type': 'City',
       'name': 'Bangalore'
     },
@@ -76,6 +88,42 @@ export const localBusinessSchema = {
       'name': 'India'
     }
   ],
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Tour Packages from Bangalore',
+    'itemListElement': [
+      {
+        '@type': 'OfferCatalog',
+        'name': 'Pilgrimage Tour Packages from Bangalore',
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'TouristTrip',
+              'name': 'Shirdi Tour Packages from Bangalore',
+              'description': 'Direct flight Shirdi pilgrimage packages with VIP Darshan, Kakad Aarti, and 3-star AC hotels.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'TouristTrip',
+              'name': 'Kashi Ayodhya Tour Packages from Bangalore',
+              'description': 'All-inclusive Kashi Vishwanath, Ayodhya Ram Mandir & Prayagraj Sangam pilgrimage packages.'
+            }
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'TouristTrip',
+              'name': 'Jyotirlinga Tour Packages from Bangalore',
+              'description': 'Sacred 12 Jyotirlinga yatras covering Trimbakeshwar, Grishneshwar, Bhimashankar, Mahakaleshwar & Omkareshwar.'
+            }
+          }
+        ]
+      }
+    ]
+  },
   'sameAs': [
     'https://www.facebook.com/saisamarthtours',
     'https://www.instagram.com/sai.samarth.tours',

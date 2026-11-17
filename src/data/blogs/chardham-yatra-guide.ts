@@ -8,7 +8,7 @@ export const chardhamYatraGuidePost: BlogPost = {
   seoDescription: 'Complete preparation guide for Char Dham Yatra (Yamunotri, Gangotri, Kedarnath, Badrinath) from Bangalore. Includes biometric pass, helicopter booking, fitness tips, and packing list.',
   excerpt: 'Planning your sacred Himalayan yatra to Kedarnath, Badrinath, Gangotri, and Yamunotri? Review essential fitness preparation, biometric registration rules, helicopter booking secrets, and flight routes from Bangalore.',
   content: {
-    intro: 'The Char Dham Yatra in the Garhwal Himalayas of Uttarakhand—visiting Yamunotri, Gangotri, Kedarnath, and Badrinath—is regarded as the supreme pilgrimage of lifetime liberation (Moksha). Reaching shrines situated at altitudes exceeding 11,000 feet requires both spiritual devotion and disciplined physical preparation, particularly for pilgrims traveling from Bangalore. Exploring our comprehensive [Char Dham Yatra tour package from Bangalore](/package/chardham-yatra-tour-package-from-bangalore) or the shorter [Kedarnath Badrinath Do Dham tour package](/package/kedarnath-badrinath-tour-package-from-bangalore) gives pilgrims verified helicopter slots, comfortable accommodations, and complete medical support.',
+    intro: 'The Char Dham Yatra in the Garhwal Himalayas of Uttarakhand—visiting Yamunotri, Gangotri, Kedarnath, and Badrinath—is regarded as the supreme pilgrimage of lifetime liberation (Moksha). Reaching shrines situated at altitudes exceeding 11,000 feet requires both spiritual devotion and disciplined physical preparation, particularly for pilgrims traveling from Bangalore. Exploring our comprehensive [Char Dham Yatra tour from Bangalore](/destinations/chardham) or the shorter [Kedarnath Badrinath Do Dham yatra](/destinations/chardham) gives pilgrims verified helicopter slots, comfortable accommodations, and complete medical support.',
     sections: [
       {
         heading: '1. Biometric Registration & Travel Permits Mandate',
@@ -22,7 +22,7 @@ export const chardhamYatraGuidePost: BlogPost = {
           '**Medical Health Certification:** Pilgrims over 50 years of age should undergo cardio and blood pressure evaluations in Bangalore prior to embarking on high-altitude treks.',
           '**Emergency Helpline:** 24/7 SDRF (State Disaster Response Force) and medical kiosks are stationed every 2 km along the mountain paths.'
         ],
-        tips: 'Permit Advantage: Booking our [Char Dham Yatra package from Bangalore](/package/chardham-yatra-tour-package-from-bangalore) guarantees all biometric wristbands, green vehicle permits, and priority yatra transit passes are arranged ahead of time.'
+        tips: 'Permit Advantage: Booking our [Char Dham Yatra package from Bangalore](/destinations/chardham) guarantees all biometric wristbands, green vehicle permits, and priority yatra transit passes are arranged ahead of time.'
       },
       {
         heading: '2. The 4 Sacred Dhams: Spiritual Significance & Trek Logistics',
@@ -56,7 +56,7 @@ export const chardhamYatraGuidePost: BlogPost = {
         bulletPoints: [
           '**Dehradun Direct Flight Route:** Arrives at Jolly Grant Airport (DED), just 35 km from Haridwar/Rishikesh, eliminating 6 hours of Delhi-Haridwar road travel.',
           '**Pushback Luxury AC Coaches:** Sanitized 2x2 luxury pushback mini-buses and Tempo Travellers provide smooth travel along the all-weather Char Dham highway.',
-          '**Recommended Duration:** Allow 10 Nights / 11 Days for the complete Char Dham, or 5 Nights / 6 Days for the [Do Dham Kedarnath & Badrinath](/package/kedarnath-badrinath-tour-package-from-bangalore) itinerary.'
+          '**Recommended Duration:** Allow 10 Nights / 11 Days for the complete Char Dham, or 5 Nights / 6 Days for the [Do Dham Kedarnath & Badrinath](/destinations/chardham) itinerary.'
         ]
       }
     ],
@@ -92,7 +92,7 @@ export const chardhamYatraGuidePost: BlogPost = {
       },
       {
         question: 'Are South Indian pure vegetarian meals provided on the tour?',
-        answer: 'Yes! Our [Char Dham Yatra package from Bangalore](/package/chardham-yatra-tour-package-from-bangalore) features dedicated traveling cooks serving hot South Indian breakfast and pure vegetarian meals throughout the journey.'
+        answer: 'Yes! Our [Char Dham Yatra package from Bangalore](/destinations/chardham) features dedicated traveling cooks serving hot South Indian breakfast and pure vegetarian meals throughout the journey.'
       }
     ]
   },
