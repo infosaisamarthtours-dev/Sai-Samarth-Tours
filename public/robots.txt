@@ -21,7 +21,7 @@ Allow: /*.woff2$
 Allow: /*.woff$
 Allow: /*.ttf$
 
-# Explicitly ensure all important pages and categories are crawlable
+# Explicitly ensure all important public pages and categories are crawlable
 Allow: /about
 Allow: /contact
 Allow: /package/
@@ -29,10 +29,16 @@ Allow: /blog/
 Allow: /destinations/
 Allow: /tour-packages
 Allow: /pilgrimage-tour-packages
+Allow: /shirdi-tour-packages
 Allow: /domestic-tour-packages
 Allow: /international-tour-packages
+Allow: /bus-packages
+Allow: /senior-citizen-tour-packages
+Allow: /family-tour-packages-from-bangalore
+Allow: /group-tour-packages-from-bangalore
+Allow: /faq
 Allow: /privacy-policy
-Allow: /terms-conditions
+Allow: /terms-of-use
 Allow: /cancellation-policy
 
 # Disallow sensitive, internal or temporary system directories

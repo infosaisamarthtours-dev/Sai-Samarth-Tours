@@ -7,6 +7,8 @@ export interface SEOHeadProps {
   ogImage?: string;
   ogType?: 'website' | 'article' | 'product';
   jsonLd?: object | object[];
+  noIndex?: boolean;
+  keywords?: string;
 }
 
 export function SEOHead({
@@ -15,7 +17,9 @@ export function SEOHead({
   canonical,
   ogImage = 'https://saisamarthtours.com/shirdi-tour-hero-banner-desktop.webp',
   ogType = 'website',
-  jsonLd
+  jsonLd,
+  noIndex = false,
+  keywords
 }: SEOHeadProps) {
   useEffect(() => {
     // 1. Document Title
@@ -32,8 +36,18 @@ export function SEOHead({
       tag.setAttribute('content', value);
     };
 
-    // 2. Standard Meta
+    // 2. Standard Meta & Robots
     setMeta('name', 'description', description);
+
+    if (noIndex) {
+      setMeta('name', 'robots', 'noindex, nofollow');
+    } else {
+      setMeta('name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+    }
+
+    if (keywords) {
+      setMeta('name', 'keywords', keywords);
+    }
 
     // 3. Canonical Link
     const currentUrl = canonical || window.location.href;
@@ -84,7 +98,7 @@ export function SEOHead({
     } else if (scriptTag) {
       scriptTag.remove();
     }
-  }, [title, description, canonical, ogImage, ogType, jsonLd]);
+  }, [title, description, canonical, ogImage, ogType, jsonLd, noIndex, keywords]);
 
   return null;
 }

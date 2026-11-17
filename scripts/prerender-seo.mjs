@@ -185,7 +185,7 @@ function buildPackageBody({ title, desc, price, slug }) {
 }
 
 // Helper to replace meta tags and inject crawlable HTML in template
-function generateHtml({ title, description, url, image, type = 'website', bodyContent = null }) {
+function generateHtml({ title, description, url, image, type = 'website', bodyContent = null, jsonLd = null }) {
   const absoluteImage = image.startsWith('http') ? image : `https://saisamarthtours.com${image.startsWith('/') ? '' : '/'}${image}`;
   const absoluteUrl = url.startsWith('http') ? url : `https://saisamarthtours.com${url.startsWith('/') ? '' : '/'}${url}`;
 
@@ -212,6 +212,12 @@ function generateHtml({ title, description, url, image, type = 'website', bodyCo
   html = html.replace(/<meta name="twitter:title" content=".*?" \/>/i, `<meta name="twitter:title" content="${title}" />`);
   html = html.replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${description}" />`);
   html = html.replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${absoluteImage}" />`);
+
+  // Inject page-specific JSON-LD into head before </head>
+  if (jsonLd) {
+    const jsonLdString = `    <script type="application/ld+json" id="dynamic-page-jsonld">\n${JSON.stringify(jsonLd, null, 2)}\n    </script>\n  </head>`;
+    html = html.replace(/<\/head>/i, jsonLdString);
+  }
 
   // Inject crawlable body inside #root
   if (bodyContent) {
@@ -262,13 +268,54 @@ packageBlocks.forEach((block) => {
 
   const bodyContent = buildPackageBody({ title, desc, price, slug });
 
+  const numPrice = parseInt(price.replace(/[^0-9]/g, ''), 10) || 18999;
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TouristTrip',
+      'name': title,
+      'description': desc,
+      'touristType': ['Pilgrims', 'Families', 'Senior Citizens'],
+      'offers': {
+        '@type': 'Offer',
+        'price': numPrice,
+        'priceCurrency': 'INR',
+        'availability': 'https://schema.org/InStock',
+        'validFrom': '2026-01-01',
+        'url': `https://saisamarthtours.com/package/${slug}`
+      },
+      'provider': {
+        '@type': 'TravelAgency',
+        'name': 'Sai Samarth Tours',
+        'telephone': '+919187711649',
+        'address': {
+          '@type': 'PostalAddress',
+          'addressLocality': 'Bengaluru',
+          'addressRegion': 'Karnataka',
+          'postalCode': '560064',
+          'streetAddress': 'No. 2238, Second Floor, 16th ‘B’ Cross, Yelahanka New Town'
+        }
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://saisamarthtours.com/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Tour Packages from Bangalore', 'item': 'https://saisamarthtours.com/tour-packages' },
+        { '@type': 'ListItem', 'position': 3, 'name': title, 'item': `https://saisamarthtours.com/package/${slug}` }
+      ]
+    }
+  ];
+
   const html = generateHtml({
     title: metaTitle,
     description: metaDesc,
     url: `/package/${slug}`,
     image,
     type: 'product',
-    bodyContent
+    bodyContent,
+    jsonLd
   });
 
   // Write both to slug path and short id path
@@ -510,13 +557,33 @@ function buildPageBody(p) {
 
 destinations.forEach(dest => {
   const bodyContent = buildDestinationBody(dest);
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TouristDestination',
+      'name': `${dest.name} Tour Packages from Bangalore`,
+      'description': dest.desc,
+      'image': dest.image.startsWith('http') ? dest.image : `https://saisamarthtours.com${dest.image.startsWith('/') ? '' : '/'}${dest.image}`,
+      'url': `https://saisamarthtours.com/destinations/${dest.slug}`
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://saisamarthtours.com/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Destinations', 'item': 'https://saisamarthtours.com/tour-packages' },
+        { '@type': 'ListItem', 'position': 3, 'name': `${dest.name} Packages`, 'item': `https://saisamarthtours.com/destinations/${dest.slug}` }
+      ]
+    }
+  ];
   const html = generateHtml({
     title: dest.title,
     description: dest.desc.slice(0, 155),
     url: `/destinations/${dest.slug}`,
     image: dest.image,
     type: 'website',
-    bodyContent
+    bodyContent,
+    jsonLd
   });
   writePage(`destinations/${dest.slug}`, html);
 });
@@ -630,209 +697,96 @@ const pages = [
     title: 'Travel Blog & Pilgrimage Guides | Sai Samarth Tours',
     desc: 'Read authentic travel guides, temple timings, darshan rules, and itinerary tips for Shirdi, Kashi, Ayodhya, Kashmir, and overseas tours from Bangalore.',
     image: '/shirdi-tour-hero-banner-desktop.webp'
+  },
+  {
+    path: 'faq',
+    title: 'Frequently Asked Questions (FAQ) | Sai Samarth Tours Bangalore',
+    desc: 'Find answers to common questions about Sai Samarth Tours pilgrimage packages, flight bookings, VIP Darshan, meals, and senior citizen assistance from Bangalore.',
+    image: '/shirdi-tour-hero-banner-desktop.webp'
+  },
+  {
+    path: 'cancellation-policy',
+    title: 'Cancellation & Refund Policy | Sai Samarth Tours Bangalore',
+    desc: 'Official cancellation, refund, and tour rescheduling policies for pilgrimage and holiday packages by Sai Samarth Tours Bangalore.',
+    image: '/shirdi-tour-hero-banner-desktop.webp'
+  },
+  {
+    path: 'terms-of-use',
+    title: 'Terms of Use | Sai Samarth Tours Bangalore',
+    desc: 'Official Terms of Use and website booking agreements for Sai Samarth Tours Bangalore.',
+    image: '/shirdi-tour-hero-banner-desktop.webp'
+  },
+  {
+    path: 'privacy-policy',
+    title: 'Privacy Policy | Sai Samarth Tours Bangalore',
+    desc: 'Learn how Sai Samarth Tours protects your personal information, travel bookings, and privacy compliance.',
+    image: '/shirdi-tour-hero-banner-desktop.webp'
   }
 ];
 
 pages.forEach(p => {
   const bodyContent = buildPageBody(p);
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://saisamarthtours.com/' },
+        { '@type': 'ListItem', 'position': 2, 'name': p.title, 'item': `https://saisamarthtours.com/${p.path}` }
+      ]
+    }
+  ];
   const html = generateHtml({
     title: p.title,
     description: p.desc.slice(0, 155),
     url: `/${p.path}`,
     image: p.image,
     type: 'website',
-    bodyContent
+    bodyContent,
+    jsonLd
   });
   writePage(p.path, html);
 });
 
-// 4. Prerender Blog Articles
-const blogArticles = [
-  {
-    slug: 'kashmir-tour-from-bangalore-best-time-budget-itinerary',
-    title: 'Kashmir Tour from Bangalore: Best Time to Visit, Budget & 6-Day Itinerary',
-    desc: 'Complete 2026 guide for Kashmir tour from Bangalore: Best seasons, travel budget, flights from BLR, luxury Dal Lake houseboat, Gulmarg Gondola booking & 6-day itinerary.',
-    image: '/kashmir-tour-package-from-bangalore.webp',
-    h1: 'Kashmir Tour from Bangalore: Best Time to Visit, Budget & 6-Day Itinerary',
-    intro: 'Revered across centuries as Jannat-e-Firdous (Paradise on Earth), Kashmir is one of the most breathtaking holiday destinations for travelers from Bangalore. Discover flight booking, seasons, Dal Lake houseboats, and a 6-day itinerary.'
-  },
-  {
-    slug: 'kerala-tour-package-from-bangalore-munnar-alleppey-guide',
-    title: 'Kerala Tour Package from Bangalore: Munnar, Alleppey & Best Places to Visit',
-    desc: 'Complete 2026 Kerala travel guide from Bangalore: Munnar tea hills, Alleppey backwater houseboats, Thekkady wildlife, flight booking from BLR & 5-day itinerary.',
-    image: '/kerala-tour-package-from-bangalore.webp',
-    h1: 'Kerala Tour Package from Bangalore: Munnar, Alleppey & Best Places to Visit',
-    intro: 'Known worldwide as God’s Own Country, Kerala is an idyllic paradise lying just a short 1-hour flight away from Bangalore. Explore Munnar tea gardens, Periyar wildlife sanctuary, and luxury Alleppey houseboat cruises.'
-  },
-  {
-    slug: 'thailand-tour-package-from-bangalore-budget-visa-itinerary',
-    title: 'Thailand Tour Package from Bangalore: Budget, Visa, Flights & 5-Day Itinerary',
-    desc: 'Complete 2026 guide for Thailand tour from Bangalore: Visa-free entry for Indians, direct flights from BLR, Bangkok & Pattaya budget, Coral Island & 5-day itinerary.',
-    image: '/thailand-tour-package-from-bangalore.webp',
-    h1: 'Thailand Tour Package from Bangalore: Budget, Visa, Flights & 5-Day Itinerary',
-    intro: 'Renowned globally as the Land of Smiles, Thailand is the #1 international holiday destination for Bangalore travelers. Discover permanent visa-free entry, direct BLR flights, Pattaya beaches, and Bangkok shopping.'
-  },
-  {
-    slug: 'bali-tour-from-bangalore-best-places-budget-visa-itinerary',
-    title: 'Bali Tour from Bangalore: Best Places, Travel Budget, Visa & Itinerary',
-    desc: 'Complete 2026 Bali travel guide from Bangalore: Visa on Arrival (e-VoA), flights from BLR, Ubud rice terraces, Nusa Penida island, travel budget & 6-day itinerary.',
-    image: '/bali-tour-package-from-bangalore.webp',
-    h1: 'Bali Tour from Bangalore: Best Places, Travel Budget, Visa & Itinerary',
-    intro: 'Affectionately known as the Island of the Gods, Bali is a tropical haven holding a deep cultural bond with Indian travelers. Explore e-VoA guidelines, Ubud jungle swings, Nusa Penida speedboats, and clifftop sunsets.'
-  },
-  {
-    slug: 'kamakhya-temple-guwahati-travel-guide-darshan-tips',
-    title: 'Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to Visit & Trip Planning',
-    desc: 'Complete 2026 travel guide for Maa Kamakhya Temple in Guwahati, Assam: VIP darshan passes, Garbhagriha spring water rituals, best season, Ambubachi Mela, and trip planning from Bangalore.',
-    image: '/kamakhya-temple-tour-package-from-bangalore-2.webp',
-    h1: 'Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to Visit & Trip Planning',
-    intro: 'Perched high atop Nilachal Hill overlooking the mighty Brahmaputra River in Guwahati, Assam, Maa Kamakhya Temple is the supreme epicenter of Tantric Shakti worship in Sanatana Dharma. Discover complete VIP darshan rules, sacred rituals, and flight itineraries from Bangalore.'
-  },
-  {
-    slug: 'puri-jagannath-konark-sun-temple-tour-complete-odisha-travel-guide',
-    title: 'Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Travel Guide',
-    desc: 'Complete 2026 Odisha pilgrimage travel guide covering Puri Jagannath Temple, UNESCO Konark Sun Temple, Bhubaneswar Lingaraj, and Dhauli. Flights from Bangalore, darshan rules, and 3-day itinerary.',
-    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
-    h1: 'Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Travel Guide',
-    intro: 'Revered as the holy land of Lord Jagannath (Purusottama Kshetra), Odisha forms a glorious Golden Triangle combining supreme devotion at the Char Dham Puri, Kalinga architectural brilliance at the UNESCO Konark Sun Temple, and ancient stone temples in Bhubaneswar.'
-  },
-  {
-    slug: 'best-south-india-temple-tour-from-bangalore-guide',
-    title: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
-    desc: 'Complete 2026 travel guide for the best South India temple tour from Bangalore covering Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari. Itinerary, flights, trains, and VIP darshan.',
-    image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
-    h1: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
-    intro: 'The sacred southern triangle of Tamil Nadu—Madurai, Rameshwaram, and Kanyakumari—represents the spiritual soul of South India. Connecting Goddess Meenakshi, the Char Dham Jyotirlinga at Rameshwaram with 22 Theerthams bath, and Kanyakumari where three oceans converge.'
-  },
-  {
-    slug: 'ujjain-mahakaleshwar-bhasma-aarti-booking-darshan-guide',
-    title: 'Ujjain Mahakaleshwar Bhasma Aarti: Booking, Darshan Rules & Travel Guide',
-    desc: 'Definitive guide to Ujjain Mahakaleshwar Bhasma Aarti: Step-by-step online booking procedure, dress code, VIP darshan rules, Mahakal Lok corridor, and flights from Bangalore.',
-    image: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp',
-    h1: 'Ujjain Mahakaleshwar Bhasma Aarti: Booking, Darshan Rules & Travel Guide',
-    intro: 'Shri Mahakaleshwar in Ujjain, Madhya Pradesh is the only Dakshinabhimukhi (south-facing) Jyotirlinga, master of time and mortality. Discover complete online booking procedures, strict dress codes, and flight itineraries from Bangalore for the pre-dawn Bhasma Aarti.'
-  },
-  {
-    slug: '12-jyotirlinga-temples-in-india-travel-guide',
-    title: '12 Jyotirlinga Temples in India: Names, Locations, Best Routes & Travel Guide',
-    desc: 'Complete travel guide to the 12 Jyotirlinga temples in India. Discover temple names, state locations, best circuit routes from Bangalore, VIP darshan rules, Bhasma Aarti tips, and package details.',
-    image: '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-1.webp',
-    h1: '12 Jyotirlinga Temples in India: Names, Locations, Best Routes & Travel Guide',
-    intro: 'In Sanatana Dharma, the 12 Jyotirlingas represent the supreme, radiant manifestations of Lord Shiva—the endless pillar of cosmic light (Jyoti) that transcends physical birth and decay. Devotees believe that visiting these twelve divine shrines bestows liberation from the karmic cycle of rebirth.'
-  },
-  {
-    slug: 'kashi-ayodhya-prayagraj-tour-from-bangalore-complete-guide',
-    title: 'Kashi Ayodhya Prayagraj Tour from Bangalore: Complete Pilgrimage Travel Guide',
-    desc: 'Complete 2026 travel guide for Kashi Ayodhya Prayagraj tour from Bangalore. Direct flights, Kashi Vishwanath VIP pass, Ram Lalla darshan, Triveni Sangam snan, 5-day itinerary, and senior citizen tips.',
-    image: '/kashi-ayodhya-prayagraj-tour-package-from-bangalore.webp',
-    h1: 'Kashi Ayodhya Prayagraj Tour from Bangalore: Complete Pilgrimage Travel Guide',
-    intro: 'The holy triad of Uttar Pradesh—Kashi (Varanasi), Ayodhya, and Prayagraj—constitutes the supreme spiritual pilgrimage in Sanatana Dharma. For devotees departing from Karnataka, this sacred circuit offers the extraordinary grace of seeking liberation at Kashi Vishwanath, revering Balak Ram Lalla, and taking the holy Triveni Sangam Snan.'
-  },
-  {
-    slug: 'shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide',
-    title: 'Shirdi with 3 Jyotirlinga Tour Package from Bangalore | Flight & VIP Darshan',
-    desc: 'Book Shirdi with 3 Jyotirlinga tour package from Bangalore with flights & VIP Darshan. Visit Bhimashankar, Trimbakeshwar, Grishneshwar, Ellora & Shani Shingnapur.',
-    image: '/shirdi-with-3-jyotirlinga-tour-package-from-bangalore-1.webp',
-    h1: 'Shirdi with 3 Jyotirlinga Tour Package from Bangalore – Flight & VIP Darshan Guide',
-    intro: 'Embark on the sacred Shirdi with 3 Jyotirlinga Tour Package from Bangalore by flight. Experience divine blessings at Bhimashankar, Trimbakeshwar, Grishneshwar Jyotirlingas, Shirdi Sai Baba VIP Darshan, Nashik Panchavati, UNESCO Ellora Caves, Bhadra Maruti, and Shani Shingnapur with Sai Samarth Tours.'
-  },
-  {
-    slug: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
-    title: 'Kamakhya Temple Guwahati Tour Package from Bangalore | Flight & VIP Darshan',
-    desc: 'Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. 2 Days / 1 Night yatra with 3-star AC stay, pure veg meals & temple transfers.',
-    image: '/kamakhya-temple-tour-package-from-bangalore-1.webp',
-    h1: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
-    intro: 'Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. Experience divine blessings at Maa Kamakhya Shakti Peeth on Nilachal Hill, Umananda Shiva Temple, Vasistha Ashram & Balaji Temple with Sai Samarth Tours.'
-  },
-  {
-    slug: 'south-india-tour-package-from-bangalore',
-    title: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
-    desc: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹25,999.',
-    image: '/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore-1.webp',
-    h1: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
-    intro: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹25,999.'
-  },
-  {
-    slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore',
-    title: 'Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore',
-    desc: 'Book the Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore for ₹16,999. Explore sacred temples with Sai Samarth Tours.',
-    image: '/panch-bootha-bus-yatra-1.webp',
-    h1: 'Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore – 16,999/-',
-    intro: 'Embark on the sacred Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore with Sai Samarth Tours. Discover all 5 Shiva elemental temples, Srirangam, Thanjavur, and Lord Balaji in a 4N/5D deluxe A/C pushback coach for ₹16,999/- with 3-star AC stays, all meals, and tour manager.'
-  },
-  {
-    slug: 'kashi-ayodhya-tour-package-from-bangalore',
-    title: 'Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary, Cost & Travel Tips',
-    desc: 'Complete guide for Kashi Ayodhya tour package from Bangalore: Major temples, 5-day itinerary, package price, VIP darshan passes, flights, pure veg food, and senior tips.',
-    image: '/kashi-ayodhya-tour-package-from-bangalore.webp',
-    h1: 'Kashi, Ayodhya and Prayagraj Tour from Bangalore: Itinerary, Cost & Travel Tips',
-    intro: 'The holy triad of Uttar Pradesh—Kashi, Ayodhya, and Prayagraj—represents the supreme spiritual heartbeat of Sanatana Dharma. Discover complete cost breakdowns, direct flight options, VIP darshan booking rules, and an expert 5-day family itinerary.'
-  },
-  {
-    slug: 'shirdi-tour-package-from-bangalore-direct-flight-vip-darshan',
-    title: 'Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan',
-    desc: 'Book all-inclusive Shirdi tour package from Bangalore with direct flights to Shirdi Airport, confirmed VIP Darshan, 5 AM Kakad Aarti, Shani Shingnapur & 3-star AC stay.',
-    image: '/shirdi-flight-tour-package-from-bangalore-1.webp',
-    h1: 'Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan',
-    intro: 'Experience a blissful 2-day pilgrimage with our Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan. Land at Shirdi Airport in 90 minutes, bypass 6-hour general queues with pre-arranged Gate 3 VIP passes, attend 5:00 AM Kakad Aarti, visit Shani Shingnapur, and enjoy verified 3-star AC stays with pure veg South Indian meals.'
-  },
-  {
-    slug: 'shirdi-tour-package-from-bangalore-guide',
-    title: 'Shirdi Tour Package from Bangalore: Complete Travel Guide, Darshan & Itinerary',
-    desc: 'Complete guide for Shirdi tour package from Bangalore: Best time to visit, direct flights, VIP Darshan, Kakad Aarti booking, Shani Shingnapur, pure veg food, and 2-day itinerary.',
-    image: '/shirdi-tour-hero-banner-mobile.webp',
-    h1: 'Shirdi Tour Package from Bangalore: Complete Travel Guide, Darshan & Itinerary',
-    intro: 'Seeking the divine grace of Sri Sai Baba is a cherished spiritual aspiration for lakhs of devotees across Karnataka. Discover direct flights from Bangalore, VIP Darshan passes, Kakad Aarti, Shani Shingnapur, pure veg meals, and an effortless 2-day itinerary.'
-  },
-  {
-    slug: 'shirdi-vip-darshan-guide-2026',
-    title: 'Shirdi VIP Darshan Online Booking, Aarti Timings & Flight Guide from Bangalore (2026)',
-    desc: 'Complete guide for Bangalore devotees visiting Shirdi: VIP darshan passes, Aarti schedule, Dress code, and Direct Flights from Kempegowda Airport.',
-    image: '/shirdi-tour-hero-banner-desktop.webp',
-    h1: 'Shirdi VIP Darshan Booking, Aarti Timings & Flight Guide from Bangalore (2026)',
-    intro: 'Planning a pilgrimage to Shirdi from Bangalore? This definitive 2026 guide covers everything you need: official VIP darshan booking steps, Kakad and Shej Aarti schedules, temple rules, and hassle-free flight itineraries.'
-  },
-  {
-    slug: 'kashi-ayodhya-prayagraj-guide-2026',
-    title: 'Kashi, Ayodhya & Prayagraj Pilgrimage Circuit: Complete Flight & Darshan Guide from Bangalore (2026)',
-    desc: 'Essential guide for Bangalore pilgrims visiting Kashi Vishwanath, Ayodhya Ram Mandir, and Prayagraj Triveni Sangam. Covers Ganga Aarti, VIP passes, and flights.',
-    image: '/kashi-ayodhya-prayagraj-tour-package-from-bangalore.webp',
-    h1: 'Kashi, Ayodhya & Prayagraj Pilgrimage Circuit Guide from Bangalore (2026)',
-    intro: 'The sacred Uttar Pradesh holy triumvirate—Kashi, Ayodhya, and Prayagraj—constitutes the quintessential pilgrimage for every Hindu devotee seeking spiritual liberation.'
-  },
-  {
-    slug: 'singapore-malaysia-family-guide-2026',
-    title: 'Singapore Malaysia Tour Guide for Indian Families from Bangalore',
-    desc: 'Complete travel guide for Singapore & Malaysia twin-country family tours from Bangalore. Covers Universal Studios, Batu Caves, Genting, visa procedures, and Indian veg food.',
-    image: '/singapore-malaysia-tour-package-from-bangalore.webp',
-    h1: 'Malaysia & Singapore Twin Country Tour Guide for Indian Families Departing Bangalore',
-    intro: 'Combining Malaysia and Singapore in a single international holiday is the premier choice for Indian families, couples, and multi-generational travelers departing Bangalore.'
-  },
-  {
-    slug: 'chardham-yatra-preparation-guide',
-    title: 'Char Dham Yatra 2026 Preparation & Flight Guide from Bangalore',
-    desc: 'Complete preparation guide for Char Dham Yatra (Yamunotri, Gangotri, Kedarnath, Badrinath) from Bangalore. Includes biometric pass, helicopter booking, fitness tips, and packing list.',
-    image: '/baidyanath-dham-tour-package-from-bangalore.webp',
-    h1: 'Char Dham Yatra 2026: Comprehensive Preparation, Medical & Flight Guide from Bangalore',
-    intro: 'The Char Dham Yatra in the Garhwal Himalayas of Uttarakhand—visiting Yamunotri, Gangotri, Kedarnath, and Badrinath—is regarded as the supreme pilgrimage of lifetime liberation.'
-  },
-  {
-    slug: 'kashmir-paradise-seasons-guide',
-    title: 'Kashmir Tour Guide from Bangalore: Best Season, Houseboats & Flight Routes',
-    desc: 'Complete seasonal guide for planning a Kashmir tour package from Bangalore. Covers Srinagar houseboats, Gulmarg Gondola booking, Pahalgam valleys, and snow seasons.',
-    image: '/kashmir-tour-package-from-bangalore.webp',
-    h1: 'Kashmir Paradise Valley Guide: Best Seasons, Houseboat Stays & Flight Routes from Bangalore',
-    intro: 'Renowned as the paradise on earth, Jammu and Kashmir offers breathtaking snow-capped Himalayan vistas, tranquil Dal Lake shikara rides, and alpine meadows.'
-  },
-  {
-    slug: 'prasadam-and-temple-rituals-india',
-    title: 'Sacred Temple Prasadam & Ritual Practices Guide | Sai Samarth Tours',
-    desc: 'Discover the spiritual secrets of Tirupati Srivari Laddoo, Puri Jagannath Mahaprasad 56 Bhog, and Shirdi Sai Prasadalaya. Pilgrimage tour guide from Bangalore.',
-    image: '/puri-jagannath-konark-tour-package-from-bangalore.webp',
-    h1: 'Sacred Temple Prasadam & Ritual Practices Across Holy Shrines of India',
-    intro: 'In Sanatana Dharma, Temple Prasadam is not merely food—it is the direct divine blessing of the supreme deity.'
-  }
-];
+// 4. Prerender Blog Articles Dynamically from src/data/blogs
+const blogsDir = path.join(rootDir, 'src/data/blogs');
+const blogFiles = fs.readdirSync(blogsDir).filter(f => f.endsWith('.ts') && f !== 'types.ts' && f !== 'index.ts');
+
+const blogArticles = blogFiles.map(file => {
+  const content = fs.readFileSync(path.join(blogsDir, file), 'utf8');
+  const idMatch = content.match(/id:\s*['"]([^'"]+)['"]/);
+  const slugMatch = content.match(/slug:\s*['"]([^'"]+)['"]/);
+  const titleMatch = content.match(/title:\s*['"`]([\s\S]*?)['"`],/);
+  const seoTitleMatch = content.match(/seoTitle:\s*['"`]([\s\S]*?)['"`],/);
+  const seoDescMatch = content.match(/seoDescription:\s*['"`]([\s\S]*?)['"`],/);
+  const excerptMatch = content.match(/excerpt:\s*['"`]([\s\S]*?)['"`],/);
+  const imageMatch = content.match(/image:\s*['"]([^'"]+)['"]/);
+  const introMatch = content.match(/intro:\s*['"`]([\s\S]*?)['"`],/);
+  const dateMatch = content.match(/date:\s*['"]([^'"]+)['"]/);
+  const authorMatch = content.match(/name:\s*['"]([^'"]+)['"]/);
+
+  const id = idMatch ? idMatch[1] : file.replace('.ts', '');
+  const slug = slugMatch ? slugMatch[1] : id;
+  const rawTitle = titleMatch ? titleMatch[1].trim() : id;
+  const seoTitle = seoTitleMatch ? seoTitleMatch[1].trim() : (rawTitle.includes('Sai Samarth') ? rawTitle : `${rawTitle} | Sai Samarth Tours`);
+  const desc = seoDescMatch ? seoDescMatch[1].trim() : (excerptMatch ? excerptMatch[1].trim() : `Complete travel guide for ${rawTitle} from Bangalore.`);
+  const image = imageMatch ? imageMatch[1] : '/shirdi-tour-hero-banner-desktop.webp';
+  const intro = introMatch ? introMatch[1].trim() : (excerptMatch ? excerptMatch[1].trim() : desc);
+  const date = dateMatch ? dateMatch[1] : '2026-01-15';
+  const author = authorMatch ? authorMatch[1] : 'Sai Samarth Travel Editorial Team';
+
+  return {
+    id,
+    slug,
+    title: seoTitle,
+    desc,
+    image,
+    h1: rawTitle,
+    intro,
+    date,
+    author
+  };
+});
 
 function buildBlogBody(blog) {
   return `
@@ -870,17 +824,56 @@ function buildBlogBody(blog) {
   `;
 }
 
+console.log(`Prerendering ${blogArticles.length} blog posts with crawlable HTML & Article schema...`);
+
 blogArticles.forEach(blog => {
   const bodyContent = buildBlogBody(blog);
+  const absoluteImage = blog.image.startsWith('http') ? blog.image : `https://saisamarthtours.com${blog.image.startsWith('/') ? '' : '/'}${blog.image}`;
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': blog.h1,
+      'description': blog.desc.slice(0, 160),
+      'image': absoluteImage,
+      'author': {
+        '@type': 'Person',
+        'name': blog.author
+      },
+      'publisher': {
+        '@type': 'TravelAgency',
+        'name': 'Sai Samarth Tours',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp'
+        }
+      },
+      'datePublished': blog.date,
+      'mainEntityOfPage': `https://saisamarthtours.com/blog/${blog.slug}`
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://saisamarthtours.com/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Travel Guides & Blog', 'item': 'https://saisamarthtours.com/blog' },
+        { '@type': 'ListItem', 'position': 3, 'name': blog.h1, 'item': `https://saisamarthtours.com/blog/${blog.slug}` }
+      ]
+    }
+  ];
+
   const html = generateHtml({
     title: blog.title,
     description: blog.desc.slice(0, 155),
     url: `/blog/${blog.slug}`,
     image: blog.image,
     type: 'article',
-    bodyContent
+    bodyContent,
+    jsonLd
   });
+
   writePage(`blog/${blog.slug}`, html);
+  writePage(`blog/${blog.id}`, html);
 });
 
 console.log('Successfully prerendered Open Graph social previews and crawlable HTML for all packages, destinations, blogs, and category pages!');

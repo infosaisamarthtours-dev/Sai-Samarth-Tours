@@ -95,8 +95,8 @@ export function GroupPackagesPage({ onOpenEnquiry }: Props) {
       'provider': {
         '@type': 'TravelAgency',
         'name': 'Sai Samarth Tours',
-        'url': 'https://saisamarthtours.com',
-        'telephone': '+916361181869'
+        'url': 'https://saisamarthtours.com/',
+        'telephone': '+919187711649'
       },
       'areaServed': {
         '@type': 'City',

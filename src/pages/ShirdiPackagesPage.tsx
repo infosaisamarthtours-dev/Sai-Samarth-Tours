@@ -26,7 +26,7 @@ export function ShirdiPackagesPage() {
       <SEOHead
         title="Shirdi Tour Packages from Bangalore | Flights, VIP Darshan & 3-Star Hotels"
         description="Book direct flight Shirdi tour packages from Bangalore with Sai Samarth Tours. Includes VIP darshan passes, Shani Shingnapur, Trimbakeshwar, Bhimashankar Jyotirlingas, and 3-star AC accommodation."
-        canonical="https://saisamarthtours.com/shirdi-packages"
+        canonical="https://saisamarthtours.com/shirdi-tour-packages"
         ogImage="/shirdi-packages-category-card.webp"
       />
       

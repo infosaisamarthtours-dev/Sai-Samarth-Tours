@@ -10,6 +10,7 @@ export function NotFoundPage() {
       <SEOHead
         title="Page Not Found (404) | Sai Samarth Tours Bangalore"
         description="The page you are looking for might have been moved or removed. Explore our popular pilgrimage and holiday tour packages from Bangalore."
+        noIndex={true}
       />
       <div className="max-w-xl w-full bg-white rounded-3xl p-8 sm:p-12 text-center shadow-xl border border-gray-100">
         <span className="text-6xl sm:text-7xl font-extrabold font-serif text-[#EA580C] block mb-2">404</span>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FileText, Scale, UserCheck, ShieldAlert } from 'lucide-react';
 import { siteConfig } from '../data/config';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 export function TermsOfUsePage() {
   return (
@@ -15,10 +16,8 @@ export function TermsOfUsePage() {
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4 sm:mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-gray-200">Terms of Use</span>
+          <div className="mb-4 sm:mb-6">
+            <Breadcrumbs items={[{ name: 'Terms of Use' }]} className="text-gray-300 justify-center" />
           </div>
           <span className="text-xs uppercase font-bold tracking-widest text-[#F59E0B] bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-4 inline-block">
             Legal Terms

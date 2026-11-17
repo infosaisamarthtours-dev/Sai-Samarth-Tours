@@ -275,12 +275,12 @@ export function PackageDetailsPage() {
         'priceCurrency': 'INR',
         'availability': 'https://schema.org/InStock',
         'validFrom': '2026-01-01',
-        'url': `https://saisamarthtours.com/package/${pkg.id}`
+        'url': `https://saisamarthtours.com/package/${getPackageSlug(pkg)}`
       },
       'provider': {
         '@type': 'TravelAgency',
         'name': 'Sai Samarth Tours',
-        'telephone': '+916361181869',
+        'telephone': '+919187711649',
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Bengaluru',

@@ -1,4 +1,4 @@
-import { siteConfig, getFullAddress } from '../data/config';
+import { siteConfig } from '../data/config';
 
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -10,7 +10,7 @@ export const localBusinessSchema = {
     'Sai Samarth Pilgrimage Tours',
     'Sai Samarth Travels'
   ],
-  'url': 'https://saisamarthtours.com',
+  'url': 'https://saisamarthtours.com/',
   'logo': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp',
   'image': [
     'https://saisamarthtours.com/shirdi-tour-hero-banner-desktop.webp',
@@ -87,3 +87,130 @@ export const localBusinessSchema = {
     name
   }))
 };
+
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://saisamarthtours.com/#website',
+  'url': 'https://saisamarthtours.com/',
+  'name': 'Sai Samarth Tours',
+  'description': 'Leading travel agency and pilgrimage tour operator in Bangalore offering all-inclusive tour packages with flights, 3-star AC hotels, pure veg meals, and tour manager assistance.',
+  'publisher': {
+    '@id': 'https://saisamarthtours.com/#localbusiness'
+  },
+  'inLanguage': 'en-IN'
+};
+
+export const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://saisamarthtours.com/#organization',
+  'name': 'Sai Samarth Tours',
+  'url': 'https://saisamarthtours.com/',
+  'logo': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp',
+  'telephone': '+919187711649',
+  'email': 'info.saisamarthtours@gmail.com',
+  'sameAs': [
+    'https://www.facebook.com/saisamarthtours',
+    'https://www.instagram.com/sai.samarth.tours',
+    'https://www.youtube.com/@SAISAMARTHTOURS'
+  ]
+};
+
+export function getBreadcrumbSchema(items: { name: string; url?: string }[]) {
+  const allItems = [{ name: 'Home', url: '/' }, ...items];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': allItems.map((item, index) => {
+      const isLast = index === allItems.length - 1;
+      let absoluteItemUrl: string | undefined = undefined;
+      if (item.url) {
+        absoluteItemUrl = item.url.startsWith('http')
+          ? item.url
+          : `https://saisamarthtours.com${item.url.startsWith('/') ? '' : '/'}${item.url}`;
+      } else if (isLast && typeof window !== 'undefined') {
+        absoluteItemUrl = window.location.href;
+      }
+      return {
+        '@type': 'ListItem',
+        'position': index + 1,
+        'name': item.name,
+        ...(absoluteItemUrl ? { 'item': absoluteItemUrl } : {})
+      };
+    })
+  };
+}
+
+export function getFaqSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqs.map(f => ({
+      '@type': 'Question',
+      'name': f.question,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': f.answer
+      }
+    }))
+  };
+}
+
+export function getTouristTripSchema(pkg: any, canonicalUrl?: string) {
+  const title = pkg.seoH1 || pkg.title;
+  const url = canonicalUrl || `https://saisamarthtours.com/package/${pkg.id}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    'name': title,
+    'description': pkg.description || `${title} from Bangalore with flights and hotel stay.`,
+    'touristType': ['Pilgrims', 'Families', 'Senior Citizens'],
+    'offers': {
+      '@type': 'Offer',
+      'price': pkg.numericPrice || 18999,
+      'priceCurrency': 'INR',
+      'availability': 'https://schema.org/InStock',
+      'validFrom': '2026-01-01',
+      'url': url
+    },
+    'provider': {
+      '@type': 'TravelAgency',
+      'name': 'Sai Samarth Tours',
+      'telephone': '+919187711649',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Bengaluru',
+        'addressRegion': 'Karnataka',
+        'postalCode': '560064',
+        'streetAddress': 'No. 2238, Second Floor, 16th ‘B’ Cross, Yelahanka New Town'
+      }
+    }
+  };
+}
+
+export function getArticleSchema(post: any, canonicalUrl?: string) {
+  const url = canonicalUrl || `https://saisamarthtours.com/blog/${post.slug || post.id}`;
+  const image = post.image.startsWith('http') ? post.image : `https://saisamarthtours.com${post.image.startsWith('/') ? '' : '/'}${post.image}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': post.title,
+    'description': post.excerpt,
+    'image': image,
+    'author': {
+      '@type': 'Person',
+      'name': post.author?.name || 'Sai Samarth Travel Editorial Team'
+    },
+    'publisher': {
+      '@type': 'TravelAgency',
+      'name': 'Sai Samarth Tours',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp'
+      }
+    },
+    'datePublished': post.date,
+    'mainEntityOfPage': url
+  };
+}

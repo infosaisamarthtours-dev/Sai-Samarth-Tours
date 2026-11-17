@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { HelpCircle, ChevronDown, Phone, MessageCircle } from 'lucide-react';
 import { siteConfig } from '../data/config';
 import { SEOHead } from '../components/SEOHead';
+import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getFaqSchema } from '../utils/schema';
 
 export function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -63,20 +65,21 @@ export function FaqPage() {
 
   let faqCounter = 0;
 
+  const allFaqs = faqCategories.flatMap(cat => cat.faqs);
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
         title="Frequently Asked Questions (FAQ) | Sai Samarth Tours Bangalore"
         description="Find answers to common questions about Sai Samarth Tours pilgrimage packages, flight bookings, VIP Darshan, meals, and senior citizen assistance from Bangalore."
         canonical="https://saisamarthtours.com/faq"
+        jsonLd={getFaqSchema(allFaqs)}
       />
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400 mb-4 sm:mb-6">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-gray-200">FAQ</span>
+          <div className="mb-4 sm:mb-6">
+            <Breadcrumbs items={[{ name: 'FAQ' }]} className="text-gray-300 justify-center" />
           </div>
           <span className="text-xs uppercase font-bold tracking-widest text-[#F59E0B] bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 mb-4 inline-block">
             Help Center

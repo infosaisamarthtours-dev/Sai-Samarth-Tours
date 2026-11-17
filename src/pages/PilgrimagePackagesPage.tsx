@@ -29,9 +29,9 @@ export function PilgrimagePackagesPage() {
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       <SEOHead
-        title="Pilgrimage Tour Packages from Bangalore | Sai Samarth Tours"
+        title="Pilgrimage Tour Packages from Bangalore | Sacred Yatras with Flights | Sai Samarth Tours"
         description="Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes flights, VIP darshan & 3-star AC hotels."
-        canonical="https://saisamarthtours.com/pilgrimage-packages"
+        canonical="https://saisamarthtours.com/pilgrimage-tour-packages"
         ogImage="/pilgrimage-packages-category-card.webp"
       />
       

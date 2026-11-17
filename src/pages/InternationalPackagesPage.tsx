@@ -12,7 +12,7 @@ export function InternationalPackagesPage() {
       <SEOHead
         title="International Tour Packages from Bangalore | Sai Samarth Tours"
         description="Premium international holiday packages from Bangalore: Singapore, Malaysia, Thailand, Bali, Dubai, Sri Lanka, Nepal & Europe. Complete visa assistance, flights, 4-star hotels & meals."
-        canonical="https://saisamarthtours.com/international-packages"
+        canonical="https://saisamarthtours.com/international-tour-packages"
         ogImage="/international-packages-category-card.webp"
       />
       

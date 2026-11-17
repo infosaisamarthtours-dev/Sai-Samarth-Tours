@@ -12,7 +12,7 @@ export function DomesticPackagesPage() {
       <SEOHead
         title="Domestic Holiday Tour Packages from Bangalore | Sai Samarth Tours"
         description="Handcrafted India holiday packages from Bangalore: Kashmir, Kerala backwaters, Leh Ladakh, Rajasthan, Himachal Pradesh & Andaman. Includes flights, deluxe hotels & customized sightseeing."
-        canonical="https://saisamarthtours.com/domestic-packages"
+        canonical="https://saisamarthtours.com/domestic-tour-packages"
         ogImage="/domestic-packages-category-card.webp"
       />
       

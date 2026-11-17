@@ -69,27 +69,44 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
     );
   }
 
-  const articleJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    'headline': post.title,
-    'description': post.excerpt,
-    'image': post.image.startsWith('http') ? post.image : `https://saisamarthtours.com${post.image}`,
-    'author': {
-      '@type': 'Person',
-      'name': post.author.name
-    },
-    'publisher': {
-      '@type': 'TravelAgency',
-      'name': 'Sai Samarth Tours',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp'
-      }
-    },
-    'datePublished': post.date,
-    'mainEntityOfPage': `https://saisamarthtours.com/blog/${post.slug}`
-  };
+  const blogJsonLd: any[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': post.title,
+      'description': post.seoDescription || post.excerpt,
+      'image': post.image.startsWith('http') ? post.image : `https://saisamarthtours.com${post.image}`,
+      'author': {
+        '@type': 'Person',
+        'name': post.author.name
+      },
+      'publisher': {
+        '@type': 'TravelAgency',
+        'name': 'Sai Samarth Tours',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://saisamarthtours.com/sai-samarth-tours-logo.webp'
+        }
+      },
+      'datePublished': post.date,
+      'mainEntityOfPage': `https://saisamarthtours.com/blog/${post.slug}`
+    }
+  ];
+
+  if (post.content.faqs && post.content.faqs.length > 0) {
+    blogJsonLd.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': post.content.faqs.map((f: any) => ({
+        '@type': 'Question',
+        'name': f.question,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': f.answer
+        }
+      }))
+    });
+  }
 
   const handleShare = () => {
     if (navigator.share) {
@@ -135,12 +152,12 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
   return (
     <div className="flex-grow bg-[#F8FAFC] font-sans pb-16 sm:pb-24 selection:bg-[#F59E0B] selection:text-white">
       <SEOHead
-        title={`${post.title} | Sai Samarth Tours`}
-        description={post.excerpt}
+        title={post.seoTitle ? `${post.seoTitle} | Sai Samarth Tours` : `${post.title} | Sai Samarth Tours`}
+        description={post.seoDescription || post.excerpt}
         canonical={`https://saisamarthtours.com/blog/${post.slug}`}
         ogImage={post.image}
         ogType="article"
-        jsonLd={articleJsonLd}
+        jsonLd={blogJsonLd}
       />
 
       {/* ================= EDITORIAL TOP HERO SECTION ================= */}
