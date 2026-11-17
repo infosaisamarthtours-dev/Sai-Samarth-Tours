@@ -136,3 +136,4 @@ export const thailandTourPackageFromBangaloreGuidePost: BlogPost = {
   featured: true,
   relatedPackageId: 'thailand'
 };
+

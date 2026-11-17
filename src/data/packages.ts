@@ -1093,9 +1093,9 @@ export const ALL_PACKAGES: Package[] = [
   },
   {
     id: 'shirdi-2-jyothirlinga',
-    title: 'Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Trimbakeshwar & Grishneshwar Flight Yatra',
+    title: 'Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Bhimashankar & Grishneshwar Flight Yatra',
     shortTitle: 'Shirdi 2 Jyotirlinga Yatra',
-    seoH1: 'Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Trimbakeshwar & Grishneshwar Flight Yatra',
+    seoH1: 'Shirdi with 2 Jyotirlinga Tour Package from Bangalore – Bhimashankar & Grishneshwar Flight Yatra',
     category: 'pilgrimage',
     destination: 'Maharashtra (Pune, Bhimashankar, Shirdi, Grishneshwar)',
     duration: '1N/2D',

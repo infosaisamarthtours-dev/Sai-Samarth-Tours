@@ -137,3 +137,4 @@ export const kashmirTourFromBangaloreGuidePost: BlogPost = {
   featured: true,
   relatedPackageId: 'kashmir'
 };
+

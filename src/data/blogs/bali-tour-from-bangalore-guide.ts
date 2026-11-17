@@ -138,3 +138,4 @@ export const baliTourFromBangaloreGuidePost: BlogPost = {
   featured: true,
   relatedPackageId: 'bali'
 };
+
