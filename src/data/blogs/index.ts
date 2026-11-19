@@ -1,4 +1,7 @@
 import { BlogPost } from './types';
+import { omkareshwarPlacesToVisitGuidePost } from './omkareshwar-places-to-visit-tourist-attractions-guide';
+import { bestTimeToVisitKedarnathGuidePost } from './best-time-to-visit-kedarnath-weather-temperature-guide';
+import { fiveJyotirlingasOfMaharashtraGuidePost } from './5-jyotirlingas-of-maharashtra-names-locations-timings-guide';
 import { kashmirTourFromBangaloreGuidePost } from './kashmir-tour-from-bangalore-guide';
 import { keralaTourPackageFromBangaloreGuidePost } from './kerala-tour-package-from-bangalore-guide';
 import { thailandTourPackageFromBangaloreGuidePost } from './thailand-tour-package-from-bangalore-guide';
@@ -24,6 +27,9 @@ import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-to
 import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { omkareshwarPlacesToVisitGuidePost } from './omkareshwar-places-to-visit-tourist-attractions-guide';
+export { bestTimeToVisitKedarnathGuidePost } from './best-time-to-visit-kedarnath-weather-temperature-guide';
+export { fiveJyotirlingasOfMaharashtraGuidePost } from './5-jyotirlingas-of-maharashtra-names-locations-timings-guide';
 export { kashmirTourFromBangaloreGuidePost } from './kashmir-tour-from-bangalore-guide';
 export { keralaTourPackageFromBangaloreGuidePost } from './kerala-tour-package-from-bangalore-guide';
 export { thailandTourPackageFromBangaloreGuidePost } from './thailand-tour-package-from-bangalore-guide';
@@ -49,6 +55,9 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  omkareshwarPlacesToVisitGuidePost,
+  bestTimeToVisitKedarnathGuidePost,
+  fiveJyotirlingasOfMaharashtraGuidePost,
   kashmirTourFromBangaloreGuidePost,
   keralaTourPackageFromBangaloreGuidePost,
   thailandTourPackageFromBangaloreGuidePost,

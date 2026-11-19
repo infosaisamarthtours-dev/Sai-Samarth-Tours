@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalHtmlFiles": 141,
-    "indexableRoutes": 99,
+    "totalHtmlFiles": 144,
+    "indexableRoutes": 102,
     "redirectRoutes": 42,
     "missingTitles": 0,
     "missingCanonicals": 0,
@@ -46,6 +46,22 @@
       ]
     },
     {
+      "route": "/blog/5-jyotirlingas-of-maharashtra-names-locations-timings-guide",
+      "title": "5 Jyotirlingas of Maharashtra: Names, Locations & Timings (2026)",
+      "description": "Complete guide to the 5 Jyotirlingas of Maharashtra: Trimbakeshwar, Bhimashankar, Grishneshwar, Parli Vaijnath & Aundha Nagnath with timings, routes & tour",
+      "canonical": "https://saisamarthtours.com/blog/5-jyotirlingas-of-maharashtra-names-locations-timings-guide",
+      "h1": "5 Jyotirlingas of Maharashtra - Jyotirlingas Names, Places, ",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "route": "/blog/bali-tour-from-bangalore-best-places-budget-visa-itinerary",
       "title": "Bali Tour from Bangalore: Best Places, Budget, Visa & Itinerary (2026)",
       "description": "Complete 2026 Bali travel guide from Bangalore: Visa on Arrival (e-VoA), flights from BLR, Ubud rice terraces, Nusa Penida island, travel budget & 6-day it",
@@ -67,6 +83,22 @@
       "description": "Complete 2026 travel guide for the best South India temple tour from Bangalore covering Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari. Itin",
       "canonical": "https://saisamarthtours.com/blog/best-south-india-temple-tour-from-bangalore-guide",
       "h1": "Best South India Temple Tour from Bangalore: Rameshwaram, Ma",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/best-time-to-visit-kedarnath-weather-temperature-things-to-do-guide",
+      "title": "Best Time to Visit Kedarnath: Weather, Temp & Travel Guide (2026)",
+      "description": "Plan your Kedarnath Yatra: Best time to visit month-by-month, temperature & weather guide, opening dates, helicopter booking & things to do from Bangalore.",
+      "canonical": "https://saisamarthtours.com/blog/best-time-to-visit-kedarnath-weather-temperature-things-to-do-guide",
+      "h1": "Best Time to Visit Kedarnath - Weather, Temperature & Things",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -242,6 +274,22 @@
       "description": "Book the Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore for ₹16,999. Explore sacred temples with Sai Samarth Tours.",
       "canonical": "https://saisamarthtours.com/blog/panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore",
       "h1": "Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/places-to-visit-in-omkareshwar-jyotirlinga-temple-attractions-guide",
+      "title": "Places to Visit in Omkareshwar Jyotirlinga: Attractions & Things to Do (2026)",
+      "description": "Complete travel guide to places to visit in Omkareshwar Jyotirlinga: Mandhata Island, Mamleshwar temple, Narmada Ghats, Parikrama, boating & tours from Ban",
+      "canonical": "https://saisamarthtours.com/blog/places-to-visit-in-omkareshwar-jyotirlinga-temple-attractions-guide",
+      "h1": "Places to Visit In Omkareshwar Jyotirlinga Temple - Tourist ",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
