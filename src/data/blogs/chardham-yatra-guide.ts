@@ -33,7 +33,7 @@ export const chardhamYatraGuidePost: BlogPost = {
         bulletPoints: [
           '**Yamunotri Dham (3,293 m):** Source of the holy Yamuna river. Features a 6 km uphill trek from Janki Chatti. Pilgrims cook raw rice in boiling waters of Surya Kund to receive as blessed prasadam.',
           '**Gangotri Dham (3,415 m):** The sacred seat of Goddess Ganga amidst pine forests and snowy summits. Accessible directly by motor vehicle without uphill walking.',
-          '**Kedarnath Dham (3,583 m):** The supreme Jyotirlinga of Lord Shiva. Involves a 16 km mountain trek from Gaurikund, or an effortless 10-minute helicopter shuttle departing from Phata, Guptkashi, or Sirsi.',
+          '**Kedarnath Dham (3,583 m):** The supreme Jyotirlinga of Lord Shiva. Involves a 16 km mountain trek from Gaurikund, or an effortless 10-minute helicopter shuttle departing from Phata, Guptkashi, or Sirsi. For complete seasonal insights, read our guide on the **[Best Time to Visit Kedarnath: Weather, Temperature & Guide](/blog/best-time-to-visit-kedarnath-weather-temperature-things-to-do-guide)**.',
           '**Badrinath Dham (3,300 m):** The celestial abode of Lord Vishnu (Badri Vishal) on the banks of Alaknanda river, framed by Nar and Narayana mountain ranges.'
         ]
       },

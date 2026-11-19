@@ -61,7 +61,7 @@ export const ujjainMahakaleshwarBhasmaAartiGuidePost: BlogPost = {
           '**Kal Bhairav Mandir:** The fierce guardian deity of Ujjain, famous for the unique Vedic ritual where liquor offerings (*Madya Arpan*) disappear mysteriously into the lips of the stone idol as holy prasadam.',
           '**Sandipani Ashram:** The ancient hermitage where Lord Sri Krishna, his brother Balarama, and friend Sudama stayed as young students to master the 64 arts and Vedic sciences under Guru Sandipani.',
           '**Mangalnath Temple:** Revered in Hindu Vedic astrology as the planetary birthplace of Mars (*Mangal Graha*), situated at the intersection of the Tropic of Cancer, where devotees perform sacred Bhat Puja for relief from Manglik Dosh.',
-          '**Omkareshwar & Mamleshwar Jyotirlinga Excursion:** Located 135 km south of Ujjain along the holy Narmada River on the sacred island of Mandhata. Pilgrims take a serene motorboat ride across the Narmada and visit both Omkareshwar on the island and Mamleshwar on the mainland to complete the sacred Madhya Pradesh twin-Jyotirlinga circuit.'
+          '**Omkareshwar & Mamleshwar Jyotirlinga Excursion:** Located 135 km south of Ujjain along the holy Narmada River on the sacred island of Mandhata. Pilgrims take a serene motorboat ride across the Narmada and visit both Omkareshwar on the island and Mamleshwar on the mainland to complete the sacred Madhya Pradesh twin-Jyotirlinga circuit. For an exhaustive sightseeing and Parikrama itinerary, read our in-depth guide on **[Places to Visit in Omkareshwar Jyotirlinga Temple](/blog/places-to-visit-in-omkareshwar-jyotirlinga-temple-attractions-guide)**.'
         ]
       },
       {
@@ -138,6 +138,6 @@ export const ujjainMahakaleshwarBhasmaAartiGuidePost: BlogPost = {
     'Vedic Darshan Guide'
   ],
   featured: true,
-  relatedPackageId: 'indore-ujjain-omkareshwar'
+  relatedPackageId: 'indore-ujjain'
 };
 

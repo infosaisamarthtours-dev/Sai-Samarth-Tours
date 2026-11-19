@@ -72,7 +72,7 @@ export const shirdiTourPackageFromBangaloreGuidePost: BlogPost = {
       {
         heading: '5. Holy Excursion to Shani Shingnapur: Distance, Rituals & Village Wonder',
         subheading: 'Worship the Swayambhu Black Stone of Lord Shanidev',
-        body: 'A pilgrimage to Shirdi is traditionally considered incomplete without visiting Shani Shingnapur, situated in Nevasa taluka, approximately 72 km from Shirdi. Traveling in a dedicated private AC car takes just 1.5 to 2 hours through scenic rural Maharashtra. If you wish to extend your yatra to cover Lord Shiva’s Jyotirlingas, check our [Shirdi with 3 Jyotirlinga Tour Package from Bangalore](/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore) covering Trimbakeshwar, Grishneshwar, and Bhimashankar.',
+        body: 'A pilgrimage to Shirdi is traditionally considered incomplete without visiting Shani Shingnapur, situated in Nevasa taluka, approximately 72 km from Shirdi. Traveling in a dedicated private AC car takes just 1.5 to 2 hours through scenic rural Maharashtra. If you wish to extend your yatra to cover Lord Shiva’s Jyotirlingas, check our [Shirdi with 3 Jyotirlinga Tour Package from Bangalore](/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore) covering Trimbakeshwar, Grishneshwar, and Bhimashankar, or explore our complete guide on the **[5 Jyotirlingas of Maharashtra: Names, Locations & Timings](/blog/5-jyotirlingas-of-maharashtra-names-locations-timings-guide)**.',
         image: '/shirdi-via-pune-tour-package-from-bangalore-3.webp',
         imageCaption: 'The sacred open-air Swayambhu idol of Lord Shanidev in Shani Shingnapur',
         bulletPoints: [

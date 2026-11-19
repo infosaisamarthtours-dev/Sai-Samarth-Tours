@@ -147,6 +147,8 @@ export function App() {
             {/* SEO Route Aliases & Redirects */}
             <Route path="/packages" element={<Navigate to="/tour-packages" replace />} />
             <Route path="/blog/temple-prasadam-rituals-guide" element={<Navigate to="/blog/prasadam-and-temple-rituals-india" replace />} />
+            <Route path="/blog/twelve-jyotirlinga-temples-in-india-travel-guide" element={<Navigate to="/blog/12-jyotirlinga-temples-in-india-travel-guide" replace />} />
+            <Route path="/blog/chardham-yatra-guide" element={<Navigate to="/blog/chardham-yatra-preparation-guide" replace />} />
 
             {/* Direct Top-Level Keyword Destination Shortcuts */}
             <Route path="/shirdi-tour-package-from-bangalore" element={<Navigate to="/package/shirdi-tour-package-from-bangalore" replace />} />

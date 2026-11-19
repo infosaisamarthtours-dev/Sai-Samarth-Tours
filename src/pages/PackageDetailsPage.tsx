@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Navigate, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useParams, Navigate, useNavigate, Link } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
+import { BLOG_POSTS } from '../data/blogs';
 import { EnquiryModal } from '../components/EnquiryModal';
 import { ImageSlider } from '../components/ImageSlider';
 import { 
@@ -242,6 +243,15 @@ export function PackageDetailsPage() {
       'Seats in the flights will be auto assigned by respective airlines.'
     ]
   };
+
+  // Related travel guides & blogs for contextual internal links
+  const relatedBlogs = useMemo(() => {
+    return BLOG_POSTS.filter(b => 
+      b.relatedPackageId === pkg.id || 
+      (b.relatedPackageId && pkg.id.includes(b.relatedPackageId)) ||
+      (b.tags && b.tags.some(t => pkg.title.toLowerCase().includes(t.toLowerCase()) || (pkg.destination && pkg.destination.toLowerCase().includes(t.toLowerCase()))))
+    ).slice(0, 3);
+  }, [pkg]);
 
   const effectiveRemarks = pkg.remarks || [
     'All meals are provided by Sai Samarth Tours in case the flight reaches destination early morning or leaves late in the evening.',
@@ -998,6 +1008,43 @@ export function PackageDetailsPage() {
                   ))}
                 </div>
               </div>
+
+              {/* Related Travel Guides & Insights */}
+              {relatedBlogs.length > 0 && (
+                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+                  <h3 className="text-xl font-serif-brand font-bold text-[#1C2B39] mb-4 flex items-center justify-between">
+                    <span>Travel Guides</span>
+                    <BookOpen className="w-5 h-5 text-[#F59E0B]" />
+                  </h3>
+                  <div className="space-y-4">
+                    {relatedBlogs.map(blog => (
+                      <Link 
+                        key={blog.id} 
+                        to={`/blog/${blog.slug}`}
+                        className="flex items-center gap-4 group p-2 -mx-2 rounded-xl transition-colors hover:bg-gray-50"
+                      >
+                        <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0">
+                          <img 
+                            src={blog.image} 
+                            alt={blog.title} 
+                            width={64}
+                            height={64}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <span className="text-[10px] uppercase font-bold text-[#EA580C] block mb-0.5">{blog.category}</span>
+                          <h4 className="font-bold text-xs text-[#1C2B39] group-hover:text-[#114088] transition-colors line-clamp-2 leading-snug">
+                            {blog.title}
+                          </h4>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
             </div>
           </div>
