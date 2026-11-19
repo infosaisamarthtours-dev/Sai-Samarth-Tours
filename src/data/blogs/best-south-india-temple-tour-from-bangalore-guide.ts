@@ -4,7 +4,7 @@ export const bestSouthIndiaTempleTourFromBangaloreGuidePost: BlogPost = {
   id: 'best-south-india-temple-tour-from-bangalore-guide',
   title: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
   slug: 'best-south-india-temple-tour-from-bangalore-guide',
-  seoTitle: 'Best South India Temple Tour from Bangalore: Rameshwaram, Madurai & Kanyakumari',
+  seoTitle: 'South India Temple Tour from Bangalore (2026) | Sai Samarth Tours',
   seoDescription: 'Complete 2026 travel guide for the best South India temple tour from Bangalore covering Madurai Meenakshi, Rameshwaram 22 Theerthams, and Kanyakumari. Itinerary, flights, trains, and VIP darshan.',
   excerpt: 'A comprehensive pilgrimage guide to South India’s most revered spiritual circuit: Madurai Meenakshi Amman, Rameshwaram Ramanathaswamy Jyotirlinga with 22 Theertham bathing, and Kanyakumari sunrise. Includes flight connectivity, 5-day itinerary, dress codes, and pure veg dining.',
   content: {

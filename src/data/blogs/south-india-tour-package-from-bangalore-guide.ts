@@ -4,7 +4,7 @@ export const southIndiaTourPackageFromBangalorePost: BlogPost = {
   id: 'south-india-tour-package-from-bangalore',
   title: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
   slug: 'south-india-tour-package-from-bangalore',
-  seoTitle: 'South India Tour Package from Bangalore – 6 Days / 5 Nights',
+  seoTitle: 'South India Temple Tour from Bangalore: 6D/5N Yatra Guide | Sai Samarth Tours',
   seoDescription: 'Explore South India with Sai Samarth Tours. Enjoy a 6-day temple and pilgrimage tour covering Madurai, Rameshwaram, Kanyakumari, Kerala and more, starting at ₹25,999.',
   excerpt: 'Complete guide to the 6 Days / 5 Nights South India tour package from Bangalore with Sai Samarth Tours. Discover sacred temples across Tamil Nadu & Kerala including Thiruvannamalai, Madurai Meenakshi, Rameshwaram, Kanyakumari, Trivandrum Padmanabhaswamy, Alleppey backwaters & Guruvayur Krishna in a deluxe A/C pushback bus with 3-star AC stay and all pure veg meals.',
   content: {

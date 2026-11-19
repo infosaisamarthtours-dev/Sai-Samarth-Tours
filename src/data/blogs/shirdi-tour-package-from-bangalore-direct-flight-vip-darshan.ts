@@ -4,7 +4,7 @@ export const shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost: BlogPost 
   id: 'shirdi-tour-package-from-bangalore-direct-flight-vip-darshan',
   title: 'Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan',
   slug: 'shirdi-tour-package-from-bangalore-direct-flight-vip-darshan',
-  seoTitle: 'Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan',
+  seoTitle: 'Shirdi Tour Package from Bangalore: Direct Flights & VIP Passes (2026)',
   seoDescription: 'Book all-inclusive Shirdi tour package from Bangalore with direct flights, confirmed VIP Darshan passes, 5 AM Kakad Aarti, Shani Shingnapur, 3-star AC stay & pure veg meals.',
   excerpt: 'Experience a blissful 2-day pilgrimage with our Shirdi Tour Package from Bangalore – Direct Flight & VIP Darshan. Land at Shirdi Airport in 90 minutes, bypass 6-hour general queues with pre-arranged Gate 3 VIP passes, attend the sacred 5:00 AM Kakad Aarti, visit Shani Shingnapur, and stay in verified 3-star AC hotels with wholesome South Indian meals.',
   content: {

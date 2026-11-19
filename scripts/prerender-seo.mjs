@@ -492,7 +492,7 @@ function buildDestinationBody(dest) {
             Bangalore Departure Hub
           </span>
           <h1 style="font-size:2.25rem;line-height:1.2;font-weight:900;color:#114088;margin:0 0 16px 0;">
-            ${dest.title}
+            ${dest.h1 || `${dest.name} Tour Packages from Bangalore`}
           </h1>
           <p style="font-size:1.1rem;color:#374151;margin-bottom:24px;line-height:1.6;">
             ${dest.desc}
@@ -546,7 +546,7 @@ function buildPageBody(p) {
             Bangalore Tour Packages Hub
           </span>
           <h1 style="font-size:2.25rem;line-height:1.2;font-weight:900;color:#114088;margin:0 0 16px 0;">
-            ${p.title}
+            ${p.h1 || p.title.split('|')[0].trim()}
           </h1>
           <p style="font-size:1.1rem;color:#374151;margin-bottom:24px;line-height:1.6;">
             ${p.desc}
