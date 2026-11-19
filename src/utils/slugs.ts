@@ -41,7 +41,9 @@ export const PACKAGE_SLUG_MAP: Record<string, string> = {
   // International Packages
   'thailand': 'thailand-tour-package-from-bangalore',
   'thailand-regular': 'thailand-tour-package-from-bangalore',
+  'singapore': 'singapore-malaysia-tour-package-from-bangalore',
   'singapore-malaysia': 'singapore-malaysia-tour-package-from-bangalore',
+  'malaysia': 'malaysia-tour-package-from-bangalore',
   'malaysia-regular': 'malaysia-tour-package-from-bangalore',
   'maldives': 'maldives-tour-package-from-bangalore',
   'bhutan': 'bhutan-tour-package-from-bangalore',

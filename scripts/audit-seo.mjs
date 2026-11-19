@@ -95,12 +95,12 @@ for (const filePath of htmlFiles) {
     }
   }
 
-  // Track descriptions for indexable pages only
+  // Track descriptions for indexable pages only (deduplicated by unique route)
   if (!isRedirect && description) {
     if (!descriptionMap.has(description)) {
-      descriptionMap.set(description, []);
+      descriptionMap.set(description, new Set());
     }
-    descriptionMap.get(description).push(cleanRoute);
+    descriptionMap.get(description).add(cleanRoute);
   }
 
   auditResults.push({
@@ -123,7 +123,8 @@ for (const filePath of htmlFiles) {
 
 // Evaluate duplicate descriptions
 const duplicateDescriptions = [];
-for (const [desc, routes] of descriptionMap.entries()) {
+for (const [desc, routesSet] of descriptionMap.entries()) {
+  const routes = Array.from(routesSet);
   if (routes.length > 1) {
     duplicateDescriptions.push({ desc: desc.slice(0, 70) + '...', routes });
   }

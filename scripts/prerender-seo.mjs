@@ -44,8 +44,11 @@ const packageSlugsMap = {
   'goa': 'goa-beach-tour-package-from-bangalore',
   'andaman': 'andaman-islands-tour-package-from-bangalore',
   'golden-triangle': 'golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore',
+  'thailand': 'thailand-tour-package-from-bangalore',
   'thailand-regular': 'thailand-tour-package-from-bangalore',
+  'singapore': 'singapore-malaysia-tour-package-from-bangalore',
   'singapore-malaysia': 'singapore-malaysia-tour-package-from-bangalore',
+  'malaysia': 'malaysia-tour-package-from-bangalore',
   'malaysia-regular': 'malaysia-tour-package-from-bangalore',
   'maldives': 'maldives-tour-package-from-bangalore',
   'bhutan': 'bhutan-tour-package-from-bangalore',
@@ -228,11 +231,21 @@ function generateHtml({ title, description, url, image, type = 'website', bodyCo
 }
 
 function writePage(subPath, html) {
+  // 1. Write directory index.html for trailing slash requests (/subPath/)
   const dir = path.join(distDir, subPath);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
   fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
+
+  // 2. Write direct .html file for non-trailing slash requests (/subPath)
+  // This allows Nginx try_files $uri $uri.html to serve 200 OK directly without 301 directory redirect
+  const directFilePath = path.join(distDir, `${subPath}.html`);
+  const parentDir = path.dirname(directFilePath);
+  if (!fs.existsSync(parentDir)) {
+    fs.mkdirSync(parentDir, { recursive: true });
+  }
+  fs.writeFileSync(directFilePath, html, 'utf8');
 }
 
 function generateRedirectHtml(targetUrl) {
