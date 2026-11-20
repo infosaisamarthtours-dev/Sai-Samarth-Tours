@@ -6,7 +6,7 @@ export const panchBoothaYatraTirumalaBalajiGuidePost: BlogPost = {
   slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-bangalore',
   seoTitle: 'Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore',
   seoDescription: 'Book the Panch Bootha Yatra & Tirumala Balaji Bus Tour from Bangalore for ₹16,999. Explore sacred temples with Sai Samarth Tours.',
-  excerpt: 'Complete guide to the Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore. Discover the 5 sacred elemental Shiva temples, Srirangam, Thanjavur, Kanchipuram, and Tirumala Balaji darshan in a 4N/5D deluxe A/C pushback coach for ₹16,999 with 3-star AC stays, all meals, and tour manager.',
+  excerpt: 'Complete guide to the Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore. Discover the 5 sacred elemental Shiva temples, Srirangam, Thanjavur, Kanchipuram, and Tirumala Balaji darshan in a 2N/3D deluxe A/C pushback coach for ₹16,999 with 3-star AC stays, all meals, and tour manager.',
   content: {
     intro: 'Embarking on the sacred **Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore** is one of the most revered spiritual journeys in Sanatana Dharma. This unique [South India pilgrimage tour package](/pilgrimage-tour-packages) brings together the five primordial elemental manifestations of Lord Shiva—Fire (Agni), Water (Appu), Space (Akasa), Earth (Prithvi), and Air (Vayu)—culminating in the supreme blessings of Lord Sri Venkateshwara Swamy at holy Tirumala. Organized by Sai Samarth Tours, one of Bangalore’s premier pilgrimage tour operators, our flagship [Panch Bootha Yatra and Tirumala Balaji Bus Tour Package from Bangalore](/package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore) offers deluxe 2+2 A/C Pushback transportation, verified 3-Star AC accommodations, 100% pure vegetarian meals (Breakfast, Lunch & Dinner), and dedicated on-board tour manager services for an unbeatable ₹16,999/- per person.',
     sections: [
@@ -96,7 +96,7 @@ export const panchBoothaYatraTirumalaBalajiGuidePost: BlogPost = {
       }
     ],
     summaryTable: {
-      title: 'Quick Snapshot: Panch Bootha Yatra & Tirumala Balaji 4N/5D Bus Tour',
+      title: 'Quick Snapshot: Panch Bootha Yatra & Tirumala Balaji 2N/3D Bus Tour',
       headers: ['Day', 'Route / Temple Covered', 'Sacred Element / Significance', 'Meals Included', 'Night Stay'],
       rows: [
         ['Day 1', 'Bangalore → Thiruvannamalai → Trichy', 'Arunachaleswarar (Fire / Agni) & Jambukeswarar (Water / Appu)', 'Breakfast, Lunch, Dinner', 'Tiruchirappalli (3-Star AC)'],

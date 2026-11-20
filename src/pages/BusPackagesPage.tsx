@@ -297,7 +297,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
   const busFaqs = [
     {
       question: 'What bus tour packages are currently offered from Bangalore?',
-      answer: 'Sai Samarth Tours operates three premier all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) South India Yatra (5N/6D – ₹25,999/-), 2) Shirdi – Saptha Shrungi – Triyambhakeshwar – Kolhapur – Mumbai – Pandharpur (4N/5D – ₹15,999/-), and 3) Panch Bootha Yatra & Tirumala Balaji (4N/5D – ₹16,999/-). All packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
+      answer: 'Sai Samarth Tours operates three premier all-inclusive Deluxe A/C Pushback Bus Tours from Bangalore: 1) South India Yatra (5N/6D – ₹25,999/-), 2) Shirdi – Saptha Shrungi – Triyambhakeshwar – Kolhapur – Mumbai – Pandharpur (4N/5D – ₹15,999/-), and 3) Panch Bootha Yatra & Tirumala Balaji (2N/3D – ₹16,999/-). All packages include 3-star AC accommodation, all pure vegetarian meals, and dedicated tour manager services.'
     },
     {
       question: 'What is the boarding point and departure schedule in Bangalore?',

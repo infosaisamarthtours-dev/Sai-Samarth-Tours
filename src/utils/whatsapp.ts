@@ -22,7 +22,7 @@ export function getWhatsAppUrl(context?: WhatsAppContext): string {
   const path = context?.pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
 
   if (path.includes('bus')) {
-    const msg = `Namaste Sai Samarth Tours 🙏\n\nI am looking for *Deluxe Bus Tour Packages* from Bangalore (Panch Bootha Yatra & Tirumala Balaji 4N/5D with A/C Pushback Coach, All Meals & Tour Manager).\n\nPlease share upcoming departure dates, seat availability, and booking details.\n\nThank you!`;
+    const msg = `Namaste Sai Samarth Tours 🙏\n\nI am looking for *Deluxe Bus Tour Packages* from Bangalore (Panch Bootha Yatra & Tirumala Balaji 2N/3D with A/C Pushback Coach, All Meals & Tour Manager).\n\nPlease share upcoming departure dates, seat availability, and booking details.\n\nThank you!`;
     return `https://wa.me/${number}?text=${encodeURIComponent(msg)}`;
   }
 

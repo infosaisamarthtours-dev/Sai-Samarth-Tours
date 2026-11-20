@@ -515,7 +515,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                       <span className="font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">Panch Bootha & Balaji Yatra</span>
                       <span className="text-xs font-black text-[#EA580C]">₹16,999/-</span>
                     </div>
-                    <p className="text-[11px] text-gray-500 mt-0.5">4N/5D • All 5 Shiva Elements + Tirumala Balaji</p>
+                    <p className="text-[11px] text-gray-500 mt-0.5">2N/3D • All 5 Shiva Elements + Tirumala Balaji</p>
                   </Link>
 
                   <Link to="/bus-packages" className="px-5 py-3 text-xs font-bold text-[#114088] hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex items-center justify-between">
@@ -856,7 +856,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                       <span className="text-xs font-black text-[#EA580C] bg-amber-50 px-2 py-0.5 rounded">₹16,999/-</span>
                     </div>
                     <p className="text-[11px] text-gray-500 leading-tight">
-                      4N/5D • A/C Pushback Bus • 5 Shiva Elements + Tirumala (All Meals Included)
+                      2N/3D • A/C Pushback Bus • 5 Shiva Elements + Tirumala (All Meals Included)
                     </p>
                   </Link>
                 </div>

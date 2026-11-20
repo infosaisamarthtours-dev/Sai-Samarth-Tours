@@ -2121,12 +2121,12 @@ export const ALL_PACKAGES: Package[] = [
   {
     id: 'panch-bootha-balaji-bus-tour',
     slug: 'panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore',
-    title: 'Panch Bootha Yatra & Tirumala Balaji – 4N/5D A/C Pushback Bus Tour',
+    title: 'Panch Bootha Yatra & Tirumala Balaji – 2N/3D A/C Pushback Bus Tour',
     shortTitle: 'Panch Bootha & Balaji Bus Yatra',
     seoH1: 'Panch Bootha Yatra & Tirumala Balaji Bus Tour Package from Bangalore – 16,999/-',
     category: 'bus',
     destination: 'Thiruvannamalai, Tiruchirappalli, Srirangam, Thanjavur, Chidambaram, Kanchipuram, Sri Kalahasthi & Tirupati Balaji',
-    duration: '4N/5D',
+    duration: '2N/3D',
     price: '₹16,999/-',
     numericPrice: 16999,
     minPax: 1,
@@ -2144,14 +2144,14 @@ export const ALL_PACKAGES: Package[] = [
       '/panch-bootha-brochure-3.png',
       '/panch-bootha-brochure-4.png'
     ],
-    description: 'Exclusive 4 Nights / 5 Days all-inclusive Deluxe A/C Pushback Bus Tour from Bangalore covering all 5 Sacred Pancha Bhootha Shiva Sthalams (Fire, Water, Space, Earth, Air), Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman, and Lord Venkateshwara Swamy Darshan at Tirumala Balaji.',
+    description: 'Exclusive 2 Nights / 3 Days all-inclusive Deluxe A/C Pushback Bus Tour from Bangalore covering all 5 Sacred Pancha Bhootha Shiva Sthalams (Fire, Water, Space, Earth, Air), Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman, and Lord Venkateshwara Swamy Darshan at Tirumala Balaji.',
     highlights: [
       'Travel in sanitized Deluxe A/C Pushback Coach Bus from Bangalore & Return',
       'All 5 Pancha Bhootha Shiva Sthalams: Fire (Arunachaleswarar), Water (Jambukeswarar), Space (Thillai Nataraja), Earth (Ekambareswarar) & Air (Sri Kalahasthi)',
       'Special Darshan at Sri Ranganathaswamy (Srirangam) & Brihadeeswarar Temple (Thanjavur)',
       'Holy Darshan of Lord Venkateshwara Balaji & Sri Padmavathi Ammavari in Tirupati',
-      'Dedicated Experienced Tour Manager Services throughout the 5 days',
-      'Comfortable 3-Star AC Hotel Stays on Twin/Double Sharing Basis for 4 Nights',
+      'Dedicated Experienced Tour Manager Services throughout the 3 days',
+      'Comfortable 3-Star AC Hotel Stays on Twin/Double Sharing Basis for 2 Nights',
       'Wholesome All Meals Included: Daily Breakfast, Lunch & Dinner',
       'All Sightseeing Entrance Fees & 5% Govt Tax Included in package'
     ],
@@ -2162,7 +2162,7 @@ export const ALL_PACKAGES: Package[] = [
       flights: false,
       sightseeing: true
     },
-    placesBadge: '4N/5D Pancha Bootha & Tirumala Balaji Bus Yatra',
+    placesBadge: '2N/3D Pancha Bootha & Tirumala Balaji Bus Yatra',
     placesList: [
       { name: 'Thiruvannamalai (Arunachaleeswarar Temple - Fire / Agni Sthalam)' },
       { name: 'Tiruchirappalli (Arulmigu Jambukeswarar Temple - Water / Appu Sthalam)' },
@@ -2176,7 +2176,7 @@ export const ALL_PACKAGES: Package[] = [
     inclusions: [
       'A/C PUSHPACK BUS: Sanitized 2+2 pushback coach for all travel and intercity transfers from Bangalore',
       'Tour Manager Services throughout the tour for assistance and personalized care',
-      'Accommodation on twin/double sharing basis for 4 nights in verified 3-Star hotels',
+      'Accommodation on twin/double sharing basis for 2 nights in verified 3-Star hotels',
       'All Meals – Wholesome, hygienic Breakfast, Lunch, and Dinner throughout the journey',
       'Entrance fees of all sightseeing places to be visited from inside',
       'Govt Tax of 5% over and above the Tour Cost mentioned'
@@ -2241,7 +2241,7 @@ export const ALL_PACKAGES: Package[] = [
       'Comfort & Clarity: Carefully planned stays, transport, meals and darshan arrangements.'
     ],
     detailedContent: {
-      overview: 'Experience the quintessential spiritual pilgrimage of South India with Sai Samarth Tours. Our all-inclusive 4 Nights / 5 Days Panch Bootha Yatra & Tirumala Balaji Bus Tour departs directly from Bangalore in a sanitized, luxury A/C Pushback tourist coach. This pilgrimage covers all five cosmic elemental manifestations of Lord Shiva (Fire at Thiruvannamalai, Water at Thiruvanaikaval, Space at Chidambaram, Earth at Kanchipuram, and Air at Srikalahasti), along with the magnificent Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman Shakti Peetham, and the blissful darshan of Lord Sri Venkateshwara Balaji at Tirumala.',
+      overview: 'Experience the quintessential spiritual pilgrimage of South India with Sai Samarth Tours. Our all-inclusive 2 Nights / 3 Days Panch Bootha Yatra & Tirumala Balaji Bus Tour departs directly from Bangalore in a sanitized, luxury A/C Pushback tourist coach. This pilgrimage covers all five cosmic elemental manifestations of Lord Shiva (Fire at Thiruvannamalai, Water at Thiruvanaikaval, Space at Chidambaram, Earth at Kanchipuram, and Air at Srikalahasti), along with the magnificent Srirangam Ranganathaswamy, Thanjavur Brihadeeswarar Big Temple, Kanchi Kamakshi Amman Shakti Peetham, and the blissful darshan of Lord Sri Venkateshwara Balaji at Tirumala.',
       significance: 'The Pancha Bhootha Sthalams represent the five primordial elements of nature: Agni (Fire), Appu (Water), Akasa (Space), Prithvi (Earth), and Vayu (Air). Completing this circuit brings profound spiritual cleansing and divine grace, complemented by the supreme blessings of Sri Balaji at Tirumala.',
       bestTimeToVisit: 'Departures operate regularly throughout the year from Bangalore, ideally timed for pleasant morning temple visits and seamless highway transit.',
       placesCovered: [

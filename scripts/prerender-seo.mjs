@@ -637,7 +637,7 @@ const pages = [
   {
     path: 'bus-packages',
     title: 'Bus Tour Packages from Bangalore | Panch Bootha Yatra & Tirumala Balaji | Sai Samarth Tours',
-    desc: 'Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Flagship Panch Bootha Yatra & Tirumala Balaji 4N/5D for ₹16,999/- with Tour Manager, 3-Star AC hotels & all pure veg meals.',
+    desc: 'Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Flagship Panch Bootha Yatra & Tirumala Balaji 2N/3D for ₹16,999/- with Tour Manager, 3-Star AC hotels & all pure veg meals.',
     image: '/panch-bootha-bus-yatra-1.webp'
   },
   {
