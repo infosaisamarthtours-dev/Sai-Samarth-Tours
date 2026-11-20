@@ -2,13 +2,13 @@ import { BlogPost } from './types';
 
 export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
   id: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
-  title: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
+  title: 'Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki',
   slug: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
-  seoTitle: 'Kamakhya Temple Guwahati Tour Package from Bangalore | Flight & VIP Darshan',
-  seoDescription: 'Book Kamakhya Temple Guwahati Tour Package from Bangalore with flights & VIP Darshan. 2 Days / 1 Night yatra with 3-star AC stay, pure veg meals & temple transfers.',
-  excerpt: 'Complete travel guide for the Kamakhya Temple Guwahati tour package from Bangalore by flight. Experience divine blessings at Maa Kamakhya Shakti Peeth on Nilachal Hill, Umananda Shiva Temple on Peacock Island, Vasistha Ashram, Balaji Temple & Navagraha with direct flights, VIP darshan assistance, 3-star AC hotel, and wholesome pure veg meals.',
+  seoTitle: 'Kamakhya Temple with Meghalaya Tour Package from Bangalore | Flight & VIP Darshan',
+  seoDescription: 'Book Maa Kamakhya with Meghalaya Tour Package from Bangalore with flights, VIP Darshan, Cherrapunji waterfalls, Dawki river & 3-star AC hotel stay.',
+  excerpt: 'Complete travel guide for the Maa Kamakhya with Meghalaya tour package from Bangalore by flight. Experience divine blessings at Maa Kamakhya Shakti Peeth on Nilachal Hill, Umananda Shiva Temple on Peacock Island, Shillong Peak, Elephant Falls, Cherrapunji waterfalls (Nohkalikai & Seven Sisters), crystal-clear Dawki Umngot river boating, and Mawlynnong living root bridge with direct flights, VIP darshan assistance, 3-star AC hotel, and unlimited buffet meals (AP Plan).',
   content: {
-    intro: 'Seeking the powerful cosmic blessings of Maa Kamakhya on the mystical Nilachal Hill in Assam? Sai Samarth Tours brings you the definitive **Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan**. Specially crafted for devotees, families, and senior citizens across Karnataka, this all-inclusive 2 Days / 1 Night spiritual pilgrimage departs directly from Kempegowda International Airport (BLR) to Guwahati (GAU). Revered as the prime seat among all 51 Shakti Peethas in Sanatana Dharma, Maa Kamakhya embodies the primordial womb of creation (Maha Shakti). Our carefully curated [Bangalore to Kamakhya flight package](/package/kamakhya-temple-tour-package-from-bangalore) takes care of round-trip direct air tickets, verified 3-star AC hotel accommodation, 100% wholesome pure vegetarian meals (Breakfast, Lunch & Dinner), private sanitized AC coach transportation, motorized Brahmaputra boat transfers to Umananda Peacock Island, and dedicated priest guidance for hassle-free VIP darshan at the holy shrine.',
+    intro: 'Seeking the powerful cosmic blessings of Maa Kamakhya on the mystical Nilachal Hill in Assam combined with the breathtaking natural beauty of Meghalaya? Sai Samarth Tours brings you the definitive **Maa Kamakhya with Meghalaya Tour Package from Bangalore – Flight Yatra, VIP Darshan & Natural Wonders**. Specially crafted for devotees, families, and senior citizens across Karnataka, this all-inclusive 4 Nights / 5 Days spiritual pilgrimage departs directly from Kempegowda International Airport (BLR) to Guwahati (GAU). Revered as the prime seat among all 51 Shakti Peethas in Sanatana Dharma, Maa Kamakhya embodies the primordial womb of creation (Maha Shakti). Our carefully curated [Bangalore to Kamakhya flight package](/package/kamakhya-temple-tour-package-from-bangalore) takes care of round-trip direct air tickets, verified 3-star AC hotel accommodation, 100% wholesome unlimited buffet meals (AP Plan: Breakfast, Lunch & Dinner), sanitized Deluxe A/C pushback bus transportation, motorized Brahmaputra boat transfers to Umananda Peacock Island, VIP Darshan at Maa Kamakhya, crystal-clear Dawki Umngot river boat ride, and Cherrapunji waterfalls exploration with dedicated tour coordinator guidance throughout.',
     sections: [
       {
         heading: '1. Spiritual Significance of Maa Kamakhya Temple on Nilachal Hill',
@@ -38,17 +38,18 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
         tips: '✈️ Flight Convenience: Direct round-trip flights between BLR and GAU take just ~3 hours each way, eliminating the need for exhausting train journeys.'
       },
       {
-        heading: '3. What’s Included in the Kamakhya Temple Tour Package Price (₹31,999/-)',
-        subheading: 'All-Inclusive Transparency: Airfares, 3-Star AC Hotel, Pure Veg Meals & Boat Transfers',
-        body: 'Unlike unverified local operators who levy hidden charges for boats, entry permits, and airport parking, Sai Samarth Tours ensures that the **Kamakhya Temple tour cost from Bangalore** (₹31,999/- per person on twin/double sharing) covers every essential element of your pilgrimage.',
+        heading: '3. What’s Included in the Kamakhya with Meghalaya Tour Package Price (₹54,999/-)',
+        subheading: 'All-Inclusive Transparency: Airfares, 3-Star AC Hotel, AP Buffet Meals & Sightseeing',
+        body: 'Unlike unverified local operators who levy hidden charges for boats, entry permits, and airport parking, Sai Samarth Tours ensures that the **Maa Kamakhya with Meghalaya tour cost from Bangalore** (₹54,999/- per person on twin/double sharing) covers every essential element of your pilgrimage and holiday.',
         bulletPoints: [
-          '**Direct Round-Trip Flights:** Confirmed economy class flight tickets from Kempegowda International Airport (BLR) to Guwahati (GAU) and return with standard 15 kg check-in baggage and 7 kg cabin baggage allowance.',
-          '**Verified 3-Star AC Hotel Stay:** 1 Night comfortable accommodation in verified 3-star AC hotel in Guwahati featuring elevator access, clean linens, and modern attached bathrooms with hot water.',
-          '**All Wholesome Pure Vegetarian Meals:** Delicious Breakfast, Lunch, and Dinner provided throughout the yatra at hygienic family dining spots, serving fresh South Indian and North Indian cuisine.',
-          '**Private AC Coach Transfers:** All airport pickups, drops, and interstate temple sightseeing in sanitized, air-conditioned coach / private vehicle with experienced chauffeurs.',
-          '**Peacock Island Boat Transfers:** Motorized ferry boat / cruise tickets across the Brahmaputra River to Umananda Temple and return.',
-          '**Local Tour Coordinator & Priest Guidance:** Knowledgeable local coordinator to guide your family through temple rituals, queue protocols, and nilachal hill transit.',
-          '**Packaged Drinking Water:** 1-litre bottled mineral water provided per pilgrim daily.'
+          '**Direct Round-Trip Flights:** Confirmed economy class flight tickets from Kempegowda International Airport (BLR) to Guwahati (GAU) and return with standard check-in and cabin baggage allowance.',
+          '**Verified 3-Star AC Hotel Stay:** 4 Nights comfortable accommodation in verified 3-star AC hotels (1 Night Guwahati, 3 Nights Shillong) featuring elevator access, clean linens, and modern amenities.',
+          '**All Unlimited Buffet Meals (AP Plan):** Delicious Breakfast, Lunch, and Dinner buffet provided throughout the yatra along with evening tea/coffee and 1-litre bottled mineral water per person daily.',
+          '**VIP Darshan at Maa Kamakhya:** VIP entry pass and priest coordination at the revered Shakti Peeth sanctum included.',
+          '**Deluxe A/C Pushback Bus Transfers:** All airport pickups, drops, and interstate scenic drives (Guwahati, Shillong, Cherrapunji, Dawki, Mawlynnong) in sanitized, air-conditioned pushback coaches.',
+          '**Peacock Island & Dawki Boat Rides:** Motorized ferry boat tickets across the Brahmaputra River to Umananda Temple and breathtaking crystal-clear boat ride on the Umngot River in Dawki included.',
+          '**Dedicated Tour Coordinator / Manager:** Experienced tour manager traveling with the group throughout to guide rituals, sightseeing, and logistics.',
+          '**Govt Taxes Included:** 5% Govt Tax included in the tour cost with zero hidden surcharges.'
         ],
         tips: '🏷️ Best Price Assurance: Group discounts and customized private departures are available for families and senior devotee groups travelling together.'
       },
@@ -100,17 +101,17 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
       ]
     },
     keyTakeaways: [
-      'All-inclusive 2 Days / 1 Night pilgrimage package from Bangalore to Guwahati with direct round-trip flights included.',
+      'All-inclusive 4 Nights / 5 Days pilgrimage and Northeast exploration circuit from Bangalore with direct flights included.',
       'VIP Darshan guidance and priest assistance at the supreme Maa Kamakhya Shakti Peeth on Nilachal Hill.',
-      'Visits to iconic Peacock Island Umananda Shiva Temple, Vasistha Ashram, Purva Tirupati Balaji Temple & Navagraha Temple.',
-      'Verified 3-Star AC hotel stay in Guwahati with all pure vegetarian meals (Breakfast, Lunch & Dinner) included.',
-      'Motorized boat transfer across the scenic Brahmaputra River to Peacock Island included in the package.',
-      'Convenient weekend schedule ideal for IT professionals, working families, and senior citizens departing from Kempegowda Airport.',
-      'Transparent all-inclusive tour fare of ₹31,999/- per person on twin/double sharing with zero hidden charges.'
+      'Visits to iconic Peacock Island Umananda Shiva Temple, Vasistha Ashram, Balaji Temple, and Navagraha Temple.',
+      'Meghalaya highlights: Cherrapunji (Nohkalikai & Seven Sisters Falls), crystal-clear Dawki Umngot river boating, and Mawlynnong living root bridge.',
+      'Verified 3-Star AC hotel stays (Guwahati & Shillong) with all unlimited buffet meals (AP Plan) included.',
+      'Deluxe A/C pushback coach with dedicated Tour Manager throughout the tour.',
+      'Transparent all-inclusive tour fare of ₹54,999/- per person on twin/double sharing with zero hidden charges.'
     ],
     faqs: [
       {
-        question: 'Are flights from Bangalore included in the Kamakhya Temple tour package?',
+        question: 'Are flights from Bangalore included in the Kamakhya with Meghalaya tour package?',
         answer: 'Yes! Round-trip economy class flights departing from Kempegowda International Airport, Bangalore (BLR) directly to Guwahati (GAU) and return are fully included in the package price, along with standard check-in and cabin baggage.'
       },
       {
@@ -123,26 +124,26 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
       },
       {
         question: 'Is this tour suitable for senior citizens and elderly parents?',
-        answer: 'Absolutely! Our tour is tailored for elderly devotees with minimal walking distances, private AC vehicle transfers directly to Nilachal hill gates, priority darshan guidance, and gentle pacing.'
+        answer: 'Absolutely! Our tour is tailored for elderly devotees with minimal walking distances, private AC pushback vehicle transfers directly to temple gates, priority darshan guidance, and gentle pacing.'
       },
       {
         question: 'How do we reach the Umananda Temple on Peacock Island?',
         answer: 'Umananda Temple is situated on Peacock Island in the Brahmaputra River. We provide safe, motorized ferry boat transfers from the Guwahati river bank to the island and return, with tour coordinator accompaniment.'
       },
       {
-        question: 'Are all meals pure vegetarian during the Guwahati trip?',
-        answer: 'Yes, 100%! All meals (Breakfast, Lunch, and Dinner) provided during the tour are strictly pure vegetarian, served at handpicked, hygienic family restaurants serving authentic South and North Indian dishes.'
+        question: 'Are all meals included during the tour?',
+        answer: 'Yes! All meals (Breakfast, Lunch, and Dinner) are provided under our AP Plan (unlimited buffet), along with evening tea/coffee and 1-litre bottled mineral water per person daily.'
       },
       {
-        question: 'What is the best time of year to visit Kamakhya Temple?',
-        answer: 'October to April is the most ideal season to visit Guwahati, as the weather remains pleasant, cool, and perfect for temple exploration and river ferry rides.'
+        question: 'What is the best time of year to visit Kamakhya and Meghalaya?',
+        answer: 'October to May is the most ideal season to visit Guwahati and Meghalaya, as the weather remains pleasant and cool, and Dawki river water is exceptionally crystal-clear.'
       },
       {
-        question: 'How can I book the Kamakhya Temple Guwahati flight package from Bangalore?',
+        question: 'How can I book the Maa Kamakhya with Meghalaya package from Bangalore?',
         answer: 'You can reserve your seats online at saisamarthtours.com, visit our registered Bangalore office at Yelahanka New Town, or call/WhatsApp our dedicated pilgrimage booking desk directly at +91 91877 11649 / 50 / 51 for instant booking assistance and confirmed departure dates.'
       }
     ],
-    conclusion: 'The [Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan](/package/kamakhya-temple-tour-package-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary spiritual weekend in Assam. Experience the immense, primordial creative energy of Maa Kamakhya, the serene island abodes of Lord Shiva, and the ancient wisdom of the Brahmaputra valley. With direct flights, 3-star AC accommodations, all pure vegetarian dining, and devoted tour coordinator care for an all-inclusive ₹31,999/-, this sacred Shakti Peeth yatra is smooth, fulfilling, and unforgettable. Browse our complete [pilgrimage tour packages from Bangalore](/pilgrimage-tour-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra!'
+    conclusion: 'The [Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki](/package/kamakhya-temple-tour-package-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary spiritual and natural journey in Northeast India. Experience the immense, primordial creative energy of Maa Kamakhya, the serene island abodes of Lord Shiva, the world-famous waterfalls of Cherrapunji, and the crystal-clear waters of Dawki. With direct flights, 3-star AC accommodations, all unlimited buffet meals (AP Plan), and devoted tour coordinator care for an all-inclusive ₹54,999/-, this sacred Shakti Peeth yatra is smooth, fulfilling, and unforgettable. Browse our complete [pilgrimage tour packages from Bangalore](/pilgrimage-tour-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra!'
   },
   author: {
     name: 'Sai Samarth Tours Editorial Desk',

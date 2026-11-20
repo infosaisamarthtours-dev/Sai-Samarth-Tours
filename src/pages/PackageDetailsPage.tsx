@@ -22,7 +22,8 @@ import {
   Camera,
   FileText,
   AlertCircle,
-  Info
+  Info,
+  ArrowRight
 } from 'lucide-react';
 
 import { getWhatsAppUrl } from '../utils/whatsapp';
@@ -668,6 +669,47 @@ export function PackageDetailsPage() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Official Tour Brochure Images */}
+                    {pkg.brochureImages && pkg.brochureImages.length > 0 && (
+                      <div className="mt-8 pt-6 border-t border-gray-200">
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="font-serif text-lg sm:text-xl font-bold text-[#114088] flex items-center gap-2">
+                            <FileText className="w-5 h-5 text-[#F59E0B]" />
+                            Official Tour Brochure
+                          </h3>
+                          <button
+                            onClick={() => setIsBrochureOpen(true)}
+                            className="text-xs sm:text-sm font-bold text-[#2563EB] hover:text-[#114088] transition-colors flex items-center gap-1 cursor-pointer"
+                          >
+                            <span>Download PDF</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                          {pkg.brochureImages.map((bImg, bIdx) => (
+                            <a
+                              key={bIdx}
+                              href={bImg}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group block rounded-xl overflow-hidden border border-gray-200 hover:border-[#F59E0B] hover:shadow-md transition-all relative aspect-[3/4] bg-gray-50"
+                              title={`View Brochure Page ${bIdx + 1}`}
+                            >
+                              <img
+                                src={bImg}
+                                alt={`${pkg.title} Brochure Page ${bIdx + 1}`}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy"
+                              />
+                              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-2 text-center">
+                                <span className="text-[10px] text-white font-semibold">Page {bIdx + 1}</span>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -702,7 +744,7 @@ export function PackageDetailsPage() {
                               
                               <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-gray-200/60 flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-gray-700">
                                 <Utensils className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#F59E0B] shrink-0" />
-                                <span>Meals Included: <strong>Breakfast, Lunch, Dinner</strong></span>
+                                <span>Meals Included: <strong>{item.meals || 'Breakfast, Lunch, Dinner'}</strong></span>
                               </div>
                             </div>
                           </div>

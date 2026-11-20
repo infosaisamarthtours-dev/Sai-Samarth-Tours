@@ -915,29 +915,43 @@ export const ALL_PACKAGES: Package[] = [
   },
   {
     id: 'kamakhya',
-    title: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
-    shortTitle: 'Kamakhya Temple Yatra',
-    seoH1: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
+    title: 'Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki',
+    shortTitle: 'Kamakhya with Meghalaya',
+    seoH1: 'Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki',
     category: 'pilgrimage',
-    destination: 'Assam (Guwahati)',
-    duration: '1N/2D',
-    price: '₹31,999/-',
-    numericPrice: 31999,
-    minPax: 2,
+    destination: 'Assam & Meghalaya (Guwahati, Shillong, Cherrapunji, Dawki)',
+    duration: '4N/5D',
+    price: '₹54,999/-',
+    numericPrice: 54999,
+    minPax: 1,
     featured: true,
-    image: '/kamakhya-temple-tour-package-from-bangalore-1.webp',
+    image: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp',
     images: [
-      '/kamakhya-temple-tour-package-from-bangalore-1.webp',
-      '/kamakhya-temple-tour-package-from-bangalore-2.webp',
-      '/kamakhya-temple-tour-package-from-bangalore-3.webp'
+      '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp',
+      '/kamakhya-temple-guwahati-nilachal-hill.webp',
+      '/meghalaya-cherrapunji-nohkalikai-falls.webp',
+      '/guwahati-umananda-temple-peacock-island.webp',
+      '/meghalaya-dawki-umngot-river-crystal-waters.webp'
     ],
-    description: 'Sacred Assam Shakti Peeth Yatra: Direct flight from Bangalore to Guwahati, visit famous Maa Kamakhya Temple (revered Shakti Peeth), Vasistha Temple, Balaji Temple, Umananda Temple on Peacock Island in Brahmaputra River, and Navagraha Temple.',
+    brochureImages: [
+      '/kamakhya-meghalaya-brochure-1.png',
+      '/kamakhya-meghalaya-brochure-2.jpg',
+      '/kamakhya-meghalaya-brochure-3.jpg',
+      '/kamakhya-meghalaya-brochure-4.jpg',
+      '/kamakhya-meghalaya-brochure-5.png'
+    ],
+    description: 'All-inclusive 4 Nights / 5 Days Maa Kamakhya & Meghalaya Group Tour from Bangalore by direct flights. Sacred VIP Darshan at Maa Kamakhya Temple (revered Shakti Peeth), Umananda Peacock Island Shiva Temple on Brahmaputra River, Vasistha & Balaji Temples, Shillong Peak, Elephant Falls, Cherrapunji (Nohkalikai Falls, Seven Sisters Falls, Mawsmai Cave, Garden of Caves), crystal-clear Dawki Umngot River boat ride, and Mawlynnong (Asia’s Cleanest Village & Single Decker Living Root Bridge). Includes round-trip flights, 3-star AC accommodation, all meals buffet (AP Plan), and A/C pushback coach.',
     highlights: [
-      'Maa Kamakhya Temple Darshan (Revered Shakti Peeth)',
-      'Umananda Temple (Peacock Island in Brahmaputra River)',
-      'Vasistha Temple & Grand Balaji Temple Visit',
-      'Navagraha Temple & Assam State Museum',
-      'Direct Round-Trip Flights from Bangalore'
+      'Economy Onwards & Return Flights from Bangalore included',
+      'VIP Darshan at Sacred Maa Kamakhya Temple (Revered Shakti Peeth)',
+      'Umananda Temple Boat Ride & Ferry on Mighty Brahmaputra River',
+      'Cherrapunji: Nohkalikai Falls (340m), Seven Sisters Falls, Garden of Caves & Mawsmai Cave',
+      'Dawki: Crystal-Clear Emerald Umngot River Boat Ride (Floating Boat Experience)',
+      'Mawlynnong Village (Asia’s Cleanest Village) & Single Decker Living Root Bridge',
+      'Elephant Falls, Shillong Peak & Shopping at Police Bazaar',
+      '4 Nights 3-Star AC Hotel Accommodation on Twin/Double Sharing (1N Guwahati + 3N Shillong)',
+      'AP Meal Plan: Unlimited Breakfast, Lunch & Dinner Buffet Included',
+      'Sanitized A/C Pushback Bus / Coach & Dedicated Tour Manager Throughout'
     ],
     tourIncludes: {
       hotels: true,
@@ -946,92 +960,132 @@ export const ALL_PACKAGES: Package[] = [
       flights: true,
       sightseeing: true
     },
-    placesBadge: '2 Days Sacred Kamakhya Yatra',
+    placesBadge: '4N/5D Sacred Shakti Peeth & Meghalaya Wonders',
     placesList: [
-      { name: 'Guwahati (Maa Kamakhya Shakti Peeth)' },
-      { name: 'Peacock Island (Umananda Temple & Brahmaputra)' },
-      { name: 'Vasistha Ashram & Balaji Temple' },
-      { name: 'Navagraha Temple & Assam State Museum' }
+      { name: 'Guwahati (Maa Kamakhya Shakti Peeth, Vasistha & Balaji Temples)' },
+      { name: 'Peacock Island (Umananda Shiva Temple & Brahmaputra Boat Ride)' },
+      { name: 'Shillong (Police Bazaar, Elephant Falls & Shillong Peak)' },
+      { name: 'Cherrapunji (Nohkalikai Falls, Seven Sisters Falls & Mawsmai Cave)' },
+      { name: 'Dawki (Crystal-Clear Umngot River Floating Boat Ride)' },
+      { name: 'Mawlynnong (Asia’s Cleanest Village & Living Root Bridge)' }
     ],
     inclusions: [
-      'All Meals (Breakfast, Lunch & Dinner)',
-      'Airfares (Both Onward and Return)',
-      'Transfers and Sightseeing by A/C Coach',
-      '3-star Accommodation on a Twin/Double sharing basis for 01 night',
-      'Packaged drinking water (1 ltr per person per day)',
-      'Professional Tourist Guide',
-      'Entry tickets as per the itinerary'
+      'Economy Onwards and Returns flights tickets (Bangalore – Guwahati – Bangalore)',
+      'Tour Manager Services throughout the tour',
+      'All transfers and sightseeing by Deluxe Sanitized A/C Pushback Bus',
+      '3-Star Accommodation on twin/double sharing basis for 4 nights (1 Night Guwahati, 3 Nights Shillong)',
+      'AP Plan – Breakfast, Lunch, Dinner unlimited buffet included',
+      'VIP DARSHAN AT MAA KAMAKHYA',
+      'Umananda Boat and Museum entry and ferry tickets included in the package',
+      '1Ltr water bottle with Tea and Coffee in the evenings is included in the package',
+      'Govt Tax of 5% over and above the Tour Cost mentioned'
     ],
     exclusions: [
       'Seat selection and meals are not included in the flight journey',
-      'Mineral water, Coffee/Tea, Shopping',
-      'Travel Insurance, Tips, Laundry, etc.',
-      'Any medical or evacuation expenses, and expenses due to natural climate',
-      'Any service not included in the inclusions or itinerary',
-      'Pooja charges if any'
+      'Any Entrance tickets to any monuments or Museums not specified in inclusions',
+      'Travel insurance, tips, laundry, and personal shopping',
+      'Any extra cost incurred on behalf of an individual due to illness, accident, hospitalization, or any personal emergency',
+      'Any Increase in the rate of exchange leading to an increase in all land arrangements which may come into effect prior to departure',
+      'Any other thing which is not mentioned in above itinerary'
     ],
     sampleItinerary: [
       {
         day: 'Day 1',
         title: 'Bangalore – Guwahati – Kamakhya Temple',
-        detail: 'Bangalore International Airport to Guwahati airport by flight. Upon arrival in Guwahati, begin your journey by visiting the serene Vasistha Temple and the grand Balaji Temple. Enjoy lunch, then proceed to the famous Kamakhya Temple, one of the most revered Shakti Peethas. End the day with dinner and an overnight stay at the hotel in Guwahati.',
+        detail: 'Bangalore International Airport to Guwahati airport by Flight, Upon Arrive in Guwahati and begin your journey by visiting the serene Vasistha Temple and the Grand Balaji Temple. Later hotel check In, proceed to the famous Kamakhya Temple, one of the most revered Shakti Peethas. End the day with dinner and an overnight stay at the hotel in Guwahati.',
         meals: 'Lunch, Dinner'
       },
       {
         day: 'Day 2',
-        title: 'Guwahati City Tour – Bangalore Departure',
-        detail: 'After breakfast, check out from the hotel and visit the beautiful Umananda Temple, located on Peacock Island in the middle of the Brahmaputra River. Then visit Navagraha Temple followed by a visit to the historical Assam State Museum (if time permits). Post lunch, transfer to the Guwahati airport for your return flight to Bangalore.',
+        title: 'Guwahati – Shillong – 120 kms',
+        detail: 'Early in the Morning visit Umananda Temple (on Peacock Island) — accessible by a short boat ride on the Brahmaputra River. Visit Navagraha Temple is an ancient temple located at Chitrachal Hills in the city of Guwahati. on the way have lunch & proceed to Shillong. Check in to the hotel, freshen up In the evening, followed by local market shopping at Police Bazaar (if time permits). Dinner & overnight stay in Shillong.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 3',
+        title: 'Shillong to Cherrapunji – 60 kms',
+        detail: 'After breakfast, drive towards Cherrapunji, known for its lush greenery and waterfalls. Visit garden of caves, Mawsmai Cave, Seven Sisters Falls – Seven Sisters Falls (Nohsngithiang Falls) in Meghalaya known for its seven-segmented cascade representing the Northeast states, and Eco Park. Visit Nohkalikai Falls is India\'s tallest plunge waterfall, dropping 340 meters (1,115 ft) near Cherrapunji, Meghalaya, known for its striking turquoise pool fed by rainwater. Return to Shillong by evening. Dinner & overnight stay in Shillong.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 4',
+        title: 'Shillong – Dawki – Mawlynnong – 100 kms',
+        detail: 'After breakfast, drive towards Dawki – where you can experience a breathtaking boat ride on the crystal-clear Umngot River – The Umngot River, also called the Dawki River, flows through Dawki in Meghalaya, India, famous for its exceptionally clear, emerald green water that makes boats seem to float on air, acting as a natural border, and visit Mawlynnong, acclaimed as Asia’s Cleanest Village. visit single decker living root bridge before driving back to Shillong by evening. Dinner & overnight stay in Shillong.',
+        meals: 'Breakfast, Lunch, Dinner'
+      },
+      {
+        day: 'Day 5',
+        title: 'Shillong – Guwahati – Bangalore',
+        detail: 'After breakfast, check out the hotel and proceed to visit Elephant Falls and Shillong Peak for panoramic views of the hill city, later proceed to Guwahati airport for return journey with the sweet memories of the trip....',
         meals: 'Breakfast, Lunch'
       }
     ],
     cancellationPolicy: {
       table: [
-        { days: 'Days 0-15', fee: '100%' },
-        { days: '15 Days & Above', fee: '50%' }
+        { days: '0 – 15 days', fee: '100% cancellation fee applicable on Net tour price' },
+        { days: 'More than 15 days', fee: '50% cancellation fee applicable on Net tour price' }
       ],
       notes: [
-        'Sai Samarth Tours will not refund any claims for delay or cancellation of flight, mechanical problems, strikes, bandhs, or weather changes.',
-        'Flight timings are subject to availability at the time of booking.',
-        'Seats in the flights will be auto assigned by respective airlines.'
+        'Sai Samarth Tours will not be responsible for, or liable to refund claims arising from, flight delays or cancellations, mechanical issues, strikes/bandhs, or changes in weather conditions.',
+        'Payment terms: Package above ₹50,000 – ₹50,000 registration amount per person at booking; balance due 45 days before departure.',
+        'Last-minute bookings (received within 45 days of departure) – full payment at the time of booking.',
+        'All modes of payment are accepted (online and offline).',
+        'Seats in the flights will be auto-assigned by respective airlines.'
       ]
     },
     remarks: [
-      'All meals are provided by Sai Samarth Tours in case the flight reaches destination early morning or leaves late in the evening.',
+      'All meals are provided by Sai Samarth Tours under AP Plan (unlimited buffet: Breakfast, Lunch, Dinner).',
+      '1Ltr water bottle with Tea and Coffee in the evenings is included in the package.',
+      'Govt Tax of 5% over and above the tour cost is included.',
       'The tour price mentioned for this tour is for Indian nationals only. Rates vary for NRIs or foreign nationals.',
       'NRIs & Foreign nationals must convey proper identity and submit passport copies to booking executive.',
       'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
     ],
     detailedContent: {
-      overview: 'Experience divine cosmic energy at Maa Kamakhya Temple in Guwahati, Assam. Situated on Nilachal Hill overlooking the mighty Brahmaputra River, this yatra includes visits to Umananda Shiva Temple on Peacock Island, Vasistha Temple, Balaji Temple, and Navagraha Temple with round-trip flights from Bangalore.',
-      significance: 'Kamakhya Temple is the supreme center of Tantric Shakti worship and one of the oldest 51 Shakti Peethas where Goddess Sati\'s Yoni fell.',
-      bestTimeToVisit: 'October to April is the best season for visiting Guwahati and Kamakhya Temple.',
+      overview: 'Embark on a sacred and breathtaking 5-day journey from Bangalore combining divine cosmic blessings at Maa Kamakhya Temple with the wondrous natural beauty of Meghalaya. Marvel at Nilachal Hill, cross the Brahmaputra River to Peacock Island’s Umananda Temple, gaze upon Nohkalikai Falls and Seven Sisters Falls in Cherrapunji, glide across the crystal-clear emerald waters of the Dawki Umngot River, and walk across the living root bridges in Mawlynnong.',
+      significance: 'Kamakhya Temple is the supreme center of Tantric Shakti worship and one of the oldest 51 Shakti Peethas where Goddess Sati\'s Yoni fell. Meghalaya, known as the "Abode of Clouds", is home to living root bridges, cleanest villages in Asia, and natural border rivers with transparent waters.',
+      bestTimeToVisit: 'October to May is the most ideal season for visiting Guwahati, Shillong, Cherrapunji, and Dawki with crystal clear river visibility and pleasant weather.',
       placesCovered: [
-        'Maa Kamakhya Temple',
-        'Umananda Temple (Peacock Island)',
-        'Vasistha Temple',
-        'Balaji Temple',
-        'Navagraha Temple',
-        'Assam State Museum'
+        'Maa Kamakhya Temple (VIP Darshan)',
+        'Umananda Temple (Peacock Island on Brahmaputra River)',
+        'Vasistha Temple & Grand Balaji Temple',
+        'Navagraha Temple on Chitrachal Hills',
+        'Police Bazaar Shillong',
+        'Cherrapunji (Nohkalikai Falls & Seven Sisters Falls)',
+        'Mawsmai Cave, Garden of Caves & Eco Park',
+        'Dawki Umngot River (Crystal Clear Boat Ride)',
+        'Mawlynnong (Asia’s Cleanest Village & Single Decker Living Root Bridge)',
+        'Elephant Falls & Shillong Peak'
       ],
       travelTips: [
-        'Special VIP Pass / VIP pass entry counter assistance provided for fast Darshan.',
-        'Comfortable footwear is recommended for walking up temple inclines.',
-        'Ferries / motorboats operate between Guwahati bank and Peacock Island.'
+        'VIP Darshan at Maa Kamakhya Temple is included in this package for comfortable, queue-free entry.',
+        'Pack comfortable walking shoes with grip for cave exploration and living root bridge paths in Meghalaya.',
+        'Carry a light warm jacket or sweater as Shillong and Cherrapunji evenings can be cool.',
+        'Dawki Umngot River offers peak glass-clear water visibility during winter and early spring months.'
       ],
       whyChooseUs: [
-        'Direct flight transfers from Bangalore with airport assistance',
-        'Hygienic 3-star hotel stay in Guwahati',
-        'All meals included (Breakfast, Lunch, Dinner)'
+        'Round-trip direct flights from Bangalore with airport coordination',
+        'AP Plan: Unlimited Breakfast, Lunch, and Dinner buffet included with evening tea/coffee',
+        'Dedicated Tour Coordinator / Manager traveling with the group throughout',
+        'Comfortable 3-star AC hotel stays and sanitized A/C pushback coach'
       ]
     },
     faqs: [
       {
-        question: "How is Darshan arranged at Kamakhya Temple?",
-        answer: "We provide guidance and priest assistance near temple counters for smooth Darshan at Kamakhya Temple."
+        question: "What is included in the Maa Kamakhya with Meghalaya tour package from Bangalore?",
+        answer: "The package is all-inclusive at ₹54,999/-: round-trip direct flights from Bangalore, 4 nights 3-star AC hotel stay (1N Guwahati + 3N Shillong), AP Plan (unlimited buffet Breakfast, Lunch, Dinner, 1L packaged drinking water & evening tea/coffee), VIP Darshan at Maa Kamakhya Temple, Umananda boat & ferry tickets, Dawki Umngot river crystal-clear boat ride, Cherrapunji waterfalls and caves tour, Mawlynnong living root bridge, sanitized A/C pushback bus, and a dedicated Tour Coordinator."
       },
       {
-        question: "How do we reach Umananda Temple?",
-        answer: "Umananda Temple is located on Peacock Island in the Brahmaputra River. Motorized ferry boat transfers from Guwahati river bank are arranged."
+        question: "How is Darshan arranged at Maa Kamakhya Temple?",
+        answer: "VIP Darshan is included in our package. Our dedicated tour coordinator arranges VIP entry tickets and priest assistance so pilgrims avoid long general queues and enjoy peaceful, divine darshan."
+      },
+      {
+        question: "Is the Dawki River crystal-clear boat ride included?",
+        answer: "Yes! A breathtaking boat ride on the crystal-clear emerald-green Umngot River in Dawki, where wooden boats appear to float on air, is completely included in the itinerary."
+      },
+      {
+        question: "What is the payment and cancellation policy?",
+        answer: "For this ₹54,999/- package, a registration amount of ₹50,000 per person is required at booking, with the balance due 45 days before departure (full payment if booking within 45 days). Cancellations 0–15 days before departure incur a 100% cancellation fee; cancellations more than 15 days before departure incur a 50% fee."
       }
     ]
   },

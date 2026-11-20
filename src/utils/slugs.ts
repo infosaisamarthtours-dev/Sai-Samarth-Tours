@@ -62,6 +62,12 @@ export const SLUG_TO_PACKAGE_ID_MAP: Record<string, string> = Object.entries(PAC
   {} as Record<string, string>
 );
 
+// Alternate & alias slug mappings for seamless routing & legacy lookups
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-meghalaya-tour-package-from-bangalore'] = 'kamakhya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-with-meghalaya-tour-package-from-bangalore'] = 'kamakhya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-with-meghalaya'] = 'kamakhya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-meghalaya'] = 'kamakhya';
+
 /**
  * Returns the canonical SEO slug for a package.
  */
