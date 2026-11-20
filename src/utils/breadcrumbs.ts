@@ -21,6 +21,7 @@ const REGION_MAP: Record<string, { region: string; regionUrl?: string }> = {
   'vaishnodevi': { region: 'Jammu & Kashmir', regionUrl: '/pilgrimage-tour-packages' },
   'puri-jagannath': { region: 'Odisha', regionUrl: '/pilgrimage-tour-packages' },
   'kamakhya': { region: 'Assam', regionUrl: '/pilgrimage-tour-packages' },
+  'kamakhya-meghalaya': { region: 'Assam & Meghalaya', regionUrl: '/pilgrimage-tour-packages' },
   'indore-ujjain': { region: 'Madhya Pradesh', regionUrl: '/destinations/jyotirlinga' },
   'gujarat': { region: 'Gujarat', regionUrl: '/destinations/jyotirlinga' },
   'baidyanath': { region: 'Jharkhand', regionUrl: '/destinations/jyotirlinga' },

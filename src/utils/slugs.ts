@@ -18,6 +18,7 @@ export const PACKAGE_SLUG_MAP: Record<string, string> = {
   'kholapur-pandarpur': 'kolhapur-pandharpur-tour-package-from-bangalore',
   'puri-jagannath': 'puri-jagannath-konark-tour-package-from-bangalore',
   'kamakhya': 'kamakhya-temple-tour-package-from-bangalore',
+  'kamakhya-meghalaya': 'kamakhya-with-meghalaya-tour-package-from-bangalore',
   'indore-ujjain': 'indore-ujjain-omkareshwar-tour-package-from-bangalore',
   'vaishnodevi': 'vaishnodevi-golden-temple-tour-package-from-bangalore',
   'baidyanath': 'baidyanath-dham-tour-package-from-bangalore',
@@ -63,10 +64,10 @@ export const SLUG_TO_PACKAGE_ID_MAP: Record<string, string> = Object.entries(PAC
 );
 
 // Alternate & alias slug mappings for seamless routing & legacy lookups
-SLUG_TO_PACKAGE_ID_MAP['kamakhya-meghalaya-tour-package-from-bangalore'] = 'kamakhya';
-SLUG_TO_PACKAGE_ID_MAP['kamakhya-with-meghalaya-tour-package-from-bangalore'] = 'kamakhya';
-SLUG_TO_PACKAGE_ID_MAP['kamakhya-with-meghalaya'] = 'kamakhya';
-SLUG_TO_PACKAGE_ID_MAP['kamakhya-meghalaya'] = 'kamakhya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-with-meghalaya-tour-package-from-bangalore'] = 'kamakhya-meghalaya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-meghalaya-tour-package-from-bangalore'] = 'kamakhya-meghalaya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-with-meghalaya'] = 'kamakhya-meghalaya';
+SLUG_TO_PACKAGE_ID_MAP['kamakhya-meghalaya'] = 'kamakhya-meghalaya';
 
 /**
  * Returns the canonical SEO slug for a package.

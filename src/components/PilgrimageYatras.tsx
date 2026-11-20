@@ -14,6 +14,7 @@ export function PilgrimageYatras({ onSelectPackage, onOpenEnquiry }: Props) {
   // Specific pilgrimage package IDs (Puri, Kamakhya & Indore-Ujjain are top priority)
   const pilgrimageIds = [
     'kamakhya',
+    'kamakhya-meghalaya',
     'puri-jagannath',
     'indore-ujjain',
     'kashi-ayodhya',

@@ -320,9 +320,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   </span>
                 </Link>
 
-                {/* 2. Kamakhya */}
+                {/* 2. Kamakhya Temple */}
                 <Link
-                  to="/package/kamakhya"
+                  to="/package/kamakhya-temple-tour-package-from-bangalore"
                   onClick={() => setIsTopYatrasOpen(false)}
                   className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
                 >
@@ -330,10 +330,27 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     <div className="text-xs font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">
                       Kamakhya Temple Guwahati
                     </div>
-                    <p className="text-[11px] text-gray-500">2N/3D • Sacred Shaktipeeth & Brahmaputra</p>
+                    <p className="text-[11px] text-gray-500">1N/2D • Sacred Shaktipeeth & Brahmaputra</p>
                   </div>
                   <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded-md shrink-0">
                     ₹31,999
+                  </span>
+                </Link>
+
+                {/* 2b. Kamakhya with Meghalaya */}
+                <Link
+                  to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore"
+                  onClick={() => setIsTopYatrasOpen(false)}
+                  className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
+                >
+                  <div>
+                    <div className="text-xs font-bold text-[#114088] group-hover/item:text-[#EA580C] transition-colors">
+                      Maa Kamakhya with Meghalaya
+                    </div>
+                    <p className="text-[11px] text-gray-500">4N/5D • Shillong, Cherrapunji & Dawki</p>
+                  </div>
+                  <span className="text-xs font-black text-[#EA580C] bg-orange-50 px-2 py-0.5 rounded-md shrink-0">
+                    ₹54,999
                   </span>
                 </Link>
 
@@ -446,7 +463,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               <div className="absolute left-0 top-full w-80 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="flex flex-col max-h-[280px] overflow-y-auto">
                   <Link to="/package/puri-jagannath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Puri Jagannath</Link>
-                  <Link to="/package/kamakhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakhya</Link>
+                  <Link to="/package/kamakhya-temple-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakhya Temple</Link>
+                  <Link to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakhya with Meghalaya</Link>
                   <Link to="/package/indore-ujjain" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Indore and Ujjain</Link>
                   <Link to="/package/kashi-ayodhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya</Link>
                   <Link to="/package/kashi-ayodhya-prayagraj" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
@@ -753,7 +771,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                   <Link to="/package/puri-jagannath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Puri Jagannath</Link>
-                  <Link to="/package/kamakhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya</Link>
+                  <Link to="/package/kamakhya-temple-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya Temple</Link>
+                  <Link to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya with Meghalaya</Link>
                   <Link to="/package/indore-ujjain" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Indore and Ujjain</Link>
                   <Link to="/package/kashi-ayodhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi With Ayodhya</Link>
                   <Link to="/package/kashi-ayodhya-prayagraj" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi Ayodhya Prayagraj & Bodhgaya</Link>

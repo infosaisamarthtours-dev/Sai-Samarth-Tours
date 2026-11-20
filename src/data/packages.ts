@@ -915,6 +915,130 @@ export const ALL_PACKAGES: Package[] = [
   },
   {
     id: 'kamakhya',
+    slug: 'kamakhya-temple-tour-package-from-bangalore',
+    title: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
+    shortTitle: 'Kamakhya Temple Yatra',
+    seoH1: 'Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan',
+    category: 'pilgrimage',
+    destination: 'Assam (Guwahati)',
+    duration: '1N/2D',
+    price: '₹31,999/-',
+    numericPrice: 31999,
+    minPax: 2,
+    featured: true,
+    image: '/kamakhya-temple-guwahati-nilachal-hill.webp',
+    images: [
+      '/kamakhya-temple-guwahati-nilachal-hill.webp',
+      '/guwahati-umananda-temple-peacock-island.webp',
+      '/kamakhya-temple-tour-package-from-bangalore-2.webp'
+    ],
+    description: 'Sacred Assam Shakti Peeth Yatra: Direct flight from Bangalore to Guwahati, visit famous Maa Kamakhya Temple (revered Shakti Peeth), Vasistha Temple, Balaji Temple, Umananda Temple on Peacock Island in Brahmaputra River, and Navagraha Temple.',
+    highlights: [
+      'Maa Kamakhya Temple Darshan (Revered Shakti Peeth)',
+      'Umananda Temple (Peacock Island in Brahmaputra River)',
+      'Vasistha Temple & Grand Balaji Temple Visit',
+      'Navagraha Temple & Assam State Museum',
+      'Direct Round-Trip Flights from Bangalore'
+    ],
+    tourIncludes: {
+      hotels: true,
+      transport: true,
+      allMeals: true,
+      flights: true,
+      sightseeing: true
+    },
+    placesBadge: '2 Days Sacred Kamakhya Yatra',
+    placesList: [
+      { name: 'Guwahati (Maa Kamakhya Shakti Peeth)' },
+      { name: 'Peacock Island (Umananda Temple & Brahmaputra)' },
+      { name: 'Vasistha Ashram & Balaji Temple' },
+      { name: 'Navagraha Temple & Assam State Museum' }
+    ],
+    inclusions: [
+      'All Meals (Breakfast, Lunch & Dinner)',
+      'Airfares (Both Onward and Return)',
+      'Transfers and Sightseeing by A/C Coach',
+      '3-star Accommodation on a Twin/Double sharing basis for 01 night',
+      'Packaged drinking water (1 ltr per person per day)',
+      'Professional Tourist Guide',
+      'Entry tickets as per the itinerary'
+    ],
+    exclusions: [
+      'Seat selection and meals are not included in the flight journey',
+      'Mineral water, Coffee/Tea, Shopping',
+      'Travel Insurance, Tips, Laundry, etc.',
+      'Any medical or evacuation expenses, and expenses due to natural climate',
+      'Any service not included in the inclusions or itinerary',
+      'Pooja charges if any'
+    ],
+    sampleItinerary: [
+      {
+        day: 'Day 1',
+        title: 'Bangalore – Guwahati – Kamakhya Temple',
+        detail: 'Bangalore International Airport to Guwahati airport by flight. Upon arrival in Guwahati, begin your journey by visiting the serene Vasistha Temple and the grand Balaji Temple. Enjoy lunch, then proceed to the famous Kamakhya Temple, one of the most revered Shakti Peethas. End the day with dinner and an overnight stay at the hotel in Guwahati.',
+        meals: 'Lunch, Dinner'
+      },
+      {
+        day: 'Day 2',
+        title: 'Guwahati City Tour – Bangalore Departure',
+        detail: 'After breakfast, check out from the hotel and visit the beautiful Umananda Temple, located on Peacock Island in the middle of the Brahmaputra River. Then visit Navagraha Temple followed by a visit to the historical Assam State Museum (if time permits). Post lunch, transfer to the Guwahati airport for your return flight to Bangalore.',
+        meals: 'Breakfast, Lunch'
+      }
+    ],
+    cancellationPolicy: {
+      table: [
+        { days: 'Days 0-15', fee: '100%' },
+        { days: '15 Days & Above', fee: '50%' }
+      ],
+      notes: [
+        'Sai Samarth Tours will not refund any claims for delay or cancellation of flight, mechanical problems, strikes, bandhs, or weather changes.',
+        'Flight timings are subject to availability at the time of booking.',
+        'Seats in the flights will be auto assigned by respective airlines.'
+      ]
+    },
+    remarks: [
+      'All meals are provided by Sai Samarth Tours in case the flight reaches destination early morning or leaves late in the evening.',
+      'The tour price mentioned for this tour is for Indian nationals only. Rates vary for NRIs or foreign nationals.',
+      'NRIs & Foreign nationals must convey proper identity and submit passport copies to booking executive.',
+      'Standard Check-in time of hotels in India is generally 1:30 PM and Check-out time is 10:00 AM.'
+    ],
+    detailedContent: {
+      overview: 'Experience divine cosmic energy at Maa Kamakhya Temple in Guwahati, Assam. Situated on Nilachal Hill overlooking the mighty Brahmaputra River, this yatra includes visits to Umananda Shiva Temple on Peacock Island, Vasistha Temple, Balaji Temple, and Navagraha Temple with round-trip flights from Bangalore.',
+      significance: 'Kamakhya Temple is the supreme center of Tantric Shakti worship and one of the oldest 51 Shakti Peethas where Goddess Sati\'s Yoni fell.',
+      bestTimeToVisit: 'October to April is the best season for visiting Guwahati and Kamakhya Temple.',
+      placesCovered: [
+        'Maa Kamakhya Temple',
+        'Umananda Temple (Peacock Island)',
+        'Vasistha Temple',
+        'Balaji Temple',
+        'Navagraha Temple',
+        'Assam State Museum'
+      ],
+      travelTips: [
+        'Special VIP Pass / VIP pass entry counter assistance provided for fast Darshan.',
+        'Comfortable footwear is recommended for walking up temple inclines.',
+        'Ferries / motorboats operate between Guwahati bank and Peacock Island.'
+      ],
+      whyChooseUs: [
+        'Direct flight transfers from Bangalore with airport assistance',
+        'Hygienic 3-star hotel stay in Guwahati',
+        'All meals included (Breakfast, Lunch, Dinner)'
+      ]
+    },
+    faqs: [
+      {
+        question: "How is Darshan arranged at Kamakhya Temple?",
+        answer: "We provide guidance and priest assistance near temple counters for smooth Darshan at Kamakhya Temple."
+      },
+      {
+        question: "How do we reach Umananda Temple?",
+        answer: "Umananda Temple is located on Peacock Island in the Brahmaputra River. Motorized ferry boat transfers from Guwahati river bank are arranged."
+      }
+    ]
+  },
+  {
+    id: 'kamakhya-meghalaya',
+    slug: 'kamakhya-with-meghalaya-tour-package-from-bangalore',
     title: 'Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki',
     shortTitle: 'Kamakhya with Meghalaya',
     seoH1: 'Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki',

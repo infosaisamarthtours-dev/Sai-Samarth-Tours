@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalHtmlFiles": 287,
-    "indexableRoutes": 203,
-    "redirectRoutes": 84,
+    "totalHtmlFiles": 291,
+    "indexableRoutes": 205,
+    "redirectRoutes": 86,
     "missingTitles": 0,
     "missingCanonicals": 0,
     "duplicateDescriptions": 0,
@@ -2148,10 +2148,10 @@
     },
     {
       "route": "/package/kamakhya-temple-tour-package-from-bangalore",
-      "title": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki | Sai Samarth Tours",
-      "description": "Book Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki. Includes return flights, verified 3-star AC hotel, pure veg m",
+      "title": "Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals &",
       "canonical": "https://saisamarthtours.com/package/kamakhya-temple-tour-package-from-bangalore",
-      "h1": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Sh",
+      "h1": "Kamakhya Temple Guwahati Tour Package from Bangalore – Fligh",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -2164,9 +2164,41 @@
     },
     {
       "route": "/package/kamakhya-temple-tour-package-from-bangalore",
+      "title": "Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan | Sai Samarth Tours",
+      "description": "Book Kamakhya Temple Guwahati Tour Package from Bangalore – Flight Yatra & VIP Darshan. Includes return flights, verified 3-star AC hotel, pure veg meals &",
+      "canonical": "https://saisamarthtours.com/package/kamakhya-temple-tour-package-from-bangalore",
+      "h1": "Kamakhya Temple Guwahati Tour Package from Bangalore – Fligh",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kamakhya-with-meghalaya-tour-package-from-bangalore",
       "title": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki | Sai Samarth Tours",
       "description": "Book Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki. Includes return flights, verified 3-star AC hotel, pure veg m",
-      "canonical": "https://saisamarthtours.com/package/kamakhya-temple-tour-package-from-bangalore",
+      "canonical": "https://saisamarthtours.com/package/kamakhya-with-meghalaya-tour-package-from-bangalore",
+      "h1": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Sh",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristTrip",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/package/kamakhya-with-meghalaya-tour-package-from-bangalore",
+      "title": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki | Sai Samarth Tours",
+      "description": "Book Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki. Includes return flights, verified 3-star AC hotel, pure veg m",
+      "canonical": "https://saisamarthtours.com/package/kamakhya-with-meghalaya-tour-package-from-bangalore",
       "h1": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Sh",
       "h1Count": 1,
       "schemas": [

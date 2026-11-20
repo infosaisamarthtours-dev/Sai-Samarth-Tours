@@ -27,6 +27,7 @@ const packageSlugsMap = {
   'kholapur-pandarpur': 'kolhapur-pandharpur-tour-package-from-bangalore',
   'puri-jagannath': 'puri-jagannath-konark-tour-package-from-bangalore',
   'kamakhya': 'kamakhya-temple-tour-package-from-bangalore',
+  'kamakhya-meghalaya': 'kamakhya-with-meghalaya-tour-package-from-bangalore',
   'indore-ujjain': 'indore-ujjain-omkareshwar-tour-package-from-bangalore',
   'vaishnodevi': 'vaishnodevi-golden-temple-tour-package-from-bangalore',
   'baidyanath': 'baidyanath-dham-tour-package-from-bangalore',

@@ -15,6 +15,7 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
   const preferredIds = [
     'shirdi-via-pune',
     'kamakhya',
+    'kamakhya-meghalaya',
     'puri-jagannath',
     'indore-ujjain',
     'shirdi-3-jyothirlinga',
@@ -23,8 +24,7 @@ export const FeaturedYatras: React.FC<FeaturedYatrasProps> = ({ onSelectPackage,
     'south-india-yatra-bus-tour',
     'panch-bootha-balaji-bus-tour',
     'vaishnodevi',
-    'shirdi-via-mumbai',
-    'rameshwaram-madurai'
+    'shirdi-via-mumbai'
   ];
 
   let featuredPackages = preferredIds

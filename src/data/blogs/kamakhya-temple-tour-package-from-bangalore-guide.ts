@@ -143,7 +143,7 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
         answer: 'You can reserve your seats online at saisamarthtours.com, visit our registered Bangalore office at Yelahanka New Town, or call/WhatsApp our dedicated pilgrimage booking desk directly at +91 91877 11649 / 50 / 51 for instant booking assistance and confirmed departure dates.'
       }
     ],
-    conclusion: 'The [Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki](/package/kamakhya-temple-tour-package-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary spiritual and natural journey in Northeast India. Experience the immense, primordial creative energy of Maa Kamakhya, the serene island abodes of Lord Shiva, the world-famous waterfalls of Cherrapunji, and the crystal-clear waters of Dawki. With direct flights, 3-star AC accommodations, all unlimited buffet meals (AP Plan), and devoted tour coordinator care for an all-inclusive ₹54,999/-, this sacred Shakti Peeth yatra is smooth, fulfilling, and unforgettable. Browse our complete [pilgrimage tour packages from Bangalore](/pilgrimage-tour-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra!'
+    conclusion: 'The [Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki](/package/kamakhya-with-meghalaya-tour-package-from-bangalore) by Sai Samarth Tours offers devotees an extraordinary spiritual and natural journey in Northeast India. Experience the immense, primordial creative energy of Maa Kamakhya, the serene island abodes of Lord Shiva, the world-famous waterfalls of Cherrapunji, and the crystal-clear waters of Dawki. With direct flights, 3-star AC accommodations, all unlimited buffet meals (AP Plan), and devoted tour coordinator care for an all-inclusive ₹54,999/-, this sacred Shakti Peeth yatra is smooth, fulfilling, and unforgettable. Browse our complete [pilgrimage tour packages from Bangalore](/pilgrimage-tour-packages) or [contact our Bangalore pilgrimage desk](/contact) today to reserve your seats for the upcoming yatra!'
   },
   author: {
     name: 'Sai Samarth Tours Editorial Desk',
@@ -152,7 +152,7 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
   },
   date: 'October 21, 2026',
   readTime: '10 min read',
-  image: '/kamakhya-temple-tour-package-from-bangalore-1.webp',
+  image: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp',
   category: 'Pilgrimage Guide',
   tags: [
     'Kamakhya Temple Tour',
@@ -161,9 +161,12 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
     'Bangalore to Guwahati Flight Tour',
     'VIP Darshan Kamakhya',
     'Bangalore Pilgrimage Tours',
+    'Meghalaya Tour Package',
+    'Dawki River Tour',
+    'Cherrapunji Tour',
     'Umananda Temple',
     'Temple Tour from Bangalore'
   ],
   featured: true,
-  relatedPackageId: 'kamakhya'
+  relatedPackageId: 'kamakhya-meghalaya'
 };

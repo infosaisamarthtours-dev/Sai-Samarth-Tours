@@ -11,6 +11,7 @@ import { Breadcrumbs } from '../components/Breadcrumbs';
 const pilgrimageIds = [
   'puri-jagannath',
   'kamakhya',
+  'kamakhya-meghalaya',
   'indore-ujjain',
   'kashi-ayodhya',
   'kashi-ayodhya-prayagraj',
