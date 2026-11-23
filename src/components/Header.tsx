@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ALL_PACKAGES } from '../data/packages';
 import { siteConfig } from '../data/config';
+import { PACKAGE_SLUG_MAP } from '../utils/slugs';
 import { Phone, Menu, X, Search, ChevronDown, UserCheck, MapPin, Clock, ArrowRight, Tag, Bus, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
@@ -93,7 +94,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
     setSearchQuery('');
     setIsSearchOpen(false);
     closeMobileMenu();
-    navigate(`/package/${pkgId}`);
+    const targetSlug = PACKAGE_SLUG_MAP[pkgId] || pkgId;
+    navigate(`/package/${targetSlug}`);
   };
 
   return (
@@ -356,7 +358,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
 
                 {/* 3. Puri Jagannath */}
                 <Link
-                  to="/package/puri-jagannath"
+                  to="/package/puri-jagannath-konark-tour-package-from-bangalore"
                   onClick={() => setIsTopYatrasOpen(false)}
                   className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
                 >
@@ -373,7 +375,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
 
                 {/* 4. Indore & Ujjain */}
                 <Link
-                  to="/package/indore-ujjain"
+                  to="/package/indore-ujjain-omkareshwar-tour-package-from-bangalore"
                   onClick={() => setIsTopYatrasOpen(false)}
                   className="flex items-center justify-between p-2.5 rounded-xl hover:bg-amber-50/50 transition-colors group/item"
                 >
@@ -446,11 +448,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
               <div className="absolute left-0 top-full w-72 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="flex flex-col">
-                  <Link to="/package/shirdi-via-pune" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi Via Pune</Link>
-                  <Link to="/package/shirdi-via-mumbai" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi Via Mumbai</Link>
-                  <Link to="/package/shirdi-3-jyothirlinga" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 3 Jyothirlinga</Link>
-                  <Link to="/package/shirdi-2-jyothirlinga" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 2 Jyothirlinga</Link>
-                  <Link to="/package/shirdi-regular" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Direct Shirdi</Link>
+                  <Link to="/package/shirdi-via-pune-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi Via Pune</Link>
+                  <Link to="/package/shirdi-via-mumbai-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi Via Mumbai</Link>
+                  <Link to="/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 3 Jyothirlinga</Link>
+                  <Link to="/package/shirdi-with-2-jyotirlinga-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Shirdi with 2 Jyothirlinga</Link>
+                  <Link to="/package/shirdi-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Direct Shirdi</Link>
                 </div>
               </div>
             </li>
@@ -462,17 +464,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
               <div className="absolute left-0 top-full w-80 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden">
                 <div className="flex flex-col max-h-[280px] overflow-y-auto">
-                  <Link to="/package/puri-jagannath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Puri Jagannath</Link>
+                  <Link to="/package/puri-jagannath-konark-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Puri Jagannath</Link>
                   <Link to="/package/kamakhya-temple-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakhya Temple</Link>
                   <Link to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kamakhya with Meghalaya</Link>
-                  <Link to="/package/indore-ujjain" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Indore and Ujjain</Link>
-                  <Link to="/package/kashi-ayodhya" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya</Link>
-                  <Link to="/package/kashi-ayodhya-prayagraj" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
-                  <Link to="/package/baidyanath" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Baidyanath</Link>
-                  <Link to="/package/kholapur-pandarpur" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kolhapur and Pandharpur</Link>
-                  <Link to="/package/vaishnodevi" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Vaishnodevi</Link>
-                  <Link to="/package/rameshwaram" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Rameshwaram</Link>
-                  <Link to="/package/gujarat" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Gujarat</Link>
+                  <Link to="/package/indore-ujjain-omkareshwar-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Indore and Ujjain</Link>
+                  <Link to="/package/kashi-ayodhya-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi With Ayodhya</Link>
+                  <Link to="/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
+                  <Link to="/package/baidyanath-dham-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Baidyanath</Link>
+                  <Link to="/package/kolhapur-pandharpur-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Kolhapur and Pandharpur</Link>
+                  <Link to="/package/vaishnodevi-golden-temple-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Vaishnodevi</Link>
+                  <Link to="/package/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Rameshwaram</Link>
+                  <Link to="/package/grand-gujarat-somnath-dwarka-tour-package-from-bangalore" className="px-5 py-3.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 border-b border-gray-50 transition-colors font-medium block">Gujarat</Link>
                 </div>
               </div>
             </li>
@@ -536,19 +538,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   <div>
                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">North India</h3>
                     <ul className="space-y-2">
-                      <li><Link to="/package/kashmir" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Kashmir</Link></li>
-                      <li><Link to="/package/leh-ladakh" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Leh Ladakh</Link></li>
-                      <li><Link to="/package/golden-triangle" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Golden Triangle</Link></li>
-                      <li><Link to="/package/himachal" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Himachal Pradesh</Link></li>
-                      <li><Link to="/package/rajasthan" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Rajasthan</Link></li>
+                      <li><Link to="/package/kashmir-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Kashmir</Link></li>
+                      <li><Link to="/package/leh-ladakh-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Leh Ladakh</Link></li>
+                      <li><Link to="/package/golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Golden Triangle</Link></li>
+                      <li><Link to="/package/himachal-pradesh-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Himachal Pradesh</Link></li>
+                      <li><Link to="/package/rajasthan-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Rajasthan</Link></li>
                     </ul>
                   </div>
                   <div>
                     <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">South & Coastal India</h3>
                     <ul className="space-y-2">
-                      <li><Link to="/package/kerala" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Kerala</Link></li>
-                      <li><Link to="/package/andaman" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Andaman</Link></li>
-                      <li><Link to="/package/goa" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Goa</Link></li>
+                      <li><Link to="/package/kerala-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Kerala</Link></li>
+                      <li><Link to="/package/andaman-islands-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Andaman</Link></li>
+                      <li><Link to="/package/goa-beach-tour-package-from-bangalore" className="text-sm text-gray-700 hover:text-[#2563EB] transition-colors flex items-center group/link"><span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover/link:bg-[#F59E0B] mr-2 transition-colors"></span>Goa</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -561,14 +563,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                 International <ChevronDown className="w-4 h-4 ml-1 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
               </Link>
               <div className="absolute left-0 top-full w-48 bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 rounded-b-lg overflow-hidden py-2">
-                <Link to="/package/bhutan" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Bhutan</Link>
-                <Link to="/package/nepal" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Nepal</Link>
-                <Link to="/package/malaysia" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Malaysia</Link>
-                <Link to="/package/maldives" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Maldives</Link>
-                <Link to="/package/europe" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Europe <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
-                <Link to="/package/dubai" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Dubai <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
-                <Link to="/package/singapore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Singapore</Link>
-                <Link to="/package/thailand" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Thailand</Link>
+                <Link to="/package/bhutan-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Bhutan</Link>
+                <Link to="/package/nepal-muktinath-pashupatinath-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Nepal</Link>
+                <Link to="/package/malaysia-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Malaysia</Link>
+                <Link to="/package/maldives-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Maldives</Link>
+                <Link to="/package/europe-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Europe <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
+                <Link to="/package/dubai-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors flex justify-between items-center">Dubai <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span></Link>
+                <Link to="/package/singapore-malaysia-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Singapore</Link>
+                <Link to="/package/thailand-tour-package-from-bangalore" className="block px-5 py-2.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-gray-50 transition-colors">Thailand</Link>
               </div>
             </li>
             
@@ -736,11 +738,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     <span>Explore All Shirdi Packages</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
-                  <Link to="/package/shirdi-via-pune" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi Via Pune</Link>
-                  <Link to="/package/shirdi-via-mumbai" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi Via Mumbai</Link>
-                  <Link to="/package/shirdi-3-jyothirlinga" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi with 3 Jyothirlinga</Link>
-                  <Link to="/package/shirdi-2-jyothirlinga" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi with 2 Jyothirlinga</Link>
-                  <Link to="/package/shirdi-regular" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Direct Shirdi Flight Yatra</Link>
+                  <Link to="/package/shirdi-via-pune-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi Via Pune</Link>
+                  <Link to="/package/shirdi-via-mumbai-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi Via Mumbai</Link>
+                  <Link to="/package/shirdi-with-3-jyotirlinga-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi with 3 Jyothirlinga</Link>
+                  <Link to="/package/shirdi-with-2-jyotirlinga-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Shirdi with 2 Jyothirlinga</Link>
+                  <Link to="/package/shirdi-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Direct Shirdi Flight Yatra</Link>
                 </div>
               )}
             </div>
@@ -770,17 +772,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     <span>Explore All Pilgrimage Packages</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
-                  <Link to="/package/puri-jagannath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Puri Jagannath</Link>
+                  <Link to="/package/puri-jagannath-konark-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Puri Jagannath</Link>
                   <Link to="/package/kamakhya-temple-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya Temple</Link>
                   <Link to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kamakhya with Meghalaya</Link>
-                  <Link to="/package/indore-ujjain" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Indore and Ujjain</Link>
-                  <Link to="/package/kashi-ayodhya" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi With Ayodhya</Link>
-                  <Link to="/package/kashi-ayodhya-prayagraj" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
-                  <Link to="/package/baidyanath" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Baidyanath</Link>
-                  <Link to="/package/kholapur-pandarpur" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kolhapur and Pandharpur</Link>
-                  <Link to="/package/vaishnodevi" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Vaishnodevi</Link>
-                  <Link to="/package/rameshwaram" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rameshwaram</Link>
-                  <Link to="/package/gujarat" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Gujarat</Link>
+                  <Link to="/package/indore-ujjain-omkareshwar-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Indore and Ujjain</Link>
+                  <Link to="/package/kashi-ayodhya-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi With Ayodhya</Link>
+                  <Link to="/package/kashi-ayodhya-prayagraj-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashi Ayodhya Prayagraj & Bodhgaya</Link>
+                  <Link to="/package/baidyanath-dham-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Baidyanath</Link>
+                  <Link to="/package/kolhapur-pandharpur-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kolhapur and Pandharpur</Link>
+                  <Link to="/package/vaishnodevi-golden-temple-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Vaishnodevi</Link>
+                  <Link to="/package/rameshwaram-madurai-kanyakumari-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rameshwaram</Link>
+                  <Link to="/package/grand-gujarat-somnath-dwarka-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-2 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Gujarat</Link>
                 </div>
               )}
             </div>
@@ -890,16 +892,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   </Link>
 
                   <div className="pt-2 text-[10px] uppercase font-bold text-gray-400 px-3 tracking-wider">North India</div>
-                  <Link to="/package/kashmir" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashmir</Link>
-                  <Link to="/package/leh-ladakh" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Leh Ladakh</Link>
-                  <Link to="/package/golden-triangle" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Golden Triangle</Link>
-                  <Link to="/package/himachal" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Himachal Pradesh</Link>
-                  <Link to="/package/rajasthan" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rajasthan</Link>
+                  <Link to="/package/kashmir-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kashmir</Link>
+                  <Link to="/package/leh-ladakh-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Leh Ladakh</Link>
+                  <Link to="/package/golden-triangle-delhi-agra-jaipur-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Golden Triangle</Link>
+                  <Link to="/package/himachal-pradesh-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Himachal Pradesh</Link>
+                  <Link to="/package/rajasthan-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Rajasthan</Link>
 
                   <div className="pt-2 text-[10px] uppercase font-bold text-gray-400 px-3 tracking-wider">South & Coastal India</div>
-                  <Link to="/package/kerala" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kerala</Link>
-                  <Link to="/package/andaman" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Andaman</Link>
-                  <Link to="/package/goa" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Goa</Link>
+                  <Link to="/package/kerala-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Kerala</Link>
+                  <Link to="/package/andaman-islands-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Andaman</Link>
+                  <Link to="/package/goa-beach-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Goa</Link>
                 </div>
               )}
             </div>
@@ -930,12 +932,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
 
-                  <Link to="/package/bhutan" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Bhutan</Link>
-                  <Link to="/package/nepal" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Nepal</Link>
-                  <Link to="/package/malaysia" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Malaysia</Link>
-                  <Link to="/package/maldives" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Maldives</Link>
-                  <Link to="/package/singapore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Singapore</Link>
-                  <Link to="/package/thailand" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Thailand</Link>
+                  <Link to="/package/bhutan-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Bhutan</Link>
+                  <Link to="/package/nepal-muktinath-pashupatinath-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Nepal</Link>
+                  <Link to="/package/malaysia-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Malaysia</Link>
+                  <Link to="/package/maldives-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Maldives</Link>
+                  <Link to="/package/singapore-malaysia-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Singapore</Link>
+                  <Link to="/package/thailand-tour-package-from-bangalore" onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-gray-700 hover:text-[#2563EB] hover:bg-white rounded-lg transition-colors font-medium">Thailand</Link>
                   <div className="px-3 py-1.5 text-xs text-gray-400 flex justify-between items-center font-medium">
                     <span>Dubai & UAE</span>
                     <span className="text-[9px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-bold">SOON</span>
