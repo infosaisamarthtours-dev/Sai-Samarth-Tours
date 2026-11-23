@@ -256,7 +256,6 @@ function generateRedirectHtml(targetUrl) {
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=${targetUrl}">
   <link rel="canonical" href="https://saisamarthtours.com${targetUrl}">
-  <meta name="robots" content="noindex, follow">
   <title>Redirecting to Sai Samarth Tours...</title>
 </head>
 <body>

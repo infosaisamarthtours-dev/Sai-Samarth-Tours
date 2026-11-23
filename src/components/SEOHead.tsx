@@ -98,6 +98,13 @@ export function SEOHead({
     } else if (scriptTag) {
       scriptTag.remove();
     }
+
+    return () => {
+      // If this component set noindex, ensure subsequent page navigation resets robots to indexable
+      if (noIndex) {
+        setMeta('name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+      }
+    };
   }, [title, description, canonical, ogImage, ogType, jsonLd, noIndex, keywords]);
 
   return null;
