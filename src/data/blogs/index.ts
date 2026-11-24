@@ -25,6 +25,7 @@ import { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-ti
 import { southIndiaTourPackageFromBangalorePost } from './south-india-tour-package-from-bangalore-guide';
 import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
 import { kamakhyaMeghalayaTourPackageFromBangalorePost } from './kamakhya-meghalaya-tour-package-from-bangalore-guide';
+import { puriJagannathTourPackageFromBangalorePost } from './puri-jagannath-tour-package-from-bangalore-guide';
 import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 
 export * from './types';
@@ -45,6 +46,7 @@ export { shirdiTourPackageFromBangaloreDirectFlightVipDarshanPost } from './shir
 export { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
 export { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-tour-package-from-bangalore-guide';
 export { kamakhyaMeghalayaTourPackageFromBangalorePost } from './kamakhya-meghalaya-tour-package-from-bangalore-guide';
+export { puriJagannathTourPackageFromBangalorePost } from './puri-jagannath-tour-package-from-bangalore-guide';
 export { southIndiaTourPackageFromBangalorePost } from './south-india-tour-package-from-bangalore-guide';
 export { panchBoothaYatraTirumalaBalajiGuidePost } from './panch-bootha-yatra-tirumala-balaji-guide';
 export { shirdiTourPackageFromBangaloreGuidePost } from './shirdi-tour-package-from-bangalore-guide';
@@ -57,6 +59,7 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  puriJagannathTourPackageFromBangalorePost,
   kamakhyaMeghalayaTourPackageFromBangalorePost,
   omkareshwarPlacesToVisitGuidePost,
   bestTimeToVisitKedarnathGuidePost,
