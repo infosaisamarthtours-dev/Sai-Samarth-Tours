@@ -2,13 +2,13 @@ import { BlogPost } from './types';
 
 export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
   id: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
-  title: 'Maa Kamakhya with Meghalaya Tour Package from Bangalore – Shillong, Cherrapunji & Dawki',
+  title: 'Kamakhya Temple Guwahati Tour Package from Bangalore: Direct Flight, VIP Darshan & 2-Day Itinerary',
   slug: 'kamakhya-temple-guwahati-tour-package-from-bangalore',
-  seoTitle: 'Kamakhya Temple with Meghalaya Tour Package from Bangalore | Flight & VIP Darshan',
-  seoDescription: 'Book Maa Kamakhya with Meghalaya Tour Package from Bangalore with flights, VIP Darshan, Cherrapunji waterfalls, Dawki river & 3-star AC hotel stay.',
-  excerpt: 'Complete travel guide for the Maa Kamakhya with Meghalaya tour package from Bangalore by flight. Experience divine blessings at Maa Kamakhya Shakti Peeth on Nilachal Hill, Umananda Shiva Temple on Peacock Island, Shillong Peak, Elephant Falls, Cherrapunji waterfalls (Nohkalikai & Seven Sisters), crystal-clear Dawki Umngot river boating, and Mawlynnong living root bridge with direct flights, VIP darshan assistance, 3-star AC hotel, and unlimited buffet meals (AP Plan).',
+  seoTitle: 'Kamakhya Temple Tour from Bangalore: 2D/1N Flight & VIP Darshan (2026)',
+  seoDescription: 'Book 2-Day Kamakhya Temple tour package from Bangalore with direct flights, VIP Darshan, Umananda Peacock Island, 3-star AC hotel & pure veg meals.',
+  excerpt: 'Complete travel guide for the 2-Day / 1-Night Kamakhya Temple Guwahati flight tour package from Bangalore. Experience divine blessings at Maa Kamakhya Shakti Peeth on Nilachal Hill, Umananda Shiva Temple on Peacock Island, Vasistha Ashram, and Balaji Temple with direct round-trip flights, VIP darshan assistance, 3-star AC hotel, and unlimited buffet meals.',
   content: {
-    intro: 'Seeking the powerful cosmic blessings of Maa Kamakhya on the mystical Nilachal Hill in Assam combined with the breathtaking natural beauty of Meghalaya? Sai Samarth Tours brings you the definitive **Maa Kamakhya with Meghalaya Tour Package from Bangalore – Flight Yatra, VIP Darshan & Natural Wonders**. Specially crafted for devotees, families, and senior citizens across Karnataka, this all-inclusive 4 Nights / 5 Days spiritual pilgrimage departs directly from Kempegowda International Airport (BLR) to Guwahati (GAU). Revered as the prime seat among all 51 Shakti Peethas in Sanatana Dharma, Maa Kamakhya embodies the primordial womb of creation (Maha Shakti). Our carefully curated [Bangalore to Kamakhya flight package](/package/kamakhya-temple-tour-package-from-bangalore) takes care of round-trip direct air tickets, verified 3-star AC hotel accommodation, 100% wholesome unlimited buffet meals (AP Plan: Breakfast, Lunch & Dinner), sanitized Deluxe A/C pushback bus transportation, motorized Brahmaputra boat transfers to Umananda Peacock Island, VIP Darshan at Maa Kamakhya, crystal-clear Dawki Umngot river boat ride, and Cherrapunji waterfalls exploration with dedicated tour coordinator guidance throughout.',
+    intro: 'Seeking the powerful divine blessings of Maa Kamakhya on the sacred Nilachal Hill in Assam on a convenient weekend trip? Sai Samarth Tours presents the definitive **Kamakhya Temple Guwahati Tour Package from Bangalore – Direct Flight, VIP Darshan & 2-Day Itinerary**. Specially designed for devotees, working professionals, and senior citizens from Bangalore seeking an auspicious weekend yatra without taking extended leave, this 2-Day / 1-Night spiritual pilgrimage departs directly from Kempegowda International Airport (BLR) to Guwahati (GAU). Revered as the prime seat among all 51 Shakti Peethas in Sanatana Dharma, Maa Kamakhya embodies the cosmic source of divine feminine power. Our all-inclusive [Kamakhya Temple Tour Package from Bangalore](/package/kamakhya-temple-tour-package-from-bangalore) covers round-trip direct air tickets, verified 3-star AC hotel accommodation, 100% wholesome pure vegetarian meals (AP Plan: Breakfast, Lunch & Dinner), sanitized Deluxe AC coach transfers, motorized Brahmaputra boat transfers to Umananda Peacock Island, and VIP Darshan assistance at Maa Kamakhya with dedicated tour coordinator guidance throughout. For pilgrims looking for an extended vacation including Shillong, Cherrapunji, and Dawki, explore our 5-day [Kamakhya with Meghalaya Tour Package from Bangalore](/package/kamakhya-with-meghalaya-tour-package-from-bangalore).',
     sections: [
       {
         heading: '1. Spiritual Significance of Maa Kamakhya Temple on Nilachal Hill',
@@ -168,5 +168,5 @@ export const kamakhyaTempleTourPackageFromBangalorePost: BlogPost = {
     'Temple Tour from Bangalore'
   ],
   featured: true,
-  relatedPackageId: 'kamakhya-meghalaya'
+  relatedPackageId: 'kamakhya'
 };
