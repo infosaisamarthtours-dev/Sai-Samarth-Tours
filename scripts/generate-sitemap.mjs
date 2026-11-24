@@ -95,6 +95,9 @@ const staticRoutes = [
 
 const destinationRoutes = [
   'shirdi',
+  'puri-jagannath',
+  'kamakhya',
+  'indore-ujjain',
   'kashi',
   'ayodhya',
   'jyotirlinga',

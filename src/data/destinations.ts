@@ -596,6 +596,117 @@ export const DESTINATIONS: Record<string, DestinationData> = {
         answer: 'Direct flights from Bangalore (BLR) to Male (MLE) take only 2 hours, making it one of the quickest overseas island escapes.'
       }
     ]
+  },
+
+  'puri-jagannath': {
+    id: 'puri-jagannath',
+    name: 'Puri Jagannath',
+    category: 'pilgrimage',
+    seoTitle: 'Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours',
+    seoDescription: 'All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC beach hotels.',
+    heroImage: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
+    tagline: 'The Sacred Land of Lord Jagannath, Nilachala Dham & Konark Sun Temple',
+    packageIds: ['puri-jagannath'],
+    highlights: [
+      'Return flights from Bangalore (BLR) to Bhubaneswar (BBI)',
+      'Special Darshan guidance at Sri Jagannath Temple & Anandabazar Mahaprasad',
+      'Visit UNESCO World Heritage Konark Sun Temple & Chandrabhaga Beach',
+      'Scenic Chilika Lake dolphin cruise at Satapada & sea mouth',
+      'Verified 3-Star AC beachfront hotel stays and 100% pure vegetarian dining'
+    ],
+    overview: 'Puri is one of the four supreme Char Dham pilgrimage destinations in Hinduism. Located along the Bay of Bengal in Odisha, Sri Jagannath Dham attracts millions of devotees seeking the blessings of the Lord of the Universe, Lord Balabhadra, and Goddess Subhadra. Sai Samarth Tours organizes all-inclusive 3-Day flight tour packages from Bangalore departing Kempegowda Airport, featuring dedicated airport transfers, beachfront AC hotels, and experienced local coordination to ensure seamless darshan.',
+    quickFacts: {
+      bestTime: 'October to March (Pleasant coastal breezes)',
+      flightDuration: '2 Hours (Direct flight from Kempegowda BLR to BBI)',
+      idealDays: '2 Nights / 3 Days or 3 Nights / 4 Days',
+      meals: '100% Pure Vegetarian (Breakfast, Lunch & Dinner)',
+      airport: 'Biju Patnaik International Airport, Bhubaneswar (BBI)',
+      tourManager: 'Accompanied by dedicated Sai Samarth tour coordinator'
+    },
+    faqs: [
+      {
+        question: 'How is Puri Jagannath Temple Darshan organized for senior citizens?',
+        answer: 'Our experienced local coordinators escort pilgrims through dedicated temple gates and provide personalized assistance to minimize walking and avoid crowded lines.'
+      },
+      {
+        question: 'Are Konark Sun Temple and Chilika Lake included in this Puri tour?',
+        answer: 'Yes! All our Puri flight packages from Bangalore include private AC vehicle transfers to the 13th-century Konark Sun Temple, Chandrabhaga Beach, and a boat ride at Chilika Lake.'
+      }
+    ]
+  },
+
+  kamakhya: {
+    id: 'kamakhya',
+    name: 'Kamakhya & Meghalaya',
+    category: 'pilgrimage',
+    seoTitle: 'Kamakhya Tour Package from Bangalore | Meghalaya & Shillong Yatra | Sai Samarth Tours',
+    seoDescription: 'Book Kamakhya Temple and Meghalaya tour packages from Bangalore with flights. VIP Maa Kamakhya Darshan, Shillong, Cherrapunji waterfalls, Dawki Umngot river & 3-star stays.',
+    heroImage: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp',
+    tagline: 'The Supreme Shakti Peeth at Nilachal Hill & The Abode of Clouds in Meghalaya',
+    packageIds: ['kamakhya', 'kamakhya-meghalaya'],
+    highlights: [
+      'Return flights from Bangalore (BLR) to Guwahati (GAU)',
+      'Pre-arranged VIP Darshan passes for Maa Kamakhya Temple sanctum entry',
+      'Brahmaputra sunset boat cruise & Umananda Peacock Island ferry',
+      'Scenic Meghalaya tour covering Shillong, Cherrapunji Nohkalikai Falls & Dawki river',
+      'Verified 3-Star accommodations with pure vegetarian dining'
+    ],
+    overview: 'Perched atop Nilachal Hill in Guwahati, Assam, the revered Maa Kamakhya Devalaya is the most sacred of the 51 Shakti Peethas. Paired with the mist-cloaked hills, cascading waterfalls, and living root bridges of Meghalaya, Sai Samarth Tours delivers an unforgettable spiritual and nature pilgrimage from Bangalore with direct flights and seasoned tour coordination.',
+    quickFacts: {
+      bestTime: 'September to May (Pleasant weather & clear mountain views)',
+      flightDuration: '2 Hours 55 Minutes (Direct flight BLR to GAU)',
+      idealDays: '3 Nights / 4 Days or 4 Nights / 5 Days',
+      meals: '100% Pure Vegetarian (Breakfast, Lunch & Dinner)',
+      airport: 'Lokpriya Gopinath Bordoloi International Airport, Guwahati (GAU)',
+      tourManager: 'Dedicated tour manager throughout the Northeast journey'
+    },
+    faqs: [
+      {
+        question: 'How do you arrange VIP Darshan at Kamakhya Temple?',
+        answer: 'We coordinate VIP protocol passes with the temple authorities beforehand, allowing our travelers to complete darshan smoothly without waiting in 6-8 hour general lines.'
+      },
+      {
+        question: 'What are the main places covered in the Kamakhya with Meghalaya tour?',
+        answer: 'Our package covers Guwahati (Maa Kamakhya, Umananda, Navagraha), Shillong (Police Bazaar, Elephant Falls, Umiam Lake), Cherrapunji (Nohkalikai Falls, Mawsmai Cave), and Dawki crystal river.'
+      }
+    ]
+  },
+
+  'indore-ujjain': {
+    id: 'indore-ujjain',
+    name: 'Indore Ujjain & Omkareshwar',
+    category: 'pilgrimage',
+    seoTitle: 'Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours',
+    seoDescription: 'All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3-star AC hotels.',
+    heroImage: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp',
+    tagline: 'Two Sacred Jyotirlingas in One Divine Journey: Mahakal & Omkareshwar',
+    packageIds: ['indore-ujjain'],
+    highlights: [
+      'Direct return flights from Bangalore (BLR) to Indore (IDR)',
+      'Assistance with 4:00 AM Mahakaleshwar Bhasma Aarti booking & Jalabhishek',
+      'Walk the magnificent 900-metre Mahakal Lok Corridor in Ujjain',
+      'Narmada River boat cruise to Omkareshwar & Mamleshwar Jyotirlingas',
+      'Explore Indore heritage: Rajwada Palace, 56 Dukan & Sarafa culinary night walk'
+    ],
+    overview: 'Madhya Pradesh is blessed with two of the twelve sacred Jyotirlingas: Shri Mahakaleshwar in Ujjain (Dakshinabhimukhi) and Shri Omkareshwar on the holy Narmada River. Sai Samarth Tours offers comprehensive flight packages from Bangalore departing Kempegowda Airport, ensuring confirmed Bhasma Aarti guidance, comfortable 3-star AC hotels, and pure vegetarian food.',
+    quickFacts: {
+      bestTime: 'October to March (Cool, pleasant weather)',
+      flightDuration: '1 Hour 50 Minutes (Direct non-stop from BLR to IDR)',
+      idealDays: '2 Nights / 3 Days or 3 Nights / 4 Days',
+      meals: '100% Pure Vegetarian (Breakfast, Lunch & Dinner)',
+      airport: 'Devi Ahilyabai Holkar International Airport, Indore (IDR)',
+      tourManager: 'Accompanied by experienced tour coordinator'
+    },
+    faqs: [
+      {
+        question: 'Can you help us attend the 4:00 AM Bhasma Aarti at Mahakaleshwar?',
+        answer: 'Yes! Our operations team guides you through the official online booking steps and offline quota assistance, advising on strict mandatory dress codes (unstitched Dhoti for men, Saree for women).'
+      },
+      {
+        question: 'Are both Mahakaleshwar and Omkareshwar Jyotirlingas covered?',
+        answer: 'Yes, both Jyotirlingas are seamlessly covered in our 3-Day and 4-Day flight itineraries from Bangalore with private sanitized AC vehicle transit.'
+      }
+    ]
   }
 };
 

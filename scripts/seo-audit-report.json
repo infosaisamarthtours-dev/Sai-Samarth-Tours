@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalHtmlFiles": 295,
-    "indexableRoutes": 209,
+    "totalHtmlFiles": 301,
+    "indexableRoutes": 215,
     "redirectRoutes": 86,
     "missingTitles": 0,
     "missingCanonicals": 0,
@@ -1251,6 +1251,38 @@
       ]
     },
     {
+      "route": "/destinations/indore-ujjain",
+      "title": "Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours",
+      "description": "All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3",
+      "canonical": "https://saisamarthtours.com/destinations/indore-ujjain",
+      "h1": "Indore Ujjain & Omkareshwar Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/indore-ujjain",
+      "title": "Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours",
+      "description": "All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3",
+      "canonical": "https://saisamarthtours.com/destinations/indore-ujjain",
+      "h1": "Indore Ujjain & Omkareshwar Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "route": "/destinations/jyotirlinga",
       "title": "Jyotirlinga Tour Packages from Bangalore | 2, 3 & 5 Jyotirlinga Yatras | Sai Samarth Tours",
       "description": "Sacred Jyotirlinga tour packages from Bangalore with flights. Visit Trimbakeshwar, Bhimashankar, Grishneshwar, Mahakaleshwar, Omkareshwar, Somnath, Baidyan",
@@ -1272,6 +1304,38 @@
       "description": "Sacred Jyotirlinga tour packages from Bangalore with flights. Visit Trimbakeshwar, Bhimashankar, Grishneshwar, Mahakaleshwar, Omkareshwar, Somnath, Baidyan",
       "canonical": "https://saisamarthtours.com/destinations/jyotirlinga",
       "h1": "Jyotirlinga Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/kamakhya",
+      "title": "Kamakhya Tour Package from Bangalore | Meghalaya & Shillong Yatra | Sai Samarth Tours",
+      "description": "Book Kamakhya Temple and Meghalaya tour packages from Bangalore with flights. VIP Maa Kamakhya Darshan, Shillong, Cherrapunji waterfalls, Dawki Umngot rive",
+      "canonical": "https://saisamarthtours.com/destinations/kamakhya",
+      "h1": "Kamakhya & Meghalaya Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/kamakhya",
+      "title": "Kamakhya Tour Package from Bangalore | Meghalaya & Shillong Yatra | Sai Samarth Tours",
+      "description": "Book Kamakhya Temple and Meghalaya tour packages from Bangalore with flights. VIP Maa Kamakhya Darshan, Shillong, Cherrapunji waterfalls, Dawki Umngot rive",
+      "canonical": "https://saisamarthtours.com/destinations/kamakhya",
+      "h1": "Kamakhya & Meghalaya Tour Packages from Bangalore",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -1464,6 +1528,38 @@
       "description": "Direct flight Maldives holiday packages from Bangalore. Stay in luxury overwater villas, private speedboat transfers, all-inclusive dining & coral reef exc",
       "canonical": "https://saisamarthtours.com/destinations/maldives",
       "h1": "Maldives Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/puri-jagannath",
+      "title": "Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours",
+      "description": "All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC",
+      "canonical": "https://saisamarthtours.com/destinations/puri-jagannath",
+      "h1": "Puri Jagannath Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/puri-jagannath",
+      "title": "Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours",
+      "description": "All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC",
+      "canonical": "https://saisamarthtours.com/destinations/puri-jagannath",
+      "h1": "Puri Jagannath Tour Packages from Bangalore",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -1786,8 +1882,8 @@
     },
     {
       "route": "/",
-      "title": "Tour Packages from Bangalore | Sai Samarth Tours",
-      "description": "Book top tour packages from Bangalore with Sai Samarth Tours. Shirdi, Kashi, Kashmir, Kerala and international yatras with flights and 3-star hotels.",
+      "title": "Sai Samarth Tours: Tour Packages from Bangalore | Shirdi, Puri Jagannath, Kamakhya, Indore Ujjain",
+      "description": "Book top tour packages from Bangalore with Sai Samarth Tours. Direct flights for Shirdi VIP Darshan, Puri Jagannath Konark, Kamakhya Meghalaya, Indore Ujjain Mahakaleshwar, Kashi & 3-star AC hotels.",
       "canonical": "https://saisamarthtours.com/",
       "h1": "Tour Packages from Bangalore – Pilgrimage & Holiday Yatras",
       "h1Count": 1,

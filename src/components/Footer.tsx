@@ -262,12 +262,42 @@ export function Footer() {
                 </li>
                 <li>
                   <Link to="/destinations/shirdi" className="hover:text-[#F59E0B] transition-colors">
-                    Shirdi Flight Package from Bangalore
+                    Shirdi Flight Package & VIP Darshan
                   </Link>
                 </li>
                 <li>
-                  <Link to="/package/shirdi-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
-                    Shirdi VIP Darshan Package from Bangalore
+                  <Link to="/package/puri-jagannath-konark-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Puri Jagannath Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/puri-jagannath" className="hover:text-[#F59E0B] transition-colors">
+                    Puri Jagannath & Konark Yatra from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Kamakhya with Meghalaya Tour Package
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/kamakhya-temple-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Kamakhya Temple Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/kamakhya" className="hover:text-[#F59E0B] transition-colors">
+                    Kamakhya & Meghalaya Yatra from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/package/indore-ujjain-omkareshwar-tour-package-from-bangalore" className="hover:text-[#F59E0B] transition-colors">
+                    Indore Ujjain Tour Package from Bangalore
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/destinations/indore-ujjain" className="hover:text-[#F59E0B] transition-colors">
+                    Indore Ujjain & Omkareshwar Jyotirlinga Yatra
                   </Link>
                 </li>
                 <li>

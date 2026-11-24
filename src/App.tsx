@@ -152,6 +152,10 @@ export function App() {
 
             {/* Direct Top-Level Keyword Destination Shortcuts */}
             <Route path="/shirdi-tour-package-from-bangalore" element={<Navigate to="/package/shirdi-tour-package-from-bangalore" replace />} />
+            <Route path="/puri-jagannath-tour-package-from-bangalore" element={<Navigate to="/package/puri-jagannath-konark-tour-package-from-bangalore" replace />} />
+            <Route path="/kamakhya-tour-package-from-bangalore" element={<Navigate to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" replace />} />
+            <Route path="/kamakhya-with-meghalaya-tour-package-from-bangalore" element={<Navigate to="/package/kamakhya-with-meghalaya-tour-package-from-bangalore" replace />} />
+            <Route path="/indore-ujjain-tour-package-from-bangalore" element={<Navigate to="/package/indore-ujjain-omkareshwar-tour-package-from-bangalore" replace />} />
             <Route path="/kashi-tour-package-from-bangalore" element={<Navigate to="/destinations/kashi" replace />} />
             <Route path="/ayodhya-tour-package-from-bangalore" element={<Navigate to="/destinations/ayodhya" replace />} />
             <Route path="/kashmir-tour-package-from-bangalore" element={<Navigate to="/package/kashmir-tour-package-from-bangalore" replace />} />

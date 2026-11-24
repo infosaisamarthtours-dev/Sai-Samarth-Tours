@@ -110,6 +110,9 @@ function renderSharedFooter() {
           <h3 style="font-size:1.05rem;font-weight:800;margin-top:0;margin-bottom:12px;color:#EA580C;">Popular Destinations</h3>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
             <li><a href="/destinations/shirdi" style="color:#d1d5db;text-decoration:none;">Shirdi Tour Packages</a></li>
+            <li><a href="/destinations/puri-jagannath" style="color:#d1d5db;text-decoration:none;">Puri Jagannath Packages</a></li>
+            <li><a href="/destinations/kamakhya" style="color:#d1d5db;text-decoration:none;">Kamakhya Meghalaya Packages</a></li>
+            <li><a href="/destinations/indore-ujjain" style="color:#d1d5db;text-decoration:none;">Indore Ujjain Packages</a></li>
             <li><a href="/destinations/kashi" style="color:#d1d5db;text-decoration:none;">Kashi Ayodhya Packages</a></li>
             <li><a href="/destinations/jyotirlinga" style="color:#d1d5db;text-decoration:none;">Jyotirlinga Tour Packages</a></li>
             <li><a href="/destinations/chardham" style="color:#d1d5db;text-decoration:none;">Char Dham Yatra Packages</a></li>
@@ -369,6 +372,27 @@ const destinations = [
     title: 'Shirdi Tour Packages from Bangalore | VIP Darshan Flights | Sai Samarth Tours',
     desc: 'Book direct flight Shirdi tour packages from Bangalore. Includes VIP Darshan at Sai Baba Samadhi Mandir, Kakad Aarti, 3-star AC hotels, pure veg meals, and senior citizen assistance.',
     image: '/shirdi-tour-hero-banner-desktop.webp'
+  },
+  {
+    slug: 'puri-jagannath',
+    name: 'Puri Jagannath',
+    title: 'Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours',
+    desc: 'All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC beach hotels.',
+    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp'
+  },
+  {
+    slug: 'kamakhya',
+    name: 'Kamakhya & Meghalaya',
+    title: 'Kamakhya Tour Package from Bangalore | Meghalaya & Shillong Yatra | Sai Samarth Tours',
+    desc: 'Book Kamakhya Temple and Meghalaya tour packages from Bangalore with flights. VIP Maa Kamakhya Darshan, Shillong, Cherrapunji waterfalls, Dawki Umngot river & 3-star stays.',
+    image: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp'
+  },
+  {
+    slug: 'indore-ujjain',
+    name: 'Indore Ujjain & Omkareshwar',
+    title: 'Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours',
+    desc: 'All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3-star AC hotels.',
+    image: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp'
   },
   {
     slug: 'kashi',
