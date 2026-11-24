@@ -34,6 +34,7 @@ export function PilgrimagePackagesPage() {
         description="Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes flights, VIP darshan & 3-star AC hotels."
         canonical="https://saisamarthtours.com/pilgrimage-tour-packages"
         ogImage="/pilgrimage-packages-category-card.webp"
+        preloadImage={destinations[0]?.image}
       />
       
       {/* Hero Banner */}
@@ -63,7 +64,7 @@ export function PilgrimagePackagesPage() {
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((dest) => (
+          {destinations.map((dest, idx) => (
             <Link 
               to={`/package/${dest.id}`} 
               key={dest.id}
@@ -77,7 +78,8 @@ export function PilgrimagePackagesPage() {
                     alt={`${dest.title} tour package from Bangalore`}
                     width={450}
                     height={280}
-                    loading="lazy"
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "low"}
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -88,8 +90,9 @@ export function PilgrimagePackagesPage() {
                     alt={`${dest.title} tour package from Bangalore`} 
                     width={450}
                     height={280}
-                    loading="lazy"
-                    decoding="async"
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "low"}
+                    decoding={idx === 0 ? "sync" : "async"}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 )}

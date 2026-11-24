@@ -217,6 +217,13 @@ function generateHtml({ title, description, url, image, type = 'website', bodyCo
   html = html.replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${description}" />`);
   html = html.replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${absoluteImage}" />`);
 
+  // Replace Homepage LCP Preload with Page-Specific LCP Image Preload for Core Web Vitals
+  const isHomePage = url === '/' || url === 'https://saisamarthtours.com/' || url === 'https://saisamarthtours.com';
+  if (!isHomePage && image) {
+    const pagePreloadTag = `<!-- Priority Preload for Page LCP Image -->\n    <link rel="preload" as="image" href="${absoluteImage}" fetchpriority="high" />`;
+    html = html.replace(/<!-- Priority Preload for LCP Hero Banner -->[\s\S]*?<link rel="preload" as="image"[^>]*shirdi-tour-hero-banner-mobile\.webp[^>]*\/>/i, pagePreloadTag);
+  }
+
   // Inject page-specific JSON-LD into head before </head>
   if (jsonLd) {
     const jsonLdString = `    <script type="application/ld+json" id="dynamic-page-jsonld">\n${JSON.stringify(jsonLd, null, 2)}\n    </script>\n  </head>`;

@@ -14,6 +14,7 @@ export function DomesticPackagesPage() {
         description="Handcrafted India holiday packages from Bangalore: Kashmir, Kerala backwaters, Leh Ladakh, Rajasthan, Himachal Pradesh & Andaman. Includes flights, deluxe hotels & customized sightseeing."
         canonical="https://saisamarthtours.com/domestic-tour-packages"
         ogImage="/domestic-packages-category-card.webp"
+        preloadImage={DOMESTIC_PACKAGES[0]?.image}
       />
       
       {/* Hero Banner */}
@@ -43,7 +44,7 @@ export function DomesticPackagesPage() {
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {DOMESTIC_PACKAGES.map((dest) => (
+          {DOMESTIC_PACKAGES.map((dest, idx) => (
             <Link 
               to={`/package/${dest.id}`} 
               key={dest.id}
@@ -56,8 +57,9 @@ export function DomesticPackagesPage() {
                   alt={`${dest.title} holiday tour package from Bangalore`} 
                   width={450}
                   height={280}
-                  loading="lazy"
-                  decoding="async"
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority={idx === 0 ? "high" : "low"}
+                  decoding={idx === 0 ? "sync" : "async"}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>

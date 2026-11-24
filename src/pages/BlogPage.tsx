@@ -94,6 +94,7 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
         description="Expert spiritual travel advice, Shirdi VIP darshan passes guide, Jyotirlinga circuit tips, and domestic & international holiday guides from Bangalore."
         canonical="https://saisamarthtours.com/blog"
         ogImage="/shirdi-tour-hero-banner-desktop.webp"
+        preloadImage={featuredPost?.image}
       />
       {/* ================= HERO & SEARCH BANNER ================= */}
       <div className="relative bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-6 sm:pt-14 lg:pt-20 pb-8 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-xl">
@@ -199,7 +200,8 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
                   width={700}
                   height={400}
                   loading="eager"
-                  decoding="async"
+                  fetchPriority="high"
+                  decoding="sync"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent lg:hidden" />

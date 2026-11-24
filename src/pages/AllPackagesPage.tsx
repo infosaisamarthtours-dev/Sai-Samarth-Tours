@@ -48,6 +48,7 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
         canonical="https://saisamarthtours.com/tour-packages"
         ogImage="/shirdi-tour-hero-banner-desktop.webp"
         ogType="website"
+        preloadImage={filteredPackages[0]?.image}
       />
 
       {/* Hero Banner */}
@@ -149,7 +150,7 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPackages.map((pkg) => (
+            {filteredPackages.map((pkg, idx) => (
               <div
                 key={pkg.id}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
@@ -162,8 +163,9 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
                       alt={`${pkg.title} from Bangalore - Sai Samarth Tours`}
                       width={400}
                       height={250}
-                      loading="lazy"
-                      decoding="async"
+                      loading={idx === 0 ? "eager" : "lazy"}
+                      fetchPriority={idx === 0 ? "high" : "low"}
+                      decoding={idx === 0 ? "sync" : "async"}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-3 left-3 bg-[#114088]/90 text-white text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1">

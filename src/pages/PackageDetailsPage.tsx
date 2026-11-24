@@ -324,6 +324,7 @@ export function PackageDetailsPage() {
         ogImage={pkg.image}
         ogType="product"
         jsonLd={packageJsonLd}
+        preloadImage={pkg.image}
       />
 
       {/* Premium Split Hero Section */}

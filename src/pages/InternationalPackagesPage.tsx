@@ -14,6 +14,7 @@ export function InternationalPackagesPage() {
         description="Premium international holiday packages from Bangalore: Singapore, Malaysia, Thailand, Bali, Dubai, Sri Lanka, Nepal & Europe. Complete visa assistance, flights, 4-star hotels & meals."
         canonical="https://saisamarthtours.com/international-tour-packages"
         ogImage="/international-packages-category-card.webp"
+        preloadImage={INTERNATIONAL_PACKAGES[0]?.image}
       />
       
       {/* Hero Banner */}
@@ -43,7 +44,7 @@ export function InternationalPackagesPage() {
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {INTERNATIONAL_PACKAGES.map((dest) => (
+          {INTERNATIONAL_PACKAGES.map((dest, idx) => (
             <Link 
               to={`/package/${dest.id}`} 
               key={dest.id}
@@ -56,8 +57,9 @@ export function InternationalPackagesPage() {
                   alt={`${dest.title} international holiday package from Bangalore`} 
                   width={450}
                   height={280}
-                  loading="lazy"
-                  decoding="async"
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority={idx === 0 ? "high" : "low"}
+                  decoding={idx === 0 ? "sync" : "async"}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 

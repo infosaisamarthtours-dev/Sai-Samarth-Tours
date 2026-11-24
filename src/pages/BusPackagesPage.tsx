@@ -329,6 +329,7 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
         canonical="https://saisamarthtours.com/bus-packages"
         ogImage="/shirdi-flight-tour-package-from-bangalore-1.webp"
         ogType="website"
+        preloadImage={activePackage.image}
       />
 
       {/* Hero Section */}
@@ -454,6 +455,11 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
                   <img
                     src={activePackage.image}
                     alt={activePackage.title}
+                    width={600}
+                    height={400}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20"></div>

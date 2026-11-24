@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalHtmlFiles": 291,
-    "indexableRoutes": 205,
+    "totalHtmlFiles": 295,
+    "indexableRoutes": 209,
     "redirectRoutes": 86,
     "missingTitles": 0,
     "missingCanonicals": 0,
@@ -253,10 +253,10 @@
     },
     {
       "route": "/blog/kamakhya-temple-guwahati-tour-package-from-bangalore",
-      "title": "Kamakhya Temple with Meghalaya Tour Package from Bangalore | Flight & VIP Darshan",
-      "description": "Book Maa Kamakhya with Meghalaya Tour Package from Bangalore with flights, VIP Darshan, Cherrapunji waterfalls, Dawki river & 3-star AC hotel stay.",
+      "title": "Kamakhya Temple Tour from Bangalore: 2D/1N Flight & VIP Darshan (2026)",
+      "description": "Book 2-Day Kamakhya Temple tour package from Bangalore with direct flights, VIP Darshan, Umananda Peacock Island, 3-star AC hotel & pure veg meals.",
       "canonical": "https://saisamarthtours.com/blog/kamakhya-temple-guwahati-tour-package-from-bangalore",
-      "h1": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Sh",
+      "h1": "Kamakhya Temple Guwahati Tour Package from Bangalore: Direct",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -269,10 +269,10 @@
     },
     {
       "route": "/blog/kamakhya-temple-guwahati-tour-package-from-bangalore",
-      "title": "Kamakhya Temple with Meghalaya Tour Package from Bangalore | Flight & VIP Darshan",
-      "description": "Book Maa Kamakhya with Meghalaya Tour Package from Bangalore with flights, VIP Darshan, Cherrapunji waterfalls, Dawki river & 3-star AC hotel stay.",
+      "title": "Kamakhya Temple Tour from Bangalore: 2D/1N Flight & VIP Darshan (2026)",
+      "description": "Book 2-Day Kamakhya Temple tour package from Bangalore with direct flights, VIP Darshan, Umananda Peacock Island, 3-star AC hotel & pure veg meals.",
       "canonical": "https://saisamarthtours.com/blog/kamakhya-temple-guwahati-tour-package-from-bangalore",
-      "h1": "Maa Kamakhya with Meghalaya Tour Package from Bangalore – Sh",
+      "h1": "Kamakhya Temple Guwahati Tour Package from Bangalore: Direct",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -305,6 +305,38 @@
       "description": "Complete 2026 travel guide for Maa Kamakhya Temple in Guwahati, Assam: VIP darshan passes, Garbhagriha spring water rituals, best season, Ambubachi Mela, a",
       "canonical": "https://saisamarthtours.com/blog/kamakhya-temple-guwahati-travel-guide-darshan-tips",
       "h1": "Kamakhya Temple Guwahati Travel Guide: Darshan, Best Time to",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kamakhya-with-meghalaya-tour-package-from-bangalore",
+      "title": "Kamakhya Meghalaya Tour Package from Bangalore (2026 Guide)",
+      "description": "Book 5D/4N Kamakhya Meghalaya tour package from Bangalore with flights. Guwahati, Shillong, Cherrapunji, Dawki, VIP Darshan, 3-star AC hotel & all meals.",
+      "canonical": "https://saisamarthtours.com/blog/kamakhya-with-meghalaya-tour-package-from-bangalore",
+      "h1": "Kamakhya Meghalaya Tour Package from Bangalore: Complete 5-D",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/kamakhya-with-meghalaya-tour-package-from-bangalore",
+      "title": "Kamakhya Meghalaya Tour Package from Bangalore (2026 Guide)",
+      "description": "Book 5D/4N Kamakhya Meghalaya tour package from Bangalore with flights. Guwahati, Shillong, Cherrapunji, Dawki, VIP Darshan, 3-star AC hotel & all meals.",
+      "canonical": "https://saisamarthtours.com/blog/kamakhya-with-meghalaya-tour-package-from-bangalore",
+      "h1": "Kamakhya Meghalaya Tour Package from Bangalore: Complete 5-D",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -625,6 +657,38 @@
       "description": "Complete 2026 Odisha pilgrimage travel guide covering Puri Jagannath Temple, UNESCO Konark Sun Temple, Bhubaneswar Lingaraj, and Dhauli. Flights from Banga",
       "canonical": "https://saisamarthtours.com/blog/puri-jagannath-konark-sun-temple-tour-complete-odisha-travel-guide",
       "h1": "Puri Jagannath & Konark Sun Temple Tour: Complete Odisha Tra",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/puri-jagannath-tour-package-from-bangalore",
+      "title": "Puri Jagannath Tour Package from Bangalore: 3-Day Flight Guide (2026)",
+      "description": "Book 3-Day Puri Jagannath tour package from Bangalore by flight. Complete Puri temple darshan, Konark Sun Temple, Bhubaneswar, 3-star AC hotel & all meals.",
+      "canonical": "https://saisamarthtours.com/blog/puri-jagannath-tour-package-from-bangalore",
+      "h1": "Puri Jagannath Tour Package from Bangalore: 3-Day Flight, Da",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/puri-jagannath-tour-package-from-bangalore",
+      "title": "Puri Jagannath Tour Package from Bangalore: 3-Day Flight Guide (2026)",
+      "description": "Book 3-Day Puri Jagannath tour package from Bangalore by flight. Complete Puri temple darshan, Konark Sun Temple, Bhubaneswar, 3-star AC hotel & all meals.",
+      "canonical": "https://saisamarthtours.com/blog/puri-jagannath-tour-package-from-bangalore",
+      "h1": "Puri Jagannath Tour Package from Bangalore: 3-Day Flight, Da",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",

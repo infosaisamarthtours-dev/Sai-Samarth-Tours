@@ -9,6 +9,7 @@ export interface SEOHeadProps {
   jsonLd?: object | object[];
   noIndex?: boolean;
   keywords?: string;
+  preloadImage?: string;
 }
 
 export function SEOHead({
@@ -19,7 +20,8 @@ export function SEOHead({
   ogType = 'website',
   jsonLd,
   noIndex = false,
-  keywords
+  keywords,
+  preloadImage
 }: SEOHeadProps) {
   useEffect(() => {
     // 1. Document Title
@@ -84,7 +86,25 @@ export function SEOHead({
     setMeta('name', 'twitter:image', absoluteImage);
     setMeta('name', 'twitter:image:alt', title);
 
-    // 6. Structured Data (JSON-LD)
+    // 6. LCP Image Priority Preload (for Core Web Vitals optimization)
+    const lcpImage = preloadImage || (ogImage && !ogImage.includes('shirdi-tour-hero-banner-desktop.webp') ? absoluteImage : null);
+    const lcpPreloadId = 'dynamic-lcp-preload';
+    let lcpLink = document.getElementById(lcpPreloadId) as HTMLLinkElement | null;
+    if (lcpImage) {
+      if (!lcpLink) {
+        lcpLink = document.createElement('link');
+        lcpLink.id = lcpPreloadId;
+        lcpLink.rel = 'preload';
+        lcpLink.as = 'image';
+        lcpLink.setAttribute('fetchpriority', 'high');
+        document.head.appendChild(lcpLink);
+      }
+      lcpLink.href = lcpImage;
+    } else if (lcpLink) {
+      lcpLink.remove();
+    }
+
+    // 7. Structured Data (JSON-LD)
     const jsonLdScriptId = 'dynamic-page-jsonld';
     let scriptTag = document.getElementById(jsonLdScriptId) as HTMLScriptElement | null;
     if (jsonLd) {
@@ -105,7 +125,7 @@ export function SEOHead({
         setMeta('name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
       }
     };
-  }, [title, description, canonical, ogImage, ogType, jsonLd, noIndex, keywords]);
+  }, [title, description, canonical, ogImage, ogType, jsonLd, noIndex, keywords, preloadImage]);
 
   return null;
 }

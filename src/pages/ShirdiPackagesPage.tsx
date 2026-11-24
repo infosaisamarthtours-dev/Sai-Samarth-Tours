@@ -28,6 +28,7 @@ export function ShirdiPackagesPage() {
         description="Book direct flight Shirdi tour packages from Bangalore with Sai Samarth Tours. Includes VIP darshan passes, Shani Shingnapur, Trimbakeshwar, Bhimashankar Jyotirlingas, and 3-star AC accommodation."
         canonical="https://saisamarthtours.com/shirdi-tour-packages"
         ogImage="/shirdi-packages-category-card.webp"
+        preloadImage={destinations[0]?.image}
       />
       
       {/* Hero Banner */}
@@ -57,7 +58,7 @@ export function ShirdiPackagesPage() {
       {/* Grid Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((dest) => (
+          {destinations.map((dest, idx) => (
             <Link 
               to={`/package/${dest.id}`} 
               key={dest.id}
@@ -71,7 +72,8 @@ export function ShirdiPackagesPage() {
                     alt={`${dest.title} tour package from Bangalore`}
                     width={450}
                     height={280}
-                    loading="lazy"
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "low"}
                     interval={3000}
                     dotsPosition="bottom-right"
                     className="w-full h-full absolute inset-0"
@@ -82,8 +84,9 @@ export function ShirdiPackagesPage() {
                     alt={`${dest.title} tour package from Bangalore`} 
                     width={450}
                     height={280}
-                    loading="lazy"
-                    decoding="async"
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : "low"}
+                    decoding={idx === 0 ? "sync" : "async"}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 )}

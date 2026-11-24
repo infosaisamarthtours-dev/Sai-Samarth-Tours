@@ -158,6 +158,7 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
         ogImage={post.image}
         ogType="article"
         jsonLd={blogJsonLd}
+        preloadImage={post.image}
       />
 
       {/* ================= EDITORIAL TOP HERO SECTION ================= */}
@@ -204,6 +205,9 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
                 alt={post.author.name}
                 width={40}
                 height={40}
+                loading="lazy"
+                fetchPriority="low"
+                decoding="async"
                 className="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-[#EA580C]/80 shadow-xs"
               />
               <div>
@@ -293,6 +297,8 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
                   width={900}
                   height={500}
                   loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
                   className="w-full h-full object-cover object-center"
                 />
               </div>
