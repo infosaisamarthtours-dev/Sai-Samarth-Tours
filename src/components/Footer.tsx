@@ -161,6 +161,8 @@ export function Footer() {
               {[
                 { label: 'About Us', to: '/about' },
                 { label: 'Blog', to: '/blog' },
+                { label: 'Travel Resources', to: '/travel-resources' },
+                { label: 'Our Partners', to: '/partners' },
                 { label: 'Contact Us', to: '/contact' },
                 { label: 'Bus Tour Packages', to: '/bus-packages' },
                 { label: 'Shirdi Packages', to: '/shirdi-packages' },

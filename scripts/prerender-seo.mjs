@@ -505,6 +505,41 @@ const destinations = [
     title: 'Maldives Tour Package from Bangalore | Luxury Water Villa Resorts | Sai Samarth Tours',
     desc: 'Direct flight Maldives holiday packages from Bangalore. Stay in luxury overwater villas, private speedboat transfers, all-inclusive dining & coral reef excursions.',
     image: '/maldives-tour-package-from-bangalore.webp'
+  },
+  {
+    slug: 'ujjain',
+    name: 'Ujjain',
+    title: 'Ujjain Tour Package from Bangalore | Mahakaleshwar Bhasma Aarti | Sai Samarth Tours',
+    desc: 'Book Ujjain Mahakaleshwar tour package from Bangalore with flights. Confirmed 4:00 AM Bhasma Aarti guidance, Mahakal Lok Corridor, Harsiddhi Mata, Kaal Bhairav & 3-star AC hotels.',
+    image: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp'
+  },
+  {
+    slug: 'omkareshwar',
+    name: 'Omkareshwar',
+    title: 'Omkareshwar Tour Package from Bangalore | Narmada River Yatra | Sai Samarth Tours',
+    desc: 'All-inclusive Omkareshwar Jyotirlinga tour package from Bangalore. Covers Omkareshwar Island, Mamleshwar Jyotirlinga, Narmada holy boat ride & 3-star AC hotels.',
+    image: '/places-to-visit-in-omkareshwar-jyotirlinga-temple-attractions-guide-hero.webp'
+  },
+  {
+    slug: 'puri',
+    name: 'Puri',
+    title: 'Puri Tour Package from Bangalore | Sri Jagannath Temple Darshan | Sai Samarth Tours',
+    desc: 'Curated Puri tour packages from Bangalore with return flights to Bhubaneswar. Special Jagannath Temple Darshan, Golden Beach, Anandabazar Mahaprasad & 3-star AC beach hotels.',
+    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp'
+  },
+  {
+    slug: 'konark',
+    name: 'Konark',
+    title: 'Konark Tour Package from Bangalore | Sun Temple & Chandrabhaga | Sai Samarth Tours',
+    desc: 'All-inclusive Konark tour packages from Bangalore. Explore UNESCO World Heritage Konark Sun Temple chariot, Chandrabhaga Beach, Marine Drive & Puri Jagannath Darshan.',
+    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp'
+  },
+  {
+    slug: 'meghalaya',
+    name: 'Meghalaya',
+    title: 'Meghalaya Tour Package from Bangalore | Shillong, Cherrapunji & Dawki | Sai Samarth Tours',
+    desc: 'Scenic Meghalaya tour packages from Bangalore with flights. Explore Shillong, Cherrapunji Nohkalikai waterfalls, Dawki crystal Umngot river, Mawlynnong & Maa Kamakhya Temple.',
+    image: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp'
   }
 ];
 
@@ -783,6 +818,18 @@ const pages = [
     title: 'Privacy Policy | Sai Samarth Tours Bangalore',
     desc: 'Learn how Sai Samarth Tours protects your personal information, travel bookings, and privacy compliance.',
     image: '/shirdi-tour-hero-banner-desktop.webp'
+  },
+  {
+    path: 'travel-resources',
+    title: 'Travel Resources & Pilgrimage Guides | Sai Samarth Tours Bangalore',
+    desc: 'Comprehensive travel resources, temple darshan guides, senior citizen travel tips, and destination hubs for Bangalore travelers by Sai Samarth Tours.',
+    image: '/pilgrimage-tours-hero-banner-desktop.webp'
+  },
+  {
+    path: 'partners',
+    title: 'Official Business Partners & Airlines | Sai Samarth Tours Bangalore',
+    desc: 'Verified business partners, scheduled airlines, and hotel networks collaborating with Sai Samarth Tours to deliver seamless pilgrimage and holiday packages.',
+    image: '/sai-samarth-tours-logo.webp'
   }
 ];
 

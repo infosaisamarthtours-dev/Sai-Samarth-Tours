@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalHtmlFiles": 301,
-    "indexableRoutes": 215,
+    "totalHtmlFiles": 315,
+    "indexableRoutes": 229,
     "redirectRoutes": 86,
     "missingTitles": 0,
     "missingCanonicals": 0,
@@ -1443,6 +1443,38 @@
       ]
     },
     {
+      "route": "/destinations/konark",
+      "title": "Konark Tour Package from Bangalore | Sun Temple & Chandrabhaga | Sai Samarth Tours",
+      "description": "All-inclusive Konark tour packages from Bangalore. Explore UNESCO World Heritage Konark Sun Temple chariot, Chandrabhaga Beach, Marine Drive & Puri Jaganna",
+      "canonical": "https://saisamarthtours.com/destinations/konark",
+      "h1": "Konark Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/konark",
+      "title": "Konark Tour Package from Bangalore | Sun Temple & Chandrabhaga | Sai Samarth Tours",
+      "description": "All-inclusive Konark tour packages from Bangalore. Explore UNESCO World Heritage Konark Sun Temple chariot, Chandrabhaga Beach, Marine Drive & Puri Jaganna",
+      "canonical": "https://saisamarthtours.com/destinations/konark",
+      "h1": "Konark Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "route": "/destinations/ladakh",
       "title": "Ladakh Tour Package from Bangalore | Pangong Lake & Khardung La | Sai Samarth Tours",
       "description": "Breathtaking Leh Ladakh tour packages from Bangalore with flights. Explore Pangong Tso Lake, Nubra Valley, Khardung La pass & ancient Buddhist monasteries.",
@@ -1539,6 +1571,86 @@
       ]
     },
     {
+      "route": "/destinations/meghalaya",
+      "title": "Meghalaya Tour Package from Bangalore | Shillong, Cherrapunji & Dawki | Sai Samarth Tours",
+      "description": "Scenic Meghalaya tour packages from Bangalore with flights. Explore Shillong, Cherrapunji Nohkalikai waterfalls, Dawki crystal Umngot river, Mawlynnong & M",
+      "canonical": "https://saisamarthtours.com/destinations/meghalaya",
+      "h1": "Meghalaya Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/meghalaya",
+      "title": "Meghalaya Tour Package from Bangalore | Shillong, Cherrapunji & Dawki | Sai Samarth Tours",
+      "description": "Scenic Meghalaya tour packages from Bangalore with flights. Explore Shillong, Cherrapunji Nohkalikai waterfalls, Dawki crystal Umngot river, Mawlynnong & M",
+      "canonical": "https://saisamarthtours.com/destinations/meghalaya",
+      "h1": "Meghalaya Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/omkareshwar",
+      "title": "Omkareshwar Tour Package from Bangalore | Narmada River Yatra | Sai Samarth Tours",
+      "description": "All-inclusive Omkareshwar Jyotirlinga tour package from Bangalore. Covers Omkareshwar Island, Mamleshwar Jyotirlinga, Narmada holy boat ride & 3-star AC ho",
+      "canonical": "https://saisamarthtours.com/destinations/omkareshwar",
+      "h1": "Omkareshwar Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/omkareshwar",
+      "title": "Omkareshwar Tour Package from Bangalore | Narmada River Yatra | Sai Samarth Tours",
+      "description": "All-inclusive Omkareshwar Jyotirlinga tour package from Bangalore. Covers Omkareshwar Island, Mamleshwar Jyotirlinga, Narmada holy boat ride & 3-star AC ho",
+      "canonical": "https://saisamarthtours.com/destinations/omkareshwar",
+      "h1": "Omkareshwar Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/puri",
+      "title": "Puri Tour Package from Bangalore | Sri Jagannath Temple Darshan | Sai Samarth Tours",
+      "description": "Curated Puri tour packages from Bangalore with return flights to Bhubaneswar. Special Jagannath Temple Darshan, Golden Beach, Anandabazar Mahaprasad & 3-st",
+      "canonical": "https://saisamarthtours.com/destinations/puri",
+      "h1": "Puri Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "route": "/destinations/puri-jagannath",
       "title": "Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours",
       "description": "All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC",
@@ -1560,6 +1672,22 @@
       "description": "All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC",
       "canonical": "https://saisamarthtours.com/destinations/puri-jagannath",
       "h1": "Puri Jagannath Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/puri",
+      "title": "Puri Tour Package from Bangalore | Sri Jagannath Temple Darshan | Sai Samarth Tours",
+      "description": "Curated Puri tour packages from Bangalore with return flights to Bhubaneswar. Special Jagannath Temple Darshan, Golden Beach, Anandabazar Mahaprasad & 3-st",
+      "canonical": "https://saisamarthtours.com/destinations/puri",
+      "h1": "Puri Tour Packages from Bangalore",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -1720,6 +1848,38 @@
       "description": "Book 1-day or 2-day Tirupati tour package from Bangalore with confirmed ₹300 Special Entry VIP Darshan at Lord Venkateswara Swamy Temple Tirumala, Padmavat",
       "canonical": "https://saisamarthtours.com/destinations/tirupati",
       "h1": "Tirupati Balaji Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/ujjain",
+      "title": "Ujjain Tour Package from Bangalore | Mahakaleshwar Bhasma Aarti | Sai Samarth Tours",
+      "description": "Book Ujjain Mahakaleshwar tour package from Bangalore with flights. Confirmed 4:00 AM Bhasma Aarti guidance, Mahakal Lok Corridor, Harsiddhi Mata, Kaal Bha",
+      "canonical": "https://saisamarthtours.com/destinations/ujjain",
+      "h1": "Ujjain Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "TouristDestination",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/destinations/ujjain",
+      "title": "Ujjain Tour Package from Bangalore | Mahakaleshwar Bhasma Aarti | Sai Samarth Tours",
+      "description": "Book Ujjain Mahakaleshwar tour package from Bangalore with flights. Confirmed 4:00 AM Bhasma Aarti guidance, Mahakal Lok Corridor, Harsiddhi Mata, Kaal Bha",
+      "canonical": "https://saisamarthtours.com/destinations/ujjain",
+      "h1": "Ujjain Tour Packages from Bangalore",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",
@@ -3139,6 +3299,36 @@
       ]
     },
     {
+      "route": "/partners",
+      "title": "Official Business Partners & Airlines | Sai Samarth Tours Bangalore",
+      "description": "Verified business partners, scheduled airlines, and hotel networks collaborating with Sai Samarth Tours to deliver seamless pilgrimage and holiday packages",
+      "canonical": "https://saisamarthtours.com/partners",
+      "h1": "Official Business Partners & Airlines",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/partners",
+      "title": "Official Business Partners & Airlines | Sai Samarth Tours Bangalore",
+      "description": "Verified business partners, scheduled airlines, and hotel networks collaborating with Sai Samarth Tours to deliver seamless pilgrimage and holiday packages",
+      "canonical": "https://saisamarthtours.com/partners",
+      "h1": "Official Business Partners & Airlines",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
       "route": "/pilgrimage-tour-packages",
       "title": "Pilgrimage Tour Packages from Bangalore | Sai Samarth Tours",
       "description": "Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes fligh",
@@ -3399,6 +3589,36 @@
       "description": "Browse 30+ all-inclusive tour packages from Bangalore. Curated Shirdi flight yatras, Kashi Ayodhya, Jyotirlingas, Kashmir, Kerala, and international vacati",
       "canonical": "https://saisamarthtours.com/tour-packages",
       "h1": "Tour Packages from Bangalore",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/travel-resources",
+      "title": "Travel Resources & Pilgrimage Guides | Sai Samarth Tours Bangalore",
+      "description": "Comprehensive travel resources, temple darshan guides, senior citizen travel tips, and destination hubs for Bangalore travelers by Sai Samarth Tours.",
+      "canonical": "https://saisamarthtours.com/travel-resources",
+      "h1": "Travel Resources & Pilgrimage Guides",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/travel-resources",
+      "title": "Travel Resources & Pilgrimage Guides | Sai Samarth Tours Bangalore",
+      "description": "Comprehensive travel resources, temple darshan guides, senior citizen travel tips, and destination hubs for Bangalore travelers by Sai Samarth Tours.",
+      "canonical": "https://saisamarthtours.com/travel-resources",
+      "h1": "Travel Resources & Pilgrimage Guides",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",

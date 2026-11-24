@@ -21,6 +21,8 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage').then(m 
 const TermsOfUsePage = lazy(() => import('./pages/TermsOfUsePage').then(m => ({ default: m.TermsOfUsePage })));
 const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
 const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage').then(m => ({ default: m.BlogDetailPage })));
+const TravelResourcesPage = lazy(() => import('./pages/TravelResourcesPage').then(m => ({ default: m.TravelResourcesPage })));
+const PartnersPage = lazy(() => import('./pages/PartnersPage').then(m => ({ default: m.PartnersPage })));
 const AllPackagesPage = lazy(() => import('./pages/AllPackagesPage').then(m => ({ default: m.AllPackagesPage })));
 const DestinationPage = lazy(() => import('./pages/DestinationPage').then(m => ({ default: m.DestinationPage })));
 const SeniorCitizenPackagesPage = lazy(() => import('./pages/SeniorCitizenPackagesPage').then(m => ({ default: m.SeniorCitizenPackagesPage })));
@@ -182,6 +184,10 @@ export function App() {
 
             {/* Package Detail Pages (Resolves short IDs & -tour-package-from-bangalore slugs) */}
             <Route path="/package/:id" element={<PackageDetailsPage />} />
+
+            {/* Travel Resources & Partners */}
+            <Route path="/travel-resources" element={<TravelResourcesPage />} />
+            <Route path="/partners" element={<PartnersPage />} />
 
             {/* Policy & Info Pages */}
             <Route path="/faq" element={<FaqPage />} />

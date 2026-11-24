@@ -12,6 +12,12 @@ import { getWhatsAppUrl } from '../utils/whatsapp';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { renderRichText } from '../utils/richText';
+import { 
+  getRelatedPackagesForBlog, 
+  getCanonicalBlogUrl, 
+  getCanonicalPackageUrl 
+} from '../utils/internalLinking';
+import { InternalLinkHub } from '../components/InternalLinkHub';
 
 interface BlogDetailPageProps {
   onOpenEnquiry?: (packageTitle?: string) => void;
@@ -36,11 +42,20 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
     return BLOG_POSTS.find(p => p.id === id || p.slug === id);
   }, [id]);
 
-  // Find related tour package
-  const relatedPackage = useMemo(() => {
-    if (!post?.relatedPackageId) return null;
-    return ALL_PACKAGES.find(p => p.id === post.relatedPackageId) || null;
+  // Find related tour packages using intelligent contextual linking helper
+  const relatedPackages = useMemo(() => {
+    if (!post) return [];
+    return getRelatedPackagesForBlog(post, 3);
   }, [post]);
+
+  // Find primary featured tour package
+  const relatedPackage = useMemo(() => {
+    if (post?.relatedPackageId) {
+      const direct = ALL_PACKAGES.find(p => p.id === post.relatedPackageId);
+      if (direct) return direct;
+    }
+    return relatedPackages[0] || null;
+  }, [post, relatedPackages]);
 
   // Sidebar other blog posts
   const sidebarPosts = useMemo(() => {
@@ -505,7 +520,7 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
                       Book This Yatra
                     </button>
                     <Link
-                      to={`/package/${relatedPackage.id}`}
+                      to={getCanonicalPackageUrl(relatedPackage)}
                       className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm px-4 py-3 rounded-xl transition-colors text-center border border-white/20"
                     >
                       View Itinerary &rarr;
@@ -513,6 +528,19 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
                   </div>
                 </div>
               </section>
+            )}
+
+            {/* Contextual Related Tour Packages Hub */}
+            {relatedPackages.length > 0 && (
+              <div className="my-8">
+                <InternalLinkHub
+                  title="Recommended Tour Packages from Bangalore"
+                  subtitle="Complete flight, hotel, and VIP darshan yatra packages matching this travel guide"
+                  packages={relatedPackages}
+                  variant="cards"
+                  limit={3}
+                />
+              </div>
             )}
 
             {/* Conclusion Summary Box */}
@@ -630,10 +658,10 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
 
               <div className="space-y-4">
                 {sidebarPosts.map((item) => (
-                  <div
+                  <Link
                     key={item.id}
-                    onClick={() => navigate(`/blog/${item.slug}`)}
-                    className="flex gap-3 items-center group cursor-pointer"
+                    to={getCanonicalBlogUrl(item)}
+                    className="flex gap-3 items-center group"
                   >
                     <img
                       src={item.image}
@@ -650,7 +678,7 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
                         {item.title}
                       </h4>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

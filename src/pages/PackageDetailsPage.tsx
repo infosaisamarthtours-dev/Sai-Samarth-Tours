@@ -28,6 +28,12 @@ import {
 
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { BrochureModal } from '../components/BrochureModal';
+import { 
+  getRelatedBlogsForPackage, 
+  getCanonicalPackageUrl, 
+  getCanonicalBlogUrl 
+} from '../utils/internalLinking';
+import { InternalLinkHub } from '../components/InternalLinkHub';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { findPackageBySlugOrId, getPackageSlug } from '../utils/slugs';
@@ -247,11 +253,7 @@ export function PackageDetailsPage() {
 
   // Related travel guides & blogs for contextual internal links
   const relatedBlogs = useMemo(() => {
-    return BLOG_POSTS.filter(b => 
-      b.relatedPackageId === pkg.id || 
-      (b.relatedPackageId && pkg.id.includes(b.relatedPackageId)) ||
-      (b.tags && b.tags.some(t => pkg.title.toLowerCase().includes(t.toLowerCase()) || (pkg.destination && pkg.destination.toLowerCase().includes(t.toLowerCase()))))
-    ).slice(0, 3);
+    return getRelatedBlogsForPackage(pkg, 4);
   }, [pkg]);
 
   const effectiveRemarks = pkg.remarks || [
@@ -964,6 +966,19 @@ export function PackageDetailsPage() {
               </div>
             </div>
 
+            {/* Travel Guides & Yatra Insights Hub */}
+            {relatedBlogs.length > 0 && (
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8">
+                <InternalLinkHub
+                  title={`Travel Resources & Guides for ${pkg.destination || 'This Yatra'}`}
+                  subtitle="Detailed temple timings, rituals, senior citizen guidelines, and itinerary insights"
+                  blogs={relatedBlogs}
+                  variant="cards"
+                  limit={3}
+                />
+              </div>
+            )}
+
           </div>
 
           {/* Right Column - Sidebar */}
@@ -1025,10 +1040,10 @@ export function PackageDetailsPage() {
                     .filter(p => p.category === pkg.category && p.id !== pkg.id)
                     .slice(0, 4)
                     .map(relatedPkg => (
-                      <div 
+                      <Link 
                         key={relatedPkg.id} 
-                        onClick={() => navigate(`/package/${relatedPkg.id}`)}
-                        className="flex items-center gap-4 group cursor-pointer hover:bg-gray-50 p-2 -mx-2 rounded-xl transition-colors"
+                        to={getCanonicalPackageUrl(relatedPkg)}
+                        className="flex items-center gap-4 group hover:bg-gray-50 p-2 -mx-2 rounded-xl transition-colors"
                       >
                         <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0">
                           <img 
@@ -1047,7 +1062,7 @@ export function PackageDetailsPage() {
                           </h4>
                           <p className="text-xs font-bold text-[#F59E0B]">{relatedPkg.price}</p>
                         </div>
-                      </div>
+                      </Link>
                   ))}
                 </div>
               </div>
@@ -1063,7 +1078,7 @@ export function PackageDetailsPage() {
                     {relatedBlogs.map(blog => (
                       <Link 
                         key={blog.id} 
-                        to={`/blog/${blog.slug}`}
+                        to={getCanonicalBlogUrl(blog)}
                         className="flex items-center gap-4 group p-2 -mx-2 rounded-xl transition-colors hover:bg-gray-50"
                       >
                         <div className="w-16 h-16 rounded-lg overflow-hidden shrink-0">

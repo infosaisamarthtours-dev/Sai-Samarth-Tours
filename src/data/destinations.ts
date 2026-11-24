@@ -707,6 +707,192 @@ export const DESTINATIONS: Record<string, DestinationData> = {
         answer: 'Yes, both Jyotirlingas are seamlessly covered in our 3-Day and 4-Day flight itineraries from Bangalore with private sanitized AC vehicle transit.'
       }
     ]
+  },
+
+  ujjain: {
+    id: 'ujjain',
+    name: 'Ujjain (Mahakaleshwar)',
+    category: 'pilgrimage',
+    seoTitle: 'Ujjain Tour Package from Bangalore | Mahakaleshwar Bhasma Aarti | Sai Samarth Tours',
+    seoDescription: 'Book Ujjain Mahakaleshwar tour package from Bangalore with flights. Confirmed 4:00 AM Bhasma Aarti guidance, Mahakal Lok Corridor, Harsiddhi Mata, Kaal Bhairav & 3-star AC hotels.',
+    heroImage: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp',
+    tagline: 'Holy Abode of Mahakaleshwar Jyotirlinga, Ancient Avantika & Sacred Shipra Ghats',
+    packageIds: ['indore-ujjain'],
+    highlights: [
+      'Direct return flights from Bangalore (BLR) to Indore (IDR)',
+      'Assistance with 4:00 AM Mahakaleshwar Bhasma Aarti booking and Sanctum Jalabhishek',
+      'Walk through the majestic 900-metre Shri Mahakal Lok Corridor',
+      'Darshan at Shaktipeeth Maa Harsiddhi Temple & Kaal Bhairav Temple',
+      'Private AC vehicle with dedicated tour manager and pure vegetarian meals'
+    ],
+    overview: 'Ujjain, the historic city of Avantika on the sacred banks of the Shipra River, is home to Shri Mahakaleshwar—the only south-facing (Dakshinabhimukhi) Jyotirlinga among the 12 sacred shrines of Lord Shiva. Sai Samarth Tours organizes all-inclusive Ujjain tour packages from Bangalore with direct flights to Indore, pre-arranged Bhasma Aarti entry support, luxury AC transfers, and verified 3-star accommodations.',
+    quickFacts: {
+      bestTime: 'October to March (Pleasant winter temperatures)',
+      flightDuration: '1 Hour 50 Minutes (Direct from Bangalore Kempegowda BLR)',
+      idealDays: '2 Nights / 3 Days or 3 Nights / 4 Days',
+      meals: '100% Pure Vegetarian (Satvik breakfast, lunch & dinner)',
+      airport: 'Devi Ahilyabai Holkar Airport, Indore (IDR) - 55 km from Ujjain',
+      tourManager: 'Accompanied by seasoned yatra coordinator'
+    },
+    faqs: [
+      {
+        question: 'How do we book the 4:00 AM Bhasma Aarti at Mahakaleshwar Temple from Bangalore?',
+        answer: 'Our team assists you with the official advance reservation on the Mahakaleshwar temple portal and provides on-ground protocol guidance regarding strict dress codes (unstitched Dhoti and Angavastram for men, traditional Saree for women).'
+      },
+      {
+        question: 'Can we also visit Omkareshwar Jyotirlinga in this Ujjain tour?',
+        answer: 'Yes! All our Bangalore-to-Ujjain packages seamlessly include a full-day excursion to Omkareshwar and Mamleshwar Jyotirlingas on the sacred Narmada River.'
+      }
+    ]
+  },
+
+  omkareshwar: {
+    id: 'omkareshwar',
+    name: 'Omkareshwar Jyotirlinga',
+    category: 'pilgrimage',
+    seoTitle: 'Omkareshwar Tour Package from Bangalore | Narmada River Yatra | Sai Samarth Tours',
+    seoDescription: 'All-inclusive Omkareshwar Jyotirlinga tour package from Bangalore. Covers Omkareshwar Island, Mamleshwar Jyotirlinga, Narmada holy boat ride & 3-star AC hotels.',
+    heroImage: '/places-to-visit-in-omkareshwar-jyotirlinga-temple-attractions-guide-hero.webp',
+    tagline: 'Island of Om — Sacred Narmada Confluence & Twin Shiva Jyotirlingas',
+    packageIds: ['indore-ujjain'],
+    highlights: [
+      'Return flights from Bangalore (BLR) to Indore (IDR)',
+      'Boat ride across holy Narmada River to Mandhata Island (Om-shaped)',
+      'Darshan at Shri Omkareshwar Jyotirlinga and Mamleshwar Jyotirlinga',
+      'Holy Snan at Sangam (Confluence of Narmada and Kaveri rivers)',
+      'Scenic bridge crossings (Jhula Pul) and panoramic temple vistas'
+    ],
+    overview: 'Shri Omkareshwar is one of the most spiritually captivating Jyotirlingas in India, situated on Mandhata island in the holy Narmada River, naturally contoured in the sacred shape of the Om symbol. Across the river lies the revered Mamleshwar Jyotirlinga. Sai Samarth Tours connects Bangalore devotees to Omkareshwar via direct flights to Indore, sanitized AC transfers, and personalized ritual assistance.',
+    quickFacts: {
+      bestTime: 'September to March',
+      flightDuration: '1 Hour 50 Minutes (BLR to IDR) + 2.5 Hours scenic highway drive',
+      idealDays: '2 Nights / 3 Days (combined with Ujjain & Indore)',
+      meals: '100% Pure Vegetarian wholesome dining',
+      airport: 'Devi Ahilyabai Holkar Airport, Indore (IDR) - 77 km',
+      tourManager: 'Local yatra coordinator with deep ritual knowledge'
+    },
+    faqs: [
+      {
+        question: 'Are both Omkareshwar and Mamleshwar visited during the tour?',
+        answer: 'Yes! Tradition holds that the Jyotirlinga darshan is complete only when both Omkareshwar on the island and Mamleshwar on the mainland are worshiped, both of which are fully covered in our itinerary.'
+      },
+      {
+        question: 'Is a boat ride required to reach Omkareshwar temple?',
+        answer: 'You can cross via scenic pedestrian bridges (Jhula Pul) or take a relaxing mechanized boat ride across the sacred Narmada River, both arranged for our travelers.'
+      }
+    ]
+  },
+
+  puri: {
+    id: 'puri',
+    name: 'Puri (Jagannath Dham)',
+    category: 'pilgrimage',
+    seoTitle: 'Puri Tour Package from Bangalore | Sri Jagannath Temple Darshan | Sai Samarth Tours',
+    seoDescription: 'Curated Puri tour packages from Bangalore with return flights to Bhubaneswar. Special Jagannath Temple Darshan, Golden Beach, Anandabazar Mahaprasad & 3-star AC beach hotels.',
+    heroImage: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
+    tagline: 'One of the Four Supreme Char Dhams & Ocean Sanctuary of Lord Jagannath',
+    packageIds: ['puri-jagannath'],
+    highlights: [
+      'Direct return flights from Bangalore (BLR) to Bhubaneswar (BBI)',
+      'Escorted Darshan at Sri Jagannath Temple, Singhadwara & Garuda Stambha',
+      'Taste sacred Mahaprasad from Anandabazar cooked in earthern pots',
+      'Relaxation at the Blue Flag certified Puri Golden Beach',
+      'Day trip to UNESCO World Heritage Konark Sun Temple & Chandrabhaga Beach'
+    ],
+    overview: 'Puri, the abode of Lord Jagannath, Lord Balabhadra, and Devi Subhadra, is the eastern pillar of India’s revered Char Dham. Sai Samarth Tours delivers premium, hassle-free pilgrimage packages from Bangalore with non-stop flights to Bhubaneswar, private AC transportation, beachside 3-star AC hotel stays, and experienced Panda guidance.',
+    quickFacts: {
+      bestTime: 'October to March (Refreshing sea breezes and pleasant days)',
+      flightDuration: '2 Hours (Direct Kempegowda BLR to Bhubaneswar BBI)',
+      idealDays: '2 Nights / 3 Days or 3 Nights / 4 Days',
+      meals: '100% Pure Vegetarian South and North Indian meals',
+      airport: 'Biju Patnaik International Airport, Bhubaneswar (BBI) - 60 km',
+      tourManager: 'Dedicated tour manager accompanying from arrival'
+    },
+    faqs: [
+      {
+        question: 'How do you assist senior citizens inside Puri Jagannath Temple?',
+        answer: 'Our experienced temple coordinators guide elders through the less congested entrances, help manage temple rituals, and arrange e-rickshaws through Grand Road to minimize fatigue.'
+      },
+      {
+        question: 'Is Anandabazar Mahaprasad included in the package?',
+        answer: 'Yes, we facilitate the sacred experience of tasting genuine Jagannath Mahaprasad at the temple Anandabazar.'
+      }
+    ]
+  },
+
+  konark: {
+    id: 'konark',
+    name: 'Konark Sun Temple',
+    category: 'pilgrimage',
+    seoTitle: 'Konark Tour Package from Bangalore | Sun Temple & Chandrabhaga | Sai Samarth Tours',
+    seoDescription: 'All-inclusive Konark tour packages from Bangalore. Explore UNESCO World Heritage Konark Sun Temple chariot, Chandrabhaga Beach, Marine Drive & Puri Jagannath Darshan.',
+    heroImage: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp',
+    tagline: 'UNESCO 13th-Century Architectural Marvel of Surya Bhagwan & Chandrabhaga Beach',
+    packageIds: ['puri-jagannath'],
+    highlights: [
+      'Return flights from Bangalore (BLR) to Bhubaneswar (BBI)',
+      'Comprehensive guided tour of the 13th-century Konark Sun Temple chariot',
+      'Marvel at the 24 elaborately carved stone wheels that function as sundials',
+      'Sunset visit to sacred Chandrabhaga Beach on the Bay of Bengal',
+      'Scenic coastal Marine Drive connecting Puri and Konark'
+    ],
+    overview: 'The Sun Temple of Konark, built in the 13th century by King Narasimhadeva I, is a UNESCO World Heritage site conceived as a colossal chariot for Surya Bhagwan, with 24 carved wheels pulled by seven horses. Located just 35 km from Puri along the picturesque Marine Drive, Sai Samarth Tours pairs this architectural wonder with Puri Jagannath Darshan in our curated Bangalore flight packages.',
+    quickFacts: {
+      bestTime: 'October to March',
+      flightDuration: '2 Hours (BLR to BBI) + 1 Hour coastal drive',
+      idealDays: 'Day excursion in 2N/3D Puri package',
+      meals: 'Pure vegetarian regional and pan-Indian dining',
+      airport: 'Bhubaneswar Airport (BBI) - 65 km',
+      tourManager: 'Accompanying tour escort & certified monument guide'
+    },
+    faqs: [
+      {
+        question: 'How far is Konark Sun Temple from Puri?',
+        answer: 'Konark is located approximately 35 km from Puri along the smooth, scenic Puri-Konark Marine Drive, taking about 45 minutes by our private AC vehicle.'
+      },
+      {
+        question: 'Is Chandrabhaga Beach covered during the Konark visit?',
+        answer: 'Yes! Chandrabhaga Beach is just 3 km from the Sun Temple and is a key stop in our itinerary for a peaceful beach walk and photo opportunities.'
+      }
+    ]
+  },
+
+  meghalaya: {
+    id: 'meghalaya',
+    name: 'Meghalaya (Shillong & Cherrapunji)',
+    category: 'domestic',
+    seoTitle: 'Meghalaya Tour Package from Bangalore | Shillong, Cherrapunji & Dawki | Sai Samarth Tours',
+    seoDescription: 'Scenic Meghalaya tour packages from Bangalore with flights. Explore Shillong, Cherrapunji Nohkalikai waterfalls, Dawki crystal Umngot river, Mawlynnong & Maa Kamakhya Temple.',
+    heroImage: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp',
+    tagline: 'Abode of Clouds — Living Root Bridges, Crystal Waters & Misty Canyons',
+    packageIds: ['kamakhya-meghalaya', 'kamakhya'],
+    highlights: [
+      'Return flights from Bangalore (BLR) to Guwahati (GAU)',
+      'Scenic road journey to Shillong with stop at the magnificent Umiam Lake',
+      'Cherrapunji excursion: Nohkalikai Falls, Seven Sisters Falls & Mawsmai Cave',
+      'Boating on the crystal-clear glass waters of Dawki Umngot River',
+      'Visit Mawlynnong, celebrated as Asia’s cleanest village, & living root bridge',
+      'VIP Darshan at the sacred Maa Kamakhya Temple atop Nilachal Hill'
+    ],
+    overview: 'Meghalaya, the "Abode of Clouds," is one of India’s most awe-inspiring landscapes, blessed with lush rolling pine hills, living root bridges, roaring waterfalls, and pristine rivers. Sai Samarth Tours offers complete holiday and pilgrimage packages from Bangalore combining the spiritual sanctity of Maa Kamakhya Temple with the breathtaking wonders of Shillong, Cherrapunji, and Dawki.',
+    quickFacts: {
+      bestTime: 'September to May (Pleasant weather, clear waters, and green valleys)',
+      flightDuration: '2 Hours 55 Minutes (Direct flight BLR to GAU)',
+      idealDays: '4 Nights / 5 Days or 5 Nights / 6 Days',
+      meals: 'Wholesome pure vegetarian breakfast and dinner included',
+      airport: 'Guwahati Airport (GAU) - 100 km scenic drive to Shillong',
+      tourManager: 'Seasoned tour manager accompanying throughout Northeast tour'
+    },
+    faqs: [
+      {
+        question: 'When is the water clearest at Dawki Umngot River?',
+        answer: 'The crystal-clear, transparent glass-like water appearance at Dawki is best experienced between November and April when rainfall is minimal.'
+      },
+      {
+        question: 'Is the Meghalaya tour physically demanding for senior citizens?',
+        answer: 'Our itinerary is paced comfortably for families and seniors. Viewpoints like Nohkalikai, Umiam Lake, and Elephant Falls have easy vehicular access, and strenuous treks like Double Decker root bridge are optional.'
+      }
+    ]
   }
 };
 
