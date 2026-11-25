@@ -49,11 +49,6 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
     });
   }, [selectedCategory, searchQuery]);
 
-  // Featured post
-  const featuredPost = useMemo(() => {
-    return BLOG_POSTS.find(p => p.featured) || BLOG_POSTS[0];
-  }, []);
-
   // Top tour packages to display as cards (Main priority packages)
   const featuredPackages: Package[] = useMemo(() => {
     const targetIds = ['shirdi-3-jyothirlinga', 'kamakhya', 'puri-jagannath', 'indore-ujjain'];
@@ -94,7 +89,6 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
         description="Expert spiritual travel advice, Shirdi VIP darshan passes guide, Jyotirlinga circuit tips, and domestic & international holiday guides from Bangalore."
         canonical="https://saisamarthtours.com/blog"
         ogImage="/shirdi-tour-hero-banner-desktop.webp"
-        preloadImage={featuredPost?.image}
       />
       {/* ================= HERO & SEARCH BANNER ================= */}
       <div className="relative bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-6 sm:pt-14 lg:pt-20 pb-8 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-xl">
@@ -178,114 +172,6 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        {/* ================= FEATURED HERO POST CARD ================= */}
-        {selectedCategory === 'All' && !searchQuery && featuredPost && (
-          <div className="mb-14">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-pulse" />
-              <h2 className="text-xs uppercase font-extrabold tracking-widest text-gray-500">
-                Featured Guide
-              </h2>
-            </div>
-
-            <div 
-              onClick={() => navigate(`/blog/${featuredPost.id}`)}
-              className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 grid grid-cols-1 lg:grid-cols-12 group hover:shadow-2xl transition-all duration-300 cursor-pointer"
-            >
-              {/* Image Container */}
-              <div className="lg:col-span-7 relative h-72 lg:h-auto overflow-hidden min-h-[320px]">
-                <img
-                  src={featuredPost.image}
-                  alt={`${featuredPost.title} - Sai Samarth Tours Travel Guide`}
-                  width={700}
-                  height={400}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="sync"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent lg:hidden" />
-                
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="bg-[#F59E0B] text-white text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-lg shadow-md">
-                    {featuredPost.category}
-                  </span>
-                  <span className="bg-black/60 backdrop-blur-md text-white text-xs font-medium px-3 py-1.5 rounded-lg flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#F59E0B]" />
-                    {featuredPost.readTime}
-                  </span>
-                </div>
-
-                <button
-                  onClick={(e) => toggleBookmark(featuredPost.id, e)}
-                  className={`absolute top-4 right-4 p-2.5 rounded-full backdrop-blur-md transition-transform active:scale-95 ${
-                    bookmarkedIds.includes(featuredPost.id)
-                      ? 'bg-amber-500 text-white shadow-lg'
-                      : 'bg-black/40 text-white hover:bg-black/60'
-                  }`}
-                  aria-label="Bookmark post"
-                >
-                  <Bookmark className={`w-4 h-4 ${bookmarkedIds.includes(featuredPost.id) ? 'fill-current' : ''}`} />
-                </button>
-              </div>
-
-              {/* Content Container */}
-              <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between bg-white">
-                <div>
-                  <div className="flex items-center gap-3 text-xs text-gray-500 font-medium mb-3">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-[#F59E0B]" />
-                      {featuredPost.date}
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1.5 text-[#114088] font-semibold">
-                      <User className="w-3.5 h-3.5 text-[#2563EB]" />
-                      {featuredPost.author.name}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-extrabold font-serif-brand text-[#0B1E3F] mb-4 group-hover:text-[#2563EB] transition-colors leading-snug">
-                    {featuredPost.title}
-                  </h3>
-
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-
-                  <div className="bg-amber-500/10 rounded-2xl p-4 border border-amber-500/20 mb-6">
-                    <span className="text-xs uppercase font-extrabold tracking-wider text-[#A63A1E] block mb-2">
-                      Key Highlights:
-                    </span>
-                    <ul className="space-y-1.5 text-xs text-gray-700 font-medium">
-                      {featuredPost.content.keyTakeaways.slice(0, 2).map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-2 bg-[#114088] group-hover:bg-[#0B1E3F] text-white text-xs sm:text-sm font-bold px-5 py-3 rounded-xl shadow-md transition-all">
-                    <span>Read Full Article Page</span>
-                    <ArrowRight className="w-4 h-4 text-[#F59E0B] group-hover:translate-x-1 transition-transform" />
-                  </span>
-
-                  <button
-                    onClick={(e) => handleShare(featuredPost, e)}
-                    className="p-2.5 text-gray-500 hover:text-[#114088] hover:bg-gray-100 rounded-xl transition-colors text-xs font-semibold flex items-center gap-1"
-                    title="Share Article"
-                  >
-                    <Share2 className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* ================= ALL BLOG POST CARDS GRID ================= */}
         <div className="mb-16">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
