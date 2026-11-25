@@ -27,6 +27,8 @@ Allow: /contact
 Allow: /package/
 Allow: /blog/
 Allow: /destinations/
+Allow: /travel-resources
+Allow: /partners
 Allow: /tour-packages
 Allow: /pilgrimage-tour-packages
 Allow: /shirdi-tour-packages
@@ -40,6 +42,10 @@ Allow: /faq
 Allow: /privacy-policy
 Allow: /terms-of-use
 Allow: /cancellation-policy
+
+# LLMs and AI discovery
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Disallow sensitive, internal or temporary system directories
 Disallow: /tmp/
