@@ -27,8 +27,10 @@ import { kamakhyaTempleTourPackageFromBangalorePost } from './kamakhya-temple-to
 import { kamakhyaMeghalayaTourPackageFromBangalorePost } from './kamakhya-meghalaya-tour-package-from-bangalore-guide';
 import { puriJagannathTourPackageFromBangalorePost } from './puri-jagannath-tour-package-from-bangalore-guide';
 import { shirdiWith3JyotirlingaTourPackageFromBangalorePost } from './shirdi-with-3-jyotirlinga-tour-package-from-bangalore-guide';
+import { indoreUjjainOmkareshwarTourPackageFromBangalorePost } from './indore-ujjain-omkareshwar-tour-package-from-bangalore-guide';
 
 export * from './types';
+export { indoreUjjainOmkareshwarTourPackageFromBangalorePost } from './indore-ujjain-omkareshwar-tour-package-from-bangalore-guide';
 export { omkareshwarPlacesToVisitGuidePost } from './omkareshwar-places-to-visit-tourist-attractions-guide';
 export { bestTimeToVisitKedarnathGuidePost } from './best-time-to-visit-kedarnath-weather-temperature-guide';
 export { fiveJyotirlingasOfMaharashtraGuidePost } from './5-jyotirlingas-of-maharashtra-names-locations-timings-guide';
@@ -59,6 +61,7 @@ export { kashmirParadiseSeasonsGuidePost } from './kashmir-paradise-seasons-guid
 export { templePrasadamRitualsGuidePost } from './temple-prasadam-rituals-guide';
 
 export const BLOG_POSTS: BlogPost[] = [
+  indoreUjjainOmkareshwarTourPackageFromBangalorePost,
   puriJagannathTourPackageFromBangalorePost,
   kamakhyaMeghalayaTourPackageFromBangalorePost,
   omkareshwarPlacesToVisitGuidePost,

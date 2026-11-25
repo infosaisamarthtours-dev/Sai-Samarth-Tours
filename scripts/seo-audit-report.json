@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalHtmlFiles": 315,
-    "indexableRoutes": 229,
+    "totalHtmlFiles": 317,
+    "indexableRoutes": 231,
     "redirectRoutes": 86,
     "missingTitles": 0,
     "missingCanonicals": 0,
@@ -248,6 +248,38 @@
         "LocalBusiness",
         "Organization",
         "WebSite",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/indore-ujjain-omkareshwar-tour-package-from-bangalore",
+      "title": "Indore Ujjain Omkareshwar Tour Package from Bangalore (2026)",
+      "description": "Book 3-Day Indore Ujjain Omkareshwar tour package from Bangalore with flights. Covers Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, distance & taxi",
+      "canonical": "https://saisamarthtours.com/blog/indore-ujjain-omkareshwar-tour-package-from-bangalore",
+      "h1": "Indore Ujjain Omkareshwar Tour Package from Bangalore: 3 & 4",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
+        "BreadcrumbList"
+      ]
+    },
+    {
+      "route": "/blog/indore-ujjain-omkareshwar-tour-package-from-bangalore",
+      "title": "Indore Ujjain Omkareshwar Tour Package from Bangalore (2026)",
+      "description": "Book 3-Day Indore Ujjain Omkareshwar tour package from Bangalore with flights. Covers Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, distance & taxi",
+      "canonical": "https://saisamarthtours.com/blog/indore-ujjain-omkareshwar-tour-package-from-bangalore",
+      "h1": "Indore Ujjain Omkareshwar Tour Package from Bangalore: 3 & 4",
+      "h1Count": 1,
+      "schemas": [
+        "TravelAgency",
+        "LocalBusiness",
+        "Organization",
+        "WebSite",
+        "Article",
         "BreadcrumbList"
       ]
     },
