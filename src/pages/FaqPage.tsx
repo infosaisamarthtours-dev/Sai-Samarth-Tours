@@ -5,6 +5,7 @@ import { siteConfig } from '../data/config';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { getFaqSchema } from '../utils/schema';
+import { getSEOForRoute } from '../data/seoConfig';
 
 export function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -67,12 +68,16 @@ export function FaqPage() {
 
   const allFaqs = faqCategories.flatMap(cat => cat.faqs);
 
+  const seo = getSEOForRoute('/faq')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title="Frequently Asked Questions (FAQ) | Sai Samarth Tours Bangalore"
-        description="Find answers to common questions about Sai Samarth Tours pilgrimage packages, flight bookings, VIP Darshan, meals, and senior citizen assistance from Bangalore."
-        canonical="https://saisamarthtours.com/faq"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={getFaqSchema(allFaqs)}
       />
       {/* Hero Banner */}

@@ -17,6 +17,7 @@ import {
   getCanonicalBlogUrl, 
   getCanonicalPackageUrl 
 } from '../utils/internalLinking';
+import { getSEOForBlog } from '../data/seoConfig';
 import { InternalLinkHub } from '../components/InternalLinkHub';
 
 interface BlogDetailPageProps {
@@ -164,16 +165,22 @@ export function BlogDetailPage({ onOpenEnquiry }: BlogDetailPageProps) {
     }
   };
 
+  const blogSEO = post ? (getSEOForBlog(post.slug) || getSEOForBlog(post.id)) : undefined;
+  const seoTitle = blogSEO?.title || (post.seoTitle ? `${post.seoTitle} | Sai Samarth Tours` : `${post.title} | Sai Samarth Tours`);
+  const seoDescription = blogSEO?.description || post.seoDescription || post.excerpt;
+  const seoKeywords = blogSEO ? [blogSEO.primaryKeyword, ...blogSEO.secondaryKeywords].join(', ') : (post.tags?.join(', '));
+
   return (
     <div className="flex-grow bg-[#F8FAFC] font-sans pb-16 sm:pb-24 selection:bg-[#F59E0B] selection:text-white">
       <SEOHead
-        title={post.seoTitle ? `${post.seoTitle} | Sai Samarth Tours` : `${post.title} | Sai Samarth Tours`}
-        description={post.seoDescription || post.excerpt}
+        title={seoTitle}
+        description={seoDescription}
         canonical={`https://saisamarthtours.com/blog/${post.slug}`}
         ogImage={post.image}
         ogType="article"
         jsonLd={blogJsonLd}
         preloadImage={post.image}
+        keywords={seoKeywords}
       />
 
       {/* ================= EDITORIAL TOP HERO SECTION ================= */}

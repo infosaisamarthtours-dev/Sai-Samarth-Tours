@@ -7,6 +7,7 @@ import { FaqSection } from '../components/FaqSection';
 import { ImageSlider } from '../components/ImageSlider';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 
 const pilgrimageIds = [
   'puri-jagannath',
@@ -27,13 +28,16 @@ const destinations = pilgrimageIds
   .filter((p): p is Package => p !== undefined);
 
 export function PilgrimagePackagesPage() {
+  const seo = getSEOForRoute('/pilgrimage-tour-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       <SEOHead
-        title="Pilgrimage Tour Packages from Bangalore | Sacred Yatras with Flights | Sai Samarth Tours"
-        description="Book all-inclusive sacred pilgrimage yatra packages from Bangalore to Kashi, Ayodhya, Puri Jagannath, Vaishno Devi, Kamakhya & Jyotirlingas. Includes flights, VIP darshan & 3-star AC hotels."
-        canonical="https://saisamarthtours.com/pilgrimage-tour-packages"
-        ogImage="/pilgrimage-packages-category-card.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         preloadImage={destinations[0]?.image}
       />
       

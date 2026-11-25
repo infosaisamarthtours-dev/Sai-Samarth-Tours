@@ -38,6 +38,7 @@ import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { findPackageBySlugOrId, getPackageSlug } from '../utils/slugs';
 import { getPackageBreadcrumbHierarchy } from '../utils/breadcrumbs';
+import { getSEOForPackage } from '../data/seoConfig';
 
 export function PackageDetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -270,10 +271,14 @@ export function PackageDetailsPage() {
     international: { name: 'International Packages', url: '/international-packages' }
   };
 
-  const displayH1 = pkg.seoH1 || pkg.title;
-  const seoPageTitle = pkg.seoH1 
+  const pkgSlug = getPackageSlug(pkg);
+  const pkgSEO = getSEOForPackage(pkg.id) || getSEOForPackage(pkgSlug);
+  const displayH1 = pkgSEO?.h1 || pkg.seoH1 || pkg.title;
+  const seoPageTitle = pkgSEO?.title || (pkg.seoH1 
     ? `${pkg.seoH1} | Sai Samarth Tours` 
-    : (pkg.title.includes('from Bangalore') ? `${pkg.title} | Sai Samarth Tours` : `${pkg.title} from Bangalore | Sai Samarth Tours`);
+    : (pkg.title.includes('from Bangalore') ? `${pkg.title} | Sai Samarth Tours` : `${pkg.title} from Bangalore | Sai Samarth Tours`));
+  const seoDescription = pkgSEO?.description || (pkg.description ? `${pkg.description} Starting from ${pkg.price}. Book with return flights & 3-star hotel.` : `Book ${displayH1}. Includes return flights, deluxe hotel accommodation, meals, AC transfers, and VIP darshan passes. Starting at ${pkg.price}.`);
+  const seoKeywords = pkgSEO ? [pkgSEO.primaryKeyword, ...pkgSEO.secondaryKeywords].join(', ') : undefined;
 
   const packageJsonLd = [
     {
@@ -321,12 +326,13 @@ export function PackageDetailsPage() {
     <div className="flex-grow bg-[#FBF9F5]">
       <SEOHead
         title={seoPageTitle}
-        description={pkg.description ? `${pkg.description} Starting from ${pkg.price}. Book with return flights & 3-star hotel.` : `Book ${displayH1}. Includes return flights, deluxe hotel accommodation, meals, AC transfers, and VIP darshan passes. Starting at ${pkg.price}.`}
-        canonical={`https://saisamarthtours.com/package/${getPackageSlug(pkg)}`}
+        description={seoDescription}
+        canonical={`https://saisamarthtours.com/package/${pkgSlug}`}
         ogImage={pkg.image}
         ogType="product"
         jsonLd={packageJsonLd}
         preloadImage={pkg.image}
+        keywords={seoKeywords}
       />
 
       {/* Premium Split Hero Section */}

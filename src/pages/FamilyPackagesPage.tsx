@@ -4,6 +4,7 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { getPackageUrl } from '../utils/slugs';
 import { 
@@ -132,14 +133,17 @@ export function FamilyPackagesPage({ onOpenEnquiry }: Props) {
     }
   };
 
+  const seo = getSEOForRoute('/family-tour-packages-from-bangalore')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title="Family Tour Packages from Bangalore | Domestic & International Holidays | Sai Samarth Tours"
-        description="Book best family tour packages from Bangalore with flights. Handcrafted vacations to Kashmir, Kerala, Goa, Andaman, Thailand, Dubai & Bali with kid-friendly activities, deluxe hotels & private AC vehicles."
-        canonical="https://saisamarthtours.com/family-tour-packages-from-bangalore"
-        ogImage="/domestic-tours-hero-banner-desktop.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
         ogType="website"
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={pageJsonLd}
       />
 

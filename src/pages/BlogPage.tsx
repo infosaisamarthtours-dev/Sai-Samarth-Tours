@@ -10,6 +10,7 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { SEOHead } from '../components/SEOHead';
+import { getSEOForRoute } from '../data/seoConfig';
 
 interface BlogPageProps {
   onOpenEnquiry?: (packageTitle?: string) => void;
@@ -82,13 +83,16 @@ export function BlogPage({ onOpenEnquiry }: BlogPageProps) {
     }, 4000);
   };
 
+  const seo = getSEOForRoute('/blog')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-20 selection:bg-[#F59E0B] selection:text-white">
       <SEOHead
-        title="Travel Guides & Pilgrimage Yatra Blog | Sai Samarth Tours Bangalore"
-        description="Expert spiritual travel advice, Shirdi VIP darshan passes guide, Jyotirlinga circuit tips, and domestic & international holiday guides from Bangalore."
-        canonical="https://saisamarthtours.com/blog"
-        ogImage="/shirdi-tour-hero-banner-desktop.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
       />
       {/* ================= HERO & SEARCH BANNER ================= */}
       <div className="relative bg-gradient-to-br from-[#0B1E3F] via-[#114088] to-[#09152C] text-white pt-6 sm:pt-14 lg:pt-20 pb-8 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden shadow-xl">

@@ -4,6 +4,7 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { trackContact } from '../utils/pixel';
 import { siteConfig } from '../data/config';
@@ -321,14 +322,17 @@ export function BusPackagesPage({ onOpenEnquiry }: BusPackagesPageProps) {
     }
   ];
 
+  const seo = getSEOForRoute('/bus-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-20">
       <SEOHead
-        title="Bus Tour Packages from Bangalore | Shirdi Kolhapur & Panch Bootha Yatras | Sai Samarth Tours"
-        description="Book all-inclusive Deluxe A/C Pushback Bus tour packages from Bangalore. Shirdi - Saptha Shrungi - Triyambhakeshwar 4N/5D for ₹15,999/- & South India Yatra 5N/6D for ₹25,999/-. Includes 3-Star AC stays, all meals & Tour Manager."
-        canonical="https://saisamarthtours.com/bus-packages"
-        ogImage="/shirdi-flight-tour-package-from-bangalore-1.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
         ogType="website"
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         preloadImage={activePackage.image}
       />
 

@@ -13,6 +13,7 @@ import { FaqSection } from '../components/FaqSection';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { localBusinessSchema } from '../utils/schema';
+import { getSEOForRoute } from '../data/seoConfig';
 
 export function AboutPage() {
   const milestones = [
@@ -83,13 +84,16 @@ export function AboutPage() {
     { value: '100%', label: 'All Packages with Tour Manager', icon: <UserCheck className="w-5 h-5 text-emerald-600" /> }
   ];
 
+  const seo = getSEOForRoute('/about')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans">
       <SEOHead
-        title="About Us | Sai Samarth Tours - Bangalore's Premier Pilgrimage Agency"
-        description="Established in 2013, Sai Samarth Tours is Bangalore's trusted travel agency specializing in Shirdi flight packages, Jyotirlinga pilgrimages, and domestic & global holiday getaways."
-        canonical="https://saisamarthtours.com/about"
-        ogImage="/about-sai-samarth-tours-agency.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={localBusinessSchema}
       />
       

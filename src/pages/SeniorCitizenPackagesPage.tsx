@@ -4,6 +4,7 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { getPackageUrl } from '../utils/slugs';
 import { 
@@ -129,14 +130,17 @@ export function SeniorCitizenPackagesPage({ onOpenEnquiry }: Props) {
     }
   };
 
+  const seo = getSEOForRoute('/senior-citizen-tour-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title="Senior Citizen Tour Packages from Bangalore | Safe & Assisted Pilgrimages | Sai Samarth Tours"
-        description="Assisted senior citizen tour packages from Bangalore. Comfortable pilgrimage tours to Shirdi, Kashi, Tirupati, Char Dham & Rameshwaram with wheelchair assistance, pure veg meals, 3-star AC hotels & tour managers."
-        canonical="https://saisamarthtours.com/senior-citizen-tour-packages"
-        ogImage="/shirdi-tour-hero-banner-desktop.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
         ogType="website"
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={pageJsonLd}
       />
 

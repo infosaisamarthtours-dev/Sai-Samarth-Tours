@@ -4,6 +4,7 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { getPackageSlug } from '../utils/slugs';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { 
@@ -40,14 +41,17 @@ export function AllPackagesPage({ onOpenEnquiry }: AllPackagesPageProps) {
     { id: 'international', label: 'International Tours', count: ALL_PACKAGES.filter(p => p.category === 'international').length }
   ];
 
+  const seo = getSEOForRoute('/tour-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title="Tour Packages from Bangalore | Pilgrimage & Holiday Yatras | Sai Samarth Tours"
-        description="Browse 30+ all-inclusive tour packages from Bangalore. Curated Shirdi flight yatras, Kashi Ayodhya, Jyotirlingas, Kashmir, Kerala, and international vacations with 3-star AC hotels & pure veg meals."
-        canonical="https://saisamarthtours.com/tour-packages"
-        ogImage="/shirdi-tour-hero-banner-desktop.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
         ogType="website"
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         preloadImage={filteredPackages[0]?.image}
       />
 

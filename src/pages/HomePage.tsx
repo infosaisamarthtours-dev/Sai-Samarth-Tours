@@ -14,6 +14,7 @@ import { QuoteSection } from '../components/QuoteSection';
 import { FaqSection } from '../components/FaqSection';
 import { SEOHead } from '../components/SEOHead';
 import { localBusinessSchema } from '../utils/schema';
+import { getSEOForRoute } from '../data/seoConfig';
 
 interface HomePageProps {
   onOpenEnquiry?: (packageTitle?: string) => void;
@@ -32,16 +33,18 @@ export function HomePage({ onOpenEnquiry }: HomePageProps) {
     navigate(`/package/${pkg.id}`);
   };
 
+  const seo = getSEOForRoute('/')!;
+
   return (
     <div className="flex-grow">
       <SEOHead
-        title="Sai Samarth Tours: Tour Packages from Bangalore | Shirdi, Puri Jagannath, Kamakhya, Indore Ujjain"
-        description="Book top tour packages from Bangalore with Sai Samarth Tours. Direct flights for Shirdi VIP Darshan, Puri Jagannath Konark, Kamakhya Meghalaya, Indore Ujjain Mahakaleshwar & 3-star AC hotels."
-        canonical="https://saisamarthtours.com/"
-        ogImage="/shirdi-tour-hero-banner-desktop.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage || "/shirdi-tour-hero-banner-desktop.webp"}
         ogType="website"
         jsonLd={localBusinessSchema}
-        keywords="sai samarth tours, sai tour, sai tours bangalore, shirdi tour package from bangalore, puri jagannath tour package from bangalore, kamakhya tour package from bangalore, indore ujjain tour package from bangalore, kamakhya with meghalaya tour package from bangalore, puri jagannath trip from bangalore, ujjain mahakaleshwar tour package, omkareshwar tour package from bangalore, tour packages from bangalore, travel agency in bangalore"
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
       />
       {/* 2. Hero Banner Section */}
       <Hero onOpenEnquiry={() => handleOpenEnquiry()} />

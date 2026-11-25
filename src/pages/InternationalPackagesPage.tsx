@@ -5,15 +5,19 @@ import { INTERNATIONAL_PACKAGES } from '../data/packages';
 import { FaqSection } from '../components/FaqSection';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 
 export function InternationalPackagesPage() {
+  const seo = getSEOForRoute('/international-tour-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       <SEOHead
-        title="International Tour Packages from Bangalore | Sai Samarth Tours"
-        description="Premium international holiday packages from Bangalore: Singapore, Malaysia, Thailand, Bali, Dubai, Sri Lanka, Nepal & Europe. Complete visa assistance, flights, 4-star hotels & meals."
-        canonical="https://saisamarthtours.com/international-tour-packages"
-        ogImage="/international-packages-category-card.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         preloadImage={INTERNATIONAL_PACKAGES[0]?.image}
       />
       

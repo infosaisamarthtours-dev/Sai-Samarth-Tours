@@ -1,6 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {
+  getSEOForRoute,
+  getSEOForPackage,
+  getSEOForBlog,
+  CORE_PAGES_SEO,
+  DESTINATION_PAGES_SEO,
+  PACKAGE_PAGES_SEO,
+  BLOG_PAGES_SEO
+} from '../src/data/seoConfig.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -192,7 +201,7 @@ function buildPackageBody({ title, desc, price, slug }) {
 }
 
 // Helper to replace meta tags and inject crawlable HTML in template
-function generateHtml({ title, description, url, image, type = 'website', bodyContent = null, jsonLd = null }) {
+function generateHtml({ title, description, keywords = '', url, image, type = 'website', bodyContent = null, jsonLd = null }) {
   const absoluteImage = image.startsWith('http') ? image : `https://saisamarthtours.com${image.startsWith('/') ? '' : '/'}${image}`;
   const absoluteUrl = url.startsWith('http') ? url : `https://saisamarthtours.com${url.startsWith('/') ? '' : '/'}${url}`;
 
@@ -203,6 +212,11 @@ function generateHtml({ title, description, url, image, type = 'website', bodyCo
 
   // Replace Description
   html = html.replace(/<meta name="description" content=".*?" \/>/i, `<meta name="description" content="${description}" />`);
+
+  // Replace Keywords
+  if (keywords) {
+    html = html.replace(/<meta name="keywords" content=".*?" \/>/i, `<meta name="keywords" content="${keywords}" />`);
+  }
 
   // Replace Canonical
   html = html.replace(/<link rel="canonical" href=".*?" \/>/i, `<link rel="canonical" href="${absoluteUrl}" />`);
@@ -299,11 +313,16 @@ packageBlocks.forEach((block) => {
   const image = imgMatch ? imgMatch[1] : '/shirdi-tour-hero-banner-desktop.webp';
 
   const slug = packageSlugsMap[id] || `${id}-tour-package-from-bangalore`;
+  const seo = getSEOForPackage(slug) || getSEOForPackage(id);
 
-  const metaTitle = title.includes('from Bangalore') 
+  const metaTitle = seo ? seo.title : (title.includes('from Bangalore') 
     ? `${title} | Sai Samarth Tours` 
-    : `${title} from Bangalore | Sai Samarth Tours`;
-  const metaDesc = `Book ${title}. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP darshan. Price: ${price}.`.slice(0, 155);
+    : `${title} from Bangalore | Sai Samarth Tours`);
+  const metaDesc = seo ? seo.description : `Book ${title}. Includes return flights, verified 3-star AC hotel, pure veg meals & VIP darshan. Price: ${price}.`.slice(0, 155);
+
+  const keywords = seo 
+    ? [seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')
+    : `${title}, ${title} from Bangalore, tour packages from Bangalore`;
 
   const bodyContent = buildPackageBody({ title, desc, price, slug });
 
@@ -350,6 +369,7 @@ packageBlocks.forEach((block) => {
   const html = generateHtml({
     title: metaTitle,
     description: metaDesc,
+    keywords,
     url: `/package/${slug}`,
     image,
     type: 'product',
@@ -673,9 +693,15 @@ destinations.forEach(dest => {
       ]
     }
   ];
+  const seo = getSEOForRoute(`/destinations/${dest.slug}`) || DESTINATION_PAGES_SEO[dest.slug];
+  const destTitle = seo ? seo.title : dest.title;
+  const destDesc = seo ? seo.description : dest.desc.slice(0, 155);
+  const destKeywords = seo ? [seo.primaryKeyword, ...seo.secondaryKeywords].join(', ') : `${dest.name} tour packages from Bangalore, ${dest.name} packages, pilgrimage tour packages`;
+
   const html = generateHtml({
-    title: dest.title,
-    description: dest.desc.slice(0, 155),
+    title: destTitle,
+    description: destDesc,
+    keywords: destKeywords,
     url: `/destinations/${dest.slug}`,
     image: dest.image,
     type: 'website',
@@ -845,9 +871,16 @@ pages.forEach(p => {
       ]
     }
   ];
+  const normalizedPath = p.path.startsWith('/') ? p.path : `/${p.path}`;
+  const seo = getSEOForRoute(normalizedPath) || CORE_PAGES_SEO[normalizedPath];
+  const pageTitle = seo ? seo.title : p.title;
+  const pageDesc = seo ? seo.description : p.desc.slice(0, 155);
+  const pageKeywords = seo ? [seo.primaryKeyword, ...seo.secondaryKeywords].join(', ') : (p.keywords || 'sai samarth tours, tour packages from bangalore, pilgrimage packages from bangalore');
+
   const html = generateHtml({
-    title: p.title,
-    description: p.desc.slice(0, 155),
+    title: pageTitle,
+    description: pageDesc,
+    keywords: pageKeywords,
     url: `/${p.path}`,
     image: p.image,
     type: 'website',
@@ -873,6 +906,10 @@ const blogArticles = blogFiles.map(file => {
   const introMatch = content.match(/intro:\s*['"`]([\s\S]*?)['"`],/);
   const dateMatch = content.match(/date:\s*['"]([^'"]+)['"]/);
   const authorMatch = content.match(/name:\s*['"]([^'"]+)['"]/);
+  const keywordsMatch = content.match(/keywords:\s*\[([\s\S]*?)\]/);
+  const keywords = keywordsMatch 
+    ? keywordsMatch[1].replace(/['"`\r\n]/g, '').split(',').map(s => s.trim()).filter(Boolean).join(', ') 
+    : '';
 
   const id = idMatch ? idMatch[1] : file.replace('.ts', '');
   const slug = slugMatch ? slugMatch[1] : id;
@@ -889,6 +926,7 @@ const blogArticles = blogFiles.map(file => {
     slug,
     title: seoTitle,
     desc,
+    keywords,
     image,
     h1: rawTitle,
     intro,
@@ -971,9 +1009,15 @@ blogArticles.forEach(blog => {
     }
   ];
 
+  const seo = getSEOForBlog(blog.slug) || getSEOForBlog(blog.id);
+  const blogTitle = seo ? seo.title : blog.title;
+  const blogDesc = seo ? seo.description : blog.desc.slice(0, 155);
+  const blogKeywords = seo ? [seo.primaryKeyword, ...seo.secondaryKeywords].join(', ') : (blog.keywords || '');
+
   const html = generateHtml({
-    title: blog.title,
-    description: blog.desc.slice(0, 155),
+    title: blogTitle,
+    description: blogDesc,
+    keywords: blogKeywords,
     url: `/blog/${blog.slug}`,
     image: blog.image,
     type: 'article',

@@ -7,6 +7,7 @@ import { FaqSection } from '../components/FaqSection';
 import { ImageSlider } from '../components/ImageSlider';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 
 const shirdiIds = [
   'shirdi-via-pune',
@@ -21,13 +22,16 @@ const destinations = shirdiIds
   .filter((p): p is Package => p !== undefined);
 
 export function ShirdiPackagesPage() {
+  const seo = getSEOForRoute('/shirdi-tour-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       <SEOHead
-        title="Shirdi Tour Packages from Bangalore | Flights, VIP Darshan & 3-Star Hotels"
-        description="Book direct flight Shirdi tour packages from Bangalore with Sai Samarth Tours. Includes VIP darshan passes, Shani Shingnapur, Trimbakeshwar, Bhimashankar Jyotirlingas, and 3-star AC accommodation."
-        canonical="https://saisamarthtours.com/shirdi-tour-packages"
-        ogImage="/shirdi-packages-category-card.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         preloadImage={destinations[0]?.image}
       />
       

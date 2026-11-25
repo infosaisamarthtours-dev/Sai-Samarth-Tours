@@ -5,6 +5,7 @@ import { ALL_PACKAGES } from '../data/packages';
 import { Package } from '../types';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { getPackageSlug } from '../utils/slugs';
 import { 
@@ -73,15 +74,21 @@ export function DestinationPage({ onOpenEnquiry }: DestinationPageProps) {
     }
   ];
 
+  const destSEO = getSEOForRoute(`/destinations/${dest.id}`);
+  const seoTitle = destSEO?.title || dest.seoTitle;
+  const seoDescription = destSEO?.description || dest.seoDescription;
+  const seoKeywords = destSEO ? [destSEO.primaryKeyword, ...destSEO.secondaryKeywords].join(', ') : undefined;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title={dest.seoTitle}
-        description={dest.seoDescription}
+        title={seoTitle}
+        description={seoDescription}
         canonical={`https://saisamarthtours.com/destinations/${dest.id}`}
         ogImage={dest.heroImage}
         ogType="website"
         jsonLd={destinationJsonLd}
+        keywords={seoKeywords}
       />
 
       {/* Hero Banner Section */}

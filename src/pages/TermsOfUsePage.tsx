@@ -4,14 +4,18 @@ import { FileText, Scale, UserCheck, ShieldAlert } from 'lucide-react';
 import { siteConfig } from '../data/config';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 
 export function TermsOfUsePage() {
+  const seo = getSEOForRoute('/terms-of-use')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title="Terms of Use | Sai Samarth Tours Bangalore"
-        description="Official Terms of Use and website booking agreements for Sai Samarth Tours Bangalore."
-        canonical="https://saisamarthtours.com/terms-of-use"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
       />
       {/* Hero Banner */}
       <div className="bg-[#0B1E3F] text-white pt-6 sm:pt-10 md:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8">

@@ -5,6 +5,7 @@ import { FaqSection } from '../components/FaqSection';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { localBusinessSchema } from '../utils/schema';
+import { getSEOForRoute } from '../data/seoConfig';
 import { getContactMessageWhatsAppUrl } from '../utils/whatsapp';
 import { trackContact } from '../utils/pixel';
 import confetti from 'canvas-confetti';
@@ -67,13 +68,16 @@ export function ContactPage() {
     });
   };
 
+  const seo = getSEOForRoute('/contact')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-24">
       <SEOHead
-        title="Contact Sai Samarth Tours | Bangalore Tour Agency Office & Helpline"
-        description="Get in touch with Sai Samarth Tours. Visit our Yelahanka New Town office in Bengaluru or call +91 91877 11649 for instant pilgrimage and holiday tour enquiries."
-        canonical="https://saisamarthtours.com/contact"
-        ogImage="/sai-samarth-tours-logo.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={localBusinessSchema}
       />
       

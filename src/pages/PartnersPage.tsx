@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { 
   Building2, ExternalLink, ShieldCheck, Plus, CheckCircle2, 
   HelpCircle, ArrowRight, Plane, Hotel, Train, Landmark, Lock
@@ -89,12 +90,16 @@ export function PartnersPage() {
     }
   };
 
+  const seo = getSEOForRoute('/partners')!;
+
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-slate-800 pb-20">
       <SEOHead
-        title="Official Business Partners & Airlines | Sai Samarth Tours Bangalore"
-        description="Explore verified business partners, scheduled airlines, and hotel networks collaborating with Sai Samarth Tours to deliver seamless pilgrimage and holiday packages."
-        canonical="https://saisamarthtours.com/partners"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={partnersJsonLd}
       />
 

@@ -5,15 +5,19 @@ import { DOMESTIC_PACKAGES } from '../data/packages';
 import { FaqSection } from '../components/FaqSection';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 
 export function DomesticPackagesPage() {
+  const seo = getSEOForRoute('/domestic-tour-packages')!;
+
   return (
     <div className="flex-grow bg-[#FBF9F5] font-sans pb-12">
       <SEOHead
-        title="Domestic Holiday Tour Packages from Bangalore | Sai Samarth Tours"
-        description="Handcrafted India holiday packages from Bangalore: Kashmir, Kerala backwaters, Leh Ladakh, Rajasthan, Himachal Pradesh & Andaman. Includes flights, deluxe hotels & customized sightseeing."
-        canonical="https://saisamarthtours.com/domestic-tour-packages"
-        ogImage="/domestic-packages-category-card.webp"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         preloadImage={DOMESTIC_PACKAGES[0]?.image}
       />
       

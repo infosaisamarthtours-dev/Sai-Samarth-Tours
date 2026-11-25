@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
+import { getSEOForRoute } from '../data/seoConfig';
 import { 
   Compass, MapPin, BookOpen, ShieldCheck, HeartHandshake, 
   HelpCircle, CheckCircle2, ArrowRight, Plane, Clock, 
@@ -45,12 +46,16 @@ export function TravelResourcesPage() {
     }
   ];
 
+  const seo = getSEOForRoute('/travel-resources')!;
+
   return (
     <div className="min-h-screen bg-[#FBF9F5] text-slate-800 pb-20">
       <SEOHead
-        title="Travel Resources & Pilgrimage Guides | Sai Samarth Tours Bangalore"
-        description="Explore comprehensive travel resources, temple VIP darshan guidelines, senior citizen travel tips, and destination guides for Bangalore travelers by Sai Samarth Tours."
-        canonical="https://saisamarthtours.com/travel-resources"
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.canonical}
+        ogImage={seo.ogImage}
+        keywords={[seo.primaryKeyword, ...seo.secondaryKeywords].join(', ')}
         jsonLd={travelResourcesJsonLd}
       />
 
