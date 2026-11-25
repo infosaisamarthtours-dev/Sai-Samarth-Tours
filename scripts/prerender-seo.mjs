@@ -233,9 +233,9 @@ function generateHtml({ title, description, url, image, type = 'website', bodyCo
     html = html.replace(/<\/head>/i, jsonLdString);
   }
 
-  // Inject crawlable body inside #root
+  // Inject crawlable body inside noscript so visitors with JavaScript never see raw HTML flash on refresh/load
   if (bodyContent) {
-    html = html.replace(/<div id="root">[\s\S]*?<\/body>/i, `<div id="root">\n${bodyContent}\n    </div>\n  </body>`);
+    html = html.replace(/<div id="root">[\s\S]*?<\/body>/i, `<div id="root"></div>\n    <noscript>\n${bodyContent}\n    </noscript>\n  </body>`);
   }
 
   return html;
