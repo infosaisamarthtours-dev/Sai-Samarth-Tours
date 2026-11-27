@@ -1,8 +1,8 @@
 {
   "summary": {
-    "totalHtmlFiles": 317,
-    "indexableRoutes": 231,
-    "redirectRoutes": 86,
+    "totalHtmlFiles": 324,
+    "indexableRoutes": 227,
+    "redirectRoutes": 96,
     "missingTitles": 0,
     "missingCanonicals": 0,
     "duplicateDescriptions": 0,
@@ -1283,38 +1283,6 @@
       ]
     },
     {
-      "route": "/destinations/indore-ujjain",
-      "title": "Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours",
-      "description": "All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3",
-      "canonical": "https://saisamarthtours.com/destinations/indore-ujjain",
-      "h1": "Indore Ujjain & Omkareshwar Tour Packages from Bangalore",
-      "h1Count": 1,
-      "schemas": [
-        "TravelAgency",
-        "LocalBusiness",
-        "Organization",
-        "WebSite",
-        "TouristDestination",
-        "BreadcrumbList"
-      ]
-    },
-    {
-      "route": "/destinations/indore-ujjain",
-      "title": "Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours",
-      "description": "All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3",
-      "canonical": "https://saisamarthtours.com/destinations/indore-ujjain",
-      "h1": "Indore Ujjain & Omkareshwar Tour Packages from Bangalore",
-      "h1Count": 1,
-      "schemas": [
-        "TravelAgency",
-        "LocalBusiness",
-        "Organization",
-        "WebSite",
-        "TouristDestination",
-        "BreadcrumbList"
-      ]
-    },
-    {
       "route": "/destinations/jyotirlinga",
       "title": "Jyotirlinga Tour Packages from Bangalore | 12 Sacred Shiva Yatras | Sai Samarth Tours",
       "description": "Curated 12 Jyotirlinga tour packages from Bangalore by flight & train. Covers Maharashtra 5 Jyotirlingas, Ujjain, Omkareshwar, Somnath, Kashi & Rameshwaram.",
@@ -1672,38 +1640,6 @@
       "description": "Curated Puri tour packages from Bangalore with return flights to Bhubaneswar. Priority Jagannath Temple Darshan, Golden Beach, Mahaprasad & 3-star AC hotels.",
       "canonical": "https://saisamarthtours.com/destinations/puri",
       "h1": "Puri Tour Packages from Bangalore",
-      "h1Count": 1,
-      "schemas": [
-        "TravelAgency",
-        "LocalBusiness",
-        "Organization",
-        "WebSite",
-        "TouristDestination",
-        "BreadcrumbList"
-      ]
-    },
-    {
-      "route": "/destinations/puri-jagannath",
-      "title": "Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours",
-      "description": "All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC",
-      "canonical": "https://saisamarthtours.com/destinations/puri-jagannath",
-      "h1": "Puri Jagannath Tour Packages from Bangalore",
-      "h1Count": 1,
-      "schemas": [
-        "TravelAgency",
-        "LocalBusiness",
-        "Organization",
-        "WebSite",
-        "TouristDestination",
-        "BreadcrumbList"
-      ]
-    },
-    {
-      "route": "/destinations/puri-jagannath",
-      "title": "Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours",
-      "description": "All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC",
-      "canonical": "https://saisamarthtours.com/destinations/puri-jagannath",
-      "h1": "Puri Jagannath Tour Packages from Bangalore",
       "h1Count": 1,
       "schemas": [
         "TravelAgency",

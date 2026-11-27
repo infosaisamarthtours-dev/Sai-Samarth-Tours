@@ -195,8 +195,8 @@ function scanDir(dir) {
 }
 scanDir('src');
 
-// Indexable routes (non-redirect)
-const indexableRoutes = auditResults.filter(r => !r.isRedirect);
+// Indexable routes (non-redirect, non-noindex)
+const indexableRoutes = auditResults.filter(r => !r.isRedirect && !r.robots.includes('noindex'));
 const redirectRoutes = auditResults.filter(r => r.isRedirect);
 
 const missingTitles = indexableRoutes.filter(r => !r.titleOk);

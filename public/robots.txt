@@ -51,6 +51,8 @@ Allow: /llms-full.txt
 Disallow: /tmp/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /404
+Disallow: /404.html
 
 # Official XML Sitemap location
 Sitemap: https://saisamarthtours.com/sitemap.xml

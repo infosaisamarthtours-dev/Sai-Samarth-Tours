@@ -1,0 +1,43 @@
+# ==============================================================================
+# Sai Samarth Tours - Apache & cPanel Configuration
+# Domain: https://saisamarthtours.com
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Custom 404 Document
+  ErrorDocument 404 /404.html
+
+  # 2. Canonical 301 Redirects for Hub Aliases
+  RewriteRule ^packages/?$ /tour-packages [R=301,L]
+  RewriteRule ^destinations/?$ /tour-packages [R=301,L]
+  RewriteRule ^family-tour-packages/?$ /family-tour-packages-from-bangalore [R=301,L]
+  RewriteRule ^destinations/puri-jagannath/?$ /destinations/puri [R=301,L]
+  RewriteRule ^destinations/indore-ujjain/?$ /package/indore-ujjain-omkareshwar-tour-package-from-bangalore [R=301,L]
+
+  # 3. Direct Top-Level Keyword Shortcuts
+  RewriteRule ^shirdi-tour-package-from-bangalore/?$ /package/shirdi-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^puri-jagannath-tour-package-from-bangalore/?$ /package/puri-jagannath-konark-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^kamakhya-tour-package-from-bangalore/?$ /package/kamakhya-with-meghalaya-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^kamakhya-with-meghalaya-tour-package-from-bangalore/?$ /package/kamakhya-with-meghalaya-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^indore-ujjain-tour-package-from-bangalore/?$ /package/indore-ujjain-omkareshwar-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^kashi-tour-package-from-bangalore/?$ /destinations/kashi [R=301,L]
+  RewriteRule ^ayodhya-tour-package-from-bangalore/?$ /destinations/ayodhya [R=301,L]
+  RewriteRule ^kashmir-tour-package-from-bangalore/?$ /package/kashmir-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^kerala-tour-package-from-bangalore/?$ /package/kerala-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^goa-tour-package-from-bangalore/?$ /package/goa-beach-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^ladakh-tour-package-from-bangalore/?$ /package/leh-ladakh-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^andaman-tour-package-from-bangalore/?$ /package/andaman-islands-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^maldives-tour-package-from-bangalore/?$ /package/maldives-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^thailand-tour-package-from-bangalore/?$ /package/thailand-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^malaysia-tour-package-from-bangalore/?$ /package/malaysia-tour-package-from-bangalore [R=301,L]
+  RewriteRule ^dubai-tour-package-from-bangalore/?$ /package/dubai-tour-package-from-bangalore [R=301,L]
+
+  # 4. Single Page Application (SPA) Routing Fallback
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

@@ -1,0 +1,45 @@
+# ==============================================================================
+# Sai Samarth Tours - Canonical 301 Permanent Redirects
+# Domain: https://saisamarthtours.com
+# ==============================================================================
+
+# Core Hub Redirects
+/packages                                /tour-packages                                   301!
+/destinations                            /tour-packages                                   301!
+/family-tour-packages                    /family-tour-packages-from-bangalore             301!
+/destinations/puri-jagannath             /destinations/puri                               301!
+/destinations/indore-ujjain              /package/indore-ujjain-omkareshwar-tour-package-from-bangalore 301!
+
+# Direct Keyword Shortcuts
+/shirdi-tour-package-from-bangalore      /package/shirdi-tour-package-from-bangalore       301!
+/puri-jagannath-tour-package-from-bangalore /package/puri-jagannath-konark-tour-package-from-bangalore 301!
+/kamakhya-tour-package-from-bangalore    /package/kamakhya-with-meghalaya-tour-package-from-bangalore 301!
+/kamakhya-with-meghalaya-tour-package-from-bangalore /package/kamakhya-with-meghalaya-tour-package-from-bangalore 301!
+/indore-ujjain-tour-package-from-bangalore /package/indore-ujjain-omkareshwar-tour-package-from-bangalore 301!
+/kashi-tour-package-from-bangalore       /destinations/kashi                              301!
+/ayodhya-tour-package-from-bangalore     /destinations/ayodhya                            301!
+/kashmir-tour-package-from-bangalore     /package/kashmir-tour-package-from-bangalore     301!
+/kerala-tour-package-from-bangalore      /package/kerala-tour-package-from-bangalore      301!
+/goa-tour-package-from-bangalore         /package/goa-beach-tour-package-from-bangalore   301!
+/ladakh-tour-package-from-bangalore      /package/leh-ladakh-tour-package-from-bangalore  301!
+/andaman-tour-package-from-bangalore     /package/andaman-islands-tour-package-from-bangalore 301!
+/maldives-tour-package-from-bangalore    /package/maldives-tour-package-from-bangalore    301!
+/thailand-tour-package-from-bangalore    /package/thailand-tour-package-from-bangalore    301!
+/malaysia-tour-package-from-bangalore    /package/malaysia-tour-package-from-bangalore    301!
+/dubai-tour-package-from-bangalore       /package/dubai-tour-package-from-bangalore       301!
+/chardham-yatra-from-bangalore           /destinations/chardham                           301!
+/tirupati-tour-package-from-bangalore    /destinations/tirupati                           301!
+/panch-bootha-tour-package-from-bangalore /package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore 301!
+/panch-bootha-yatra                      /package/panch-bootha-yatra-tirumala-balaji-bus-tour-from-bangalore 301!
+/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore /package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore 301!
+/shirdi-kolhapur-bus-tour                /package/shirdi-saptha-shrungi-kolhapur-bus-tour-from-bangalore 301!
+/south-india-yatra-bus-tour-from-bangalore /package/south-india-yatra-bus-tour-from-bangalore 301!
+/south-india-yatra                       /package/south-india-yatra-bus-tour-from-bangalore 301!
+
+# Blog Aliases
+/blog/temple-prasadam-rituals-guide      /blog/prasadam-and-temple-rituals-india          301!
+/blog/twelve-jyotirlinga-temples-in-india-travel-guide /blog/12-jyotirlinga-temples-in-india-travel-guide 301!
+/blog/chardham-yatra-guide               /blog/chardham-yatra-preparation-guide           301!
+
+# SPA Fallback for Dynamic Client-Side Routing
+/*                                       /index.html                                      200

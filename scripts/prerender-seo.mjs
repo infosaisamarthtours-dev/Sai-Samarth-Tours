@@ -274,16 +274,17 @@ function writePage(subPath, html) {
 }
 
 function generateRedirectHtml(targetUrl) {
+  const absoluteUrl = targetUrl.startsWith('http') ? targetUrl : `https://saisamarthtours.com${targetUrl.startsWith('/') ? '' : '/'}${targetUrl}`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=${targetUrl}">
-  <link rel="canonical" href="https://saisamarthtours.com${targetUrl}">
+  <meta http-equiv="refresh" content="0; url=${absoluteUrl}">
+  <link rel="canonical" href="${absoluteUrl}">
   <title>Redirecting to Sai Samarth Tours...</title>
 </head>
 <body>
-  <p>Redirecting to <a href="${targetUrl}">https://saisamarthtours.com${targetUrl}</a>...</p>
+  <p>Redirecting to <a href="${absoluteUrl}">${absoluteUrl}</a>...</p>
 </body>
 </html>`;
 }
@@ -394,25 +395,11 @@ const destinations = [
     image: '/shirdi-tour-hero-banner-desktop.webp'
   },
   {
-    slug: 'puri-jagannath',
-    name: 'Puri Jagannath',
-    title: 'Puri Jagannath Tour Package from Bangalore | Konark & Odisha Yatra | Sai Samarth Tours',
-    desc: 'All-inclusive Puri Jagannath tour package from Bangalore with return flights, special Jagannath Temple Darshan, Konark Sun Temple, Chilika Lake & 3-star AC beach hotels.',
-    image: '/puri-jagannath-konark-tour-package-from-bangalore-1.webp'
-  },
-  {
     slug: 'kamakhya',
     name: 'Kamakhya & Meghalaya',
     title: 'Kamakhya Tour Package from Bangalore | Meghalaya & Shillong Yatra | Sai Samarth Tours',
     desc: 'Book Kamakhya Temple and Meghalaya tour packages from Bangalore with flights. VIP Maa Kamakhya Darshan, Shillong, Cherrapunji waterfalls, Dawki Umngot river & 3-star stays.',
     image: '/kamakhya-with-meghalaya-tour-package-from-bangalore.webp'
-  },
-  {
-    slug: 'indore-ujjain',
-    name: 'Indore Ujjain & Omkareshwar',
-    title: 'Indore Ujjain Tour Package from Bangalore | Mahakaleshwar & Omkareshwar Jyotirlinga | Sai Samarth Tours',
-    desc: 'All-inclusive Indore Ujjain tour package from Bangalore with flights. 4:00 AM Mahakaleshwar Bhasma Aarti, Omkareshwar Jyotirlinga, Mahakal Lok Corridor & 3-star AC hotels.',
-    image: '/indore-ujjain-omkareshwar-tour-package-from-bangalore-1.webp'
   },
   {
     slug: 'kashi',
@@ -1030,5 +1017,77 @@ blogArticles.forEach(blog => {
     writePage(`blog/${blog.id}`, generateRedirectHtml(`/blog/${blog.slug}`));
   }
 });
+
+// 5. Generate Standalone 404.html with noindex
+function generate404Html() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found (404) | Sai Samarth Tours Bangalore</title>
+  <meta name="description" content="The page you are looking for might have been moved or removed. Explore our popular pilgrimage and holiday tour packages from Bangalore.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/jpeg" href="/sai-samarth-tours-logo.webp">
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FBF9F5; color: #1C1C1C; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
+    .header { background: #ffffff; border-bottom: 1px solid #e5e7eb; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #114088; font-weight: 800; font-size: 1.25rem; }
+    .brand img { border-radius: 8px; width: 44px; height: 44px; }
+    .main { flex: 1; max-width: 680px; margin: 40px auto; padding: 32px 24px; background: #ffffff; border-radius: 24px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); text-align: center; border: 1px solid #f3f4f6; }
+    .code { font-size: 4.5rem; font-weight: 900; color: #EA580C; margin: 0; line-height: 1; }
+    h1 { font-size: 1.75rem; color: #114088; margin: 16px 0 8px 0; font-weight: 800; }
+    p { color: #4b5563; line-height: 1.6; font-size: 1rem; margin-bottom: 28px; }
+    .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 28px; text-align: left; }
+    .link-item { padding: 14px 18px; border-radius: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; color: #114088; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; }
+    .link-item:hover { background: #EEF2F6; border-color: #CBD5E1; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .btn-primary { background: #114088; color: #ffffff; padding: 12px 28px; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .btn-whatsapp { background: #25D366; color: #ffffff; padding: 12px 28px; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 0.875rem; }
+    .footer { background: #114088; color: #94a3b8; padding: 24px; text-align: center; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="brand">
+      <img src="/sai-samarth-tours-logo.webp" alt="Sai Samarth Tours Logo" width="44" height="44">
+      <span>Sai Samarth Tours</span>
+    </a>
+    <a href="/tour-packages" style="color:#114088;text-decoration:none;font-weight:700;font-size:0.9rem;">All Packages &rarr;</a>
+  </header>
+  <main class="main">
+    <div class="code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The pilgrimage route or tour page you're looking for doesn't exist or has been relocated. Explore our popular tour packages departing directly from Bangalore Kempegowda Airport (BLR):</p>
+    <div class="links">
+      <a href="/shirdi-tour-packages" class="link-item"><span>Shirdi Tour Packages</span><span>&rarr;</span></a>
+      <a href="/pilgrimage-tour-packages" class="link-item"><span>Pilgrimage Yatras</span><span>&rarr;</span></a>
+      <a href="/bus-packages" class="link-item"><span>Deluxe Bus Tours</span><span>&rarr;</span></a>
+      <a href="/domestic-tour-packages" class="link-item"><span>Domestic Vacations</span><span>&rarr;</span></a>
+      <a href="/international-tour-packages" class="link-item"><span>International Tours</span><span>&rarr;</span></a>
+      <a href="/senior-citizen-tour-packages" class="link-item"><span>Senior Citizen Care</span><span>&rarr;</span></a>
+    </div>
+    <div class="actions">
+      <a href="/" class="btn-primary">Return to Homepage</a>
+      <a href="https://wa.me/919187711649?text=Hello%20Sai%20Samarth%20Tours%2C%20I%20am%20looking%20for%20tour%20packages%20from%20Bangalore." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Chat on WhatsApp</a>
+    </div>
+  </main>
+  <footer class="footer">
+    &copy; ${new Date().getFullYear()} Sai Samarth Tours. Bangalore's Premier Pilgrimage & Holiday Specialist.
+  </footer>
+</body>
+</html>`;
+}
+
+const html404 = generate404Html();
+fs.writeFileSync(path.join(distDir, '404.html'), html404, 'utf8');
+fs.writeFileSync(path.join(rootDir, 'public/404.html'), html404, 'utf8');
+
+// 6. Write Dedicated Redirect Pages for Core Aliases
+writePage('packages', generateRedirectHtml('/tour-packages'));
+writePage('destinations', generateRedirectHtml('/tour-packages'));
+writePage('family-tour-packages', generateRedirectHtml('/family-tour-packages-from-bangalore'));
+writePage('destinations/puri-jagannath', generateRedirectHtml('/destinations/puri'));
+writePage('destinations/indore-ujjain', generateRedirectHtml('/package/indore-ujjain-omkareshwar-tour-package-from-bangalore'));
 
 console.log('Successfully prerendered Open Graph social previews and crawlable HTML for all packages, destinations, blogs, and category pages!');
